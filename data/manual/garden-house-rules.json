@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "status": "planning-heuristic",
+  "note": "Storage planning heuristic, not a building standard.",
+  "areaM2": {
+    "baseCirculation": 0.8,
+    "perBike": 0.65,
+    "toolStorage": { "none": 0, "small": 0.7, "medium": 1.4, "large": 2.5 },
+    "lawnMower": 0.8,
+    "workbench": 2.0,
+    "shelving": 0.6
+  },
+  "circulationReserveFactor": 1.15,
+  "minDoorWidthCm": { "normal": 70, "bulky": 80 }
+}

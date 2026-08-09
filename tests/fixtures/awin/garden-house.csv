@@ -1,0 +1,3 @@
+product_name,merchant_id,merchant_name,merchant_product_id,description,dimensions,search_price,currency,delivery_cost,in_stock,aw_deep_link,ean,last_updated
+Holz Gartenhaus Modell A,12,Garten Markt,abc,Holzhaus mit Satteldach und Boden,300 x 400 cm,"2499,00",EUR,"49,00",true,https://www.awin1.com/cread.php?x=1,4012345678901,2026-08-08T10:00:00Z
+Metall Gerätehaus Modell B,12,Garten Markt,def,Metall Gerätehaus mit Flachdach,3 x 3 m,"999,00",EUR,kostenlos,false,https://www.awin1.com/cread.php?x=2,4012345678902,2026-08-08T10:00:00Z

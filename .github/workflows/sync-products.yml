@@ -1,0 +1,59 @@
+name: Sync affiliate product feeds
+on:
+  schedule:
+    - cron: "17 4 * * *"
+      timezone: "Europe/Berlin"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: product-feed-sync
+  cancel-in-progress: false
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    env:
+      AWIN_FEED_URLS_JSON: ${{ secrets.AWIN_FEED_URLS_JSON }}
+      FEED_SYNC_SCHEDULED: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+      - name: Check feed configuration
+        id: feed
+        shell: bash
+        run: |
+          if [ -z "$AWIN_FEED_URLS_JSON" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Affiliate feed secret is not configured; skipping sync."
+          else
+            echo "enabled=true" >> "$GITHUB_OUTPUT"
+          fi
+      - uses: actions/setup-node@v6
+        if: steps.feed.outputs.enabled == 'true'
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+        if: steps.feed.outputs.enabled == 'true'
+      - run: npm run sync:products
+        if: steps.feed.outputs.enabled == 'true'
+      - run: npm run validate:data
+        if: steps.feed.outputs.enabled == 'true'
+      - run: npm run test
+        if: steps.feed.outputs.enabled == 'true'
+      - run: npm run typecheck
+        if: steps.feed.outputs.enabled == 'true'
+      - name: Commit catalog changes
+        if: steps.feed.outputs.enabled == 'true'
+        shell: bash
+        run: |
+          if git diff --quiet -- public/data data/review; then
+            echo "No catalog changes."
+            exit 0
+          fi
+          git config user.name "machplan-data-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add public/data data/review
+          git commit -m "chore(data): refresh affiliate catalogs"
+          git push

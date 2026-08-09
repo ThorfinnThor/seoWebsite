@@ -1,0 +1,36 @@
+{
+  "name": "machplan",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=24 <25"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "validate:data": "tsx scripts/validate-data.ts",
+    "sync:products": "tsx scripts/awin/sync-products.ts",
+    "verify:static": "tsx scripts/verify-static-build.ts",
+    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static"
+  },
+  "dependencies": {
+    "csv-parse": "^6.1.0",
+    "gunzip-maybe": "^1.4.2",
+    "next": "^16.0.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "zod": "^4.0.0"
+  },
+  "devDependencies": {
+    "@types/gunzip-maybe": "^1.4.2",
+    "@types/node": "^24.0.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0",
+    "vitest": "^4.0.0"
+  }
+}
