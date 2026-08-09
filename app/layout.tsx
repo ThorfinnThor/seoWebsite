@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { SITE } from "@/lib/site";
 import "./globals.css";
 
@@ -7,12 +8,23 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: "MachPlan – Haus- und Gartenprojekte besser planen", template: "%s | MachPlan" },
   description: SITE.description,
+  applicationName: SITE.name,
+  openGraph: {
+    type: "website",
+    locale: "de_DE",
+    siteName: SITE.name,
+    title: "MachPlan – Haus- und Gartenprojekte besser planen",
+    description: SITE.description,
+  },
+  twitter: { card: "summary", title: "MachPlan", description: SITE.description },
+  category: "Haus und Garten",
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de">
       <body>
+        <SiteJsonLd />
         <a className="skip-link" href="#main">Zum Inhalt springen</a>
         <header className="site-header">
           <div className="nav-wrap">
@@ -30,9 +42,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div><Link className="brand brand--footer" href="/"><span className="brand-mark" aria-hidden="true">M</span><span>MachPlan</span></Link><p>Klare Entscheidungen für Haus und Garten – ohne versteckte Verkaufslogik.</p></div>
             <div><h2>Planen</h2><Link href="/garten/gartenhaus-planer/">Gartenhaus-Planer</Link><Link href="/garten/gartenhaus-groesse/">Größe bestimmen</Link><Link href="/garten/gartenhaus-kosten/">Kosten verstehen</Link></div>
             <div><h2>Weitere Rechner</h2><Link href="/haus/raumklima/luftentfeuchter-rechner/">Luftentfeuchter</Link><Link href="/garten/bewaesserungs-planer/">Bewässerung</Link></div>
-            <div><h2>Wichtig</h2><p>MachPlan ersetzt keine Genehmigungs-, Statik-, Gesundheits- oder Fachplanung. Prüfe örtliche Vorgaben und Herstellerangaben.</p></div>
+            <div><h2>MachPlan</h2><Link href="/ueber-machplan/">Über das Projekt</Link><Link href="/methodik/">Methodik</Link><Link href="/affiliate-transparenz/">Affiliate-Transparenz</Link></div>
           </div>
-          <div className="footer-bottom"><span>© {new Date().getFullYear()} MachPlan · Arbeitsname</span><span>Transparent · Deterministisch · Statisch</span></div>
+          <div className="footer-bottom"><span>© {new Date().getFullYear()} MachPlan · Arbeitsname</span><span className="footer-legal"><Link href="/impressum/">Impressum</Link><Link href="/datenschutz/">Datenschutz</Link></span></div>
         </footer>
       </body>
     </html>

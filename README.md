@@ -1,6 +1,6 @@
 # MachPlan
 
-Germany-first static decision engine for house and garden projects. V1 contains the production foundation and the garden-house planner described in [IMPLEMENTATION.md](./IMPLEMENTATION.md).
+Germany-first static decision engine for house and garden projects. The current build contains planners for garden houses, dehumidifiers and irrigation plus supporting guides and transparency pages.
 
 ## Local development
 
@@ -21,10 +21,19 @@ The production build is a pure static export in `out/`. There are no API routes,
 
 ## Product data
 
-The public garden-house catalog starts empty by design. Real Awin candidates are imported offline with `npm run sync:products`, written to `data/review/garden-house.json`, and become public only after an override marks them `reviewed: true` with `dataQuality: "mixed"` or `"curated"`.
+All public product catalogs start empty by design. Real Awin candidates are imported offline with `npm run sync:products` and become public only after validation and manual review.
 
 Never place `AWIN_FEED_URLS_JSON` in a local committed file or in Vercel. Configure it as a GitHub Actions repository secret.
 
 ## Deployment
 
-Connect the private GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` at build time once the actual domain is known. No Awin secret is required in Vercel.
+Connect the GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` at build time once the actual domain is known. No Awin secret is required in Vercel.
+
+Before public launch, set `NEXT_PUBLIC_LEGAL_EMAIL` to the reachable email address used in the imprint and privacy notice. Without it those two pages render a visible draft warning and `noindex` metadata.
+
+Current Vercel values:
+
+```text
+NEXT_PUBLIC_SITE_URL=https://seo-website-woad.vercel.app
+NEXT_PUBLIC_LEGAL_EMAIL=you@example.com
+```

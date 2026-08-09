@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { buildIrrigationPlan } from "@/lib/irrigation/rules";
 import { IrrigationInputSchema, type IrrigationInput } from "@/lib/irrigation/types";
@@ -8,6 +8,7 @@ const INITIAL:IrrigationInput={lawnAreaM2:100,bedAreaM2:20,hedgeLengthM:15,autom
 
 export function IrrigationPlanner(){
   const[step,setStep]=useState(1);const[input,setInput]=useState<IrrigationInput>(INITIAL);const[error,setError]=useState("");const plan=buildIrrigationPlan(input);
+  useEffect(()=>{if(step>1)document.getElementById("calculator-heading")?.focus()},[step]);
   const update=<K extends keyof IrrigationInput,>(key:K,value:IrrigationInput[K])=>setInput((current)=>({...current,[key]:value}));
   const next=()=>{if(step===1&&input.lawnAreaM2+input.bedAreaM2+input.hedgeLengthM<=0){setError("Bitte mindestens eine Rasen-, Beet- oder Heckenfläche angeben.");return}setError("");setStep((s)=>Math.min(4,s+1))};
   const titles=["Welche Flächen sollen bewässert werden?","Was liefert dein Wasseranschluss?","Wie soll das System gesteuert werden?","Dein erster Komponentenplan"];

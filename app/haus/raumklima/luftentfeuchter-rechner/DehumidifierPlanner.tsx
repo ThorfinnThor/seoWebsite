@@ -1,5 +1,5 @@
 "use client";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 import { AffiliateLink } from "@/components/affiliate/AffiliateLink";
@@ -16,6 +16,7 @@ const ROOMS = [["basement","Keller"],["living","Wohnraum"],["bedroom","Schlafzim
 
 export function DehumidifierPlanner() {
   const [step,setStep] = useState(1); const [input,setInput] = useState(INITIAL); const [catalog,setCatalog] = useState<DehumidifierCatalog|null>(null); const [status,setStatus] = useState<"idle"|"loading"|"ready"|"error">("idle");
+  useEffect(() => { if (step > 1) document.getElementById("calculator-heading")?.focus(); }, [step]);
   const requirements = calculateDehumidifierRequirements(input); const matches = catalog ? recommendDehumidifiers(catalog,input) : [];
   const update = <K extends keyof DehumidifierInput,>(key:K,value:DehumidifierInput[K]) => setInput((current)=>({...current,[key]:value}));
   async function results(){ if(!DehumidifierInputSchema.safeParse(input).success)return; setStep(4); if(catalog)return; setStatus("loading"); try{setCatalog(await loadDehumidifierCatalog());setStatus("ready");}catch{setStatus("error");} }

@@ -17,7 +17,7 @@ export function CalculatorShell({
       </div>
       <div className="calculator-body">
         <p className="eyebrow">{label}</p>
-        <h2 id="calculator-heading">{title}</h2>
+        <h2 id="calculator-heading" className="focus-target" tabIndex={-1}>{title}</h2>
         {intro && <div className="calculator-intro">{intro}</div>}
         {children}
       </div>

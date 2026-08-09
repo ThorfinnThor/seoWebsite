@@ -1,9 +1,15 @@
 import type { Metadata } from "next";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
+import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { GardenHousePlanner } from "./GardenHousePlanner";
 
 export const metadata: Metadata = { title: "Gartenhaus-Planer", description: "Mindestfläche berechnen und geprüfte Gartenhäuser nach Stellfläche, Nutzung, Budget, Material, Dach und Boden filtern." };
 
 export default function GardenHousePlannerPage() {
-  return <><section className="planner-hero"><Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Garten", href: "/garten/" }, { label: "Gartenhaus-Planer" }]} /><div className="planner-hero-grid"><div><p className="eyebrow">Kostenlos · ohne Anmeldung</p><h1>Finde ein Gartenhaus, das zu deinem <em>Projekt</em> passt.</h1><p>Wir berechnen deinen Lagerbedarf und prüfen Stellfläche, Zugang, Ausstattung und Budget – nachvollziehbar und ohne Verkaufsprovision im Ranking.</p></div><div className="hero-facts"><div><strong>5</strong><span>übersichtliche Schritte</span></div><div><strong>100%</strong><span>deterministische Auswahl</span></div><div><strong>0 €</strong><span>für die Nutzung</span></div></div></div></section><section className="planner-wrap"><GardenHousePlanner /></section><section className="section planner-notes"><div><p className="eyebrow">Was der Planer leistet</p><h2>Planungshilfe, keine amtliche oder technische Freigabe.</h2></div><div className="note-grid"><article><h3>✓ Das wird geprüft</h3><p>Lagerflächenbedarf, bekannte Außenmaße, Türbreite, Bodenoption, Material, Dachform, Verfügbarkeit und Budgetstatus.</p></article><article><h3>! Das musst du prüfen</h3><p>Baugenehmigung, Abstände, Statik, Schnee- und Windlast, Fundament sowie die tatsächlich nutzbare Fläche vor Ort.</p></article></div></section></>;
+  return <>
+    <PlannerJsonLd name="Gartenhaus-Planer" description="Mindestfläche und Anforderungen für ein Gartenhaus bestimmen." path="/garten/gartenhaus-planer/" />
+    <section className="planner-hero"><Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Garten", href: "/garten/" }, { label: "Gartenhaus-Planer" }]} /><div className="planner-hero-grid"><div><p className="eyebrow">Kostenlos · ohne Anmeldung</p><h1>Finde ein Gartenhaus, das zu deinem <em>Projekt</em> passt.</h1><p>Wir berechnen deinen Lagerbedarf und prüfen Stellfläche, Zugang, Ausstattung und Budget – nachvollziehbar und ohne Verkaufsprovision im Ranking.</p></div><div className="hero-facts"><div><strong>5</strong><span>übersichtliche Schritte</span></div><div><strong>100%</strong><span>deterministische Auswahl</span></div><div><strong>0 €</strong><span>für die Nutzung</span></div></div></div></section>
+    <section className="planner-wrap"><GardenHousePlanner /></section>
+    <section className="section planner-notes"><div><p className="eyebrow">Was der Planer leistet</p><h2>Planungshilfe, keine amtliche oder technische Freigabe.</h2></div><div className="note-grid"><article><h3>✓ Das wird geprüft</h3><p>Lagerflächenbedarf, bekannte Außenmaße, Türbreite, Bodenoption, Material, Dachform, Verfügbarkeit und Budgetstatus.</p></article><article><h3>! Das musst du prüfen</h3><p>Baugenehmigung, Abstände, Statik, Schnee- und Windlast, Fundament sowie die tatsächlich nutzbare Fläche vor Ort.</p></article></div></section>
+  </>;
 }
