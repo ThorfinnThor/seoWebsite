@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <div className="footer-grid">
             <div><Link className="brand brand--footer" href="/"><span className="brand-mark" aria-hidden="true">M</span><span>MachPlan</span></Link><p>Klare Entscheidungen für Haus und Garten – ohne versteckte Verkaufslogik.</p></div>
-            <div><h2>Planen</h2><Link href="/rechner/">Alle Rechner & Planer</Link><Link href="/garten/gartenhaus-planer/">Gartenhaus-Planer</Link><Link href="/garten/bewaesserungs-planer/">Bewässerungsplaner</Link></div>
+            <div><h2>Planen</h2><Link href="/rechner/">Alle Rechner & Planer</Link><Link href="/garten/gartenhaus-planer/">Gartenhaus-Planer</Link><Link href="/garten/terrassen-dielen-rechner/">Terrassendielen</Link></div>
             <div><h2>Weitere Rechner</h2><Link href="/haus/raumklima/luftentfeuchter-rechner/">Luftentfeuchter</Link><Link href="/garten/bewaesserungs-planer/">Bewässerung</Link></div>
             <div><h2>MachPlan</h2><Link href="/ueber-machplan/">Über das Projekt</Link><Link href="/methodik/">Methodik</Link><Link href="/affiliate-transparenz/">Affiliate-Transparenz</Link></div>
           </div>

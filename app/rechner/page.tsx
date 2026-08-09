@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter und Bewässerung – deterministisch, transparent und ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter, Bewässerung und Terrasse – deterministisch, transparent und ohne Anmeldung.",
 };
 
 const tools = [
@@ -36,6 +36,15 @@ const tools = [
     href: "/garten/bewaesserungs-planer/",
     icon: "≈",
     cta: "Bewässerung planen",
+  },
+  {
+    title: "Terrassendielen-Rechner",
+    category: "Garten · Terrasse",
+    description: "Dielenreihen, Laufmeter, Reserve, Lieferlängen und Unterkonstruktion zu einem Materialrahmen verbinden.",
+    facts: ["4 Schritte", "Belag & Unterbau", "Zuschnittgrenzen sichtbar"],
+    href: "/garten/terrassen-dielen-rechner/",
+    icon: "═",
+    cta: "Terrassenbedarf berechnen",
   },
 ] as const;
 

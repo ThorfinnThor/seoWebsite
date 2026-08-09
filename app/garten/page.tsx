@@ -20,6 +20,12 @@ const irrigationGuides = [
   ["Steuerungszonen festlegen", "Verbraucher sinnvoll trennen und Controller auswählen.", "/garten/bewaesserungscomputer-zonen/"],
 ] as const;
 
+const terraceGuides = [
+  ["Verschnitt und Fugen", "Verlegebreite, Lieferlängen und Stoßbild zusammenbringen.", "/garten/terrassendielen-verschnitt-fugen/"],
+  ["Unterkonstruktion planen", "Auflagerabstand, Stoßstellen und Wasserführung einordnen.", "/garten/terrasse-unterkonstruktion/"],
+  ["Terrassen-Kosten", "Belag, Unterbau, Befestigung und Lieferung vollständig budgetieren.", "/garten/terrasse-kosten/"],
+] as const;
+
 function GuideGrid({ items, label }: { items: readonly (readonly [string, string, string])[]; label: string }) {
   return <div className="guide-grid">{items.map(([title, text, href]) => <Link href={href} className="guide-card" key={href}><span className="guide-number">{label}</span><h2>{title}</h2><p>{text}</p><span className="card-link">Ratgeber lesen →</span></Link>)}</div>;
 }
@@ -30,10 +36,13 @@ export default function GardenPage() {
     <section className="section">
       <Link className="planner-banner" href="/garten/gartenhaus-planer/"><div><span className="status-pill">Planer</span><h2>Welches Gartenhaus passt zu deinem Projekt?</h2><p>In wenigen Schritten zu Mindestfläche, Türbreite und kompatiblen Modellen.</p></div><span className="button button--light">Jetzt berechnen →</span></Link>
       <Link className="planner-banner planner-banner--secondary" href="/garten/bewaesserungs-planer/"><div><span className="status-pill">Planer</span><h2>Bewässerung als kompatibles System planen.</h2><p>Materialstruktur für Rasen, Beete und Hecken – ohne falschen Hydraulikanspruch.</p></div><span className="button button--light">System planen →</span></Link>
+      <Link className="planner-banner planner-banner--secondary planner-banner--terrace" href="/garten/terrassen-dielen-rechner/"><div><span className="status-pill">Neu</span><h2>Dielen und Unterkonstruktion mengenmäßig vorbereiten.</h2><p>Verlegerichtung, Fugen, Verschnitt, Lieferlängen und Auflagerabstand nachvollziehbar berechnen.</p></div><span className="button button--light">Material berechnen →</span></Link>
       <div className="content-cluster-heading"><p className="eyebrow">Gartenhaus Wissen</p><h2>Von der Stellfläche zum nutzbaren Haus.</h2></div>
       <GuideGrid items={gardenHouseGuides} label="Gartenhaus Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Bewässerung Wissen</p><h2>Erst messen, dann Komponenten wählen.</h2></div>
       <GuideGrid items={irrigationGuides} label="Bewässerung Wissen" />
+      <div className="content-cluster-heading"><p className="eyebrow">Terrasse Wissen</p><h2>Vom Dielenraster zum vollständigen Aufbau.</h2></div>
+      <GuideGrid items={terraceGuides} label="Terrasse Wissen" />
     </section>
   </>;
 }
