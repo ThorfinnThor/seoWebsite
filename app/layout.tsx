@@ -32,7 +32,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <nav aria-label="Hauptnavigation">
               <Link href="/garten/">Garten</Link>
               <Link href="/haus/raumklima/">Raumklima</Link>
-              <Link href="/garten/gartenhaus-planer/">Planer starten</Link>
+              <Link href="/rechner/">Alle Planer</Link>
             </nav>
           </div>
         </header>
@@ -40,7 +40,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <footer className="site-footer">
           <div className="footer-grid">
             <div><Link className="brand brand--footer" href="/"><span className="brand-mark" aria-hidden="true">M</span><span>MachPlan</span></Link><p>Klare Entscheidungen für Haus und Garten – ohne versteckte Verkaufslogik.</p></div>
-            <div><h2>Planen</h2><Link href="/garten/gartenhaus-planer/">Gartenhaus-Planer</Link><Link href="/garten/gartenhaus-groesse/">Größe bestimmen</Link><Link href="/garten/gartenhaus-kosten/">Kosten verstehen</Link></div>
+            <div><h2>Planen</h2><Link href="/rechner/">Alle Rechner & Planer</Link><Link href="/garten/gartenhaus-planer/">Gartenhaus-Planer</Link><Link href="/garten/bewaesserungs-planer/">Bewässerungsplaner</Link></div>
             <div><h2>Weitere Rechner</h2><Link href="/haus/raumklima/luftentfeuchter-rechner/">Luftentfeuchter</Link><Link href="/garten/bewaesserungs-planer/">Bewässerung</Link></div>
             <div><h2>MachPlan</h2><Link href="/ueber-machplan/">Über das Projekt</Link><Link href="/methodik/">Methodik</Link><Link href="/affiliate-transparenz/">Affiliate-Transparenz</Link></div>
           </div>

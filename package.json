@@ -14,7 +14,8 @@
     "validate:data": "node --import tsx scripts/validate-data.ts",
     "sync:products": "node --import tsx scripts/awin/sync-products.ts",
     "verify:static": "node --import tsx scripts/verify-static-build.ts",
-    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static"
+    "audit:site": "node --import tsx scripts/audit-static-site.ts",
+    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static && npm run audit:site"
   },
   "dependencies": {
     "csv-parse": "^6.1.0",

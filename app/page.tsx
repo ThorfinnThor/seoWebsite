@@ -9,7 +9,7 @@ export default function HomePage() {
             <p className="eyebrow">Haus & Garten, klar geplant</p>
             <h1>Erst verstehen, was du brauchst. <em>Dann</em> Produkte vergleichen.</h1>
             <p className="hero-copy">MachPlan übersetzt dein Projekt in nachvollziehbare Anforderungen und filtert nur Produkte, die wirklich dazu passen.</p>
-            <div className="hero-actions"><Link className="button button--primary" href="/garten/gartenhaus-planer/">Gartenhaus planen <span aria-hidden="true">→</span></Link><Link className="text-link" href="/garten/">Garten-Ratgeber entdecken</Link></div>
+            <div className="hero-actions"><Link className="button button--primary" href="/garten/gartenhaus-planer/">Gartenhaus planen <span aria-hidden="true">→</span></Link><Link className="text-link" href="/rechner/">Alle Planer ansehen</Link></div>
           </div>
           <div className="hero-visual" aria-label="Vom Vorhaben zur passenden Auswahl">
             <div className="plan-card plan-card--one"><span>01</span><strong>Dein Projekt</strong><small>Platz, Nutzung, Budget</small></div>
