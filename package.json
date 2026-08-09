@@ -11,9 +11,9 @@
     "build": "next build",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "validate:data": "tsx scripts/validate-data.ts",
-    "sync:products": "tsx scripts/awin/sync-products.ts",
-    "verify:static": "tsx scripts/verify-static-build.ts",
+    "validate:data": "node --import tsx scripts/validate-data.ts",
+    "sync:products": "node --import tsx scripts/awin/sync-products.ts",
+    "verify:static": "node --import tsx scripts/verify-static-build.ts",
     "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static"
   },
   "dependencies": {

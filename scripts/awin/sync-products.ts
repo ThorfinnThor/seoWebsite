@@ -133,10 +133,11 @@ async function run(): Promise<void> {
   if (substantiveEqual(catalog, previous)) catalog = previous;
   if (substantiveEqual(review, previousReview)) review = previousReview as typeof review;
   if (substantiveEqual(report, previousReport)) report = previousReport as typeof report;
+  const previousManifest = await readJson<{ verticals?: Record<string, { catalog: string; generatedAt: string }> }>("public/data/manifest.json");
   const manifest = {
     schemaVersion: 1,
     generatedAt: catalog.generatedAt,
-    verticals: { "garden-house": { catalog: "/data/garden-house/catalog.json", generatedAt: catalog.generatedAt } },
+    verticals: { ...previousManifest.verticals, "garden-house": { catalog: "/data/garden-house/catalog.json", generatedAt: catalog.generatedAt } },
   };
   await writeFilesAtomically({
     "public/data/garden-house/catalog.json": catalog,

@@ -5,8 +5,9 @@ export function CalculatorShell({
   totalSteps,
   title,
   intro,
+  label = "Projektplaner",
   children,
-}: PropsWithChildren<{ step: number; totalSteps: number; title: string; intro?: ReactNode }>) {
+}: PropsWithChildren<{ step: number; totalSteps: number; title: string; intro?: ReactNode; label?: string }>) {
   const progress = Math.round((step / totalSteps) * 100);
   return (
     <section className="calculator-shell" aria-labelledby="calculator-heading">
@@ -15,7 +16,7 @@ export function CalculatorShell({
         <div className="progress-track" aria-hidden="true"><span style={{ width: `${progress}%` }} /></div>
       </div>
       <div className="calculator-body">
-        <p className="eyebrow">Gartenhaus-Planer</p>
+        <p className="eyebrow">{label}</p>
         <h2 id="calculator-heading">{title}</h2>
         {intro && <div className="calculator-intro">{intro}</div>}
         {children}

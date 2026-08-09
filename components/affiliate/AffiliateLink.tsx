@@ -5,11 +5,12 @@ interface AffiliateLinkProps extends PropsWithChildren, Omit<AnchorHTMLAttribute
   href: string;
   productId: string;
   pageSlug?: string;
+  verticalRef?: string;
 }
 
-export function AffiliateLink({ href, productId, pageSlug, children, ...props }: AffiliateLinkProps) {
+export function AffiliateLink({ href, productId, pageSlug, verticalRef = "gardenhouse", children, ...props }: AffiliateLinkProps) {
   const trackedUrl = addAwinClickRefs(href, {
-    clickref: "gardenhouse",
+    clickref: verticalRef,
     clickref2: "planner-result",
     clickref3: shortProductRef(productId),
     clickref4: pageSlug,

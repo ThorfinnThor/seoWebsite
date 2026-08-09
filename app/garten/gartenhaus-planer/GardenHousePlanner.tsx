@@ -68,7 +68,7 @@ export function GardenHousePlanner() {
   const titles = ["Wie viel Platz steht zur Verfügung?", "Was soll ins Gartenhaus?", "Welche Ausführung passt zu dir?", "Prüfe deinen Planungsrahmen", "Dein Ergebnis"];
   return (
     <div ref={headingRef} tabIndex={-1} className="focus-target">
-      <CalculatorShell step={step} totalSteps={5} title={titles[step - 1]} intro={step === 1 ? <p>Gib nur die Fläche an, die du baulich und rechtlich tatsächlich nutzen kannst.</p> : undefined}>
+      <CalculatorShell step={step} totalSteps={5} title={titles[step - 1]} label="Gartenhaus-Planer" intro={step === 1 ? <p>Gib nur die Fläche an, die du baulich und rechtlich tatsächlich nutzen kannst.</p> : undefined}>
         {step === 1 && <div className="form-step">
           <div className="field-grid field-grid--two">
             <NumberField id="width" label="Verfügbare Breite" value={input.availableWidthCm} min={150} max={2000} unit="cm" onChange={(value) => update("availableWidthCm", value)} />

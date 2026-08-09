@@ -5,6 +5,14 @@
     "garden-house": {
       "catalog": "/data/garden-house/catalog.json",
       "generatedAt": "2026-08-09T00:00:00.000Z"
+    },
+    "dehumidifier": {
+      "catalog": "/data/dehumidifier/catalog.json",
+      "generatedAt": "2026-08-09T00:00:00.000Z"
+    },
+    "irrigation": {
+      "catalog": "/data/irrigation/catalog.json",
+      "generatedAt": "2026-08-09T00:00:00.000Z"
     }
   }
 }
