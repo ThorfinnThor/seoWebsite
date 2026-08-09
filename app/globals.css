@@ -128,6 +128,8 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .calculator-body { padding: 42px 54px 10px; }
 .calculator-body h2 { margin-bottom: 12px; font-size: clamp(1.8rem,3.5vw,2.7rem); }
 .calculator-intro { max-width: 680px; color: var(--muted); }
+.session-note { display: flex; max-width: 720px; margin: 18px 0 0; padding: 10px 13px; align-items: center; justify-content: space-between; gap: 16px; border-radius: 9px; color: var(--muted); background: #f2f5ed; font-size: .76rem; }
+.session-note button { padding: 0; border: 0; color: var(--green); background: transparent; font-weight: 800; text-decoration: underline; text-underline-offset: 3px; }
 .form-step { min-width: 0; margin: 38px 0 12px; padding: 0; border: 0; }
 .field-grid { display: grid; gap: 22px; }
 .field-grid--two { grid-template-columns: repeat(2,1fr); }
@@ -282,6 +284,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
   .planner-wrap { padding-left: 10px; padding-right: 10px; }
   .calculator-progress { padding-left: 20px; padding-right: 20px; }
   .calculator-body { padding: 30px 20px 8px; }
+  .session-note { align-items: flex-start; flex-direction: column; gap: 6px; }
   .field-grid--two, .check-card-grid, .radio-grid--four, .radio-grid--three, .radio-grid--two, .requirement-summary { grid-template-columns: 1fr; }
   .check-card { min-height: auto; }
   .radio-grid--four { grid-template-columns: repeat(2,1fr); }
@@ -335,6 +338,21 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-page header { max-width: 850px; margin: 65px 0 70px; }
 .guide-page header h1 { margin: 0 0 24px; font-size: clamp(2.8rem,5vw,5rem); overflow-wrap: anywhere; }
 .guide-page header > p:last-child { color: var(--muted); font-size: 1.18rem; }
+.guide-calculator { margin: -20px 0 80px; }
+.inline-calculator { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
+.inline-calculator-heading { display: grid; grid-template-columns: 1fr .7fr; gap: 50px; padding: 30px 34px; align-items: end; color: #fff; background: var(--green); }
+.inline-calculator-heading h2 { margin: 0; font-size: clamp(1.7rem,3vw,2.5rem); }
+.inline-calculator-heading > p { margin: 0; color: #c7d7cf; font-size: .88rem; }
+.inline-calculator-body { padding: 32px 34px; background: #fafbf7; }
+.inline-inputs { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+.inline-inputs--four { grid-template-columns: repeat(4,1fr); }
+.inline-results { display: grid; grid-template-columns: repeat(3,1fr); gap: 1px; margin-top: 24px; overflow: hidden; border: 1px solid var(--line); border-radius: 13px; background: var(--line); }
+.inline-results--four { grid-template-columns: repeat(4,1fr); }
+.inline-results div { padding: 20px; background: #fff; }
+.inline-results span, .inline-results strong { display: block; }
+.inline-results span { color: var(--muted); font-size: .72rem; }
+.inline-results strong { margin-top: 5px; color: var(--green); font-size: 1.15rem; }
+.inline-calculator-note { margin: 0; padding: 16px 34px; color: #63553b; background: #fbf5e8; font-size: .8rem; }
 .guide-layout { display: grid; grid-template-columns: 300px 1fr; gap: 80px; align-items: start; }
 .guide-layout aside { position: sticky; top: 25px; padding: 25px; border-radius: 16px; background: var(--cream); }
 .guide-layout aside > strong { color: var(--green); }
@@ -381,6 +399,8 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 
 @media (max-width: 980px) { .tool-grid { grid-template-columns: 1fr; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h2 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 650px) { .legal-page > header h1 { font-size: 2.2rem; } .guide-page header h1 { font-size: 2.45rem; } .tool-card { display: flex; padding: 28px 24px; } .tool-card-top { display: flex; } .tool-card-top .status-pill { display: inline-flex; } .tool-card h2 { margin-top: 28px; } .tool-card .button { width: 100%; } .related-guides .guide-grid { grid-template-columns: 1fr; } }
+
+@media (max-width: 760px) { .guide-calculator { margin-top: -25px; } .inline-calculator-heading { grid-template-columns: 1fr; gap: 12px; padding: 26px 24px; } .inline-calculator-body { padding: 25px 20px; } .inline-inputs, .inline-inputs--four { grid-template-columns: 1fr; } .inline-results, .inline-results--four { grid-template-columns: repeat(2,1fr); } .inline-calculator-note { padding: 15px 20px; } }
 
 @media (max-width: 650px) { .terrace-result-grid article { grid-template-columns: 1fr; } .calculator-error { margin: 14px 20px; } .print-action .button { width: 100%; } }
 

@@ -50,6 +50,10 @@ for (const page of pages) {
   if (!page.title) errors.push(`${page.route}: title fehlt`);
   if (!page.description && !page.noindex) errors.push(`${page.route}: Meta-Description fehlt`);
   if (page.h1Count !== 1) errors.push(`${page.route}: erwartet 1 H1, gefunden ${page.h1Count}`);
+  const jsonLdBlocks = [...page.html.matchAll(/<script type="application\/ld\+json">([^<]+)<\/script>/g)].map((match) => match[1]);
+  for (const [index, json] of jsonLdBlocks.entries()) {
+    try { JSON.parse(json); } catch { errors.push(`${page.route}: ungültiges JSON-LD in Block ${index + 1}`); }
+  }
 }
 
 for (const field of ["title", "description"] as const) {

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { ResultSummary } from "@/components/calculator/ResultSummary";
 import { ProductCard } from "@/components/product/ProductCard";
 import { loadGardenHouseCatalog } from "@/lib/catalog/load-client-catalog";
@@ -28,10 +29,11 @@ const INITIAL_INPUT: GardenHouseInput = {
 const MATERIALS = [["any", "Egal"], ["wood", "Holz"], ["metal", "Metall"], ["plastic", "Kunststoff"]] as const;
 const ROOFS = [["any", "Egal"], ["flat", "Flachdach"], ["pent", "Pultdach"], ["gable", "Satteldach"]] as const;
 const FLOORS = [["irrelevant", "Nicht wichtig", "Ich plane den Boden separat."], ["preferred", "Bevorzugt", "Boden oder Bodenset wäre hilfreich."], ["required", "Erforderlich", "Nur mit Boden oder passendem Set."]] as const;
+const parseGardenHouseInput = (value: unknown) => { const result = GardenHouseInputSchema.safeParse(value); return result.success ? result.data : null; };
 
 export function GardenHousePlanner() {
   const [step, setStep] = useState(1);
-  const [input, setInput] = useState<GardenHouseInput>(INITIAL_INPUT);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:garden-house:v1", INITIAL_INPUT, parseGardenHouseInput);
   const [catalog, setCatalog] = useState<GardenHouseCatalog | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const headingRef = useRef<HTMLDivElement>(null);
@@ -68,7 +70,7 @@ export function GardenHousePlanner() {
   const titles = ["Wie viel Platz steht zur Verfügung?", "Was soll ins Gartenhaus?", "Welche Ausführung passt zu dir?", "Prüfe deinen Planungsrahmen", "Dein Ergebnis"];
   return (
     <div ref={headingRef} tabIndex={-1} className="focus-target">
-      <CalculatorShell step={step} totalSteps={5} title={titles[step - 1]} label="Gartenhaus-Planer" intro={step === 1 ? <p>Gib nur die Fläche an, die du baulich und rechtlich tatsächlich nutzen kannst.</p> : undefined}>
+      <CalculatorShell step={step} totalSteps={5} title={titles[step - 1]} label="Gartenhaus-Planer" intro={step === 1 ? <p>Gib nur die Fläche an, die du baulich und rechtlich tatsächlich nutzen kannst.</p> : undefined} onReset={() => { resetInput(); setStep(1); setCatalog(null); setStatus("idle"); }}>
         {step === 1 && <div className="form-step">
           <div className="field-grid field-grid--two">
             <NumberField id="width" label="Verfügbare Breite" value={input.availableWidthCm} min={150} max={2000} unit="cm" onChange={(value) => update("availableWidthCm", value)} />

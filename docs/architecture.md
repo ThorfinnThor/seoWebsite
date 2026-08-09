@@ -9,6 +9,8 @@ The public site currently exposes four deterministic planning areas:
 - irrigation component/system planning;
 - terrace decking and substructure quantity planning.
 
+Planner inputs are validated before being stored in the current tab's `sessionStorage`. This protects work across accidental reloads without creating an account, server write or cross-device profile. Invalid or outdated stored shapes are discarded; reset controls overwrite them with the typed defaults.
+
 Product ingestion is an offline build concern. GitHub Actions streams configured Awin feeds through decompression and CSV parsing, identifies broad candidates, normalizes conservative product attributes, applies curated overrides and validates all output before atomically replacing public snapshots.
 
 Where products are recommended, products and merchant offers are separate entities. Recommendation functions first enforce review, availability, physical compatibility, hard preferences and budget status. Only compatible products are scored. Commission data is absent from every recommendation input.

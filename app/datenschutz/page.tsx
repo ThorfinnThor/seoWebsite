@@ -24,7 +24,8 @@ export default function DatenschutzPage() {
       </section>
       <section>
         <h2>3. Planer und lokale Eingaben</h2>
-        <p>Die Eingaben in den Planern werden im Browser ausgewertet. Sie werden von MachPlan derzeit weder in einer Datenbank gespeichert noch an ein Nutzerkonto gebunden. Produktkataloge werden als statische Dateien von derselben Website geladen.</p>
+        <p>Die Eingaben in den Planern werden im Browser ausgewertet. Damit sie bei einem versehentlichen Neuladen nicht verloren gehen, werden sie für die Seitensitzung im Sitzungsspeicher des aktuellen Browser-Tabs (Session Storage) abgelegt. Sie werden nicht an MachPlan übertragen, nicht in einer Datenbank gespeichert und nicht an ein Nutzerkonto gebunden.</p>
+        <p>Über „Zurücksetzen“ lassen sich die gespeicherten Planerwerte auf die Standardangaben zurücksetzen. Produktkataloge werden als statische Dateien von derselben Website geladen.</p>
       </section>
       <section>
         <h2>4. Cookies, Analyse und Kontaktformulare</h2>

@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
 import { TerraceInputSchema, type TerraceInput } from "@/lib/terrace/types";
 
@@ -22,10 +23,11 @@ const TITLES = [
   "Welche Reserve und Auflagerung gelten?",
   "Dein erster Materialrahmen",
 ];
+const parseTerraceInput = (value: unknown) => { const result = TerraceInputSchema.safeParse(value); return result.success ? result.data : null; };
 
 export function TerracePlanner() {
   const [step, setStep] = useState(1);
-  const [input, setInput] = useState<TerraceInput>(INITIAL);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:terrace:v1", INITIAL, parseTerraceInput);
   const [error, setError] = useState("");
   const parsed = TerraceInputSchema.safeParse(input);
   const plan = parsed.success ? calculateTerracePlan(parsed.data) : null;
@@ -48,7 +50,7 @@ export function TerracePlanner() {
     setStep((current) => Math.min(4, current + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Terrassendielen-Rechner">
+  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Terrassendielen-Rechner" onReset={() => { resetInput(); setStep(1); setError(""); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two">
         <NumberField id="terrace-length" label="Länge der Terrasse" value={input.terraceLengthM} unit="m" min={1} max={30} step="0.1" onChange={(value) => update("terraceLengthM", value)} />
