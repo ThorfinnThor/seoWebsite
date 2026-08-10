@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter, Bewässerung, Terrasse und Sichtschutz – transparent und ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
 };
 
 const tools = [
@@ -54,6 +54,15 @@ const tools = [
     href: "/garten/sichtschutz-planer/",
     icon: "▥",
     cta: "Sichtschutz planen",
+  },
+  {
+    title: "Bodenbelag-Rechner",
+    category: "Haus · Innenausbau",
+    description: "Teilflächen, Verschnitt, Paketinhalt, Unterlage und Sockelleisten zu einem bestellbaren Materialrahmen verbinden.",
+    facts: ["4 Schritte", "Volle Pakete", "Aufbaugrenzen sichtbar"],
+    href: "/haus/boden/bodenbelag-rechner/",
+    icon: "▤",
+    cta: "Bodenmaterial berechnen",
   },
 ] as const;
 

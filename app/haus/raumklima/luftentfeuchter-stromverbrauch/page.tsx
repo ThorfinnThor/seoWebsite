@@ -9,7 +9,7 @@ export default function Page() {
     title="Stromverbrauch: Watt allein sagt zu wenig"
     intro="Die elektrische Leistung beschreibt den momentanen Verbrauch. Für die Kosten zählen zusätzlich Laufzeit, Regelung, Raumzustand und erreichte Wasserentnahme."
     updated="August 2026"
-    breadcrumbs={[{label:"Start",href:"/"},{label:"Raumklima",href:"/haus/raumklima/"},{label:"Stromverbrauch"}]}
+    breadcrumbs={[{label:"Start",href:"/"},{label:"Haus",href:"/haus/"},{label:"Raumklima",href:"/haus/raumklima/"},{label:"Stromverbrauch"}]}
     plannerHref="/haus/raumklima/luftentfeuchter-rechner/"
     plannerLabel="Luftentfeuchter auswählen"
     takeaway="Berechne Kosten aus Leistung in Kilowatt × Betriebsstunden × deinem Strompreis – und vergleiche Geräte nur bei ähnlicher Aufgabe und Testbedingung."
