@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Bewässerung, Fundament, Größe und Kosten." };
+export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten." };
 
 const gardenHouseGuides = [
   ["Die richtige Größe", "Vom Lagerbedarf zur realistischen Mindestfläche.", "/garten/gartenhaus-groesse/"],
@@ -26,6 +26,12 @@ const terraceGuides = [
   ["Terrassen-Kosten", "Belag, Unterbau, Befestigung und Lieferung vollständig budgetieren.", "/garten/terrasse-kosten/"],
 ] as const;
 
+const privacyScreenGuides = [
+  ["Sichtschutz-Elemente berechnen", "Systemmaß, Pfostenachsen und Randfeld richtig einordnen.", "/garten/sichtschutz-elemente-berechnen/"],
+  ["Pfosten und Fundament", "Stückzahl, Verankerung und Windangriffsfläche trennen.", "/garten/sichtschutz-pfosten-fundament/"],
+  ["Gartentor planen", "Durchgang, Öffnungsrichtung, Torpfosten und Raster verbinden.", "/garten/sichtschutz-gartentor-planen/"],
+] as const;
+
 function GuideGrid({ items, label }: { items: readonly (readonly [string, string, string])[]; label: string }) {
   return <div className="guide-grid">{items.map(([title, text, href]) => <Link href={href} className="guide-card" key={href}><span className="guide-number">{label}</span><h2>{title}</h2><p>{text}</p><span className="card-link">Ratgeber lesen →</span></Link>)}</div>;
 }
@@ -37,12 +43,15 @@ export default function GardenPage() {
       <Link className="planner-banner" href="/garten/gartenhaus-planer/"><div><span className="status-pill">Planer</span><h2>Welches Gartenhaus passt zu deinem Projekt?</h2><p>In wenigen Schritten zu Mindestfläche, Türbreite und kompatiblen Modellen.</p></div><span className="button button--light">Jetzt berechnen →</span></Link>
       <Link className="planner-banner planner-banner--secondary" href="/garten/bewaesserungs-planer/"><div><span className="status-pill">Planer</span><h2>Bewässerung als kompatibles System planen.</h2><p>Materialstruktur für Rasen, Beete und Hecken – ohne falschen Hydraulikanspruch.</p></div><span className="button button--light">System planen →</span></Link>
       <Link className="planner-banner planner-banner--secondary planner-banner--terrace" href="/garten/terrassen-dielen-rechner/"><div><span className="status-pill">Neu</span><h2>Dielen und Unterkonstruktion mengenmäßig vorbereiten.</h2><p>Verlegerichtung, Fugen, Verschnitt, Lieferlängen und Auflagerabstand nachvollziehbar berechnen.</p></div><span className="button button--light">Material berechnen →</span></Link>
+      <Link className="planner-banner planner-banner--secondary planner-banner--screen" href="/garten/sichtschutz-planer/"><div><span className="status-pill">Neu</span><h2>Sichtschutzfelder und Pfosten im echten Systemraster planen.</h2><p>Gerade Strecke, Tor-Module, Randanpassung und Bestellreserve transparent zusammenbringen.</p></div><span className="button button--light">Sichtschutz planen →</span></Link>
       <div className="content-cluster-heading"><p className="eyebrow">Gartenhaus Wissen</p><h2>Von der Stellfläche zum nutzbaren Haus.</h2></div>
       <GuideGrid items={gardenHouseGuides} label="Gartenhaus Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Bewässerung Wissen</p><h2>Erst messen, dann Komponenten wählen.</h2></div>
       <GuideGrid items={irrigationGuides} label="Bewässerung Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Terrasse Wissen</p><h2>Vom Dielenraster zum vollständigen Aufbau.</h2></div>
       <GuideGrid items={terraceGuides} label="Terrasse Wissen" />
+      <div className="content-cluster-heading"><p className="eyebrow">Sichtschutz Wissen</p><h2>Vom Systemraster zur prüfbaren Zaunlinie.</h2></div>
+      <GuideGrid items={privacyScreenGuides} label="Sichtschutz Wissen" />
     </section>
   </>;
 }

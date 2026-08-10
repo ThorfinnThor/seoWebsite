@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter, Bewässerung und Terrasse – deterministisch, transparent und ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter, Bewässerung, Terrasse und Sichtschutz – transparent und ohne Anmeldung.",
 };
 
 const tools = [
@@ -45,6 +45,15 @@ const tools = [
     href: "/garten/terrassen-dielen-rechner/",
     icon: "═",
     cta: "Terrassenbedarf berechnen",
+  },
+  {
+    title: "Sichtschutz-Planer",
+    category: "Garten · Zaun",
+    description: "Standardfelder, Tor-Module, Pfosten und Rasterabschluss für eine gerade Sichtschutzstrecke abschätzen.",
+    facts: ["4 Schritte", "Systemmaß statt Nennmaß", "Keine Fundamentbemessung"],
+    href: "/garten/sichtschutz-planer/",
+    icon: "▥",
+    cta: "Sichtschutz planen",
   },
 ] as const;
 
