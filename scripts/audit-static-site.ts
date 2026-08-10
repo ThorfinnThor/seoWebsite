@@ -1,7 +1,9 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { SITE } from "@/lib/site";
 
 const OUT_DIR = path.resolve("out");
+const SITE_URL = SITE.url.replace(/\/$/, "");
 
 async function walk(directory: string): Promise<string[]> {
   const entries = await readdir(directory);
@@ -38,6 +40,10 @@ const pages = await Promise.all(pageFiles.map(async (file) => {
     html,
     title: firstMatch(html, /<title>([^<]+)<\/title>/),
     description: firstMatch(html, /<meta name="description" content="([^"]+)"/),
+    canonical: firstMatch(html, /<link rel="canonical" href="([^"]+)"/),
+    openGraphTitle: firstMatch(html, /<meta property="og:title" content="([^"]+)"/),
+    openGraphDescription: firstMatch(html, /<meta property="og:description" content="([^"]+)"/),
+    openGraphUrl: firstMatch(html, /<meta property="og:url" content="([^"]+)"/),
     h1Count: (html.match(/<h1\b/g) ?? []).length,
     noindex: robots.some((value) => value.includes("noindex")),
   };
@@ -50,9 +56,25 @@ for (const page of pages) {
   if (!page.title) errors.push(`${page.route}: title fehlt`);
   if (!page.description && !page.noindex) errors.push(`${page.route}: Meta-Description fehlt`);
   if (page.h1Count !== 1) errors.push(`${page.route}: erwartet 1 H1, gefunden ${page.h1Count}`);
+  const expectedUrl = `${SITE_URL}${page.route}`;
+  if (!page.noindex && !page.canonical) errors.push(`${page.route}: Canonical fehlt`);
+  else if (!page.noindex && page.canonical !== expectedUrl) errors.push(`${page.route}: Canonical ${page.canonical} statt ${expectedUrl}`);
+  if (!page.openGraphTitle) errors.push(`${page.route}: og:title fehlt`);
+  if (!page.openGraphDescription && !page.noindex) errors.push(`${page.route}: og:description fehlt`);
+  if (!page.noindex && !page.openGraphUrl) errors.push(`${page.route}: og:url fehlt`);
+  else if (!page.noindex && page.openGraphUrl !== expectedUrl) errors.push(`${page.route}: og:url ${page.openGraphUrl} statt ${expectedUrl}`);
   const jsonLdBlocks = [...page.html.matchAll(/<script type="application\/ld\+json">([^<]+)<\/script>/g)].map((match) => match[1]);
   for (const [index, json] of jsonLdBlocks.entries()) {
     try { JSON.parse(json); } catch { errors.push(`${page.route}: ungültiges JSON-LD in Block ${index + 1}`); }
+  }
+  if (page.html.includes('class="guide-page"')) {
+    if (!page.html.includes('"@type":"Article"')) errors.push(`${page.route}: Article JSON-LD fehlt`);
+    if (!page.html.includes('<time dateTime="')) errors.push(`${page.route}: maschinenlesbares Prüfdatum fehlt`);
+    if (!page.html.includes("Kurzantwort")) errors.push(`${page.route}: sichtbare Kurzantwort fehlt`);
+    if (!page.html.includes('rel="author"')) errors.push(`${page.route}: sichtbarer Autor fehlt`);
+  }
+  if (page.html.includes('class="planner-hero"') && !page.html.includes('"@type":"WebApplication"')) {
+    errors.push(`${page.route}: WebApplication JSON-LD fehlt`);
   }
 }
 
@@ -67,6 +89,13 @@ for (const field of ["title", "description"] as const) {
   }
 }
 
+const canonicalRoutes = new Map<string, string>();
+for (const page of indexablePages) {
+  const previous = canonicalRoutes.get(page.canonical);
+  if (previous) errors.push(`${page.route}: Canonical doppelt mit ${previous}`);
+  canonicalRoutes.set(page.canonical, page.route);
+}
+
 const ignoredPrefixes = ["/_next/", "/data/"];
 const ignoredFiles = new Set(["/icon.svg", "/manifest.webmanifest", "/robots.txt", "/sitemap.xml"]);
 for (const page of pages) {
@@ -78,11 +107,20 @@ for (const page of pages) {
 }
 
 const sitemap = await readFile(path.join(OUT_DIR, "sitemap.xml"), "utf8");
+const sitemapUrls = new Set([...sitemap.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
 for (const page of indexablePages) {
-  if (!sitemap.includes(`<loc>`) || !sitemap.includes(`${page.route}</loc>`)) {
+  if (!sitemapUrls.has(`${SITE_URL}${page.route}`)) {
     errors.push(`${page.route}: fehlt in sitemap.xml`);
   }
 }
+for (const page of pages.filter((candidate) => candidate.noindex)) {
+  if (sitemapUrls.has(`${SITE_URL}${page.route}`)) errors.push(`${page.route}: noindex-Seite steht in sitemap.xml`);
+}
+
+const robotsTxt = await readFile(path.join(OUT_DIR, "robots.txt"), "utf8");
+if (!robotsTxt.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) errors.push("robots.txt: Sitemap-Verweis fehlt oder ist falsch");
+if (!robotsTxt.includes("User-Agent: *") || !robotsTxt.includes("Allow: /")) errors.push("robots.txt: öffentliche Crawler sind nicht allgemein zugelassen");
+if (!robotsTxt.includes("Disallow: /data/")) errors.push("robots.txt: Produktdaten-Verzeichnis ist nicht ausgeschlossen");
 
 if (!process.env.NEXT_PUBLIC_LEGAL_EMAIL) {
   for (const route of ["/impressum/", "/datenschutz/"]) {

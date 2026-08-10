@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { DrywallPlanner } from "./DrywallPlanner";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Trockenbau-Rechner: Platten und Profile berechnen",
   description: "Gipsplatten, Bekleidungsfläche, Grundständer, Boden- und Deckenprofile sowie Dämmfläche für eine Trockenbauwand berechnen.",
-};
+  path: "/haus/innenausbau/trockenbau-rechner/",
+});
 
 export default function Page() {
   return <>

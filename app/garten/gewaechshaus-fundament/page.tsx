@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Gewächshaus-Fundament und Basis richtig einordnen", description: "Basisprofil, Fundament, Ebenheit, Entwässerung und Verankerung beim Gewächshaus als getrennte Planungsaufgaben verstehen." };
+export const metadata = createPageMetadata({
+  title: "Gewächshaus-Fundament und Basis richtig einordnen",
+  description: "Basisprofil, Fundament, Ebenheit, Entwässerung und Verankerung beim Gewächshaus als getrennte Planungsaufgaben verstehen.",
+  path: "/garten/gewaechshaus-fundament/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/gewaechshaus-fundament/"
     title="Gewächshaus-Fundament: Profilumfang ist noch keine Gründung"
     intro="Die Basis verbindet das Gewächshaus mit dem Standort. Sie muss eben, tragfähig, entwässert und passend zum freigegebenen Verankerungssystem ausgeführt werden."
     updated="August 2026"

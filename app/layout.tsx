@@ -8,6 +8,8 @@ export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: { default: "MachPlan – Haus- und Gartenprojekte besser planen", template: "%s | MachPlan" },
   description: SITE.description,
+  alternates: { canonical: "/" },
+  authors: [{ name: "Schayan Yousefian", url: "/ueber-machplan/" }],
   applicationName: SITE.name,
   openGraph: {
     type: "website",
@@ -15,6 +17,7 @@ export const metadata: Metadata = {
     siteName: SITE.name,
     title: "MachPlan – Haus- und Gartenprojekte besser planen",
     description: SITE.description,
+    url: "/",
   },
   twitter: { card: "summary", title: "MachPlan", description: SITE.description },
   category: "Haus und Garten",

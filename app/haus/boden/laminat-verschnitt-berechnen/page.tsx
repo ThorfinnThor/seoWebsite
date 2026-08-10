@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Laminat-Verschnitt und Pakete berechnen", description: "Verschnitt für Laminat, Klick-Vinyl und Fertigparkett anhand von Raumform, Verlegemuster, Dielenmaß und Paketinhalt planen." };
+export const metadata = createPageMetadata({
+  title: "Laminat-Verschnitt und Pakete berechnen",
+  description: "Verschnitt für Laminat, Klick-Vinyl und Fertigparkett anhand von Raumform, Verlegemuster, Dielenmaß und Paketinhalt planen.",
+  path: "/haus/boden/laminat-verschnitt-berechnen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/boden/laminat-verschnitt-berechnen/"
     title="Laminat-Verschnitt berechnen: Fläche ist erst der Anfang"
     intro="Aus der Nettofläche wird erst durch Zuschnittreserve und Aufrundung auf volle Pakete eine bestellbare Menge. Raumform und Verlegemuster entscheiden mit."
     updated="August 2026"

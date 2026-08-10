@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Terrassendielen: Verschnitt und Fugen planen", description: "Verschnitt, Fugenbreite, Verlegerichtung, Dielenlänge und Stoßbild für Terrassendielen nachvollziehbar planen." };
+export const metadata = createPageMetadata({
+  title: "Terrassendielen: Verschnitt und Fugen planen",
+  description: "Verschnitt, Fugenbreite, Verlegerichtung, Dielenlänge und Stoßbild für Terrassendielen nachvollziehbar planen.",
+  path: "/garten/terrassendielen-verschnitt-fugen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/terrassendielen-verschnitt-fugen/"
     title="Terrassendielen planen: Fuge und Zuschnitt entscheiden mit"
     intro="Der Materialbedarf entsteht nicht nur aus Quadratmetern. Sichtbreite, Fuge, Verlegerichtung, Lieferlänge und ein brauchbarer Stoßplan bestimmen die benötigten Dielen."
     updated="August 2026"

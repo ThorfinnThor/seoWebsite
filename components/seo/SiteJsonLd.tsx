@@ -1,7 +1,8 @@
-import { SITE } from "@/lib/site";
+import { absoluteUrl, SITE } from "@/lib/site";
 import { JsonLd } from "./JsonLd";
 
 export function SiteJsonLd() {
+  const siteRoot = SITE.url.replace(/\/$/, "");
   return (
     <JsonLd
       data={{
@@ -9,18 +10,18 @@ export function SiteJsonLd() {
         "@graph": [
           {
             "@type": "WebSite",
-            "@id": `${SITE.url}/#website`,
-            url: SITE.url,
+            "@id": `${siteRoot}/#website`,
+            url: `${siteRoot}/`,
             name: SITE.name,
             description: SITE.description,
             inLanguage: "de-DE",
-            publisher: { "@id": `${SITE.url}/#publisher` },
+            publisher: { "@id": `${siteRoot}/#publisher` },
           },
           {
             "@type": "Person",
-            "@id": `${SITE.url}/#publisher`,
+            "@id": `${siteRoot}/#publisher`,
             name: "Schayan Yousefian",
-            url: SITE.url,
+            url: absoluteUrl("/ueber-machplan/"),
           },
         ],
       }}

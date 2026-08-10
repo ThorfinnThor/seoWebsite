@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Mähroboter: Steigung und Engstellen messen", description: "Maximale Rasensteigung, schmale Passagen, Kanten und Wendeflächen vor der Mähroboter-Auswahl richtig aufnehmen." };
+export const metadata = createPageMetadata({
+  title: "Mähroboter: Steigung und Engstellen messen",
+  description: "Maximale Rasensteigung, schmale Passagen, Kanten und Wendeflächen vor der Mähroboter-Auswahl richtig aufnehmen.",
+  path: "/garten/maehroboter-steigung-engstellen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/maehroboter-steigung-engstellen/"
     title="Mähroboter bei Steigung und Engstellen: Der schwierigste Abschnitt zählt"
     intro="Eine große freie Fläche kann leicht sein, während wenige Meter am Hang oder zwischen zwei Beeten die gesamte Geräteauswahl bestimmen."
     updated="August 2026"

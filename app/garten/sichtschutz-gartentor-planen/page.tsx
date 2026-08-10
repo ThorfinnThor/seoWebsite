@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Gartentor im Sichtschutz planen", description: "Gartentor mit Systemmaß, lichter Öffnung, Öffnungsrichtung, Torpfosten und Bodenfreiheit passend zum Sichtschutz planen." };
+export const metadata = createPageMetadata({
+  title: "Gartentor im Sichtschutz planen",
+  description: "Gartentor mit Systemmaß, lichter Öffnung, Öffnungsrichtung, Torpfosten und Bodenfreiheit passend zum Sichtschutz planen.",
+  path: "/garten/sichtschutz-gartentor-planen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/sichtschutz-gartentor-planen/"
     title="Gartentor planen: Durchgang und Systemraster zusammenbringen"
     intro="Die beworbene Torbreite kann lichte Öffnung, Flügelmaß oder komplettes Einbauraster meinen. Für Nutzung und Pfostenposition brauchst du beide Perspektiven."
     updated="August 2026"

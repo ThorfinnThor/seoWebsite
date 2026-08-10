@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { DehumidifierPlanner } from "./DehumidifierPlanner";
 
-export const metadata: Metadata = { title: "Luftentfeuchter-Rechner", description: "Passende Gerätegröße nach Raumfläche, Volumen, Temperatur, Feuchtebelastung, Ablauf und Geräusch auswählen." };
+export const metadata = createPageMetadata({
+  title: "Luftentfeuchter-Rechner",
+  description: "Passende Gerätegröße nach Raumfläche, Volumen, Temperatur, Feuchtebelastung, Ablauf und Geräusch auswählen.",
+  path: "/haus/raumklima/luftentfeuchter-rechner/",
+});
 
 export default function Page() {
   return <>

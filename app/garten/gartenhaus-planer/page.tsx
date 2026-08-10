@@ -1,9 +1,13 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { GardenHousePlanner } from "./GardenHousePlanner";
 
-export const metadata: Metadata = { title: "Gartenhaus-Planer", description: "Mindestfläche berechnen und geprüfte Gartenhäuser nach Stellfläche, Nutzung, Budget, Material, Dach und Boden filtern." };
+export const metadata = createPageMetadata({
+  title: "Gartenhaus-Planer",
+  description: "Mindestfläche berechnen und geprüfte Gartenhäuser nach Stellfläche, Nutzung, Budget, Material, Dach und Boden filtern.",
+  path: "/garten/gartenhaus-planer/",
+});
 
 export default function GardenHousePlannerPage() {
   return <>

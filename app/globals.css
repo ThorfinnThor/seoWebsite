@@ -352,6 +352,8 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-page header { max-width: 850px; margin: 65px 0 70px; }
 .guide-page header h1 { margin: 0 0 24px; font-size: clamp(2.8rem,5vw,5rem); overflow-wrap: anywhere; }
 .guide-page header > p:last-child { color: var(--muted); font-size: 1.18rem; }
+.guide-meta { margin: -4px 0 18px; color: var(--muted); font-size: .88rem; }
+.guide-meta a, .guide-method a, .guide-sources a { color: var(--green-2); text-underline-offset: 3px; }
 .guide-calculator { margin: -20px 0 80px; }
 .inline-calculator { overflow: hidden; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; box-shadow: var(--shadow); }
 .inline-calculator-heading { display: grid; grid-template-columns: 1fr .7fr; gap: 50px; padding: 30px 34px; align-items: end; color: #fff; background: var(--green); }
@@ -369,7 +371,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .inline-calculator-note { margin: 0; padding: 16px 34px; color: #63553b; background: #fbf5e8; font-size: .8rem; }
 .guide-layout { display: grid; grid-template-columns: 300px 1fr; gap: 80px; align-items: start; }
 .guide-layout aside { position: sticky; top: 25px; padding: 25px; border-radius: 16px; background: var(--cream); }
-.guide-layout aside > strong { color: var(--green); }
+.guide-layout aside h2 { margin: 0; color: var(--green); font-size: 1rem; }
 .guide-layout aside p { margin: 12px 0 22px; color: var(--muted); font-size: .9rem; }
 .guide-layout aside .button { width: 100%; font-size: .82rem; }
 .guide-copy section { padding: 0 0 44px; }
@@ -377,6 +379,9 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-copy h2 { font-size: 2rem; }
 .guide-copy p, .guide-copy li { color: #4f5c55; }
 .guide-copy li { margin: 8px 0; }
+.guide-method { margin-bottom: 20px; padding: 22px; border-left: 4px solid var(--green-2); background: var(--cream); }
+.guide-method p { margin: 8px 0 0; }
+.guide-sources a { overflow-wrap: anywhere; }
 .guide-limit { padding: 22px; border-left: 4px solid var(--warning); background: #fcf7ed; }
 .guide-limit p { margin: 8px 0 0; }
 .guide-cta { display: flex; padding: 65px max(24px,calc((100vw - 1100px)/2)); align-items: center; justify-content: space-between; gap: 40px; color: #fff; background: var(--green); }

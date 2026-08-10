@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Hausprojekte planen", description: "Kostenlose Rechner und fundierte Ratgeber für Bodenbeläge, Trockenbau, Innenausbau, Raumklima und weitere Hausprojekte." };
+export const metadata = createPageMetadata({
+  title: "Hausprojekte planen",
+  description: "Kostenlose Rechner und fundierte Ratgeber für Bodenbeläge, Trockenbau, Innenausbau, Raumklima und weitere Hausprojekte.",
+  path: "/haus/",
+});
 
 export default function HousePage() {
   return <>

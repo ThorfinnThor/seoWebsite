@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Terrassen-Unterkonstruktion planen", description: "Unterkonstruktion einer Terrasse nach Auflagerabstand, Dielenrichtung, Stoßstellen, Material und Entwässerung einordnen." };
+export const metadata = createPageMetadata({
+  title: "Terrassen-Unterkonstruktion planen",
+  description: "Unterkonstruktion einer Terrasse nach Auflagerabstand, Dielenrichtung, Stoßstellen, Material und Entwässerung einordnen.",
+  path: "/garten/terrasse-unterkonstruktion/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/terrasse-unterkonstruktion/"
     title="Terrassen-Unterkonstruktion: Abstand ist nur eine Vorgabe"
     intro="Die Unterkonstruktion trägt den Belag, bildet Gefälle und überträgt Lasten. Der maximale Auflagerabstand des konkreten Dielensystems ist wichtig, aber nicht die einzige Planungsgröße."
     updated="August 2026"

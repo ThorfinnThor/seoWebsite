@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Sichtschutz-Pfosten und Fundament planen", description: "Pfosten, Fundamente, Fußplatten und Windangriffsfläche bei Sichtschutzanlagen sicher und systembezogen einordnen." };
+export const metadata = createPageMetadata({
+  title: "Sichtschutz-Pfosten und Fundament planen",
+  description: "Pfosten, Fundamente, Fußplatten und Windangriffsfläche bei Sichtschutzanlagen sicher und systembezogen einordnen.",
+  path: "/garten/sichtschutz-pfosten-fundament/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/sichtschutz-pfosten-fundament/"
     title="Sichtschutz-Pfosten: Stückzahl ist noch keine Fundamentplanung"
     intro="Geschlossene oder halbgeschlossene Felder bieten dem Wind große Angriffsflächen. Deshalb lässt sich aus Höhe und Pfostenzahl keine pauschale Fundamenttiefe ableiten."
     updated="August 2026"

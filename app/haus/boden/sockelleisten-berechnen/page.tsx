@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Sockelleisten richtig berechnen", description: "Sockelleisten aus Raumumfang, Türöffnungen, Lieferlänge, Innenkanten, Gehrungen und Zuschnittreserve berechnen." };
+export const metadata = createPageMetadata({
+  title: "Sockelleisten richtig berechnen",
+  description: "Sockelleisten aus Raumumfang, Türöffnungen, Lieferlänge, Innenkanten, Gehrungen und Zuschnittreserve berechnen.",
+  path: "/haus/boden/sockelleisten-berechnen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/boden/sockelleisten-berechnen/"
     title="Sockelleisten berechnen: Umfang minus Türen reicht fast"
     intro="Für eine einfache Raumform beginnt der Bedarf beim Wandumfang. Türöffnungen werden abgezogen, Zuschnitte und Stöße brauchen anschließend eine Längenreserve."
     updated="August 2026"

@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Gewächshaus, Carport, Mähroboter, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten." };
+export const metadata = createPageMetadata({
+  title: "Garten planen",
+  description: "Planer und fundierte Ratgeber für Gartenhaus, Gewächshaus, Carport, Mähroboter, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten.",
+  path: "/garten/",
+});
 
 const gardenHouseGuides = [
   ["Die richtige Größe", "Vom Lagerbedarf zur realistischen Mindestfläche.", "/garten/gartenhaus-groesse/"],

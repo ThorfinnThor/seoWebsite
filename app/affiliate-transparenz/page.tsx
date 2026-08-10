@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { LegalPage } from "@/components/legal/LegalPage";
 
-export const metadata: Metadata = { title: "Affiliate-Transparenz", description: "So trennt MachPlan Bedarf, Bewertung und mögliche Affiliate-Vergütung." };
+export const metadata = createPageMetadata({
+  title: "Affiliate-Transparenz",
+  description: "So trennt MachPlan Bedarf, Bewertung und mögliche Affiliate-Vergütung.",
+  path: "/affiliate-transparenz/",
+});
 
 export default function AffiliateTransparenzPage() {
   return (

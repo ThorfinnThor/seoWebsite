@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Innenausbau planen", description: "Trockenbauwand-Rechner und Ratgeber für Plattenmengen, Ständerwerk, Profile, Öffnungen und Installationen." };
+export const metadata = createPageMetadata({
+  title: "Innenausbau planen",
+  description: "Trockenbauwand-Rechner und Ratgeber für Plattenmengen, Ständerwerk, Profile, Öffnungen und Installationen.",
+  path: "/haus/innenausbau/",
+});
 
 export default function InteriorHubPage() {
   return <>

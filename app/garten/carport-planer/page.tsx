@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { CarportPlanner } from "./CarportPlanner";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Carport-Planer: Größe und lichten Stellraum berechnen",
   description: "Lichte Carport-Breite, Länge, Höhe, Bewegungsraum, Stauraum und Dachwasserrahmen für ein oder zwei Fahrzeuge planen.",
-};
+  path: "/garten/carport-planer/",
+});
 
 export default function Page() {
   return <>

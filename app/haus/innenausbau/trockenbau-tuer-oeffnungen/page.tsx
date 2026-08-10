@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Türen, Öffnungen und Installationen im Trockenbau", description: "Türöffnungen, Zargen, Zusatzprofile, Elektro- und Sanitärinstallationen sowie spätere Lasten in Trockenbauwänden planen." };
+export const metadata = createPageMetadata({
+  title: "Türen, Öffnungen und Installationen im Trockenbau",
+  description: "Türöffnungen, Zargen, Zusatzprofile, Elektro- und Sanitärinstallationen sowie spätere Lasten in Trockenbauwänden planen.",
+  path: "/haus/innenausbau/trockenbau-tuer-oeffnungen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/innenausbau/trockenbau-tuer-oeffnungen/"
     title="Trockenbau-Türen und Installationen: Vor dem Schließen koordinieren"
     intro="Öffnungen reduzieren zwar die Plattenfläche, erhöhen aber Detailaufwand und Profilbedarf. Leitungen und spätere Lasten müssen feststehen, solange der Wandhohlraum zugänglich ist."
     updated="August 2026"

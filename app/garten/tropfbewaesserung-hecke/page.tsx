@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Tropfbewässerung für Hecken planen", description: "Tropfrohr für Hecken planen: Leitungslänge, Reserve, Druckminderung, Filterung, Zonen und Herstellergrenzen richtig einordnen." };
+export const metadata = createPageMetadata({
+  title: "Tropfbewässerung für Hecken planen",
+  description: "Tropfrohr für Hecken planen: Leitungslänge, Reserve, Druckminderung, Filterung, Zonen und Herstellergrenzen richtig einordnen.",
+  path: "/garten/tropfbewaesserung-hecke/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/tropfbewaesserung-hecke/"
     title="Tropfbewässerung für Hecken: Länge ist nur der Anfang"
     intro="Eine Hecke lässt sich häufig gleichmäßiger über eine Tropfleitung versorgen als mit punktuellem Gießen. Entscheidend sind Leitungsführung, Systemgrenzen und eine zur Pflanzung passende Betriebsweise."
     updated="August 2026"

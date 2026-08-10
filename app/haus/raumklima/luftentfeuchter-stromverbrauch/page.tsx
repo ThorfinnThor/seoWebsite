@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { EnergyCostCalculator } from "@/components/calculator/EnergyCostCalculator";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Stromverbrauch von Luftentfeuchtern", description: "Leistungsaufnahme, Laufzeit und Stromkosten von Luftentfeuchtern mit einem transparenten Kostenrechner unterscheiden." };
+export const metadata = createPageMetadata({
+  title: "Stromverbrauch von Luftentfeuchtern",
+  description: "Leistungsaufnahme, Laufzeit und Stromkosten von Luftentfeuchtern mit einem transparenten Kostenrechner unterscheiden.",
+  path: "/haus/raumklima/luftentfeuchter-stromverbrauch/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/raumklima/luftentfeuchter-stromverbrauch/"
     title="Stromverbrauch: Watt allein sagt zu wenig"
     intro="Die elektrische Leistung beschreibt den momentanen Verbrauch. Für die Kosten zählen zusätzlich Laufzeit, Regelung, Raumzustand und erreichte Wasserentnahme."
     updated="August 2026"

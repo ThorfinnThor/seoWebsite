@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Terrassen-Kosten vollständig planen", description: "Kosten einer Terrasse nach Belag, Untergrund, Unterkonstruktion, Befestigung, Zuschnitt, Lieferung und Pflege realistisch strukturieren." };
+export const metadata = createPageMetadata({
+  title: "Terrassen-Kosten vollständig planen",
+  description: "Kosten einer Terrasse nach Belag, Untergrund, Unterkonstruktion, Befestigung, Zuschnitt, Lieferung und Pflege realistisch strukturieren.",
+  path: "/garten/terrasse-kosten/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/terrasse-kosten/"
     title="Was kostet eine Terrasse wirklich?"
     intro="Ein Quadratmeterpreis für Dielen beschreibt nur einen Teil des Projekts. Untergrund, Unterkonstruktion, Befestigung, Randdetails, Lieferung und Aufbau können das Budget stark verändern."
     updated="August 2026"

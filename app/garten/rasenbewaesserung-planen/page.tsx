@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Rasenbewässerung richtig planen", description: "Rasenbewässerung mit Regnern planen: Fläche, Geometrie, Überlappung, Durchfluss, Zonen und Hindernisse realistisch berücksichtigen." };
+export const metadata = createPageMetadata({
+  title: "Rasenbewässerung richtig planen",
+  description: "Rasenbewässerung mit Regnern planen: Fläche, Geometrie, Überlappung, Durchfluss, Zonen und Hindernisse realistisch berücksichtigen.",
+  path: "/garten/rasenbewaesserung-planen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/rasenbewaesserung-planen/"
     title="Rasenbewässerung planen: Fläche allein reicht nicht"
     intro="Zwei Rasenflächen mit gleicher Quadratmeterzahl können völlig unterschiedliche Regnerpläne benötigen. Form, Hindernisse, Wind, Anschlussleistung und Überlappung entscheiden über die reale Abdeckung."
     updated="August 2026"

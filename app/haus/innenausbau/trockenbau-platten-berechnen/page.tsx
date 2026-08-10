@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Trockenbau-Platten richtig berechnen", description: "Gipsplatten aus Wandfläche, Öffnungen, bekleideten Seiten, Plattenlagen, Format und Zuschnittreserve berechnen." };
+export const metadata = createPageMetadata({
+  title: "Trockenbau-Platten richtig berechnen",
+  description: "Gipsplatten aus Wandfläche, Öffnungen, bekleideten Seiten, Plattenlagen, Format und Zuschnittreserve berechnen.",
+  path: "/haus/innenausbau/trockenbau-platten-berechnen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/innenausbau/trockenbau-platten-berechnen/"
     title="Trockenbau-Platten berechnen: Fläche, Lagen und Format"
     intro="Die Stückzahl entsteht nicht nur aus Wandlänge mal Höhe. Öffnungen, beide Wandseiten, mehrere Plattenlagen und ein sinnvoller Zuschnittplan verändern die Bestellmenge."
     updated="August 2026"

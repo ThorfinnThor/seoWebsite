@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Mähroboter-Rasenfläche richtig berechnen", description: "Netto-Mähfläche aus Rechtecken und festen Abzügen ermitteln und eine realistische Kapazitätsreserve für den Mähroboter einordnen." };
+export const metadata = createPageMetadata({
+  title: "Mähroboter-Rasenfläche richtig berechnen",
+  description: "Netto-Mähfläche aus Rechtecken und festen Abzügen ermitteln und eine realistische Kapazitätsreserve für den Mähroboter einordnen.",
+  path: "/garten/maehroboter-flaeche-berechnen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/maehroboter-flaeche-berechnen/"
     title="Mähroboter-Fläche berechnen: Netto statt Grundstücksgröße"
     intro="Für die Geräteauswahl zählt nicht das gesamte Grundstück, sondern die zusammenhängende Rasenfläche, die der Roboter tatsächlich erreicht und mähen soll."
     updated="August 2026"

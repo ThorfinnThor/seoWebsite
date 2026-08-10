@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Gewächshaus-Belüftung mit Dachfenstern planen", description: "Dachfenster, Querlüftung, automatische Öffner und Beschattung für ein kontrollierbares Gewächshausklima vorbereiten." };
+export const metadata = createPageMetadata({
+  title: "Gewächshaus-Belüftung mit Dachfenstern planen",
+  description: "Dachfenster, Querlüftung, automatische Öffner und Beschattung für ein kontrollierbares Gewächshausklima vorbereiten.",
+  path: "/garten/gewaechshaus-belueftung/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/gewaechshaus-belueftung/"
     title="Gewächshaus belüften: Öffnungen vor der Bepflanzung planen"
     intro="Sonne erwärmt ein geschlossenes Gewächshaus schnell. Dachfenster, tiefere Zuluft und ein freier Luftweg helfen, Wärme und Feuchte kontrollierbar abzuführen."
     updated="August 2026"

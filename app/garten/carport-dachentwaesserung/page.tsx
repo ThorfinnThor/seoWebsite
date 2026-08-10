@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Carport-Dachentwässerung und Regenwasser planen", description: "Carport-Dachgefälle, Rinne, Fallrohr, Speicher, Versickerung und Überlauf als zusammenhängenden Entwässerungsweg planen." };
+export const metadata = createPageMetadata({
+  title: "Carport-Dachentwässerung und Regenwasser planen",
+  description: "Carport-Dachgefälle, Rinne, Fallrohr, Speicher, Versickerung und Überlauf als zusammenhängenden Entwässerungsweg planen.",
+  path: "/garten/carport-dachentwaesserung/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/carport-dachentwaesserung/"
     title="Carport-Dachentwässerung: Das Wasser braucht einen vollständigen Weg"
     intro="Dachform und überdeckte Fläche bestimmen, wo Wasser gesammelt wird. Erst mit Rinne, Fallrohr, zulässigem Ziel und sicherem Überlauf entsteht ein vollständiger Entwässerungsplan."
     updated="August 2026"

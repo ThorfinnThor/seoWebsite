@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Mähroboter mit Begrenzungskabel oder kabellos?", description: "Kabelgebundene und kabellose Mähroboter nach Installation, Empfang, Gartenstruktur und Änderungsbedarf einordnen." };
+export const metadata = createPageMetadata({
+  title: "Mähroboter mit Begrenzungskabel oder kabellos?",
+  description: "Kabelgebundene und kabellose Mähroboter nach Installation, Empfang, Gartenstruktur und Änderungsbedarf einordnen.",
+  path: "/garten/maehroboter-begrenzungskabel-kabellos/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/maehroboter-begrenzungskabel-kabellos/"
     title="Mähroboter: Begrenzungskabel oder kabellose Navigation?"
     intro="Beide Prinzipien können einen Mähbereich zuverlässig abbilden – wenn Installation, Grundstück und konkretes System zusammenpassen. Der Unterschied liegt nicht nur im ersten Aufbau."
     updated="August 2026"

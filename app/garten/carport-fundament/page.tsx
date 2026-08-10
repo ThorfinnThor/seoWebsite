@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Carport-Fundament und Pfosten richtig einordnen", description: "Carport-Pfosten, Fundamente, Verankerung, Boden und Lasten als konkrete Tragwerksaufgabe statt pauschale Stückliste verstehen." };
+export const metadata = createPageMetadata({
+  title: "Carport-Fundament und Pfosten richtig einordnen",
+  description: "Carport-Pfosten, Fundamente, Verankerung, Boden und Lasten als konkrete Tragwerksaufgabe statt pauschale Stückliste verstehen.",
+  path: "/garten/carport-fundament/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/carport-fundament/"
     title="Carport-Fundament: Pfostenraster und Boden bestimmen die Gründung"
     intro="Das Fundament verbindet Wind-, Dach- und Schneelasten mit dem Baugrund. Seine Lage und Ausführung folgen der geprüften Konstruktion – nicht nur der überdachten Quadratmeterzahl."
     updated="August 2026"

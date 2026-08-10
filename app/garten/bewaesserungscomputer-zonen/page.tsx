@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Bewässerungscomputer und Zonen planen", description: "Bewässerungssteuerung nach Zonen planen: Rasen, Beet und Hecke trennen, Ventile, Sensoren und Systemkompatibilität berücksichtigen." };
+export const metadata = createPageMetadata({
+  title: "Bewässerungscomputer und Zonen planen",
+  description: "Bewässerungssteuerung nach Zonen planen: Rasen, Beet und Hecke trennen, Ventile, Sensoren und Systemkompatibilität berücksichtigen.",
+  path: "/garten/bewaesserungscomputer-zonen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/bewaesserungscomputer-zonen/"
     title="Bewässerungscomputer: Zonen zuerst planen"
     intro="Eine Steuerung ist nur dann passend dimensioniert, wenn klar ist, welche Bereiche unabhängig laufen sollen. Rasen, Beet und Hecke benötigen meist unterschiedliche Laufzeiten und Ausbringungsarten."
     updated="August 2026"

@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Trockenbau-Profile und Ständerwerk planen", description: "Grundraster, Ständeranzahl, Boden- und Deckenprofile, Wandhöhe, Öffnungen und Anschlüsse im Trockenbau einordnen." };
+export const metadata = createPageMetadata({
+  title: "Trockenbau-Profile und Ständerwerk planen",
+  description: "Grundraster, Ständeranzahl, Boden- und Deckenprofile, Wandhöhe, Öffnungen und Anschlüsse im Trockenbau einordnen.",
+  path: "/haus/innenausbau/trockenbau-profile-staenderwerk/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/innenausbau/trockenbau-profile-staenderwerk/"
     title="Trockenbau-Profile: Das Grundraster ist nur die Basis"
     intro="Ein gleichmäßiges Ständerraster lässt sich aus Wandlänge und Achsabstand ableiten. Öffnungen, Enden, Anschlüsse, Lasten und hohe Wände verändern die tatsächliche Profilplanung."
     updated="August 2026"

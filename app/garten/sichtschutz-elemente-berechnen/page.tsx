@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Sichtschutz-Elemente richtig berechnen", description: "Sichtschutzfelder mit Montage-Raster, Pfostenachsen, Tor-Modulen und angepasstem Randfeld nachvollziehbar berechnen." };
+export const metadata = createPageMetadata({
+  title: "Sichtschutz-Elemente richtig berechnen",
+  description: "Sichtschutzfelder mit Montage-Raster, Pfostenachsen, Tor-Modulen und angepasstem Randfeld nachvollziehbar berechnen.",
+  path: "/garten/sichtschutz-elemente-berechnen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/sichtschutz-elemente-berechnen/"
     title="Sichtschutz-Elemente berechnen: Das Systemmaß zählt"
     intro="Eine Streckenlänge geteilt durch die sichtbare Elementbreite ergibt selten schon eine belastbare Bestellung. Pfosten, Halter und Montagespiel stecken im Systemraster."
     updated="August 2026"

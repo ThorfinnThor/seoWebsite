@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Gewächshaus-Größe und Innenaufteilung planen", description: "Gewächshaus-Größe aus Beeten, Wegen, Türzugang und geplanter Nutzung statt nur aus Quadratmetern ableiten." };
+export const metadata = createPageMetadata({
+  title: "Gewächshaus-Größe und Innenaufteilung planen",
+  description: "Gewächshaus-Größe aus Beeten, Wegen, Türzugang und geplanter Nutzung statt nur aus Quadratmetern ableiten.",
+  path: "/garten/gewaechshaus-groesse/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/gewaechshaus-groesse/"
     title="Gewächshaus-Größe: Nutzbare Fläche beginnt im Inneren"
     intro="Ein Gewächshaus kann auf dem Papier groß wirken und trotzdem unpraktisch sein. Beettiefe, Mittelweg, Tür und Arbeitshöhe bestimmen, wie viel der Grundfläche wirklich nutzbar bleibt."
     updated="August 2026"

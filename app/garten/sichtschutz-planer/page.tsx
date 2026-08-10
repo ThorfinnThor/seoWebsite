@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PrivacyScreenPlanner } from "./PrivacyScreenPlanner";
 
-export const metadata: Metadata = { title: "Sichtschutz- und Zaunfeld-Planer", description: "Sichtschutzfelder, Tor-Module, Pfosten und Rasteranpassung für eine gerade Strecke nachvollziehbar abschätzen." };
+export const metadata = createPageMetadata({
+  title: "Sichtschutz- und Zaunfeld-Planer",
+  description: "Sichtschutzfelder, Tor-Module, Pfosten und Rasteranpassung für eine gerade Strecke nachvollziehbar abschätzen.",
+  path: "/garten/sichtschutz-planer/",
+});
 
 export default function Page() {
   return <>

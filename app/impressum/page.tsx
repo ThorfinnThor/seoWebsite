@@ -1,12 +1,13 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { LEGAL, legalContactComplete } from "@/lib/legal";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Impressum",
   description: "Anbieterkennzeichnung und Kontaktangaben von MachPlan.",
+  path: "/impressum/",
   robots: legalContactComplete ? undefined : { index: false, follow: true },
-};
+});
 
 export default function ImpressumPage() {
   return (

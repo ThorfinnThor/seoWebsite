@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Bodenbeläge planen", description: "Bodenbelag-Rechner und Ratgeber für Laminat, Klick-Vinyl, Fertigparkett, Verschnitt, Unterlage und Sockelleisten." };
+export const metadata = createPageMetadata({
+  title: "Bodenbeläge planen",
+  description: "Bodenbelag-Rechner und Ratgeber für Laminat, Klick-Vinyl, Fertigparkett, Verschnitt, Unterlage und Sockelleisten.",
+  path: "/haus/boden/",
+});
 
 export default function FlooringHubPage() {
   return <>

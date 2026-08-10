@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Carport-Größe für ein oder zwei Autos planen", description: "Carport-Breite, Länge und lichte Höhe aus Fahrzeugmaß, Türöffnung, Bewegungsraum, Zufahrt und Stauraum ableiten." };
+export const metadata = createPageMetadata({
+  title: "Carport-Größe für ein oder zwei Autos planen",
+  description: "Carport-Breite, Länge und lichte Höhe aus Fahrzeugmaß, Türöffnung, Bewegungsraum, Zufahrt und Stauraum ableiten.",
+  path: "/garten/carport-groesse/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/carport-groesse/"
     title="Carport-Größe: Das Fahrzeugmaß ist nur der Anfang"
     intro="Ein Auto, das rechnerisch unter das Dach passt, lässt sich noch nicht automatisch bequem einparken, öffnen und beladen. Entscheidend sind lichte Maße und die reale Zufahrt."
     updated="August 2026"

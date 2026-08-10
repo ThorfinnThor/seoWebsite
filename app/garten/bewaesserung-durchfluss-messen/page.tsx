@@ -1,11 +1,16 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { FlowRateCalculator } from "@/components/calculator/FlowRateCalculator";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Durchfluss für Gartenbewässerung messen", description: "Wasserdurchfluss und Fließdruck für eine Gartenbewässerung messen, einordnen und ohne falsche Präzision dokumentieren." };
+export const metadata = createPageMetadata({
+  title: "Durchfluss für Gartenbewässerung messen",
+  description: "Wasserdurchfluss und Fließdruck für eine Gartenbewässerung messen, einordnen und ohne falsche Präzision dokumentieren.",
+  path: "/garten/bewaesserung-durchfluss-messen/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/garten/bewaesserung-durchfluss-messen/"
     title="Durchfluss messen: die Basis jeder Bewässerungsplanung"
     intro="Fläche allein sagt nicht, wie viele Verbraucher gleichzeitig funktionieren. Ein einfacher Eimertest liefert einen ersten Durchflusswert; der Fließdruck muss separat unter Entnahme gemessen werden."
     updated="August 2026"

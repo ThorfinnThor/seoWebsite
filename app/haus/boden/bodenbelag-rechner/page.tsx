@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { FlooringPlanner } from "./FlooringPlanner";
 
-export const metadata: Metadata = { title: "Bodenbelag-Rechner für Laminat, Vinyl und Parkett", description: "Bodenfläche, Verschnitt, volle Pakete, Unterlage und Sockelleisten für Laminat, Klick-Vinyl und Fertigparkett berechnen." };
+export const metadata = createPageMetadata({
+  title: "Bodenbelag-Rechner für Laminat, Vinyl und Parkett",
+  description: "Bodenfläche, Verschnitt, volle Pakete, Unterlage und Sockelleisten für Laminat, Klick-Vinyl und Fertigparkett berechnen.",
+  path: "/haus/boden/bodenbelag-rechner/",
+});
 
 export default function Page() {
   return <>

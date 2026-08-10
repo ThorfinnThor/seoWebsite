@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { IrrigationPlanner } from "./IrrigationPlanner";
 
-export const metadata: Metadata = { title: "Bewässerungsplaner", description: "Tropfrohr, Systemkategorien und Steuerungszonen für Rasen, Beete und Hecken transparent abschätzen." };
+export const metadata = createPageMetadata({
+  title: "Bewässerungsplaner",
+  description: "Tropfrohr, Systemkategorien und Steuerungszonen für Rasen, Beete und Hecken transparent abschätzen.",
+  path: "/garten/bewaesserungs-planer/",
+});
 
 export default function Page() {
   return <>

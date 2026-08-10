@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Über MachPlan", description: "Warum MachPlan Bedarfsermittlung und Produktauswahl voneinander trennt." };
+export const metadata = createPageMetadata({
+  title: "Über MachPlan",
+  description: "Warum MachPlan Bedarfsermittlung und Produktauswahl voneinander trennt.",
+  path: "/ueber-machplan/",
+});
 
 export default function UeberPage() {
   return (

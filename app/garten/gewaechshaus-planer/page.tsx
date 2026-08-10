@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { GreenhousePlanner } from "./GreenhousePlanner";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Gewächshaus-Planer: Fläche, Beete und Basisprofile",
   description: "Gewächshaus-Grundfläche, Beet- und Wegeaufteilung, Basisprofile sowie theoretisches Regenwasser nachvollziehbar planen.",
-};
+  path: "/garten/gewaechshaus-planer/",
+});
 
 export default function Page() {
   return <>

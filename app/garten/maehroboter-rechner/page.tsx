@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { RobotMowerPlanner } from "./RobotMowerPlanner";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Mähroboter-Rechner: Fläche und Anforderungen prüfen",
   description: "Rasenfläche, Kapazitätsreserve, Steigung, Engstellen, Zonen und Begrenzungssystem für die Mähroboter-Auswahl einordnen.",
-};
+  path: "/garten/maehroboter-rechner/",
+});
 
 export default function Page() {
   return <>

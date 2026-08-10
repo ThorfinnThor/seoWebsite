@@ -1,10 +1,15 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import { GuidePage } from "@/components/seo/GuidePage";
 
-export const metadata: Metadata = { title: "Untergrund und Trittschalldämmung planen", description: "Untergrund, Ebenheit, Restfeuchte, Dampfbremse, Trittschall und Fußbodenheizung vor schwimmender Bodenverlegung richtig einordnen." };
+export const metadata = createPageMetadata({
+  title: "Untergrund und Trittschalldämmung planen",
+  description: "Untergrund, Ebenheit, Restfeuchte, Dampfbremse, Trittschall und Fußbodenheizung vor schwimmender Bodenverlegung richtig einordnen.",
+  path: "/haus/boden/untergrund-trittschall/",
+  kind: "article",
+});
 
 export default function Page() {
-  return <GuidePage
+  return <GuidePage path="/haus/boden/untergrund-trittschall/"
     title="Untergrund und Trittschall: Aufbau vor Quadratmetern"
     intro="Eine passende Unterlage gleicht keinen ungeeigneten Untergrund aus. Tragfähigkeit, Ebenheit, Feuchte und der komplette Systemaufbau müssen vor der Verlegung geklärt sein."
     updated="August 2026"

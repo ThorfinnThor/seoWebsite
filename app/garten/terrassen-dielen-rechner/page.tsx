@@ -1,10 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { TerracePlanner } from "./TerracePlanner";
 
-export const metadata: Metadata = { title: "Terrassendielen-Rechner", description: "Dielenreihen, Laufmeter, Verschnitt, Lieferdielen und Unterkonstruktion für eine rechteckige Terrasse transparent abschätzen." };
+export const metadata = createPageMetadata({
+  title: "Terrassendielen-Rechner",
+  description: "Dielenreihen, Laufmeter, Verschnitt, Lieferdielen und Unterkonstruktion für eine rechteckige Terrasse transparent abschätzen.",
+  path: "/garten/terrassen-dielen-rechner/",
+});
 
 export default function Page() {
   return <>

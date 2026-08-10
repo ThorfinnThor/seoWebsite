@@ -1,8 +1,12 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Methodik", description: "So berechnet MachPlan Bedarf, prüft harte Kriterien und begründet Produktempfehlungen." };
+export const metadata = createPageMetadata({
+  title: "Methodik",
+  description: "So berechnet MachPlan Bedarf, prüft harte Kriterien und begründet Produktempfehlungen.",
+  path: "/methodik/",
+});
 
 const methods = [
   { title: "Gartenhaus", text: "Nutzungsobjekte, Bewegungsflächen und Reserven ergeben einen Mindestflächenkorridor. Stellfläche, Außenmaße, Türbreite, Boden, Material und Budget sind harte Filter." },

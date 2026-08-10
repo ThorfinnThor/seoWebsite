@@ -1,13 +1,14 @@
-import type { Metadata } from "next";
+import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { absoluteUrl } from "@/lib/site";
 
-export const metadata: Metadata = {
+export const metadata = createPageMetadata({
   title: "Alle Rechner und Planer",
   description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Carport, Mähroboter, Trockenbau, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
-};
+  path: "/rechner/",
+});
 
 const tools = [
   {
