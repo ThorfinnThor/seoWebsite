@@ -2,6 +2,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
+import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { CarportPlanner } from "./CarportPlanner";
 
 export const metadata = createPageMetadata({
@@ -15,7 +16,7 @@ export default function Page() {
     <PlannerJsonLd name="Carport-Planer" description="Lichten Stellraum, Bewegungsreserven, Planungsfläche und Dachwasserrahmen für einen Carport berechnen." path="/garten/carport-planer/" />
     <section className="planner-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Garten", href: "/garten/" }, { label: "Carport-Planer" }]} />
-      <div className="planner-hero-grid"><div><p className="eyebrow">Fahrzeug · Freiraum · Standort</p><h1>Plane den lichten Raum deines <em>Carports</em> vor der Produktauswahl.</h1><p>Fahrzeugmaße, Tür- und Bewegungsraum, Zufahrt, Stauraum und Dachaufgaben werden zu einem nachvollziehbaren Platzrahmen.</p></div><div className="hero-facts"><div><strong>4</strong><span>übersichtliche Schritte</span></div><div><strong>1–2</strong><span>Fahrzeugstellplätze</span></div><div><strong>klar</strong><span>keine Statik oder Genehmigung</span></div></div></div>
+      <div className="planner-hero-grid"><div><p className="eyebrow">Fahrzeug · Freiraum · Standort</p><h1>Plane den lichten Raum deines <em>Carports</em> vor der Produktauswahl.</h1><p>Fahrzeugmaße, Tür- und Bewegungsraum, Zufahrt, Stauraum und Dachaufgaben werden zu einem nachvollziehbaren Platzrahmen.</p></div><PlannerHeroSummary planner="carport" /></div>
     </section>
     <section className="planner-wrap"><CarportPlanner /></section>
     <section className="section planner-notes"><div><p className="eyebrow">Was der Planer leistet</p><h2>Platzbedarf statt Bauplanung.</h2></div><div className="note-grid"><article><h3>✓ Das wird berechnet</h3><p>Lichte Zielbreite, -länge und -höhe, Stell- und Bewegungsfläche sowie theoretisches Regenwasser je 10 Millimeter Niederschlag.</p></article><article><h3>! Das bleibt Fachplanung</h3><p>Außenmaße, Pfosten, Fundament, Statik, Wind- und Schneelast, Anschlüsse, Entwässerung, Elektrik und örtliche Anforderungen.</p></article></div></section>

@@ -2,6 +2,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
+import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { RobotMowerPlanner } from "./RobotMowerPlanner";
 
 export const metadata = createPageMetadata({
@@ -15,7 +16,7 @@ export default function Page() {
     <PlannerJsonLd name="Mähroboter-Flächencheck" description="Rasenfläche, Kapazitätsklasse, Passagen, Steigung und Installationsrahmen für einen Mähroboter einordnen." path="/garten/maehroboter-rechner/" />
     <section className="planner-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Garten", href: "/garten/" }, { label: "Mähroboter-Rechner" }]} />
-      <div className="planner-hero-grid"><div><p className="eyebrow">Fläche · Gelände · Installation</p><h1>Prüfe deinen Garten, bevor du einen <em>Mähroboter</em> vergleichst.</h1><p>Mehrere Rasenbereiche, Abzüge, Engstellen, Steigung und Begrenzungsprinzip werden zu einem nachvollziehbaren Auswahlrahmen.</p></div><div className="hero-facts"><div><strong>4</strong><span>übersichtliche Schritte</span></div><div><strong>m²</strong><span>Nettofläche mit Reserve</span></div><div><strong>klar</strong><span>keine erfundene Kompatibilität</span></div></div></div>
+      <div className="planner-hero-grid"><div><p className="eyebrow">Fläche · Gelände · Installation</p><h1>Prüfe deinen Garten, bevor du einen <em>Mähroboter</em> vergleichst.</h1><p>Mehrere Rasenbereiche, Abzüge, Engstellen, Steigung und Begrenzungsprinzip werden zu einem nachvollziehbaren Auswahlrahmen.</p></div><PlannerHeroSummary planner="robot-mower" /></div>
     </section>
     <section className="planner-wrap"><RobotMowerPlanner /></section>
     <section className="section planner-notes"><div><p className="eyebrow">Was der Rechner leistet</p><h2>Auswahlrahmen statt Modellversprechen.</h2></div><div className="note-grid"><article><h3>✓ Das wird berechnet</h3><p>Netto-Rasenfläche, transparente Kapazitätsreserve, Passageklasse und ein grober rechteckiger Kantenrahmen.</p></article><article><h3>! Das bleibt Produktprüfung</h3><p>Zulässige Steigung, Mindestpassage, Navigation, Randabstände, Station, Sicherheit, Laufzeit und Schnittbild des konkreten Geräts.</p></article></div></section>

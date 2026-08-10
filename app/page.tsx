@@ -1,4 +1,6 @@
 import Link from "next/link";
+import { PlannerIcon } from "@/components/icons/PlannerIcon";
+import { PLANNERS } from "@/lib/planners";
 
 export default function HomePage() {
   return (
@@ -9,7 +11,10 @@ export default function HomePage() {
             <p className="eyebrow">Haus & Garten, klar geplant</p>
             <h1>Erst verstehen, was du brauchst. <em>Dann</em> Produkte vergleichen.</h1>
             <p className="hero-copy">MachPlan übersetzt dein Projekt in nachvollziehbare Anforderungen und filtert nur Produkte, die wirklich dazu passen.</p>
-            <div className="hero-actions"><Link className="button button--primary" href="/garten/gartenhaus-planer/">Gartenhaus planen <span aria-hidden="true">→</span></Link><Link className="text-link" href="/rechner/">Alle Planer ansehen</Link></div>
+            <div className="hero-actions">
+              <Link className="button button--primary" href="/rechner/">Alle 10 Rechner ansehen <span aria-hidden="true">→</span></Link>
+              <Link className="text-link" href="#rechner">Direkt auswählen</Link>
+            </div>
           </div>
           <div className="hero-visual" aria-label="Vom Vorhaben zur passenden Auswahl">
             <div className="plan-card plan-card--one"><span>01</span><strong>Dein Projekt</strong><small>Platz, Nutzung, Budget</small></div>
@@ -21,7 +26,17 @@ export default function HomePage() {
         </div>
       </section>
       <section className="trust-strip" aria-label="MachPlan Prinzipien"><div><strong>Keine Blackbox</strong><span>Jede Empfehlung wird begründet.</span></div><div><strong>Keine Provision im Score</strong><span>Dein Bedarf entscheidet.</span></div><div><strong>Keine falsche Präzision</strong><span>Grenzen werden klar benannt.</span></div></section>
-      <section className="section projects-section"><div className="section-heading"><p className="eyebrow">Zehn Planungswerkzeuge</p><h2>Dein Projekt beginnt nicht im Warenkorb.</h2><p>Berechne den Bedarf zuerst. Produktangebote werden später nur dort ergänzt, wo Daten und Kompatibilität geprüft sind.</p></div><div className="feature-grid"><Link className="feature-card" href="/garten/gartenhaus-planer/"><div className="feature-icon" aria-hidden="true">⌂</div><div><span className="status-pill">Garten</span><h3>Gartenhaus-Planer</h3><p>Für Fahrräder, Geräte, Rasenmäher, Werkbank und Regale.</p><span className="card-link">Projekt starten →</span></div></Link><Link className="feature-card" href="/haus/raumklima/luftentfeuchter-rechner/"><div className="feature-icon" aria-hidden="true">◌</div><div><span className="status-pill">Raumklima</span><h3>Luftentfeuchter-Rechner</h3><p>Raumvolumen, Feuchtebelastung, Temperatur und Geräusch einordnen.</p><span className="card-link">Bedarf berechnen →</span></div></Link><Link className="feature-card" href="/garten/bewaesserungs-planer/"><div className="feature-icon" aria-hidden="true">≈</div><div><span className="status-pill">Garten</span><h3>Bewässerungsplaner</h3><p>Materialstruktur für Rasen, Beete und Hecken vorbereiten.</p><span className="card-link">System planen →</span></div></Link><Link className="feature-card" href="/garten/terrassen-dielen-rechner/"><div className="feature-icon" aria-hidden="true">═</div><div><span className="status-pill">Terrasse</span><h3>Terrassendielen-Rechner</h3><p>Dielen, Verschnitt und Unterkonstruktion mengenmäßig vorbereiten.</p><span className="card-link">Material berechnen →</span></div></Link><Link className="feature-card" href="/garten/sichtschutz-planer/"><div className="feature-icon" aria-hidden="true">▥</div><div><span className="status-pill">Sichtschutz</span><h3>Sichtschutz-Planer</h3><p>Systemfelder, Tore, Pfosten und Randanpassung für eine gerade Strecke.</p><span className="card-link">Zaunlinie planen →</span></div></Link><Link className="feature-card" href="/haus/boden/bodenbelag-rechner/"><div className="feature-icon" aria-hidden="true">▤</div><div><span className="status-pill">Innenausbau</span><h3>Bodenbelag-Rechner</h3><p>Fläche, Verschnitt, volle Pakete, Unterlage und Sockelleisten berechnen.</p><span className="card-link">Material berechnen →</span></div></Link><Link className="feature-card" href="/garten/gewaechshaus-planer/"><div className="feature-icon" aria-hidden="true">◇</div><div><span className="status-pill">Gewächshaus</span><h3>Gewächshaus-Planer</h3><p>Grundfläche, Beete, Wege, Basisprofile und Regenwasserrahmen planen.</p><span className="card-link">Innenraum planen →</span></div></Link><Link className="feature-card" href="/garten/maehroboter-rechner/"><div className="feature-icon" aria-hidden="true">◉</div><div><span className="status-pill">Rasen</span><h3>Mähroboter-Flächencheck</h3><p>Nettofläche, Kapazitätsreserve, Engstellen, Steigung und Installation prüfen.</p><span className="card-link">Garten prüfen →</span></div></Link><Link className="feature-card" href="/garten/carport-planer/"><div className="feature-icon" aria-hidden="true">▱</div><div><span className="status-pill">Stellplatz</span><h3>Carport-Planer</h3><p>Lichten Stellraum, Bewegungsreserve, Stauraum und Dachwasser planen.</p><span className="card-link">Stellraum planen →</span></div></Link><Link className="feature-card" href="/haus/innenausbau/trockenbau-rechner/"><div className="feature-icon" aria-hidden="true">╫</div><div><span className="status-pill">Innenausbau</span><h3>Trockenbauwand-Rechner</h3><p>Platten, Lagen, Grundständer, Randprofile und Dämmfläche berechnen.</p><span className="card-link">Wandmenge berechnen →</span></div></Link></div></section>
+      <section className="section projects-section" id="rechner">
+        <div className="section-heading"><p className="eyebrow">Zehn Planungswerkzeuge</p><h2>Wähle direkt deinen Rechner.</h2><p>Berechne den Bedarf zuerst. Produktangebote werden später nur dort ergänzt, wo Daten und Kompatibilität geprüft sind.</p></div>
+        <div className="feature-grid">
+          {PLANNERS.map((planner) => (
+            <Link className="feature-card" href={planner.href} key={planner.id}>
+              <div className="feature-icon" aria-hidden="true"><PlannerIcon name={planner.icon} /></div>
+              <div><span className="status-pill">{planner.shortCategory}</span><h3>{planner.title}</h3><p>{planner.homeDescription}</p><span className="card-link">{planner.cta} →</span></div>
+            </Link>
+          ))}
+        </div>
+      </section>
       <section className="section method"><div><p className="eyebrow">So funktioniert es</p><h2>Ein guter Kauf beginnt mit harten Kriterien.</h2></div><ol><li><span>1</span><div><h3>Bedarf erfassen</h3><p>5–10 Fragen statt endloser Filterlisten.</p></div></li><li><span>2</span><div><h3>Anforderungen berechnen</h3><p>Transparente Planungsheuristiken, klar als solche markiert.</p></div></li><li><span>3</span><div><h3>Kompatibilität prüfen</h3><p>Unpassende Produkte werden vor der Bewertung ausgeschlossen.</p></div></li></ol></section>
     </>
   );
