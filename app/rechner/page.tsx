@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Mähroboter, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Carport, Mähroboter, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
 };
 
 const tools = [
@@ -81,6 +81,15 @@ const tools = [
     href: "/garten/maehroboter-rechner/",
     icon: "◉",
     cta: "Mähbereich prüfen",
+  },
+  {
+    title: "Carport-Planer",
+    category: "Garten · Stellplatz",
+    description: "Fahrzeugmaße, Bewegungsraum, Stauraum, Zufahrt und Dachaufgaben zu lichten Zielmaßen verbinden.",
+    facts: ["4 Schritte", "Einzel & Doppel", "Keine Statikbemessung"],
+    href: "/garten/carport-planer/",
+    icon: "▱",
+    cta: "Carport-Raum planen",
   },
 ] as const;
 

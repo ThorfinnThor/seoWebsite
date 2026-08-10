@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Gewächshaus, Mähroboter, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten." };
+export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Gewächshaus, Carport, Mähroboter, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten." };
 
 const gardenHouseGuides = [
   ["Die richtige Größe", "Vom Lagerbedarf zur realistischen Mindestfläche.", "/garten/gartenhaus-groesse/"],
@@ -44,6 +44,12 @@ const robotMowerGuides = [
   ["Kabel oder kabellos", "Installation, Empfang, Änderungsbedarf und Stationsplatz vergleichen.", "/garten/maehroboter-begrenzungskabel-kabellos/"],
 ] as const;
 
+const carportGuides = [
+  ["Carport-Größe planen", "Fahrzeug, Türöffnung, Heckklappe, Reserve und Zufahrt verbinden.", "/garten/carport-groesse/"],
+  ["Fundament einordnen", "Lichten Raum, Pfostenraster, Baugrund und Lastabtrag sauber trennen.", "/garten/carport-fundament/"],
+  ["Dachentwässerung", "Gefälle, Rinne, Fallrohr, Ablaufziel und Überlauf frühzeitig planen.", "/garten/carport-dachentwaesserung/"],
+] as const;
+
 function GuideGrid({ items, label }: { items: readonly (readonly [string, string, string])[]; label: string }) {
   return <div className="guide-grid">{items.map(([title, text, href]) => <Link href={href} className="guide-card" key={href}><span className="guide-number">{label}</span><h2>{title}</h2><p>{text}</p><span className="card-link">Ratgeber lesen →</span></Link>)}</div>;
 }
@@ -58,6 +64,7 @@ export default function GardenPage() {
       <Link className="planner-banner planner-banner--secondary planner-banner--screen" href="/garten/sichtschutz-planer/"><div><span className="status-pill">Neu</span><h2>Sichtschutzfelder und Pfosten im echten Systemraster planen.</h2><p>Gerade Strecke, Tor-Module, Randanpassung und Bestellreserve transparent zusammenbringen.</p></div><span className="button button--light">Sichtschutz planen →</span></Link>
       <Link className="planner-banner planner-banner--secondary planner-banner--greenhouse" href="/garten/gewaechshaus-planer/"><div><span className="status-pill">Neu</span><h2>Ein Gewächshaus von Beeten und Wegen aus planen.</h2><p>Grundfläche, Innenraster, Basisprofile, Lüftung und Regenwasser als nachvollziehbaren Rahmen vorbereiten.</p></div><span className="button button--light">Gewächshaus planen →</span></Link>
       <Link className="planner-banner planner-banner--secondary planner-banner--mower" href="/garten/maehroboter-rechner/"><div><span className="status-pill">Neu</span><h2>Den Garten vor dem Mähroboter-Kauf prüfen.</h2><p>Nettofläche, Kapazitätsreserve, Steigung, Engstellen und Begrenzungsprinzip transparent einordnen.</p></div><span className="button button--light">Mähbereich prüfen →</span></Link>
+      <Link className="planner-banner planner-banner--secondary planner-banner--carport" href="/garten/carport-planer/"><div><span className="status-pill">Neu</span><h2>Den lichten Stellraum eines Carports zuerst planen.</h2><p>Fahrzeugmaße, Bewegungsraum, Zufahrt, Stauraum und Dachwasser zu einem klaren Platzrahmen verbinden.</p></div><span className="button button--light">Carport planen →</span></Link>
       <div className="content-cluster-heading"><p className="eyebrow">Gartenhaus Wissen</p><h2>Von der Stellfläche zum nutzbaren Haus.</h2></div>
       <GuideGrid items={gardenHouseGuides} label="Gartenhaus Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Bewässerung Wissen</p><h2>Erst messen, dann Komponenten wählen.</h2></div>
@@ -70,6 +77,8 @@ export default function GardenPage() {
       <GuideGrid items={greenhouseGuides} label="Gewächshaus Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Mähroboter Wissen</p><h2>Von der Rasenfläche zum prüfbaren Gerätekorridor.</h2></div>
       <GuideGrid items={robotMowerGuides} label="Mähroboter Wissen" />
+      <div className="content-cluster-heading"><p className="eyebrow">Carport Wissen</p><h2>Vom Fahrzeugmaß zum nutzbaren Stellbereich.</h2></div>
+      <GuideGrid items={carportGuides} label="Carport Wissen" />
     </section>
   </>;
 }

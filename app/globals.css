@@ -107,6 +107,8 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .planner-banner--screen { background: #e3ebe2; }
 .planner-banner--greenhouse { background: #dfece3; }
 .planner-banner--mower { background: #e2ead8; }
+.planner-banner--carport { background: #e9e5dc; }
+.compact-choice { margin: 0; }
 .area-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
 .area-card { display: grid; grid-template-columns: 72px 1fr; gap: 22px; min-height: 280px; padding: 36px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--cream); transition: transform .2s, box-shadow .2s; }
 .area-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
