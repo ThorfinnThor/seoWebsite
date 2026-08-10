@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 
-export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten." };
+export const metadata: Metadata = { title: "Garten planen", description: "Planer und fundierte Ratgeber für Gartenhaus, Gewächshaus, Bewässerung, Terrasse, Sichtschutz, Fundament und Kosten." };
 
 const gardenHouseGuides = [
   ["Die richtige Größe", "Vom Lagerbedarf zur realistischen Mindestfläche.", "/garten/gartenhaus-groesse/"],
@@ -32,6 +32,12 @@ const privacyScreenGuides = [
   ["Gartentor planen", "Durchgang, Öffnungsrichtung, Torpfosten und Raster verbinden.", "/garten/sichtschutz-gartentor-planen/"],
 ] as const;
 
+const greenhouseGuides = [
+  ["Gewächshaus-Größe planen", "Beete, Wege, Tür und Nutzung in ein passendes Innenraster übersetzen.", "/garten/gewaechshaus-groesse/"],
+  ["Fundament einordnen", "Basisprofil, Gründung, Entwässerung und Verankerung sauber trennen.", "/garten/gewaechshaus-fundament/"],
+  ["Belüftung vorbereiten", "Dachfenster, Querlüftung, automatische Öffner und Schatten verbinden.", "/garten/gewaechshaus-belueftung/"],
+] as const;
+
 function GuideGrid({ items, label }: { items: readonly (readonly [string, string, string])[]; label: string }) {
   return <div className="guide-grid">{items.map(([title, text, href]) => <Link href={href} className="guide-card" key={href}><span className="guide-number">{label}</span><h2>{title}</h2><p>{text}</p><span className="card-link">Ratgeber lesen →</span></Link>)}</div>;
 }
@@ -44,6 +50,7 @@ export default function GardenPage() {
       <Link className="planner-banner planner-banner--secondary" href="/garten/bewaesserungs-planer/"><div><span className="status-pill">Planer</span><h2>Bewässerung als kompatibles System planen.</h2><p>Materialstruktur für Rasen, Beete und Hecken – ohne falschen Hydraulikanspruch.</p></div><span className="button button--light">System planen →</span></Link>
       <Link className="planner-banner planner-banner--secondary planner-banner--terrace" href="/garten/terrassen-dielen-rechner/"><div><span className="status-pill">Neu</span><h2>Dielen und Unterkonstruktion mengenmäßig vorbereiten.</h2><p>Verlegerichtung, Fugen, Verschnitt, Lieferlängen und Auflagerabstand nachvollziehbar berechnen.</p></div><span className="button button--light">Material berechnen →</span></Link>
       <Link className="planner-banner planner-banner--secondary planner-banner--screen" href="/garten/sichtschutz-planer/"><div><span className="status-pill">Neu</span><h2>Sichtschutzfelder und Pfosten im echten Systemraster planen.</h2><p>Gerade Strecke, Tor-Module, Randanpassung und Bestellreserve transparent zusammenbringen.</p></div><span className="button button--light">Sichtschutz planen →</span></Link>
+      <Link className="planner-banner planner-banner--secondary planner-banner--greenhouse" href="/garten/gewaechshaus-planer/"><div><span className="status-pill">Neu</span><h2>Ein Gewächshaus von Beeten und Wegen aus planen.</h2><p>Grundfläche, Innenraster, Basisprofile, Lüftung und Regenwasser als nachvollziehbaren Rahmen vorbereiten.</p></div><span className="button button--light">Gewächshaus planen →</span></Link>
       <div className="content-cluster-heading"><p className="eyebrow">Gartenhaus Wissen</p><h2>Von der Stellfläche zum nutzbaren Haus.</h2></div>
       <GuideGrid items={gardenHouseGuides} label="Gartenhaus Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Bewässerung Wissen</p><h2>Erst messen, dann Komponenten wählen.</h2></div>
@@ -52,6 +59,8 @@ export default function GardenPage() {
       <GuideGrid items={terraceGuides} label="Terrasse Wissen" />
       <div className="content-cluster-heading"><p className="eyebrow">Sichtschutz Wissen</p><h2>Vom Systemraster zur prüfbaren Zaunlinie.</h2></div>
       <GuideGrid items={privacyScreenGuides} label="Sichtschutz Wissen" />
+      <div className="content-cluster-heading"><p className="eyebrow">Gewächshaus Wissen</p><h2>Vom Innenraster zum passenden System.</h2></div>
+      <GuideGrid items={greenhouseGuides} label="Gewächshaus Wissen" />
     </section>
   </>;
 }

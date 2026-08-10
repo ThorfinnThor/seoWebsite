@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
 };
 
 const tools = [
@@ -63,6 +63,15 @@ const tools = [
     href: "/haus/boden/bodenbelag-rechner/",
     icon: "▤",
     cta: "Bodenmaterial berechnen",
+  },
+  {
+    title: "Gewächshaus-Planer",
+    category: "Garten · Anbau",
+    description: "Grundfläche, Beet- und Wegeaufteilung, Basisprofile und theoretisches Regenwasser als Planungsrahmen zusammenführen.",
+    facts: ["4 Schritte", "Innenraster sichtbar", "Keine Fundamentbemessung"],
+    href: "/garten/gewaechshaus-planer/",
+    icon: "◇",
+    cta: "Gewächshaus planen",
   },
 ] as const;
 

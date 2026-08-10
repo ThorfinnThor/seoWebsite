@@ -105,6 +105,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .planner-banner--secondary p { color: var(--muted); }
 .planner-banner--terrace { background: #eee9dc; }
 .planner-banner--screen { background: #e3ebe2; }
+.planner-banner--greenhouse { background: #dfece3; }
 .area-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
 .area-card { display: grid; grid-template-columns: 72px 1fr; gap: 22px; min-height: 280px; padding: 36px; border: 1px solid var(--line); border-radius: var(--radius); background: var(--cream); transition: transform .2s, box-shadow .2s; }
 .area-card:hover { transform: translateY(-3px); box-shadow: var(--shadow); }
@@ -382,6 +383,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 
 .tool-hub-hero h1 { max-width: 980px; }
 .tool-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: 1 / -1; }
 .tool-card { display: flex; min-width: 0; padding: 34px; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); background: var(--cream); }
 .tool-card-top { display: flex; align-items: flex-start; justify-content: space-between; gap: 18px; }
 .tool-card h2 { margin: 34px 0 12px; font-size: 1.75rem; overflow-wrap: anywhere; }
@@ -416,7 +418,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .print-action { display: flex; justify-content: flex-end; margin-top: 20px; }
 .calculator-error { margin: 18px 54px; }
 
-@media (max-width: 980px) { .tool-grid { grid-template-columns: 1fr; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h2 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 980px) { .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h2 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 650px) { .legal-page > header h1 { font-size: 2.2rem; } .guide-page header h1 { font-size: 2.45rem; } .tool-card { display: flex; padding: 28px 24px; } .tool-card-top { display: flex; } .tool-card-top .status-pill { display: inline-flex; } .tool-card h2 { margin-top: 28px; } .tool-card .button { width: 100%; } .related-guides .guide-grid { grid-template-columns: 1fr; } }
 
 @media (max-width: 760px) { .guide-calculator { margin-top: -25px; } .inline-calculator-heading { grid-template-columns: 1fr; gap: 12px; padding: 26px 24px; } .inline-calculator-body { padding: 25px 20px; } .inline-inputs, .inline-inputs--four { grid-template-columns: 1fr; } .inline-results, .inline-results--four { grid-template-columns: repeat(2,1fr); } .inline-calculator-note { padding: 15px 20px; } }
