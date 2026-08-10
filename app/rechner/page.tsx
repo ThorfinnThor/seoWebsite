@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Carport, Mähroboter, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Carport, Mähroboter, Trockenbau, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
 };
 
 const tools = [
@@ -90,6 +90,15 @@ const tools = [
     href: "/garten/carport-planer/",
     icon: "▱",
     cta: "Carport-Raum planen",
+  },
+  {
+    title: "Trockenbauwand-Rechner",
+    category: "Haus · Innenausbau",
+    description: "Wandfläche, Öffnungen, Plattenlagen, Format und ungestörtes Profilraster zu einem Mengenrahmen verbinden.",
+    facts: ["4 Schritte", "Platten & Profile", "Keine Systemfreigabe"],
+    href: "/haus/innenausbau/trockenbau-rechner/",
+    icon: "╫",
+    cta: "Trockenbau berechnen",
   },
 ] as const;
 

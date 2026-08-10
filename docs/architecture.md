@@ -1,8 +1,8 @@
 # Architecture
 
-MachPlan is intentionally serverless in the literal sense: every user-facing route is statically exported and all calculator/recommendation logic runs in the browser. Garden-house, dehumidifier and irrigation product data is split into separate static catalogs; a planner fetches only its relevant catalog and only when results need product data. The terrace, privacy-screen, flooring, greenhouse, robot-mower and carport planning tools have no product catalog and work entirely from typed local rules.
+MachPlan is intentionally serverless in the literal sense: every user-facing route is statically exported and all calculator/recommendation logic runs in the browser. Garden-house, dehumidifier and irrigation product data is split into separate static catalogs; a planner fetches only its relevant catalog and only when results need product data. The terrace, privacy-screen, flooring, greenhouse, robot-mower, carport and drywall planning tools have no product catalog and work entirely from typed local rules.
 
-The public site currently exposes nine deterministic planning areas:
+The public site currently exposes ten deterministic planning areas:
 
 - garden-house requirements and reviewed product matching;
 - domestic dehumidifier sizing and reviewed product matching;
@@ -13,6 +13,7 @@ The public site currently exposes nine deterministic planning areas:
 - greenhouse footprint, internal layout, base-profile and rainwater-framework planning.
 - robot-mower net-area, capacity-class, terrain and installation-framework planning.
 - carport clear-space, movement-reserve and roof-water-framework planning.
+- drywall board, uninterrupted stud-grid, track and insulation quantity planning.
 
 Planner inputs are validated before being stored in the current tab's `sessionStorage`. This protects work across accidental reloads without creating an account, server write or cross-device profile. Invalid or outdated stored shapes are discarded; reset controls overwrite them with the typed defaults.
 
