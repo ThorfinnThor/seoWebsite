@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     description: SITE.description,
     url: "/",
   },
-  twitter: { card: "summary", title: "MachPlan", description: SITE.description },
+  twitter: { card: "summary", title: "MachPlan – Haus- und Gartenprojekte besser planen", description: SITE.description },
   category: "Haus und Garten",
 };
 

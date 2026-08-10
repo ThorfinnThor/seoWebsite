@@ -1,5 +1,6 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
+import { GUIDE_ENRICHMENTS } from "@/lib/guide-enrichments";
 import { SITE } from "@/lib/site";
 
 const OUT_DIR = path.resolve("out");
@@ -44,6 +45,8 @@ const pages = await Promise.all(pageFiles.map(async (file) => {
     openGraphTitle: firstMatch(html, /<meta property="og:title" content="([^"]+)"/),
     openGraphDescription: firstMatch(html, /<meta property="og:description" content="([^"]+)"/),
     openGraphUrl: firstMatch(html, /<meta property="og:url" content="([^"]+)"/),
+    twitterTitle: firstMatch(html, /<meta name="twitter:title" content="([^"]+)"/),
+    twitterDescription: firstMatch(html, /<meta name="twitter:description" content="([^"]+)"/),
     h1Count: (html.match(/<h1\b/g) ?? []).length,
     noindex: robots.some((value) => value.includes("noindex")),
   };
@@ -53,6 +56,7 @@ const errors: string[] = [];
 const indexablePages = pages.filter((page) => !page.noindex);
 
 for (const page of pages) {
+  const normalizedHtml = page.html.replaceAll("&amp;", "&");
   if (!page.title) errors.push(`${page.route}: title fehlt`);
   if (!page.description && !page.noindex) errors.push(`${page.route}: Meta-Description fehlt`);
   if (page.h1Count !== 1) errors.push(`${page.route}: erwartet 1 H1, gefunden ${page.h1Count}`);
@@ -61,8 +65,15 @@ for (const page of pages) {
   else if (!page.noindex && page.canonical !== expectedUrl) errors.push(`${page.route}: Canonical ${page.canonical} statt ${expectedUrl}`);
   if (!page.openGraphTitle) errors.push(`${page.route}: og:title fehlt`);
   if (!page.openGraphDescription && !page.noindex) errors.push(`${page.route}: og:description fehlt`);
+  const expectedSocialTitle = page.title.replace(/\s+\|\s+MachPlan$/, "");
+  if (!page.noindex && page.openGraphTitle !== expectedSocialTitle) errors.push(`${page.route}: og:title weicht vom Seitentitel ab`);
+  if (!page.noindex && page.openGraphDescription !== page.description) errors.push(`${page.route}: og:description weicht von der Meta-Description ab`);
   if (!page.noindex && !page.openGraphUrl) errors.push(`${page.route}: og:url fehlt`);
   else if (!page.noindex && page.openGraphUrl !== expectedUrl) errors.push(`${page.route}: og:url ${page.openGraphUrl} statt ${expectedUrl}`);
+  if (!page.noindex && page.twitterTitle !== expectedSocialTitle) errors.push(`${page.route}: twitter:title fehlt oder weicht ab`);
+  if (!page.noindex && page.twitterDescription !== page.description) errors.push(`${page.route}: twitter:description fehlt oder weicht ab`);
+  if (!page.noindex && !page.html.includes('<meta name="author" content="Schayan Yousefian"')) errors.push(`${page.route}: Autoren-Metadatum fehlt`);
+  if (!page.html.includes('<html lang="de"')) errors.push(`${page.route}: deutsche Seitensprache fehlt`);
   const jsonLdBlocks = [...page.html.matchAll(/<script type="application\/ld\+json">([^<]+)<\/script>/g)].map((match) => match[1]);
   for (const [index, json] of jsonLdBlocks.entries()) {
     try { JSON.parse(json); } catch { errors.push(`${page.route}: ungültiges JSON-LD in Block ${index + 1}`); }
@@ -73,9 +84,24 @@ for (const page of pages) {
     if (!page.html.includes("Kurzantwort")) errors.push(`${page.route}: sichtbare Kurzantwort fehlt`);
     if (!page.html.includes('rel="author"')) errors.push(`${page.route}: sichtbarer Autor fehlt`);
   }
+  const enrichment = GUIDE_ENRICHMENTS[page.route];
+  if (enrichment?.sources?.length) {
+    if (!page.html.includes('class="guide-sources"')) errors.push(`${page.route}: sichtbarer Quellenblock fehlt`);
+    if (!page.html.includes('"citation":[')) errors.push(`${page.route}: Quellen fehlen im Article JSON-LD`);
+    for (const source of enrichment.sources) {
+      if (!normalizedHtml.includes(source.href)) errors.push(`${page.route}: Quellenlink fehlt: ${source.href}`);
+    }
+  }
+  if (enrichment?.example && !page.html.includes('class="guide-example"')) {
+    errors.push(`${page.route}: sichtbares Rechenbeispiel fehlt`);
+  }
   if (page.html.includes('class="planner-hero"') && !page.html.includes('"@type":"WebApplication"')) {
     errors.push(`${page.route}: WebApplication JSON-LD fehlt`);
   }
+}
+
+for (const route of Object.keys(GUIDE_ENRICHMENTS)) {
+  if (!pages.some((page) => page.route === route)) errors.push(`${route}: Quellenkonfiguration ohne statische Seite`);
 }
 
 for (const field of ["title", "description"] as const) {
@@ -134,5 +160,7 @@ if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));
   process.exitCode = 1;
 } else {
-  console.log(`Static site audit passed: ${pages.length} pages, ${indexablePages.length} indexable, internal links valid.`);
+  const sourcedGuides = Object.values(GUIDE_ENRICHMENTS).filter((entry) => entry.sources?.length).length;
+  const guideExamples = Object.values(GUIDE_ENRICHMENTS).filter((entry) => entry.example).length;
+  console.log(`Static site audit passed: ${pages.length} pages, ${indexablePages.length} indexable, ${sourcedGuides} sourced guides, ${guideExamples} worked examples, internal links valid.`);
 }
