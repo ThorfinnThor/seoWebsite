@@ -6,7 +6,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Mähroboter, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
 };
 
 const tools = [
@@ -72,6 +72,15 @@ const tools = [
     href: "/garten/gewaechshaus-planer/",
     icon: "◇",
     cta: "Gewächshaus planen",
+  },
+  {
+    title: "Mähroboter-Flächencheck",
+    category: "Garten · Rasen",
+    description: "Netto-Rasenfläche, Kapazitätsreserve, Steigung, Engstellen und Begrenzungsprinzip zu einem Auswahlrahmen verbinden.",
+    facts: ["4 Schritte", "Mehrere Teilflächen", "Keine Modellgarantie"],
+    href: "/garten/maehroboter-rechner/",
+    icon: "◉",
+    cta: "Mähbereich prüfen",
   },
 ] as const;
 

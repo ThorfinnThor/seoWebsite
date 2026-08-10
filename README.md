@@ -1,6 +1,6 @@
 # MachPlan
 
-Germany-first static decision engine for house and garden projects. The current build contains planners for garden houses, greenhouses, dehumidifiers, irrigation, terrace materials, straight privacy-screen runs and floating floor-covering quantities plus supporting guides and transparency pages.
+Germany-first static decision engine for house and garden projects. The current build contains planners for garden houses, greenhouses, robot-mower suitability, dehumidifiers, irrigation, terrace materials, straight privacy-screen runs and floating floor-covering quantities plus supporting guides and transparency pages.
 
 ## Local development
 
