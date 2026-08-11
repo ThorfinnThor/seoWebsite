@@ -21,6 +21,17 @@ describe("planner directory", () => {
     }
   });
 
+  it("answers three calculator-specific questions with substantial text", () => {
+    for (const planner of PLANNERS) {
+      expect(planner.faqs).toHaveLength(3);
+      expect(new Set(planner.faqs.map((faq) => faq.question)).size).toBe(3);
+      for (const faq of planner.faqs) {
+        expect(faq.question).toMatch(/\?$/);
+        expect(faq.answer.length).toBeGreaterThan(80);
+      }
+    }
+  });
+
   it("resolves every registered calculator", () => {
     for (const planner of PLANNERS) {
       expect(getPlanner(planner.id)).toBe(planner);

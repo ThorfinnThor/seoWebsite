@@ -265,6 +265,12 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .note-grid article { padding: 23px; border: 1px solid var(--line); border-radius: 14px; }
 .note-grid h3 { margin-bottom: 8px; font-size: 1.1rem; }
 .note-grid p { margin: 0; color: var(--muted); }
+.planner-faq { border-top: 1px solid var(--line); }
+.planner-faq .section-heading { margin-bottom: 42px; }
+.planner-faq-list { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; margin: 0; }
+.planner-faq-list div { min-width: 0; padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: var(--cream); }
+.planner-faq-list dt { color: var(--ink); font-size: 1.12rem; font-weight: 850; line-height: 1.3; }
+.planner-faq-list dd { margin: 14px 0 0; color: var(--muted); line-height: 1.65; }
 
 @media (max-width: 900px) {
   .hero-grid, .section--projects, .method, .planner-hero-grid, .planner-notes { grid-template-columns: 1fr; gap: 45px; }
@@ -470,7 +476,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .button-icon { width: 20px; height: 20px; flex: 0 0 auto; }
 .calculator-error { margin: 18px 54px; }
 
-@media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h2 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h2 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid, .planner-faq-list { grid-template-columns: repeat(2,1fr); } .planner-faq-list div:last-child { grid-column: 1 / -1; } }
 @media (max-width: 650px) { .legal-page > header h1 { font-size: 2.2rem; } .guide-page header h1 { font-size: 2.45rem; } .tool-filters { display: grid; width: 100%; grid-template-columns: repeat(3,1fr); } .tool-filter { justify-content: center; padding-left: 8px; padding-right: 8px; } .tool-card { display: flex; padding: 28px 24px; } .tool-card-top { display: flex; } .tool-card-top .status-pill { display: inline-flex; } .tool-card h2 { margin-top: 28px; } .tool-card .button { width: 100%; } .related-guides .guide-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .guide-layout aside { display: block; padding: 24px; } .guide-layout aside p { margin-bottom: 22px; } .guide-layout aside .button { width: 100%; max-width: none; } .guide-copy > .guide-example { padding: 26px 22px; } }
 @media (max-width: 520px) { .guide-example dl div { grid-template-columns: 1fr; gap: 3px; } .guide-example dd { text-align: left; } }
@@ -478,10 +484,10 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 @media (max-width: 900px) { .requirement-summary { grid-template-columns: repeat(2,1fr); } .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 44px; } .inline-results--four { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 760px) { .guide-calculator { margin-top: -25px; } .inline-calculator-heading { grid-template-columns: 1fr; gap: 12px; padding: 26px 24px; } .inline-calculator-body { padding: 25px 20px; } .inline-inputs, .inline-inputs--four { grid-template-columns: 1fr; } .inline-results, .inline-results--four { grid-template-columns: repeat(2,1fr); } .inline-calculator-note { padding: 15px 20px; } }
 
-@media (max-width: 650px) { .detail-result-grid article, .area-card { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; } .room-editor { padding: 18px; } .room-editor-heading { align-items: stretch; flex-direction: column; } .calculator-error { margin: 14px 20px; } .print-action .button { width: 100%; } }
+@media (max-width: 650px) { .detail-result-grid article, .area-card, .planner-faq-list { grid-template-columns: 1fr; } .planner-faq-list div:last-child { grid-column: auto; } .footer-grid { grid-template-columns: 1fr; } .room-editor { padding: 18px; } .room-editor-heading { align-items: stretch; flex-direction: column; } .calculator-error { margin: 14px 20px; } .print-action .button { width: 100%; } }
 
 @media print {
-  .site-header, .site-footer, .planner-hero, .planner-notes, .related-guides, .calculator-progress, .calculator-actions, .print-action, .skip-link { display: none !important; }
+  .site-header, .site-footer, .planner-hero, .planner-notes, .planner-faq, .related-guides, .calculator-progress, .calculator-actions, .print-action, .skip-link { display: none !important; }
   body { background: #fff; }
   .planner-wrap { max-width: none; margin: 0; padding: 0; }
   .calculator-shell { border: 0; box-shadow: none; }

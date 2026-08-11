@@ -65,6 +65,8 @@ export function GuidePage({
           mainEntityOfPage: { "@type": "WebPage", "@id": url },
           headline: title,
           description: intro,
+          abstract: takeaway,
+          articleSection: sections.map((section) => section.title),
           dateModified: updatedAt,
           inLanguage: "de-DE",
           author: {

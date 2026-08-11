@@ -31,6 +31,8 @@ All public product catalogs start empty by design. Real Awin candidates are impo
 
 Never place `AWIN_FEED_URLS_JSON` in a local committed file or in Vercel. Configure it as a GitHub Actions repository secret.
 
+The exact signup, advertiser application and secure feed setup sequence is documented in [`docs/awin-onboarding.md`](docs/awin-onboarding.md).
+
 ## Deployment
 
 Connect the GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` at build time once the actual domain is known. No Awin secret is required in Vercel.
@@ -41,5 +43,5 @@ Current Vercel values:
 
 ```text
 NEXT_PUBLIC_SITE_URL=https://seo-website-woad.vercel.app
-NEXT_PUBLIC_LEGAL_EMAIL=you@example.com
+NEXT_PUBLIC_LEGAL_EMAIL=
 ```

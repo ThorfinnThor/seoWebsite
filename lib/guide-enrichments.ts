@@ -97,6 +97,36 @@ const source = {
     publisher: "MMFA",
     note: "Normen- und Merkblattübersicht für modulare mehrschichtige Bodenbeläge und Fußbodenheizung.",
   },
+  greenhouseSmall: {
+    label: "Kleingewächshäuser – Größe, Fundament, Lüftung und Ausstattung",
+    href: "https://www.lwg.bayern.de/gartenakademie/gartendokumente/infoschriften/091216/index.php",
+    publisher: "Bayerische Landesanstalt für Weinbau und Gartenbau",
+    note: "Behördliche Planungshinweise zu Nutz- und Wegfläche, Fundament, Dachlüftung, Tür, Wasser und Ausstattung kleiner Gewächshäuser.",
+  },
+  mowerSlope: {
+    label: "Automower-Installation für steile Steigungen optimieren",
+    href: "https://www.husqvarna.com/de/beratung/husqvarna-self-service/optimieren-der-automower-installation-fur-steile-steigungen-ka-01431/",
+    publisher: "Husqvarna",
+    note: "Herstellerbeispiel dafür, dass zulässige Steigungen von Modell, Installationsart, Begrenzung und Übergangsbereich abhängen.",
+  },
+  mowerPassages: {
+    label: "Passagen in einer Mähroboter-Installation mit Begrenzungskabel",
+    href: "https://www.husqvarna.com/de/beratung/husqvarna-self-service/so-erstellen-sie-eine-passage-in-einer-automower-installation-mit-begrenzungskabel-ka-01710/",
+    publisher: "Husqvarna",
+    note: "Herstellerdokumentation zu modell- und installationsabhängigen Mindestbreiten, Leitkabeln und systematischem Mähen in Passagen.",
+  },
+  mowerSecondaryArea: {
+    label: "Nebenbereiche bei Mährobotern mit Begrenzungskabel",
+    href: "https://www.husqvarna.com/de/beratung/husqvarna-self-service/so-erstellen-sie-einen-nebenbereich-in-automower-installationen-mit-begrenzungskabel-ka-01689/",
+    publisher: "Husqvarna",
+    note: "Konkretes Herstellerbeispiel für getrennte Rasenflächen, manuelles Umsetzen und die Grenzen einer gemeinsamen Installation.",
+  },
+  terraceConstruction: {
+    label: "Special Terrassendielen – regelkonformer Aufbau von Terrassen",
+    href: "https://gdholz.de/wp-content/uploads/2024/08/Artikel_ParkettMagazin_03-24_kurz.pdf",
+    publisher: "Gesamtverband Deutscher Holzhandel",
+    note: "Fachverbandsbeitrag zu konstruktivem Aufbau, Unterkonstruktion, Materialeigenschaften und typischen Schadensursachen bei Terrassen.",
+  },
 } satisfies Record<string, GuideSource>;
 
 export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
@@ -121,6 +151,15 @@ export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
   },
   "/garten/gartenhaus-fuer-fahrraeder/": {
     sources: [source.allotmentLaw, source.berlinBuildingCode],
+  },
+  "/garten/gartenhaus-boden/": {
+    sources: [source.modelBuildingCode, source.berlinBuildingCode],
+  },
+  "/garten/gartenhaus-kosten/": {
+    sources: [source.modelBuildingCode, source.berlinBuildingCode],
+  },
+  "/garten/gartenhaus-zubehoer/": {
+    sources: [source.rainwater, source.modelBuildingCode],
   },
   "/garten/carport-groesse/": {
     sources: [source.modelBuildingCode, source.berlinBuildingCode],
@@ -177,7 +216,89 @@ export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
     sources: [source.dvgwGarden, source.rainwater],
   },
   "/garten/gewaechshaus-fundament/": {
-    sources: [source.modelBuildingCode, source.rainwaterManagement],
+    sources: [source.greenhouseSmall, source.modelBuildingCode, source.rainwaterManagement],
+  },
+  "/garten/gewaechshaus-groesse/": {
+    sources: [source.greenhouseSmall],
+    example: {
+      title: "Zwei Seitenbeete in einem 3 × 2,5 Meter großen Gewächshaus",
+      intro: "Beispiel mit zwei 70 cm tiefen Seitenbeeten und einem 80 cm breiten Mittelweg.",
+      steps: [
+        { label: "Grundfläche", value: "3,0 × 2,5 = 7,5 m²" },
+        { label: "Seitenbeete", value: "2 × 0,70 × 3,0 = 4,2 m²" },
+        { label: "Mittelweg", value: "0,80 × 3,0 = 2,4 m²" },
+        { label: "belegte Innenfläche", value: "4,2 + 2,4 = 6,6 m²" },
+      ],
+      result: "Rechnerischer Rest: 0,9 m² vor Profilen, Schrägen und Montagetoleranzen.",
+      note: "Die technische Zeichnung des konkreten Gewächshauses entscheidet über die tatsächlich nutzbaren Innenmaße.",
+    },
+  },
+  "/garten/gewaechshaus-belueftung/": {
+    sources: [source.greenhouseSmall],
+  },
+  "/garten/maehroboter-flaeche-berechnen/": {
+    sources: [source.mowerSecondaryArea, source.mowerPassages],
+    example: {
+      title: "300 Quadratmeter Bruttofläche mit festen Abzügen",
+      intro: "Das Beispiel verwendet 25 m² Terrasse und Beete sowie eine moderate Gartenkomplexität.",
+      steps: [
+        { label: "Brutto-Rasenrechteck", value: "15 × 20 = 300 m²" },
+        { label: "feste Abzüge", value: "25 m²" },
+        { label: "Netto-Mähfläche", value: "275 m²" },
+        { label: "moderater Reservefaktor", value: "1,30" },
+        { label: "Auswahlwert", value: "275 × 1,30 = 357,5 m²" },
+      ],
+      result: "Auf die nächste 50-m²-Klasse gerundet: mindestens 400 m² Nennflächen-Rahmen.",
+      note: "Der Wert ist eine MachPlan-Auswahlheuristik und keine Laufzeit- oder Abdeckungsgarantie.",
+    },
+  },
+  "/garten/maehroboter-steigung-engstellen/": {
+    sources: [source.mowerSlope, source.mowerPassages],
+  },
+  "/garten/maehroboter-begrenzungskabel-kabellos/": {
+    sources: [source.mowerPassages, source.mowerSecondaryArea],
+  },
+  "/garten/sichtschutz-elemente-berechnen/": {
+    sources: [source.modelBuildingCode, source.berlinBuildingCode],
+    example: {
+      title: "Zehn Meter Sichtschutz mit einem Tor",
+      intro: "Beispiel mit einem 100 cm breiten Tor-Modul und 180 cm Montagebreite je Standardfeld.",
+      steps: [
+        { label: "Gesamtstrecke", value: "1.000 cm" },
+        { label: "abzüglich Tor-Modul", value: "900 cm" },
+        { label: "Standardfelder", value: "900 ÷ 180 = 5" },
+        { label: "Felder plus Tor", value: "6 Rasterfelder" },
+      ],
+      result: "Grundrahmen: 5 Standardfelder, 1 Tor-Modul und 7 rechnerische Pfosten.",
+      note: "Das Beispiel setzt echte Montagebreiten voraus und bemisst weder Pfosten noch Fundamente.",
+    },
+  },
+  "/garten/sichtschutz-pfosten-fundament/": {
+    sources: [source.modelBuildingCode, source.berlinBuildingCode],
+  },
+  "/garten/sichtschutz-gartentor-planen/": {
+    sources: [source.modelBuildingCode, source.berlinBuildingCode],
+  },
+  "/garten/terrassendielen-verschnitt-fugen/": {
+    sources: [source.terraceConstruction],
+    example: {
+      title: "Dielenlaufmeter für eine 4 × 3 Meter große Terrasse",
+      intro: "Beispiel mit 145 mm breiten Dielen, 5 mm Fuge, Verlegung in Vier-Meter-Richtung und zehn Prozent Reserve.",
+      steps: [
+        { label: "Breitenmodul", value: "145 + 5 = 150 mm" },
+        { label: "benötigte Reihen", value: "aufrunden((3.000 + 5) ÷ 150) = 21" },
+        { label: "Laufmeter ohne Reserve", value: "21 × 4 = 84,0 m" },
+        { label: "inklusive 10 % Reserve", value: "92,4 m" },
+      ],
+      result: "Bei 4-m-Lieferdielen ergibt das aufgerundet 24 volle Dielen.",
+      note: "Randzuschnitt, Stoßbild und Wiederverwendung geeigneter Abschnitte müssen im Verlegeplan bestätigt werden.",
+    },
+  },
+  "/garten/terrasse-unterkonstruktion/": {
+    sources: [source.terraceConstruction],
+  },
+  "/garten/terrasse-kosten/": {
+    sources: [source.terraceConstruction],
   },
   "/haus/raumklima/luftentfeuchter-keller/": {
     sources: [source.mold, source.ventilation],

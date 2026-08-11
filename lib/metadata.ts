@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "@/lib/site";
 
-export const CONTENT_UPDATED_AT = "2026-08-10";
+export const CONTENT_UPDATED_AT = "2026-08-11";
 
 interface PageMetadataInput {
   title: string;

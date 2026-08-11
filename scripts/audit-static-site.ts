@@ -98,6 +98,11 @@ for (const page of pages) {
   if (page.html.includes('class="planner-hero"') && !page.html.includes('"@type":"WebApplication"')) {
     errors.push(`${page.route}: WebApplication JSON-LD fehlt`);
   }
+  if (page.html.includes('class="planner-hero"')) {
+    if (!page.html.includes('class="section planner-faq"')) errors.push(`${page.route}: sichtbarer Rechner-FAQ-Bereich fehlt`);
+    if (!page.html.includes('"@type":"FAQPage"')) errors.push(`${page.route}: FAQPage JSON-LD fehlt`);
+    if (!page.html.includes('"featureList":[')) errors.push(`${page.route}: konkrete Rechnerfunktionen fehlen im WebApplication JSON-LD`);
+  }
 }
 
 for (const route of Object.keys(GUIDE_ENRICHMENTS)) {

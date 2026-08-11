@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
+import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { GreenhousePlanner } from "./GreenhousePlanner";
 
 export const metadata = createPageMetadata({
@@ -20,6 +21,7 @@ export default function Page() {
     </section>
     <section className="planner-wrap"><GreenhousePlanner /></section>
     <section className="section planner-notes"><div><p className="eyebrow">Was der Planer leistet</p><h2>Vorplanung statt Bauanweisung.</h2></div><div className="note-grid"><article><h3>✓ Das wird berechnet</h3><p>Grundfläche, feste Beet- und Wegflächen, verbleibende Breite, Basisumfang mit Reserve sowie theoretisch auffangbares Regenwasser.</p></article><article><h3>! Das bleibt Planung</h3><p>Fundament, Verankerung, Wind- und Schneelast, Verglasungsstärke, Heizung, Entwässerung, Elektrik und örtliche Anforderungen.</p></article></div></section>
+    <PlannerFaq planner="greenhouse" />
     <section className="section related-guides"><div className="section-heading"><p className="eyebrow">Vor Auswahl und Aufbau vertiefen</p><h2>Drei Entscheidungen prägen das Gewächshaus.</h2><p>Außenmaß, tragfähige Basis und kontrollierbare Lüftung müssen zum konkreten Standort und System passen.</p></div><div className="guide-grid related-guides--three"><Link className="guide-card" href="/garten/gewaechshaus-groesse/"><span className="guide-number">01 · Raum</span><h2>Größe & Innenaufteilung</h2><p>Beete, Wege und Tür schon vor der Modellauswahl zusammenbringen.</p><span className="card-link">Fläche planen →</span></Link><Link className="guide-card" href="/garten/gewaechshaus-fundament/"><span className="guide-number">02 · Basis</span><h2>Fundament einordnen</h2><p>Warum der Profilumfang noch keine Gründung oder Verankerung bestimmt.</p><span className="card-link">Unterbau verstehen →</span></Link><Link className="guide-card" href="/garten/gewaechshaus-belueftung/"><span className="guide-number">03 · Klima</span><h2>Belüftung vorbereiten</h2><p>Dachfenster, Querlüftung und automatische Öffner sinnvoll kombinieren.</p><span className="card-link">Lüftung planen →</span></Link></div></section>
   </>;
 }

@@ -2,7 +2,11 @@ import { describe, expect, it } from "vitest";
 import { calculateDrywallPlan } from "@/lib/drywall/rules";
 import { calculateFlooringPlan } from "@/lib/flooring/rules";
 import { calculateRequirements } from "@/lib/garden-house/rules";
+import { calculateGreenhousePlan } from "@/lib/greenhouse/rules";
 import { buildIrrigationPlan } from "@/lib/irrigation/rules";
+import { calculatePrivacyScreenPlan } from "@/lib/privacy-screen/rules";
+import { calculateRobotMowerPlan } from "@/lib/robot-mower/rules";
+import { calculateTerracePlan } from "@/lib/terrace/rules";
 import { GUIDE_ENRICHMENTS } from "./guide-enrichments";
 
 describe("guide enrichments", () => {
@@ -30,6 +34,13 @@ describe("guide enrichments", () => {
       if (!enrichment.example) continue;
       expect(enrichment.example.steps.length).toBeGreaterThanOrEqual(3);
       expect(enrichment.example.result.length).toBeGreaterThan(20);
+    }
+  });
+
+  it("hinterlegt für jeden veröffentlichten Ratgeber mindestens eine Quelle", () => {
+    expect(Object.keys(GUIDE_ENRICHMENTS)).toHaveLength(34);
+    for (const enrichment of Object.values(GUIDE_ENRICHMENTS)) {
+      expect(enrichment.sources?.length).toBeGreaterThan(0);
     }
   });
 
@@ -107,5 +118,65 @@ describe("guide enrichments", () => {
       budgetMaxEur: 500,
     });
     expect(irrigation.hedgeDriplineM).toBe(23);
+
+    const greenhouse = calculateGreenhousePlan({
+      lengthM: 3,
+      widthM: 2.5,
+      layout: "two-side",
+      bedDepthCm: 70,
+      aisleWidthCm: 80,
+      endBedDepthCm: 60,
+      doorWidthCm: 80,
+      baseBarLengthM: 2,
+      useCase: "vegetables",
+      glazing: "polycarbonate",
+      roofVentCount: 2,
+      automaticOpeners: true,
+      crossVentilation: true,
+      waterAtSite: true,
+      electricityPlanned: false,
+    });
+    expect(greenhouse).toMatchObject({ footprintM2: 7.5, growingAreaM2: 4.2, pathAreaM2: 2.4, flexibleFloorAreaM2: 0.9 });
+
+    const mower = calculateRobotMowerPlan({
+      areas: [{ id: "main", label: "Hauptrasen", lengthM: 15, widthM: 20, excludedAreaM2: 25 }],
+      complexity: "moderate",
+      growth: "normal",
+      mowingZones: 1,
+      narrowestPassageCm: 120,
+      maximumSlopePercent: 10,
+      obstacleCount: 2,
+      separatedAreas: false,
+      boundarySystem: "undecided",
+      powerAtStation: true,
+      reliableReception: true,
+      rainShelteredStation: true,
+    });
+    expect(mower).toMatchObject({ grossAreaM2: 300, netAreaM2: 275, capacityFactor: 1.3, requiredRatedAreaM2: 400 });
+
+    const privacyScreen = calculatePrivacyScreenPlan({
+      totalLengthM: 10,
+      fenceHeightCm: 180,
+      systemFieldWidthCm: 180,
+      gateCount: 1,
+      gateModuleWidthCm: 100,
+      reservePanel: false,
+      mountingType: "ground",
+      terrain: "level",
+      windExposure: "normal",
+    });
+    expect(privacyScreen).toMatchObject({ panelCount: 5, postCount: 7, fullSystemLengthCm: 1000, adjustmentRequired: false });
+
+    const terrace = calculateTerracePlan({
+      terraceLengthM: 4,
+      terraceWidthM: 3,
+      layingDirection: "length",
+      boardWidthMm: 145,
+      boardGapMm: 5,
+      boardLengthM: 4,
+      wastePercent: 10,
+      maxSupportSpacingCm: 40,
+    });
+    expect(terrace).toMatchObject({ courseCount: 21, deckingLinearM: 84, deckingLinearMWithWaste: 92.4, fullBoardsToBuy: 24 });
   });
 });
