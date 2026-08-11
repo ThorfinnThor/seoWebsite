@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateCarportPlan } from "@/lib/carport/rules";
 import { CarportInputSchema, type CarportInput } from "@/lib/carport/types";
 
@@ -94,7 +95,7 @@ export function CarportPlanner() {
         <article><span className="component-icon" aria-hidden="true">◒</span><div><p className="eyebrow">Dachwasser</p><h3>Theoretisch {plan.theoreticalRainwaterPer10MmL} Liter je 10 mm Regen</h3><p>Geometrischer Wert aus der lichten Planungsfläche, noch ohne Dachüberstand, tatsächliche Projektion und reale Verluste.</p><strong>Rinne, Fallrohr, Ablaufziel und sicherer Überlauf bleiben konkrete Planung.</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor Produktauswahl und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Fahrzeugmaße, Grundstücksgrenzen, Leitungen im Boden, Bäume, Tor, Beleuchtung und Wartungszugang in ein genaues Bestandsaufmaß übernehmen.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Planungsrahmen drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

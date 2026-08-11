@@ -8,6 +8,11 @@ describe("planner directory", () => {
     expect(new Set(PLANNERS.map((planner) => planner.href)).size).toBe(10);
   });
 
+  it("groups the directory into seven garden and three house tools", () => {
+    expect(PLANNERS.filter((planner) => planner.area === "garden")).toHaveLength(7);
+    expect(PLANNERS.filter((planner) => planner.area === "house")).toHaveLength(3);
+  });
+
   it("gives every calculator three concrete result descriptions", () => {
     for (const planner of PLANNERS) {
       expect(planner.outputs).toHaveLength(3);

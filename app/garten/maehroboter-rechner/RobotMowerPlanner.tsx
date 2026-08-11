@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateRobotMowerPlan } from "@/lib/robot-mower/rules";
 import { RobotMowerInputSchema, type LawnArea, type RobotMowerInput } from "@/lib/robot-mower/types";
 
@@ -105,7 +106,7 @@ export function RobotMowerPlanner() {
         <article><span className="component-icon" aria-hidden="true">⌁</span><div><p className="eyebrow">Begrenzung</p><h3>{input.boundarySystem === "wire" ? `Grob ${plan.boundaryWireFrameM} m Kabelrahmen` : input.boundarySystem === "wireless" ? "Kabellose Standortprüfung" : "Systementscheidung noch offen"}</h3><p>{input.boundarySystem === "wire" ? `${format(plan.rectangularPerimeterM)} m Rechtecksumme plus 10 % Reserve – ohne Inseln und Zusatzleitungen.` : "Virtuelle Grenzen oder Leitungsführung müssen am realen Grundstück funktionieren und zum Gerät passen."}</p><strong>{input.powerAtStation ? "Stromposition vorgemerkt." : "Stromversorgung der Station ist noch offen."}</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor der Geräteauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}{plan.setupTasks.map((task) => <li key={task}>{task}</li>)}<li>Randgestaltung, Stufen, Wasserflächen, öffentliche Wege, Kinder- und Tierbereiche sowie Aufbewahrung nach Anleitung und örtlicher Situation planen.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Auswahlrahmen drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

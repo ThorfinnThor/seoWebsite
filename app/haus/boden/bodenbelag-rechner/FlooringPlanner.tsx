@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateFlooringPlan } from "@/lib/flooring/rules";
 import { FlooringInputSchema, type FlooringInput, type FlooringRoom } from "@/lib/flooring/types";
 
@@ -110,7 +111,7 @@ export function FlooringPlanner() {
         <article><span className="component-icon" aria-hidden="true">⌑</span><div><p className="eyebrow">Sockelleisten</p><h3>{input.includeSkirting ? `${plan.skirtingBarCount} Leisten` : "Keine Sockelleisten eingerechnet"}</h3><p>{input.includeSkirting ? `${format(plan.skirtingLengthWithReserveM)} laufende Meter inklusive 10 % Reserve, Türöffnungen abgezogen.` : "Randabschlüsse und Übergangsprofile bleiben außerhalb der Bestellmenge."}</p><strong>{input.rooms.length > 1 ? "Gemeinsame Innenkanten im Aufmaß korrigieren." : "Ecken, Versprünge und Profilstöße im Zuschnittplan prüfen."}</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Verlegung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Chargengleichheit, Sockelleistenprofile, Übergänge, Abschlussprofile und eine mögliche Paketreserve für spätere Reparaturen separat entscheiden.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Materialrahmen drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
 import { TerraceInputSchema, type TerraceInput } from "@/lib/terrace/types";
 
@@ -85,7 +86,7 @@ export function TerracePlanner() {
         <article><span className="component-icon" aria-hidden="true">↔</span><div><p className="eyebrow">Zuschnitt & Fugen</p><h3>{plan.fullLengthPossible ? "Verlegung ohne Längsstoß möglich" : `Mindestens ${plan.minimumJointsPerCourse} Stoß je Reihe`}</h3><p>Die Reihenbreite liegt rechnerisch bei {format(plan.coveredWidthM, 3)} m. Am Rand sind ungefähr {plan.edgeAdjustmentMm} mm anzupassen.</p><strong>Stoßbild und symmetrische Randreihen vor Bestellung zeichnen.</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Untergrund, Entwässerung, Aufbauhöhe, Gefälle und konstruktiver Holzschutz gehören in die konkrete Ausführungsplanung.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Materialrahmen drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

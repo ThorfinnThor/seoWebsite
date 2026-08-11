@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculatePrivacyScreenPlan } from "@/lib/privacy-screen/rules";
 import { PrivacyScreenInputSchema, type PrivacyScreenInput } from "@/lib/privacy-screen/types";
 
@@ -96,7 +97,7 @@ export function PrivacyScreenPlanner() {
         <article><span className="component-icon" aria-hidden="true">↔</span><div><p className="eyebrow">Rasterabschluss</p><h3>{plan.adjustmentRequired ? `${format(plan.endAdjustmentCm)} cm Anpassung` : "Das Raster geht rechnerisch auf"}</h3><p>{plan.adjustmentRequired ? `Das letzte Feld müsste ungefähr ${format(plan.lastFieldWidthCm)} cm Systembreite erhalten.` : "Standardfelder und Tor-Module entsprechen zusammen der eingegebenen Streckenlänge."}</p><strong>{plan.adjustmentRequired ? "Nur kürzen, wenn das gewählte System es ausdrücklich erlaubt." : "Aufmaß und Montagetoleranzen trotzdem vor Bestellung prüfen."}</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Montage prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Leitungen im Boden, Grundstücksgrenze, örtliche Vorgaben und Nachbarrecht gehören in die Standortprüfung.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Mengenplan drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

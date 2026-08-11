@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateDrywallPlan } from "@/lib/drywall/rules";
 import { DrywallInputSchema, type DrywallInput } from "@/lib/drywall/types";
 
@@ -91,7 +92,7 @@ export function DrywallPlanner() {
         <article><span className="component-icon" aria-hidden="true">≋</span><div><p className="eyebrow">Hohlraum & Ergänzungen</p><h3>{input.includeInsulation ? `${format(plan.insulationAreaM2)} m² Dämmfläche` : "Keine Dämmung eingerechnet"}</h3><p>Schrauben, Dübel, Dichtungs- und Fugenmaterial sowie Anschluss- und Kantenteile bleiben bewusst außerhalb der Pauschalmenge.</p><strong>Nur ein vollständiger freigegebener Aufbau erfüllt Brand-, Schall- oder Feuchteanforderungen.</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Ausführung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Bestandsbauteile, Boden und Decke, Leitungsverlauf, Türzargen, Lasten, Bewegungsfugen und spätere Befestigungen in einem konkreten Wandplan koordinieren.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Mengenrahmen drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

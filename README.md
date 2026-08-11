@@ -17,6 +17,12 @@ Run the complete launch verification:
 npm run verify
 ```
 
+Show the remaining launch-specific checks for legal contact, domain and affiliate data:
+
+```bash
+npm run readiness
+```
+
 The production build is a pure static export in `out/`. There are no API routes, Server Actions, runtime databases or AI dependencies.
 
 ## Product data

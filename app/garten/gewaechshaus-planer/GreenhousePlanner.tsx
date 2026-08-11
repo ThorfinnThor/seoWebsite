@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
+import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateGreenhousePlan } from "@/lib/greenhouse/rules";
 import { GreenhouseInputSchema, type GreenhouseInput } from "@/lib/greenhouse/types";
 
@@ -92,7 +93,7 @@ export function GreenhousePlanner() {
         <article><span className="component-icon" aria-hidden="true">◒</span><div><p className="eyebrow">Regenwasser</p><h3>Theoretisch {plan.theoreticalRainwaterPer10MmL} Liter je 10 mm Regen</h3><p>Geometrischer Maximalwert aus der horizontalen Dachgrundfläche, bevor Rinnen-, Überlauf-, Spritz- und Speicherverluste berücksichtigt werden.</p><strong>Speicher und Überlauf anhand realer Niederschläge und Nutzung planen.</strong></div></article>
       </div>
       <div className="warning-panel"><h3>Vor Auswahl und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Standort, Verschattung, Dachausrichtung, Türanschlag, Arbeitsraum, örtliche Vorgaben und Herstellermaße gehören in die konkrete Planung.</li></ul></div>
-      <div className="print-action"><button className="button button--secondary" type="button" onClick={() => window.print()}>Planungsrahmen drucken</button></div>
+      <PrintResultAction />
     </div>}
 
     {error && <p className="field-error calculator-error" role="alert">{error}</p>}

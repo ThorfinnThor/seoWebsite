@@ -14,6 +14,7 @@ export type PlannerId = PlannerIconName;
 
 export type PlannerDirectoryItem = {
   id: PlannerId;
+  area: "garden" | "house";
   title: string;
   category: string;
   shortCategory: string;
@@ -28,6 +29,7 @@ export type PlannerDirectoryItem = {
 export const PLANNERS: readonly PlannerDirectoryItem[] = [
   {
     id: "garden-house",
+    area: "garden",
     title: "Gartenhaus-Planer",
     category: "Garten · Lagerung",
     shortCategory: "Garten",
@@ -40,6 +42,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "dehumidifier",
+    area: "house",
     title: "Luftentfeuchter-Rechner",
     category: "Haus · Raumklima",
     shortCategory: "Raumklima",
@@ -52,6 +55,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "irrigation",
+    area: "garden",
     title: "Bewässerungsplaner",
     category: "Garten · Wasser",
     shortCategory: "Garten",
@@ -64,6 +68,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "terrace",
+    area: "garden",
     title: "Terrassendielen-Rechner",
     category: "Garten · Terrasse",
     shortCategory: "Terrasse",
@@ -76,6 +81,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "privacy-screen",
+    area: "garden",
     title: "Sichtschutz-Planer",
     category: "Garten · Zaun",
     shortCategory: "Sichtschutz",
@@ -88,6 +94,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "flooring",
+    area: "house",
     title: "Bodenbelag-Rechner",
     category: "Haus · Innenausbau",
     shortCategory: "Innenausbau",
@@ -100,6 +107,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "greenhouse",
+    area: "garden",
     title: "Gewächshaus-Planer",
     category: "Garten · Anbau",
     shortCategory: "Gewächshaus",
@@ -112,6 +120,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "robot-mower",
+    area: "garden",
     title: "Mähroboter-Flächencheck",
     category: "Garten · Rasen",
     shortCategory: "Rasen",
@@ -124,6 +133,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "carport",
+    area: "garden",
     title: "Carport-Planer",
     category: "Garten · Stellplatz",
     shortCategory: "Stellplatz",
@@ -136,6 +146,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
   },
   {
     id: "drywall",
+    area: "house",
     title: "Trockenbauwand-Rechner",
     category: "Haus · Innenausbau",
     shortCategory: "Innenausbau",
