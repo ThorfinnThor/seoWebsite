@@ -32,7 +32,7 @@ export function PlannerDirectory() {
       <div className="tool-grid" aria-label="Verfügbare Planer">
         {planners.map((planner) => <article className="tool-card" key={planner.id}>
           <div className="tool-card-top"><span className="feature-icon" aria-hidden="true"><PlannerIcon name={planner.icon} /></span><span className="status-pill">{planner.category}</span></div>
-          <h2>{planner.title}</h2>
+          <h3>{planner.title}</h3>
           <p>{planner.description}</p>
           <p className="tool-card-results-label">Das Ergebnis:</p>
           <ul>{planner.outputs.map((output) => <li key={output}><span aria-hidden="true">✓</span>{output}</li>)}</ul>

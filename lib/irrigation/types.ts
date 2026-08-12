@@ -11,7 +11,10 @@ export const IrrigationInputSchema = z.object({
   smartControl: z.boolean(),
   rainSensorWanted: z.boolean(),
   budgetMaxEur: z.number().min(50).max(100000),
-}).refine((input) => input.lawnAreaM2 + input.bedAreaM2 + input.hedgeLengthM > 0, { message: "At least one area is required" });
+}).refine((input) => input.lawnAreaM2 + input.bedAreaM2 + input.hedgeLengthM > 0, {
+  message: "Bitte mindestens eine Rasen-, Beet- oder Heckenfläche angeben.",
+  path: ["lawnAreaM2"],
+});
 
 export const IrrigationProductSchema = ProductBaseSchema.extend({
   kind: z.enum(["controller","valve","sprinkler","dripline","pipe","connector","filter","pressure-reducer","sensor"]),

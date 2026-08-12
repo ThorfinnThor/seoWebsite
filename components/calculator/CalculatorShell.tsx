@@ -12,7 +12,7 @@ export function CalculatorShell({
   const progress = Math.round((step / totalSteps) * 100);
   return (
     <section className="calculator-shell" aria-labelledby="calculator-heading">
-      <div className="calculator-progress" aria-label={`Schritt ${step} von ${totalSteps}`}>
+      <div className="calculator-progress" role="progressbar" aria-label={`Schritt ${step} von ${totalSteps}`} aria-valuemin={1} aria-valuemax={totalSteps} aria-valuenow={step}>
         <div className="progress-copy"><span>Schritt {step} von {totalSteps}</span><span>{progress}%</span></div>
         <div className="progress-track" aria-hidden="true"><span style={{ width: `${progress}%` }} /></div>
       </div>

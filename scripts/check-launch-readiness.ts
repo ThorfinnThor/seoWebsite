@@ -4,6 +4,12 @@ import { PLANNERS } from "@/lib/planners";
 type CheckStatus = "ready" | "blocked" | "manual";
 type Check = { status: CheckStatus; label: string; detail: string };
 type Catalog = { products?: unknown[]; offers?: unknown[] };
+type LaunchMode = "preview" | "public" | "affiliate";
+
+const modeArg = process.argv.find((argument) => argument.startsWith("--mode="))?.split("=")[1];
+if (modeArg && !["preview", "public", "affiliate"].includes(modeArg)) throw new Error(`Unbekannter Readiness-Modus: ${modeArg}`);
+const mode = (modeArg ?? "preview") as LaunchMode;
+const strict = process.argv.includes("--strict");
 
 const exists = async (path: string) => access(path).then(() => true).catch(() => false);
 const read = (path: string) => readFile(path, "utf8");
@@ -71,8 +77,20 @@ console.log("\nMachPlan Launch-Readiness\n");
 for (const check of checks) console.log(`${symbols[check.status]} ${check.label}: ${check.detail}`);
 
 const technicalBlockers = checks.filter((check) => check.status === "blocked" && !["Öffentlicher Rechtskontakt", "Geprüfte Affiliate-Produkte"].includes(check.label));
-const publicBlockers = checks.filter((check) => check.status === "blocked");
+const legalBlockers = checks.filter((check) => check.status === "blocked" && check.label === "Öffentlicher Rechtskontakt");
+const affiliateBlockers = checks.filter((check) => check.status === "blocked" && check.label === "Geprüfte Affiliate-Produkte");
+const blockersByMode: Record<LaunchMode, Check[]> = {
+  preview: technicalBlockers,
+  public: [...technicalBlockers, ...legalBlockers],
+  affiliate: [...technicalBlockers, ...legalBlockers, ...affiliateBlockers],
+};
+const selectedBlockers = blockersByMode[mode];
 
 console.log("\nErgebnis");
 console.log(technicalBlockers.length === 0 ? "✓ Technischer Rechner-Preview ist startklar." : `✕ ${technicalBlockers.length} technische Blocker verbleiben.`);
-console.log(publicBlockers.length === 0 ? "✓ Vollständiger öffentlicher Affiliate-Launch ist startklar." : `✕ ${publicBlockers.length} Blocker für den vollständigen öffentlichen Affiliate-Launch verbleiben.`);
+console.log(legalBlockers.length === 0 ? "✓ Öffentlicher Launch hat einen freigegebenen Rechtskontakt." : `✕ ${legalBlockers.length} rechtlicher/kontaktbezogener Blocker verbleibt.`);
+console.log(affiliateBlockers.length === 0 ? "✓ Affiliate-Produktreise enthält geprüfte Angebote." : `✕ ${affiliateBlockers.length} Affiliate-Datenblocker verbleibt.`);
+console.log(`\nGewählter Modus: ${mode}${strict ? " (strict)" : " (informativ)"}`);
+console.log(selectedBlockers.length === 0 ? "✓ Alle verbindlichen Prüfungen für diesen Modus sind erfüllt." : `✕ ${selectedBlockers.length} verbindliche Blocker für diesen Modus.`);
+
+if (strict && selectedBlockers.length > 0) process.exitCode = 1;

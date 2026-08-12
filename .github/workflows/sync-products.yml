@@ -26,6 +26,8 @@ jobs:
           if [ -z "$AWIN_FEED_URLS_JSON" ]; then
             echo "enabled=false" >> "$GITHUB_OUTPUT"
             echo "Affiliate feed secret is not configured; skipping sync."
+            echo "### Affiliate-Feed-Sync deaktiviert" >> "$GITHUB_STEP_SUMMARY"
+            echo "Das Secret AWIN_FEED_URLS_JSON fehlt. Es wurden keine Produktdaten geladen oder geändert." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
@@ -38,11 +40,8 @@ jobs:
         if: steps.feed.outputs.enabled == 'true'
       - run: npm run sync:products
         if: steps.feed.outputs.enabled == 'true'
-      - run: npm run validate:data
-        if: steps.feed.outputs.enabled == 'true'
-      - run: npm run test
-        if: steps.feed.outputs.enabled == 'true'
-      - run: npm run typecheck
+      - name: Verify catalogs and production export
+        run: npm run verify
         if: steps.feed.outputs.enabled == 'true'
       - name: Commit catalog changes
         if: steps.feed.outputs.enabled == 'true'

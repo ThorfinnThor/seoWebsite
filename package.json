@@ -16,6 +16,8 @@
     "verify:static": "node --import tsx scripts/verify-static-build.ts",
     "audit:site": "node --import tsx scripts/audit-static-site.ts",
     "readiness": "node --import tsx scripts/check-launch-readiness.ts",
+    "readiness:public": "node --import tsx scripts/check-launch-readiness.ts --mode=public --strict",
+    "readiness:affiliate": "node --import tsx scripts/check-launch-readiness.ts --mode=affiliate --strict",
     "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static && npm run audit:site"
   },
   "dependencies": {
