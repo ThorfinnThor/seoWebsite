@@ -98,6 +98,8 @@ export type RoofPreference = z.infer<typeof RoofPreferenceSchema>;
 
 export interface GardenHouseRequirements {
   recommendedAreaM2: number;
+  availableAreaM2: number;
+  hasSufficientArea: boolean;
   minDoorWidthCm: number;
   bulkyAccess: boolean;
 }

@@ -12,7 +12,7 @@ function catalog(productPatch: Partial<GardenHouseProduct> = {}, offerPatch: Rec
 }
 
 describe("garden-house requirements", () => {
-  it("rounds the planning area up to 0.5 m²", () => { expect(calculateRequirements(input)).toEqual({ recommendedAreaM2: 4.5, minDoorWidthCm: 80, bulkyAccess: true }); });
+  it("rounds the planning area up to 0.5 m²", () => { expect(calculateRequirements(input)).toMatchObject({ recommendedAreaM2: 4.5, minDoorWidthCm: 80, bulkyAccess: true }); });
 });
 
 describe("garden-house hard filters", () => {

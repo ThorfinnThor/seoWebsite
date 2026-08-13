@@ -28,8 +28,12 @@ export function calculateRequirements(
     (input.workbench ? rules.areaM2.workbench : 0) +
     (input.shelving ? rules.areaM2.shelving : 0);
   const bulkyAccess = input.bikes > 0 || input.lawnMower;
+  const recommendedAreaM2 = Math.ceil((rawArea * rules.circulationReserveFactor) / 0.5) * 0.5;
+  const availableAreaM2 = input.availableWidthCm * input.availableDepthCm / 10_000;
   return {
-    recommendedAreaM2: Math.ceil((rawArea * rules.circulationReserveFactor) / 0.5) * 0.5,
+    recommendedAreaM2,
+    availableAreaM2,
+    hasSufficientArea: availableAreaM2 >= recommendedAreaM2,
     minDoorWidthCm: bulkyAccess ? rules.minDoorWidthCm.bulky : rules.minDoorWidthCm.normal,
     bulkyAccess,
   };

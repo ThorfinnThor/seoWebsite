@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { ResultSummary } from "@/components/calculator/ResultSummary";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
@@ -11,7 +12,7 @@ import { loadGardenHouseCatalog } from "@/lib/catalog/load-client-catalog";
 import { calculateRequirements } from "@/lib/garden-house/rules";
 import { explainNoMatches, recommendGardenHouses } from "@/lib/garden-house/recommend";
 import { GardenHouseInputSchema, type GardenHouseCatalog, type GardenHouseInput } from "@/lib/garden-house/types";
-import { focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
+import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
 
 const INITIAL_INPUT: GardenHouseInput = {
   availableWidthCm: 400,
@@ -37,6 +38,7 @@ const STEP_FIELDS: Record<number, readonly string[]> = { 1: ["availableWidthCm",
 
 export function GardenHousePlanner() {
   const [step, setStep] = useState(1);
+  const goToStep = usePlannerStepTransition(setStep);
   const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:garden-house:v1", INITIAL_INPUT, parseGardenHouseInput);
   const [catalog, setCatalog] = useState<GardenHouseCatalog | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
@@ -63,7 +65,9 @@ export function GardenHousePlanner() {
     const nextErrors = issuesToFieldErrors(error);
     setFieldErrors(nextErrors);
     setFormError("Bitte prüfe die markierten Eingaben, bevor du fortfährst.");
-    focusFirstInvalidField(nextErrors, FIELD_IDS, [...STEP_FIELDS[step], ...Object.keys(FIELD_IDS)]);
+    const { fieldOrder, invalidStep } = findInvalidPlannerStep(nextErrors, FIELD_IDS, STEP_FIELDS, step);
+    if (invalidStep && invalidStep !== step) setStep(invalidStep);
+    focusFirstInvalidField(nextErrors, FIELD_IDS, fieldOrder);
   }
 
   function next() {
@@ -72,7 +76,7 @@ export function GardenHousePlanner() {
     setInput(parsed.data);
     setFieldErrors({});
     setFormError("");
-    setStep((current) => Math.min(5, current + 1));
+    goToStep(Math.min(5, step + 1));
   }
 
   async function showResults() {
@@ -136,22 +140,24 @@ export function GardenHousePlanner() {
           <NumberField id="budget" label="Maximales Gesamtbudget" value={input.budgetMaxEur} min={100} max={100000} unit="€" error={fieldErrors.budgetMaxEur} onChange={(value) => update("budgetMaxEur", value)} wide />
           {formError && <p className="field-error" role="alert">{formError}</p>}
           {validatedInput && requirements && <ResultSummary input={validatedInput} requirements={requirements} />}
+          {requirements && !requirements.hasSufficientArea && <div className="warning-panel" role="alert"><h3>Die verfügbare Stellfläche reicht noch nicht aus.</h3><p>Für deine Nutzung werden mindestens {requirements.recommendedAreaM2.toLocaleString("de-DE")} m² empfohlen; verfügbar sind {requirements.availableAreaM2.toLocaleString("de-DE", { maximumFractionDigits: 2 })} m². Reduziere die Nutzung oder prüfe eine größere Stellfläche, bevor du Produkte vergleichst.</p></div>}
           <InfoBox>Bei Angeboten mit unbekannten Versandkosten kann MachPlan die Budgeteinhaltung nicht sicher bestätigen. Sie werden klar als „zzgl. Versand“ gekennzeichnet.</InfoBox>
         </div>}
         {step === 5 && <div className="results" aria-live="polite">
           {validatedInput && requirements && <ResultSummary input={validatedInput} requirements={requirements} />}
+          {requirements && !requirements.hasSufficientArea && <div className="result-state result-state--error" role="alert"><span className="result-symbol" aria-hidden="true">!</span><h3>Die verfügbare Stellfläche ist zu klein.</h3><p>Dein Bedarf liegt bei mindestens {requirements.recommendedAreaM2.toLocaleString("de-DE")} m², verfügbar sind aber nur {requirements.availableAreaM2.toLocaleString("de-DE", { maximumFractionDigits: 2 })} m². Dieser Planungsrahmen ist noch nicht bereit für einen Produktvergleich.</p><button className="button button--secondary" type="button" onClick={() => setStep(1)}>Stellfläche ändern</button></div>}
           {status === "loading" && <div className="result-state"><span className="loader" aria-hidden="true" /><h3>Geprüfte Produktdaten werden geladen …</h3><p>Wir laden nur den Gartenhaus-Katalog, nicht Daten anderer Planer.</p></div>}
           {status === "error" && <div className="result-state result-state--error"><h3>Produktdaten konnten gerade nicht geladen werden.</h3><p>Deine Eingaben bleiben erhalten. Bitte versuche es später erneut.</p><button className="button button--secondary" onClick={showResults}>Erneut versuchen</button></div>}
-          {status === "ready" && catalog?.products.length === 0 && <div className="result-state"><span className="result-symbol" aria-hidden="true">◇</span><h3>Der geprüfte Produktkatalog wird gerade aufgebaut.</h3><p>Dein Planungsrahmen ist fertig. Produkte erscheinen hier erst, nachdem ihre Maße und Eigenschaften anhand realer Händlerdaten manuell geprüft wurden.</p><p className="state-note">Wir zeigen bewusst keine erfundenen oder ungeprüften Empfehlungen.</p></div>}
-          {status === "ready" && catalog && catalog.products.length > 0 && results.length === 0 && <div className="result-state"><span className="result-symbol" aria-hidden="true">0</span><h3>Kein geprüftes Modell erfüllt alle Kriterien.</h3><p>Wir lockern keine Anforderungen im Hintergrund. Diese Änderungen könnten helfen:</p><ul className="suggestion-list">{explanations.map((item) => <li key={item.code}><strong>{item.label}</strong><span>{item.suggestion}</span></li>)}</ul><button className="button button--secondary" onClick={() => setStep(3)}>Präferenzen bearbeiten</button></div>}
-          {results.length > 0 && <><div className="result-heading"><div><p className="eyebrow">Bis zu drei geprüfte Treffer</p><h3>Diese Modelle erfüllen deine harten Kriterien.</h3></div><span>{results.length} {results.length === 1 ? "Treffer" : "Treffer"}</span></div><AffiliateDisclosure /><div className="product-list">{results.map((match, index) => <ProductCard key={match.product.id} match={match} position={index + 1} />)}</div></>}
+          {status === "ready" && requirements?.hasSufficientArea && catalog?.products.length === 0 && <div className="result-state"><span className="result-symbol" aria-hidden="true">◇</span><h3>Der geprüfte Produktkatalog wird gerade aufgebaut.</h3><p>Dein Planungsrahmen ist fertig. Produkte erscheinen hier erst, nachdem ihre Maße und Eigenschaften anhand realer Händlerdaten manuell geprüft wurden.</p><p className="state-note">Wir zeigen bewusst keine erfundenen oder ungeprüften Empfehlungen.</p></div>}
+          {requirements?.hasSufficientArea && status === "ready" && catalog && catalog.products.length > 0 && results.length === 0 && <div className="result-state"><span className="result-symbol" aria-hidden="true">0</span><h3>Kein geprüftes Modell erfüllt alle Kriterien.</h3><p>Wir lockern keine Anforderungen im Hintergrund. Diese Änderungen könnten helfen:</p><ul className="suggestion-list">{explanations.map((item) => <li key={item.code}><strong>{item.label}</strong><span>{item.suggestion}</span></li>)}</ul><button className="button button--secondary" onClick={() => setStep(3)}>Präferenzen bearbeiten</button></div>}
+          {requirements?.hasSufficientArea && results.length > 0 && <><div className="result-heading"><div><p className="eyebrow">Bis zu drei geprüfte Treffer</p><h3>Diese Modelle erfüllen deine harten Kriterien.</h3></div><span>{results.length} {results.length === 1 ? "Treffer" : "Treffer"}</span></div><AffiliateDisclosure /><div className="product-list">{results.map((match, index) => <ProductCard key={match.product.id} match={match} position={index + 1} />)}</div></>}
           <PrintResultAction />
         </div>}
         <div className="calculator-actions">
-          {step > 1 && <button type="button" className="button button--back" onClick={() => setStep((current) => Math.max(1, current - 1))}>← Zurück</button>}
+          {step > 1 && <button type="button" className="button button--back" onClick={() => goToStep(Math.max(1, step - 1))}>← Zurück</button>}
           {step < 4 && <button type="button" className="button button--primary" onClick={next}>Weiter <span aria-hidden="true">→</span></button>}
           {step === 4 && <button type="button" className="button button--primary" disabled={status === "loading"} onClick={showResults}>Passende Produkte finden <span aria-hidden="true">→</span></button>}
-          {step === 5 && <button type="button" className="button button--back" onClick={() => setStep(1)}>Planung ändern</button>}
+          {step === 5 && <button type="button" className="button button--back" onClick={() => goToStep(1)}>Planung ändern</button>}
         </div>
       </CalculatorShell>
   );

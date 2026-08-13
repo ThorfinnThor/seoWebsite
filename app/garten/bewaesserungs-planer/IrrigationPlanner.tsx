@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { buildIrrigationPlan } from "@/lib/irrigation/rules";
 import { IrrigationInputSchema, type IrrigationInput } from "@/lib/irrigation/types";
-import { focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
+import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
 
 const INITIAL: IrrigationInput = { lawnAreaM2: 100, bedAreaM2: 20, hedgeLengthM: 15, automaticControl: true, smartControl: false, rainSensorWanted: true, budgetMaxEur: 600 };
 const FIELD_IDS: Partial<Record<keyof IrrigationInput, string>> = {
@@ -26,6 +27,7 @@ const parseIrrigationInput = (value: unknown) => { const result = IrrigationInpu
 
 export function IrrigationPlanner() {
   const [step, setStep] = useState(1);
+  const goToStep = usePlannerStepTransition(setStep);
   const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:irrigation:v1", INITIAL, parseIrrigationInput);
   const [fieldErrors, setFieldErrors] = useState<PlannerFieldErrors>({});
   const [error, setError] = useState("");
@@ -33,6 +35,14 @@ export function IrrigationPlanner() {
   const plan = validation.success ? buildIrrigationPlan(validation.data) : null;
 
   useEffect(() => { if (step > 1) document.getElementById("calculator-heading")?.focus(); }, [step]);
+  useEffect(() => {
+    if (Object.keys(fieldErrors).length === 0) return;
+    const parsed = IrrigationInputSchema.safeParse(input);
+    setFieldErrors(parsed.success ? {} : issuesToFieldErrors(parsed.error));
+    if (parsed.success) setError("");
+    // Existing cross-field errors must follow changes in any related input.
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [input]);
 
   function update<K extends keyof IrrigationInput>(key: K, value: IrrigationInput[K]) {
     setInput((current) => ({ ...current, [key]: value }));
@@ -46,14 +56,15 @@ export function IrrigationPlanner() {
       const nextErrors = issuesToFieldErrors(parsed.error);
       setFieldErrors(nextErrors);
       setError("Bitte prüfe die markierten Eingaben, bevor du fortfährst.");
-      const order = [...STEP_FIELDS[step], ...Object.keys(FIELD_IDS)] as string[];
-      focusFirstInvalidField(nextErrors, FIELD_IDS, order);
+      const { fieldOrder, invalidStep } = findInvalidPlannerStep(nextErrors, FIELD_IDS, STEP_FIELDS, step);
+      if (invalidStep && invalidStep !== step) setStep(invalidStep);
+      focusFirstInvalidField(nextErrors, FIELD_IDS, fieldOrder);
       return;
     }
     setInput(parsed.data);
     setFieldErrors({});
     setError("");
-    setStep((current) => Math.min(4, current + 1));
+    goToStep(Math.min(4, step + 1));
   }
 
   function reset() {
@@ -101,16 +112,17 @@ export function IrrigationPlanner() {
       <PrintResultAction />
     </div>}
     <div className="calculator-actions">
-      {step > 1 && <button type="button" className="button button--back" onClick={() => setStep((current) => Math.max(1, current - 1))}>← Zurück</button>}
+      {step > 1 && <button type="button" className="button button--back" onClick={() => goToStep(Math.max(1, step - 1))}>← Zurück</button>}
       {step < 4 && <button type="button" className="button button--primary" onClick={next}>{step === 3 ? "Komponentenplan erstellen" : "Weiter"} <span aria-hidden="true">→</span></button>}
-      {step === 4 && <button type="button" className="button button--back" onClick={() => setStep(1)}>Eingaben ändern</button>}
+      {step === 4 && <button type="button" className="button button--back" onClick={() => goToStep(1)}>Eingaben ändern</button>}
     </div>
   </CalculatorShell>;
 }
 
 function NumberField({ id, label, value, unit, min, max, error, onChange }: { id: string; label: string; value: number; unit: string; min: number; max: number; error?: string; onChange: (value: number) => void }) {
   const invalid = !Number.isFinite(value) || value < min || value > max || Boolean(error);
-  return <div className="field"><label htmlFor={id}>{label}</label><div className="input-with-unit"><input id={id} type="number" inputMode="decimal" min={min} max={max} value={Number.isFinite(value) ? value : ""} aria-invalid={invalid} aria-describedby={invalid ? `${id}-error` : undefined} onChange={(event) => onChange(event.target.valueAsNumber)} /><span>{unit}</span></div>{invalid && <small className="field-error" id={`${id}-error`}>Bitte einen Wert zwischen {min.toLocaleString("de-DE")} und {max.toLocaleString("de-DE")} eingeben.</small>}</div>;
+  const message = error ?? (!Number.isFinite(value) || value < min || value > max ? `Bitte einen Wert zwischen ${min.toLocaleString("de-DE")} und ${max.toLocaleString("de-DE")} eingeben.` : undefined);
+  return <div className="field"><label htmlFor={id}>{label}</label><div className="input-with-unit"><input id={id} type="number" inputMode="decimal" min={min} max={max} value={Number.isFinite(value) ? value : ""} aria-invalid={invalid} aria-describedby={invalid ? `${id}-error` : undefined} onChange={(event) => onChange(event.target.valueAsNumber)} /><span>{unit}</span></div>{message && <small className="field-error" id={`${id}-error`}>{message}</small>}</div>;
 }
 
 function OptionalField({ id, label, value, unit, max, error, onChange }: { id: string; label: string; value?: number; unit: string; max: number; error?: string; onChange: (value: number | undefined) => void }) {

@@ -1,21 +1,32 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { PlannerIcon } from "@/components/icons/PlannerIcon";
 import { PLANNERS } from "@/lib/planners";
+import { parsePlannerDirectoryFilter, plannerDirectoryUrl, type PlannerDirectoryFilter } from "@/lib/planner/directory-filter";
 
-type PlannerFilter = "all" | "garden" | "house";
-
-const FILTERS: readonly { value: PlannerFilter; label: string }[] = [
+const FILTERS: readonly { value: PlannerDirectoryFilter; label: string }[] = [
   { value: "all", label: "Alle" },
   { value: "garden", label: "Garten" },
   { value: "house", label: "Haus" },
 ];
 
 export function PlannerDirectory() {
-  const [filter, setFilter] = useState<PlannerFilter>("all");
+  const [filter, setFilter] = useState<PlannerDirectoryFilter>("all");
   const planners = filter === "all" ? PLANNERS : PLANNERS.filter((planner) => planner.area === filter);
+
+  useEffect(() => {
+    const syncFromUrl = () => setFilter(parsePlannerDirectoryFilter(new URL(window.location.href).searchParams.get("bereich")));
+    syncFromUrl();
+    window.addEventListener("popstate", syncFromUrl);
+    return () => window.removeEventListener("popstate", syncFromUrl);
+  }, []);
+
+  function selectFilter(nextFilter: PlannerDirectoryFilter) {
+    setFilter(nextFilter);
+    window.history.replaceState(window.history.state, "", plannerDirectoryUrl(nextFilter, window.location.href));
+  }
 
   return (
     <section className="section tool-directory" aria-labelledby="planner-directory-heading">
@@ -24,7 +35,7 @@ export function PlannerDirectory() {
         <div className="tool-filters" aria-label="Rechner nach Bereich filtern">
           {FILTERS.map((item) => {
             const count = item.value === "all" ? PLANNERS.length : PLANNERS.filter((planner) => planner.area === item.value).length;
-            return <button type="button" className="tool-filter" aria-pressed={filter === item.value} onClick={() => setFilter(item.value)} key={item.value}>{item.label} <span>{count}</span></button>;
+            return <button type="button" className="tool-filter" aria-pressed={filter === item.value} onClick={() => selectFilter(item.value)} key={item.value}>{item.label} <span>{count}</span></button>;
           })}
         </div>
       </div>

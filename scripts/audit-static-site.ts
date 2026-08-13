@@ -153,6 +153,14 @@ if (!robotsTxt.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) errors.push("robots
 if (!robotsTxt.includes("User-Agent: *") || !robotsTxt.includes("Allow: /")) errors.push("robots.txt: öffentliche Crawler sind nicht allgemein zugelassen");
 if (!robotsTxt.includes("Disallow: /data/")) errors.push("robots.txt: Produktdaten-Verzeichnis ist nicht ausgeschlossen");
 
+const llmsTxt = await readFile(path.join(OUT_DIR, "llms.txt"), "utf8");
+for (const requiredSection of ["# MachPlan", "## Wichtigste Einstiege", "## Rechner", "## Nutzungshinweise"]) {
+  if (!llmsTxt.includes(requiredSection)) errors.push(`llms.txt: Abschnitt fehlt: ${requiredSection}`);
+}
+for (const planner of ["Gartenhaus-Planer", "Bewässerungsplaner", "Terrassendielen-Rechner", "Sichtschutz-Planer", "Gewächshaus-Planer", "Mähroboter-Flächencheck", "Carport-Planer", "Bodenbelag-Rechner", "Trockenbau-Rechner", "Luftentfeuchter-Rechner"]) {
+  if (!llmsTxt.includes(planner)) errors.push(`llms.txt: Rechner fehlt: ${planner}`);
+}
+
 if (!process.env.NEXT_PUBLIC_LEGAL_EMAIL) {
   for (const route of ["/impressum/", "/datenschutz/"]) {
     const page = pages.find((candidate) => candidate.route === route);

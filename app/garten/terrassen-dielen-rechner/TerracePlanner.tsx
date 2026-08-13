@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { PlannerNumberField as NumberField } from "@/components/calculator/PlannerNumberField";
+import { usePlannerValidation } from "@/components/calculator/usePlannerValidation";
+import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
@@ -25,12 +28,14 @@ const TITLES = [
   "Dein erster Materialrahmen",
 ];
 const parseTerraceInput = (value: unknown) => { const result = TerraceInputSchema.safeParse(value); return result.success ? result.data : null; };
+const FIELD_IDS: Partial<Record<string, string>> = { terraceLengthM: "terrace-length", terraceWidthM: "terrace-width", boardWidthMm: "board-width", boardGapMm: "board-gap", boardLengthM: "board-length", maxSupportSpacingCm: "support-spacing" };
+const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["terraceLengthM", "terraceWidthM"], 2: ["boardWidthMm", "boardGapMm", "boardLengthM"], 3: ["maxSupportSpacingCm"] };
 
 export function TerracePlanner() {
   const [step, setStep] = useState(1);
+  const goToStep = usePlannerStepTransition(setStep);
   const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:terrace:v1", INITIAL, parseTerraceInput);
-  const [error, setError] = useState("");
-  const parsed = TerraceInputSchema.safeParse(input);
+  const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: TerraceInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculateTerracePlan(parsed.data) : null;
 
   useEffect(() => {
@@ -39,23 +44,19 @@ export function TerracePlanner() {
 
   function update<K extends keyof TerraceInput>(key: K, value: TerraceInput[K]) {
     setInput((current) => ({ ...current, [key]: value }));
-    setError("");
+    clearFieldError(String(key));
   }
 
   function next() {
-    if (!parsed.success) {
-      setError("Bitte prüfe die markierten Größen und verwende Werte innerhalb der angegebenen Grenzen.");
-      return;
-    }
-    setError("");
-    setStep((current) => Math.min(4, current + 1));
+    if (!validate()) return;
+    goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Terrassendielen-Rechner" onReset={() => { resetInput(); setStep(1); setError(""); }}>
+  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Terrassendielen-Rechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two">
-        <NumberField id="terrace-length" label="Länge der Terrasse" value={input.terraceLengthM} unit="m" min={1} max={30} step="0.1" onChange={(value) => update("terraceLengthM", value)} />
-        <NumberField id="terrace-width" label="Breite der Terrasse" value={input.terraceWidthM} unit="m" min={1} max={30} step="0.1" onChange={(value) => update("terraceWidthM", value)} />
+        <NumberField id="terrace-length" label="Länge der Terrasse" value={input.terraceLengthM} unit="m" min={1} max={30} step="0.1" error={fieldErrors.terraceLengthM} onChange={(value) => update("terraceLengthM", value)} />
+        <NumberField id="terrace-width" label="Breite der Terrasse" value={input.terraceWidthM} unit="m" min={1} max={30} step="0.1" error={fieldErrors.terraceWidthM} onChange={(value) => update("terraceWidthM", value)} />
       </div>
       <fieldset className="choice-group"><legend>Verlegerichtung der Dielen</legend><div className="radio-grid radio-grid--two"><DirectionChoice label="Entlang der Länge" detail={`${format(input.terraceLengthM)} m Lauflänge`} checked={input.layingDirection === "length"} onChange={() => update("layingDirection", "length")} /><DirectionChoice label="Entlang der Breite" detail={`${format(input.terraceWidthM)} m Lauflänge`} checked={input.layingDirection === "width"} onChange={() => update("layingDirection", "width")} /></div></fieldset>
       <div className="live-estimate"><span>Terrassenfläche</span><strong>{plan ? `${format(plan.areaM2)} m²` : "–"}</strong><small>Länge × Breite; Ausschnitte und Sonderformen separat berücksichtigen.</small></div>
@@ -63,18 +64,18 @@ export function TerracePlanner() {
 
     {step === 2 && <div className="form-step">
       <div className="field-grid field-grid--two">
-        <NumberField id="board-width" label="Sichtbreite einer Diele" value={input.boardWidthMm} unit="mm" min={50} max={300} onChange={(value) => update("boardWidthMm", value)} />
-        <NumberField id="board-gap" label="Geplante Fugenbreite" value={input.boardGapMm} unit="mm" min={3} max={15} onChange={(value) => update("boardGapMm", value)} />
-        <NumberField id="board-length" label="Lieferlänge einer Diele" value={input.boardLengthM} unit="m" min={1} max={10} step="0.1" onChange={(value) => update("boardLengthM", value)} />
+        <NumberField id="board-width" label="Sichtbreite einer Diele" value={input.boardWidthMm} unit="mm" min={50} max={300} error={fieldErrors.boardWidthMm} onChange={(value) => update("boardWidthMm", value)} />
+        <NumberField id="board-gap" label="Geplante Fugenbreite" value={input.boardGapMm} unit="mm" min={3} max={15} error={fieldErrors.boardGapMm} onChange={(value) => update("boardGapMm", value)} />
+        <NumberField id="board-length" label="Lieferlänge einer Diele" value={input.boardLengthM} unit="m" min={1} max={10} step="0.1" error={fieldErrors.boardLengthM} onChange={(value) => update("boardLengthM", value)} />
       </div>
-      <div className="info-box"><span>i</span><p>Verwende die tatsächlich wirksame Sichtbreite und die vom Hersteller freigegebene Fuge. Profilmaße und Verlegebreite können voneinander abweichen.</p></div>
+      <div className="info-box"><span aria-hidden="true">i</span><p>Verwende die tatsächlich wirksame Sichtbreite und die vom Hersteller freigegebene Fuge. Profilmaße und Verlegebreite können voneinander abweichen.</p></div>
       <div className="requirement-summary requirement-summary--three"><div><span>Dielenreihen</span><strong>{plan?.courseCount ?? "–"}</strong></div><div><span>Reine Laufmeter</span><strong>{plan ? `${format(plan.deckingLinearM)} m` : "–"}</strong></div><div><span>Mindestens Stöße je Reihe</span><strong>{plan?.minimumJointsPerCourse ?? "–"}</strong></div></div>
     </div>}
 
     {step === 3 && <div className="form-step">
       <fieldset className="choice-group"><legend>Verschnitt- und Auswahlreserve</legend><div className="radio-grid radio-grid--three">{([5, 10, 15] as const).map((value) => <label className={`radio-card radio-card--detail ${input.wastePercent === value ? "radio-card--selected" : ""}`} key={value}><input type="radio" name="waste" checked={input.wastePercent === value} onChange={() => update("wastePercent", value)} /><span><strong>{value} %</strong><small>{value === 5 ? "einfache Fläche" : value === 10 ? "übliche Reserve" : "viele Zuschnitte"}</small></span></label>)}</div></fieldset>
-      <NumberField id="support-spacing" label="Maximaler Auflagerabstand laut Belag-Hersteller" value={input.maxSupportSpacingCm} unit="cm" min={20} max={80} onChange={(value) => update("maxSupportSpacingCm", value)} />
-      <div className="info-box"><span>!</span><p>Der voreingestellte Wert ist nur ein Planungswert. Material, Dielenstärke, Nutzung und Verlegesystem können einen kleineren Abstand verlangen.</p></div>
+      <NumberField id="support-spacing" label="Maximaler Auflagerabstand laut Belag-Hersteller" value={input.maxSupportSpacingCm} unit="cm" min={20} max={80} error={fieldErrors.maxSupportSpacingCm} onChange={(value) => update("maxSupportSpacingCm", value)} />
+      <div className="info-box"><span aria-hidden="true">!</span><p>Der voreingestellte Wert ist nur ein Planungswert. Material, Dielenstärke, Nutzung und Verlegesystem können einen kleineren Abstand verlangen.</p></div>
       <div className="live-estimate"><span>Geschätzte Unterkonstruktionslinien</span><strong>{plan ? plan.supportRowCount : "–"}</strong><small>Erste und letzte Auflagerung eingeschlossen; Randdetails separat prüfen.</small></div>
     </div>}
 
@@ -89,14 +90,9 @@ export function TerracePlanner() {
       <PrintResultAction />
     </div>}
 
-    {error && <p className="field-error calculator-error" role="alert">{error}</p>}
-    <div className="calculator-actions">{step > 1 && <button className="button button--back" type="button" onClick={() => { setError(""); setStep((current) => Math.max(1, current - 1)); }}>← Zurück</button>}{step < 4 && <button className="button button--primary" type="button" onClick={next}>{step === 3 ? "Materialrahmen berechnen" : "Weiter"} →</button>}{step === 4 && <button className="button button--back" type="button" onClick={() => setStep(1)}>Eingaben ändern</button>}</div>
+    {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}
+    <div className="calculator-actions">{step > 1 && <button className="button button--back" type="button" onClick={() => { resetValidation(); goToStep(Math.max(1, step - 1)); }}>← Zurück</button>}{step < 4 && <button className="button button--primary" type="button" onClick={next}>{step === 3 ? "Materialrahmen berechnen" : "Weiter"} <span aria-hidden="true">→</span></button>}{step === 4 && <button className="button button--back" type="button" onClick={() => goToStep(1)}>Eingaben ändern</button>}</div>
   </CalculatorShell>;
-}
-
-function NumberField({ id, label, value, unit, min, max, step, onChange }: { id: string; label: string; value: number; unit: string; min: number; max: number; step?: string; onChange: (value: number) => void }) {
-  const invalid = !Number.isFinite(value) || value < min || value > max;
-  return <div className="field"><label htmlFor={id}>{label}</label><div className="input-with-unit"><input id={id} type="number" value={Number.isFinite(value) ? value : ""} min={min} max={max} step={step} aria-invalid={invalid} aria-describedby={invalid ? `${id}-error` : undefined} onChange={(event) => onChange(event.target.valueAsNumber)} /><span>{unit}</span></div>{invalid && <small className="field-error" id={`${id}-error`}>Bitte {min} bis {max} {unit} eingeben.</small>}</div>;
 }
 
 function DirectionChoice({ label, detail, checked, onChange }: { label: string; detail: string; checked: boolean; onChange: () => void }) {

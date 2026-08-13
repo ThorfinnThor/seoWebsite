@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { PlannerNumberField as NumberField } from "@/components/calculator/PlannerNumberField";
+import { usePlannerValidation } from "@/components/calculator/usePlannerValidation";
+import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateGreenhousePlan } from "@/lib/greenhouse/rules";
@@ -36,12 +39,14 @@ const parseInput = (value: unknown) => {
   const result = GreenhouseInputSchema.safeParse(value);
   return result.success ? result.data : null;
 };
+const FIELD_IDS: Partial<Record<string, string>> = { lengthM: "greenhouse-length", widthM: "greenhouse-width", doorWidthCm: "greenhouse-door", bedDepthCm: "bed-depth", aisleWidthCm: "aisle-width", endBedDepthCm: "end-bed-depth", baseBarLengthM: "base-bar-length", roofVentCount: "roof-vents" };
+const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["lengthM", "widthM", "doorWidthCm"], 2: ["bedDepthCm", "aisleWidthCm", "endBedDepthCm"], 3: ["baseBarLengthM", "roofVentCount"] };
 
 export function GreenhousePlanner() {
   const [step, setStep] = useState(1);
+  const goToStep = usePlannerStepTransition(setStep);
   const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:greenhouse:v1", INITIAL, parseInput);
-  const [error, setError] = useState("");
-  const parsed = GreenhouseInputSchema.safeParse(input);
+  const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: GreenhouseInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculateGreenhousePlan(parsed.data) : null;
 
   useEffect(() => {
@@ -50,37 +55,34 @@ export function GreenhousePlanner() {
 
   function update<K extends keyof GreenhouseInput>(key: K, value: GreenhouseInput[K]) {
     setInput((current) => ({ ...current, [key]: value }));
-    setError("");
+    clearFieldError(String(key));
   }
 
   function next() {
-    if (!parsed.success) {
-      setError("Bitte prüfe die Maße. Beete und Mittelweg müssen zusammen in die eingegebene Gewächshausbreite passen.");
-      return;
-    }
-    setStep((current) => Math.min(4, current + 1));
+    if (!validate()) return;
+    goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Gewächshaus-Planer" onReset={() => { resetInput(); setStep(1); setError(""); }}>
+  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Gewächshaus-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
-      <div className="field-grid field-grid--two"><NumberField id="greenhouse-length" label="Außenlänge" value={input.lengthM} unit="m" min={1.5} max={30} step="0.1" onChange={(value) => update("lengthM", value)} /><NumberField id="greenhouse-width" label="Außenbreite" value={input.widthM} unit="m" min={1.2} max={12} step="0.1" onChange={(value) => update("widthM", value)} /></div>
-      <NumberField id="greenhouse-door" label="Bekannte lichte Türbreite" value={input.doorWidthCm} unit="cm" min={50} max={200} onChange={(value) => update("doorWidthCm", value)} />
+      <div className="field-grid field-grid--two"><NumberField id="greenhouse-length" label="Außenlänge" value={input.lengthM} unit="m" min={1.5} max={30} step="0.1" error={fieldErrors.lengthM} onChange={(value) => update("lengthM", value)} /><NumberField id="greenhouse-width" label="Außenbreite" value={input.widthM} unit="m" min={1.2} max={12} step="0.1" error={fieldErrors.widthM} onChange={(value) => update("widthM", value)} /></div>
+      <NumberField id="greenhouse-door" label="Bekannte lichte Türbreite" value={input.doorWidthCm} unit="cm" min={50} max={200} error={fieldErrors.doorWidthCm} onChange={(value) => update("doorWidthCm", value)} />
       <fieldset className="choice-group"><legend>Hauptnutzung</legend><div className="radio-grid radio-grid--four"><Choice name="use-case" label="Anzucht" detail="Jungpflanzen und Tische" checked={input.useCase === "seedlings"} onChange={() => update("useCase", "seedlings")} /><Choice name="use-case" label="Gemüse" detail="Beete und Rankpflanzen" checked={input.useCase === "vegetables"} onChange={() => update("useCase", "vegetables")} /><Choice name="use-case" label="Überwinterung" detail="Frostschutz separat" checked={input.useCase === "overwintering"} onChange={() => update("useCase", "overwintering")} /><Choice name="use-case" label="Gemischt" detail="wechselnde Nutzung" checked={input.useCase === "mixed"} onChange={() => update("useCase", "mixed")} /></div></fieldset>
-      <div className="info-box"><span>i</span><p>Verwende die tatsächlich verfügbare, bereits rechtlich und baulich geprüfte Stellfläche. Arbeitsraum, Dachüberstände und Entwässerung können zusätzliche Fläche benötigen.</p></div>
+      <div className="info-box"><span aria-hidden="true">i</span><p>Verwende die tatsächlich verfügbare, bereits rechtlich und baulich geprüfte Stellfläche. Arbeitsraum, Dachüberstände und Entwässerung können zusätzliche Fläche benötigen.</p></div>
       <div className="live-estimate"><span>Grundfläche</span><strong>{plan ? `${format(plan.footprintM2)} m²` : "–"}</strong><small>{format(input.lengthM)} × {format(input.widthM)} m Außenmaß</small></div>
     </div>}
 
     {step === 2 && <div className="form-step">
       <fieldset className="choice-group"><legend>Innenaufteilung</legend><div className="radio-grid radio-grid--three"><Choice name="layout" label="Zwei Seitenbeete" detail="durchgehender Mittelweg" checked={input.layout === "two-side"} onChange={() => update("layout", "two-side")} /><Choice name="layout" label="U-förmige Beete" detail="zusätzliches hinteres Beet" checked={input.layout === "u-shape"} onChange={() => update("layout", "u-shape")} /><Choice name="layout" label="Töpfe und Tische" detail="keine festen Beete" checked={input.layout === "containers"} onChange={() => update("layout", "containers")} /></div></fieldset>
-      <div className="field-grid field-grid--three"><NumberField id="bed-depth" label="Tiefe je Seitenbeet" value={input.bedDepthCm} unit="cm" min={30} max={120} onChange={(value) => update("bedDepthCm", value)} /><NumberField id="aisle-width" label="Breite des Mittelwegs" value={input.aisleWidthCm} unit="cm" min={50} max={180} onChange={(value) => update("aisleWidthCm", value)} /><NumberField id="end-bed-depth" label="Tiefe des hinteren Beets" value={input.endBedDepthCm} unit="cm" min={30} max={120} onChange={(value) => update("endBedDepthCm", value)} /></div>
-      {input.layout === "containers" && <div className="info-box"><span>i</span><p>Bei Topf- und Tischkultur werden die Beetmaße nicht verwendet. Der Rechner trennt nur den durchgehenden Mittelweg von der flexibel stellbaren Restfläche.</p></div>}
+      <div className="field-grid field-grid--three"><NumberField id="bed-depth" label="Tiefe je Seitenbeet" value={input.bedDepthCm} unit="cm" min={30} max={120} error={fieldErrors.bedDepthCm} onChange={(value) => update("bedDepthCm", value)} /><NumberField id="aisle-width" label="Breite des Mittelwegs" value={input.aisleWidthCm} unit="cm" min={50} max={180} error={fieldErrors.aisleWidthCm} onChange={(value) => update("aisleWidthCm", value)} /><NumberField id="end-bed-depth" label="Tiefe des hinteren Beets" value={input.endBedDepthCm} unit="cm" min={30} max={120} error={fieldErrors.endBedDepthCm} onChange={(value) => update("endBedDepthCm", value)} /></div>
+      {input.layout === "containers" && <div className="info-box"><span aria-hidden="true">i</span><p>Bei Topf- und Tischkultur werden die Beetmaße nicht verwendet. Der Rechner trennt nur den durchgehenden Mittelweg von der flexibel stellbaren Restfläche.</p></div>}
       <div className="requirement-summary requirement-summary--three"><div><span>Anbaufläche in festen Beeten</span><strong>{plan ? `${format(plan.growingAreaM2)} m²` : "–"}</strong></div><div><span>Mittelweg</span><strong>{plan ? `${format(plan.pathAreaM2)} m²` : "–"}</strong></div><div><span>Flexible Restfläche</span><strong>{plan ? `${format(plan.flexibleFloorAreaM2)} m²` : "–"}</strong></div></div>
       <div className="live-estimate"><span>Breitenraster</span><strong>{plan ? `${format(plan.requiredLayoutWidthCm)} von ${format(input.widthM * 100)} cm` : "passt noch nicht"}</strong><small>{plan ? `${format(plan.remainingWidthCm)} cm bleiben für Profile, Abstand oder zusätzliche Stellfläche.` : "Beet- oder Wegbreite verkleinern."}</small></div>
     </div>}
 
     {step === 3 && <div className="form-step">
       <fieldset className="choice-group"><legend>Verglasung noch als Planungskontext</legend><div className="radio-grid radio-grid--four"><Choice name="glazing" label="Glas" detail="Gewicht und Bruchschutz" checked={input.glazing === "glass"} onChange={() => update("glazing", "glass")} /><Choice name="glazing" label="Hohlkammerplatten" detail="Systemstärke prüfen" checked={input.glazing === "polycarbonate"} onChange={() => update("glazing", "polycarbonate")} /><Choice name="glazing" label="Folie" detail="Befestigung und Alterung" checked={input.glazing === "foil"} onChange={() => update("glazing", "foil")} /><Choice name="glazing" label="Noch offen" detail="keine Auswahl getroffen" checked={input.glazing === "undecided"} onChange={() => update("glazing", "undecided")} /></div></fieldset>
-      <div className="field-grid field-grid--two"><NumberField id="base-bar-length" label="Lieferlänge eines Basisprofils" value={input.baseBarLengthM} unit="m" min={1} max={6} step="0.1" onChange={(value) => update("baseBarLengthM", value)} /><NumberField id="roof-vents" label="Geplante Dachfenster" value={input.roofVentCount} unit="Stk." min={0} max={20} step="1" onChange={(value) => update("roofVentCount", value)} /></div>
+      <div className="field-grid field-grid--two"><NumberField id="base-bar-length" label="Lieferlänge eines Basisprofils" value={input.baseBarLengthM} unit="m" min={1} max={6} step="0.1" error={fieldErrors.baseBarLengthM} onChange={(value) => update("baseBarLengthM", value)} /><NumberField id="roof-vents" label="Geplante Dachfenster" value={input.roofVentCount} unit="Stk." min={0} max={20} integer error={fieldErrors.roofVentCount} onChange={(value) => update("roofVentCount", value)} /></div>
       <div className="check-card-grid check-card-grid--two"><Check label="Automatische Fensteröffner" detail="nur für vorhandene passende Fenster" checked={input.automaticOpeners} onChange={(value) => update("automaticOpeners", value)} /><Check label="Gegenüberliegende Öffnung" detail="Tür, Seiten- oder weiteres Lüftungsfenster" checked={input.crossVentilation} onChange={(value) => update("crossVentilation", value)} /><Check label="Wasser am Standort" detail="Anschluss oder vorbereiteter Speicher" checked={input.waterAtSite} onChange={(value) => update("waterAtSite", value)} /><Check label="Elektrik vorgesehen" detail="feuchte Umgebung fachgerecht planen" checked={input.electricityPlanned} onChange={(value) => update("electricityPlanned", value)} /></div>
       <div className="live-estimate"><span>Basis- und Regenwasserrahmen</span><strong>{plan ? `${plan.baseBarCount} Basisstäbe · ${plan.theoreticalRainwaterPer10MmL} l` : "–"}</strong><small>Basis mit 5 % Längenreserve; Regenwasser theoretisch je 10 mm Niederschlag.</small></div>
     </div>}
@@ -96,14 +98,9 @@ export function GreenhousePlanner() {
       <PrintResultAction />
     </div>}
 
-    {error && <p className="field-error calculator-error" role="alert">{error}</p>}
-    <div className="calculator-actions">{step > 1 && <button className="button button--back" type="button" onClick={() => { setError(""); setStep((current) => Math.max(1, current - 1)); }}>← Zurück</button>}{step < 4 && <button className="button button--primary" type="button" onClick={next}>{step === 3 ? "Planungsrahmen berechnen" : "Weiter"} →</button>}{step === 4 && <button className="button button--back" type="button" onClick={() => setStep(1)}>Eingaben ändern</button>}</div>
+    {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}
+    <div className="calculator-actions">{step > 1 && <button className="button button--back" type="button" onClick={() => { resetValidation(); goToStep(Math.max(1, step - 1)); }}>← Zurück</button>}{step < 4 && <button className="button button--primary" type="button" onClick={next}>{step === 3 ? "Planungsrahmen berechnen" : "Weiter"} <span aria-hidden="true">→</span></button>}{step === 4 && <button className="button button--back" type="button" onClick={() => goToStep(1)}>Eingaben ändern</button>}</div>
   </CalculatorShell>;
-}
-
-function NumberField({ id, label, value, unit, min, max, step, onChange }: { id: string; label: string; value: number; unit: string; min: number; max: number; step?: string; onChange: (value: number) => void }) {
-  const invalid = !Number.isFinite(value) || value < min || value > max;
-  return <div className="field"><label htmlFor={id}>{label}</label><div className="input-with-unit"><input id={id} type="number" value={Number.isFinite(value) ? value : ""} min={min} max={max} step={step} aria-invalid={invalid} aria-describedby={invalid ? `${id}-error` : undefined} onChange={(event) => onChange(event.target.valueAsNumber)} /><span>{unit}</span></div>{invalid && <small className="field-error" id={`${id}-error`}>Bitte {min} bis {max} {unit} eingeben.</small>}</div>;
 }
 
 function Choice({ name, label, detail, checked, onChange }: { name: string; label: string; detail: string; checked: boolean; onChange: () => void }) {

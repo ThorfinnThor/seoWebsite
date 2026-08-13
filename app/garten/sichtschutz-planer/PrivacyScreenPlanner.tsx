@@ -2,6 +2,9 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { PlannerNumberField as NumberField } from "@/components/calculator/PlannerNumberField";
+import { usePlannerValidation } from "@/components/calculator/usePlannerValidation";
+import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculatePrivacyScreenPlan } from "@/lib/privacy-screen/rules";
@@ -30,12 +33,14 @@ const parseInput = (value: unknown) => {
   const result = PrivacyScreenInputSchema.safeParse(value);
   return result.success ? result.data : null;
 };
+const FIELD_IDS: Partial<Record<string, string>> = { totalLengthM: "screen-length", fenceHeightCm: "screen-height", systemFieldWidthCm: "field-width", gateCount: "gate-count", gateModuleWidthCm: "gate-width" };
+const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["totalLengthM", "fenceHeightCm"], 2: ["systemFieldWidthCm", "gateCount", "gateModuleWidthCm"], 3: [] };
 
 export function PrivacyScreenPlanner() {
   const [step, setStep] = useState(1);
+  const goToStep = usePlannerStepTransition(setStep);
   const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:privacy-screen:v1", INITIAL, parseInput);
-  const [error, setError] = useState("");
-  const parsed = PrivacyScreenInputSchema.safeParse(input);
+  const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: PrivacyScreenInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculatePrivacyScreenPlan(parsed.data) : null;
 
   useEffect(() => {
@@ -44,33 +49,30 @@ export function PrivacyScreenPlanner() {
 
   function update<K extends keyof PrivacyScreenInput>(key: K, value: PrivacyScreenInput[K]) {
     setInput((current) => ({ ...current, [key]: value }));
-    setError("");
+    clearFieldError(String(key));
   }
 
   function next() {
-    if (!parsed.success) {
-      setError("Bitte prüfe die Eingaben. Die Tor-Module müssen zusammen kürzer als die gesamte Strecke bleiben.");
-      return;
-    }
-    setStep((current) => Math.min(4, current + 1));
+    if (!validate()) return;
+    goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Sichtschutz- und Zaunfeld-Planer" onReset={() => { resetInput(); setStep(1); setError(""); }}>
+  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Sichtschutz- und Zaunfeld-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two">
-        <NumberField id="screen-length" label="Länge der geraden Strecke" value={input.totalLengthM} unit="m" min={1} max={100} step="0.1" onChange={(value) => update("totalLengthM", value)} />
-        <NumberField id="screen-height" label="Gewünschte Sichtschutzhöhe" value={input.fenceHeightCm} unit="cm" min={60} max={250} onChange={(value) => update("fenceHeightCm", value)} />
+        <NumberField id="screen-length" label="Länge der geraden Strecke" value={input.totalLengthM} unit="m" min={1} max={100} step="0.1" error={fieldErrors.totalLengthM} onChange={(value) => update("totalLengthM", value)} />
+        <NumberField id="screen-height" label="Gewünschte Sichtschutzhöhe" value={input.fenceHeightCm} unit="cm" min={60} max={250} error={fieldErrors.fenceHeightCm} onChange={(value) => update("fenceHeightCm", value)} />
       </div>
-      <div className="info-box"><span>i</span><p>Der Planer rechnet eine einzelne gerade Strecke. Ecken, Versprünge und getrennte Abschnitte bitte jeweils separat berechnen.</p></div>
+      <div className="info-box"><span aria-hidden="true">i</span><p>Der Planer rechnet eine einzelne gerade Strecke. Ecken, Versprünge und getrennte Abschnitte bitte jeweils separat berechnen.</p></div>
       <div className="live-estimate"><span>Zu planende Strecke</span><strong>{format(input.totalLengthM)} m</strong><small>bei {format(input.fenceHeightCm)} cm gewünschter Höhe</small></div>
     </div>}
 
     {step === 2 && <div className="form-step">
-      <NumberField id="field-width" label="Montage- oder Achsmaß eines Standardfelds" value={input.systemFieldWidthCm} unit="cm" min={50} max={300} step="0.1" onChange={(value) => update("systemFieldWidthCm", value)} />
-      <div className="info-box"><span>!</span><p>Übernimm das Systemmaß aus der Montageanleitung: von Pfostenachse zu Pfostenachse oder das ausdrücklich genannte Einbaumaß. Die reine Elementbreite reicht häufig nicht.</p></div>
+      <NumberField id="field-width" label="Montage- oder Achsmaß eines Standardfelds" value={input.systemFieldWidthCm} unit="cm" min={50} max={300} step="0.1" error={fieldErrors.systemFieldWidthCm} onChange={(value) => update("systemFieldWidthCm", value)} />
+      <div className="info-box"><span aria-hidden="true">!</span><p>Übernimm das Systemmaß aus der Montageanleitung: von Pfostenachse zu Pfostenachse oder das ausdrücklich genannte Einbaumaß. Die reine Elementbreite reicht häufig nicht.</p></div>
       <div className="field-grid field-grid--two">
-        <NumberField id="gate-count" label="Anzahl der Tor-Module" value={input.gateCount} unit="Stk." min={0} max={3} step="1" onChange={(value) => update("gateCount", value)} />
-        <NumberField id="gate-width" label="Systemmaß je Tor-Modul" value={input.gateModuleWidthCm} unit="cm" min={70} max={250} step="0.1" onChange={(value) => update("gateModuleWidthCm", value)} />
+        <NumberField id="gate-count" label="Anzahl der Tor-Module" value={input.gateCount} unit="Stk." min={0} max={3} integer error={fieldErrors.gateCount} onChange={(value) => update("gateCount", value)} />
+        <NumberField id="gate-width" label="Systemmaß je Tor-Modul" value={input.gateModuleWidthCm} unit="cm" min={70} max={250} step="0.1" error={fieldErrors.gateModuleWidthCm} onChange={(value) => update("gateModuleWidthCm", value)} />
       </div>
       <div className="requirement-summary requirement-summary--three"><div><span>Standardfelder</span><strong>{plan?.panelCount ?? "–"}</strong></div><div><span>Tor-Module</span><strong>{input.gateCount}</strong></div><div><span>Pfosten rechnerisch</span><strong>{plan?.postCount ?? "–"}</strong></div></div>
     </div>}
@@ -100,14 +102,9 @@ export function PrivacyScreenPlanner() {
       <PrintResultAction />
     </div>}
 
-    {error && <p className="field-error calculator-error" role="alert">{error}</p>}
-    <div className="calculator-actions">{step > 1 && <button className="button button--back" type="button" onClick={() => { setError(""); setStep((current) => Math.max(1, current - 1)); }}>← Zurück</button>}{step < 4 && <button className="button button--primary" type="button" onClick={next}>{step === 3 ? "Mengenplan berechnen" : "Weiter"} →</button>}{step === 4 && <button className="button button--back" type="button" onClick={() => setStep(1)}>Eingaben ändern</button>}</div>
+    {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}
+    <div className="calculator-actions">{step > 1 && <button className="button button--back" type="button" onClick={() => { resetValidation(); goToStep(Math.max(1, step - 1)); }}>← Zurück</button>}{step < 4 && <button className="button button--primary" type="button" onClick={next}>{step === 3 ? "Mengenplan berechnen" : "Weiter"} <span aria-hidden="true">→</span></button>}{step === 4 && <button className="button button--back" type="button" onClick={() => goToStep(1)}>Eingaben ändern</button>}</div>
   </CalculatorShell>;
-}
-
-function NumberField({ id, label, value, unit, min, max, step, onChange }: { id: string; label: string; value: number; unit: string; min: number; max: number; step?: string; onChange: (value: number) => void }) {
-  const invalid = !Number.isFinite(value) || value < min || value > max;
-  return <div className="field"><label htmlFor={id}>{label}</label><div className="input-with-unit"><input id={id} type="number" value={Number.isFinite(value) ? value : ""} min={min} max={max} step={step} aria-invalid={invalid} aria-describedby={invalid ? `${id}-error` : undefined} onChange={(event) => onChange(event.target.valueAsNumber)} /><span>{unit}</span></div>{invalid && <small className="field-error" id={`${id}-error`}>Bitte {min} bis {max} {unit} eingeben.</small>}</div>;
 }
 
 function Choice({ name, label, detail, checked, onChange }: { name: string; label: string; detail: string; checked: boolean; onChange: () => void }) {

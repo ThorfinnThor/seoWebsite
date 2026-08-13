@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 import { AffiliateLink } from "@/components/affiliate/AffiliateLink";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { PriceDisplay } from "@/components/product/PriceDisplay";
@@ -13,7 +14,7 @@ import { loadDehumidifierCatalog } from "@/lib/catalog/load-client-catalog";
 import { recommendDehumidifiers } from "@/lib/dehumidifier/recommend";
 import { calculateDehumidifierRequirements } from "@/lib/dehumidifier/rules";
 import { DehumidifierInputSchema, type DehumidifierCatalog, type DehumidifierInput } from "@/lib/dehumidifier/types";
-import { focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
+import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
 
 const INITIAL: DehumidifierInput = { roomType: "basement", areaM2: 25, ceilingHeightM: 2.3, approximateTemperatureC: 14, humiditySeverity: "moderate", laundryDrying: false, continuousDrainPossible: true, noisePriority: "medium", budgetMaxEur: 300 };
 const ROOMS = [["basement", "Keller"], ["living", "Wohnraum"], ["bedroom", "Schlafzimmer"], ["bathroom", "Bad"], ["laundry", "Waschraum"], ["garage", "Garage"], ["other", "Anderer Raum"]] as const;
@@ -23,6 +24,7 @@ const parseDehumidifierInput = (value: unknown) => { const result = Dehumidifier
 
 export function DehumidifierPlanner() {
   const [step, setStep] = useState(1);
+  const goToStep = usePlannerStepTransition(setStep);
   const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:dehumidifier:v1", INITIAL, parseDehumidifierInput);
   const [catalog, setCatalog] = useState<DehumidifierCatalog | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
@@ -53,13 +55,15 @@ export function DehumidifierPlanner() {
     const nextErrors = issuesToFieldErrors(parsed.error);
     setFieldErrors(nextErrors);
     setFormError("Bitte prüfe die markierten Eingaben, bevor du fortfährst.");
-    focusFirstInvalidField(nextErrors, FIELD_IDS, [...STEP_FIELDS[step], ...Object.keys(FIELD_IDS)]);
+    const { fieldOrder, invalidStep } = findInvalidPlannerStep(nextErrors, FIELD_IDS, STEP_FIELDS, step);
+    if (invalidStep && invalidStep !== step) setStep(invalidStep);
+    focusFirstInvalidField(nextErrors, FIELD_IDS, fieldOrder);
     return null;
   }
 
   function next() {
     if (!parseCurrentInput()) return;
-    setStep((current) => Math.min(3, current + 1));
+    goToStep(Math.min(3, step + 1));
   }
 
   async function showResults() {
@@ -122,10 +126,10 @@ export function DehumidifierPlanner() {
       <PrintResultAction />
     </div>}
     <div className="calculator-actions">
-      {step > 1 && <button type="button" className="button button--back" onClick={() => setStep((current) => Math.max(1, current - 1))}>← Zurück</button>}
+      {step > 1 && <button type="button" className="button button--back" onClick={() => goToStep(Math.max(1, step - 1))}>← Zurück</button>}
       {step < 3 && <button type="button" className="button button--primary" onClick={next}>Weiter <span aria-hidden="true">→</span></button>}
       {step === 3 && <button type="button" className="button button--primary" disabled={status === "loading"} onClick={showResults}>Auswahlrahmen berechnen <span aria-hidden="true">→</span></button>}
-      {step === 4 && <button type="button" className="button button--back" onClick={() => setStep(1)}>Eingaben ändern</button>}
+      {step === 4 && <button type="button" className="button button--back" onClick={() => goToStep(1)}>Eingaben ändern</button>}
     </div>
   </CalculatorShell>;
 }
