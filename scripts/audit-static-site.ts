@@ -29,6 +29,10 @@ function pageFileForHref(href: string) {
   return path.join(OUT_DIR, normalized.replace(/^\//, ""), "index.html");
 }
 
+function staticFileForHref(href: string) {
+  return path.join(OUT_DIR, href.replace(/^\//, ""));
+}
+
 const files = await walk(OUT_DIR);
 const pageFiles = files.filter((file) => file.endsWith("index.html") && !file.includes(`${path.sep}_next${path.sep}`));
 const fileSet = new Set(files.map((file) => path.resolve(file)));
@@ -65,7 +69,7 @@ for (const page of pages) {
   else if (!page.noindex && page.canonical !== expectedUrl) errors.push(`${page.route}: Canonical ${page.canonical} statt ${expectedUrl}`);
   if (!page.openGraphTitle) errors.push(`${page.route}: og:title fehlt`);
   if (!page.openGraphDescription && !page.noindex) errors.push(`${page.route}: og:description fehlt`);
-  const expectedSocialTitle = page.title.replace(/\s+\|\s+MachPlan$/, "");
+  const expectedSocialTitle = page.title.replace(/\s+\|\s+PassendPlanen$/, "");
   if (!page.noindex && page.openGraphTitle !== expectedSocialTitle) errors.push(`${page.route}: og:title weicht vom Seitentitel ab`);
   if (!page.noindex && page.openGraphDescription !== page.description) errors.push(`${page.route}: og:description weicht von der Meta-Description ab`);
   if (!page.noindex && !page.openGraphUrl) errors.push(`${page.route}: og:url fehlt`);
@@ -128,12 +132,14 @@ for (const page of indexablePages) {
 }
 
 const ignoredPrefixes = ["/_next/", "/data/"];
-const ignoredFiles = new Set(["/icon.svg", "/manifest.webmanifest", "/robots.txt", "/sitemap.xml"]);
+const ignoredFiles = new Set(["/manifest.webmanifest", "/robots.txt", "/sitemap.xml"]);
 for (const page of pages) {
   const hrefs = [...page.html.matchAll(/href="(\/[^"#?]*)/g)].map((match) => match[1]);
   for (const href of hrefs) {
     if (ignoredPrefixes.some((prefix) => href.startsWith(prefix)) || ignoredFiles.has(href)) continue;
-    if (!fileSet.has(path.resolve(pageFileForHref(href)))) errors.push(`${page.route}: interner Link ohne statische Seite ${href}`);
+    const hasStaticPage = fileSet.has(path.resolve(pageFileForHref(href)));
+    const hasStaticFile = fileSet.has(path.resolve(staticFileForHref(href)));
+    if (!hasStaticPage && !hasStaticFile) errors.push(`${page.route}: interner Link ohne statische Seite oder Datei ${href}`);
   }
 }
 
@@ -154,7 +160,7 @@ if (!robotsTxt.includes("User-Agent: *") || !robotsTxt.includes("Allow: /")) err
 if (!robotsTxt.includes("Disallow: /data/")) errors.push("robots.txt: Produktdaten-Verzeichnis ist nicht ausgeschlossen");
 
 const llmsTxt = await readFile(path.join(OUT_DIR, "llms.txt"), "utf8");
-for (const requiredSection of ["# MachPlan", "## Wichtigste Einstiege", "## Rechner", "## Nutzungshinweise"]) {
+for (const requiredSection of ["# PassendPlanen", "## Wichtigste Einstiege", "## Rechner", "## Nutzungshinweise"]) {
   if (!llmsTxt.includes(requiredSection)) errors.push(`llms.txt: Abschnitt fehlt: ${requiredSection}`);
 }
 for (const planner of ["Gartenhaus-Planer", "Bewässerungsplaner", "Terrassendielen-Rechner", "Sichtschutz-Planer", "Gewächshaus-Planer", "Mähroboter-Flächencheck", "Carport-Planer", "Bodenbelag-Rechner", "Trockenbau-Rechner", "Luftentfeuchter-Rechner"]) {

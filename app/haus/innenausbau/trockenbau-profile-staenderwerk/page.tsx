@@ -17,7 +17,7 @@ export default function Page() {
     plannerHref="/haus/innenausbau/trockenbau-rechner/"
     plannerLabel="Grundraster berechnen"
     takeaway="Nutze die berechnete Ständerzahl nur als ungestörtes Grundraster. Ergänze Rand-, Anschluss-, Tür- und Lastprofile anhand des vollständigen Systemplans."
-    limitation="MachPlan wählt keinen Profiltyp und bestätigt weder Tragfähigkeit noch zulässige Wandhöhe. Profilbreite, Blechdicke, Achsabstand und Befestigung müssen zum geprüften Aufbau passen."
+    limitation="PassendPlanen wählt keinen Profiltyp und bestätigt weder Tragfähigkeit noch zulässige Wandhöhe. Profilbreite, Blechdicke, Achsabstand und Befestigung müssen zum geprüften Aufbau passen."
     sections={[
       { title: "Achsabstand folgt dem Aufbau", paragraphs: ["Das Raster muss zu Plattenformat, Plattenlage, Wandhöhe und vorgesehenem System passen. Ein kleinerer Abstand ist nicht automatisch ein Ersatz für falsche oder ungeeignete Profile.", "Der Rechner teilt die Wandlänge durch den ausgewählten Abstand und ergänzt einen Endständer. Damit entsteht nur eine Grundzahl für eine durchgehende Wand ohne Störungen."] },
       { title: "Randprofile als Lieferstäbe", paragraphs: ["Boden- und Deckenanschluss ergeben zusammen die doppelte Wandlänge. Mit einer kleinen Längenreserve kann diese Summe durch die Lieferlänge geteilt und auf ganze Stäbe aufgerundet werden.", "Dichtungsband, Befestiger, Unterbrechungen, Bodenfugen und seitliche Anschlüsse bleiben separat. Auch Zuschnittreste sind nur nutzbar, wenn Mindestlänge und Anschluss passen."] },

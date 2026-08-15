@@ -4,7 +4,7 @@ import { LEGAL, legalContactComplete } from "@/lib/legal";
 
 export const metadata = createPageMetadata({
   title: "Impressum",
-  description: "Anbieterkennzeichnung und Kontaktangaben von MachPlan.",
+  description: "Anbieterkennzeichnung und Kontaktangaben von PassendPlanen.",
   path: "/impressum/",
   robots: legalContactComplete ? undefined : { index: false, follow: true },
 });
@@ -31,7 +31,7 @@ export default function ImpressumPage() {
       </section>
       <section>
         <h2>Hinweis zum Angebot</h2>
-        <p>MachPlan stellt redaktionelle Informationen und deterministische Planungshilfen bereit. Ergebnisse ersetzen keine amtliche, technische, medizinische oder sonstige fachliche Prüfung.</p>
+        <p>PassendPlanen stellt redaktionelle Informationen und deterministische Planungshilfen bereit. Ergebnisse ersetzen keine amtliche, technische, medizinische oder sonstige fachliche Prüfung.</p>
       </section>
     </LegalPage>
   );

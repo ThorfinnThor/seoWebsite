@@ -17,7 +17,7 @@ export default function Page() {
     plannerHref="/garten/gewaechshaus-planer/"
     plannerLabel="Ausstattung vormerken"
     takeaway="Plane passende Dachöffnungen und eine gegenüberliegende Zuluftmöglichkeit direkt mit dem Modell. Automatische Öffner ergänzen die Kontrolle, ersetzen aber keine Prüfung und Wartung."
-    limitation="MachPlan berechnet keine erforderliche Lüftungsfläche und kein Pflanzenklima. Dimensionierung, Sturmstellung, Temperaturgrenzen und Kompatibilität richten sich nach System, Standort und Nutzung."
+    limitation="PassendPlanen berechnet keine erforderliche Lüftungsfläche und kein Pflanzenklima. Dimensionierung, Sturmstellung, Temperaturgrenzen und Kompatibilität richten sich nach System, Standort und Nutzung."
     sections={[
       { title: "Warme Luft braucht einen Weg nach oben", paragraphs: ["Dachfenster können erwärmte Luft im oberen Bereich abführen. Eine Tür allein erzeugt je nach Wind und Geometrie nicht zuverlässig einen gleichmäßigen Luftwechsel.", "Eine tiefer liegende, möglichst gegenüberliegende Öffnung unterstützt die Querlüftung. Hohe Pflanzen, Regale oder Folien dürfen den Luftweg nicht unbeabsichtigt blockieren."] },
       { title: "Automatik ist Unterstützung, keine Garantie", paragraphs: ["Temperaturgesteuerte Öffner können Fenster ohne Strom bewegen, sofern Hubkraft, Anschluss und Öffnungsweg zum konkreten Fenster passen. Montageposition und Temperaturbereich sind herstellerspezifisch.", "Kontrolliere Mechanik, Befestigung und Dichtschluss regelmäßig. Bei Sturm, Frost oder saisonaler Stilllegung können andere Vorgaben gelten als im normalen Sommerbetrieb."] },

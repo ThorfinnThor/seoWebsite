@@ -1,4 +1,4 @@
-# Awin onboarding for MachPlan
+# Awin onboarding for PassendPlanen
 
 Checked against Awin's official German signup and Partner Success documentation on 2026-08-11.
 
@@ -7,8 +7,8 @@ Checked against Awin's official German signup and Partner Success documentation 
 The technical preview can run without affiliate data. For the strongest compliance and advertiser application, finish these public details first:
 
 1. Configure a reachable `NEXT_PUBLIC_LEGAL_EMAIL` in Vercel so imprint and privacy notice are complete and indexable.
-2. Replace the temporary Vercel address once the final name and domain are chosen, or update the promotional site in Awin later.
-3. Keep the affiliate disclosure visible. MachPlan already has a dedicated transparency page and marks affiliate links in the product components.
+2. Use the canonical production domain `https://www.passendplanen.de/` as the promotional site.
+3. Keep the affiliate disclosure visible. PassendPlanen already has a dedicated transparency page and marks affiliate links in the product components.
 
 Prepare the following private information without committing it to GitHub:
 
@@ -24,7 +24,7 @@ Open the official [German Awin publisher signup](https://ui.awin.com/publisher-s
 
 ### 1. Account creation
 
-- **Publisher name:** `MachPlan` while this is the public working name. If a registered company operates the site, use its legal company name instead.
+- **Publisher name:** `PassendPlanen`. If a registered company operates the site, use its legal company name instead.
 - **Tax residence:** `Germany` / `Deutschland`.
 - **First name:** `Schayan`.
 - **Last name:** `Yousefian`.
@@ -33,20 +33,20 @@ Open the official [German Awin publisher signup](https://ui.awin.com/publisher-s
 
 ### 2. Publisher segment
 
-Choose the closest content/editorial website category. MachPlan is a content and decision-support publisher with calculators; it is not a cashback, voucher, influencer-only or paid-search business.
+Choose the closest content/editorial website category. PassendPlanen is a content and decision-support publisher with calculators; it is not a cashback, voucher, influencer-only or paid-search business.
 
 ### 3. Promotional site
 
-Use the current public address until the final domain exists:
+Use the production address:
 
 ```text
-https://seo-website-woad.vercel.app/
+https://www.passendplanen.de/
 ```
 
 Suggested German description:
 
 ```text
-MachPlan ist eine deutschsprachige Content- und Rechner-Website für Haus- und Gartenprojekte. Besucher berechnen ihren Bedarf mit transparenten Planungsregeln und erhalten anschließend nur fachlich passende, manuell geprüfte Produktempfehlungen. Affiliate-Provisionen beeinflussen das Ranking nicht; Werbung und Affiliate-Links werden klar gekennzeichnet.
+PassendPlanen ist eine deutschsprachige Content- und Rechner-Website für Haus- und Gartenprojekte. Besucher berechnen ihren Bedarf mit transparenten Planungsregeln und erhalten anschließend nur fachlich passende, manuell geprüfte Produktempfehlungen. Affiliate-Provisionen beeinflussen das Ranking nicht; Werbung und Affiliate-Links werden klar gekennzeichnet.
 ```
 
 Suggested promotion description if a separate short field is shown:

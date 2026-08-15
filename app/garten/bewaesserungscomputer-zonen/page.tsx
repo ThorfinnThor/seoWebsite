@@ -21,7 +21,7 @@ export default function Page() {
     sections={[
       {title:"Was eine Zone bedeutet",paragraphs:["Eine Zone fasst Verbraucher zusammen, die gleichzeitig mit ähnlicher Laufzeit betrieben werden können. Unterschiedliche Pflanzen oder Ausbringungsarten sind ein starkes Signal für getrennte Zonen.","Auch eine große Rasenfläche kann mehrere Zonen benötigen, wenn die Anschlussleistung nicht für alle Regner gleichzeitig reicht."]},
       {title:"Steuerung, Ventile und Stromversorgung",paragraphs:["Bewässerungscomputer am Wasserhahn und fest installierte Mehrkanalsteuerungen sind unterschiedliche Systemansätze. Ventile, Spannung, Anschlüsse und Gehäuseschutz müssen zusammenpassen.","Elektrische Installation, Außenbetrieb und Frostschutz sind nach Herstellerangaben und gegebenenfalls fachgerecht auszuführen."]},
-      {title:"Smart und Sensor nur bei echter Kompatibilität",paragraphs:["App-Steuerung, Wetterdaten oder Bodenfeuchtesensoren sind nur hilfreich, wenn sie mit Controller und Ventilkonzept kompatibel sind. Ein gemeinsames Markenlogo allein bestätigt nicht jede Kombination.","MachPlan wird Produktsets später nur über bestätigte System-IDs kombinieren. Bis dahin bleibt die Ausgabe auf Komponentenkategorien beschränkt."]},
+      {title:"Smart und Sensor nur bei echter Kompatibilität",paragraphs:["App-Steuerung, Wetterdaten oder Bodenfeuchtesensoren sind nur hilfreich, wenn sie mit Controller und Ventilkonzept kompatibel sind. Ein gemeinsames Markenlogo allein bestätigt nicht jede Kombination.","PassendPlanen wird Produktsets später nur über bestätigte System-IDs kombinieren. Bis dahin bleibt die Ausgabe auf Komponentenkategorien beschränkt."]},
     ]}
   />;
 }

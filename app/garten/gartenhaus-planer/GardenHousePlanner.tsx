@@ -141,7 +141,7 @@ export function GardenHousePlanner() {
           {formError && <p className="field-error" role="alert">{formError}</p>}
           {validatedInput && requirements && <ResultSummary input={validatedInput} requirements={requirements} />}
           {requirements && !requirements.hasSufficientArea && <div className="warning-panel" role="alert"><h3>Die verfügbare Stellfläche reicht noch nicht aus.</h3><p>Für deine Nutzung werden mindestens {requirements.recommendedAreaM2.toLocaleString("de-DE")} m² empfohlen; verfügbar sind {requirements.availableAreaM2.toLocaleString("de-DE", { maximumFractionDigits: 2 })} m². Reduziere die Nutzung oder prüfe eine größere Stellfläche, bevor du Produkte vergleichst.</p></div>}
-          <InfoBox>Bei Angeboten mit unbekannten Versandkosten kann MachPlan die Budgeteinhaltung nicht sicher bestätigen. Sie werden klar als „zzgl. Versand“ gekennzeichnet.</InfoBox>
+          <InfoBox>Bei Angeboten mit unbekannten Versandkosten kann PassendPlanen die Budgeteinhaltung nicht sicher bestätigen. Sie werden klar als „zzgl. Versand“ gekennzeichnet.</InfoBox>
         </div>}
         {step === 5 && <div className="results" aria-live="polite">
           {validatedInput && requirements && <ResultSummary input={validatedInput} requirements={requirements} />}

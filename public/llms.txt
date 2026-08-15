@@ -1,30 +1,30 @@
-# MachPlan
+# PassendPlanen
 
-> MachPlan ist eine deutschsprachige Plattform mit kostenlosen, deterministischen Rechnern und belegten Ratgebern für Haus- und Gartenprojekte. Ergebnisse werden aus sichtbaren Nutzereingaben und veröffentlichten Rechenregeln abgeleitet; Affiliate-Provisionen beeinflussen die Berechnung nicht.
+> PassendPlanen ist eine deutschsprachige Plattform mit kostenlosen, deterministischen Rechnern und belegten Ratgebern für Haus- und Gartenprojekte. Ergebnisse werden aus sichtbaren Nutzereingaben und veröffentlichten Rechenregeln abgeleitet; Affiliate-Provisionen beeinflussen die Berechnung nicht.
 
 ## Wichtigste Einstiege
 
-- [Alle Rechner](https://seo-website-woad.vercel.app/rechner/): Zehn Rechner für Bedarf, Maße und Materialrahmen.
-- [Methodik](https://seo-website-woad.vercel.app/methodik/): Rechenprinzipien, Grenzen und Umgang mit Quellen.
-- [Über MachPlan](https://seo-website-woad.vercel.app/ueber-machplan/): Autor, redaktioneller Anspruch und Projektstatus.
-- [Affiliate-Transparenz](https://seo-website-woad.vercel.app/affiliate-transparenz/): Trennung von Berechnung, Produktauswahl und Vergütung.
+- [Alle Rechner](https://www.passendplanen.de/rechner/): Zehn Rechner für Bedarf, Maße und Materialrahmen.
+- [Methodik](https://www.passendplanen.de/methodik/): Rechenprinzipien, Grenzen und Umgang mit Quellen.
+- [Über PassendPlanen](https://www.passendplanen.de/ueber-passendplanen/): Autor, redaktioneller Anspruch und Projektstatus.
+- [Affiliate-Transparenz](https://www.passendplanen.de/affiliate-transparenz/): Trennung von Berechnung, Produktauswahl und Vergütung.
 
 ## Rechner
 
-- [Gartenhaus-Planer](https://seo-website-woad.vercel.app/garten/gartenhaus-planer/): Platz, Nutzung, Zugang und Budget einordnen.
-- [Bewässerungsplaner](https://seo-website-woad.vercel.app/garten/bewaesserungs-planer/): Flächen, Tropfrohr und Komponentenstruktur planen.
-- [Terrassendielen-Rechner](https://seo-website-woad.vercel.app/garten/terrassen-dielen-rechner/): Dielen, Reserve und Unterkonstruktion berechnen.
-- [Sichtschutz-Planer](https://seo-website-woad.vercel.app/garten/sichtschutz-planer/): Felder, Pfosten und Tor-Module einordnen.
-- [Gewächshaus-Planer](https://seo-website-woad.vercel.app/garten/gewaechshaus-planer/): Beet-, Wege-, Basis- und Lüftungsrahmen planen.
-- [Mähroboter-Flächencheck](https://seo-website-woad.vercel.app/garten/maehroboter-rechner/): Nettofläche, Kapazitätsreserve und Geländefaktoren bestimmen.
-- [Carport-Planer](https://seo-website-woad.vercel.app/garten/carport-planer/): lichte Maße, Fläche und Dachentwässerung vorbereiten.
-- [Bodenbelag-Rechner](https://seo-website-woad.vercel.app/haus/boden/bodenbelag-rechner/): Pakete, Unterlage und Sockelleisten berechnen.
-- [Trockenbau-Rechner](https://seo-website-woad.vercel.app/haus/innenausbau/trockenbau-rechner/): Platten-, Profil- und Dämmrahmen berechnen.
-- [Luftentfeuchter-Rechner](https://seo-website-woad.vercel.app/haus/raumklima/luftentfeuchter-rechner/): Raumvolumen und Auswahlrahmen einordnen.
+- [Gartenhaus-Planer](https://www.passendplanen.de/garten/gartenhaus-planer/): Platz, Nutzung, Zugang und Budget einordnen.
+- [Bewässerungsplaner](https://www.passendplanen.de/garten/bewaesserungs-planer/): Flächen, Tropfrohr und Komponentenstruktur planen.
+- [Terrassendielen-Rechner](https://www.passendplanen.de/garten/terrassen-dielen-rechner/): Dielen, Reserve und Unterkonstruktion berechnen.
+- [Sichtschutz-Planer](https://www.passendplanen.de/garten/sichtschutz-planer/): Felder, Pfosten und Tor-Module einordnen.
+- [Gewächshaus-Planer](https://www.passendplanen.de/garten/gewaechshaus-planer/): Beet-, Wege-, Basis- und Lüftungsrahmen planen.
+- [Mähroboter-Flächencheck](https://www.passendplanen.de/garten/maehroboter-rechner/): Nettofläche, Kapazitätsreserve und Geländefaktoren bestimmen.
+- [Carport-Planer](https://www.passendplanen.de/garten/carport-planer/): lichte Maße, Fläche und Dachentwässerung vorbereiten.
+- [Bodenbelag-Rechner](https://www.passendplanen.de/haus/boden/bodenbelag-rechner/): Pakete, Unterlage und Sockelleisten berechnen.
+- [Trockenbau-Rechner](https://www.passendplanen.de/haus/innenausbau/trockenbau-rechner/): Platten-, Profil- und Dämmrahmen berechnen.
+- [Luftentfeuchter-Rechner](https://www.passendplanen.de/haus/raumklima/luftentfeuchter-rechner/): Raumvolumen und Auswahlrahmen einordnen.
 
 ## Nutzungshinweise
 
 - Ergebnisse sind Planungshilfen und ersetzen keine Statik, Genehmigungs-, Elektro-, Sanitär- oder Fachplanung.
 - Bei fachlichen Zahlen sind sichtbare Quellen, Rechenbeispiele und Grenzen auf der jeweiligen Ratgeberseite maßgeblich.
 - Produktkataloge werden erst nach Prüfung realer Händlerdaten veröffentlicht; leere Produktzustände sind beabsichtigt.
-- Der Name MachPlan und die aktuelle Vercel-Domain sind vorläufig.
+- Die Marke heißt PassendPlanen und ist unter `passendplanen.de` erreichbar.

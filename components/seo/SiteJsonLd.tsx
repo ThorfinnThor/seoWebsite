@@ -21,7 +21,7 @@ export function SiteJsonLd() {
             "@type": "Person",
             "@id": `${siteRoot}/#publisher`,
             name: "Schayan Yousefian",
-            url: absoluteUrl("/ueber-machplan/"),
+            url: absoluteUrl("/ueber-passendplanen/"),
           },
         ],
       }}

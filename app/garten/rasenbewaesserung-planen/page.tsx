@@ -17,7 +17,7 @@ export default function Page() {
     plannerHref="/garten/bewaesserungs-planer/"
     plannerLabel="Systemrahmen planen"
     takeaway="Zeichne die Fläche maßstäblich mit Kanten, Engstellen und Hindernissen. Miss Durchfluss und Fließdruck, bevor du Regnertypen oder Zonen festlegst."
-    limitation="Der MachPlan-Rechner liefert für Rasen bewusst keine exakte Regnerzahl oder Position. Dafür wären konkrete Düsenkennlinien, Geometrie, Druckverluste und eine vollständige Layoutplanung nötig."
+    limitation="Der PassendPlanen-Rechner liefert für Rasen bewusst keine exakte Regnerzahl oder Position. Dafür wären konkrete Düsenkennlinien, Geometrie, Druckverluste und eine vollständige Layoutplanung nötig."
     sections={[
       {title:"Geometrie vor Quadratmetern",paragraphs:["Rechteckige, schmale und verwinkelte Flächen benötigen unterschiedliche Wurfsektoren. Wege, Mauern, Bäume und Höhenunterschiede begrenzen sinnvolle Positionen.","Eine Skizze mit Maßen ist deshalb wertvoller als eine einzelne Flächenzahl. Markiere außerdem Bereiche, die nicht beregnet werden dürfen."]},
       {title:"Gleichmäßigkeit braucht Überlappung",paragraphs:["Die maximale Wurfweite eines Regners ist nicht gleichbedeutend mit gleichmäßiger Verteilung bis zum Rand. Fachgerechte Layouts berücksichtigen die Niederschlagsverteilung und abgestimmte Überlappung.","Wer nur Kreise ohne Düsendaten einzeichnet, riskiert trockene und überversorgte Stellen. Hersteller-Planungsdaten haben Vorrang."]},

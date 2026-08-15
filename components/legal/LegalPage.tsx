@@ -7,7 +7,7 @@ export function LegalPage({ title, intro, children, requiresContact = true }: { 
     <article className="legal-page">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: title }]} />
       <header>
-        <p className="eyebrow">MachPlan · Rechtliches</p>
+        <p className="eyebrow">PassendPlanen · Rechtliches</p>
         <h1>{title}</h1>
         <p>{intro}</p>
       </header>

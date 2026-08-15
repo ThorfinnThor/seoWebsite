@@ -22,7 +22,7 @@ const [nextConfig, gardenHouse, dehumidifier, irrigation] = await Promise.all([
   catalog("public/data/irrigation/catalog.json"),
 ]);
 
-const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://seo-website-woad.vercel.app").trim();
+const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.passendplanen.de").trim();
 const legalEmail = process.env.NEXT_PUBLIC_LEGAL_EMAIL?.trim();
 const emailReady = Boolean(legalEmail && !/^(you|test|example)@/i.test(legalEmail));
 const temporaryDomain = /vercel\.app|seo-website/i.test(siteUrl);
@@ -73,7 +73,7 @@ const checks: Check[] = [
 ];
 
 const symbols: Record<CheckStatus, string> = { ready: "✓", blocked: "✕", manual: "!" };
-console.log("\nMachPlan Launch-Readiness\n");
+console.log("\nPassendPlanen Launch-Readiness\n");
 for (const check of checks) console.log(`${symbols[check.status]} ${check.label}: ${check.detail}`);
 
 const technicalBlockers = checks.filter((check) => check.status === "blocked" && !["Öffentlicher Rechtskontakt", "Geprüfte Affiliate-Produkte"].includes(check.label));

@@ -4,7 +4,7 @@ import { LegalPage } from "@/components/legal/LegalPage";
 
 export const metadata = createPageMetadata({
   title: "Affiliate-Transparenz",
-  description: "So trennt MachPlan Bedarf, Bewertung und mögliche Affiliate-Vergütung.",
+  description: "So trennt PassendPlanen Bedarf, Bewertung und mögliche Affiliate-Vergütung.",
   path: "/affiliate-transparenz/",
 });
 
@@ -13,7 +13,7 @@ export default function AffiliateTransparenzPage() {
     <LegalPage title="Affiliate-Transparenz" intro="Wie Empfehlungen entstehen, wie Partnerlinks gekennzeichnet werden und was eine mögliche Provision nicht beeinflusst." requiresContact={false}>
       <section>
         <h2>Aktueller Stand</h2>
-        <p>Auf MachPlan sind noch keine Affiliate-Angebote aktiviert. Die Produktkataloge bleiben leer, bis Datenquellen, Händlerfreigaben und Kennzeichnung geprüft sind.</p>
+        <p>Auf PassendPlanen sind noch keine Affiliate-Angebote aktiviert. Die Produktkataloge bleiben leer, bis Datenquellen, Händlerfreigaben und Kennzeichnung geprüft sind.</p>
       </section>
       <section>
         <h2>Bedarf vor Provision</h2>
@@ -21,7 +21,7 @@ export default function AffiliateTransparenzPage() {
       </section>
       <section>
         <h2>So werden Partnerlinks erkennbar</h2>
-        <p>Sobald Partnerlinks freigeschaltet werden, stehen direkt am Vergleich ein Hinweis und an jedem ausgehenden Kauf-Link eine eindeutige Kennzeichnung. Bei einem Kauf nach dem Klick kann MachPlan eine Provision erhalten; für dich soll sich der Preis dadurch nicht erhöhen.</p>
+        <p>Sobald Partnerlinks freigeschaltet werden, stehen direkt am Vergleich ein Hinweis und an jedem ausgehenden Kauf-Link eine eindeutige Kennzeichnung. Bei einem Kauf nach dem Klick kann PassendPlanen eine Provision erhalten; für dich soll sich der Preis dadurch nicht erhöhen.</p>
       </section>
       <section>
         <h2>Datenqualität und Grenzen</h2>

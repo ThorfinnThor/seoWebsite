@@ -1,4 +1,4 @@
-# MachPlan – Implementation Plan
+# PassendPlanen – Implementation Plan
 
 **Status:** implementation-ready specification for Codex / coding agent  
 **Target:** Germany-first static affiliate decision-engine for Haus & Garten  
@@ -35,7 +35,7 @@ Treat this file as the source-of-truth implementation specification.
 
 ### Working project name
 
-Use **MachPlan** as a working name only. Do not assume a domain is available or a trademark has been cleared.
+Use **PassendPlanen** as the final public name and `passendplanen.de` as the production domain. Trademark and naming checks remain the operator's responsibility.
 
 ### Product promise
 
@@ -1605,7 +1605,7 @@ A route should exist because it solves a distinct intent.
 
 ## 18.1 Disclosure
 
-Clearly disclose that outbound merchant links can be affiliate links and that MachPlan may earn a commission without changing the user's price, where accurate under the relevant program.
+Clearly disclose that outbound merchant links can be affiliate links and that PassendPlanen may earn a commission without changing the user's price, where accurate under the relevant program.
 
 Place disclosure:
 
@@ -2840,7 +2840,7 @@ Key implementation assumptions:
 
 When choosing between two architectures, prefer the one that preserves this property:
 
-> **A user can load the page, complete the planner and get product recommendations even if MachPlan has zero application servers and zero database connections running.**
+> **A user can load the page, complete the planner and get product recommendations even if PassendPlanen has zero application servers and zero database connections running.**
 
 That is the defining constraint of V1.
 

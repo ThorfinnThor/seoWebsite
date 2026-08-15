@@ -17,7 +17,7 @@ export default function Page() {
     plannerHref="/garten/carport-planer/"
     plannerLabel="Platzrahmen berechnen"
     takeaway="Lege zuerst ein konkretes, für Standort und Lasten geeignetes Carportsystem fest. Übertrage dessen Pfosten- und Fundamentplan anschließend in ein genaues Grundstücksaufmaß."
-    limitation="MachPlan bestimmt weder Fundamentabmessungen noch Bewehrung, Beton, Pfostenträger oder Anker. Baugrund, Frost, Lasten und Systemvorgaben müssen fachlich und objektspezifisch geprüft werden."
+    limitation="PassendPlanen bestimmt weder Fundamentabmessungen noch Bewehrung, Beton, Pfostenträger oder Anker. Baugrund, Frost, Lasten und Systemvorgaben müssen fachlich und objektspezifisch geprüft werden."
     sections={[
       { title: "Lichter Raum und Pfostenachse trennen", paragraphs: ["Der Planer ermittelt den gewünschten freien Stellbereich. Pfosten liegen außerhalb oder teilweise neben diesem Bereich und vergrößern die notwendigen Außenmaße.", "Ihre Anzahl, Abstände und Querschnitte hängen vom Tragwerk ab. Ein Pfosten darf nicht allein deshalb versetzt werden, weil er beim Türöffnen stört." ] },
       { title: "Baugrund und Lastabtrag gehören zusammen", paragraphs: ["Tragfähigkeit, Frost, Grundwasser, Auffüllungen, Leitungen und Gelände beeinflussen die Gründung. Sichtbar feste Pflasterflächen sind nicht automatisch ein geeigneter Lastabtrag.", "Fundamentoberkanten müssen außerdem zu Pflaster, Gefälle, Entwässerung und Pfostenschutz passen. Bei geneigtem Gelände entsteht daraus ein eigener Höhenplan."], bullets: ["Leitungen und Entwässerung vor Aushub lokalisieren", "Achsmaße und Diagonalen kontrollieren", "Vorgesehene Anker und Randabstände einhalten"] },

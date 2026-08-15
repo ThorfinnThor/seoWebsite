@@ -31,7 +31,7 @@ export function createPageMetadata({
     title,
     description,
     alternates: { canonical },
-    authors: [{ name: "Schayan Yousefian", url: absoluteUrl("/ueber-machplan/") }],
+    authors: [{ name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }],
     ...(robots ? { robots } : {}),
     openGraph: {
       type: article ? "article" : "website",
@@ -43,7 +43,7 @@ export function createPageMetadata({
       ...(article
         ? {
             modifiedTime: CONTENT_UPDATED_AT,
-            authors: [absoluteUrl("/ueber-machplan/")],
+            authors: [absoluteUrl("/ueber-passendplanen/")],
           }
         : {}),
     },

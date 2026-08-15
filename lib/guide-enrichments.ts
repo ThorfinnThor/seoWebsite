@@ -134,7 +134,7 @@ export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
     sources: [source.modelBuildingCode, source.berlinBuildingCode, source.allotmentLaw],
     example: {
       title: "Zwei Fahrräder, Geräte und Rasenmäher",
-      intro: "Die MachPlan-Heuristik addiert Nutzungsflächen und rundet erst nach der Bewegungsreserve auf.",
+      intro: "Die PassendPlanen-Heuristik addiert Nutzungsflächen und rundet erst nach der Bewegungsreserve auf.",
       steps: [
         { label: "Grundbewegungsfläche", value: "0,8 m²" },
         { label: "2 Fahrräder", value: "1,3 m²" },
@@ -249,7 +249,7 @@ export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
         { label: "Auswahlwert", value: "275 × 1,30 = 357,5 m²" },
       ],
       result: "Auf die nächste 50-m²-Klasse gerundet: mindestens 400 m² Nennflächen-Rahmen.",
-      note: "Der Wert ist eine MachPlan-Auswahlheuristik und keine Laufzeit- oder Abdeckungsgarantie.",
+      note: "Der Wert ist eine PassendPlanen-Auswahlheuristik und keine Laufzeit- oder Abdeckungsgarantie.",
     },
   },
   "/garten/maehroboter-steigung-engstellen/": {

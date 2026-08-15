@@ -17,7 +17,7 @@ export default function Page() {
     plannerHref="/garten/gewaechshaus-planer/"
     plannerLabel="Basisumfang berechnen"
     takeaway="Nutze den berechneten Außenumfang nur als Mengenrahmen für kompatible Basisprofile. Fundamentart, Abmessung und Verankerung folgen Herstellerangaben, Boden und Standortlasten."
-    limitation="MachPlan bemisst weder Fundament noch Anker und prüft keine Wind-, Schnee- oder Traglast. Bei unklarem Boden, exponiertem Standort oder größeren Konstruktionen fachlich planen lassen."
+    limitation="PassendPlanen bemisst weder Fundament noch Anker und prüft keine Wind-, Schnee- oder Traglast. Bei unklarem Boden, exponiertem Standort oder größeren Konstruktionen fachlich planen lassen."
     sections={[
       { title: "Vier Aufgaben der Basis", paragraphs: ["Die Unterkante des Gewächshauses braucht eine waagerechte Geometrie, ausreichend tragfähigen Untergrund, Schutz vor dauerhaftem Wasser und eine sichere Verbindung gegen Verschieben oder Abheben.", "Ein passendes Basisprofil kann Montage und Ausrichtung erleichtern. Es ersetzt jedoch nicht automatisch die vom System geforderte Gründung."], bullets: ["Rechtwinkligkeit über beide Diagonalen kontrollieren", "Wasser vom Sockel wegführen", "Anker nur in freigegebenem Untergrund einsetzen"] },
       { title: "Fundamentart folgt dem System", paragraphs: ["Punkt-, Streifen- oder umlaufende Lösungen sowie Bodenanker können je nach Konstruktion und Untergrund infrage kommen. Welche Variante zulässig ist, steht in der Montage- und Fundamentanleitung des konkreten Modells.", "Lose Steine oder vorhandene Terrassenplatten sind nicht allein deshalb geeignet, weil sie eben aussehen. Tragfähigkeit, Frost, Setzung, Randabstände und Verankerung bleiben zu prüfen."] },

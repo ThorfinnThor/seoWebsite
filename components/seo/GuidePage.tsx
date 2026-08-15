@@ -73,7 +73,7 @@ export function GuidePage({
             "@type": "Person",
             "@id": `${siteRoot}/#publisher`,
             name: "Schayan Yousefian",
-            url: absoluteUrl("/ueber-machplan/"),
+            url: absoluteUrl("/ueber-passendplanen/"),
           },
           publisher: {
             "@type": "Person",
@@ -95,9 +95,9 @@ export function GuidePage({
           ]}
         />
         <header>
-          <p className="eyebrow">MachPlan Ratgeber</p>
+          <p className="eyebrow">PassendPlanen Ratgeber</p>
           <p className="guide-meta">
-            Von <Link href="/ueber-machplan/" rel="author">Schayan Yousefian</Link>
+            Von <Link href="/ueber-passendplanen/" rel="author">Schayan Yousefian</Link>
             {" · zuletzt geprüft "}
             <time dateTime={updatedAt}>{updated}</time>
           </p>
@@ -170,7 +170,7 @@ export function GuidePage({
             <div className="guide-method">
               <strong>Nachvollziehbarkeit</strong>
               <p>
-                Wie MachPlan rechnet, Annahmen kennzeichnet und Grenzen behandelt,
+                Wie PassendPlanen rechnet, Annahmen kennzeichnet und Grenzen behandelt,
                 erklären wir in der <Link href="/methodik/">Methodik</Link>.
               </p>
             </div>

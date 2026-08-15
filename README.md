@@ -1,4 +1,4 @@
-# MachPlan
+# PassendPlanen
 
 Germany-first static decision engine for house and garden projects. The current build contains planners for garden houses, greenhouses, carport space, robot-mower suitability, drywall quantities, dehumidifiers, irrigation, terrace materials, straight privacy-screen runs and floating floor-covering quantities plus supporting guides and transparency pages.
 
@@ -35,13 +35,13 @@ The exact signup, advertiser application and secure feed setup sequence is docum
 
 ## Deployment
 
-Connect the GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` at build time once the actual domain is known. No Awin secret is required in Vercel.
+Connect the GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` to the canonical production origin. No Awin secret is required in Vercel.
 
 Before public launch, set `NEXT_PUBLIC_LEGAL_EMAIL` to the reachable email address used in the imprint and privacy notice. Without it those two pages render a visible draft warning and `noindex` metadata.
 
 Current Vercel values:
 
 ```text
-NEXT_PUBLIC_SITE_URL=https://seo-website-woad.vercel.app
+NEXT_PUBLIC_SITE_URL=https://www.passendplanen.de
 NEXT_PUBLIC_LEGAL_EMAIL=
 ```

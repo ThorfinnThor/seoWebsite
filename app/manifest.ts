@@ -4,8 +4,8 @@ export const dynamic = "force-static";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "MachPlan – Haus und Garten planen",
-    short_name: "MachPlan",
+    name: "PassendPlanen – Haus und Garten planen",
+    short_name: "PassendPlanen",
     description: "Deterministische Planer für Haus und Garten.",
     start_url: "/",
     display: "standalone",

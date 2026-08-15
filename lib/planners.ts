@@ -45,7 +45,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
     cta: "Gartenhaus planen",
     outputs: ["Mindestfläche für deine Nutzung", "Empfohlene Türbreite und Zugang", "Stellflächen-, Boden- und Budgetcheck"],
     faqs: [
-      { question: "Wie berechnet MachPlan die Gartenhaus-Größe?", answer: "Der Planer addiert nachvollziehbare Flächenansätze für Fahrräder, Geräte, Rasenmäher, Werkbank und Regale, ergänzt Bewegungsreserve und rundet den Planungswert anschließend auf." },
+      { question: "Wie berechnet PassendPlanen die Gartenhaus-Größe?", answer: "Der Planer addiert nachvollziehbare Flächenansätze für Fahrräder, Geräte, Rasenmäher, Werkbank und Regale, ergänzt Bewegungsreserve und rundet den Planungswert anschließend auf." },
       { question: "Prüft der Gartenhaus-Planer die Baugenehmigung?", answer: "Nein. Landesbauordnung, Bebauungsplan, Abstände, Kleingartenregeln und örtliche Vorgaben müssen für das konkrete Grundstück separat geprüft werden." },
       { question: "Warum werden noch nicht immer Produkte angezeigt?", answer: "Produkte erscheinen erst, wenn Außenmaße, Tür, Bodenoption, Verfügbarkeit und weitere Pflichtdaten geprüft wurden. Ein leerer Katalog ist besser als eine ungesicherte Empfehlung." },
     ],
@@ -153,7 +153,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
     cta: "Gewächshaus planen",
     outputs: ["Grund- und nutzbare Beetfläche", "Beet- und Wegeaufteilung", "Basisprofile und Regenwasserpotenzial"],
     faqs: [
-      { question: "Warum plant MachPlan das Gewächshaus von innen?", answer: "Wege, erreichbare Beettiefen, Tür und Arbeitsfläche entscheiden über die Nutzung. Erst aus dieser Innenaufteilung ergibt sich ein sinnvoller Außenmaß-Rahmen." },
+      { question: "Warum plant PassendPlanen das Gewächshaus von innen?", answer: "Wege, erreichbare Beettiefen, Tür und Arbeitsfläche entscheiden über die Nutzung. Erst aus dieser Innenaufteilung ergibt sich ein sinnvoller Außenmaß-Rahmen." },
       { question: "Was bedeutet das berechnete Regenwasserpotenzial?", answer: "Es ist ein theoretischer Geometriewert aus Dachprojektion und zehn Millimetern Niederschlag. Rinnen-, Spritz-, Speicher- und Überlaufverluste sind nicht enthalten." },
       { question: "Dimensioniert der Planer Fundament und Lüftung?", answer: "Nein. Er macht offene Aufgaben sichtbar; Fundament, Verankerung, Wind- und Schneelast sowie Lüftungsöffnungen müssen am konkreten Gewächshaussystem geprüft werden." },
     ],
@@ -172,7 +172,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
     outputs: ["Netto-Mähfläche mit Reserve", "Benötigte Kapazitätsklasse", "Engstellen-, Steigungs- und Installationscheck"],
     faqs: [
       { question: "Welche Fläche zählt beim Mähroboter?", answer: "Es zählt die tatsächlich erreichbare Netto-Rasenfläche. Haus, Terrasse, Teich und feste Beete werden abgezogen; getrennte Flächen und Passagen werden zusätzlich bewertet." },
-      { question: "Warum ist die empfohlene Nennfläche größer als der Rasen?", answer: "MachPlan ergänzt eine sichtbare Reserve für Gartenkomplexität, Wachstum, mehrere Zonen und getrennte Bereiche. So wird eine exakt passende Hersteller-Nennfläche nicht ungeprüft übernommen." },
+      { question: "Warum ist die empfohlene Nennfläche größer als der Rasen?", answer: "PassendPlanen ergänzt eine sichtbare Reserve für Gartenkomplexität, Wachstum, mehrere Zonen und getrennte Bereiche. So wird eine exakt passende Hersteller-Nennfläche nicht ungeprüft übernommen." },
       { question: "Kabel oder kabellose Navigation – was ist besser?", answer: "Das hängt von Gartenstruktur, Empfang, Bäumen und Gebäuden, späteren Änderungen und dem konkreten Gerät ab. Der Planer zeigt die standortbezogenen Prüfaufgaben beider Systeme." },
     ],
   },

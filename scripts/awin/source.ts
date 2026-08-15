@@ -13,7 +13,7 @@ export async function* streamFeedRows(url: string): AsyncGenerator<RawFeedRow> {
   const limits = readFeedLimits();
   const response = await fetch(url, {
     redirect: "follow",
-    headers: { "user-agent": "MachPlan-FeedSync/1.0" },
+    headers: { "user-agent": "PassendPlanen-FeedSync/1.0" },
     signal: AbortSignal.timeout(limits.timeoutMs),
   });
   if (!response.ok || !response.body) throw new Error(`Feed download failed with status ${response.status}`);
