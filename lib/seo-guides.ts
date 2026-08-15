@@ -1,4 +1,12 @@
-import type { GuideSection } from "@/components/seo/GuidePage";
+import type {
+  GuideComparison,
+  GuideFaq,
+  GuideRelatedLink,
+  GuideSection,
+} from "@/components/seo/GuidePage";
+import { SEO_GUIDE_DEPTH } from "@/lib/seo-guide-depth";
+import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
+import { SEO_GUIDES_WAVE2 } from "@/lib/seo-guides-wave2";
 
 export type SeoGuide = {
   slug: string;
@@ -10,9 +18,14 @@ export type SeoGuide = {
   plannerHref: string;
   plannerLabel: string;
   sections: GuideSection[];
+  comparison?: GuideComparison;
+  checklist?: string[];
+  faqs?: GuideFaq[];
+  relatedLinks?: GuideRelatedLink[];
+  limitation?: string;
 };
 
-export const SEO_GUIDES: readonly SeoGuide[] = [
+const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
   {
     slug: "gartenhaus-holz-oder-metall",
     title: "Gartenhaus aus Holz oder Metall: Was passt besser?",
@@ -225,6 +238,13 @@ export const SEO_GUIDES: readonly SeoGuide[] = [
   },
 ] as const;
 
+export const SEO_GUIDES: readonly SeoGuide[] = [
+  ...SEO_GUIDES_INITIAL,
+  ...SEO_GUIDES_WAVE2,
+  ...SEO_GUIDES_SCENARIOS,
+];
+
 export function getSeoGuide(slug: string) {
-  return SEO_GUIDES.find((guide) => guide.slug === slug);
+  const guide = SEO_GUIDES.find((candidate) => candidate.slug === slug);
+  return guide ? { ...guide, ...SEO_GUIDE_DEPTH[slug] } : undefined;
 }

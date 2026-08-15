@@ -423,6 +423,23 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-sources a { display: inline-block; overflow-wrap: anywhere; font-weight: 750; }
 .guide-sources span { display: block; margin-top: 3px; color: var(--ink); font-size: .82rem; font-weight: 750; }
 .guide-sources li p { margin: 8px 0 0; font-size: .9rem; }
+.guide-table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; }
+.guide-comparison table { width: 100%; min-width: 660px; border-collapse: collapse; background: #fff; }
+.guide-comparison th, .guide-comparison td { padding: 15px 17px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.guide-comparison thead th { color: #fff; background: var(--green); }
+.guide-comparison tbody th { width: 24%; color: var(--ink); background: var(--cream); }
+.guide-comparison tbody tr:last-child th, .guide-comparison tbody tr:last-child td { border-bottom: 0; }
+.guide-checklist ol { display: grid; gap: 12px; padding: 0; list-style: none; counter-reset: guide-check; }
+.guide-checklist li { position: relative; margin: 0; padding: 16px 18px 16px 56px; border: 1px solid var(--line); border-radius: 12px; background: #fff; counter-increment: guide-check; }
+.guide-checklist li::before { position: absolute; top: 14px; left: 16px; display: grid; width: 26px; height: 26px; place-items: center; border-radius: 50%; color: var(--green); background: var(--lime); content: counter(guide-check); font-size: .78rem; font-weight: 850; }
+.guide-faq details { border-top: 1px solid var(--line); }
+.guide-faq details:last-child { border-bottom: 1px solid var(--line); }
+.guide-faq summary { padding: 18px 0; color: var(--ink); cursor: pointer; font-weight: 800; }
+.guide-faq details p { margin: -5px 0 20px; }
+.guide-related > div { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.guide-related a { display: flex; min-width: 0; padding: 20px; border: 1px solid var(--line); border-radius: 12px; color: var(--ink); background: #fff; flex-direction: column; text-decoration: none; }
+.guide-related a:hover { border-color: var(--green-2); }
+.guide-related span { margin-top: 7px; color: var(--muted); font-size: .9rem; }
 .guide-limit { padding: 22px; border-left: 4px solid var(--warning); background: #fcf7ed; }
 .guide-limit p { margin: 8px 0 0; }
 .guide-cta { display: flex; padding: 65px max(24px,calc((100vw - 1272px)/2)); align-items: center; justify-content: space-between; gap: 40px; color: #fff; background: var(--green); }
@@ -485,6 +502,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 @media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h3 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid, .planner-faq-list { grid-template-columns: repeat(2,1fr); } .planner-faq-list div:last-child { grid-column: 1 / -1; } }
 @media (max-width: 650px) { .legal-page > header h1 { font-size: 2.2rem; } .guide-page header h1 { font-size: 2.45rem; } .tool-filters { display: grid; width: 100%; grid-template-columns: repeat(3,1fr); } .tool-filter { justify-content: center; padding-left: 8px; padding-right: 8px; } .tool-card { display: flex; padding: 28px 24px; } .tool-card-top { display: flex; } .tool-card-top .status-pill { display: inline-flex; } .tool-card h3 { margin-top: 28px; } .tool-card .button { width: 100%; } .related-guides .guide-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .guide-layout aside { display: block; padding: 24px; } .guide-layout aside p { margin-bottom: 22px; } .guide-layout aside .button { width: 100%; max-width: none; } .guide-copy > .guide-example { padding: 26px 22px; } }
+@media (max-width: 650px) { .guide-related > div { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .guide-example dl div { grid-template-columns: 1fr; gap: 3px; } .guide-example dd { text-align: left; } }
 
 @media (max-width: 900px) { .requirement-summary { grid-template-columns: repeat(2,1fr); } .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 44px; } .inline-results--four { grid-template-columns: repeat(2,1fr); } }

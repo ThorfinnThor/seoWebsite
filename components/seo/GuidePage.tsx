@@ -4,6 +4,7 @@ import {
   GUIDE_ENRICHMENTS,
   type GuideSource,
 } from "@/lib/guide-enrichments";
+import { GUIDE_DEPTH_EXISTING } from "@/lib/guide-depth-existing";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { absoluteUrl, SITE } from "@/lib/site";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
@@ -13,6 +14,23 @@ export interface GuideSection {
   title: string;
   paragraphs: string[];
   bullets?: string[];
+}
+
+export interface GuideComparison {
+  caption: string;
+  columns: [string, string, string];
+  rows: Array<[string, string, string]>;
+}
+
+export interface GuideFaq {
+  question: string;
+  answer: string;
+}
+
+export interface GuideRelatedLink {
+  label: string;
+  href: string;
+  description: string;
 }
 
 interface GuidePageProps {
@@ -29,6 +47,10 @@ interface GuidePageProps {
   limitation?: string;
   calculator?: ReactNode;
   sources?: GuideSource[];
+  comparison?: GuideComparison;
+  checklist?: string[];
+  faqs?: GuideFaq[];
+  relatedLinks?: GuideRelatedLink[];
 }
 
 export function GuidePage({
@@ -45,15 +67,35 @@ export function GuidePage({
   limitation = "Diese Einordnung ersetzt keine Prüfung von Baurecht, Abständen, Statik, Fundament oder Herstellerangaben für deinen konkreten Standort.",
   calculator,
   sources = [],
+  comparison,
+  checklist = [],
+  faqs = [],
+  relatedLinks = [],
 }: GuidePageProps) {
   const url = absoluteUrl(path);
   const siteRoot = SITE.url.replace(/\/$/, "");
   const enrichment = GUIDE_ENRICHMENTS[path];
+  const depth = GUIDE_DEPTH_EXISTING[path];
+  const resolvedComparison = comparison ?? depth?.comparison;
+  const resolvedChecklist = checklist.length ? checklist : (depth?.checklist ?? []);
+  const resolvedFaqs = faqs.length ? faqs : (depth?.faqs ?? []);
+  const resolvedRelatedLinks = relatedLinks.length ? relatedLinks : (depth?.relatedLinks ?? []);
   const resolvedSources = [...(enrichment?.sources ?? []), ...sources].filter(
     (source, index, allSources) =>
       allSources.findIndex((candidate) => candidate.href === source.href) === index,
   );
   const example = enrichment?.example;
+  const articleWordCount = [
+    title,
+    intro,
+    takeaway,
+    ...sections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.bullets ?? [])]),
+    ...(resolvedComparison ? [resolvedComparison.caption, ...resolvedComparison.columns, ...resolvedComparison.rows.flat()] : []),
+    ...resolvedChecklist,
+    ...resolvedFaqs.flatMap((faq) => [faq.question, faq.answer]),
+    ...resolvedRelatedLinks.flatMap((link) => [link.label, link.description]),
+    limitation,
+  ].join(" ").trim().split(/\s+/).filter(Boolean).length;
 
   return (
     <>
@@ -68,6 +110,7 @@ export function GuidePage({
           abstract: takeaway,
           articleSection: sections.map((section) => section.title),
           dateModified: updatedAt,
+          wordCount: articleWordCount,
           inLanguage: "de-DE",
           author: {
             "@type": "Person",
@@ -86,6 +129,15 @@ export function GuidePage({
             : {}),
         }}
       />
+      {resolvedFaqs.length > 0 && <JsonLd data={{
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: resolvedFaqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: { "@type": "Answer", text: faq.answer },
+        })),
+      }} />}
       <article className="guide-page">
         <Breadcrumbs
           items={breadcrumbs ?? [
@@ -131,6 +183,27 @@ export function GuidePage({
               </section>
             ))}
 
+            {resolvedComparison && (
+              <section className="guide-comparison" aria-labelledby="guide-comparison-title">
+                <p className="eyebrow">Direkter Vergleich</p>
+                <h2 id="guide-comparison-title">{resolvedComparison.caption}</h2>
+                <div className="guide-table-wrap">
+                  <table>
+                    <thead><tr>{resolvedComparison.columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr></thead>
+                    <tbody>{resolvedComparison.rows.map((row) => <tr key={row[0]}>{row.map((cell, index) => index === 0 ? <th key={cell} scope="row">{cell}</th> : <td key={cell}>{cell}</td>)}</tr>)}</tbody>
+                  </table>
+                </div>
+              </section>
+            )}
+
+            {resolvedChecklist.length > 0 && (
+              <section className="guide-checklist" aria-labelledby="guide-checklist-title">
+                <p className="eyebrow">Vor dem Kauf prüfen</p>
+                <h2 id="guide-checklist-title">Deine Projekt-Checkliste</h2>
+                <ol>{resolvedChecklist.map((item) => <li key={item}>{item}</li>)}</ol>
+              </section>
+            )}
+
             {example && (
               <section className="guide-example" aria-labelledby="guide-example-title">
                 <p className="eyebrow">Nachvollziehbares Rechenbeispiel</p>
@@ -164,6 +237,22 @@ export function GuidePage({
                     </li>
                   ))}
                 </ul>
+              </section>
+            )}
+
+            {resolvedFaqs.length > 0 && (
+              <section className="guide-faq" aria-labelledby="guide-faq-title">
+                <p className="eyebrow">Häufige Fragen</p>
+                <h2 id="guide-faq-title">Kurz und konkret beantwortet</h2>
+                <div>{resolvedFaqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
+              </section>
+            )}
+
+            {resolvedRelatedLinks.length > 0 && (
+              <section className="guide-related" aria-labelledby="guide-related-title">
+                <p className="eyebrow">Passend weiterplanen</p>
+                <h2 id="guide-related-title">Verwandte Rechner und Ratgeber</h2>
+                <div>{resolvedRelatedLinks.map((link) => <Link key={link.href} href={link.href}><strong>{link.label}</strong><span>{link.description}</span></Link>)}</div>
               </section>
             )}
 

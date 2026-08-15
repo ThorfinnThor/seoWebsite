@@ -15,6 +15,8 @@
     "sync:products": "node --import tsx scripts/awin/sync-products.ts",
     "verify:static": "node --import tsx scripts/verify-static-build.ts",
     "audit:site": "node --import tsx scripts/audit-static-site.ts",
+    "audit:content": "node --import tsx scripts/audit-content-depth.ts",
+    "audit:content:strict": "node --import tsx scripts/audit-content-depth.ts --strict",
     "readiness": "node --import tsx scripts/check-launch-readiness.ts",
     "readiness:public": "node --import tsx scripts/check-launch-readiness.ts --mode=public --strict",
     "readiness:affiliate": "node --import tsx scripts/check-launch-readiness.ts --mode=affiliate --strict",
