@@ -1,6 +1,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 import { GUIDE_ENRICHMENTS } from "@/lib/guide-enrichments";
+import { legalContactComplete } from "@/lib/legal";
 import { SITE } from "@/lib/site";
 
 const OUT_DIR = path.resolve("out");
@@ -167,7 +168,7 @@ for (const planner of ["Gartenhaus-Planer", "Bewässerungsplaner", "Terrassendie
   if (!llmsTxt.includes(planner)) errors.push(`llms.txt: Rechner fehlt: ${planner}`);
 }
 
-if (!process.env.NEXT_PUBLIC_LEGAL_EMAIL) {
+if (!legalContactComplete) {
   for (const route of ["/impressum/", "/datenschutz/"]) {
     const page = pages.find((candidate) => candidate.route === route);
     if (!page?.noindex) errors.push(`${route}: muss ohne Rechtskontakt noindex sein`);

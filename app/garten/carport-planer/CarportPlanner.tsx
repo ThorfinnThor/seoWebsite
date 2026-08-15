@@ -47,7 +47,7 @@ const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["vehicleLe
 export function CarportPlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:carport:v1", INITIAL, parseInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:carport:v1", INITIAL, parseInput);
   const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: CarportInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculateCarportPlan(parsed.data) : null;
 

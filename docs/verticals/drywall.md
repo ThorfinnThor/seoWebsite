@@ -17,4 +17,4 @@ The tool does not select a stud or board system, determine screws, anchors, seal
 
 ## Persistence and tests
 
-Validated inputs persist only in the current browser tab under `machplan:drywall:v1`. Rule tests cover opening validation, one- and two-sided multi-layer area, full-board rounding, baseline studs, track bars and context-specific system warnings.
+Validated inputs persist only in the current browser tab under `passendplanen:drywall:v1`. Rule tests cover opening validation, one- and two-sided multi-layer area, full-board rounding, baseline studs, track bars and context-specific system warnings.

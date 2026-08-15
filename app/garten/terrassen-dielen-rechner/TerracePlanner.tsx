@@ -34,7 +34,7 @@ const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["terraceLe
 export function TerracePlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:terrace:v1", INITIAL, parseTerraceInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:terrace:v1", INITIAL, parseTerraceInput);
   const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: TerraceInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculateTerracePlan(parsed.data) : null;
 

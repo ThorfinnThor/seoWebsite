@@ -45,7 +45,7 @@ const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["lengthM",
 export function GreenhousePlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:greenhouse:v1", INITIAL, parseInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:greenhouse:v1", INITIAL, parseInput);
   const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: GreenhouseInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculateGreenhousePlan(parsed.data) : null;
 

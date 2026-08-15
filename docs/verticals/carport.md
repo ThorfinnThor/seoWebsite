@@ -16,4 +16,4 @@ The tool does not determine exterior product dimensions, posts, foundations, str
 
 ## Persistence and tests
 
-Validated inputs persist only in the current browser tab under `machplan:carport:v1`. Rule tests cover single and double width, clear dimensions, movement/storage area, rainwater geometry, tight clearances, turning access, sloped sites, attached construction, drainage, charging and photovoltaic planning.
+Validated inputs persist only in the current browser tab under `passendplanen:carport:v1`. Rule tests cover single and double width, clear dimensions, movement/storage area, rainwater geometry, tight clearances, turning access, sloped sites, attached construction, drainage, charging and photovoltaic planning.

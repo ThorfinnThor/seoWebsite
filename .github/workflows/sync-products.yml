@@ -15,6 +15,7 @@ jobs:
     env:
       AWIN_FEED_URLS_JSON: ${{ secrets.AWIN_FEED_URLS_JSON }}
       FEED_SYNC_SCHEDULED: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
+      AWIN_FEED_SCHEDULE_ENABLED: ${{ vars.AWIN_FEED_SCHEDULE_ENABLED }}
     steps:
       - uses: actions/checkout@v6
         with:
@@ -28,6 +29,11 @@ jobs:
             echo "Affiliate feed secret is not configured; skipping sync."
             echo "### Affiliate-Feed-Sync deaktiviert" >> "$GITHUB_STEP_SUMMARY"
             echo "Das Secret AWIN_FEED_URLS_JSON fehlt. Es wurden keine Produktdaten geladen oder geändert." >> "$GITHUB_STEP_SUMMARY"
+          elif [ "$FEED_SYNC_SCHEDULED" = "true" ] && [ "$AWIN_FEED_SCHEDULE_ENABLED" != "true" ]; then
+            echo "enabled=false" >> "$GITHUB_OUTPUT"
+            echo "Scheduled affiliate feed sync is not enabled; skipping sync."
+            echo "### Automatischer Affiliate-Feed-Sync pausiert" >> "$GITHUB_STEP_SUMMARY"
+            echo "Setze die Repository-Variable AWIN_FEED_SCHEDULE_ENABLED erst nach einem erfolgreichen manuellen Test auf true." >> "$GITHUB_STEP_SUMMARY"
           else
             echo "enabled=true" >> "$GITHUB_OUTPUT"
           fi
@@ -51,7 +57,7 @@ jobs:
             echo "No catalog changes."
             exit 0
           fi
-          git config user.name "machplan-data-bot"
+          git config user.name "passendplanen-data-bot"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add public/data data/review
           git commit -m "chore(data): refresh affiliate catalogs"

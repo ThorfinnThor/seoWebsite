@@ -25,7 +25,7 @@ const parseDehumidifierInput = (value: unknown) => { const result = Dehumidifier
 export function DehumidifierPlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:dehumidifier:v1", INITIAL, parseDehumidifierInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:dehumidifier:v1", INITIAL, parseDehumidifierInput);
   const [catalog, setCatalog] = useState<DehumidifierCatalog | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [fieldErrors, setFieldErrors] = useState<PlannerFieldErrors>({});

@@ -28,7 +28,7 @@ const parseIrrigationInput = (value: unknown) => { const result = IrrigationInpu
 export function IrrigationPlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:irrigation:v1", INITIAL, parseIrrigationInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:irrigation:v1", INITIAL, parseIrrigationInput);
   const [fieldErrors, setFieldErrors] = useState<PlannerFieldErrors>({});
   const [error, setError] = useState("");
   const validation = IrrigationInputSchema.safeParse(input);

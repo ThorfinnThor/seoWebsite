@@ -16,4 +16,4 @@ The tool does not predict runtime or cutting quality, confirm a device's slope/p
 
 ## Persistence and tests
 
-Validated inputs persist only in the current browser tab under `machplan:robot-mower:v1`. Rule tests cover area exclusions, capacity factors and rounding, passage classes, cable framing, steep terrain, disconnected lawns, reception and station tasks.
+Validated inputs persist only in the current browser tab under `passendplanen:robot-mower:v1`. Rule tests cover area exclusions, capacity factors and rounding, passage classes, cable framing, steep terrain, disconnected lawns, reception and station tasks.

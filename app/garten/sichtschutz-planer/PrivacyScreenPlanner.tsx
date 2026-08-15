@@ -39,7 +39,7 @@ const STEP_FIELDS: Partial<Record<number, readonly string[]>> = { 1: ["totalLeng
 export function PrivacyScreenPlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:privacy-screen:v1", INITIAL, parseInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:privacy-screen:v1", INITIAL, parseInput);
   const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: PrivacyScreenInputSchema, fieldIds: FIELD_IDS, stepFields: STEP_FIELDS, step, setStep });
   const plan = parsed.success ? calculatePrivacyScreenPlan(parsed.data) : null;
 

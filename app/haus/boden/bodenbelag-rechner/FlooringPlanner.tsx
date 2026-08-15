@@ -44,7 +44,7 @@ const parseInput = (value: unknown) => {
 export function FlooringPlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:flooring:v1", INITIAL, parseInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:flooring:v1", INITIAL, parseInput);
   const roomFieldIds = Object.fromEntries(input.rooms.flatMap((room, index) => [[`rooms.${index}.lengthM`, `${room.id}-length`], [`rooms.${index}.widthM`, `${room.id}-width`]]));
   const fieldIds: Partial<Record<string, string>> = { ...roomFieldIds, excludedAreaM2: "excluded-area", plankLengthMm: "plank-length", plankWidthMm: "plank-width", packageCoverageM2: "package-area", underlayRollCoverageM2: "underlay-roll", skirtingBarLengthM: "skirting-bar", totalDoorOpeningM: "door-openings" };
   const stepFields: Partial<Record<number, readonly string[]>> = { 1: [...Object.keys(roomFieldIds), "excludedAreaM2"], 2: ["plankLengthMm", "plankWidthMm", "packageCoverageM2"], 3: ["underlayRollCoverageM2", "skirtingBarLengthM", "totalDoorOpeningM"] };

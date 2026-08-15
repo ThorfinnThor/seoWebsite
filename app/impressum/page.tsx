@@ -23,11 +23,11 @@ export default function ImpressumPage() {
       </section>
       <section>
         <h2>Kontakt</h2>
-        {LEGAL.email ? <p>E-Mail: <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></p> : <p><strong>E-Mail:</strong> wird vor Veröffentlichung ergänzt.</p>}
+        <p>E-Mail: <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></p>
       </section>
       <section>
-        <h2>Inhaltliche Verantwortung</h2>
-        <p>Verantwortlich für die Inhalte: {LEGAL.owner}, Anschrift wie oben.</p>
+        <h2>Redaktionell verantwortlich</h2>
+        <p>Verantwortlich im Sinne des § 18 Abs. 2 MStV: {LEGAL.owner}, Anschrift wie oben.</p>
       </section>
       <section>
         <h2>Hinweis zum Angebot</h2>

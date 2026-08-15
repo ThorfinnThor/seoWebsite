@@ -6,7 +6,7 @@ Checked against Awin's official German signup and Partner Success documentation 
 
 The technical preview can run without affiliate data. For the strongest compliance and advertiser application, finish these public details first:
 
-1. Configure a reachable `NEXT_PUBLIC_LEGAL_EMAIL` in Vercel so imprint and privacy notice are complete and indexable.
+1. Confirm that the public legal contact is `info@passendplanen.de`; optionally mirror it as `NEXT_PUBLIC_LEGAL_EMAIL` in Vercel.
 2. Use the canonical production domain `https://www.passendplanen.de/` as the promotional site.
 3. Keep the affiliate disclosure visible. PassendPlanen already has a dedicated transparency page and marks affiliate links in the product components.
 
@@ -74,6 +74,39 @@ Deutschsprachige Haus-&-Garten-Rechner mit transparentem Bedarfsscore; nur passe
 
 5. Track applications under **Advertisers → My programmes → Pending**.
 
+## Advertiser application order
+
+Programme profiles and IDs were rechecked against Awin on 2026-08-15. Apply only after the public site shows the PassendPlanen brand, the canonical `https://www.passendplanen.de/` URL and a complete legal contact.
+
+### Wave 1: strongest calculator fit
+
+| Order | Programme | Awin ID | Primary calculators |
+| ---: | --- | ---: | --- |
+| 1 | [GFP-international DE](https://ui.awin.com/merchant-profile/26365) | 26365 | Greenhouse, garden house, carport |
+| 2 | [GartenHaus GmbH (DE)](https://ui.awin.com/merchant-profile/22747) | 22747 | Garden house, carport, terrace |
+| 3 | [Woodstore24 DE/AT](https://ui.awin.com/merchant-profile/48707) | 48707 | Terrace, privacy screen, flooring |
+| 4 | [LaminatDEPOT DE](https://ui.awin.com/merchant-profile/69012) | 69012 | Flooring |
+| 5 | [Meaco GmbH DE](https://ui.awin.com/merchant-profile/45487) | 45487 | Dehumidifier |
+| 6 | [Benz24 DE/AT](https://ui.awin.com/merchant-profile/18314) | 18314 | Drywall, terrace, privacy screen, irrigation |
+
+Use this 149-character application message (Awin currently allows up to 150 characters):
+
+```text
+PassendPlanen.de bietet Haus-&-Garten-Rechner. Wir empfehlen passende Produkte erst nach der Bedarfsermittlung, redaktionell und klar gekennzeichnet.
+```
+
+### Wave 2: broad coverage and additional model choice
+
+| Order | Programme | Awin ID | Role |
+| ---: | --- | ---: | --- |
+| 7 | [OBI DE](https://ui.awin.com/merchant-profile/9326) | 9326 | Broad fallback for nine calculators |
+| 8 | [Gartenfachmarkt24 DE](https://ui.awin.com/merchant-profile/112978) | 112978 | Greenhouse and garden-house alternative |
+| 9 | [Ecovacs DE](https://ui.awin.com/merchant-profile/30763) | 30763 | Robot mower models |
+| 10 | [ANTHBOT DE](https://ui.awin.com/merchant-profile/125144) | 125144 | Additional robot mower models |
+| 11 | [Globus Baumarkt DE](https://ui.awin.com/merchant-profile/11830) | 11830 | Broad DIY backup |
+
+Do not start A/B tests when these programmes are merely approved. First validate feeds, product attributes, shipping-price handling and outgoing links. The repository keeps every programme disabled until `applicationStatus` is `active`, and the scheduled feed workflow additionally requires the repository variable `AWIN_FEED_SCHEDULE_ENABLED=true` after a successful manual run.
+
 ## Product feeds for this repository
 
 Only configure feeds after the relevant advertiser programmes have approved the account.
@@ -84,7 +117,7 @@ Only configure feeds after the relevant advertiser programmes have approved the 
 4. Store the complete URLs only in the GitHub Actions repository secret `AWIN_FEED_URLS_JSON`, as a JSON array of strings.
 5. In GitHub open **Actions → Sync affiliate product feeds → Run workflow**.
 6. Review new candidates under `data/review/`. Only products explicitly marked `reviewed: true` can enter public recommendations.
-7. Keep the schedule disabled in practice until at least one manual import and link test has succeeded.
+7. Keep the schedule disabled until at least one manual import and link test has succeeded. Only then create the GitHub repository variable `AWIN_FEED_SCHEDULE_ENABLED` with value `true`.
 
 Never add Awin keys, feed download URLs or API tokens to Vercel, `.env.example`, `public/` or committed source files.
 

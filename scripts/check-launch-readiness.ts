@@ -1,4 +1,5 @@
 import { access, readFile } from "node:fs/promises";
+import { LEGAL } from "@/lib/legal";
 import { PLANNERS } from "@/lib/planners";
 
 type CheckStatus = "ready" | "blocked" | "manual";
@@ -23,7 +24,7 @@ const [nextConfig, gardenHouse, dehumidifier, irrigation] = await Promise.all([
 ]);
 
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.passendplanen.de").trim();
-const legalEmail = process.env.NEXT_PUBLIC_LEGAL_EMAIL?.trim();
+const legalEmail = LEGAL.email;
 const emailReady = Boolean(legalEmail && !/^(you|test|example)@/i.test(legalEmail));
 const temporaryDomain = /vercel\.app|seo-website/i.test(siteUrl);
 const catalogProducts = (gardenHouse.products?.length ?? 0) + (dehumidifier.products?.length ?? 0) + (irrigation.products?.length ?? 0);

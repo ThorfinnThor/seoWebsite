@@ -41,7 +41,7 @@ const parseInput = (value: unknown) => {
 export function RobotMowerPlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:robot-mower:v1", INITIAL, parseInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:robot-mower:v1", INITIAL, parseInput);
   const areaFieldIds = Object.fromEntries(input.areas.flatMap((area, index) => [[`areas.${index}.lengthM`, `${area.id}-length`], [`areas.${index}.widthM`, `${area.id}-width`], [`areas.${index}.excludedAreaM2`, `${area.id}-excluded`]]));
   const fieldIds: Partial<Record<string, string>> = { ...areaFieldIds, mowingZones: "mowing-zones", obstacleCount: "obstacles", narrowestPassageCm: "narrowest-passage", maximumSlopePercent: "maximum-slope" };
   const stepFields: Partial<Record<number, readonly string[]>> = { 1: Object.keys(areaFieldIds), 2: ["mowingZones", "obstacleCount", "narrowestPassageCm", "maximumSlopePercent"], 3: [] };

@@ -37,11 +37,11 @@ The exact signup, advertiser application and secure feed setup sequence is docum
 
 Connect the GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` to the canonical production origin. No Awin secret is required in Vercel.
 
-Before public launch, set `NEXT_PUBLIC_LEGAL_EMAIL` to the reachable email address used in the imprint and privacy notice. Without it those two pages render a visible draft warning and `noindex` metadata.
+The public legal contact defaults to `info@passendplanen.de`. `NEXT_PUBLIC_LEGAL_EMAIL` can override it if the contact address changes later.
 
 Current Vercel values:
 
 ```text
 NEXT_PUBLIC_SITE_URL=https://www.passendplanen.de
-NEXT_PUBLIC_LEGAL_EMAIL=
+NEXT_PUBLIC_LEGAL_EMAIL=info@passendplanen.de
 ```

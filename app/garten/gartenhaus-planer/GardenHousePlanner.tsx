@@ -39,7 +39,7 @@ const STEP_FIELDS: Record<number, readonly string[]> = { 1: ["availableWidthCm",
 export function GardenHousePlanner() {
   const [step, setStep] = useState(1);
   const goToStep = usePlannerStepTransition(setStep);
-  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("machplan:garden-house:v1", INITIAL_INPUT, parseGardenHouseInput);
+  const { value: input, setValue: setInput, reset: resetInput } = usePlannerSessionState("passendplanen:garden-house:v1", INITIAL_INPUT, parseGardenHouseInput);
   const [catalog, setCatalog] = useState<GardenHouseCatalog | null>(null);
   const [status, setStatus] = useState<"idle" | "loading" | "ready" | "error">("idle");
   const [fieldErrors, setFieldErrors] = useState<PlannerFieldErrors>({});

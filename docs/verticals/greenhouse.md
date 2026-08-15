@@ -16,4 +16,4 @@ The planner does not size foundations or anchors, assess wind or snow loads, sel
 
 ## Persistence and tests
 
-Validated inputs persist only in the current browser tab under `machplan:greenhouse:v1`. Rule tests cover standard layouts, container mode, bar rounding, water yield, validation conflicts and contextual warnings.
+Validated inputs persist only in the current browser tab under `passendplanen:greenhouse:v1`. Rule tests cover standard layouts, container mode, bar rounding, water yield, validation conflicts and contextual warnings.
