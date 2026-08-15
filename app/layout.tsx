@@ -41,6 +41,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
               <Link href="/garten/">Garten</Link>
               <Link href="/haus/">Haus</Link>
               <Link href="/rechner/">Alle Planer</Link>
+              <Link href="/ratgeber/">Ratgeber</Link>
             </nav>
           </div>
         </header>
@@ -50,7 +51,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div><Link className="brand brand--footer" href="/"><img className="brand-icon-image" src="/brand/passendplanen-icon.png" width="512" height="512" alt="" /><span>PassendPlanen</span></Link><p>Klare Entscheidungen für Haus und Garten – ohne versteckte Verkaufslogik.</p></div>
             <div><h2>Planen</h2><Link href="/rechner/">Alle Rechner & Planer</Link><Link href="/garten/gartenhaus-planer/">Gartenhaus-Planer</Link><Link href="/garten/gewaechshaus-planer/">Gewächshaus</Link><Link href="/garten/carport-planer/">Carport</Link><Link href="/garten/terrassen-dielen-rechner/">Terrassendielen</Link><Link href="/garten/sichtschutz-planer/">Sichtschutz</Link></div>
             <div><h2>Weitere Rechner</h2><Link href="/haus/boden/bodenbelag-rechner/">Bodenbelag</Link><Link href="/haus/innenausbau/trockenbau-rechner/">Trockenbau</Link><Link href="/haus/raumklima/luftentfeuchter-rechner/">Luftentfeuchter</Link><Link href="/garten/bewaesserungs-planer/">Bewässerung</Link><Link href="/garten/maehroboter-rechner/">Mähroboter</Link></div>
-            <div><h2>PassendPlanen</h2><Link href="/ueber-passendplanen/">Über das Projekt</Link><Link href="/methodik/">Methodik</Link><Link href="/affiliate-transparenz/">Affiliate-Transparenz</Link></div>
+            <div><h2>PassendPlanen</h2><Link href="/ratgeber/">Ratgeber & Vergleiche</Link><Link href="/ueber-passendplanen/">Über das Projekt</Link><Link href="/methodik/">Methodik</Link><Link href="/affiliate-transparenz/">Affiliate-Transparenz</Link></div>
           </div>
           <div className="footer-bottom"><span>© {new Date().getFullYear()} PassendPlanen</span><span className="footer-legal"><Link href="/impressum/">Impressum</Link><Link href="/datenschutz/">Datenschutz</Link></span></div>
         </footer>
