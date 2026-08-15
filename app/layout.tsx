@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/react";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { SITE } from "@/lib/site";
 import "./globals.css";
+
+const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
 
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
@@ -21,12 +24,14 @@ export const metadata: Metadata = {
   },
   twitter: { card: "summary", title: "PassendPlanen – Haus- und Gartenprojekte besser planen", description: SITE.description },
   category: "Haus und Garten",
+  ...(googleSiteVerification ? { verification: { google: googleSiteVerification } } : {}),
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de" data-scroll-behavior="smooth">
       <body>
+        <Analytics />
         <SiteJsonLd />
         <a className="skip-link" href="#main">Zum Inhalt springen</a>
         <header className="site-header">

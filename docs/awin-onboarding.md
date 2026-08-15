@@ -66,11 +66,7 @@ Complete the identity/payment verification shown by Awin and submit the applicat
 1. Open **Account → Profile → Promotional sites** and verify the URL and description. Awin documents the action as **Add content site** for an additional website.
 2. Open **Account → Payment details** and enter the correct bank and tax details. Awin cannot provide individual tax advice.
 3. Open **Advertisers → Join programmes** and apply only to merchants whose range and data quality fit the current calculators.
-4. Select the content promotion type, accept each programme's conditions and use this short application message where appropriate:
-
-```text
-Deutschsprachige Haus-&-Garten-Rechner mit transparentem Bedarfsscore; nur passende, manuell geprüfte Produkte, klar gekennzeichnete Affiliate-Links.
-```
+4. Select the content promotion type, accept each programme's conditions and copy the matching English message from [English Awin application messages](./awin-application-messages-en.md). Every message is below Awin's current 150-character limit.
 
 5. Track applications under **Advertisers → My programmes → Pending**.
 
@@ -89,11 +85,7 @@ Programme profiles and IDs were rechecked against Awin on 2026-08-15. Apply only
 | 5 | [Meaco GmbH DE](https://ui.awin.com/merchant-profile/45487) | 45487 | Dehumidifier |
 | 6 | [Benz24 DE/AT](https://ui.awin.com/merchant-profile/18314) | 18314 | Drywall, terrace, privacy screen, irrigation |
 
-Use this 149-character application message (Awin currently allows up to 150 characters):
-
-```text
-PassendPlanen.de bietet Haus-&-Garten-Rechner. Wir empfehlen passende Produkte erst nach der Bedarfsermittlung, redaktionell und klar gekennzeichnet.
-```
+Use the matching English message from [English Awin application messages](./awin-application-messages-en.md) for each programme. The messages are personalized to the advertiser and checked against Awin's current 150-character limit.
 
 ### Wave 2: broad coverage and additional model choice
 

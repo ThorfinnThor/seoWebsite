@@ -21,6 +21,7 @@
     "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static && npm run audit:site"
   },
   "dependencies": {
+    "@vercel/analytics": "^2.0.1",
     "csv-parse": "^6.1.0",
     "gunzip-maybe": "^1.4.2",
     "next": "^16.0.0",
