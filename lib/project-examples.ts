@@ -37,6 +37,7 @@ type ProjectCluster = {
   variants: readonly Variant[];
   sources: readonly GuideSource[];
   calculate: (scale: Scale, variant: Variant) => Calculation;
+  titleSubject?: (scale: Scale, variant: Variant) => string;
 };
 
 export type ProjectExample = SeoGuide & {
@@ -56,13 +57,13 @@ export type ProjectExampleDirectory = {
 };
 
 const de = (value: number, digits = 1) => value.toLocaleString("de-DE", {
-  minimumFractionDigits: Number.isInteger(value) ? 0 : digits,
+  minimumFractionDigits: 0,
   maximumFractionDigits: digits,
 });
 
 const dimensions = (pairs: ReadonlyArray<readonly [number, number]>): Scale[] => pairs.map(([width, length]) => ({
   slug: `${String(width).replace(".", "-")}x${String(length).replace(".", "-")}-meter`,
-  label: `${de(width)} × ${de(length)} Meter`,
+  label: `${de(width, 2)} × ${de(length, 2)} Meter`,
   values: [width, length],
 }));
 
@@ -150,17 +151,17 @@ function irrigationCalculation(scale: Scale, variant: Variant): Calculation {
   const litersPerEvent = variant.factor;
   const liters = area * litersPerEvent;
   const minutesAt15 = liters / 15;
-  const zones = Math.max(1, Math.ceil(minutesAt15 / 45));
+  const timeBlocks = Math.max(1, Math.ceil(minutesAt15 / 45));
   return {
     input: `${area} m² zu versorgende Pflanz- oder Rasenfläche`,
     calculation: `${area} m² × ${de(litersPerEvent)} l/m² als transparentes Rechenereignis = ${de(liters, 0)} l; bei gemessenen 15 l/min`,
-    result: `${de(minutesAt15, 0)} Minuten theoretische Abgabezeit, organisatorisch auf mindestens ${zones} ${zones === 1 ? "Zone" : "Zonen"} prüfen`,
+    result: `${de(minutesAt15, 0)} Minuten theoretische Abgabezeit; mindestens ${timeBlocks} ${timeBlocks === 1 ? "Zeitblock" : "Zeitblöcke"} von höchstens 45 Minuten einplanen`,
     alternative: `Bei 20 l/min verkürzt sich die reine Abgabezeit rechnerisch auf ${de(liters / 20, 0)} Minuten`,
     rows: [
       ["Planungsfläche", `${area} m²`, variant.focus],
       ["Beispiel-Abgabe", `${de(litersPerEvent)} l/m²`, "Kein allgemeiner Pflanzen-Sollwert"],
       ["Wassermenge", `${de(liters, 0)} l`, "Niederschlag und Boden berücksichtigen"],
-      ["Zeit bei 15 l/min", `${de(minutesAt15, 0)} min`, `${zones} Zonen organisatorisch prüfen`],
+      ["Zeit bei 15 l/min", `${de(minutesAt15, 0)} min`, `${timeBlocks} Zeitblöcke organisatorisch prüfen`],
     ],
   };
 }
@@ -169,13 +170,13 @@ function greenhouseCalculation(scale: Scale, variant: Variant): Calculation {
   const [width, length] = scale.values;
   const total = width * length;
   const aisleWidth = variant.factor;
-  const aisle = Math.min(total * .48, aisleWidth * length);
+  const aisle = aisleWidth * length;
   const bed = total - aisle;
   return {
     input: `${de(width)} × ${de(length)} m Grundfläche = ${de(total)} m²`,
     calculation: `${de(total)} m² minus beispielhaft ${de(aisleWidth)} m × ${de(length)} m Mittelweg`,
     result: `Rund ${de(bed)} m² rechnerische Beet- und Stellfläche vor Profilen und Türbereich`,
-    alternative: `Mit einem 10 cm schmaleren Weg wären es etwa ${de(total - Math.min(total * .48, (aisleWidth - .1) * length))} m²`,
+    alternative: `Mit einem 10 cm schmaleren Weg wären es etwa ${de(total - (aisleWidth - .1) * length)} m²`,
     rows: [
       ["Grundfläche", `${de(total)} m²`, "Innenmaß des Systems verwenden"],
       ["Beispiel-Wegbreite", `${de(aisleWidth)} m`, variant.focus],
@@ -193,12 +194,12 @@ function privacyCalculation(scale: Scale, variant: Variant): Calculation {
   const rest = elements * moduleWidth - length;
   return {
     input: `${de(length)} m gemessene Sichtschutzflucht`,
-    calculation: `${de(length)} m ÷ ${de(moduleWidth)} m angenommene Montagebreite = ${de(length / moduleWidth, 2)}; auf ganze Felder aufrunden`,
-    result: `${elements} Felder und mindestens ${posts} Pfosten als Rasterrahmen; ${de(rest)} m rechnerisches Restmaß`,
+    calculation: `${de(length)} m ÷ ${de(moduleWidth, 2)} m angenommene Montagebreite = ${de(length / moduleWidth, 2)}; auf ganze Felder aufrunden`,
+    result: `${elements} Felder und mindestens ${posts} Pfosten als Rasterrahmen; ${de(rest, 2)} m rechnerisches Restmaß`,
     alternative: `Mit 1,80-m-Feldern wären ${Math.ceil(length / 1.8)} Elemente vor Ecken und Toren nötig`,
     rows: [
       ["Gemessene Flucht", `${de(length)} m`, "Zwischen festen Endpunkten messen"],
-      ["Montagebreite", `${de(moduleWidth)} m`, variant.focus],
+      ["Montagebreite", `${de(moduleWidth, 2)} m`, variant.focus],
       ["Elemente", `${elements}`, "Restmaß bewusst verteilen"],
       ["Pfostenrahmen", `${posts}`, "Ecken, Tor und Endsystem ergänzen"],
     ],
@@ -213,12 +214,12 @@ function carportCalculation(scale: Scale, variant: Variant): Calculation {
   const area = lightWidth * lightLength;
   return {
     input: `Fahrzeug ${de(vehicleWidth)} m breit und ${de(vehicleLength)} m lang`,
-    calculation: `${de(vehicleWidth)} m + 2 × ${de(sideAllowance)} m seitlicher Bedienraum; Länge plus 1,00 m Funktionsreserve`,
+    calculation: `${de(vehicleWidth, 2)} m + 2 × ${de(sideAllowance, 2)} m seitlicher Bedienraum; Länge plus 1,00 m Funktionsreserve`,
     result: `Mindestens etwa ${de(lightWidth)} × ${de(lightLength)} m lichte Nutzungszone beziehungsweise ${de(area)} m²`,
     alternative: `Mit 10 cm weniger je Seite sinkt die lichte Breite auf ${de(lightWidth - .2)} m, die Alltagstauglichkeit muss dann praktisch geprüft werden`,
     rows: [
       ["Fahrzeugmaß", `${de(vehicleWidth)} × ${de(vehicleLength)} m`, "Spiegel und Anbauten erfassen"],
-      ["Seitenraum je Seite", `${de(sideAllowance)} m`, variant.focus],
+      ["Seitenraum je Seite", `${de(sideAllowance, 2)} m`, variant.focus],
       ["Lichte Zielbreite", `${de(lightWidth)} m`, "Pfosten und Wandanschluss beachten"],
       ["Lichte Ziellänge", `${de(lightLength)} m`, "Rangier- und Stauraum separat"],
     ],
@@ -397,6 +398,7 @@ const clusters: readonly ProjectCluster[] = [
       { slug: "fahrraeder", label: "mit Fahrradzone", focus: "95 cm seitlicher Raum für abgestellte Fahrräder", factor: .95, check: "Fahrräder benötigen einen eigenen Entnahmeweg außerhalb der Fahrzeugtür." },
       { slug: "familie", label: "für Familiennutzung", focus: "90 cm Bedienraum je Seite für häufiges Ein- und Ausladen", factor: .9, check: "Kinder, Einkäufe und Kofferraum müssen ohne Konflikt mit Pfosten erreichbar bleiben." },
     ], sources: [GUIDE_SOURCE_LIBRARY.modelBuildingCode, GUIDE_SOURCE_LIBRARY.rainwaterManagement], calculate: carportCalculation,
+    titleSubject: (scale, variant) => `Carport für ein ${scale.label} großes Fahrzeug ${variant.label}`,
   },
   {
     topicSlug: "bodenbelag", noun: "Bodenbelag", directoryTitle: "Bodenflächen, Verschnitt und Paketbeispiele",
@@ -453,7 +455,8 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
   if (!topic) throw new Error(`Unbekannter SEO-Themenbereich: ${cluster.topicSlug}`);
   const calculation = cluster.calculate(scale, variant);
   const slug = `${cluster.topicSlug}-${scale.slug}-${variant.slug}`;
-  const title = `${cluster.noun} ${scale.label} ${variant.label}: konkretes Rechenbeispiel`;
+  const defaultSubject = `${cluster.noun} ${scale.label} ${variant.label}`;
+  const title = `${cluster.titleSubject?.(scale, variant) ?? defaultSubject}: konkretes Rechenbeispiel`;
   const path = `/ratgeber/projekte/${cluster.topicSlug}/${slug}/`;
   return {
     topicSlug: cluster.topicSlug,
@@ -463,7 +466,7 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
     qualitySignature: `${cluster.topicSlug}|${scale.values.join("x")}|${variant.slug}|${calculation.result}`,
     slug,
     title,
-    description: `${cluster.noun} ${scale.label} ${variant.label} planen: Eingaben, Rechenweg, Ergebnis, Alternative, Checkliste und Grenzen für den deutschen Markt.`,
+    description: `${defaultSubject} planen: Eingaben, Rechenweg, Ergebnis, Alternative, Checkliste und Grenzen für den deutschen Markt.`,
     heading: title,
     intro: `Dieses Projektprofil beantwortet eine konkrete Planungsfrage: Wie lässt sich ${cluster.noun.toLowerCase()} mit ${scale.label} ${variant.label} belastbar vorbereiten? Statt eine Produktgröße zu erraten, werden Eingabe, Rechenschritt, Ergebnis und die noch offenen Prüfungen getrennt gezeigt. Alle Einheiten und Annahmen sind sichtbar, damit du das Beispiel mit deinen eigenen Messwerten nachvollziehen kannst.`,
     takeaway: `${calculation.result}. Entscheidend ist anschließend die Prüfung am realen Standort und am vollständigen Datenblatt; die Zahl allein ist weder Kaufempfehlung noch technische Freigabe.`,

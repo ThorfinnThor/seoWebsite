@@ -38,5 +38,22 @@ describe("project example library", () => {
       expect(example.relatedLinks?.length).toBeGreaterThanOrEqual(4);
     }
   });
-});
 
+  it("keeps editorially reviewed calculations and labels consistent", () => {
+    const greenhouse = getProjectExample("gewaechshaus", "gewaechshaus-1-5x2-meter-tomaten");
+    expect(greenhouse?.example?.steps[1].value).toContain("0,8 m × 2 m");
+    expect(greenhouse?.example?.result).toContain("1,4 m²");
+
+    const privacy = getProjectExample("sichtschutz", "sichtschutz-50-meter-wpc");
+    expect(privacy?.example?.steps[1].value).toContain("1,75 m");
+    expect(privacy?.example?.result).toContain("0,75 m");
+
+    const carport = getProjectExample("carport", "carport-1-95x5-meter-wandseite");
+    expect(carport?.title).toContain("1,95 × 5 Meter großes Fahrzeug");
+    expect(carport?.example?.steps[1].value).toContain("0,85 m");
+
+    const irrigation = getProjectExample("bewaesserung", "bewaesserung-2000-qm-hang");
+    expect(irrigation?.example?.result).toContain("Zeitblöcke");
+    expect(irrigation?.example?.result).not.toContain("Zonen");
+  });
+});
