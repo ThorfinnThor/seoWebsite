@@ -1,14 +1,16 @@
 import { readFile } from "node:fs/promises";
 import { z } from "zod";
 import { GardenHouseCatalogSchema, GardenHouseOverrideSchema, GardenHouseRulesSchema } from "@/lib/garden-house/types";
-import { DehumidifierCatalogSchema, DehumidifierRulesSchema } from "@/lib/dehumidifier/types";
-import { IrrigationCatalogSchema, IrrigationRulesSchema } from "@/lib/irrigation/types";
+import { DehumidifierCatalogSchema, DehumidifierOverrideSchema, DehumidifierRulesSchema } from "@/lib/dehumidifier/types";
+import { IrrigationCatalogSchema, IrrigationOverrideSchema, IrrigationRulesSchema } from "@/lib/irrigation/types";
 import { PLANNERS } from "@/lib/planners";
-import { assertCatalogSafe } from "./catalog/safeguards";
+import { assertCatalogPayloadSafe, assertCatalogSafe } from "./catalog/safeguards";
 
 const ManifestEntrySchema = z.object({ catalog: z.string().startsWith("/data/"), generatedAt: z.iso.datetime() });
 const ManifestSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), verticals: z.object({ "garden-house": ManifestEntrySchema, dehumidifier: ManifestEntrySchema, irrigation: ManifestEntrySchema }) });
-const OverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(GardenHouseOverrideSchema) });
+const GardenHouseOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(GardenHouseOverrideSchema) });
+const DehumidifierOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(DehumidifierOverrideSchema) });
+const IrrigationOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(IrrigationOverrideSchema) });
 const knownPlannerIds = new Set(PLANNERS.map((planner) => planner.id));
 const MerchantSchema = z.object({
   merchantId: z.string().regex(/^[a-z0-9-]+$/),
@@ -53,11 +55,15 @@ async function main() {
   const dehumidifiers = DehumidifierCatalogSchema.parse(await json("public/data/dehumidifier/catalog.json"));
   const irrigation = IrrigationCatalogSchema.parse(await json("public/data/irrigation/catalog.json"));
   assertCatalogSafe(catalog);
+  assertCatalogPayloadSafe(dehumidifiers);
+  assertCatalogPayloadSafe(irrigation);
   GardenHouseRulesSchema.parse(await json("data/manual/garden-house-rules.json"));
   DehumidifierRulesSchema.parse(await json("data/manual/dehumidifier-rules.json"));
   IrrigationRulesSchema.parse(await json("data/manual/irrigation-rules.json"));
   ManifestSchema.parse(await json("public/data/manifest.json"));
-  OverridesSchema.parse(await json("data/overrides/garden-house.json"));
+  GardenHouseOverridesSchema.parse(await json("data/overrides/garden-house.json"));
+  DehumidifierOverridesSchema.parse(await json("data/overrides/dehumidifier.json"));
+  IrrigationOverridesSchema.parse(await json("data/overrides/irrigation.json"));
   const merchants = MerchantsSchema.parse(await json("data/manual/merchants.json"));
   ReviewSchema.parse(await json("data/review/garden-house.json"));
   ReviewSchema.parse(await json("data/review/dehumidifier.json"));
@@ -65,8 +71,6 @@ async function main() {
   FeedReportSchema.parse(await json("public/data/garden-house/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/dehumidifier/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/irrigation/feed-report.json"));
-  z.object({ schemaVersion:z.literal(1),overrides:z.array(z.object({id:z.string().min(1)}).passthrough()) }).parse(await json("data/overrides/dehumidifier.json"));
-  z.object({ schemaVersion:z.literal(1),overrides:z.array(z.object({id:z.string().min(1)}).passthrough()) }).parse(await json("data/overrides/irrigation.json"));
   console.log(`Validated catalogs: garden-house ${catalog.products.length}, dehumidifier ${dehumidifiers.products.length}, irrigation ${irrigation.products.length} products; ${merchants.merchants.length} Awin programmes registered.`);
 }
 

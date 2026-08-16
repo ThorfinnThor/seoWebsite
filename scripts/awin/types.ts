@@ -1,4 +1,7 @@
 import type { GardenHouseOffer, GardenHouseOverride, GardenHouseProduct } from "@/lib/garden-house/types";
+import type { OfferBase } from "@/lib/catalog/types";
+import type { DehumidifierProduct } from "@/lib/dehumidifier/types";
+import type { IrrigationProduct } from "@/lib/irrigation/types";
 
 export type RawFeedRow = Record<string, string | undefined>;
 
@@ -21,3 +24,20 @@ export interface GardenHouseCandidate {
 }
 
 export type ProductOverride = GardenHouseOverride;
+
+export interface AffiliateCandidate<TProduct> {
+  id: string;
+  name: string;
+  brand?: string;
+  gtin?: string;
+  mpn?: string;
+  candidateAttributes: Partial<TProduct>;
+  product?: TProduct;
+  offer?: OfferBase;
+  merchantProductUrl?: string;
+  imageUrl?: string;
+  issues: string[];
+}
+
+export type DehumidifierCandidate = AffiliateCandidate<DehumidifierProduct>;
+export type IrrigationCandidate = AffiliateCandidate<IrrigationProduct>;

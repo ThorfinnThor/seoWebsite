@@ -129,6 +129,8 @@ const source = {
   },
 } satisfies Record<string, GuideSource>;
 
+export const GUIDE_SOURCE_LIBRARY = source;
+
 export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
   "/garten/gartenhaus-groesse/": {
     sources: [source.modelBuildingCode, source.berlinBuildingCode, source.allotmentLaw],

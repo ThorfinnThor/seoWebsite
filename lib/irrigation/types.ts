@@ -26,10 +26,17 @@ export const IrrigationProductSchema = ProductBaseSchema.extend({
   requiredAccessories: z.array(z.string()).optional(),
 });
 
-export const IrrigationCatalogSchema = z.object({ schemaVersion:z.literal(1),vertical:z.literal("irrigation"),generatedAt:z.iso.datetime(),sourceUpdatedAt:z.iso.datetime().optional(),products:z.array(IrrigationProductSchema),offers:z.array(OfferBaseSchema) });
+export const IrrigationCatalogSchema = z.object({ schemaVersion:z.literal(1),vertical:z.literal("irrigation"),generatedAt:z.iso.datetime(),sourceUpdatedAt:z.iso.datetime().optional(),products:z.array(IrrigationProductSchema),offers:z.array(OfferBaseSchema) }).superRefine((catalog,ctx)=>{
+  const productIds=new Set(catalog.products.map((product)=>product.id));
+  if(productIds.size!==catalog.products.length) ctx.addIssue({code:"custom",path:["products"],message:"Duplicate product ID"});
+  const offerIds=new Set<string>();
+  catalog.offers.forEach((offer,index)=>{if(!productIds.has(offer.productId)) ctx.addIssue({code:"custom",path:["offers",index,"productId"],message:"Unknown product"});if(offerIds.has(offer.id)) ctx.addIssue({code:"custom",path:["offers",index,"id"],message:"Duplicate offer ID"});offerIds.add(offer.id);});
+});
+export const IrrigationOverrideSchema = IrrigationProductSchema.partial().extend({ id:z.string().min(1),reviewNote:z.string().min(1).optional() });
 export const IrrigationRulesSchema = z.object({ version:z.literal(1),status:z.literal("planning-heuristic"),hedgeReserveFactor:z.number().min(1),bedDriplineMPerM2:z.number().positive(),controllerReserveZones:z.number().int().nonnegative() });
 export type IrrigationInput=z.infer<typeof IrrigationInputSchema>;
 export type IrrigationProduct=z.infer<typeof IrrigationProductSchema>;
 export type IrrigationCatalog=z.infer<typeof IrrigationCatalogSchema>;
+export type IrrigationOverride=z.infer<typeof IrrigationOverrideSchema>;
 export type IrrigationRules=z.infer<typeof IrrigationRulesSchema>;
 export interface IrrigationPlan { style:"drip"|"sprinkler"|"combined"; hedgeDriplineM:number; bedDriplineM:number; activeCategories:number; controllerZones:number; components:Array<{kind:string;label:string;quantity:string;note:string}>; warnings:string[] }

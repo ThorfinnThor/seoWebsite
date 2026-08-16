@@ -3,7 +3,7 @@ import type { GardenHouseCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /gartenhaus|gerätehaus|geraetehaus|gartenschuppen|geräteschuppen|geraeteschuppen|holzhaus|blockbohlenhaus/i;
 
-function value(row: RawFeedRow, ...keys: string[]): string | undefined {
+export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
   for (const key of keys) {
     const found = row[key] ?? row[Object.keys(row).find((rowKey) => rowKey.toLowerCase() === key.toLowerCase()) ?? ""];
     if (found?.trim()) return found.trim();
@@ -37,15 +37,15 @@ export function parseDimensions(raw?: string): { widthCm: number; depthCm: numbe
   return { widthCm: Math.round(widthCm * 10) / 10, depthCm: Math.round(depthCm * 10) / 10 };
 }
 
-function normalizeGtin(raw?: string): string | undefined {
+export function normalizeGtin(raw?: string): string | undefined {
   const digits = raw?.replace(/\D/g, "");
   return digits && digits.length >= 8 && digits.length <= 14 ? digits : undefined;
 }
 
-function slug(raw: string): string { return raw.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60); }
-function shortHash(raw: string): string { return createHash("sha256").update(raw).digest("hex").slice(0, 12); }
+export function slug(raw: string): string { return raw.toLowerCase().normalize("NFKD").replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 60); }
+export function shortHash(raw: string): string { return createHash("sha256").update(raw).digest("hex").slice(0, 12); }
 
-function productIdentity(row: RawFeedRow, merchantId: string, merchantProductId: string): { id: string; gtin?: string; mpn?: string; brand?: string } {
+export function productIdentity(row: RawFeedRow, merchantId: string, merchantProductId: string): { id: string; gtin?: string; mpn?: string; brand?: string } {
   const gtin = normalizeGtin(value(row, "product_GTIN", "ean", "gtin"));
   const brand = value(row, "brand_name", "brand");
   const mpn = value(row, "mpn", "model_number", "product_model");
@@ -54,7 +54,7 @@ function productIdentity(row: RawFeedRow, merchantId: string, merchantProductId:
   return { id: `merchant:${slug(merchantId)}:${slug(merchantProductId)}`, brand, mpn };
 }
 
-function parsePrice(raw?: string): number | undefined {
+export function parsePrice(raw?: string): number | undefined {
   if (!raw) return undefined;
   const cleaned = raw.replace(/\s/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", ".").replace(/[^\d.-]/g, "");
   const price = Number(cleaned);
@@ -75,7 +75,7 @@ function roofType(text: string): "flat" | "pent" | "gable" | undefined {
   return undefined;
 }
 
-function availability(row: RawFeedRow): { available: boolean; ambiguous: boolean } {
+export function availability(row: RawFeedRow): { available: boolean; ambiguous: boolean } {
   const raw = [value(row, "in_stock"), value(row, "stock_status"), value(row, "stock_quantity")].filter(Boolean).join(" ").toLowerCase();
   if (!raw) return { available: false, ambiguous: true };
   if (/out of stock|nicht verfügbar|nicht verfuegbar|ausverkauft|^0$|false|no/i.test(raw)) return { available: false, ambiguous: false };
@@ -83,14 +83,14 @@ function availability(row: RawFeedRow): { available: boolean; ambiguous: boolean
   return { available: false, ambiguous: true };
 }
 
-function delivery(raw?: string): { deliveryCostStatus: "known" | "free" | "unknown"; deliveryCostEur?: number } {
+export function delivery(raw?: string): { deliveryCostStatus: "known" | "free" | "unknown"; deliveryCostEur?: number } {
   if (!raw) return { deliveryCostStatus: "unknown" };
   if (/kostenlos|versandkostenfrei|free/i.test(raw) || /^\s*0(?:[,.]0+)?\s*(?:€|eur)?\s*$/i.test(raw)) return { deliveryCostStatus: "free", deliveryCostEur: 0 };
   const cost = parsePrice(raw);
   return cost === undefined ? { deliveryCostStatus: "unknown" } : { deliveryCostStatus: "known", deliveryCostEur: cost };
 }
 
-function isoDate(raw?: string): string {
+export function isoDate(raw?: string): string {
   const date = raw ? new Date(raw) : new Date();
   return Number.isNaN(date.getTime()) ? new Date().toISOString() : date.toISOString();
 }

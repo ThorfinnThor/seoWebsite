@@ -442,6 +442,41 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-related span { margin-top: 7px; color: var(--muted); font-size: .9rem; }
 .guide-limit { padding: 22px; border-left: 4px solid var(--warning); background: #fcf7ed; }
 .guide-limit p { margin: 8px 0 0; }
+.topic-directory { background: var(--cream); }
+.directory-section { padding: 90px max(24px,calc((100vw - 1272px)/2)); }
+.directory-section > .section-heading { display: grid; max-width: none; margin-bottom: 42px; grid-template-columns: minmax(0,1fr) minmax(280px,.72fr); align-items: end; gap: 54px; }
+.directory-section > .section-heading h2 { margin: 8px 0 0; }
+.directory-section > .section-heading > p { margin: 0; }
+.directory-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
+.directory-card { display: flex; min-width: 0; padding: 30px; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
+.directory-card h2, .directory-card h3 { margin: 10px 0 12px; overflow-wrap: anywhere; }
+.directory-card > p:not(.eyebrow) { color: var(--muted); }
+.directory-card .text-link { margin-top: auto; }
+.topic-card { position: relative; }
+.topic-card > span { display: inline-flex; width: fit-content; margin: 4px 0 18px; padding: 7px 10px; border-radius: 999px; color: var(--green); background: var(--lime); font-size: .75rem; font-weight: 850; }
+.directory-section--cluster { padding-top: 70px; padding-bottom: 70px; border-top: 1px solid var(--line); }
+.directory-section--cluster:nth-of-type(even) { background: #fbfaf6; }
+.topic-method { display: grid; max-width: 1272px; margin: 0 auto; padding: 90px 24px; grid-template-columns: .8fr 1.2fr; gap: 90px; }
+.topic-method h2, .topic-boundary h2 { margin: 8px 0 20px; }
+.topic-method ol { display: grid; margin: 0; padding: 0; list-style: none; }
+.topic-method li { display: grid; padding: 22px 0; border-top: 1px solid var(--line); grid-template-columns: 58px 1fr; align-items: start; gap: 16px; }
+.topic-method li:last-child { border-bottom: 1px solid var(--line); }
+.topic-method li span { color: var(--green-2); font-family: Georgia,serif; font-size: 1.5rem; font-weight: 700; }
+.topic-method li strong { font-size: 1.08rem; line-height: 1.45; }
+.topic-boundary { display: grid; padding: 75px max(24px,calc((100vw - 1272px)/2)); color: #fff; background: var(--green); grid-template-columns: .8fr 1.2fr; align-items: start; gap: 90px; }
+.topic-boundary .eyebrow { color: var(--lime); }
+.topic-boundary p:last-child { margin: 0; color: #dce9e2; font-size: 1.08rem; line-height: 1.75; }
+.project-library-callout { display: flex; max-width: 1272px; margin: 0 auto 100px; padding: 42px; align-items: center; justify-content: space-between; gap: 40px; border: 1px solid var(--line); border-radius: var(--radius); background: linear-gradient(135deg,#f3f7ed,#fbfaf6); }
+.project-library-callout > div { max-width: 780px; }
+.project-library-callout h2 { margin: 8px 0 12px; }
+.project-library-callout p:last-child { margin-bottom: 0; color: var(--muted); }
+.project-directory-hero > p { max-width: 900px; }
+.project-example-group { content-visibility: auto; contain-intrinsic-size: 1100px; }
+.project-example-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.project-example-card { display: flex; min-width: 0; padding: 26px; flex-direction: column; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.project-example-card h3 { margin: 8px 0 12px; font-size: 1.35rem; overflow-wrap: anywhere; }
+.project-example-card > p:not(.eyebrow) { color: var(--muted); font-size: .9rem; }
+.project-example-card .text-link { margin-top: auto; }
 .guide-cta { display: flex; padding: 65px max(24px,calc((100vw - 1272px)/2)); align-items: center; justify-content: space-between; gap: 40px; color: #fff; background: var(--green); }
 .guide-cta h2 { max-width: 720px; margin-bottom: 10px; font-size: clamp(2rem,4vw,3.4rem); }
 .guide-cta p:last-child { margin: 0; color: #c8d8d0; }
@@ -500,6 +535,13 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .calculator-error { margin: 18px 54px; }
 
 @media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h3 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid, .planner-faq-list { grid-template-columns: repeat(2,1fr); } .planner-faq-list div:last-child { grid-column: 1 / -1; } }
+@media (max-width: 820px) { .topic-method, .topic-boundary { grid-template-columns: 1fr; gap: 34px; } }
+@media (max-width: 980px) { .project-example-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 980px) { .directory-grid { grid-template-columns: repeat(2,minmax(0,1fr)); } }
+@media (max-width: 760px) { .directory-section > .section-heading { grid-template-columns: 1fr; align-items: start; gap: 18px; } }
+@media (max-width: 760px) { .project-library-callout { margin: 0 24px 70px; padding: 30px 24px; align-items: flex-start; flex-direction: column; } .project-library-callout .button { width: 100%; } }
+@media (max-width: 650px) { .directory-section { padding: 70px 20px; } .directory-grid { grid-template-columns: 1fr; } .directory-card { padding: 26px 24px; } }
+@media (max-width: 620px) { .project-example-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .legal-page > header h1 { font-size: 2.2rem; } .guide-page header h1 { font-size: 2.45rem; } .tool-filters { display: grid; width: 100%; grid-template-columns: repeat(3,1fr); } .tool-filter { justify-content: center; padding-left: 8px; padding-right: 8px; } .tool-card { display: flex; padding: 28px 24px; } .tool-card-top { display: flex; } .tool-card-top .status-pill { display: inline-flex; } .tool-card h3 { margin-top: 28px; } .tool-card .button { width: 100%; } .related-guides .guide-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .guide-layout aside { display: block; padding: 24px; } .guide-layout aside p { margin-bottom: 22px; } .guide-layout aside .button { width: 100%; max-width: none; } .guide-copy > .guide-example { padding: 26px 22px; } }
 @media (max-width: 650px) { .guide-related > div { grid-template-columns: 1fr; } }

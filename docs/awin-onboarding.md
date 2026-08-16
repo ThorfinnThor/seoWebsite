@@ -106,9 +106,17 @@ Only configure feeds after the relevant advertiser programmes have approved the 
 1. In Awin open **Toolbox → Create-a-Feed**.
 2. Select approved advertisers, categories and the required columns.
 3. Create or copy the reusable feed download URLs. Awin notes that the product-feed API key is different from the Publisher API token.
-4. Store the complete URLs only in the GitHub Actions repository secret `AWIN_FEED_URLS_JSON`, as a JSON array of strings.
+4. Store the complete URLs only in the GitHub Actions repository secret `AWIN_FEED_URLS_JSON`. A simple JSON array remains supported and is scanned for all three catalogs. Prefer the grouped format when separate feeds are available:
+
+```json
+{
+  "garden-house": ["https://…"],
+  "dehumidifier": ["https://…"],
+  "irrigation": ["https://…"]
+}
+```
 5. In GitHub open **Actions → Sync affiliate product feeds → Run workflow**.
-6. Review new candidates under `data/review/`. Only products explicitly marked `reviewed: true` can enter public recommendations.
+6. Review new candidates under `data/review/` or run `npm run review:products` for a compact status. The importer now recognizes garden houses, dehumidifiers and irrigation components. Only products explicitly marked `reviewed: true` with `dataQuality: "mixed"` or `"curated"` in the matching override file can enter a public catalog.
 7. Keep the schedule disabled until at least one manual import and link test has succeeded. Only then create the GitHub repository variable `AWIN_FEED_SCHEDULE_ENABLED` with value `true`.
 
 Never add Awin keys, feed download URLs or API tokens to Vercel, `.env.example`, `public/` or committed source files.

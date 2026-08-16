@@ -1,9 +1,14 @@
 import { GardenHouseCatalogSchema, type GardenHouseCatalog } from "@/lib/garden-house/types";
+import type { OfferBase, ProductBase, StaticCatalog } from "@/lib/catalog/types";
 
 const MAX_CATALOG_BYTES = 2 * 1024 * 1024;
 
 export function assertCatalogSafe(next: unknown, previous?: GardenHouseCatalog, configuredSecretUrls: string[] = []): GardenHouseCatalog {
   const catalog = GardenHouseCatalogSchema.parse(next);
+  return assertCatalogPayloadSafe(catalog, previous, configuredSecretUrls);
+}
+
+export function assertCatalogPayloadSafe<T extends StaticCatalog<ProductBase, OfferBase>>(catalog: T, previous?: T, configuredSecretUrls: string[] = []): T {
   const serialized = JSON.stringify(catalog);
   if (Buffer.byteLength(serialized, "utf8") > MAX_CATALOG_BYTES) throw new Error("Catalog exceeds 2 MiB hard limit");
   for (const secret of configuredSecretUrls) {

@@ -1,4 +1,5 @@
 import type { GuideRelatedLink } from "@/components/seo/GuidePage";
+import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
 import type { SeoGuide } from "@/lib/seo-guides";
 
 type Cluster = {
@@ -9,6 +10,7 @@ type Cluster = {
   decisionMethod: string;
   boundary: string;
   relatedLinks: [GuideRelatedLink, GuideRelatedLink, GuideRelatedLink];
+  sources: readonly GuideSource[];
 };
 
 type ScenarioSeed = {
@@ -41,6 +43,7 @@ const clusters = {
       { label: "Fundament auswählen", href: "/garten/gartenhaus-fundament/", description: "Untergrund, Last und Wasserführung vor dem Aufbau prüfen." },
       { label: "Gartenhaus-Kosten planen", href: "/garten/gartenhaus-kosten/", description: "Haus, Unterbau, Lieferung und Zubehör gemeinsam kalkulieren." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.modelBuildingCode, GUIDE_SOURCE_LIBRARY.berlinBuildingCode],
   },
   mower: {
     label: "Mähroboter",
@@ -54,6 +57,7 @@ const clusters = {
       { label: "Fläche richtig messen", href: "/garten/maehroboter-flaeche-berechnen/", description: "Teilflächen und Abzüge nachvollziehbar dokumentieren." },
       { label: "Steigung und Engstellen", href: "/garten/maehroboter-steigung-engstellen/", description: "Die schwierigsten Gartenstellen vor dem Kauf prüfen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.mowerSlope, GUIDE_SOURCE_LIBRARY.mowerPassages, GUIDE_SOURCE_LIBRARY.mowerSecondaryArea],
   },
   terrace: {
     label: "Terrasse",
@@ -67,6 +71,7 @@ const clusters = {
       { label: "Unterkonstruktion planen", href: "/garten/terrasse-unterkonstruktion/", description: "Auflager, Stöße und Randzonen berücksichtigen." },
       { label: "Terrassenkosten einordnen", href: "/garten/terrasse-kosten/", description: "Materialgruppen und Zusatzposten vollständig erfassen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.terraceConstruction],
   },
   irrigation: {
     label: "Bewässerung",
@@ -80,6 +85,7 @@ const clusters = {
       { label: "Durchfluss messen", href: "/garten/bewaesserung-durchfluss-messen/", description: "Den Eimer-Test am vorgesehenen Anschluss durchführen." },
       { label: "Bewässerungscomputer und Zonen", href: "/garten/bewaesserungscomputer-zonen/", description: "Steuerung passend zur hydraulischen Aufteilung wählen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.dvgwGarden, GUIDE_SOURCE_LIBRARY.rainwater],
   },
   greenhouse: {
     label: "Gewächshaus",
@@ -93,6 +99,7 @@ const clusters = {
       { label: "Gewächshaus-Größe", href: "/garten/gewaechshaus-groesse/", description: "Nutzfläche aus Kulturplan und Bewegungsraum ableiten." },
       { label: "Belüftung planen", href: "/garten/gewaechshaus-belueftung/", description: "Dachfenster, Tür und Automatik zusammen betrachten." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.greenhouseSmall, GUIDE_SOURCE_LIBRARY.modelBuildingCode],
   },
   screen: {
     label: "Sichtschutz",
@@ -106,6 +113,7 @@ const clusters = {
       { label: "Elemente berechnen", href: "/garten/sichtschutz-elemente-berechnen/", description: "Standardbreiten und Restfelder vergleichen." },
       { label: "Pfosten und Fundament", href: "/garten/sichtschutz-pfosten-fundament/", description: "Wind, Untergrund und Befestigung gemeinsam prüfen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.modelBuildingCode, GUIDE_SOURCE_LIBRARY.berlinBuildingCode],
   },
   carport: {
     label: "Carport",
@@ -119,6 +127,7 @@ const clusters = {
       { label: "Carport-Größe", href: "/garten/carport-groesse/", description: "Lichte Maße von Dach- und Außenmaß unterscheiden." },
       { label: "Dachentwässerung", href: "/garten/carport-dachentwaesserung/", description: "Rinne, Ablauf und Wasserweg frühzeitig festlegen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.modelBuildingCode, GUIDE_SOURCE_LIBRARY.berlinBuildingCode, GUIDE_SOURCE_LIBRARY.rainwaterManagement],
   },
   floor: {
     label: "Bodenbelag",
@@ -132,6 +141,7 @@ const clusters = {
       { label: "Laminat-Verschnitt", href: "/haus/boden/laminat-verschnitt-berechnen/", description: "Raumform und Verlegerichtung berücksichtigen." },
       { label: "Untergrund und Trittschall", href: "/haus/boden/untergrund-trittschall/", description: "Ebenheit, Feuchte und Systemaufbau prüfen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.eplfFlooring, GUIDE_SOURCE_LIBRARY.mmfaFlooring],
   },
   drywall: {
     label: "Trockenbau",
@@ -145,6 +155,7 @@ const clusters = {
       { label: "Platten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Formate, Öffnungen und Verschnitt einordnen." },
       { label: "Profile und Ständerwerk", href: "/haus/innenausbau/trockenbau-profile-staenderwerk/", description: "Raster, Randprofile und Verstärkungen planen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.knaufWalls, GUIDE_SOURCE_LIBRARY.gypsumOpenings, GUIDE_SOURCE_LIBRARY.rigipsCatalogs],
   },
   dehumidifier: {
     label: "Luftentfeuchter",
@@ -158,6 +169,7 @@ const clusters = {
       { label: "Luftentfeuchter im Keller", href: "/haus/raumklima/luftentfeuchter-keller/", description: "Temperatur und saisonale Lüftung berücksichtigen." },
       { label: "Stromverbrauch berechnen", href: "/haus/raumklima/luftentfeuchter-stromverbrauch/", description: "Leistung, Laufzeit und Arbeitspreis transparent rechnen." },
     ],
+    sources: [GUIDE_SOURCE_LIBRARY.mold, GUIDE_SOURCE_LIBRARY.ventilation],
   },
 } satisfies Record<string, Cluster>;
 
@@ -240,6 +252,18 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
       },
     ],
     relatedLinks: cluster.relatedLinks,
+    sources: [...cluster.sources],
+    example: {
+      title: `Rechenbeispiel: ${seed.scenario}`,
+      intro: `Das Beispiel zeigt die im Ratgeber verwendete Planungsannahme als prüfbare Rechenkette. Eingaben und Einheiten müssen vor einer Übertragung auf das eigene Projekt ersetzt werden.`,
+      steps: [
+        { label: "Ausgangslage", value: seed.measurement },
+        { label: "Rechnung", value: seed.calculation },
+        { label: "Planungswert", value: seed.result },
+      ],
+      result: seed.result,
+      note: `Der Wert ist ein transparenter Planungsrahmen. ${seed.caution}`,
+    },
     limitation: cluster.boundary,
   };
 }

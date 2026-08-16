@@ -4,6 +4,7 @@ import type {
   GuideRelatedLink,
   GuideSection,
 } from "@/components/seo/GuidePage";
+import type { GuideExample, GuideSource } from "@/lib/guide-enrichments";
 import { SEO_GUIDE_DEPTH } from "@/lib/seo-guide-depth";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { SEO_GUIDES_WAVE2 } from "@/lib/seo-guides-wave2";
@@ -23,6 +24,8 @@ export type SeoGuide = {
   faqs?: GuideFaq[];
   relatedLinks?: GuideRelatedLink[];
   limitation?: string;
+  sources?: GuideSource[];
+  example?: GuideExample;
 };
 
 const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [

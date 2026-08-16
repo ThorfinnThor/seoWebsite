@@ -13,14 +13,16 @@
     "test": "vitest run",
     "validate:data": "node --import tsx scripts/validate-data.ts",
     "sync:products": "node --import tsx scripts/awin/sync-products.ts",
+    "review:products": "node --import tsx scripts/awin/review-status.ts",
     "verify:static": "node --import tsx scripts/verify-static-build.ts",
     "audit:site": "node --import tsx scripts/audit-static-site.ts",
     "audit:content": "node --import tsx scripts/audit-content-depth.ts",
     "audit:content:strict": "node --import tsx scripts/audit-content-depth.ts --strict",
+    "audit:projects": "node --import tsx scripts/audit-project-examples.ts",
     "readiness": "node --import tsx scripts/check-launch-readiness.ts",
     "readiness:public": "node --import tsx scripts/check-launch-readiness.ts --mode=public --strict",
     "readiness:affiliate": "node --import tsx scripts/check-launch-readiness.ts --mode=affiliate --strict",
-    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run build && npm run verify:static && npm run audit:site"
+    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run audit:projects && npm run build && npm run verify:static && npm run audit:site"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

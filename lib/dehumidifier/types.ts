@@ -37,12 +37,18 @@ export const DehumidifierCatalogSchema = z.object({
   offers: z.array(OfferBaseSchema),
 }).superRefine((catalog, ctx) => {
   const products = new Set(catalog.products.map((product) => product.id));
+  if (products.size !== catalog.products.length) ctx.addIssue({ code: "custom", path: ["products"], message: "Duplicate product ID" });
   const offers = new Set<string>();
   catalog.offers.forEach((offer, index) => {
     if (!products.has(offer.productId)) ctx.addIssue({ code: "custom", path: ["offers", index, "productId"], message: "Unknown product" });
     if (offers.has(offer.id)) ctx.addIssue({ code: "custom", path: ["offers", index, "id"], message: "Duplicate offer ID" });
     offers.add(offer.id);
   });
+});
+
+export const DehumidifierOverrideSchema = DehumidifierProductSchema.partial().extend({
+  id: z.string().min(1),
+  reviewNote: z.string().min(1).optional(),
 });
 
 export const DehumidifierRulesSchema = z.object({
@@ -54,6 +60,7 @@ export const DehumidifierRulesSchema = z.object({
 export type DehumidifierInput = z.infer<typeof DehumidifierInputSchema>;
 export type DehumidifierProduct = z.infer<typeof DehumidifierProductSchema>;
 export type DehumidifierCatalog = z.infer<typeof DehumidifierCatalogSchema>;
+export type DehumidifierOverride = z.infer<typeof DehumidifierOverrideSchema>;
 export type DehumidifierRules = z.infer<typeof DehumidifierRulesSchema>;
 
 export interface DehumidifierRequirements { margin: number; requiredAreaM2: number; requiredVolumeM3: number; roomVolumeM3: number }

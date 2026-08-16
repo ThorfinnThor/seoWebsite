@@ -3,6 +3,8 @@ import path from "node:path";
 import { GUIDE_ENRICHMENTS } from "@/lib/guide-enrichments";
 import { legalContactComplete } from "@/lib/legal";
 import { SITE } from "@/lib/site";
+import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
+import { PROJECT_EXAMPLES } from "@/lib/project-examples";
 
 const OUT_DIR = path.resolve("out");
 const SITE_URL = SITE.url.replace(/\/$/, "");
@@ -59,6 +61,8 @@ const pages = await Promise.all(pageFiles.map(async (file) => {
 
 const errors: string[] = [];
 const indexablePages = pages.filter((page) => !page.noindex);
+const scenarioRoutes = new Set(SEO_GUIDES_SCENARIOS.map((guide) => `/ratgeber/${guide.slug}/`));
+const projectExampleRoutes = new Set(PROJECT_EXAMPLES.map((example) => `/ratgeber/projekte/${example.topicSlug}/${example.slug}/`));
 
 for (const page of pages) {
   const normalizedHtml = page.html.replaceAll("&amp;", "&");
@@ -89,6 +93,16 @@ for (const page of pages) {
     if (!page.html.includes("Kurzantwort")) errors.push(`${page.route}: sichtbare Kurzantwort fehlt`);
     if (!page.html.includes('rel="author"')) errors.push(`${page.route}: sichtbarer Autor fehlt`);
   }
+  if (scenarioRoutes.has(page.route)) {
+    if (!page.html.includes('class="guide-sources"') || !page.html.includes('"citation":[')) errors.push(`${page.route}: Szenario-Ratgeber ohne sichtbare Quellen und Citation`);
+    if (!page.html.includes('class="guide-example"')) errors.push(`${page.route}: Szenario-Ratgeber ohne sichtbares Rechenbeispiel`);
+  }
+  if (projectExampleRoutes.has(page.route)) {
+    if (!page.html.includes('class="guide-sources"') || !page.html.includes('"citation":[')) errors.push(`${page.route}: Projektbeispiel ohne sichtbare Quellen und Citation`);
+    if (!page.html.includes('class="guide-example"')) errors.push(`${page.route}: Projektbeispiel ohne sichtbare Rechenkette`);
+    if (!page.html.includes('class="guide-comparison"')) errors.push(`${page.route}: Projektbeispiel ohne Ergebnisvergleich`);
+    if (!page.html.includes('class="guide-checklist"')) errors.push(`${page.route}: Projektbeispiel ohne Prüfliste`);
+  }
   const enrichment = GUIDE_ENRICHMENTS[page.route];
   if (enrichment?.sources?.length) {
     if (!page.html.includes('class="guide-sources"')) errors.push(`${page.route}: sichtbarer Quellenblock fehlt`);
@@ -112,6 +126,10 @@ for (const page of pages) {
 
 for (const route of Object.keys(GUIDE_ENRICHMENTS)) {
   if (!pages.some((page) => page.route === route)) errors.push(`${route}: Quellenkonfiguration ohne statische Seite`);
+}
+
+for (const route of projectExampleRoutes) {
+  if (!pages.some((page) => page.route === route)) errors.push(`${route}: Projektbeispiel wurde nicht statisch gebaut`);
 }
 
 for (const field of ["title", "description"] as const) {
@@ -180,7 +198,8 @@ if (errors.length) {
   console.error(errors.map((error) => `- ${error}`).join("\n"));
   process.exitCode = 1;
 } else {
-  const sourcedGuides = Object.values(GUIDE_ENRICHMENTS).filter((entry) => entry.sources?.length).length;
-  const guideExamples = Object.values(GUIDE_ENRICHMENTS).filter((entry) => entry.example).length;
+  const guidePages = pages.filter((page) => page.html.includes('class="guide-page"'));
+  const sourcedGuides = guidePages.filter((page) => page.html.includes('class="guide-sources"')).length;
+  const guideExamples = guidePages.filter((page) => page.html.includes('class="guide-example"')).length;
   console.log(`Static site audit passed: ${pages.length} pages, ${indexablePages.length} indexable, ${sourcedGuides} sourced guides, ${guideExamples} worked examples, internal links valid.`);
 }

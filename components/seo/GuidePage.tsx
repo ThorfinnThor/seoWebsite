@@ -2,6 +2,7 @@ import Link from "next/link";
 import type { ReactNode } from "react";
 import {
   GUIDE_ENRICHMENTS,
+  type GuideExample,
   type GuideSource,
 } from "@/lib/guide-enrichments";
 import { GUIDE_DEPTH_EXISTING } from "@/lib/guide-depth-existing";
@@ -47,6 +48,7 @@ interface GuidePageProps {
   limitation?: string;
   calculator?: ReactNode;
   sources?: GuideSource[];
+  example?: GuideExample;
   comparison?: GuideComparison;
   checklist?: string[];
   faqs?: GuideFaq[];
@@ -67,6 +69,7 @@ export function GuidePage({
   limitation = "Diese Einordnung ersetzt keine Prüfung von Baurecht, Abständen, Statik, Fundament oder Herstellerangaben für deinen konkreten Standort.",
   calculator,
   sources = [],
+  example,
   comparison,
   checklist = [],
   faqs = [],
@@ -84,7 +87,7 @@ export function GuidePage({
     (source, index, allSources) =>
       allSources.findIndex((candidate) => candidate.href === source.href) === index,
   );
-  const example = enrichment?.example;
+  const resolvedExample = example ?? enrichment?.example;
   const articleWordCount = [
     title,
     intro,
@@ -94,6 +97,7 @@ export function GuidePage({
     ...resolvedChecklist,
     ...resolvedFaqs.flatMap((faq) => [faq.question, faq.answer]),
     ...resolvedRelatedLinks.flatMap((link) => [link.label, link.description]),
+    ...(resolvedExample ? [resolvedExample.title, resolvedExample.intro, ...resolvedExample.steps.flatMap((step) => [step.label, step.value]), resolvedExample.result, resolvedExample.note ?? ""] : []),
     limitation,
   ].join(" ").trim().split(/\s+/).filter(Boolean).length;
 
@@ -204,21 +208,21 @@ export function GuidePage({
               </section>
             )}
 
-            {example && (
+            {resolvedExample && (
               <section className="guide-example" aria-labelledby="guide-example-title">
                 <p className="eyebrow">Nachvollziehbares Rechenbeispiel</p>
-                <h2 id="guide-example-title">{example.title}</h2>
-                <p>{example.intro}</p>
+                <h2 id="guide-example-title">{resolvedExample.title}</h2>
+                <p>{resolvedExample.intro}</p>
                 <dl>
-                  {example.steps.map((step) => (
+                  {resolvedExample.steps.map((step) => (
                     <div key={step.label}>
                       <dt>{step.label}</dt>
                       <dd>{step.value}</dd>
                     </div>
                   ))}
                 </dl>
-                <p className="guide-example-result"><strong>Ergebnis:</strong> {example.result}</p>
-                {example.note && <p className="guide-example-note">{example.note}</p>}
+                <p className="guide-example-result"><strong>Ergebnis:</strong> {resolvedExample.result}</p>
+                {resolvedExample.note && <p className="guide-example-note">{resolvedExample.note}</p>}
               </section>
             )}
 

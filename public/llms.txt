@@ -22,6 +22,34 @@
 - [Trockenbau-Rechner](https://www.passendplanen.de/haus/innenausbau/trockenbau-rechner/): Platten-, Profil- und Dämmrahmen berechnen.
 - [Luftentfeuchter-Rechner](https://www.passendplanen.de/haus/raumklima/luftentfeuchter-rechner/): Raumvolumen und Auswahlrahmen einordnen.
 
+## Themen-Hubs
+
+- [Gartenhaus](https://www.passendplanen.de/ratgeber/thema/gartenhaus/): Größe, Nutzung, Bauart, Boden und Kosten.
+- [Mähroboter](https://www.passendplanen.de/ratgeber/thema/maehroboter/): Nettofläche, Gelände, Zonen und Navigation.
+- [Terrasse](https://www.passendplanen.de/ratgeber/thema/terrasse/): Dielen, Unterkonstruktion, Verlegung und Mengen.
+- [Bewässerung](https://www.passendplanen.de/ratgeber/thema/bewaesserung/): Durchfluss, Druck, Pflanzen und Zonen.
+- [Gewächshaus](https://www.passendplanen.de/ratgeber/thema/gewaechshaus/): Beete, Klima, Lüftung und Konstruktion.
+- [Sichtschutz](https://www.passendplanen.de/ratgeber/thema/sichtschutz/): Raster, Pfosten, Tor, Wind und Fundament.
+- [Carport](https://www.passendplanen.de/ratgeber/thema/carport/): Fahrzeug, lichte Maße, Zufahrt und Dachwasser.
+- [Bodenbelag](https://www.passendplanen.de/ratgeber/thema/bodenbelag/): Untergrund, Fläche, Verschnitt und Pakete.
+- [Trockenbau](https://www.passendplanen.de/ratgeber/thema/trockenbau/): Platten, Profile, Öffnungen und Systemgrenzen.
+- [Luftentfeuchter](https://www.passendplanen.de/ratgeber/thema/luftentfeuchter/): Raumvolumen, Temperatur, Feuchte und Betrieb.
+
+## Konkrete Projektbeispiele
+
+Die Projektbibliothek enthält 850 deutschsprachige Rechenprofile. Jedes Profil nennt Eingabe, Rechenweg, Gegenprobe, Ergebnis, Grenzen und Quellen; die Profile sind keine Produkt- oder Testsieger-Rankings.
+
+- [Gartenhaus-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/gartenhaus/): 17 Größen in fünf Nutzungsprofilen.
+- [Mähroboter-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/maehroboter/): 17 Rasenflächen in fünf Gartentypen.
+- [Terrassen-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/terrasse/): 17 Flächen in fünf Material- und Verlegeprofilen.
+- [Bewässerungs-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/bewaesserung/): 17 Flächen in fünf Pflanzen- und Geländeprofilen.
+- [Gewächshaus-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/gewaechshaus/): 17 Größen in fünf Kulturprofilen.
+- [Sichtschutz-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/sichtschutz/): 17 Längen in fünf Raster- und Montageszenarien.
+- [Carport-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/carport/): 17 Fahrzeugmaße in fünf Nutzungsprofilen.
+- [Bodenbelag-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/bodenbelag/): 17 Raumflächen in fünf Material- und Verlegeszenarien.
+- [Trockenbau-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/trockenbau/): 17 Wandmaße in fünf Systemprofilen.
+- [Luftentfeuchter-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/luftentfeuchter/): 17 Raumflächen in fünf Nutzungsprofilen.
+
 ## Nutzungshinweise
 
 - Ergebnisse sind Planungshilfen und ersetzen keine Statik, Genehmigungs-, Elektro-, Sanitär- oder Fachplanung.
