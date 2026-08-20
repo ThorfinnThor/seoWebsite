@@ -1,7 +1,12 @@
 import { defineConfig } from "vitest/config";
+import { dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const root = fileURLToPath(new URL(".", import.meta.url)).replace(/\/$/, "");
+export function vitestAliasRoot(configUrl: string | URL): string {
+  return dirname(fileURLToPath(configUrl));
+}
+
+const root = vitestAliasRoot(import.meta.url);
 
 export default defineConfig({
   test: {
@@ -17,4 +22,3 @@ export default defineConfig({
     ],
   },
 });
-
