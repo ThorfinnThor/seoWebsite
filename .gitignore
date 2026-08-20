@@ -11,3 +11,4 @@ coverage/
 *.csv.gz
 *.csv.zip
 raw-feeds/
+public/sitemaps/

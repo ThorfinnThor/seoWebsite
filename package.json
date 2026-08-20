@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "npm run generate:sitemaps && next build",
+    "generate:sitemaps": "node --import tsx scripts/generate-segmented-sitemaps.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
     "validate:data": "node --import tsx scripts/validate-data.ts",

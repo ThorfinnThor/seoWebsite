@@ -18,7 +18,7 @@ The repository already includes `@vercel/analytics`. After the production deploy
 3. Open [Google Search Console](https://search.google.com/search-console) and create a **URL-prefix property** for `https://www.passendplanen.de/` (or use a Domain property if you can add the DNS record).
 4. For URL-prefix verification choose **HTML tag**, copy the token from the `content="..."` value, and add it in Vercel as `NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION` for **Production**.
 5. Redeploy from GitHub Desktop/Vercel, then click **Verify** in Search Console.
-6. In Search Console open **Sitemaps**, enter `sitemap.xml`, and submit it. The live URL is `https://www.passendplanen.de/sitemap.xml`.
+6. In Search Console open **Sitemaps**, submit `sitemap.xml` and `sitemaps/index.xml`. The second file groups project profiles and comparisons by topic so crawl and indexing problems can be diagnosed per content cluster.
 
 Do not paste the complete `<meta>` element into Vercel; only paste the token value. The variable is optional and the site remains valid before verification.
 

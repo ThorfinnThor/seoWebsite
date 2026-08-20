@@ -35,7 +35,15 @@ describe("project example library", () => {
       expect(example.comparison?.rows.length).toBeGreaterThanOrEqual(4);
       expect(example.checklist?.length).toBeGreaterThanOrEqual(7);
       expect(example.faqs?.length).toBeGreaterThanOrEqual(4);
-      expect(example.relatedLinks?.length).toBeGreaterThanOrEqual(4);
+      expect(example.relatedLinks?.length).toBeGreaterThanOrEqual(6);
+    }
+  });
+
+  it("connects every profile to two crawlable sibling scenarios", () => {
+    for (const example of PROJECT_EXAMPLES) {
+      const siblingLinks = example.relatedLinks?.filter((link) => link.href.includes(`/ratgeber/projekte/${example.topicSlug}/`) && link.href !== `/ratgeber/projekte/${example.topicSlug}/`) ?? [];
+      expect(siblingLinks).toHaveLength(2);
+      expect(new Set(siblingLinks.map((link) => link.href)).size).toBe(2);
     }
   });
 

@@ -36,11 +36,19 @@ describe("decision guide library", () => {
       expect(guide.faqs?.length).toBeGreaterThanOrEqual(5);
       expect(guide.sources?.length).toBeGreaterThanOrEqual(1);
       expect(guide.example?.steps.length).toBeGreaterThanOrEqual(7);
-      expect(guide.relatedLinks?.length).toBeGreaterThanOrEqual(5);
+      expect(guide.relatedLinks?.length).toBeGreaterThanOrEqual(7);
       expect(guide.scoreA).toBeGreaterThanOrEqual(1);
       expect(guide.scoreA).toBeLessThanOrEqual(5);
       expect(guide.scoreB).toBeGreaterThanOrEqual(1);
       expect(guide.scoreB).toBeLessThanOrEqual(5);
+    }
+  });
+
+  it("connects every comparison to crawlable sibling decisions", () => {
+    for (const guide of DECISION_GUIDES) {
+      const siblingLinks = guide.relatedLinks?.filter((link) => link.href.includes("/ratgeber/vergleiche/") && link.href !== `/ratgeber/vergleiche/${guide.topicSlug}/`) ?? [];
+      expect(siblingLinks).toHaveLength(2);
+      expect(new Set(siblingLinks.map((link) => link.href)).size).toBe(2);
     }
   });
 

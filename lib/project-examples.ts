@@ -556,9 +556,36 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
   } satisfies ProjectExample;
 }
 
-export const PROJECT_EXAMPLES: readonly ProjectExample[] = clusters.flatMap((cluster) =>
+const BASE_PROJECT_EXAMPLES: readonly ProjectExample[] = clusters.flatMap((cluster) =>
   cluster.variants.flatMap((variant) => cluster.scales.map((scale) => makeExample(cluster, scale, variant))),
 );
+
+export const PROJECT_EXAMPLES: readonly ProjectExample[] = BASE_PROJECT_EXAMPLES.map((example) => {
+  const alternateScale = BASE_PROJECT_EXAMPLES.find((candidate) =>
+    candidate.topicSlug === example.topicSlug
+    && candidate.variantSlug === example.variantSlug
+    && candidate.scaleSlug !== example.scaleSlug,
+  );
+  const alternateVariant = BASE_PROJECT_EXAMPLES.find((candidate) =>
+    candidate.topicSlug === example.topicSlug
+    && candidate.scaleSlug === example.scaleSlug
+    && candidate.variantSlug !== example.variantSlug,
+  );
+  const siblingLinks = [alternateScale, alternateVariant]
+    .filter((candidate): candidate is ProjectExample => Boolean(candidate))
+    .map((candidate) => ({
+      label: candidate.title,
+      href: `/ratgeber/projekte/${candidate.topicSlug}/${candidate.slug}/`,
+      description: candidate.scaleSlug === example.scaleSlug
+        ? "Dasselbe Ausgangsmaß mit einem anderen Nutzungsschwerpunkt durchrechnen."
+        : "Denselben Nutzungsschwerpunkt mit einer anderen Ausgangsgröße vergleichen.",
+    }));
+
+  return {
+    ...example,
+    relatedLinks: [...(example.relatedLinks ?? []), ...siblingLinks],
+  };
+});
 
 export const PROJECT_EXAMPLE_DIRECTORIES: readonly ProjectExampleDirectory[] = clusters.map((cluster) => {
   const examples = PROJECT_EXAMPLES.filter((example) => example.topicSlug === cluster.topicSlug);

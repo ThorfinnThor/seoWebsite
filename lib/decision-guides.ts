@@ -577,11 +577,38 @@ for (const cluster of clusters) {
   }
 }
 
-export const DECISION_GUIDES: readonly DecisionGuide[] = clusters.flatMap((cluster) =>
+const BASE_DECISION_GUIDES: readonly DecisionGuide[] = clusters.flatMap((cluster) =>
   combinations(cluster.options).flatMap(([first, second]) =>
     cluster.contexts.map((usage) => makeDecisionGuide(cluster, first, second, usage)),
   ),
 );
+
+export const DECISION_GUIDES: readonly DecisionGuide[] = BASE_DECISION_GUIDES.map((guide) => {
+  const alternateContext = BASE_DECISION_GUIDES.find((candidate) =>
+    candidate.topicSlug === guide.topicSlug
+    && candidate.pairSlug === guide.pairSlug
+    && candidate.contextSlug !== guide.contextSlug,
+  );
+  const alternatePair = BASE_DECISION_GUIDES.find((candidate) =>
+    candidate.topicSlug === guide.topicSlug
+    && candidate.contextSlug === guide.contextSlug
+    && candidate.pairSlug !== guide.pairSlug,
+  );
+  const siblingLinks = [alternateContext, alternatePair]
+    .filter((candidate): candidate is DecisionGuide => Boolean(candidate))
+    .map((candidate) => ({
+      label: `${candidate.pairLabel}: ${candidate.contextLabel}`,
+      href: `/ratgeber/vergleiche/${candidate.topicSlug}/${candidate.slug}/`,
+      description: candidate.contextSlug === guide.contextSlug
+        ? `Eine alternative Material- oder Systempaarung für denselben Einsatz „${guide.contextLabel}“ prüfen.`
+        : `Dieselbe Paarung im abweichenden Einsatz „${candidate.contextLabel}“ gegenprüfen.`,
+    }));
+
+  return {
+    ...guide,
+    relatedLinks: [...(guide.relatedLinks ?? []), ...siblingLinks],
+  };
+});
 
 export const DECISION_GUIDE_DIRECTORIES: readonly DecisionGuideDirectory[] = clusters.map((cluster) => ({
   topicSlug: cluster.topicSlug,

@@ -6,6 +6,7 @@ import { SITE } from "@/lib/site";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { PROJECT_EXAMPLES } from "@/lib/project-examples";
 import { DECISION_GUIDES } from "@/lib/decision-guides";
+import { SITEMAP_INDEX_URL, SITEMAP_SEGMENTS, sitemapSegmentUrl } from "@/lib/sitemap-entries";
 
 const OUT_DIR = path.resolve("out");
 const SITE_URL = SITE.url.replace(/\/$/, "");
@@ -185,8 +186,39 @@ for (const page of pages.filter((candidate) => candidate.noindex)) {
   if (sitemapUrls.has(`${SITE_URL}${page.route}`)) errors.push(`${page.route}: noindex-Seite steht in sitemap.xml`);
 }
 
+const segmentedSitemapUrls = new Set<string>();
+for (const segment of SITEMAP_SEGMENTS) {
+  const filename = path.join(OUT_DIR, "sitemaps", `${segment.id}.xml`);
+  const xml = await readFile(filename, "utf8");
+  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]);
+  if (urls.length !== segment.entries.length) {
+    errors.push(`${segment.id}.xml: ${urls.length} URLs statt ${segment.entries.length}`);
+  }
+  for (const url of urls) {
+    if (segmentedSitemapUrls.has(url)) errors.push(`${segment.id}.xml: URL steht in mehreren Segmenten: ${url}`);
+    segmentedSitemapUrls.add(url);
+  }
+}
+for (const url of sitemapUrls) {
+  if (!segmentedSitemapUrls.has(url)) errors.push(`Segmentierte Sitemaps enthalten ${url} nicht`);
+}
+for (const url of segmentedSitemapUrls) {
+  if (!sitemapUrls.has(url)) errors.push(`Segmentierte Sitemap enthält unbekannte URL ${url}`);
+}
+
+const sitemapIndex = await readFile(path.join(OUT_DIR, "sitemaps", "index.xml"), "utf8");
+const indexedSitemaps = new Set([...sitemapIndex.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => match[1]));
+for (const segment of SITEMAP_SEGMENTS) {
+  const url = sitemapSegmentUrl(segment);
+  if (!indexedSitemaps.has(url)) errors.push(`sitemaps/index.xml: Segment fehlt: ${url}`);
+}
+if (indexedSitemaps.size !== SITEMAP_SEGMENTS.length) {
+  errors.push(`sitemaps/index.xml: ${indexedSitemaps.size} Einträge statt ${SITEMAP_SEGMENTS.length}`);
+}
+
 const robotsTxt = await readFile(path.join(OUT_DIR, "robots.txt"), "utf8");
 if (!robotsTxt.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) errors.push("robots.txt: Sitemap-Verweis fehlt oder ist falsch");
+if (!robotsTxt.includes(`Sitemap: ${SITEMAP_INDEX_URL}`)) errors.push("robots.txt: Sitemap-Index fehlt oder ist falsch");
 if (!robotsTxt.includes("User-Agent: *") || !robotsTxt.includes("Allow: /")) errors.push("robots.txt: öffentliche Crawler sind nicht allgemein zugelassen");
 if (!robotsTxt.includes("Disallow: /data/")) errors.push("robots.txt: Produktdaten-Verzeichnis ist nicht ausgeschlossen");
 
