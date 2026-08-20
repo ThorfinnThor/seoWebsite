@@ -5,6 +5,7 @@ import { SITE } from "@/lib/site";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 import { SEO_TOPICS } from "@/lib/seo-topics";
 import { PROJECT_EXAMPLES, PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
+import { DECISION_GUIDES, DECISION_GUIDE_DIRECTORIES } from "@/lib/decision-guides";
 export const dynamic = "force-static";
 const siteUrl = SITE.url.replace(/\/$/, "");
 export default function sitemap(): MetadataRoute.Sitemap {
@@ -13,6 +14,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   paths.push(...SEO_TOPICS.map((topic) => `/ratgeber/thema/${topic.slug}`));
   paths.push(...PROJECT_EXAMPLE_DIRECTORIES.map((directory) => `/ratgeber/projekte/${directory.topicSlug}`));
   paths.push(...PROJECT_EXAMPLES.map((example) => `/ratgeber/projekte/${example.topicSlug}/${example.slug}`));
+  paths.push("/ratgeber/vergleiche");
+  paths.push(...DECISION_GUIDE_DIRECTORIES.map((directory) => `/ratgeber/vergleiche/${directory.topicSlug}`));
+  paths.push(...DECISION_GUIDES.map((guide) => `/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`));
   if (legalContactComplete) paths.push("/impressum", "/datenschutz");
   return paths.map((path, index) => ({ url: `${siteUrl}${path}/`, lastModified: new Date(CONTENT_UPDATED_AT), changeFrequency: index < 3 ? "weekly" : "monthly", priority: index === 0 ? 1 : index < 3 ? .9 : .7 }));
 }

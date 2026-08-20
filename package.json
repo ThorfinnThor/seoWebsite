@@ -19,10 +19,11 @@
     "audit:content": "node --import tsx scripts/audit-content-depth.ts",
     "audit:content:strict": "node --import tsx scripts/audit-content-depth.ts --strict",
     "audit:projects": "node --import tsx scripts/audit-project-examples.ts",
+    "audit:decisions": "node --import tsx scripts/audit-decision-guides.ts",
     "readiness": "node --import tsx scripts/check-launch-readiness.ts",
     "readiness:public": "node --import tsx scripts/check-launch-readiness.ts --mode=public --strict",
     "readiness:affiliate": "node --import tsx scripts/check-launch-readiness.ts --mode=affiliate --strict",
-    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run audit:projects && npm run build && npm run verify:static && npm run audit:site"
+    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run audit:projects && npm run audit:decisions && npm run build && npm run verify:static && npm run audit:site"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

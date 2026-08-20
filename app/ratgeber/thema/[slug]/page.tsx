@@ -8,6 +8,7 @@ import { absoluteUrl } from "@/lib/site";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 import { getGuidesForTopic, getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 import { getProjectExampleDirectory } from "@/lib/project-examples";
+import { getDecisionGuideDirectory } from "@/lib/decision-guides";
 
 export function generateStaticParams() {
   return SEO_TOPICS.map((topic) => ({ slug: topic.slug }));
@@ -23,6 +24,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   if (!topic) notFound();
   const guides = getGuidesForTopic(SEO_GUIDES, topic);
   const projectDirectory = getProjectExampleDirectory(topic.slug);
+  const comparisonDirectory = getDecisionGuideDirectory(topic.slug);
   const url = absoluteUrl(`/ratgeber/thema/${topic.slug}/`);
 
   return <>
@@ -58,6 +60,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     {projectDirectory && <section className="project-library-callout">
       <div><p className="eyebrow">Konkrete Größen und Nutzungen</p><h2>85 nachvollziehbare Projektbeispiele</h2><p>{projectDirectory.description} Jede Seite enthält eine vollständige Rechenkette, eine Gegenprobe, Prüfgrenzen und Quellen.</p></div>
       <Link className="button button--primary" href={`/ratgeber/projekte/${topic.slug}/`}>Projektbeispiele öffnen →</Link>
+    </section>}
+    {comparisonDirectory && <section className="project-library-callout">
+      <div><p className="eyebrow">Zwei Optionen, ein konkreter Kontext</p><h2>100 gewichtete Direktvergleiche</h2><p>{comparisonDirectory.description} Jede Seite zeigt dieselben fünf Kriterien für beide Optionen und eine nachvollziehbare Gegenprobe.</p></div>
+      <Link className="button button--primary" href={`/ratgeber/vergleiche/${topic.slug}/`}>Direktvergleiche öffnen →</Link>
     </section>}
     <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{topic.boundary}</p></section>
   </>;

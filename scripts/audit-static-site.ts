@@ -5,6 +5,7 @@ import { legalContactComplete } from "@/lib/legal";
 import { SITE } from "@/lib/site";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { PROJECT_EXAMPLES } from "@/lib/project-examples";
+import { DECISION_GUIDES } from "@/lib/decision-guides";
 
 const OUT_DIR = path.resolve("out");
 const SITE_URL = SITE.url.replace(/\/$/, "");
@@ -63,6 +64,7 @@ const errors: string[] = [];
 const indexablePages = pages.filter((page) => !page.noindex);
 const scenarioRoutes = new Set(SEO_GUIDES_SCENARIOS.map((guide) => `/ratgeber/${guide.slug}/`));
 const projectExampleRoutes = new Set(PROJECT_EXAMPLES.map((example) => `/ratgeber/projekte/${example.topicSlug}/${example.slug}/`));
+const decisionGuideRoutes = new Set(DECISION_GUIDES.map((guide) => `/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`));
 
 for (const page of pages) {
   const normalizedHtml = page.html.replaceAll("&amp;", "&");
@@ -103,6 +105,13 @@ for (const page of pages) {
     if (!page.html.includes('class="guide-comparison"')) errors.push(`${page.route}: Projektbeispiel ohne Ergebnisvergleich`);
     if (!page.html.includes('class="guide-checklist"')) errors.push(`${page.route}: Projektbeispiel ohne Prüfliste`);
   }
+  if (decisionGuideRoutes.has(page.route)) {
+    if (!page.html.includes('class="guide-sources"') || !page.html.includes('"citation":[')) errors.push(`${page.route}: Direktvergleich ohne sichtbare Quellen und Citation`);
+    if (!page.html.includes('class="guide-example"')) errors.push(`${page.route}: Direktvergleich ohne gewichtete Gegenprobe`);
+    if (!page.html.includes('class="guide-comparison"')) errors.push(`${page.route}: Direktvergleich ohne Entscheidungsmatrix`);
+    if (!page.html.includes('class="guide-checklist"')) errors.push(`${page.route}: Direktvergleich ohne Prüfliste`);
+    if (!page.html.includes('class="guide-faq"')) errors.push(`${page.route}: Direktvergleich ohne FAQ`);
+  }
   const enrichment = GUIDE_ENRICHMENTS[page.route];
   if (enrichment?.sources?.length) {
     if (!page.html.includes('class="guide-sources"')) errors.push(`${page.route}: sichtbarer Quellenblock fehlt`);
@@ -130,6 +139,9 @@ for (const route of Object.keys(GUIDE_ENRICHMENTS)) {
 
 for (const route of projectExampleRoutes) {
   if (!pages.some((page) => page.route === route)) errors.push(`${route}: Projektbeispiel wurde nicht statisch gebaut`);
+}
+for (const route of decisionGuideRoutes) {
+  if (!pages.some((page) => page.route === route)) errors.push(`${route}: Direktvergleich wurde nicht statisch gebaut`);
 }
 
 for (const field of ["title", "description"] as const) {

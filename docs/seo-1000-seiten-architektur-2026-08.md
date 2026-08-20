@@ -60,3 +60,10 @@ Der vollständige Verify-Lauf prüft Daten, Tests, TypeScript, Projektprofile, s
 4. Seiten ohne Impressionen nicht blind vermehren, sondern Suchintention, interne Links und Eigenständigkeit prüfen.
 5. Produktvergleiche erst mit aktuellen, belegbaren Händler- und Produktdaten veröffentlichen.
 
+## Ausbau vom 20. August 2026
+
+Die erste Architektur wurde um 1.000 indexierbare Direktvergleiche erweitert. Sie vergleichen keine ungeprüften Einzelprodukte, sondern fünf reale Lösungswege je Themenbereich in zehn konkreten Nutzungskontexten. Aus zehn Zweierpaaren und zehn Kontexten entstehen 100 Seiten je Themenwelt.
+
+Jede neue Seite enthält mindestens 1.000 Wörter, acht Langform-Abschnitte, eine gewichtete Fünf-Kriterien-Matrix, Gegenprobe, neun Prüfschritte, fünf FAQ, Quellen und fünf interne Weiterführungen. Die vollständige Keyword- und Intent-Struktur steht in `docs/seo-vergleichscluster-2026-08.md`.
+
+Nach dem Ausbau umfasst der statische Build 2.011 indexierbare Seiten. Die neue Bibliothek liegt unter `/ratgeber/vergleiche/` und wird vollständig über Themen-Hubs, Ratgeber-Hub und Sitemap erschlossen.

@@ -402,6 +402,7 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-copy { min-width: 0; }
 .guide-copy > section { padding: 0 0 48px; }
 .guide-copy > section + section { padding-top: 48px; border-top: 1px solid var(--line); }
+.guide-page h1, .guide-copy h2, .guide-copy h3 { overflow-wrap: anywhere; hyphens: auto; }
 .guide-copy h2 { font-size: 2rem; }
 .guide-copy p, .guide-copy li { max-width: 820px; color: #4f5c55; }
 .guide-copy li { margin: 8px 0; }
