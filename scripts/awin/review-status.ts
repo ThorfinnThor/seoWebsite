@@ -10,7 +10,7 @@ async function json<T>(file: string): Promise<T> {
   return JSON.parse(await readFile(path.resolve(file), "utf8")) as T;
 }
 
-const verticals = ["garden-house", "dehumidifier", "irrigation"] as const;
+const verticals = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"] as const;
 console.log("\nPassendPlanen Affiliate-Review\n");
 for (const vertical of verticals) {
   const review = await json<ReviewQueue>(`data/review/${vertical}.json`);

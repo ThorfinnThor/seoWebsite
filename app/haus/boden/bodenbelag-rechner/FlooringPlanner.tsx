@@ -10,6 +10,10 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateFlooringPlan } from "@/lib/flooring/rules";
 import { FlooringInputSchema, type FlooringInput, type FlooringRoom } from "@/lib/flooring/types";
 import { nextNumberedLabel } from "@/lib/planner/dynamic-label";
+import { loadFlooringCatalog } from "@/lib/catalog/load-client-catalog";
+import { recommendFlooring } from "@/lib/flooring/recommend";
+import type { FlooringCatalog } from "@/lib/flooring/types";
+import { CatalogMatchList } from "@/components/product/CatalogMatchList";
 
 const INITIAL: FlooringInput = {
   rooms: [{ id: "room-1", label: "Raum 1", lengthM: 5, widthM: 4 }],
@@ -50,6 +54,9 @@ export function FlooringPlanner() {
   const stepFields: Partial<Record<number, readonly string[]>> = { 1: [...Object.keys(roomFieldIds), "excludedAreaM2"], 2: ["plankLengthMm", "plankWidthMm", "packageCoverageM2"], 3: ["underlayRollCoverageM2", "skirtingBarLengthM", "totalDoorOpeningM"] };
   const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: FlooringInputSchema, fieldIds, stepFields, step, setStep });
   const plan = parsed.success ? calculateFlooringPlan(parsed.data) : null;
+  const [catalog, setCatalog] = useState<FlooringCatalog | null>(null);
+  useEffect(() => { const controller = new AbortController(); loadFlooringCatalog(controller.signal).then(setCatalog).catch(() => setCatalog(null)); return () => controller.abort(); }, []);
+  const matches = catalog && parsed.success ? recommendFlooring(catalog, parsed.data) : [];
 
   useEffect(() => {
     if (step > 1) document.getElementById("calculator-heading")?.focus();
@@ -119,6 +126,7 @@ export function FlooringPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Verlegung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Chargengleichheit, Sockelleistenprofile, Übergänge, Abschlussprofile und eine mögliche Paketreserve für spätere Reparaturen separat entscheiden.</li></ul></div>
       <PrintResultAction />
+      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bodenbeläge</h3><p>Die Auswahl berücksichtigt Bodenart und – wenn redaktionell bestätigt – Fußbodenheizung und Feuchtraumfreigabe.</p><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Bodenbeläge. Die LaminatDEPOT-Feeddaten sind erfasst; Paketinhalt und Maße werden vor Veröffentlichung geprüft." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}

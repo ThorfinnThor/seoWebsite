@@ -2,6 +2,8 @@ import type { GardenHouseOffer, GardenHouseOverride, GardenHouseProduct } from "
 import type { OfferBase } from "@/lib/catalog/types";
 import type { DehumidifierProduct } from "@/lib/dehumidifier/types";
 import type { IrrigationProduct } from "@/lib/irrigation/types";
+import type { FlooringProduct } from "@/lib/flooring/types";
+import type { RobotMowerProduct } from "@/lib/robot-mower/types";
 
 export type RawFeedRow = Record<string, string | undefined>;
 
@@ -41,3 +43,5 @@ export interface AffiliateCandidate<TProduct> {
 
 export type DehumidifierCandidate = AffiliateCandidate<DehumidifierProduct>;
 export type IrrigationCandidate = AffiliateCandidate<IrrigationProduct>;
+export type RobotMowerCandidate = AffiliateCandidate<RobotMowerProduct>;
+export type FlooringCandidate = AffiliateCandidate<FlooringProduct>;

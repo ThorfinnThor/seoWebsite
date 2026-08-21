@@ -13,6 +13,14 @@
     "irrigation": {
       "catalog": "/data/irrigation/catalog.json",
       "generatedAt": "2026-08-09T00:00:00.000Z"
+    },
+    "robot-mower": {
+      "catalog": "/data/robot-mower/catalog.json",
+      "generatedAt": "2026-08-09T00:00:00.000Z"
+    },
+    "flooring": {
+      "catalog": "/data/flooring/catalog.json",
+      "generatedAt": "2026-08-09T00:00:00.000Z"
     }
   }
 }

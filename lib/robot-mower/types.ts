@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { OfferBaseSchema, ProductBaseSchema, type MatchReason, type OfferBase } from "@/lib/catalog/types";
 
 export const LawnAreaSchema = z.object({
   id: z.string().min(1).max(80),
@@ -29,6 +30,44 @@ export const RobotMowerInputSchema = z.object({
 
 export type LawnArea = z.infer<typeof LawnAreaSchema>;
 export type RobotMowerInput = z.infer<typeof RobotMowerInputSchema>;
+
+export const RobotMowerNavigationSchema = z.enum(["rtk", "lidar", "camera", "wire", "hybrid", "unknown"]);
+
+export const RobotMowerProductSchema = ProductBaseSchema.extend({
+  ratedAreaM2: z.number().positive().max(100_000).optional(),
+  maxSlopePercent: z.number().min(0).max(200).optional(),
+  minPassageCm: z.number().positive().max(500).optional(),
+  navigation: RobotMowerNavigationSchema,
+  minCutHeightCm: z.number().min(0).max(30).optional(),
+  maxCutHeightCm: z.number().min(0).max(30).optional(),
+  waterProtection: z.string().min(1).optional(),
+  obstacleDetection: z.boolean().optional(),
+});
+
+export const RobotMowerCatalogSchema = z.object({
+  schemaVersion: z.literal(1),
+  vertical: z.literal("robot-mower"),
+  generatedAt: z.iso.datetime(),
+  sourceUpdatedAt: z.iso.datetime().optional(),
+  products: z.array(RobotMowerProductSchema),
+  offers: z.array(OfferBaseSchema),
+}).superRefine((catalog, ctx) => {
+  const products = new Set(catalog.products.map((product) => product.id));
+  if (products.size !== catalog.products.length) ctx.addIssue({ code: "custom", path: ["products"], message: "Duplicate product ID" });
+  const offers = new Set<string>();
+  catalog.offers.forEach((offer, index) => {
+    if (!products.has(offer.productId)) ctx.addIssue({ code: "custom", path: ["offers", index, "productId"], message: "Unknown product" });
+    if (offers.has(offer.id)) ctx.addIssue({ code: "custom", path: ["offers", index, "id"], message: "Duplicate offer ID" });
+    offers.add(offer.id);
+  });
+});
+
+export const RobotMowerOverrideSchema = RobotMowerProductSchema.partial().extend({ id: z.string().min(1), reviewNote: z.string().min(1).optional() });
+
+export type RobotMowerProduct = z.infer<typeof RobotMowerProductSchema>;
+export type RobotMowerCatalog = z.infer<typeof RobotMowerCatalogSchema>;
+export type RobotMowerOverride = z.infer<typeof RobotMowerOverrideSchema>;
+export interface RobotMowerMatch { product: RobotMowerProduct; offer: OfferBase; score: number; reasons: MatchReason[] }
 
 export interface RobotMowerPlan {
   areaCount: number;

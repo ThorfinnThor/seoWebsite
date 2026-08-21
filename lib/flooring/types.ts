@@ -1,4 +1,5 @@
 import { z } from "zod";
+import { OfferBaseSchema, ProductBaseSchema, type MatchReason, type OfferBase } from "@/lib/catalog/types";
 
 export const FlooringRoomSchema = z.object({
   id: z.string().min(1).max(80),
@@ -37,6 +38,45 @@ export const FlooringInputSchema = z.object({
 
 export type FlooringRoom = z.infer<typeof FlooringRoomSchema>;
 export type FlooringInput = z.infer<typeof FlooringInputSchema>;
+
+export const FlooringProductTypeSchema = z.enum(["laminate", "vinyl-click", "parquet-floating"]);
+export const FlooringInstallationSchema = z.enum(["click", "glue", "unknown"]);
+export const FlooringProductSchema = ProductBaseSchema.extend({
+  flooringType: FlooringProductTypeSchema,
+  installation: FlooringInstallationSchema,
+  packageCoverageM2: z.number().positive().max(20).optional(),
+  plankLengthMm: z.number().positive().max(3000).optional(),
+  plankWidthMm: z.number().positive().max(800).optional(),
+  thicknessMm: z.number().positive().max(100).optional(),
+  wearLayerMm: z.number().positive().max(20).optional(),
+  floorHeatingApproved: z.boolean().optional(),
+  wetRoomApproved: z.boolean().optional(),
+});
+
+export const FlooringCatalogSchema = z.object({
+  schemaVersion: z.literal(1),
+  vertical: z.literal("flooring"),
+  generatedAt: z.iso.datetime(),
+  sourceUpdatedAt: z.iso.datetime().optional(),
+  products: z.array(FlooringProductSchema),
+  offers: z.array(OfferBaseSchema),
+}).superRefine((catalog, ctx) => {
+  const products = new Set(catalog.products.map((product) => product.id));
+  if (products.size !== catalog.products.length) ctx.addIssue({ code: "custom", path: ["products"], message: "Duplicate product ID" });
+  const offers = new Set<string>();
+  catalog.offers.forEach((offer, index) => {
+    if (!products.has(offer.productId)) ctx.addIssue({ code: "custom", path: ["offers", index, "productId"], message: "Unknown product" });
+    if (offers.has(offer.id)) ctx.addIssue({ code: "custom", path: ["offers", index, "id"], message: "Duplicate offer ID" });
+    offers.add(offer.id);
+  });
+});
+
+export const FlooringOverrideSchema = FlooringProductSchema.partial().extend({ id: z.string().min(1), reviewNote: z.string().min(1).optional() });
+
+export type FlooringProduct = z.infer<typeof FlooringProductSchema>;
+export type FlooringCatalog = z.infer<typeof FlooringCatalogSchema>;
+export type FlooringOverride = z.infer<typeof FlooringOverrideSchema>;
+export interface FlooringMatch { product: FlooringProduct; offer: OfferBase; score: number; reasons: MatchReason[] }
 
 export interface FlooringPlan {
   roomCount: number;

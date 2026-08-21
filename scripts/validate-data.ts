@@ -3,14 +3,18 @@ import { z } from "zod";
 import { GardenHouseCatalogSchema, GardenHouseOverrideSchema, GardenHouseRulesSchema } from "@/lib/garden-house/types";
 import { DehumidifierCatalogSchema, DehumidifierOverrideSchema, DehumidifierRulesSchema } from "@/lib/dehumidifier/types";
 import { IrrigationCatalogSchema, IrrigationOverrideSchema, IrrigationRulesSchema } from "@/lib/irrigation/types";
+import { RobotMowerCatalogSchema, RobotMowerOverrideSchema } from "@/lib/robot-mower/types";
+import { FlooringCatalogSchema, FlooringOverrideSchema } from "@/lib/flooring/types";
 import { PLANNERS } from "@/lib/planners";
 import { assertCatalogPayloadSafe, assertCatalogSafe } from "./catalog/safeguards";
 
 const ManifestEntrySchema = z.object({ catalog: z.string().startsWith("/data/"), generatedAt: z.iso.datetime() });
-const ManifestSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), verticals: z.object({ "garden-house": ManifestEntrySchema, dehumidifier: ManifestEntrySchema, irrigation: ManifestEntrySchema }) });
+const ManifestSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), verticals: z.object({ "garden-house": ManifestEntrySchema, dehumidifier: ManifestEntrySchema, irrigation: ManifestEntrySchema, "robot-mower": ManifestEntrySchema, flooring: ManifestEntrySchema }) });
 const GardenHouseOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(GardenHouseOverrideSchema) });
 const DehumidifierOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(DehumidifierOverrideSchema) });
 const IrrigationOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(IrrigationOverrideSchema) });
+const RobotMowerOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(RobotMowerOverrideSchema) });
+const FlooringOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(FlooringOverrideSchema) });
 const knownPlannerIds = new Set(PLANNERS.map((planner) => planner.id));
 const MerchantSchema = z.object({
   merchantId: z.string().regex(/^[a-z0-9-]+$/),
@@ -54,9 +58,13 @@ async function main() {
   const catalog = GardenHouseCatalogSchema.parse(await json("public/data/garden-house/catalog.json"));
   const dehumidifiers = DehumidifierCatalogSchema.parse(await json("public/data/dehumidifier/catalog.json"));
   const irrigation = IrrigationCatalogSchema.parse(await json("public/data/irrigation/catalog.json"));
+  const robotMowers = RobotMowerCatalogSchema.parse(await json("public/data/robot-mower/catalog.json"));
+  const flooring = FlooringCatalogSchema.parse(await json("public/data/flooring/catalog.json"));
   assertCatalogSafe(catalog);
   assertCatalogPayloadSafe(dehumidifiers);
   assertCatalogPayloadSafe(irrigation);
+  assertCatalogPayloadSafe(robotMowers);
+  assertCatalogPayloadSafe(flooring);
   GardenHouseRulesSchema.parse(await json("data/manual/garden-house-rules.json"));
   DehumidifierRulesSchema.parse(await json("data/manual/dehumidifier-rules.json"));
   IrrigationRulesSchema.parse(await json("data/manual/irrigation-rules.json"));
@@ -64,14 +72,20 @@ async function main() {
   GardenHouseOverridesSchema.parse(await json("data/overrides/garden-house.json"));
   DehumidifierOverridesSchema.parse(await json("data/overrides/dehumidifier.json"));
   IrrigationOverridesSchema.parse(await json("data/overrides/irrigation.json"));
+  RobotMowerOverridesSchema.parse(await json("data/overrides/robot-mower.json"));
+  FlooringOverridesSchema.parse(await json("data/overrides/flooring.json"));
   const merchants = MerchantsSchema.parse(await json("data/manual/merchants.json"));
   ReviewSchema.parse(await json("data/review/garden-house.json"));
   ReviewSchema.parse(await json("data/review/dehumidifier.json"));
   ReviewSchema.parse(await json("data/review/irrigation.json"));
+  ReviewSchema.parse(await json("data/review/robot-mower.json"));
+  ReviewSchema.parse(await json("data/review/flooring.json"));
   FeedReportSchema.parse(await json("public/data/garden-house/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/dehumidifier/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/irrigation/feed-report.json"));
-  console.log(`Validated catalogs: garden-house ${catalog.products.length}, dehumidifier ${dehumidifiers.products.length}, irrigation ${irrigation.products.length} products; ${merchants.merchants.length} Awin programmes registered.`);
+  FeedReportSchema.parse(await json("public/data/robot-mower/feed-report.json"));
+  FeedReportSchema.parse(await json("public/data/flooring/feed-report.json"));
+  console.log(`Validated catalogs: garden-house ${catalog.products.length}, dehumidifier ${dehumidifiers.products.length}, irrigation ${irrigation.products.length}, robot-mower ${robotMowers.products.length}, flooring ${flooring.products.length} products; ${merchants.merchants.length} Awin programmes registered.`);
 }
 
 main().catch((error) => { console.error(error); process.exitCode = 1; });

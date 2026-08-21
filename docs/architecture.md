@@ -1,6 +1,6 @@
 # Architecture
 
-PassendPlanen is intentionally serverless in the literal sense: every user-facing route is statically exported and all calculator/recommendation logic runs in the browser. Garden-house, dehumidifier and irrigation product data is split into separate static catalogs; a planner fetches only its relevant catalog and only when results need product data. The terrace, privacy-screen, flooring, greenhouse, robot-mower, carport and drywall planning tools have no product catalog and work entirely from typed local rules.
+PassendPlanen is intentionally serverless in the literal sense: every user-facing route is statically exported and all calculator/recommendation logic runs in the browser. Garden-house, dehumidifier, irrigation, robot-mower and flooring product data is split into separate static catalogs; a planner fetches only its relevant catalog and only when results need product data. The terrace, privacy-screen, greenhouse, carport and drywall planning tools work entirely from typed local rules.
 
 The public site currently exposes ten deterministic planning areas:
 

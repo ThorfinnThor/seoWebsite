@@ -10,6 +10,10 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateRobotMowerPlan } from "@/lib/robot-mower/rules";
 import { RobotMowerInputSchema, type LawnArea, type RobotMowerInput } from "@/lib/robot-mower/types";
 import { nextNumberedLabel } from "@/lib/planner/dynamic-label";
+import { loadRobotMowerCatalog } from "@/lib/catalog/load-client-catalog";
+import { recommendRobotMowers } from "@/lib/robot-mower/recommend";
+import type { RobotMowerCatalog } from "@/lib/robot-mower/types";
+import { CatalogMatchList } from "@/components/product/CatalogMatchList";
 
 const INITIAL: RobotMowerInput = {
   areas: [{ id: "area-1", label: "Hauptrasen", lengthM: 20, widthM: 15, excludedAreaM2: 25 }],
@@ -47,6 +51,9 @@ export function RobotMowerPlanner() {
   const stepFields: Partial<Record<number, readonly string[]>> = { 1: Object.keys(areaFieldIds), 2: ["mowingZones", "obstacleCount", "narrowestPassageCm", "maximumSlopePercent"], 3: [] };
   const { parsed, fieldErrors, formError, validate, clearFieldError, resetValidation } = usePlannerValidation({ input, setInput, schema: RobotMowerInputSchema, fieldIds, stepFields, step, setStep });
   const plan = parsed.success ? calculateRobotMowerPlan(parsed.data) : null;
+  const [catalog, setCatalog] = useState<RobotMowerCatalog | null>(null);
+  useEffect(() => { const controller = new AbortController(); loadRobotMowerCatalog(controller.signal).then(setCatalog).catch(() => setCatalog(null)); return () => controller.abort(); }, []);
+  const matches = catalog && plan && parsed.success ? recommendRobotMowers(catalog, parsed.data, plan) : [];
 
   useEffect(() => {
     if (step > 1) document.getElementById("calculator-heading")?.focus();
@@ -114,6 +121,7 @@ export function RobotMowerPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor der Geräteauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}{plan.setupTasks.map((task) => <li key={task}>{task}</li>)}<li>Randgestaltung, Stufen, Wasserflächen, öffentliche Wege, Kinder- und Tierbereiche sowie Aufbewahrung nach Anleitung und örtlicher Situation planen.</li></ul></div>
       <PrintResultAction />
+      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Mähroboter</h3><p>Nur redaktionell freigegebene Produkte erscheinen hier. Feed-Daten mit fehlenden Flächen- oder Passagenwerten bleiben bis zur Prüfung ausgeschlossen.</p><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Mähroboter. Die Ecovacs-Feeddaten sind erfasst und warten auf die manuelle Bestätigung der technischen Werte." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}
