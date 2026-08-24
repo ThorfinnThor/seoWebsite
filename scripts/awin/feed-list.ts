@@ -25,6 +25,11 @@ export interface FeedListEntry {
   membershipStatus?: string;
 }
 
+/** Keep feed-list discovery limited to advertisers explicitly enabled for this site. */
+export function filterFeedListEntries(entries: FeedListEntry[], allowedAdvertiserIds: ReadonlySet<string>): FeedListEntry[] {
+  return entries.filter((entry) => entry.advertiserId !== undefined && allowedAdvertiserIds.has(entry.advertiserId));
+}
+
 export function parseFeedListRows(rows: RawFeedRow[]): FeedListEntry[] {
   const entries: FeedListEntry[] = [];
   const seen = new Set<string>();

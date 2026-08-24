@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractFeedListUrl, isAllowedFeedUrl, normalizeFeedUrl, parseFeedListRows } from "./feed-list";
+import { extractFeedListUrl, filterFeedListEntries, isAllowedFeedUrl, normalizeFeedUrl, parseFeedListRows } from "./feed-list";
 
 describe("Awin feed list resolver", () => {
   it("keeps only joined German product feeds and deduplicates URLs", () => {
@@ -19,6 +19,15 @@ describe("Awin feed list resolver", () => {
     expect(parseFeedListRows(rows)).toEqual([
       expect.objectContaining({ advertiserName: "Globus Baumarkt DE", membershipStatus: "active" }),
     ]);
+  });
+
+  it("keeps only advertisers explicitly enabled for PassendPlanen", () => {
+    const entries = parseFeedListRows([
+      { "Advertiser ID": "11830", "Membership Status": "active", Language: "German", URL: "https://productdata.awin.com/datafeed/download/apikey/x/fid/1/" },
+      { "Advertiser ID": "78586", "Membership Status": "active", Language: "German", URL: "https://productdata.awin.com/datafeed/download/apikey/x/fid/2/" },
+    ]);
+    expect(filterFeedListEntries(entries, new Set(["11830"]))).toHaveLength(1);
+    expect(filterFeedListEntries(entries, new Set(["11830"]))[0].advertiserId).toBe("11830");
   });
 
   it("accepts the Awin feed-data host but rejects arbitrary URLs", () => {

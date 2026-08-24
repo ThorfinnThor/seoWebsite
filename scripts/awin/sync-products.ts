@@ -14,7 +14,7 @@ import { isGardenHouseCandidate, normalizeGardenHouse } from "./garden-house-nor
 import { isIrrigationCandidate, normalizeIrrigation } from "./irrigation-normalizer";
 import { isFlooringCandidate, normalizeFlooring } from "./flooring-normalizer";
 import { isRobotMowerCandidate, normalizeRobotMower } from "./robot-mower-normalizer";
-import { extractFeedListUrl, parseFeedListRows } from "./feed-list";
+import { extractFeedListUrl, filterFeedListEntries, parseFeedListRows } from "./feed-list";
 import { streamFeedRows } from "./source";
 import type { AffiliateCandidate, DehumidifierCandidate, FlooringCandidate, GardenHouseCandidate, IrrigationCandidate, ProductOverride, RobotMowerCandidate } from "./types";
 
@@ -32,6 +32,7 @@ const DehumidifierOverrideFileSchema = z.object({ schemaVersion: z.literal(1), o
 const IrrigationOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(IrrigationOverrideSchema) });
 const RobotMowerOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(RobotMowerOverrideSchema) });
 const FlooringOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(FlooringOverrideSchema) });
+const FeedMerchantRegistrySchema = z.object({ merchants: z.array(z.object({ awinAdvertiserId: z.number().int().positive(), enabled: z.boolean() })) });
 
 type Vertical = "garden-house" | "dehumidifier" | "irrigation" | "robot-mower" | "flooring";
 interface FeedMetrics { sourceFeeds: number; successfulFeeds: number; failedFeeds: number; rows: number; }
@@ -187,7 +188,10 @@ async function resolveFeedJobs(raw: string): Promise<FeedJob[]> {
   if (!feedListUrl) return parseFeedJobs(raw);
   const rows = [];
   for await (const row of streamFeedRows(feedListUrl)) rows.push(row);
-  const entries = parseFeedListRows(rows);
+  const feedEntries = parseFeedListRows(rows);
+  const merchantRegistry = FeedMerchantRegistrySchema.parse(await readJson("data/manual/merchants.json"));
+  const allowedAdvertiserIds = new Set(merchantRegistry.merchants.filter((merchant) => merchant.enabled).map((merchant) => String(merchant.awinAdvertiserId)));
+  const entries = filterFeedListEntries(feedEntries, allowedAdvertiserIds);
   if (!entries.length) throw new Error("Awin feed list contains no joined German product feeds");
   const allVerticals = new Set<Vertical>(["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"]);
   return entries.map((entry) => ({ url: entry.url, verticals: new Set(allVerticals) }));
