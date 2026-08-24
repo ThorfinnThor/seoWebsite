@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isGardenHouseCandidate, normalizeGardenHouse, parseDimensions } from "./garden-house-normalizer";
+import { availability, isGardenHouseCandidate, normalizeGardenHouse, parseDimensions } from "./garden-house-normalizer";
 
 const row = { product_name: "Gartenhaus Modell 300 x 400 cm", merchant_id: "12", merchant_name: "Garten Markt", merchant_product_id: "abc", brand_name: "HausCo", description: "Gartenhaus aus Holz mit Boden im Lieferumfang und Satteldach", search_price: "2.499,00", currency: "EUR", delivery_cost: "49,00", in_stock: "true", aw_deep_link: "https://www.awin1.com/cread.php?x=1", merchant_image_url: "https://img.example/haus.jpg", ean: "4012345678901", last_updated: "2026-08-08T10:00:00Z" };
 
@@ -16,4 +16,7 @@ describe("garden-house normalizer", () => {
   it("excludes non-EUR offers", () => { const result = normalizeGardenHouse({ ...row, currency: "GBP" }); expect(result.offer).toBeUndefined(); expect(result.issues).toContain("non-eur-currency"); });
   it("excludes missing affiliate links", () => expect(normalizeGardenHouse({ ...row, aw_deep_link: "" }).offer).toBeUndefined());
   it("keeps an out-of-stock offer unavailable", () => expect(normalizeGardenHouse({ ...row, in_stock: "false" }).offer?.available).toBe(false));
+  it("interprets numeric in-stock flags without joining them to quantity", () => expect(availability({ in_stock: "1", stock_quantity: "68" })).toEqual({ available: true, ambiguous: false }));
+  it("uses stock quantity when no explicit stock flag exists", () => expect(availability({ stock_quantity: "12" })).toEqual({ available: true, ambiguous: false }));
+  it("prefers an explicit out-of-stock flag over a stale quantity", () => expect(availability({ in_stock: "0", stock_quantity: "68" })).toEqual({ available: false, ambiguous: false }));
 });

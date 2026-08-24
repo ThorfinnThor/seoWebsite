@@ -76,10 +76,18 @@ function roofType(text: string): "flat" | "pent" | "gable" | undefined {
 }
 
 export function availability(row: RawFeedRow): { available: boolean; ambiguous: boolean } {
-  const raw = [value(row, "in_stock"), value(row, "stock_status"), value(row, "stock_quantity")].filter(Boolean).join(" ").toLowerCase();
-  if (!raw) return { available: false, ambiguous: true };
-  if (/out of stock|nicht verfügbar|nicht verfuegbar|ausverkauft|^0$|false|no/i.test(raw)) return { available: false, ambiguous: false };
-  if (/in stock|auf lager|verfügbar|verfuegbar|true|yes|^[1-9]\d*$/i.test(raw)) return { available: true, ambiguous: false };
+  const statusValue = (raw?: string): boolean | undefined => {
+    if (!raw?.trim()) return undefined;
+    const normalized = raw.trim().toLowerCase();
+    if (/out of stock|nicht verfügbar|nicht verfuegbar|ausverkauft|unavailable|false|^no$|^0$/.test(normalized)) return false;
+    if (/in stock|auf lager|verfügbar|verfuegbar|available|true|^yes$/.test(normalized)) return true;
+    if (/^\d+(?:[.,]\d+)?$/.test(normalized)) return Number(normalized.replace(",", ".")) > 0;
+    return undefined;
+  };
+  const explicitStatus = statusValue(value(row, "in_stock")) ?? statusValue(value(row, "stock_status"));
+  if (explicitStatus !== undefined) return { available: explicitStatus, ambiguous: false };
+  const quantity = value(row, "stock_quantity");
+  if (quantity && /^\d+(?:[.,]\d+)?$/.test(quantity.trim())) return { available: Number(quantity.replace(",", ".")) > 0, ambiguous: false };
   return { available: false, ambiguous: true };
 }
 
