@@ -2,6 +2,8 @@ import type { RawFeedRow } from "./types";
 
 const MAX_AUTO_FEEDS = 100;
 const GERMAN_LANGUAGE = /^(?:de|de[-_]de|german|deutsch)$/i;
+const ELIGIBLE_MEMBERSHIP_STATUSES = new Set(["active", "joined"]);
+const DARWIN_FEED_PATH = /^\/productdata-darwin-download\/publisher\/\d+\/[A-Za-z0-9_-]+\/\d+\/feed\/F?\d+\.csv\.gz$/;
 
 function normalizedKey(key: string): string {
   return key.toLowerCase().replace(/[^a-z0-9]+/g, "");
@@ -31,7 +33,7 @@ export function parseFeedListRows(rows: RawFeedRow[]): FeedListEntry[] {
     const url = rawUrl ? normalizeFeedUrl(rawUrl) : undefined;
     if (!url) continue;
     const membershipStatus = field(row, "membership_status", "membership status", "status");
-    if (membershipStatus && membershipStatus.trim().toLowerCase() !== "joined") continue;
+    if (membershipStatus && !ELIGIBLE_MEMBERSHIP_STATUSES.has(membershipStatus.trim().toLowerCase())) continue;
     const language = field(row, "language", "feed_language", "feed language");
     if (language && !GERMAN_LANGUAGE.test(language)) continue;
     if (seen.has(url)) continue;
@@ -62,10 +64,13 @@ export function isAllowedFeedUrl(raw: string): boolean {
 export function normalizeFeedUrl(raw: string): string | undefined {
   try {
     const url = new URL(raw);
-    if (url.username || url.password) return undefined;
+    if (url.username || url.password || url.port || url.hash) return undefined;
     if (url.hostname === "productdata.awin.com" && url.protocol === "https:") return url.toString();
     if (url.hostname === "datafeed.api.productserve.com" && (url.protocol === "http:" || url.protocol === "https:")) {
       url.protocol = "https:";
+      return url.toString();
+    }
+    if (url.hostname === "ui.awin.com" && url.protocol === "https:" && !url.search && DARWIN_FEED_PATH.test(url.pathname)) {
       return url.toString();
     }
     return undefined;

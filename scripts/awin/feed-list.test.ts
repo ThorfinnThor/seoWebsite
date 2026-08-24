@@ -12,6 +12,15 @@ describe("Awin feed list resolver", () => {
     expect(parseFeedListRows(rows)[0]).toMatchObject({ advertiserId: "30763", feedId: "98163" });
   });
 
+  it("accepts Awin's active membership status", () => {
+    const rows = [
+      { "Advertiser Name": "Globus Baumarkt DE", "Membership Status": "active", Language: "German", URL: "https://productdata.awin.com/datafeed/download/apikey/x/fid/24925/" },
+    ];
+    expect(parseFeedListRows(rows)).toEqual([
+      expect.objectContaining({ advertiserName: "Globus Baumarkt DE", membershipStatus: "active" }),
+    ]);
+  });
+
   it("accepts the Awin feed-data host but rejects arbitrary URLs", () => {
     expect(isAllowedFeedUrl("https://productdata.awin.com/datafeed/download/apikey/x/fid/1/")).toBe(true);
     expect(isAllowedFeedUrl("http://datafeed.api.productserve.com/datafeed/download/apikey/x/fid/1/")).toBe(true);
@@ -29,6 +38,13 @@ describe("Awin feed list resolver", () => {
   it("rejects credentials and insecure URLs outside Awin's legacy feed host", () => {
     expect(normalizeFeedUrl("https://user:password@productdata.awin.com/datafeed/download/fid/1/")).toBeUndefined();
     expect(normalizeFeedUrl("http://productdata.awin.com/datafeed/download/fid/1/")).toBeUndefined();
+  });
+
+  it("accepts only the exact Awin Darwin path used for enhanced product feeds", () => {
+    const feed = "https://ui.awin.com/productdata-darwin-download/publisher/3037577/token_123/1/feed/F94.csv.gz";
+    expect(normalizeFeedUrl(feed)).toBe(feed);
+    expect(normalizeFeedUrl("https://ui.awin.com/productdata-darwin-download/publisher/3037577/token_123/1/feedList")).toBeUndefined();
+    expect(normalizeFeedUrl(`${feed}?redirect=https://example.com`)).toBeUndefined();
   });
 
   it("extracts a feedList URL from the secret value", () => {
