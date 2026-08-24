@@ -2,9 +2,8 @@
   "candidateRows": 2104,
   "candidateToProductRate": 13.5,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-24T22:42:50.852Z",
+  "generatedAt": "2026-08-24T23:55:35.676Z",
   "issues": {
-    "ambiguous-stock": 676,
     "missing-material": 171,
     "missing-or-ambiguous-dimensions": 1590
   },

@@ -2,9 +2,8 @@
   "candidateRows": 40,
   "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-24T22:42:50.852Z",
+  "generatedAt": "2026-08-24T23:55:35.676Z",
   "issues": {
-    "ambiguous-stock": 40,
     "missing-capacity": 21,
     "unconfirmed-drainage": 19
   },

@@ -2,9 +2,9 @@
   "candidateRows": 354,
   "candidateToProductRate": 98,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-24T22:42:50.852Z",
+  "generatedAt": "2026-08-24T23:55:35.676Z",
   "issues": {
-    "ambiguous-stock": 332,
+    "ambiguous-stock": 20,
     "invalid-price": 20,
     "missing-or-ambiguous-slope": 336,
     "missing-passage-width": 351,

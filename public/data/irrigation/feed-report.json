@@ -2,9 +2,8 @@
   "candidateRows": 1047,
   "candidateToProductRate": 46.3,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-24T22:42:50.852Z",
+  "generatedAt": "2026-08-24T23:55:35.676Z",
   "issues": {
-    "ambiguous-stock": 1008,
     "incomplete-product-data": 560,
     "missing-product-kind": 560,
     "unconfirmed-system-compatibility": 884
