@@ -106,7 +106,15 @@ Only configure feeds after the relevant advertiser programmes have approved the 
 1. In Awin open **Toolbox → Create-a-Feed**.
 2. Select approved advertisers, categories and the required columns.
 3. Create or copy the reusable feed download URLs. Awin notes that the product-feed API key is different from the Publisher API token.
-4. Store the complete URLs only in the GitHub Actions repository secret `AWIN_FEED_URLS_JSON`. A simple JSON array remains supported for the original three verticals; prefer the grouped format when separate feeds are available:
+4. Store the feed configuration only in the GitHub Actions repository secret `AWIN_FEED_URLS_JSON`. Direct download URLs remain supported. If you want new joined German programmes to be discovered automatically, the secret can now contain the single `feedList` URL from Awin:
+
+```json
+{
+  "feedList": "https://ui.awin.com/productdata-darwin-download/publisher/.../feedList"
+}
+```
+
+The importer selects only joined German feeds from that list, allows only Awin product-data hosts, deduplicates URLs and scans all supported verticals. A grouped configuration remains available when you want an explicit allowlist:
 
 ```json
 {

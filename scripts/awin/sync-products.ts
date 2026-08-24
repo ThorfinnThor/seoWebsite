@@ -14,6 +14,7 @@ import { isGardenHouseCandidate, normalizeGardenHouse } from "./garden-house-nor
 import { isIrrigationCandidate, normalizeIrrigation } from "./irrigation-normalizer";
 import { isFlooringCandidate, normalizeFlooring } from "./flooring-normalizer";
 import { isRobotMowerCandidate, normalizeRobotMower } from "./robot-mower-normalizer";
+import { extractFeedListUrl, parseFeedListRows } from "./feed-list";
 import { streamFeedRows } from "./source";
 import type { AffiliateCandidate, DehumidifierCandidate, FlooringCandidate, GardenHouseCandidate, IrrigationCandidate, ProductOverride, RobotMowerCandidate } from "./types";
 
@@ -181,10 +182,21 @@ export function parseFeedJobs(raw: string): FeedJob[] {
   return [...jobs.entries()].map(([url, verticals]) => ({ url, verticals }));
 }
 
+async function resolveFeedJobs(raw: string): Promise<FeedJob[]> {
+  const feedListUrl = extractFeedListUrl(raw);
+  if (!feedListUrl) return parseFeedJobs(raw);
+  const rows = [];
+  for await (const row of streamFeedRows(feedListUrl)) rows.push(row);
+  const entries = parseFeedListRows(rows);
+  if (!entries.length) throw new Error("Awin feed list contains no joined German product feeds");
+  const allVerticals = new Set<Vertical>(["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"]);
+  return entries.map((entry) => ({ url: entry.url, verticals: new Set(allVerticals) }));
+}
+
 async function run(): Promise<void> {
   const rawSecret = process.env.AWIN_FEED_URLS_JSON;
   if (!rawSecret) { console.log("Affiliate feed secret is not configured; nothing to sync."); return; }
-  const jobs = parseFeedJobs(rawSecret);
+  const jobs = await resolveFeedJobs(rawSecret);
   if (process.env.FEED_SYNC_SCHEDULED === "true") {
     const delayMs = (15 + Math.floor(Math.random() * 76)) * 1000;
     console.log(`Scheduled jitter: ${Math.round(delayMs / 1000)} seconds.`);
