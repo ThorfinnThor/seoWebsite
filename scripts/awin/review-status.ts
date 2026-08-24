@@ -1,7 +1,7 @@
 import { readFile } from "node:fs/promises";
 import path from "node:path";
 
-type ReviewProduct = { id: string; name?: string; offerCount?: number; issues?: string[] };
+type ReviewProduct = { id: string; name?: string; offerCount?: number; minBasePriceEur?: number; issues?: string[] };
 type ReviewQueue = { products?: ReviewProduct[] };
 type Catalog = { products?: unknown[]; offers?: unknown[] };
 type MerchantConfig = { merchants?: Array<{ name: string; applicationStatus: string; enabled: boolean; verticals: string[] }> };
@@ -16,8 +16,14 @@ for (const vertical of verticals) {
   const review = await json<ReviewQueue>(`data/review/${vertical}.json`);
   const catalog = await json<Catalog>(`public/data/${vertical}/catalog.json`);
   const products = review.products ?? [];
+  const prioritized = [...products].sort((a, b) =>
+    (a.issues?.length ?? 0) - (b.issues?.length ?? 0)
+    || (b.offerCount ?? 0) - (a.offerCount ?? 0)
+    || (a.minBasePriceEur ?? Number.POSITIVE_INFINITY) - (b.minBasePriceEur ?? Number.POSITIVE_INFINITY)
+    || a.id.localeCompare(b.id),
+  );
   console.log(`${vertical}: ${products.length} Kandidaten, ${catalog.products?.length ?? 0} geprüfte Produkte, ${catalog.offers?.length ?? 0} öffentliche Angebote`);
-  for (const product of products.slice(0, 5)) console.log(`  - ${product.id}: ${product.name ?? "ohne Namen"} · ${product.offerCount ?? 0} Angebote · ${(product.issues ?? []).join(", ") || "keine Parser-Hinweise"}`);
+  for (const product of prioritized.slice(0, 5)) console.log(`  - ${product.id}: ${product.name ?? "ohne Namen"} · ${product.offerCount ?? 0} Angebote · ${(product.issues ?? []).join(", ") || "keine Parser-Hinweise"}`);
   if (products.length > 5) console.log(`  … ${products.length - 5} weitere Kandidaten`);
 }
 
