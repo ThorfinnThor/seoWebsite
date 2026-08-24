@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractFeedListUrl, isAllowedFeedUrl, parseFeedListRows } from "./feed-list";
+import { extractFeedListUrl, isAllowedFeedUrl, normalizeFeedUrl, parseFeedListRows } from "./feed-list";
 
 describe("Awin feed list resolver", () => {
   it("keeps only joined German product feeds and deduplicates URLs", () => {
@@ -14,7 +14,21 @@ describe("Awin feed list resolver", () => {
 
   it("accepts the Awin feed-data host but rejects arbitrary URLs", () => {
     expect(isAllowedFeedUrl("https://productdata.awin.com/datafeed/download/apikey/x/fid/1/")).toBe(true);
+    expect(isAllowedFeedUrl("http://datafeed.api.productserve.com/datafeed/download/apikey/x/fid/1/")).toBe(true);
     expect(isAllowedFeedUrl("https://example.com/feed.csv")).toBe(false);
+  });
+
+  it("upgrades Awin's legacy Productserve links to HTTPS", () => {
+    const legacy = "http://datafeed.api.productserve.com/datafeed/download/apikey/x/fid/9/";
+    expect(normalizeFeedUrl(legacy)).toBe("https://datafeed.api.productserve.com/datafeed/download/apikey/x/fid/9/");
+    expect(parseFeedListRows([{ "Membership Status": "Joined", Language: "German", URL: legacy }])).toEqual([
+      expect.objectContaining({ url: "https://datafeed.api.productserve.com/datafeed/download/apikey/x/fid/9/" }),
+    ]);
+  });
+
+  it("rejects credentials and insecure URLs outside Awin's legacy feed host", () => {
+    expect(normalizeFeedUrl("https://user:password@productdata.awin.com/datafeed/download/fid/1/")).toBeUndefined();
+    expect(normalizeFeedUrl("http://productdata.awin.com/datafeed/download/fid/1/")).toBeUndefined();
   });
 
   it("extracts a feedList URL from the secret value", () => {

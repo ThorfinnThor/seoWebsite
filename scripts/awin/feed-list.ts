@@ -27,8 +27,9 @@ export function parseFeedListRows(rows: RawFeedRow[]): FeedListEntry[] {
   const entries: FeedListEntry[] = [];
   const seen = new Set<string>();
   for (const row of rows) {
-    const url = field(row, "url", "download_url", "download url", "feed_url", "feed url", "feed_download_url", "feed download url", "manual_download_url", "manual download url");
-    if (!url || !isAllowedFeedUrl(url)) continue;
+    const rawUrl = field(row, "url", "download_url", "download url", "feed_url", "feed url", "feed_download_url", "feed download url", "manual_download_url", "manual download url");
+    const url = rawUrl ? normalizeFeedUrl(rawUrl) : undefined;
+    if (!url) continue;
     const membershipStatus = field(row, "membership_status", "membership status", "status");
     if (membershipStatus && membershipStatus.trim().toLowerCase() !== "joined") continue;
     const language = field(row, "language", "feed_language", "feed language");
@@ -49,11 +50,27 @@ export function parseFeedListRows(rows: RawFeedRow[]): FeedListEntry[] {
 }
 
 export function isAllowedFeedUrl(raw: string): boolean {
+  return normalizeFeedUrl(raw) !== undefined;
+}
+
+/**
+ * Awin's feed-list endpoint can still return its legacy Productserve download
+ * host with an http:// URL. The same endpoint supports HTTPS, so upgrade that
+ * trusted legacy URL before it is stored or fetched. All other hosts remain
+ * HTTPS-only and are rejected.
+ */
+export function normalizeFeedUrl(raw: string): string | undefined {
   try {
     const url = new URL(raw);
-    return url.protocol === "https:" && (url.hostname === "productdata.awin.com" || url.hostname === "datafeed.api.productserve.com");
+    if (url.username || url.password) return undefined;
+    if (url.hostname === "productdata.awin.com" && url.protocol === "https:") return url.toString();
+    if (url.hostname === "datafeed.api.productserve.com" && (url.protocol === "http:" || url.protocol === "https:")) {
+      url.protocol = "https:";
+      return url.toString();
+    }
+    return undefined;
   } catch {
-    return false;
+    return undefined;
   }
 }
 
