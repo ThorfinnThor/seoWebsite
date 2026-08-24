@@ -15,4 +15,13 @@ describe("flooring normalizer", () => {
     expect(result.issues).toContain("missing-package-coverage");
     expect(result.product?.packageCoverageM2).toBeUndefined();
   });
+
+  it("parses Awin description variants for package, dimensions and installation", () => {
+    const attributes = parseFlooringAttributes("Parkett Paketinhalt: 11 Stück = 2,198 m² Stärke: 11,5 mm Maße: 108 x 18,5 cm (L x B) Verlegeart: Automatic-Click-System");
+    expect(attributes).toMatchObject({ packageCoverageM2: 2.198, plankLengthMm: 1080, plankWidthMm: 185, thicknessMm: 11.5, installation: "click" });
+  });
+
+  it("excludes wall panels that merely mention vinyl", () => {
+    expect(isFlooringCandidate({ product_name: "Wandpaneel Vinyloptik", category_name: "Interior" })).toBe(false);
+  });
 });

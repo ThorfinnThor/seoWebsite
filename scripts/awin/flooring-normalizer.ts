@@ -4,11 +4,12 @@ import { availability, delivery, isoDate, parsePrice, productIdentity, shortHash
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const TYPE_PATTERN = /laminat|vinyl|lvt|rigid|parkett|parquet|bodenbelag|flooring/i;
+const EXCLUDED_PATTERN = /wandpaneel|wandpaneele|dekorpaneel|dekorpaneele|wandschutz/i;
 export type FlooringCandidate = AffiliateCandidate<FlooringProduct>;
 
 export function isFlooringCandidate(row: RawFeedRow): boolean {
   const text = [value(row, "product_name"), value(row, "description"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path")].filter(Boolean).join(" ");
-  return TYPE_PATTERN.test(text);
+  return TYPE_PATTERN.test(text) && !EXCLUDED_PATTERN.test(text);
 }
 
 function decimal(raw?: string) { const parsed = raw ? Number(raw.replace(",", ".")) : NaN; return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined; }
@@ -16,12 +17,14 @@ function capture(text: string, pattern: RegExp) { return decimal(text.match(patt
 
 export function parseFlooringAttributes(text: string): Partial<FlooringProduct> {
   const flooringType: FlooringProduct["flooringType"] = /parkett|parquet/i.test(text) ? "parquet-floating" : /vinyl|lvt|rigid/i.test(text) ? "vinyl-click" : "laminate";
-  const lead = text.slice(0, 140);
-  const installation: FlooringProduct["installation"] = /^(?:klebe|adhesive)[- ]?vinyl|^dryback|^vollverkleb|^zum kleben/i.test(lead) ? "glue" : /klick|click|cpc|uniclic/i.test(lead) ? "click" : "unknown";
-  const packageCoverageM2 = capture(text, /(?:paket|packung|karton)[^\d]{0,30}(\d+(?:[.,]\d+)?)\s*m(?:²|2)/i) ?? capture(text, /(\d+(?:[.,]\d+)?)\s*m(?:²|2)\s*(?:pro|je|per)\s*(?:paket|packung|karton)/i);
-  const dimensions = text.match(/(\d{3,4})\s*[x×]\s*(\d{2,3})(?:\s*[x×]\s*(\d+(?:[.,]\d+)?))?\s*mm/i);
-  const plankLengthMm = dimensions ? Number(dimensions[1]) : undefined;
-  const plankWidthMm = dimensions ? Number(dimensions[2]) : undefined;
+  const glueIndex = text.search(/(?:klebe|adhesive)[- ]?vinyl|dryback|vollverkleb|zum kleben/i);
+  const clickIndex = text.search(/klick|click|cpc|uniclic|automatic[- ]?click/i);
+  const installation: FlooringProduct["installation"] = glueIndex >= 0 && (clickIndex < 0 || glueIndex < clickIndex) ? "glue" : clickIndex >= 0 ? "click" : "unknown";
+  const packageCoverageM2 = capture(text, /(?:paketinhalt|paket|packung|karton)[\s\S]{0,100}?(\d+(?:[.,]\d+)?)\s*m(?:²|2)/i) ?? capture(text, /(\d+(?:[.,]\d+)?)\s*m(?:²|2)\s*(?:pro|je|per)\s*(?:paket|packung|karton)/i);
+  const dimensions = text.match(/(\d{2,4})\s*[x×]\s*(\d{1,4}(?:[.,]\d+)?)\s*(mm|cm|m)(?:\s*[x×]\s*(\d+(?:[.,]\d+)?))?/i);
+  const dimensionFactor = dimensions?.[3]?.toLowerCase() === "m" ? 1000 : dimensions?.[3]?.toLowerCase() === "cm" ? 10 : 1;
+  const plankLengthMm = dimensions ? Number(dimensions[1].replace(",", ".")) * dimensionFactor : undefined;
+  const plankWidthMm = dimensions ? Number(dimensions[2].replace(",", ".")) * dimensionFactor : undefined;
   const thicknessMm = capture(text, /(?:st(?:ä|ae)rke|dicke)[^\d]{0,12}(\d+(?:[.,]\d+)?)\s*mm/i);
   const wearLayerMm = capture(text, /(?:nutzschicht|wear layer)[^\d]{0,12}(\d+(?:[.,]\d+)?)\s*mm/i);
   return {
