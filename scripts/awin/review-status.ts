@@ -11,17 +11,28 @@ async function json<T>(file: string): Promise<T> {
 }
 
 const verticals = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"] as const;
-console.log("\nPassendPlanen Affiliate-Review\n");
-for (const vertical of verticals) {
-  const review = await json<ReviewQueue>(`data/review/${vertical}.json`);
-  const catalog = await json<Catalog>(`public/data/${vertical}/catalog.json`);
-  const products = review.products ?? [];
-  const prioritized = [...products].sort((a, b) =>
+function isLikelyMatch(vertical: typeof verticals[number], product: ReviewProduct): boolean {
+  if (vertical !== "garden-house") return true;
+  const name = product.name ?? "";
+  return /gartenhaus|gerätehaus|geraetehaus|gartenschuppen|geräteschuppen|geraeteschuppen|holzhaus|blockbohlenhaus/i.test(name)
+    && !/fußboden|fussboden|bodenplatte|boden|floor/i.test(name);
+}
+
+function prioritize(vertical: typeof verticals[number], products: ReviewProduct[]): ReviewProduct[] {
+  const relevant = products.filter((product) => isLikelyMatch(vertical, product));
+  return relevant.sort((a, b) =>
     (a.issues?.length ?? 0) - (b.issues?.length ?? 0)
     || (b.offerCount ?? 0) - (a.offerCount ?? 0)
     || (a.minBasePriceEur ?? Number.POSITIVE_INFINITY) - (b.minBasePriceEur ?? Number.POSITIVE_INFINITY)
     || a.id.localeCompare(b.id),
   );
+}
+console.log("\nPassendPlanen Affiliate-Review\n");
+for (const vertical of verticals) {
+  const review = await json<ReviewQueue>(`data/review/${vertical}.json`);
+  const catalog = await json<Catalog>(`public/data/${vertical}/catalog.json`);
+  const products = review.products ?? [];
+  const prioritized = prioritize(vertical, products);
   console.log(`${vertical}: ${products.length} Kandidaten, ${catalog.products?.length ?? 0} geprüfte Produkte, ${catalog.offers?.length ?? 0} öffentliche Angebote`);
   for (const product of prioritized.slice(0, 5)) console.log(`  - ${product.id}: ${product.name ?? "ohne Namen"} · ${product.offerCount ?? 0} Angebote · ${(product.issues ?? []).join(", ") || "keine Parser-Hinweise"}`);
   if (products.length > 5) console.log(`  … ${products.length - 5} weitere Kandidaten`);
