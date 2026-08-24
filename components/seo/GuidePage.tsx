@@ -118,14 +118,15 @@ export function GuidePage({
           inLanguage: "de-DE",
           author: {
             "@type": "Person",
-            "@id": `${siteRoot}/#publisher`,
+            "@id": `${siteRoot}/#author`,
             name: "Schayan Yousefian",
             url: absoluteUrl("/ueber-passendplanen/"),
           },
           publisher: {
-            "@type": "Person",
-            "@id": `${siteRoot}/#publisher`,
-            name: "Schayan Yousefian",
+            "@type": "Organization",
+            "@id": `${siteRoot}/#organization`,
+            name: SITE.name,
+            url: `${siteRoot}/`,
           },
           isPartOf: { "@type": "WebSite", "@id": `${siteRoot}/#website` },
           ...(resolvedSources.length > 0

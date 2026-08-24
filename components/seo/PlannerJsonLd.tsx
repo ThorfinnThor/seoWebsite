@@ -21,7 +21,7 @@ export function PlannerJsonLd({ name, description, path }: { name: string; descr
         isAccessibleForFree: true,
         ...(planner ? { featureList: planner.outputs } : {}),
         offers: { "@type": "Offer", price: "0", priceCurrency: "EUR" },
-        publisher: { "@type": "Person", "@id": `${SITE.url.replace(/\/$/, "")}/#publisher`, name: "Schayan Yousefian" },
+        publisher: { "@type": "Organization", "@id": `${SITE.url.replace(/\/$/, "")}/#organization`, name: SITE.name },
         isPartOf: { "@type": "WebSite", "@id": `${SITE.url.replace(/\/$/, "")}/#website` },
       }}
     />

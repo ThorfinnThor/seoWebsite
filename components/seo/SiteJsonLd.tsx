@@ -1,4 +1,5 @@
 import { absoluteUrl, SITE } from "@/lib/site";
+import { LEGAL } from "@/lib/legal";
 import { JsonLd } from "./JsonLd";
 
 export function SiteJsonLd() {
@@ -15,13 +16,31 @@ export function SiteJsonLd() {
             name: SITE.name,
             description: SITE.description,
             inLanguage: "de-DE",
-            publisher: { "@id": `${siteRoot}/#publisher` },
+            publisher: { "@id": `${siteRoot}/#organization` },
           },
           {
             "@type": "Person",
-            "@id": `${siteRoot}/#publisher`,
+            "@id": `${siteRoot}/#author`,
             name: "Schayan Yousefian",
             url: absoluteUrl("/ueber-passendplanen/"),
+            founder: { "@id": `${siteRoot}/#organization` },
+          },
+          {
+            "@type": "Organization",
+            "@id": `${siteRoot}/#organization`,
+            name: SITE.name,
+            url: `${siteRoot}/`,
+            description: SITE.description,
+            logo: absoluteUrl("/brand/passendplanen-icon.png"),
+            image: absoluteUrl("/brand/passendplanen-icon.png"),
+            founder: { "@id": `${siteRoot}/#author` },
+            areaServed: { "@type": "Country", name: "Deutschland" },
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: LEGAL.email,
+              availableLanguage: "German",
+            },
           },
         ],
       }}
