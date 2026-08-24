@@ -1,1 +1,7 @@
-{ "schemaVersion": 1, "vertical": "irrigation", "generatedAt": "2026-08-09T00:00:00.000Z", "products": [], "offers": [] }
+{
+  "generatedAt": "2026-08-09T00:00:00.000Z",
+  "offers": [],
+  "products": [],
+  "schemaVersion": 1,
+  "vertical": "irrigation"
+}

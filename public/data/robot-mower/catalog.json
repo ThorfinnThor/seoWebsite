@@ -1,7 +1,7 @@
 {
-  "schemaVersion": 1,
-  "vertical": "robot-mower",
   "generatedAt": "2026-08-09T00:00:00.000Z",
+  "offers": [],
   "products": [],
-  "offers": []
+  "schemaVersion": 1,
+  "vertical": "robot-mower"
 }
