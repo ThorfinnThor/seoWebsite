@@ -2,6 +2,36 @@
   "schemaVersion": 1,
   "overrides": [
     {
+      "id": "gtin:8008984855465",
+      "name": "STIGA Mähroboter G 600",
+      "brand": "STIGA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 600,
+      "maxSlopePercent": 45,
+      "navigation": "wire",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 6,
+      "waterProtection": "IPX5",
+      "obstacleDetection": true,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 600 m², bis 45 % Steigung (24°), Begrenzungs-/Mähpunkt-System, Schnitthöhe 2–6 cm, IPX5 und Hindernissensoren. Preis und Verfügbarkeit bleiben feed-gesteuert."
+    },
+    {
+      "id": "gtin:8008984855472",
+      "name": "STIGA Mähroboter G 1200",
+      "brand": "STIGA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 1200,
+      "maxSlopePercent": 45,
+      "navigation": "wire",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 6,
+      "waterProtection": "IPX5",
+      "obstacleDetection": true,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 1.200 m², bis 45 % Steigung (24°), Begrenzungs-/Mähpunkt-System, Schnitthöhe 2–6 cm, IPX5 und Hindernissensoren. Preis und Verfügbarkeit bleiben feed-gesteuert."
+    },
+    {
       "id": "gtin:6970135034789",
       "name": "ECOVACS GOAT O800 RTK",
       "brand": "Ecovacs",
