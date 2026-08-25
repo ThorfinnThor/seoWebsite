@@ -1,1 +1,73 @@
-{ "schemaVersion": 1, "overrides": [] }
+{
+  "schemaVersion": 1,
+  "overrides": [
+    {
+      "id": "gtin:4066407028142",
+      "name": "Gardena Bewässerungscomputer smart Dual Water Control",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "controller",
+      "systemId": "GARDENA smart system",
+      "maxZones": 2,
+      "smartCompatible": true,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: zwei unabhängig steuerbare Ventile, GARDENA smart/Bluetooth-App, Smart-Home-Kompatibilität und 0,5–12 bar Betriebsdruck."
+    },
+    {
+      "id": "gtin:4078500134606",
+      "name": "Gardena Verlegerohr Micro-Drip-System 1/2\" 15 m",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "pipe",
+      "systemId": "GARDENA Micro-Drip-System",
+      "pipeDiameterMm": 13,
+      "driplineLengthM": 15,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: UV-stabilisiertes, lichtundurchlässiges 13-mm-Verlegerohr, 15-m-Rolle, ober- und unterirdisch verlegbar."
+    },
+    {
+      "id": "gtin:4078500136204",
+      "name": "Gardena Tropfrohr 15 m 4,6 mm",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "dripline",
+      "systemId": "GARDENA Micro-Drip-System",
+      "pipeDiameterMm": 4.6,
+      "driplineLengthM": 15,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 15-m-Tropfrohr mit 4,6 mm Durchmesser, selbstreinigenden Tropfern im 30-cm-Abstand und 1,5 l/h je Tropfer."
+    },
+    {
+      "id": "gtin:4066407003064",
+      "name": "Gardena Bewässerungsset für Hecke und Sträucher 25 m",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "dripline",
+      "systemId": "GARDENA Micro-Drip-System",
+      "pipeDiameterMm": 13,
+      "driplineLengthM": 25,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: Ready-to-Use-Set für 25 m Pflanzreihe mit 13-mm-Tropfrohr, Basisgerät 1000 und 1,6 l/h je Tropfer alle 30 cm."
+    },
+    {
+      "id": "gtin:4078500058018",
+      "name": "Gardena Pipeline Viereckregner",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "sprinkler",
+      "systemId": "GARDENA Pipeline",
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: Viereckregner im GARDENA-Pipeline-System für Beregnungsflächen von 9 bis 216 m²."
+    },
+    {
+      "id": "gtin:4078500058322",
+      "name": "Gardena Start-Set Pipeline mit Viereckregner",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "sprinkler",
+      "systemId": "GARDENA Pipeline",
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: Pipeline-Startset mit Viereckregner und 3/4-Zoll-Innengewinde für den Aufbau einer festen Gartenbewässerung."
+    }
+  ]
+}

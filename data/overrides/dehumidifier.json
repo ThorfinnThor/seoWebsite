@@ -1,1 +1,114 @@
-{ "schemaVersion": 1, "overrides": [] }
+{
+  "schemaVersion": 1,
+  "overrides": [
+    {
+      "id": "gtin:4048164102853",
+      "name": "comfee Luftentfeuchter MDDF3-20DEN7",
+      "brand": "comfee",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedVolumeM3": 130,
+      "extractionLPerDay": 20,
+      "continuousDrain": false,
+      "noiseDb": 46,
+      "tankLiters": 3,
+      "powerW": 360,
+      "refrigerantType": "R290",
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 130 m³, ca. 20 l/24 h, 3-l-Tank, 360 W, R290 und 41–46 dB(A). Ein dauerhafter Ablauf ist für dieses Modell nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4048164102860",
+      "name": "comfee Luftentfeuchter MDDF3-30DEN7",
+      "brand": "comfee",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedVolumeM3": 130,
+      "extractionLPerDay": 30,
+      "continuousDrain": true,
+      "noiseDb": 58.9,
+      "tankLiters": 3,
+      "powerW": 550,
+      "refrigerantType": "R290",
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 130 m³, ca. 30 l/24 h, 3-l-Tank, 550 W, R290, 58,9 dB(A) und Anschluss für dauerhaften Wasserablauf."
+    },
+    {
+      "id": "gtin:4048164102877",
+      "name": "Midea Luftentfeuchter MDDP-50DEN7",
+      "brand": "Midea",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 100,
+      "maxRecommendedVolumeM3": 250,
+      "extractionLPerDay": 50,
+      "continuousDrain": false,
+      "noiseDb": 58.9,
+      "tankLiters": 6,
+      "powerW": 850,
+      "refrigerantType": "R290",
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 100 m² bzw. 250 m³, 50 l/Tag, 6-l-Tank, 850 W, R290 und 58,9 dB(A). Ein dauerhafter Ablauf ist für dieses Modell nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:7333282011024",
+      "name": "Emerio Luftentfeuchter DH-128153",
+      "brand": "Emerio",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 25,
+      "extractionLPerDay": 12,
+      "continuousDrain": false,
+      "tankLiters": 2,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: bis 25 m², 12 l/24 h, 2-l-Tank, Volltank-Alarm und Autostopp. Ein dauerhafter Ablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:7333282011031",
+      "name": "Emerio Luftentfeuchter DH-122844",
+      "brand": "Emerio",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 40,
+      "extractionLPerDay": 20,
+      "continuousDrain": false,
+      "tankLiters": 6,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: bis 40 m², 20 l/24 h, 6-l-Tank, Volltank-Alarm und Autostopp. Ein dauerhafter Ablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:7333282011048",
+      "name": "Emerio Luftentfeuchter DH-127463",
+      "brand": "Emerio",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 50,
+      "extractionLPerDay": 25,
+      "continuousDrain": false,
+      "laundryMode": true,
+      "tankLiters": 5.5,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: bis 50 m², 25 l/24 h, 5,5-l-Tank, Wäsche- und Schuhtrocknerfunktion, Volltank-Alarm und Autostopp. Ein dauerhafter Ablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:7333282011055",
+      "name": "Emerio Luftentfeuchter DH-129238",
+      "brand": "Emerio",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 60,
+      "extractionLPerDay": 30,
+      "continuousDrain": false,
+      "tankLiters": 6,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: bis 60 m², 30 l/24 h, 6-l-Tank, Volltank-Alarm und Autostopp. Ein dauerhafter Ablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:8712836970465",
+      "name": "Tristar Luftentfeuchter DH-5424",
+      "brand": "Tristar",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 48,
+      "extractionLPerDay": 16,
+      "continuousDrain": false,
+      "noiseDb": 46,
+      "tankLiters": 3.7,
+      "powerW": 260,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: bis 48 m², 16 l/Tag, 3,7-l-Tank, 260 W und 46 dB(A). Ein dauerhafter Ablauf ist nicht redaktionell bestätigt."
+    }
+  ]
+}
