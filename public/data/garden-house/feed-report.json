@@ -2,7 +2,7 @@
   "candidateRows": 686,
   "candidateToProductRate": 10.1,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-25T09:21:13.472Z",
+  "generatedAt": "2026-08-25T09:53:49.527Z",
   "issues": {
     "missing-material": 94,
     "missing-or-ambiguous-dimensions": 610
@@ -12,8 +12,8 @@
   "offers": 69,
   "reviewedProducts": 0,
   "reviewQueue": 686,
-  "rows": 265966,
+  "rows": 169022,
   "schemaVersion": 1,
-  "sourceFeeds": 9,
-  "successfulFeeds": 9
+  "sourceFeeds": 6,
+  "successfulFeeds": 6
 }
