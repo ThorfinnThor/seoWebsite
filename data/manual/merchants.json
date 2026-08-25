@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastVerifiedAt": "2026-08-15",
+  "lastVerifiedAt": "2026-08-25",
   "merchants": [
     {
       "merchantId": "gfp",
@@ -35,9 +35,9 @@
       "awinAdvertiserId": 48707,
       "profileUrl": "https://ui.awin.com/merchant-profile/48707",
       "applicationPriority": 3,
-      "applicationStatus": "candidate",
-      "enabled": false,
-      "verticals": [],
+      "applicationStatus": "active",
+      "enabled": true,
+      "verticals": ["flooring"],
       "plannerIds": ["terrace", "privacy-screen", "flooring"],
       "country": "DE"
     },

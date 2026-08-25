@@ -74,6 +74,10 @@ Complete the identity/payment verification shown by Awin and submit the applicat
 
 Programme profiles and IDs were rechecked against Awin on 2026-08-15. Apply only after the public site shows the PassendPlanen brand, the canonical `https://www.passendplanen.de/` URL and a complete legal contact.
 
+### Confirmed active programmes
+
+Woodstore24 DE/AT (Awin advertiser ID `48707`) is now approved and enabled in the repository registry. Its current import scope is the supported flooring catalog; terrace decking and privacy-screen product catalogs remain separate follow-up adapters. Once Awin exposes the programme in the feed list, the next manual sync will discover it automatically.
+
 ### Wave 1: strongest calculator fit
 
 | Order | Programme | Awin ID | Primary calculators |
