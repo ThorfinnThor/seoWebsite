@@ -48,6 +48,21 @@ export function isGardenHouseCandidate(row: RawFeedRow): boolean {
 export function parseDimensions(raw?: string): { widthCm: number; depthCm: number } | undefined {
   if (!raw) return undefined;
   const normalized = raw.toLowerCase().replace(/,/g, ".").replace(/×/g, "x");
+  // Product names often contain a model/area number before the actual
+  // footprint, e.g. "Utility V 4.9 295 x 261 cm". Prefer the explicit
+  // x-separated pair when the input contains exactly one separator, while
+  // keeping three-dimensional values rejected as ambiguous.
+  if ((normalized.match(/x/g) ?? []).length === 1) {
+    const pair = normalized.match(/(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)\s*(mm|cm|m)(?!\s*x)/i);
+    if (pair) {
+      const factor = pair[3] === "m" ? 100 : pair[3] === "mm" ? 0.1 : 1;
+      const widthCm = Number(pair[1]) * factor;
+      const depthCm = Number(pair[2]) * factor;
+      if (Number.isFinite(widthCm) && Number.isFinite(depthCm) && widthCm >= 100 && depthCm >= 100 && widthCm <= 2000 && depthCm <= 2000) {
+        return { widthCm: Math.round(widthCm * 10) / 10, depthCm: Math.round(depthCm * 10) / 10 };
+      }
+    }
+  }
   const matches = [...normalized.matchAll(/(\d+(?:\.\d+)?)\s*(mm|cm|m)?/g)];
   if (matches.length !== 2) return undefined;
   const explicitUnits = matches.map((match) => match[2]).filter(Boolean);

@@ -1,4 +1,48 @@
 {
   "schemaVersion": 1,
-  "overrides": []
+  "overrides": [
+    {
+      "id": "gtin:4004581476298",
+      "name": "Weka Gartenhaus Finnja 296 x 205 cm natur mit Fußboden",
+      "brand": "WEKA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "widthCm": 296,
+      "depthCm": 205,
+      "footprintM2": 6.1,
+      "material": "wood",
+      "roofType": "gable",
+      "wallThicknessMm": 28,
+      "floorIncluded": true,
+      "reviewNote": "Globus Baumarkt product page checked 2026-08-25: footprint, wood material, gable roof, 28 mm wall thickness and integrated floor verified."
+    },
+    {
+      "id": "gtin:0638801413721",
+      "name": "Duramax Metallgerätehaus Palladium silber/grau 249 x 209 cm",
+      "brand": "Duramax",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "widthCm": 249,
+      "depthCm": 209,
+      "footprintM2": 5.2,
+      "material": "metal",
+      "wallThicknessMm": 0.5,
+      "reviewNote": "Globus Baumarkt product page checked 2026-08-25: footprint, powder-coated galvanized steel and 0.5 mm wall thickness verified. Roof type and floor inclusion are intentionally left unspecified."
+    },
+    {
+      "id": "gtin:5411352800692",
+      "name": "Décor et Jardin Gartenhaus Lodum 262 x 202 cm natur mit Fußboden",
+      "brand": "Décor et Jardin",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "widthCm": 262,
+      "depthCm": 202,
+      "footprintM2": 5.3,
+      "material": "wood",
+      "roofType": "gable",
+      "wallThicknessMm": 12,
+      "floorIncluded": true,
+      "reviewNote": "Globus Baumarkt product page checked 2026-08-25: footprint, nordic spruce material, gable roof, 12 mm wall thickness and floor inclusion verified."
+    }
+  ]
 }
