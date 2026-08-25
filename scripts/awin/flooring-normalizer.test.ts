@@ -24,4 +24,15 @@ describe("flooring normalizer", () => {
   it("excludes wall panels that merely mention vinyl", () => {
     expect(isFlooringCandidate({ product_name: "Wandpaneel Vinyloptik", category_name: "Interior" })).toBe(false);
   });
+
+  it("uses a readable short description when the feed name is only an internal code", () => {
+    const result = normalizeFlooring({ product_name: "VI.REP.REAFCL002", product_short_description: "Klick Vinyl Eiche grau 592 x 148 mm, 1,40 m² / Paket", merchant_id: "48707", merchant_name: "Woodstore24 DE/AT", merchant_product_id: "1", product_GTIN: "4262551037812", search_price: "41.30", currency: "EUR", aw_deep_link: "https://www.awin1.com/pclick.php?p=1", in_stock: "1" });
+    expect(result.name).toContain("Klick Vinyl Eiche grau");
+    expect(result.issues).not.toContain("unhelpful-product-name");
+  });
+
+  it("keeps an internal-only feed name in review", () => {
+    const result = normalizeFlooring({ product_name: "VI.REP.REAFCL002", merchant_id: "48707", merchant_name: "Woodstore24 DE/AT", merchant_product_id: "1", search_price: "41.30", currency: "EUR", aw_deep_link: "https://www.awin1.com/pclick.php?p=1", in_stock: "1" });
+    expect(result.issues).toContain("unhelpful-product-name");
+  });
 });
