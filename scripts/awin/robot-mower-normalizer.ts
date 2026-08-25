@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { RobotMowerProductSchema, type RobotMowerProduct } from "@/lib/robot-mower/types";
-import { availability, delivery, isoDate, parsePrice, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, parsePrice, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /m(?:ä|ae)hroboter|rasenroboter|mowing robot|robot mower|rasenm(?:ä|ae)her|\bgoat\b/i;
@@ -44,7 +44,8 @@ export function parseRobotMowerAttributes(text: string): Partial<RobotMowerProdu
 }
 
 export function normalizeRobotMower(row: RawFeedRow): RobotMowerCandidate {
-  const name = value(row, "product_name") ?? "Unbenannter Mähroboter";
+  const named = productDisplayName(row, "Unbenannter Mähroboter");
+  const name = named.name;
   const merchantId = value(row, "merchant_id") ?? "unknown";
   const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
@@ -55,6 +56,7 @@ export function normalizeRobotMower(row: RawFeedRow): RobotMowerCandidate {
   const candidateAttributes = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, reviewed: false as const, dataQuality: "feed" as const, sourceUpdatedAt, navigation: "unknown" as const, ...attributes };
   const issues: string[] = [];
   if (!attributes.ratedAreaM2) issues.push("missing-rated-area");
+  if (named.opaque) issues.push("unhelpful-product-name");
   if (!attributes.maxSlopePercent) issues.push("missing-or-ambiguous-slope");
   if (!attributes.minPassageCm) issues.push("missing-passage-width");
   if (attributes.navigation === "unknown") issues.push("unknown-navigation");

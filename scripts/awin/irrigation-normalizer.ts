@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { IrrigationProductSchema, type IrrigationProduct } from "@/lib/irrigation/types";
-import { availability, delivery, isoDate, parsePrice, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, parsePrice, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { IrrigationCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /bewässer|bewaesser|tropf|regner|sprinkler|gartenschlauch|magnetventil|druckminder|bodenfeuchte|regensensor|bewässerungscomputer|bewaesserungscomputer/i;
@@ -35,7 +35,8 @@ export function parseIrrigationAttributes(text: string): Partial<IrrigationProdu
 }
 
 export function normalizeIrrigation(row: RawFeedRow): IrrigationCandidate {
-  const name = value(row, "product_name") ?? "Unbenanntes Bewässerungsprodukt";
+  const named = productDisplayName(row, "Unbenanntes Bewässerungsprodukt");
+  const name = named.name;
   const merchantId = value(row, "merchant_id") ?? "unknown";
   const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
@@ -46,6 +47,7 @@ export function normalizeIrrigation(row: RawFeedRow): IrrigationCandidate {
   const candidateAttributes = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, reviewed: false as const, dataQuality: "feed" as const, sourceUpdatedAt, ...attributes };
   const issues: string[] = [];
   if (!attributes.kind) issues.push("missing-product-kind");
+  if (named.opaque) issues.push("unhelpful-product-name");
   if (!attributes.systemId) issues.push("unconfirmed-system-compatibility");
   const productResult = IrrigationProductSchema.safeParse(candidateAttributes);
   if (!productResult.success) issues.push("incomplete-product-data");

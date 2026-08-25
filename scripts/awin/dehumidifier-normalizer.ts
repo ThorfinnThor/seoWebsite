@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { DehumidifierProductSchema, type DehumidifierProduct } from "@/lib/dehumidifier/types";
-import { availability, delivery, isoDate, parsePrice, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, parsePrice, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { DehumidifierCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /luftentfeuchter|entfeuchter|dehumidifier|bautrockner|raumtrockner|kondensationstrockner/i;
@@ -38,7 +38,8 @@ export function parseDehumidifierAttributes(text: string): Partial<DehumidifierP
 }
 
 export function normalizeDehumidifier(row: RawFeedRow): DehumidifierCandidate {
-  const name = value(row, "product_name") ?? "Unbenannter Luftentfeuchter";
+  const named = productDisplayName(row, "Unbenannter Luftentfeuchter");
+  const name = named.name;
   const merchantId = value(row, "merchant_id") ?? "unknown";
   const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
@@ -49,6 +50,7 @@ export function normalizeDehumidifier(row: RawFeedRow): DehumidifierCandidate {
   const candidateAttributes = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, reviewed: false as const, dataQuality: "feed" as const, sourceUpdatedAt, ...attributes };
   const issues: string[] = [];
   if (!attributes.maxRecommendedAreaM2 && !attributes.maxRecommendedVolumeM3 && !attributes.extractionLPerDay) issues.push("missing-capacity");
+  if (named.opaque) issues.push("unhelpful-product-name");
   if (!/dauerablauf|schlauchanschluss|continuous\s+drain|tank|behälter|behaelter/i.test(text)) issues.push("unconfirmed-drainage");
   const productResult = DehumidifierProductSchema.safeParse(candidateAttributes);
   if (!productResult.success) issues.push("incomplete-product-data");

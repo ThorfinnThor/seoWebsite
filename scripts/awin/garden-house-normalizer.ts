@@ -11,6 +11,21 @@ export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
   return undefined;
 }
 
+export function looksLikeInternalProductCode(name?: string): boolean {
+  return Boolean(name && /^[A-Z0-9._-]{8,}$/.test(name) && !/\s/.test(name));
+}
+
+export function productDisplayName(row: RawFeedRow, fallback: string): { name: string; fallbackUsed: boolean; opaque: boolean } {
+  const raw = value(row, "product_name");
+  if (raw && !looksLikeInternalProductCode(raw)) return { name: raw, fallbackUsed: false, opaque: false };
+  const alternative = [value(row, "product_short_description"), value(row, "description")]
+    .map((text) => text?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim())
+    .find((text) => text && !looksLikeInternalProductCode(text));
+  if (alternative) return { name: alternative.slice(0, 220), fallbackUsed: true, opaque: false };
+  const name = raw ?? fallback;
+  return { name, fallbackUsed: false, opaque: looksLikeInternalProductCode(name) };
+}
+
 export function isGardenHouseCandidate(row: RawFeedRow): boolean {
   return CANDIDATE_PATTERN.test([
     value(row, "product_name"), value(row, "merchant_category"), value(row, "category_name"),
@@ -115,7 +130,8 @@ export function isoDate(raw?: string): string {
 }
 
 export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
-  const name = value(row, "product_name") ?? "Unbenanntes Gartenhaus";
+  const named = productDisplayName(row, "Unbenanntes Gartenhaus");
+  const name = named.name;
   const merchantId = value(row, "merchant_id") ?? "unknown";
   const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
@@ -130,6 +146,7 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   const issues: string[] = [];
   if (!dimensions) issues.push("missing-or-ambiguous-dimensions");
   if (!productMaterial) issues.push("missing-material");
+  if (named.opaque) issues.push("unhelpful-product-name");
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
   if (currency !== "EUR") issues.push("non-eur-currency");
   if (!priceEur) issues.push("invalid-price");

@@ -1,25 +1,11 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { FlooringProductSchema, type FlooringProduct } from "@/lib/flooring/types";
-import { availability, delivery, isoDate, parsePrice, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, looksLikeInternalProductCode, parsePrice, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const TYPE_PATTERN = /laminat|vinyl|lvt|rigid|parkett|parquet|bodenbelag|flooring/i;
 const EXCLUDED_PATTERN = /wandpaneel|wandpaneele|dekorpaneel|dekorpaneele|wandschutz/i;
 export type FlooringCandidate = AffiliateCandidate<FlooringProduct>;
-
-function looksLikeInternalCode(name?: string): boolean {
-  return Boolean(name && /^[A-Z0-9._-]{8,}$/.test(name) && !/\s/.test(name));
-}
-
-function displayName(row: RawFeedRow): { name: string; fallbackUsed: boolean } {
-  const raw = value(row, "product_name");
-  if (raw && !looksLikeInternalCode(raw)) return { name: raw, fallbackUsed: false };
-  const fallback = [value(row, "product_short_description"), value(row, "description")]
-    .map((text) => text?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim())
-    .find((text) => text && !looksLikeInternalCode(text));
-  if (fallback) return { name: fallback.slice(0, 220), fallbackUsed: true };
-  return { name: raw ?? "Unbekannter Bodenbelag", fallbackUsed: false };
-}
 
 export function isFlooringCandidate(row: RawFeedRow): boolean {
   const text = [value(row, "product_name"), value(row, "description"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path")].filter(Boolean).join(" ");
@@ -49,7 +35,7 @@ export function parseFlooringAttributes(text: string): Partial<FlooringProduct> 
 }
 
 export function normalizeFlooring(row: RawFeedRow): FlooringCandidate {
-  const named = displayName(row);
+  const named = productDisplayName(row, "Unbekannter Bodenbelag");
   const name = named.name;
   const merchantId = value(row, "merchant_id") ?? "unknown";
   const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
@@ -63,7 +49,7 @@ export function normalizeFlooring(row: RawFeedRow): FlooringCandidate {
   if (!attributes.packageCoverageM2) issues.push("missing-package-coverage");
   if (!attributes.plankLengthMm || !attributes.plankWidthMm) issues.push("missing-plank-dimensions");
   if (attributes.installation === "unknown") issues.push("unknown-installation");
-  if (looksLikeInternalCode(name) && !named.fallbackUsed) issues.push("unhelpful-product-name");
+  if (looksLikeInternalProductCode(name) && !named.fallbackUsed) issues.push("unhelpful-product-name");
   const productResult = FlooringProductSchema.safeParse(candidateAttributes);
   if (!productResult.success) issues.push("incomplete-product-data");
   const affiliateUrl = value(row, "aw_deep_link");
