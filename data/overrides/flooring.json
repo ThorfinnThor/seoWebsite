@@ -1,4 +1,53 @@
 {
   "schemaVersion": 1,
-  "overrides": []
+  "overrides": [
+    {
+      "id": "gtin:4262551037812",
+      "name": "Premium 3D Fischgrät-Klickvinyl SPC Eiche grau, 7 mm",
+      "brand": "Woodstore24",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "flooringType": "vinyl-click",
+      "installation": "click",
+      "packageCoverageM2": 1.4,
+      "plankLengthMm": 592,
+      "plankWidthMm": 148,
+      "thicknessMm": 7,
+      "wearLayerMm": 0.55,
+      "floorHeatingApproved": true,
+      "reviewNote": "Woodstore24 product page checked 2026-08-25: identity, dimensions, package coverage, click installation, thickness, wear layer and floor-heating approval."
+    },
+    {
+      "id": "gtin:4262551037829",
+      "name": "Premium 3D Fischgrät-Klickvinyl SPC Eiche dunkel, 7 mm",
+      "brand": "Woodstore24",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "flooringType": "vinyl-click",
+      "installation": "click",
+      "packageCoverageM2": 1.4,
+      "plankLengthMm": 592,
+      "plankWidthMm": 148,
+      "thicknessMm": 7,
+      "wearLayerMm": 0.55,
+      "floorHeatingApproved": true,
+      "reviewNote": "Woodstore24 product page checked 2026-08-25: identity, dimensions, package coverage, click installation, thickness, wear layer and floor-heating approval."
+    },
+    {
+      "id": "gtin:4262551037843",
+      "name": "Premium 3D Klickvinyl SPC Eiche geräuchert, 7,5 mm",
+      "brand": "Woodstore24",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "flooringType": "vinyl-click",
+      "installation": "click",
+      "packageCoverageM2": 1.67,
+      "plankLengthMm": 1218,
+      "plankWidthMm": 228,
+      "thicknessMm": 7.5,
+      "wearLayerMm": 0.55,
+      "floorHeatingApproved": true,
+      "reviewNote": "Woodstore24 product page checked 2026-08-25: identity, dimensions, package coverage, click installation, thickness, wear layer and floor-heating approval."
+    }
+  ]
 }

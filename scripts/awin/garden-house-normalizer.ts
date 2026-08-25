@@ -12,18 +12,30 @@ export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
 }
 
 export function looksLikeInternalProductCode(name?: string): boolean {
-  return Boolean(name && /^[A-Z0-9._-]{8,}$/.test(name) && !/\s/.test(name));
+  return Boolean(name && /^[A-Z0-9._-]{6,}$/.test(name) && /\d/.test(name) && !/\s/.test(name));
 }
 
 export function productDisplayName(row: RawFeedRow, fallback: string): { name: string; fallbackUsed: boolean; opaque: boolean } {
-  const raw = value(row, "product_name");
-  if (raw && !looksLikeInternalProductCode(raw)) return { name: raw, fallbackUsed: false, opaque: false };
-  const alternative = [value(row, "product_short_description"), value(row, "description")]
-    .map((text) => text?.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim())
-    .find((text) => text && !looksLikeInternalProductCode(text));
+  const clean = (text?: string) => text
+    ?.replace(/<style\b[^>]*>[\s\S]*?<\/style>/gi, " ")
+    .replace(/<[^>]+>/g, " ")
+    .replace(/#html-body\s*\[[^\]]+\]\s*\{[^}]*\}/gi, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+  const unhelpful = (text?: string) => Boolean(
+    !text
+      || looksLikeInternalProductCode(text)
+      || /#html-body|\[data-pb-style=|justify-content\s*:|background-position\s*:/i.test(text)
+      || /^informationen auf einen blick\b/i.test(text),
+  );
+  const raw = clean(value(row, "product_name"));
+  if (raw && !unhelpful(raw)) return { name: raw, fallbackUsed: false, opaque: false };
+  const alternative = [value(row, "product_short_description"), value(row, "product_title"), value(row, "title")]
+    .map(clean)
+    .find((text) => text && !unhelpful(text));
   if (alternative) return { name: alternative.slice(0, 220), fallbackUsed: true, opaque: false };
-  const name = raw ?? fallback;
-  return { name, fallbackUsed: false, opaque: looksLikeInternalProductCode(name) };
+  const name = raw || fallback;
+  return { name, fallbackUsed: false, opaque: unhelpful(name) };
 }
 
 export function isGardenHouseCandidate(row: RawFeedRow): boolean {

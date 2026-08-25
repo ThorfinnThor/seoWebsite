@@ -35,4 +35,15 @@ describe("flooring normalizer", () => {
     const result = normalizeFlooring({ product_name: "VI.REP.REAFCL002", merchant_id: "48707", merchant_name: "Woodstore24 DE/AT", merchant_product_id: "1", search_price: "41.30", currency: "EUR", aw_deep_link: "https://www.awin1.com/pclick.php?p=1", in_stock: "1" });
     expect(result.issues).toContain("unhelpful-product-name");
   });
+
+  it("does not turn page-builder CSS or generic prose into a product name", () => {
+    const result = normalizeFlooring({ product_name: "VI.REP.REAFCL002", description: "#html-body [data-pb-style=WM6IKDO]{justify-content:flex-start;background-position:left top} Informationen auf einen Blick Art: SPC Vinyl", merchant_id: "48707", merchant_name: "Woodstore24 DE/AT", merchant_product_id: "1", search_price: "41.30", currency: "EUR", aw_deep_link: "https://www.awin1.com/pclick.php?p=1", in_stock: "1" });
+    expect(result.name).toBe("VI.REP.REAFCL002");
+    expect(result.issues).toContain("unhelpful-product-name");
+  });
+
+  it("requires an explicit wet-room claim instead of generic water resistance", () => {
+    expect(parseFlooringAttributes("SPC Vinyl mit wasserresistenter Stabilität").wetRoomApproved).toBeUndefined();
+    expect(parseFlooringAttributes("Klickvinyl ausdrücklich für Feuchträume geeignet").wetRoomApproved).toBe(true);
+  });
 });

@@ -30,7 +30,7 @@ export function parseFlooringAttributes(text: string): Partial<FlooringProduct> 
   return {
     flooringType, installation, packageCoverageM2, plankLengthMm, plankWidthMm, thicknessMm, wearLayerMm,
     floorHeatingApproved: /fu(?:ß|ss)bodenheizung|fußbodenheizung|floor heating/i.test(text) || undefined,
-    wetRoomApproved: /feuchtraum|nassraum|wasserresistent|wasserfest|wasserabweisend|waterproof/i.test(text) || undefined,
+    wetRoomApproved: /feuchtr(?:aum|äume|aeume)|nassr(?:aum|äume|aeume)|f(?:ü|ue)r\s+(?:bad|badezimmer)|wet\s*room|wasserfest|waterproof/i.test(text) || undefined,
   };
 }
 
