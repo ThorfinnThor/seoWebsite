@@ -2,7 +2,7 @@
   "candidateRows": 2932,
   "candidateToProductRate": 76.8,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-25T08:55:25.782Z",
+  "generatedAt": "2026-08-25T09:21:13.472Z",
   "issues": {
     "ambiguous-stock": 563,
     "incomplete-product-data": 273,
@@ -15,7 +15,7 @@
   "offers": 2659,
   "reviewedProducts": 0,
   "reviewQueue": 2385,
-  "rows": 265898,
+  "rows": 265966,
   "schemaVersion": 1,
   "sourceFeeds": 9,
   "successfulFeeds": 9
