@@ -1,7 +1,99 @@
 {
-  "generatedAt": "2026-08-09T00:00:00.000Z",
-  "offers": [],
-  "products": [],
+  "generatedAt": "2026-08-25T12:55:41.966Z",
+  "offers": [
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291511&a=3037577&m=48707",
+      "available": true,
+      "deliveryCostStatus": "unknown",
+      "id": "offer:48707:12623",
+      "imageUrl": "https://woodstore24.de/media/catalog/product/v/i/vi.rep.reafcl002_1a.jpg",
+      "merchantId": "48707",
+      "merchantName": "Woodstore24 DE/AT",
+      "merchantProductId": "12623",
+      "priceEur": 41.3,
+      "productId": "gtin:4262551037812",
+      "updatedAt": "2026-08-25T12:55:40.625Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291512&a=3037577&m=48707",
+      "available": true,
+      "deliveryCostStatus": "unknown",
+      "id": "offer:48707:12624",
+      "imageUrl": "https://woodstore24.de/media/catalog/product/v/i/vi.rep.reafcl003_1a.jpg",
+      "merchantId": "48707",
+      "merchantName": "Woodstore24 DE/AT",
+      "merchantProductId": "12624",
+      "priceEur": 41.3,
+      "productId": "gtin:4262551037829",
+      "updatedAt": "2026-08-25T12:55:40.625Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291514&a=3037577&m=48707",
+      "available": true,
+      "deliveryCostStatus": "unknown",
+      "id": "offer:48707:12626",
+      "imageUrl": "https://woodstore24.de/media/catalog/product/v/i/vi.rep.reaucc002_1a.jpg",
+      "merchantId": "48707",
+      "merchantName": "Woodstore24 DE/AT",
+      "merchantProductId": "12626",
+      "priceEur": 47.6,
+      "productId": "gtin:4262551037843",
+      "updatedAt": "2026-08-25T12:55:40.626Z"
+    }
+  ],
+  "products": [
+    {
+      "brand": "Woodstore24",
+      "dataQuality": "curated",
+      "floorHeatingApproved": true,
+      "flooringType": "vinyl-click",
+      "gtin": "4262551037812",
+      "id": "gtin:4262551037812",
+      "installation": "click",
+      "name": "Premium 3D Fischgrät-Klickvinyl SPC Eiche grau, 7 mm",
+      "packageCoverageM2": 1.4,
+      "plankLengthMm": 592,
+      "plankWidthMm": 148,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-25T12:55:40.625Z",
+      "thicknessMm": 7,
+      "wearLayerMm": 0.55
+    },
+    {
+      "brand": "Woodstore24",
+      "dataQuality": "curated",
+      "floorHeatingApproved": true,
+      "flooringType": "vinyl-click",
+      "gtin": "4262551037829",
+      "id": "gtin:4262551037829",
+      "installation": "click",
+      "name": "Premium 3D Fischgrät-Klickvinyl SPC Eiche dunkel, 7 mm",
+      "packageCoverageM2": 1.4,
+      "plankLengthMm": 592,
+      "plankWidthMm": 148,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-25T12:55:40.625Z",
+      "thicknessMm": 7,
+      "wearLayerMm": 0.55
+    },
+    {
+      "brand": "Woodstore24",
+      "dataQuality": "curated",
+      "floorHeatingApproved": true,
+      "flooringType": "vinyl-click",
+      "gtin": "4262551037843",
+      "id": "gtin:4262551037843",
+      "installation": "click",
+      "name": "Premium 3D Klickvinyl SPC Eiche geräuchert, 7,5 mm",
+      "packageCoverageM2": 1.67,
+      "plankLengthMm": 1218,
+      "plankWidthMm": 228,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-25T12:55:40.626Z",
+      "thicknessMm": 7.5,
+      "wearLayerMm": 0.55
+    }
+  ],
   "schemaVersion": 1,
   "vertical": "flooring"
 }
