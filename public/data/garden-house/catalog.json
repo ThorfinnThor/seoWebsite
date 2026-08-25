@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:43:09.158Z",
+  "generatedAt": "2026-08-25T14:30:28.225Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=42768833243&a=3037577&m=11830",
@@ -13,7 +13,7 @@
       "merchantProductId": "GLO692650644",
       "priceEur": 499,
       "productId": "gtin:0638801413721",
-      "updatedAt": "2026-08-25T13:42:49.602Z"
+      "updatedAt": "2026-08-25T14:30:09.625Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160339&a=3037577&m=11830",
@@ -27,7 +27,63 @@
       "merchantProductId": "GLO784103916",
       "priceEur": 1889,
       "productId": "gtin:4004581476298",
-      "updatedAt": "2026-08-25T13:42:46.936Z"
+      "updatedAt": "2026-08-25T14:30:06.721Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=45137430729&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784103966",
+      "imageUrl": "https://www.globus-baumarkt.de/media/56/18/04/1682846433/4002790216292_22C083E13980AA070DFB50D1952D5F16__148685372.pdf",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784103966",
+      "priceEur": 5698,
+      "productId": "gtin:4004581241797",
+      "updatedAt": "2026-08-25T14:30:06.722Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160589&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784104000",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/97/9c/01/1651427466/4004581426828_1_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784104000",
+      "priceEur": 2339,
+      "productId": "gtin:4004581426828",
+      "updatedAt": "2026-08-25T14:30:06.741Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160587&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784104001",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ed/a2/89/1651427469/4004581352646_1_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784104001",
+      "priceEur": 2009,
+      "productId": "gtin:4004581352646",
+      "updatedAt": "2026-08-25T14:30:06.741Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44675243190&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784104003",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/9c/ca/23/1651427472/4004581352684_1_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784104003",
+      "priceEur": 1546,
+      "productId": "gtin:4004581352684",
+      "updatedAt": "2026-08-25T14:30:06.741Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=28804582443&a=3037577&m=11830",
@@ -41,7 +97,21 @@
       "merchantProductId": "GLO784104178",
       "priceEur": 659,
       "productId": "gtin:5411352800692",
-      "updatedAt": "2026-08-25T13:42:50.365Z"
+      "updatedAt": "2026-08-25T14:30:10.448Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=28804582445&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784104179",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/d3/a1/94/1651428568/5411352800708_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784104179",
+      "priceEur": 699,
+      "productId": "gtin:5411352800708",
+      "updatedAt": "2026-08-25T14:30:10.448Z"
     }
   ],
   "products": [
@@ -56,9 +126,81 @@
       "mpn": "0692650644",
       "name": "Duramax Metallgerätehaus Palladium silber/grau 249 x 209 cm",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:49.602Z",
+      "sourceUpdatedAt": "2026-08-25T14:30:09.625Z",
       "wallThicknessMm": 0.5,
       "widthCm": 249
+    },
+    {
+      "brand": "WEKA",
+      "dataQuality": "curated",
+      "depthCm": 580,
+      "floorIncluded": true,
+      "footprintM2": 22.04,
+      "gtin": "4004581241797",
+      "id": "gtin:4004581241797",
+      "material": "wood",
+      "mpn": "138.3838.40.00",
+      "name": "Weka Gartenhaus Weekendhaus Eirik A 380 x 580 cm natur mit Fußboden",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T14:30:06.722Z",
+      "wallThicknessMm": 45,
+      "widthCm": 380
+    },
+    {
+      "brand": "WEKA",
+      "dataQuality": "curated",
+      "depthCm": 235,
+      "floorIncluded": false,
+      "floorKitAvailable": true,
+      "footprintM2": 7.07,
+      "gtin": "4004581352646",
+      "heightCm": 245,
+      "id": "gtin:4004581352646",
+      "material": "wood",
+      "mpn": "122.3024.00.04",
+      "name": "Weka Gartenhaus Finn 300 x 235 cm natur",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T14:30:06.741Z",
+      "wallThicknessMm": 28,
+      "widthCm": 301
+    },
+    {
+      "brand": "WEKA",
+      "dataQuality": "curated",
+      "depthCm": 205,
+      "floorIncluded": false,
+      "floorKitAvailable": true,
+      "footprintM2": 4.92,
+      "gtin": "4004581352684",
+      "heightCm": 241,
+      "id": "gtin:4004581352684",
+      "material": "wood",
+      "mpn": "122.2421.00.04",
+      "name": "Weka Gartenhaus Finn 240 x 205 cm natur",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T14:30:06.741Z",
+      "wallThicknessMm": 28,
+      "widthCm": 240
+    },
+    {
+      "brand": "WEKA",
+      "dataQuality": "curated",
+      "depthCm": 205,
+      "floorIncluded": false,
+      "footprintM2": 6.15,
+      "gtin": "4004581426828",
+      "id": "gtin:4004581426828",
+      "material": "wood",
+      "mpn": "122.3021.00.04",
+      "name": "Weka Gartenhaus Finn 300 x 205 cm natur",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T14:30:06.741Z",
+      "wallThicknessMm": 28,
+      "widthCm": 300
     },
     {
       "brand": "WEKA",
@@ -73,7 +215,7 @@
       "name": "Weka Gartenhaus Finnja 296 x 205 cm natur mit Fußboden",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T13:42:46.936Z",
+      "sourceUpdatedAt": "2026-08-25T14:30:06.721Z",
       "wallThicknessMm": 28,
       "widthCm": 296
     },
@@ -90,9 +232,26 @@
       "name": "Décor et Jardin Gartenhaus Lodum 262 x 202 cm natur mit Fußboden",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T13:42:50.365Z",
+      "sourceUpdatedAt": "2026-08-25T14:30:10.448Z",
       "wallThicknessMm": 12,
       "widthCm": 262
+    },
+    {
+      "brand": "Décor et Jardin",
+      "dataQuality": "curated",
+      "depthCm": 182,
+      "floorIncluded": true,
+      "footprintM2": 5,
+      "gtin": "5411352800708",
+      "id": "gtin:5411352800708",
+      "material": "wood",
+      "mpn": "43631P000",
+      "name": "Décor et Jardin Gartenhaus Lopun 272 x 182 cm natur mit Fußboden",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T14:30:10.448Z",
+      "wallThicknessMm": 12,
+      "widthCm": 272
     }
   ],
   "schemaVersion": 1,

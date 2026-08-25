@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:43:09.158Z",
+  "generatedAt": "2026-08-25T14:30:28.225Z",
   "schemaVersion": 1,
   "verticals": {
     "dehumidifier": {
@@ -12,7 +12,7 @@
     },
     "garden-house": {
       "catalog": "/data/garden-house/catalog.json",
-      "generatedAt": "2026-08-25T13:43:09.158Z"
+      "generatedAt": "2026-08-25T14:30:28.225Z"
     },
     "irrigation": {
       "catalog": "/data/irrigation/catalog.json",
