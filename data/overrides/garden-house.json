@@ -88,6 +88,40 @@
       "wallThicknessMm": 12,
       "floorIncluded": true,
       "reviewNote": "Globus Baumarkt product page checked 2026-08-25: footprint, nordic spruce material, gable roof, 12 mm wall thickness and floor inclusion verified."
+    },
+    {
+      "id": "gtin:4004581352646",
+      "name": "Weka Gartenhaus Finn 300 x 235 cm natur",
+      "brand": "WEKA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "widthCm": 301,
+      "depthCm": 235,
+      "heightCm": 245,
+      "footprintM2": 7.07,
+      "material": "wood",
+      "roofType": "gable",
+      "wallThicknessMm": 28,
+      "floorIncluded": false,
+      "floorKitAvailable": true,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 301 × 235 cm Aufstellmaß ohne Dach, 7,07 m², Fichtenholz, Satteldach, 28 mm Wandstärke, 245 cm Firsthöhe und ausdrücklich ohne Boden (Boden optional)."
+    },
+    {
+      "id": "gtin:4004581352684",
+      "name": "Weka Gartenhaus Finn 240 x 205 cm natur",
+      "brand": "WEKA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "widthCm": 240,
+      "depthCm": 205,
+      "heightCm": 241,
+      "footprintM2": 4.92,
+      "material": "wood",
+      "roofType": "gable",
+      "wallThicknessMm": 28,
+      "floorIncluded": false,
+      "floorKitAvailable": true,
+      "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: 240 × 205 cm Aufstellmaß, 4,92 m², Fichtenholz, Satteldach, 28 mm Wandstärke, 241 cm Firsthöhe und ausdrücklich ohne Boden (Boden optional)."
     }
   ]
 }
