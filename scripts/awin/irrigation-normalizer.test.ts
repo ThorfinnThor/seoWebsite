@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { irrigationKind, normalizeIrrigation, parseIrrigationAttributes } from "./irrigation-normalizer";
+import { isIrrigationCandidate, irrigationKind, normalizeIrrigation, parseIrrigationAttributes } from "./irrigation-normalizer";
 import { assembleIrrigationCatalog, parseFeedJobs } from "./sync-products";
 
 const row = {
@@ -20,6 +20,9 @@ const row = {
 
 describe("irrigation feed normalization", () => {
   it("classifies irrigation components conservatively", () => { expect(irrigationKind(row.product_name)).toBe("controller"); expect(irrigationKind("Tropfschlauch 25 m")).toBe("dripline"); });
+  it("excludes roof-window rain sensors from garden irrigation", () => {
+    expect(isIrrigationCandidate({ product_name: "Roto Regensensor ZEL STG RS 24 V", merchant_category: "Dachfenster Zubehör", description: "Regensensor am Wohndachfenster" })).toBe(false);
+  });
   it("extracts controller capacity and compatibility", () => expect(parseIrrigationAttributes(`${row.product_name} ${row.description}`)).toMatchObject({ kind: "controller", maxZones: 6, smartCompatible: true, systemId: "AquaLine" }));
   it("keeps feed products private until manual review", () => expect(assembleIrrigationCatalog([normalizeIrrigation(row)], [], "2026-08-16T00:00:00.000Z").products).toHaveLength(0));
   it("publishes a reviewed compatible product and offer", () => {

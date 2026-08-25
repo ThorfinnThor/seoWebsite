@@ -4,9 +4,11 @@ import { availability, delivery, isoDate, parsePrice, productDisplayName, produc
 import type { IrrigationCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /bewässer|bewaesser|tropf|regner|sprinkler|gartenschlauch|magnetventil|druckminder|bodenfeuchte|regensensor|bewässerungscomputer|bewaesserungscomputer/i;
+const EXCLUDED_PATTERN = /dachfenster|wohndachfenster|fensterantrieb|rollladen|rolladen|roto\s+regensensor/i;
 
 export function isIrrigationCandidate(row: RawFeedRow): boolean {
-  return CANDIDATE_PATTERN.test([value(row, "product_name"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path")].filter(Boolean).join(" "));
+  const text = [value(row, "product_name"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path"), value(row, "description")].filter(Boolean).join(" ");
+  return CANDIDATE_PATTERN.test(text) && !EXCLUDED_PATTERN.test(text);
 }
 
 function decimal(raw?: string) { const parsed = raw ? Number(raw.replace(",", ".")) : NaN; return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined; }

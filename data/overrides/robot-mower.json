@@ -1,4 +1,51 @@
 {
   "schemaVersion": 1,
-  "overrides": []
+  "overrides": [
+    {
+      "id": "gtin:6970135034789",
+      "name": "ECOVACS GOAT O800 RTK",
+      "brand": "Ecovacs",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 800,
+      "maxSlopePercent": 45,
+      "minPassageCm": 70,
+      "navigation": "hybrid",
+      "minCutHeightCm": 3,
+      "maxCutHeightCm": 8,
+      "waterProtection": "IPX6",
+      "obstacleDetection": true,
+      "reviewNote": "ECOVACS product page and official model listing checked 2026-08-25: 800 m², 45% slope, 0.7 m passage, hybrid LiDAR/RTK navigation, 3–8 cm cutting height, IPX6 and obstacle avoidance."
+    },
+    {
+      "id": "gtin:6970135038176",
+      "name": "ECOVACS GOAT A1600 LiDAR PRO",
+      "brand": "Ecovacs",
+      "reviewed": true,
+      "dataQuality": "mixed",
+      "ratedAreaM2": 1600,
+      "maxSlopePercent": 50,
+      "navigation": "lidar",
+      "minCutHeightCm": 3,
+      "maxCutHeightCm": 9,
+      "waterProtection": "IPX6",
+      "obstacleDetection": true,
+      "reviewNote": "ECOVACS product page and official model listing checked 2026-08-25: 1,600 m², 50% slope, LiDAR navigation, 3–9 cm cutting height, IPX6 and obstacle avoidance. Passage width is not published and remains unfilled."
+    },
+    {
+      "id": "gtin:6970135038183",
+      "name": "ECOVACS GOAT A3000 LiDAR PRO",
+      "brand": "Ecovacs",
+      "reviewed": true,
+      "dataQuality": "mixed",
+      "ratedAreaM2": 3000,
+      "maxSlopePercent": 50,
+      "navigation": "lidar",
+      "minCutHeightCm": 3,
+      "maxCutHeightCm": 9,
+      "waterProtection": "IPX6",
+      "obstacleDetection": true,
+      "reviewNote": "ECOVACS product page and official model listing checked 2026-08-25: 3,000 m², 50% slope, LiDAR navigation, 3–9 cm cutting height, IPX6 and obstacle avoidance. Passage width is not published and remains unfilled."
+    }
+  ]
 }
