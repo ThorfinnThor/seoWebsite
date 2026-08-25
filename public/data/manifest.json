@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T10:58:10.009Z",
+  "generatedAt": "2026-08-25T12:55:41.966Z",
   "schemaVersion": 1,
   "verticals": {
     "dehumidifier": {
@@ -8,7 +8,7 @@
     },
     "flooring": {
       "catalog": "/data/flooring/catalog.json",
-      "generatedAt": "2026-08-09T00:00:00.000Z"
+      "generatedAt": "2026-08-25T12:55:41.966Z"
     },
     "garden-house": {
       "catalog": "/data/garden-house/catalog.json",
