@@ -2,7 +2,7 @@
   "candidateRows": 40,
   "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-24T23:55:35.676Z",
+  "generatedAt": "2026-08-25T08:27:40.481Z",
   "issues": {
     "missing-capacity": 21,
     "unconfirmed-drainage": 19
@@ -12,8 +12,8 @@
   "offers": 40,
   "reviewedProducts": 0,
   "reviewQueue": 40,
-  "rows": 258830,
+  "rows": 265898,
   "schemaVersion": 1,
-  "sourceFeeds": 6,
-  "successfulFeeds": 6
+  "sourceFeeds": 9,
+  "successfulFeeds": 9
 }
