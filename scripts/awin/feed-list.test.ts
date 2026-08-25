@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { extractFeedListUrl, filterFeedListEntries, isAllowedFeedUrl, normalizeFeedUrl, parseFeedListRows } from "./feed-list";
+import { extractFeedListUrl, filterFeedListEntries, isAllowedFeedUrl, normalizeFeedUrl, parseFeedListRows, selectPreferredFeedEntries } from "./feed-list";
 
 describe("Awin feed list resolver", () => {
   it("keeps only joined German product feeds and deduplicates URLs", () => {
@@ -28,6 +28,17 @@ describe("Awin feed list resolver", () => {
     ]);
     expect(filterFeedListEntries(entries, new Set(["11830"]))).toHaveLength(1);
     expect(filterFeedListEntries(entries, new Set(["11830"]))[0].advertiserId).toBe("11830");
+  });
+
+  it("selects the most recently updated feed per advertiser", () => {
+    const entries = parseFeedListRows([
+      { "Advertiser ID": "48707", "Membership Status": "active", Language: "German", "Datafeed Name": "Idealo Daten Feed", "Feed ID": "87312", "Last Update": "25/08/2026", Products: "3295", URL: "https://productdata.awin.com/datafeed/download/apikey/x/fid/87312/" },
+      { "Advertiser ID": "48707", "Membership Status": "active", Language: "German", "Datafeed Name": "Produkte DE", "Feed ID": "99428", "Last Update": "22/08/2026", Products: "1323", URL: "https://productdata.awin.com/datafeed/download/apikey/x/fid/99428/" },
+      { "Advertiser ID": "48707", "Membership Status": "active", Language: "German", "Datafeed Name": "Feed DE 2026", "Feed ID": "115823", "Last Update": "10/08/2026", Products: "2214", URL: "https://productdata.awin.com/datafeed/download/apikey/x/fid/115823/" },
+    ]);
+    expect(selectPreferredFeedEntries(entries)).toEqual([
+      expect.objectContaining({ feedId: "87312", feedName: "Idealo Daten Feed", productCount: 3295 }),
+    ]);
   });
 
   it("accepts the Awin feed-data host but rejects arbitrary URLs", () => {

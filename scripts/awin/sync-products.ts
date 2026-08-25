@@ -14,7 +14,7 @@ import { isGardenHouseCandidate, normalizeGardenHouse } from "./garden-house-nor
 import { isIrrigationCandidate, normalizeIrrigation } from "./irrigation-normalizer";
 import { isFlooringCandidate, normalizeFlooring } from "./flooring-normalizer";
 import { isRobotMowerCandidate, normalizeRobotMower } from "./robot-mower-normalizer";
-import { extractFeedListUrl, filterFeedListEntries, parseFeedListRows } from "./feed-list";
+import { extractFeedListUrl, filterFeedListEntries, parseFeedListRows, selectPreferredFeedEntries } from "./feed-list";
 import { streamFeedRows } from "./source";
 import type { AffiliateCandidate, DehumidifierCandidate, FlooringCandidate, GardenHouseCandidate, IrrigationCandidate, ProductOverride, RobotMowerCandidate } from "./types";
 
@@ -192,7 +192,7 @@ async function resolveFeedJobs(raw: string): Promise<FeedJob[]> {
   const feedEntries = parseFeedListRows(rows);
   const merchantRegistry = FeedMerchantRegistrySchema.parse(await readJson("data/manual/merchants.json"));
   const allowedAdvertiserIds = new Set(merchantRegistry.merchants.filter((merchant) => merchant.enabled).map((merchant) => String(merchant.awinAdvertiserId)));
-  const entries = filterFeedListEntries(feedEntries, allowedAdvertiserIds);
+  const entries = selectPreferredFeedEntries(filterFeedListEntries(feedEntries, allowedAdvertiserIds));
   if (!entries.length) throw new Error("Awin feed list contains no joined German product feeds");
   const verticalsByAdvertiser = new Map(merchantRegistry.merchants.map((merchant) => [String(merchant.awinAdvertiserId), merchant.verticals]));
   return entries.flatMap((entry) => {

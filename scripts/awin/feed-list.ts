@@ -21,13 +21,40 @@ export interface FeedListEntry {
   advertiserId?: string;
   advertiserName?: string;
   feedId?: string;
+  feedName?: string;
   language?: string;
   membershipStatus?: string;
+  lastUpdated?: string;
+  productCount?: number;
 }
 
 /** Keep feed-list discovery limited to advertisers explicitly enabled for this site. */
 export function filterFeedListEntries(entries: FeedListEntry[], allowedAdvertiserIds: ReadonlySet<string>): FeedListEntry[] {
   return entries.filter((entry) => entry.advertiserId !== undefined && allowedAdvertiserIds.has(entry.advertiserId));
+}
+
+function feedTimestamp(raw?: string): number {
+  if (!raw) return 0;
+  const german = raw.match(/^(\d{1,2})[./](\d{1,2})[./](\d{4})(?:\D|$)/);
+  if (german) return Date.UTC(Number(german[3]), Number(german[2]) - 1, Number(german[1]));
+  const parsed = Date.parse(raw);
+  return Number.isFinite(parsed) ? parsed : 0;
+}
+
+/** Select one deterministic, current feed per advertiser to avoid stale duplicate offers. */
+export function selectPreferredFeedEntries(entries: FeedListEntry[]): FeedListEntry[] {
+  const preferred = new Map<string, FeedListEntry>();
+  const compare = (left: FeedListEntry, right: FeedListEntry) =>
+    feedTimestamp(left.lastUpdated) - feedTimestamp(right.lastUpdated)
+    || (left.productCount ?? 0) - (right.productCount ?? 0)
+    || Number(left.feedId ?? 0) - Number(right.feedId ?? 0)
+    || right.url.localeCompare(left.url);
+  for (const entry of entries) {
+    const key = entry.advertiserId ?? entry.url;
+    const current = preferred.get(key);
+    if (!current || compare(entry, current) > 0) preferred.set(key, entry);
+  }
+  return [...preferred.values()];
 }
 
 export function parseFeedListRows(rows: RawFeedRow[]): FeedListEntry[] {
@@ -48,8 +75,11 @@ export function parseFeedListRows(rows: RawFeedRow[]): FeedListEntry[] {
       advertiserId: field(row, "advertiser_id", "advertiser id"),
       advertiserName: field(row, "advertiser_name", "advertiser name"),
       feedId: field(row, "feed_id", "feed id"),
+      feedName: field(row, "datafeed_name", "datafeed name", "feed_name", "feed name"),
       language,
       membershipStatus,
+      lastUpdated: field(row, "last_update", "last update", "last_updated", "last updated"),
+      productCount: Number(field(row, "products", "product_count", "product count")?.replace(/[^\d]/g, "")) || undefined,
     });
   }
   if (entries.length > MAX_AUTO_FEEDS) throw new Error(`Awin feed list contains more than ${MAX_AUTO_FEEDS} eligible feeds`);
