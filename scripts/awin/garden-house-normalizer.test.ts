@@ -9,6 +9,10 @@ describe("dimension parsing", () => {
   it("rejects implausible values", () => expect(parseDimensions("30 x 40 cm")).toBeUndefined());
 });
 describe("garden-house normalizer", () => {
+  it("treats custom non-empty in_stock flags as available per Awin's feed contract", () => {
+    expect(availability({ in_stock: "Y" })).toEqual({ available: true, ambiguous: false });
+    expect(availability({ in_stock: "0" })).toEqual({ available: false, ambiguous: false });
+  });
   it("detects broad category candidates", () => expect(isGardenHouseCandidate({ category_name: "Geräteschuppen" })).toBe(true));
   it("normalizes a valid EUR offer", () => { const result = normalizeGardenHouse(row); expect(result.product).toMatchObject({ id: "gtin:4012345678901", widthCm: 300, depthCm: 400, material: "wood", reviewed: false }); expect(result.offer).toMatchObject({ priceEur: 2499, deliveryCostEur: 49, available: true }); });
   it("deduplicates product identity by GTIN across merchants", () => expect(normalizeGardenHouse({ ...row, merchant_id: "99", merchant_product_id: "other" }).id).toBe(normalizeGardenHouse(row).id));

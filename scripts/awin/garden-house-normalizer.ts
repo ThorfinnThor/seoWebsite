@@ -84,7 +84,16 @@ export function availability(row: RawFeedRow): { available: boolean; ambiguous: 
     if (/^\d+(?:[.,]\d+)?$/.test(normalized)) return Number(normalized.replace(",", ".")) > 0;
     return undefined;
   };
-  const explicitStatus = statusValue(value(row, "in_stock")) ?? statusValue(value(row, "stock_status"));
+  const inStock = value(row, "in_stock");
+  if (inStock) {
+    const normalized = inStock.trim().toLowerCase();
+    if (/out of stock|nicht verfügbar|nicht verfuegbar|ausverkauft|unavailable|false|^no$|^0$/.test(normalized)) return { available: false, ambiguous: false };
+    if (statusValue(inStock) === true) return { available: true, ambiguous: false };
+    // Awin's generic feed contract treats any non-empty in_stock value other
+    // than 0 as in stock, even when an advertiser uses a custom text flag.
+    return { available: true, ambiguous: false };
+  }
+  const explicitStatus = statusValue(value(row, "stock_status"));
   if (explicitStatus !== undefined) return { available: explicitStatus, ambiguous: false };
   const quantity = value(row, "stock_quantity");
   if (quantity && /^\d+(?:[.,]\d+)?$/.test(quantity.trim())) return { available: Number(quantity.replace(",", ".")) > 0, ambiguous: false };
