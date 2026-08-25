@@ -19,6 +19,7 @@ import { streamFeedRows } from "./source";
 import type { AffiliateCandidate, DehumidifierCandidate, FlooringCandidate, GardenHouseCandidate, IrrigationCandidate, ProductOverride, RobotMowerCandidate } from "./types";
 
 const HttpsUrl = z.url().refine((url) => url.startsWith("https:"));
+const SupportedVerticalSchema = z.enum(["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"]);
 const VerticalConfigSchema = z.object({
   "garden-house": z.array(HttpsUrl).default([]),
   dehumidifier: z.array(HttpsUrl).default([]),
@@ -32,7 +33,7 @@ const DehumidifierOverrideFileSchema = z.object({ schemaVersion: z.literal(1), o
 const IrrigationOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(IrrigationOverrideSchema) });
 const RobotMowerOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(RobotMowerOverrideSchema) });
 const FlooringOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(FlooringOverrideSchema) });
-const FeedMerchantRegistrySchema = z.object({ merchants: z.array(z.object({ awinAdvertiserId: z.number().int().positive(), enabled: z.boolean() })) });
+const FeedMerchantRegistrySchema = z.object({ merchants: z.array(z.object({ awinAdvertiserId: z.number().int().positive(), enabled: z.boolean(), verticals: z.array(SupportedVerticalSchema).min(1) })) });
 
 type Vertical = "garden-house" | "dehumidifier" | "irrigation" | "robot-mower" | "flooring";
 interface FeedMetrics { sourceFeeds: number; successfulFeeds: number; failedFeeds: number; rows: number; }
@@ -193,8 +194,11 @@ async function resolveFeedJobs(raw: string): Promise<FeedJob[]> {
   const allowedAdvertiserIds = new Set(merchantRegistry.merchants.filter((merchant) => merchant.enabled).map((merchant) => String(merchant.awinAdvertiserId)));
   const entries = filterFeedListEntries(feedEntries, allowedAdvertiserIds);
   if (!entries.length) throw new Error("Awin feed list contains no joined German product feeds");
-  const allVerticals = new Set<Vertical>(["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"]);
-  return entries.map((entry) => ({ url: entry.url, verticals: new Set(allVerticals) }));
+  const verticalsByAdvertiser = new Map(merchantRegistry.merchants.map((merchant) => [String(merchant.awinAdvertiserId), merchant.verticals]));
+  return entries.flatMap((entry) => {
+    const verticals = entry.advertiserId ? verticalsByAdvertiser.get(entry.advertiserId) : undefined;
+    return verticals?.length ? [{ url: entry.url, verticals: new Set<Vertical>(verticals) }] : [];
+  });
 }
 
 async function run(): Promise<void> {

@@ -118,7 +118,7 @@ Only configure feeds after the relevant advertiser programmes have approved the 
 }
 ```
 
-The importer selects only joined German feeds from that list, allows only Awin product-data hosts, deduplicates URLs and scans all supported verticals. A grouped configuration remains available when you want an explicit allowlist:
+The importer selects only joined German feeds from that list, allows only Awin product-data hosts, deduplicates URLs and applies each enabled programme's configured vertical scope. A grouped configuration remains available when you want an explicit allowlist:
 
 ```json
 {
