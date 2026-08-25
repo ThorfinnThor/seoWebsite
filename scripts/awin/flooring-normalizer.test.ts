@@ -21,6 +21,11 @@ describe("flooring normalizer", () => {
     expect(attributes).toMatchObject({ packageCoverageM2: 2.198, plankLengthMm: 1080, plankWidthMm: 185, thicknessMm: 11.5, installation: "click" });
   });
 
+  it("parses three-part millimetre dimensions without treating thickness as width", () => {
+    const attributes = parseFlooringAttributes("Format 1.290 x 203 x 4 mm, Klick-Verlegesystem");
+    expect(attributes).toMatchObject({ plankLengthMm: 1290, plankWidthMm: 203, thicknessMm: 4, installation: "click" });
+  });
+
   it("excludes wall panels that merely mention vinyl", () => {
     expect(isFlooringCandidate({ product_name: "Wandpaneel Vinyloptik", category_name: "Interior" })).toBe(false);
   });

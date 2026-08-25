@@ -14,6 +14,13 @@ export function isFlooringCandidate(row: RawFeedRow): boolean {
 
 function decimal(raw?: string) { const parsed = raw ? Number(raw.replace(",", ".")) : NaN; return Number.isFinite(parsed) && parsed > 0 ? parsed : undefined; }
 function capture(text: string, pattern: RegExp) { return decimal(text.match(pattern)?.[1]); }
+function dimensionNumber(raw: string): number {
+  // German product pages commonly write a 1,290 mm plank as "1.290 mm".
+  // Treat a dot followed by exactly three digits as a thousands separator,
+  // while preserving normal decimals such as 24.5 cm.
+  const normalized = /^\d{1,3}\.\d{3}$/.test(raw) ? raw.replace(".", "") : raw.replace(",", ".");
+  return Number(normalized);
+}
 
 export function parseFlooringAttributes(text: string): Partial<FlooringProduct> {
   const flooringType: FlooringProduct["flooringType"] = /parkett|parquet/i.test(text) ? "parquet-floating" : /vinyl|lvt|rigid/i.test(text) ? "vinyl-click" : "laminate";
@@ -21,11 +28,12 @@ export function parseFlooringAttributes(text: string): Partial<FlooringProduct> 
   const clickIndex = text.search(/klick|click|cpc|uniclic|automatic[- ]?click/i);
   const installation: FlooringProduct["installation"] = glueIndex >= 0 && (clickIndex < 0 || glueIndex < clickIndex) ? "glue" : clickIndex >= 0 ? "click" : "unknown";
   const packageCoverageM2 = capture(text, /(?:paketinhalt|paket|packung|karton)[\s\S]{0,100}?(\d+(?:[.,]\d+)?)\s*m(?:²|2)/i) ?? capture(text, /(\d+(?:[.,]\d+)?)\s*m(?:²|2)\s*(?:pro|je|per)\s*(?:paket|packung|karton)/i);
-  const dimensions = text.match(/(\d{2,4})\s*[x×]\s*(\d{1,4}(?:[.,]\d+)?)\s*(mm|cm|m)(?:\s*[x×]\s*(\d+(?:[.,]\d+)?))?/i);
-  const dimensionFactor = dimensions?.[3]?.toLowerCase() === "m" ? 1000 : dimensions?.[3]?.toLowerCase() === "cm" ? 10 : 1;
-  const plankLengthMm = dimensions ? Number(dimensions[1].replace(",", ".")) * dimensionFactor : undefined;
-  const plankWidthMm = dimensions ? Number(dimensions[2].replace(",", ".")) * dimensionFactor : undefined;
-  const thicknessMm = capture(text, /(?:st(?:ä|ae)rke|dicke)[^\d]{0,12}(\d+(?:[.,]\d+)?)\s*mm/i);
+  const dimensions = text.match(/(\d{1,4}(?:[.,]\d+)?)\s*[x×]\s*(\d{1,4}(?:[.,]\d+)?)(?:\s*[x×]\s*(\d+(?:[.,]\d+)?))?\s*(mm|cm|m)/i);
+  const dimensionFactor = dimensions?.[4]?.toLowerCase() === "m" ? 1000 : dimensions?.[4]?.toLowerCase() === "cm" ? 10 : 1;
+  const plankLengthMm = dimensions ? dimensionNumber(dimensions[1]) * dimensionFactor : undefined;
+  const plankWidthMm = dimensions ? dimensionNumber(dimensions[2]) * dimensionFactor : undefined;
+  const thicknessMm = capture(text, /(?:st(?:ä|ae)rke|dicke)[^\d]{0,12}(\d+(?:[.,]\d+)?)\s*mm/i)
+    ?? (dimensions?.[3] && dimensions[4]?.toLowerCase() === "mm" ? dimensionNumber(dimensions[3]) : undefined);
   const wearLayerMm = capture(text, /(?:nutzschicht|wear layer)[^\d]{0,12}(\d+(?:[.,]\d+)?)\s*mm/i);
   return {
     flooringType, installation, packageCoverageM2, plankLengthMm, plankWidthMm, thicknessMm, wearLayerMm,
