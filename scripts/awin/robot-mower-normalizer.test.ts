@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isRobotMowerCandidate, normalizeRobotMower } from "./robot-mower-normalizer";
+import { isRobotMowerCandidate, normalizeRobotMower, parseRobotMowerAttributes } from "./robot-mower-normalizer";
 
 const goat = {
   product_name: "GOAT O800 RTK",
@@ -30,5 +30,9 @@ describe("robot mower normalizer", () => {
     expect(isRobotMowerCandidate({ product_name: "WINBOT W2", merchant_category: "WINBOT", description: "Fensterroboter" })).toBe(false);
     expect(isRobotMowerCandidate({ product_name: "DEEBOT X11", merchant_category: "DEEBOT", description: "Saugroboter" })).toBe(false);
     expect(isRobotMowerCandidate({ product_name: "Geschenkpaket GOAT A1600", merchant_category: "GOAT", description: "Rasenmäher" })).toBe(false);
+  });
+
+  it("keeps German thousands separators in area values", () => {
+    expect(parseRobotMowerAttributes("für 1.000 m² geeignet").ratedAreaM2).toBe(1000);
   });
 });

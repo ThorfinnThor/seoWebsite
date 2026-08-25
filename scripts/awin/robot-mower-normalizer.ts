@@ -12,7 +12,15 @@ export function isRobotMowerCandidate(row: RawFeedRow): boolean {
   return CANDIDATE_PATTERN.test(text) && !EXCLUDED_PATTERN.test(text) && (/\bgoat\b/i.test(value(row, "merchant_category") ?? "") || /m(?:ä|ae)h|rasen|mowing|lawn/i.test(text));
 }
 
-function decimal(raw?: string) { const parsed = raw ? Number(raw.replace(",", ".")) : NaN; return Number.isFinite(parsed) && parsed >= 0 ? parsed : undefined; }
+function decimal(raw?: string) {
+  if (!raw) return undefined;
+  const normalized = raw.replace(/\s/g, "");
+  const germanNumber = normalized.includes(",")
+    ? normalized.replace(/\./g, "").replace(",", ".")
+    : /^\d{1,3}(?:\.\d{3})+$/.test(normalized) ? normalized.replace(/\./g, "") : normalized;
+  const parsed = Number(germanNumber);
+  return Number.isFinite(parsed) && parsed >= 0 ? parsed : undefined;
+}
 function firstDecimal(text: string, pattern: RegExp) { return decimal(text.match(pattern)?.[1]); }
 
 export function parseRobotMowerAttributes(text: string): Partial<RobotMowerProduct> {
