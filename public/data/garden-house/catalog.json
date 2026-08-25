@@ -1,7 +1,100 @@
 {
-  "generatedAt": "2026-08-09T00:00:00.000Z",
-  "offers": [],
-  "products": [],
+  "generatedAt": "2026-08-25T13:43:09.158Z",
+  "offers": [
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=42768833243&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 54.99,
+      "deliveryCostStatus": "known",
+      "id": "offer:11830:glo692650644",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/cb/5c/31/1651302828/0638801413721_2_1280x1280.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO692650644",
+      "priceEur": 499,
+      "productId": "gtin:0638801413721",
+      "updatedAt": "2026-08-25T13:42:49.602Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160339&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784103916",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/2f/78/66/1705067320/4004581476298_90067184_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784103916",
+      "priceEur": 1889,
+      "productId": "gtin:4004581476298",
+      "updatedAt": "2026-08-25T13:42:46.936Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=28804582443&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:11830:glo784104178",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/52/87/de/1651428567/5411352800692_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO784104178",
+      "priceEur": 659,
+      "productId": "gtin:5411352800692",
+      "updatedAt": "2026-08-25T13:42:50.365Z"
+    }
+  ],
+  "products": [
+    {
+      "brand": "Duramax",
+      "dataQuality": "curated",
+      "depthCm": 209,
+      "footprintM2": 5.2,
+      "gtin": "0638801413721",
+      "id": "gtin:0638801413721",
+      "material": "metal",
+      "mpn": "0692650644",
+      "name": "Duramax Metallgerätehaus Palladium silber/grau 249 x 209 cm",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-25T13:42:49.602Z",
+      "wallThicknessMm": 0.5,
+      "widthCm": 249
+    },
+    {
+      "brand": "WEKA",
+      "dataQuality": "curated",
+      "depthCm": 205,
+      "floorIncluded": true,
+      "footprintM2": 6.1,
+      "gtin": "4004581476298",
+      "id": "gtin:4004581476298",
+      "material": "wood",
+      "mpn": "122.212.140.045",
+      "name": "Weka Gartenhaus Finnja 296 x 205 cm natur mit Fußboden",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T13:42:46.936Z",
+      "wallThicknessMm": 28,
+      "widthCm": 296
+    },
+    {
+      "brand": "Décor et Jardin",
+      "dataQuality": "curated",
+      "depthCm": 202,
+      "floorIncluded": true,
+      "footprintM2": 5.3,
+      "gtin": "5411352800692",
+      "id": "gtin:5411352800692",
+      "material": "wood",
+      "mpn": "43528P000",
+      "name": "Décor et Jardin Gartenhaus Lodum 262 x 202 cm natur mit Fußboden",
+      "reviewed": true,
+      "roofType": "gable",
+      "sourceUpdatedAt": "2026-08-25T13:42:50.365Z",
+      "wallThicknessMm": 12,
+      "widthCm": 262
+    }
+  ],
   "schemaVersion": 1,
   "vertical": "garden-house"
 }

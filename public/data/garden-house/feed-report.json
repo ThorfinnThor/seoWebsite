@@ -1,18 +1,18 @@
 {
   "candidateRows": 687,
-  "candidateToProductRate": 10,
+  "candidateToProductRate": 57.1,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-25T12:55:41.966Z",
+  "generatedAt": "2026-08-25T13:43:09.158Z",
   "issues": {
     "missing-material": 94,
-    "missing-or-ambiguous-dimensions": 611
+    "missing-or-ambiguous-dimensions": 284
   },
   "merchants": {},
-  "normalizedProducts": 69,
-  "offers": 69,
-  "reviewedProducts": 0,
-  "reviewQueue": 687,
-  "rows": 169051,
+  "normalizedProducts": 392,
+  "offers": 392,
+  "reviewedProducts": 3,
+  "reviewQueue": 684,
+  "rows": 169052,
   "schemaVersion": 1,
   "sourceFeeds": 6,
   "successfulFeeds": 6
