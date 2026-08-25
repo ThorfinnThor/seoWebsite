@@ -22,5 +22,9 @@ describe("garden-house normalizer", () => {
   it("keeps an out-of-stock offer unavailable", () => expect(normalizeGardenHouse({ ...row, in_stock: "false" }).offer?.available).toBe(false));
   it("interprets numeric in-stock flags without joining them to quantity", () => expect(availability({ in_stock: "1", stock_quantity: "68" })).toEqual({ available: true, ambiguous: false }));
   it("uses stock quantity when no explicit stock flag exists", () => expect(availability({ stock_quantity: "12" })).toEqual({ available: true, ambiguous: false }));
+  it("falls back to standard availability and sale flags", () => {
+    expect(availability({ availability: "in_stock" })).toEqual({ available: true, ambiguous: false });
+    expect(availability({ is_for_sale: "1" })).toEqual({ available: true, ambiguous: false });
+  });
   it("prefers an explicit out-of-stock flag over a stale quantity", () => expect(availability({ in_stock: "0", stock_quantity: "68" })).toEqual({ available: false, ambiguous: false }));
 });

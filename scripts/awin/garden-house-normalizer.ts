@@ -79,8 +79,8 @@ export function availability(row: RawFeedRow): { available: boolean; ambiguous: 
   const statusValue = (raw?: string): boolean | undefined => {
     if (!raw?.trim()) return undefined;
     const normalized = raw.trim().toLowerCase();
-    if (/out of stock|nicht verfügbar|nicht verfuegbar|ausverkauft|unavailable|false|^no$|^0$/.test(normalized)) return false;
-    if (/in stock|auf lager|verfügbar|verfuegbar|available|true|^yes$/.test(normalized)) return true;
+    if (/out[_ -]?of[_ -]?stock|nicht verfügbar|nicht verfuegbar|ausverkauft|unavailable|false|^no$|^0$/.test(normalized)) return false;
+    if (/in[_ -]?stock|auf lager|verfügbar|verfuegbar|available|true|^yes$/.test(normalized)) return true;
     if (/^\d+(?:[.,]\d+)?$/.test(normalized)) return Number(normalized.replace(",", ".")) > 0;
     return undefined;
   };
@@ -93,8 +93,10 @@ export function availability(row: RawFeedRow): { available: boolean; ambiguous: 
     // than 0 as in stock, even when an advertiser uses a custom text flag.
     return { available: true, ambiguous: false };
   }
-  const explicitStatus = statusValue(value(row, "stock_status"));
+  const explicitStatus = statusValue(value(row, "stock_status", "availability"));
   if (explicitStatus !== undefined) return { available: explicitStatus, ambiguous: false };
+  const forSale = statusValue(value(row, "is_for_sale"));
+  if (forSale !== undefined) return { available: forSale, ambiguous: false };
   const quantity = value(row, "stock_quantity");
   if (quantity && /^\d+(?:[.,]\d+)?$/.test(quantity.trim())) return { available: Number(quantity.replace(",", ".")) > 0, ambiguous: false };
   return { available: false, ambiguous: true };
