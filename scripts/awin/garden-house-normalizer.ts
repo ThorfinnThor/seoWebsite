@@ -167,6 +167,7 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   const dimensions = parseDimensions(value(row, "dimensions")) ?? parseDimensions(name);
   const productMaterial = material(text);
   const affiliateUrl = value(row, "aw_deep_link");
+  const merchantUrl = value(row, "merchant_deep_link");
   const currency = (value(row, "currency") ?? "EUR").toUpperCase();
   const priceEur = parsePrice(value(row, "search_price"));
   const stock = availability(row);
@@ -175,6 +176,7 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   if (!productMaterial) issues.push("missing-material");
   if (named.opaque) issues.push("unhelpful-product-name");
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
+  if (merchantUrl && !merchantUrl.startsWith("https://")) issues.push("missing-or-invalid-merchant-link");
   if (currency !== "EUR") issues.push("non-eur-currency");
   if (!priceEur) issues.push("invalid-price");
   if (stock.ambiguous) issues.push("ambiguous-stock");
@@ -201,8 +203,9 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
     ...deliveryInfo,
     available: stock.available,
     affiliateUrl,
+    ...(merchantUrl?.startsWith("https://") ? { merchantUrl } : {}),
     imageUrl: imageUrl?.startsWith("https://") ? imageUrl : undefined,
     updatedAt: sourceUpdatedAt,
   } : undefined;
-  return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product, offer, merchantProductUrl: affiliateUrl, imageUrl, issues };
+  return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product, offer, merchantProductUrl: merchantUrl ?? affiliateUrl, imageUrl, issues };
 }

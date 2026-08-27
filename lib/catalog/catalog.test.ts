@@ -1,9 +1,20 @@
 import { describe, expect, it } from "vitest";
 import { addAwinClickRefs } from "./tracking";
+import { resolveOfferUrl } from "./offer-url";
 import { budgetStatus, compareOffers, landedPrice } from "./price";
 import type { OfferBase } from "./types";
 
 const offer: OfferBase = { id: "o", productId: "p", merchantId: "m", merchantName: "M", merchantProductId: "mp", priceEur: 100, deliveryCostStatus: "known", deliveryCostEur: 10, available: true, affiliateUrl: "https://example.com/path?existing=yes", updatedAt: "2026-08-09T00:00:00.000Z" };
+
+describe("offer URL resolution", () => {
+  it("uses the canonical merchant URL by default when available", () => {
+    expect(resolveOfferUrl({ ...offer, merchantUrl: "https://shop.example/product" })).toBe("https://shop.example/product");
+  });
+
+  it("falls back to the affiliate URL when no merchant URL exists", () => {
+    expect(resolveOfferUrl(offer)).toBe(offer.affiliateUrl);
+  });
+});
 describe("offer pricing", () => {
   it("calculates landed price only when delivery is known", () => { expect(landedPrice(offer)).toBe(110); expect(landedPrice({ ...offer, deliveryCostStatus: "unknown", deliveryCostEur: undefined })).toBeUndefined(); });
   it("does not show unknown delivery as within budget", () => expect(budgetStatus({ ...offer, deliveryCostStatus: "unknown", deliveryCostEur: undefined }, 150)).toBe("unknown"));

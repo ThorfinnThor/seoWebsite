@@ -61,10 +61,12 @@ export function normalizeFlooring(row: RawFeedRow): FlooringCandidate {
   const productResult = FlooringProductSchema.safeParse(candidateAttributes);
   if (!productResult.success) issues.push("incomplete-product-data");
   const affiliateUrl = value(row, "aw_deep_link");
+  const merchantUrl = value(row, "merchant_deep_link");
   const currency = (value(row, "currency") ?? "EUR").toUpperCase();
   const priceEur = parsePrice(value(row, "search_price"));
   const stock = availability(row);
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
+  if (merchantUrl && !merchantUrl.startsWith("https://")) issues.push("missing-or-invalid-merchant-link");
   if (currency !== "EUR") issues.push("non-eur-currency");
   if (!priceEur) issues.push("invalid-price");
   if (stock.ambiguous) issues.push("ambiguous-stock");
@@ -72,7 +74,8 @@ export function normalizeFlooring(row: RawFeedRow): FlooringCandidate {
   const offer: OfferBase | undefined = productResult.success && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur ? {
     id: `offer:${slug(merchantId)}:${slug(merchantProductId)}`, productId: identity.id, merchantId, merchantName, merchantProductId, priceEur,
     ...delivery(value(row, "delivery_cost")), available: stock.available, affiliateUrl,
+    ...(merchantUrl?.startsWith("https://") ? { merchantUrl } : {}),
     imageUrl: imageUrl?.startsWith("https://") ? imageUrl : undefined, updatedAt: sourceUpdatedAt,
   } : undefined;
-  return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product: productResult.success ? productResult.data : undefined, offer, merchantProductUrl: affiliateUrl, imageUrl, issues };
+  return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product: productResult.success ? productResult.data : undefined, offer, merchantProductUrl: merchantUrl ?? affiliateUrl, imageUrl, issues };
 }

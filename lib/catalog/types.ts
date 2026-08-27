@@ -31,6 +31,8 @@ export const OfferBaseSchema = z
     deliveryCostStatus: DeliveryCostStatusSchema,
     available: z.boolean(),
     affiliateUrl: z.url().refine((url) => url.startsWith("https:"), "Affiliate URL must use HTTPS"),
+    /** Canonical merchant URL, retained so we can link directly before affiliate activation. */
+    merchantUrl: z.url().refine((url) => url.startsWith("https:"), "Merchant URL must use HTTPS").optional(),
     imageUrl: z.url().optional(),
     updatedAt: z.iso.datetime(),
   })
