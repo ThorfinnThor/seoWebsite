@@ -10,7 +10,9 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateCarportPlan } from "@/lib/carport/rules";
 import { CarportInputSchema, type CarportInput } from "@/lib/carport/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
+import { RealProductList } from "@/components/product/RealProductList";
 import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
+import { REAL_PLANNER_PRODUCTS } from "@/lib/real-products";
 
 const INITIAL: CarportInput = {
   vehicleCount: 1,
@@ -99,6 +101,7 @@ export function CarportPlanner() {
         <article><span className="component-icon" aria-hidden="true">◒</span><div><p className="eyebrow">Dachwasser</p><h3>Theoretisch {plan.theoreticalRainwaterPer10MmL} Liter je 10 mm Regen</h3><p>Geometrischer Wert aus der lichten Planungsfläche, noch ohne Dachüberstand, tatsächliche Projektion und reale Verluste.</p><strong>Rinne, Fallrohr, Ablaufziel und sicherer Überlauf bleiben konkrete Planung.</strong></div></article>
       </div>
       <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.carport, { "carport-kit": `${format(plan.clearWidthM)} × ${format(plan.clearLengthM)} m lichte Maße`, "carport-posts": "nach System und Statik", "carport-anchors": "nach Pfostenanzahl", "carport-roof": `${format(plan.coveredPlanningAreaM2)} m² Planungsfläche`, "carport-drainage": `${plan.theoreticalRainwaterPer10MmL} l je 10 mm Regen`, "carport-electric": input.electricityPlanned || input.evCharging ? "vorgesehen" : "optional" })} />
+      <RealProductList items={REAL_PLANNER_PRODUCTS.carport} />
       <div className="warning-panel"><h3>Vor Produktauswahl und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Fahrzeugmaße, Grundstücksgrenzen, Leitungen im Boden, Bäume, Tor, Beleuchtung und Wartungszugang in ein genaues Bestandsaufmaß übernehmen.</li></ul></div>
       <PrintResultAction />
     </div>}

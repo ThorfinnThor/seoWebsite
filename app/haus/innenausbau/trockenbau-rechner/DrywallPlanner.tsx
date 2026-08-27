@@ -10,7 +10,9 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateDrywallPlan } from "@/lib/drywall/rules";
 import { DrywallInputSchema, type DrywallInput } from "@/lib/drywall/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
+import { RealProductList } from "@/components/product/RealProductList";
 import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
+import { REAL_PLANNER_PRODUCTS } from "@/lib/real-products";
 
 const INITIAL: DrywallInput = {
   wallLengthM: 5,
@@ -96,6 +98,7 @@ export function DrywallPlanner() {
         <article><span className="component-icon" aria-hidden="true">≋</span><div><p className="eyebrow">Hohlraum & Ergänzungen</p><h3>{input.includeInsulation ? `${format(plan.insulationAreaM2)} m² Dämmfläche` : "Keine Dämmung eingerechnet"}</h3><p>Schrauben, Dübel, Dichtungs- und Fugenmaterial sowie Anschluss- und Kantenteile bleiben bewusst außerhalb der Pauschalmenge.</p><strong>Nur ein vollständiger freigegebener Aufbau erfüllt Brand-, Schall- oder Feuchteanforderungen.</strong></div></article>
       </div>
       <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.drywall, { "drywall-boards": `${plan.boardCount} Platten`, "drywall-profiles": `${plan.trackBarCount} Schienenstäbe + ${plan.baselineStudCount} Ständer`, "drywall-screws": `${format(plan.totalCladdingAreaM2)} m² Bekleidung`, "drywall-joint": `${format(plan.totalCladdingAreaM2)} m² Fugenfläche`, "drywall-insulation": input.includeInsulation ? `${format(plan.insulationAreaM2)} m²` : "nicht aktiviert", "drywall-sealing": input.moistureExposure || input.fireOrAcousticRequirement ? "nach Systemanforderung" : "für Anschlüsse" })} />
+      <RealProductList items={REAL_PLANNER_PRODUCTS.drywall} />
       <div className="warning-panel"><h3>Vor Bestellung und Ausführung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Bestandsbauteile, Boden und Decke, Leitungsverlauf, Türzargen, Lasten, Bewegungsfugen und spätere Befestigungen in einem konkreten Wandplan koordinieren.</li></ul></div>
       <PrintResultAction />
     </div>}
