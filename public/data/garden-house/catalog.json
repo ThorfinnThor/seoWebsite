@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T14:30:28.225Z",
+  "generatedAt": "2026-08-27T17:18:11.915Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=42768833243&a=3037577&m=11830",
@@ -11,9 +11,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO692650644",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/duramax-metallgeraetehaus-palladium-silber-grau-249-x-209-cm-0692650644/",
       "priceEur": 499,
       "productId": "gtin:0638801413721",
-      "updatedAt": "2026-08-25T14:30:09.625Z"
+      "updatedAt": "2026-08-27T17:17:54.883Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160339&a=3037577&m=11830",
@@ -25,9 +26,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784103916",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/weka-gartenhaus-finnja-296-x-205-cm-natur-mit-fussboden-0784103916/",
       "priceEur": 1889,
       "productId": "gtin:4004581476298",
-      "updatedAt": "2026-08-25T14:30:06.721Z"
+      "updatedAt": "2026-08-27T17:17:52.407Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45137430729&a=3037577&m=11830",
@@ -39,9 +41,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784103966",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/weka-gartenhaus-weekendhaus-eirik-a-380-x-580-cm-natur-mit-fussboden-0784103966/",
       "priceEur": 5698,
       "productId": "gtin:4004581241797",
-      "updatedAt": "2026-08-25T14:30:06.722Z"
+      "updatedAt": "2026-08-27T17:17:52.407Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160589&a=3037577&m=11830",
@@ -53,9 +56,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784104000",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/weka-gartenhaus-finn-300-x-205-cm-natur-0784104000/",
       "priceEur": 2339,
       "productId": "gtin:4004581426828",
-      "updatedAt": "2026-08-25T14:30:06.741Z"
+      "updatedAt": "2026-08-27T17:17:52.434Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=23296160587&a=3037577&m=11830",
@@ -67,9 +71,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784104001",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/weka-gartenhaus-finn-300-x-235-cm-natur-0784104001/",
       "priceEur": 2009,
       "productId": "gtin:4004581352646",
-      "updatedAt": "2026-08-25T14:30:06.741Z"
+      "updatedAt": "2026-08-27T17:17:52.434Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44675243190&a=3037577&m=11830",
@@ -81,9 +86,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784104003",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/weka-gartenhaus-finn-240-x-205-cm-natur-0784104003/",
       "priceEur": 1546,
       "productId": "gtin:4004581352684",
-      "updatedAt": "2026-08-25T14:30:06.741Z"
+      "updatedAt": "2026-08-27T17:17:52.434Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=28804582443&a=3037577&m=11830",
@@ -95,9 +101,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784104178",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/decor-et-jardin-gartenhaus-lodum-262-x-202-cm-natur-mit-fussboden-0784104178/",
       "priceEur": 659,
       "productId": "gtin:5411352800692",
-      "updatedAt": "2026-08-25T14:30:10.448Z"
+      "updatedAt": "2026-08-27T17:17:55.602Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=28804582445&a=3037577&m=11830",
@@ -109,9 +116,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO784104179",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/decor-et-jardin-gartenhaus-lopun-272-x-182-cm-natur-mit-fussboden-0784104179/",
       "priceEur": 699,
       "productId": "gtin:5411352800708",
-      "updatedAt": "2026-08-25T14:30:10.448Z"
+      "updatedAt": "2026-08-27T17:17:55.602Z"
     }
   ],
   "products": [
@@ -126,7 +134,7 @@
       "mpn": "0692650644",
       "name": "Duramax Metallgerätehaus Palladium silber/grau 249 x 209 cm",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T14:30:09.625Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:54.883Z",
       "wallThicknessMm": 0.5,
       "widthCm": 249
     },
@@ -143,7 +151,7 @@
       "name": "Weka Gartenhaus Weekendhaus Eirik A 380 x 580 cm natur mit Fußboden",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:06.722Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:52.407Z",
       "wallThicknessMm": 45,
       "widthCm": 380
     },
@@ -162,7 +170,7 @@
       "name": "Weka Gartenhaus Finn 300 x 235 cm natur",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:06.741Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:52.434Z",
       "wallThicknessMm": 28,
       "widthCm": 301
     },
@@ -181,7 +189,7 @@
       "name": "Weka Gartenhaus Finn 240 x 205 cm natur",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:06.741Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:52.434Z",
       "wallThicknessMm": 28,
       "widthCm": 240
     },
@@ -198,7 +206,7 @@
       "name": "Weka Gartenhaus Finn 300 x 205 cm natur",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:06.741Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:52.434Z",
       "wallThicknessMm": 28,
       "widthCm": 300
     },
@@ -215,7 +223,7 @@
       "name": "Weka Gartenhaus Finnja 296 x 205 cm natur mit Fußboden",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:06.721Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:52.407Z",
       "wallThicknessMm": 28,
       "widthCm": 296
     },
@@ -232,7 +240,7 @@
       "name": "Décor et Jardin Gartenhaus Lodum 262 x 202 cm natur mit Fußboden",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:10.448Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:55.602Z",
       "wallThicknessMm": 12,
       "widthCm": 262
     },
@@ -249,7 +257,7 @@
       "name": "Décor et Jardin Gartenhaus Lopun 272 x 182 cm natur mit Fußboden",
       "reviewed": true,
       "roofType": "gable",
-      "sourceUpdatedAt": "2026-08-25T14:30:10.448Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:55.602Z",
       "wallThicknessMm": 12,
       "widthCm": 272
     }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:43:09.158Z",
+  "generatedAt": "2026-08-27T17:18:11.915Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44237507886&a=3037577&m=11830",
@@ -11,9 +11,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GFM49e52e296",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/gardena-bewaesserungscomputer-smart-dual-water-control-0692152470/",
       "priceEur": 124.99,
       "productId": "gtin:4066407028142",
-      "updatedAt": "2026-08-25T13:42:56.100Z"
+      "updatedAt": "2026-08-27T17:18:01.958Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=23295970971&a=3037577&m=11830",
@@ -25,9 +26,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO692150288",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/gardena-verlegerohr-micro-drip-system-1-2-15-m-rolle-0692150288/",
       "priceEur": 13.49,
       "productId": "gtin:4078500134606",
-      "updatedAt": "2026-08-25T13:42:48.039Z"
+      "updatedAt": "2026-08-27T17:17:53.412Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=23295970879&a=3037577&m=11830",
@@ -39,9 +41,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO692151267",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/gardena-tropfrohr-15-m-4-6-mm-3-16-0692151267/",
       "priceEur": 14.89,
       "productId": "gtin:4078500136204",
-      "updatedAt": "2026-08-25T13:42:48.313Z"
+      "updatedAt": "2026-08-27T17:17:53.679Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=33091841277&a=3037577&m=11830",
@@ -53,9 +56,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO692152219",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/gardena-start-set-pipeline-mit-viereckregner-3-4-innengewinde-0692152219/",
       "priceEur": 89,
       "productId": "gtin:4078500058322",
-      "updatedAt": "2026-08-25T13:42:51.028Z"
+      "updatedAt": "2026-08-27T17:17:56.223Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=32684495799&a=3037577&m=11830",
@@ -67,9 +71,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO692152234",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/gardena-pipeline-viereckregner-beregnungsflaeche-9-m2-216-m2-0692152234/",
       "priceEur": 27.79,
       "productId": "gtin:4078500058018",
-      "updatedAt": "2026-08-25T13:42:51.095Z"
+      "updatedAt": "2026-08-27T17:17:56.306Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=35592014871&a=3037577&m=11830",
@@ -81,9 +86,10 @@
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO692152283",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/gardena-bewaesserungsset-fuer-hecke-straeucher-25-m-0692152283/",
       "priceEur": 40.89,
       "productId": "gtin:4066407003064",
-      "updatedAt": "2026-08-25T13:42:51.835Z"
+      "updatedAt": "2026-08-27T17:17:57.348Z"
     }
   ],
   "products": [
@@ -98,7 +104,7 @@
       "name": "Gardena Bewässerungsset für Hecke und Sträucher 25 m",
       "pipeDiameterMm": 13,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:51.835Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:57.348Z",
       "systemId": "GARDENA Micro-Drip-System"
     },
     {
@@ -112,7 +118,7 @@
       "name": "Gardena Bewässerungscomputer smart Dual Water Control",
       "reviewed": true,
       "smartCompatible": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:56.100Z",
+      "sourceUpdatedAt": "2026-08-27T17:18:01.958Z",
       "systemId": "GARDENA smart system"
     },
     {
@@ -124,7 +130,7 @@
       "mpn": "08251-20",
       "name": "Gardena Pipeline Viereckregner",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:51.095Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:56.306Z",
       "systemId": "GARDENA Pipeline"
     },
     {
@@ -136,7 +142,7 @@
       "mpn": "08272-20",
       "name": "Gardena Start-Set Pipeline mit Viereckregner",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:51.028Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:56.223Z",
       "systemId": "GARDENA Pipeline"
     },
     {
@@ -150,7 +156,7 @@
       "name": "Gardena Verlegerohr Micro-Drip-System 1/2\" 15 m",
       "pipeDiameterMm": 13,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:48.039Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:53.412Z",
       "systemId": "GARDENA Micro-Drip-System"
     },
     {
@@ -164,7 +170,7 @@
       "name": "Gardena Tropfrohr 15 m 4,6 mm",
       "pipeDiameterMm": 4.6,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-25T13:42:48.313Z",
+      "sourceUpdatedAt": "2026-08-27T17:17:53.679Z",
       "systemId": "GARDENA Micro-Drip-System"
     }
   ],

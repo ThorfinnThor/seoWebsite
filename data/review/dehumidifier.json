@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-25T13:43:09.158Z",
+  "generatedAt": "2026-08-27T17:18:11.915Z",
   "products": [
     {
       "brand": "UHU",
@@ -13,7 +13,7 @@
         "mpn": "47135",
         "name": "UHU Luftentfeuchter Nachfüllbeutel 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:44.625Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:50.102Z"
       },
       "gtin": "4026700471359",
       "id": "gtin:4026700471359",
@@ -21,7 +21,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=35902053820&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuellbeutel-450-g-0765550014/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -41,7 +41,7 @@
         "mpn": "47140",
         "name": "UHU Luftentfeuchter Mobil, neutral 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:45.300Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:50.833Z"
       },
       "gtin": "4026700471403",
       "id": "gtin:4026700471403",
@@ -49,7 +49,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=34150882759&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-mobil-neutral-100-g-0765550035/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -69,7 +69,7 @@
         "mpn": "47165",
         "name": "UHU Luftentfeuchter Mobil, Lavendel 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:46.569Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.077Z"
       },
       "gtin": "4026700471656",
       "id": "gtin:4026700471656",
@@ -77,7 +77,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=34150883395&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-mobil-lavendel-100-g-0765550059/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -97,7 +97,7 @@
         "mpn": "50505",
         "name": "UHU Luftentfeuchter Nachfülltabs neutral, 2 x 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:45.301Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:50.834Z"
       },
       "gtin": "4026700505054",
       "id": "gtin:4026700505054",
@@ -106,7 +106,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=34150882761&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuelltabs-neutral-2-x-100-g-0765550044/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -126,7 +126,7 @@
         "mpn": "50765",
         "name": "UHU Luftentfeuchter Nachfülltabs Lavendel, 2 x 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.531Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.949Z"
       },
       "gtin": "4026700507652",
       "id": "gtin:4026700507652",
@@ -135,7 +135,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=32926477171&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuelltabs-lavendel-2-x-100-g-0765550084/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -155,7 +155,7 @@
         "mpn": "370030",
         "name": "Thomar AirDry FUN Scheiben-Entfeuchter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:49.714Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:54.975Z"
       },
       "gtin": "4037433700302",
       "id": "gtin:4037433700302",
@@ -164,7 +164,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=32926483843&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/thomar-airdry-fun-scheiben-entfeuchter-0680150464/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -184,7 +184,7 @@
         "mpn": "50590",
         "name": "UHU Luftentfeuchter Ambiance anthrazit, 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:45.301Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:50.833Z"
       },
       "gtin": "4026700505900",
       "id": "gtin:4026700505900",
@@ -193,7 +193,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=35902053869&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-ambiance-anthrazit-100-g-0765550039/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -213,7 +213,7 @@
         "mpn": "50595",
         "name": "UHU Ambiance Originalpackung weiß, 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:45.301Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:50.833Z"
       },
       "gtin": "4026700505955",
       "id": "gtin:4026700505955",
@@ -222,7 +222,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=34138984625&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-ambiance-originalpackung-weiss-100-g-0765550038/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -243,7 +243,7 @@
         "mpn": "47085",
         "name": "UHU Luftentfeuchter Nachfüllbeutel 1000 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:44.622Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:50.100Z"
       },
       "gtin": "4026700470857",
       "id": "gtin:4026700470857",
@@ -251,7 +251,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=34435577385&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuellbeutel-1000-g-0765550011/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -271,7 +271,7 @@
         "mpn": "53165",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Neutral, 2 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:46.336Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:51.863Z"
       },
       "gtin": "4026700531657",
       "id": "gtin:4026700531657",
@@ -280,7 +280,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902147&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-feuchtigkeitsmagnet-neutral-2-x-450-g-0765550098/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -300,7 +300,7 @@
         "mpn": "53175",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Lavendel, 2 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:46.336Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:51.863Z"
       },
       "gtin": "4026700531756",
       "id": "gtin:4026700531756",
@@ -309,7 +309,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902143&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-feuchtigkeitsmagnet-lavendel-2-x-450-g-0765550096/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -330,7 +330,7 @@
         "mpn": "52160",
         "name": "UHU Luftentfeuchter Original 450g 2. Nachfüller gratis",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.562Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.967Z"
       },
       "gtin": "4026700521603",
       "id": "gtin:4026700521603",
@@ -338,7 +338,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=35902055410&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-original-450g-2-nachfueller-gratis-0765550085/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -358,7 +358,7 @@
         "mpn": "53024",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Original, 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.566Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.970Z"
       },
       "gtin": "4026700530254",
       "id": "gtin:4026700530254",
@@ -366,7 +366,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902141&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-feuchtigkeitsmagnet-original-450-g-0765550095/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -386,7 +386,7 @@
         "mpn": "53495",
         "name": "UHU Luftentfeuchter Auto 300 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:50.963Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:56.162Z"
       },
       "gtin": "4026700534955",
       "id": "gtin:4026700534955",
@@ -395,7 +395,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=31160858877&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-auto-300-g-0765550108/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -416,7 +416,7 @@
         "mpn": "47015",
         "name": "UHU Luftentfeuchter Nachfüllbeutel Sparpack, 3 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.566Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.970Z"
       },
       "gtin": "4026700470154",
       "id": "gtin:4026700470154",
@@ -424,7 +424,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902137&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuellbeutel-sparpack-3-x-450-g-0765550093/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -445,7 +445,7 @@
         "mpn": "47255",
         "name": "UHU Luftentfeuchter Nachfüllbeutel 450g 2+1 gratis",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.569Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.973Z"
       },
       "gtin": "4026700472554",
       "id": "gtin:4026700472554",
@@ -453,7 +453,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=35697095165&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuellbeutel-450g-2-1-gratis-0765550099/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -473,7 +473,7 @@
         "mpn": "52155",
         "name": "UHU Luftentfeuchter Original 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.565Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.970Z"
       },
       "gtin": "4026700521559",
       "id": "gtin:4026700521559",
@@ -481,7 +481,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902135&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-original-450-g-0765550092/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -501,7 +501,7 @@
         "mpn": "10402",
         "name": "Cartrend Luftentfeuchter mikrowellengeeignet 1kg",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.754Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:53.151Z"
       },
       "gtin": "4038373058195",
       "id": "gtin:4038373058195",
@@ -510,7 +510,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=27488483443&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/cartrend-luftentfeuchter-mikrowellengeeignet-1kg-0680650878/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -530,7 +530,7 @@
         "mpn": "53135",
         "name": "UHU Luftentfeuchter Ambiance weiß, 2. Magnet-Tab Gratis",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:52.903Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:58.531Z"
       },
       "gtin": "4026700531350",
       "id": "gtin:4026700531350",
@@ -539,7 +539,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=36855230757&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-ambiance-weiss-2-magnet-tab-gratis-0765550107/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -559,7 +559,7 @@
         "mpn": "53125",
         "name": "UHU Luftentfeuchter Ambiance weiß, 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.566Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.970Z"
       },
       "gtin": "4026700531251",
       "id": "gtin:4026700531251",
@@ -568,7 +568,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902139&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-ambiance-weiss-450-g-0765550094/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -588,7 +588,7 @@
         "mpn": "53155",
         "name": "UHU Luftentfeuchter Ambiance anthrazit, 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.585Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.984Z"
       },
       "gtin": "4026700531558",
       "id": "gtin:4026700531558",
@@ -597,7 +597,7 @@
         "missing-capacity",
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902149&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-ambiance-anthrazit-450-g-0765550106/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -618,7 +618,7 @@
         "mpn": "47040",
         "name": "UHU Luftentfeuchter Nachfüllbeutel Sparpack, 3 x 1000 g Sparpack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.565Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.969Z"
       },
       "gtin": "4026700470406",
       "id": "gtin:4026700470406",
@@ -626,7 +626,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902131&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-nachfuellbeutel-sparpack-3-x-1000-g-sparpack-0765550090/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -646,7 +646,7 @@
         "mpn": "52195",
         "name": "UHU Luftentfeuchter Original 1000 g gratis Nachfüllbeutel",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.565Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.969Z"
       },
       "gtin": "4026700521955",
       "id": "gtin:4026700521955",
@@ -654,7 +654,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=34256373447&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-original-1000-g-gratis-nachfuellbeutel-0765550087/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -674,7 +674,7 @@
         "mpn": "53194",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Original, 2 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.567Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.971Z"
       },
       "gtin": "4026700531954",
       "id": "gtin:4026700531954",
@@ -682,7 +682,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902145&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-feuchtigkeitsmagnet-original-2-x-450-g-0765550097/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -702,7 +702,7 @@
         "mpn": "52185",
         "name": "UHU Luftentfeuchter Original 1000 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:47.565Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:52.970Z"
       },
       "gtin": "4026700521856",
       "id": "gtin:4026700521856",
@@ -710,7 +710,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=25921902133&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/uhu-luftentfeuchter-original-1000-g-0765550091/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -732,13 +732,13 @@
         "mpn": "0694600250",
         "name": "Emerio Luftentfeuchter DH-133050 bis 20 m² 10L/24h",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:56.776Z"
+        "sourceUpdatedAt": "2026-08-27T17:18:02.653Z"
       },
       "gtin": "7333282021740",
       "id": "gtin:7333282021740",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a8/cd/c6/1783935086/7333282021740_90145592_1280x1280.jpg",
       "issues": [],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=43942506400&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-133050-bis-20-m2-10l-24h-0694600250/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -762,14 +762,14 @@
         "mpn": "0694600244",
         "name": "Comfee Luftentfeuchter MDDP3-30DEN7 30 l/24 h LED Display Timer",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:54.383Z",
+        "sourceUpdatedAt": "2026-08-27T17:18:00.200Z",
         "tankLiters": 3
       },
       "gtin": "4048164117079",
       "id": "gtin:4048164117079",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ea/05/3d/1738679440/4048164117079_90125893_1280x1280.jpg",
       "issues": [],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=40275198826&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/comfee-luftentfeuchter-mddp3-30den7-30-l-24-h-led-display-timer-0694600244/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -791,13 +791,13 @@
         "name": "Güde Bautrockner GBT 50.1 220-240 V 900 W",
         "powerW": 900,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:50.169Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:55.428Z"
       },
       "gtin": "4015671448606",
       "id": "gtin:4015671448606",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/48/c6/75/1705996847/4015671448606_2875102_1920x980.jpg",
       "issues": [],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=45764263279&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/guede-bautrockner-gbt-50-1-220-240-v-900-w-0761360120/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -818,7 +818,7 @@
         "name": "Güde Bautrockner GBT 50.2 50 L 900 W",
         "powerW": 900,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:57.176Z"
+        "sourceUpdatedAt": "2026-08-27T17:18:03.046Z"
       },
       "gtin": "4015671781093",
       "id": "gtin:4015671781093",
@@ -826,7 +826,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=44439112954&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/guede-bautrockner-gbt-50-2-50-l-900-w-0761360177/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -847,13 +847,13 @@
         "mpn": "ZI-BAT60",
         "name": "Zipper Bautrockner ZI-BAT50 50 l max. 70 m²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:51.042Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:56.240Z"
       },
       "gtin": "9120039232782",
       "id": "gtin:9120039232782",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fe/65/2b/1775740507/9120039232782_90220702_1280x1280.jpg",
       "issues": [],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=40739872237&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/zipper-bautrockner-zi-bat50-50-l-max-70-m2-0761360124/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -876,7 +876,7 @@
         "name": "Güde Bautrockner GBT 80.1 1300 W 80 l/Tag",
         "powerW": 1300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:50.305Z"
+        "sourceUpdatedAt": "2026-08-27T17:17:55.554Z"
       },
       "gtin": "4015671448613",
       "id": "gtin:4015671448613",
@@ -884,7 +884,7 @@
       "issues": [
         "unconfirmed-drainage"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=39979909914&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/guede-bautrockner-gbt-80-1-1300-w-80-l-tag-0761360122/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -904,7 +904,7 @@
         "mpn": "0761360190",
         "name": "Güde Bautrockner GBT 130-ST",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-25T13:42:57.219Z"
+        "sourceUpdatedAt": "2026-08-27T17:18:03.099Z"
       },
       "gtin": "4015671953506",
       "id": "gtin:4015671953506",
@@ -912,7 +912,7 @@
       "issues": [
         "missing-capacity"
       ],
-      "merchantProductUrl": "https://www.awin1.com/pclick.php?p=44416939498&a=3037577&m=11830",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/guede-bautrockner-gbt-130-st-0761360190/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
