@@ -9,6 +9,8 @@ import { usePlannerSessionState } from "@/components/calculator/usePlannerSessio
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
 import { TerraceInputSchema, type TerraceInput } from "@/lib/terrace/types";
+import { ReferenceProductList } from "@/components/product/ReferenceProductList";
+import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
 
 const INITIAL: TerraceInput = {
   terraceLengthM: 5,
@@ -86,6 +88,7 @@ export function TerracePlanner() {
         <article><span className="component-icon" aria-hidden="true">╫</span><div><p className="eyebrow">Unterkonstruktion</p><h3>{plan.supportRowCount} Auflagerlinien</h3><p>Geschätzt {format(plan.supportLinearMWithWaste)} laufende Meter inklusive Reserve bei maximal {format(input.maxSupportSpacingCm)} cm Abstand.</p><strong>{plan.fixingIntersections.toLocaleString("de-DE")} rechnerische Kreuzungspunkte</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">↔</span><div><p className="eyebrow">Zuschnitt & Fugen</p><h3>{plan.fullLengthPossible ? "Verlegung ohne Längsstoß möglich" : `Mindestens ${plan.minimumJointsPerCourse} Stoß je Reihe`}</h3><p>Die Reihenbreite liegt rechnerisch bei {format(plan.coveredWidthM, 3)} m. Am Rand sind ungefähr {plan.edgeAdjustmentMm} mm anzupassen.</p><strong>Stoßbild und symmetrische Randreihen vor Bestellung zeichnen.</strong></div></article>
       </div>
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.terrace, { "terrace-decking": `${format(plan.deckingLinearMWithWaste)} lfm`, "terrace-substructure": `${format(plan.supportLinearMWithWaste)} lfm`, "terrace-screws": "nach Auflagerpunkten", "terrace-spacers": `${plan.courseCount} Reihen`, "terrace-foundation": `${plan.supportRowCount} Auflagerlinien`, "terrace-edge": "nach Randlängen" })} />
       <div className="warning-panel"><h3>Vor Bestellung und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Untergrund, Entwässerung, Aufbauhöhe, Gefälle und konstruktiver Holzschutz gehören in die konkrete Ausführungsplanung.</li></ul></div>
       <PrintResultAction />
     </div>}

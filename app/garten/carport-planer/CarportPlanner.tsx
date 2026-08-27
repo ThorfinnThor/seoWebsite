@@ -9,6 +9,8 @@ import { usePlannerSessionState } from "@/components/calculator/usePlannerSessio
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateCarportPlan } from "@/lib/carport/rules";
 import { CarportInputSchema, type CarportInput } from "@/lib/carport/types";
+import { ReferenceProductList } from "@/components/product/ReferenceProductList";
+import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
 
 const INITIAL: CarportInput = {
   vehicleCount: 1,
@@ -96,6 +98,7 @@ export function CarportPlanner() {
         <article><span className="component-icon" aria-hidden="true">↥</span><div><p className="eyebrow">Höhe & Zufahrt</p><h3>{format(plan.clearHeightM)} m lichte Zielhöhe</h3><p>{input.approach === "straight" ? "Gerade Zufahrt eingetragen." : input.approach === "turn" ? "Richtungswechsel und Rangieren sind vorgesehen." : "Zufahrtsgeometrie ist noch offen."}</p><strong>Heckklappe, Dachlast, Anbauten und künftige Fahrzeuge separat vermessen.</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">◒</span><div><p className="eyebrow">Dachwasser</p><h3>Theoretisch {plan.theoreticalRainwaterPer10MmL} Liter je 10 mm Regen</h3><p>Geometrischer Wert aus der lichten Planungsfläche, noch ohne Dachüberstand, tatsächliche Projektion und reale Verluste.</p><strong>Rinne, Fallrohr, Ablaufziel und sicherer Überlauf bleiben konkrete Planung.</strong></div></article>
       </div>
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.carport, { "carport-kit": `${format(plan.clearWidthM)} × ${format(plan.clearLengthM)} m lichte Maße`, "carport-posts": "nach System und Statik", "carport-anchors": "nach Pfostenanzahl", "carport-roof": `${format(plan.coveredPlanningAreaM2)} m² Planungsfläche`, "carport-drainage": `${plan.theoreticalRainwaterPer10MmL} l je 10 mm Regen`, "carport-electric": input.electricityPlanned || input.evCharging ? "vorgesehen" : "optional" })} />
       <div className="warning-panel"><h3>Vor Produktauswahl und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Fahrzeugmaße, Grundstücksgrenzen, Leitungen im Boden, Bäume, Tor, Beleuchtung und Wartungszugang in ein genaues Bestandsaufmaß übernehmen.</li></ul></div>
       <PrintResultAction />
     </div>}

@@ -8,6 +8,8 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { buildIrrigationPlan } from "@/lib/irrigation/rules";
 import { IrrigationInputSchema, type IrrigationInput } from "@/lib/irrigation/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
+import { ReferenceProductList } from "@/components/product/ReferenceProductList";
+import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
 
 const INITIAL: IrrigationInput = { lawnAreaM2: 100, bedAreaM2: 20, hedgeLengthM: 15, automaticControl: true, smartControl: false, rainSensorWanted: true, budgetMaxEur: 600 };
 const FIELD_IDS: Partial<Record<keyof IrrigationInput, string>> = {
@@ -108,7 +110,7 @@ export function IrrigationPlanner() {
       <div className="requirement-summary"><div><span>System</span><strong>{plan.style === "combined" ? "Kombiniert" : plan.style === "sprinkler" ? "Rasen" : "Tropf"}</strong></div><div><span>Nutzungsbereiche</span><strong>{plan.activeCategories}</strong></div><div><span>Steuerungszonen</span><strong>{plan.controllerZones || "manuell"}</strong></div><div><span>Budgetrahmen</span><strong>{input.budgetMaxEur.toLocaleString("de-DE")} €</strong></div></div>
       <div className="component-plan"><div className="result-heading"><div><p className="eyebrow">Erste Materialstruktur</p><h3>Diese Kategorien solltest du einplanen.</h3></div></div>{plan.components.map((component) => <article key={`${component.kind}-${component.label}`}><span className="component-icon" aria-hidden="true">{component.kind === "dripline" ? "≈" : component.kind === "controller" ? "⌁" : "○"}</span><div><h4>{component.label}</h4><strong>{component.quantity}</strong><p>{component.note}</p></div></article>)}</div>
       <div className="warning-panel"><h3>Vor der Produktauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}</ul></div>
-      <div className="result-state result-state--compact"><h3>Produktsets folgen nach Systemprüfung.</h3><p>Wir kombinieren später nur Komponenten mit bestätigter System-ID. Bis dahin zeigt der Planer bewusst keine zufällige Einkaufsliste.</p></div>
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.irrigation, { "irrigation-controller": input.automaticControl ? `${plan.controllerZones || 1} Zonen` : "manuell", "irrigation-valves": input.automaticControl ? `${plan.controllerZones || 1} Stück` : "optional", "irrigation-dripline": `${formatM(input.hedgeLengthM)} m Hecke + Beete nach Plan`, "irrigation-sprinklers": `${formatM(input.lawnAreaM2)} m² Rasenfläche`, "irrigation-filter": "1 Set", "irrigation-pipe": "nach Leitungsplan" })} />
       <PrintResultAction />
     </div>}
     <div className="calculator-actions">
@@ -132,4 +134,8 @@ function OptionalField({ id, label, value, unit, max, error, onChange }: { id: s
 
 function Check({ label, detail, checked, disabled = false, onChange }: { label: string; detail: string; checked: boolean; disabled?: boolean; onChange: (value: boolean) => void }) {
   return <label className={`check-card ${checked ? "check-card--selected" : ""} ${disabled ? "check-card--disabled" : ""}`}><input type="checkbox" checked={checked} disabled={disabled} onChange={(event) => onChange(event.target.checked)} /><span className="check-box" aria-hidden="true">{checked ? "✓" : ""}</span><span><strong>{label}</strong><small>{detail}</small></span></label>;
+}
+
+function formatM(value: number) {
+  return value.toLocaleString("de-DE", { maximumFractionDigits: 1 });
 }
