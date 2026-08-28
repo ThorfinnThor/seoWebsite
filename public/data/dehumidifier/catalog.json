@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T17:18:11.915Z",
+  "generatedAt": "2026-08-28T09:49:36.760Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=41084226928&a=3037577&m=11830",
@@ -14,7 +14,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/comfee-luftentfeuchter-mddf3-20den7-fuer-bis-zu-130-m3-3-liter-wassertank-0694600201/",
       "priceEur": 219,
       "productId": "gtin:4048164102853",
-      "updatedAt": "2026-08-27T17:17:53.015Z"
+      "updatedAt": "2026-08-28T09:49:17.025Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=40446521657&a=3037577&m=11830",
@@ -29,7 +29,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/comfee-luftentfeuchter-mddf3-30den7-fuer-bis-zu-130-m3-3-liter-wassertank-0694600203/",
       "priceEur": 239,
       "productId": "gtin:4048164102860",
-      "updatedAt": "2026-08-27T17:17:53.053Z"
+      "updatedAt": "2026-08-28T09:49:17.054Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=40622595461&a=3037577&m=11830",
@@ -44,7 +44,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/midea-luftentfeuchter-mddp-50den7-fuer-100-m2-50l-24h-0694600206/",
       "priceEur": 299,
       "productId": "gtin:4048164102877",
-      "updatedAt": "2026-08-27T17:17:55.417Z"
+      "updatedAt": "2026-08-28T09:49:19.524Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36258804370&a=3037577&m=11830",
@@ -59,7 +59,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-129238-bis-60-m2-30l-24h-0694600230/",
       "priceEur": 289,
       "productId": "gtin:7333282011055",
-      "updatedAt": "2026-08-27T17:17:58.300Z"
+      "updatedAt": "2026-08-28T09:49:21.937Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36305176249&a=3037577&m=11830",
@@ -74,7 +74,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-127463-bis-50-m2-25l-24h-schuhtrocknungsfunktion-0694600231/",
       "priceEur": 225,
       "productId": "gtin:7333282011048",
-      "updatedAt": "2026-08-27T17:17:58.300Z"
+      "updatedAt": "2026-08-28T09:49:21.937Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36248396869&a=3037577&m=11830",
@@ -89,7 +89,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-128153-bis-25-m2-12l-24h-0694600232/",
       "priceEur": 159,
       "productId": "gtin:7333282011024",
-      "updatedAt": "2026-08-27T17:17:58.300Z"
+      "updatedAt": "2026-08-28T09:49:21.937Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36248396868&a=3037577&m=11830",
@@ -104,7 +104,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-122844-bis-40-m2-20l-24h-0694600233/",
       "priceEur": 249,
       "productId": "gtin:7333282011031",
-      "updatedAt": "2026-08-27T17:17:58.300Z"
+      "updatedAt": "2026-08-28T09:49:21.936Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=39671250019&a=3037577&m=11830",
@@ -119,7 +119,37 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/tristar-luftentfeuchter-dh-5424-48-m2-16l-24h-0694600239/",
       "priceEur": 209.99,
       "productId": "gtin:8712836970465",
-      "updatedAt": "2026-08-27T17:18:00.029Z"
+      "updatedAt": "2026-08-28T09:49:23.400Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24243220215&a=3037577&m=14288",
+      "available": true,
+      "deliveryCostEur": 6.95,
+      "deliveryCostStatus": "known",
+      "id": "offer:14288:1120000026",
+      "imageUrl": "https://cdn.trotec.com/de_DE/1120000026/Luftentfeuchter-TTK-26-E-135687-1620812276.jpg",
+      "merchantId": "14288",
+      "merchantName": "Trotec DACH",
+      "merchantProductId": "1120000026",
+      "merchantUrl": "https://de.trotec.com/shop/luftentfeuchter-ttk-26-e.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
+      "priceEur": 99.99,
+      "productId": "gtin:4052138016916",
+      "updatedAt": "2026-08-28T09:49:27.336Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=24243220701&a=3037577&m=14288",
+      "available": true,
+      "deliveryCostEur": 6.95,
+      "deliveryCostStatus": "known",
+      "id": "offer:14288:1120000054",
+      "imageUrl": "https://cdn.trotec.com/de_DE/1120000054/Luftentfeuchter-TTK-66-E-64332-1507644294.jpg",
+      "merchantId": "14288",
+      "merchantName": "Trotec DACH",
+      "merchantProductId": "1120000054",
+      "merchantUrl": "https://de.trotec.com/shop/luftentfeuchter-ttk-66-e.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
+      "priceEur": 189.99,
+      "productId": "gtin:4052138015117",
+      "updatedAt": "2026-08-28T09:49:27.338Z"
     }
   ],
   "products": [
@@ -137,7 +167,7 @@
       "powerW": 360,
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:53.015Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:17.025Z",
       "tankLiters": 3
     },
     {
@@ -154,7 +184,7 @@
       "powerW": 550,
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:53.053Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:17.054Z",
       "tankLiters": 3
     },
     {
@@ -172,8 +202,42 @@
       "powerW": 850,
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:55.417Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:19.524Z",
       "tankLiters": 6
+    },
+    {
+      "brand": "Trotec",
+      "continuousDrain": false,
+      "dataQuality": "curated",
+      "extractionLPerDay": 24,
+      "gtin": "4052138015117",
+      "id": "gtin:4052138015117",
+      "laundryMode": true,
+      "maxRecommendedAreaM2": 50,
+      "maxRecommendedVolumeM3": 125,
+      "mpn": "1120000054",
+      "name": "Trotec Luftentfeuchter TTK 66 E",
+      "refrigerantType": "R290",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T09:49:27.338Z",
+      "tankLiters": 3
+    },
+    {
+      "brand": "Trotec",
+      "continuousDrain": false,
+      "dataQuality": "curated",
+      "extractionLPerDay": 10,
+      "gtin": "4052138016916",
+      "id": "gtin:4052138016916",
+      "laundryMode": true,
+      "maxRecommendedAreaM2": 15,
+      "maxRecommendedVolumeM3": 37,
+      "mpn": "1120000026",
+      "name": "Trotec Luftentfeuchter TTK 26 E",
+      "refrigerantType": "R290",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T09:49:27.336Z",
+      "tankLiters": 1.8
     },
     {
       "brand": "Emerio",
@@ -186,7 +250,7 @@
       "mpn": "DH-128153",
       "name": "Emerio Luftentfeuchter DH-128153",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:58.300Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:21.937Z",
       "tankLiters": 2
     },
     {
@@ -200,7 +264,7 @@
       "mpn": "DH-122844",
       "name": "Emerio Luftentfeuchter DH-122844",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:58.300Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:21.936Z",
       "tankLiters": 6
     },
     {
@@ -215,7 +279,7 @@
       "mpn": "DH-127463",
       "name": "Emerio Luftentfeuchter DH-127463",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:58.300Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:21.937Z",
       "tankLiters": 5.5
     },
     {
@@ -229,7 +293,7 @@
       "mpn": "DH-129238",
       "name": "Emerio Luftentfeuchter DH-129238",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:58.300Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:21.937Z",
       "tankLiters": 6
     },
     {
@@ -245,7 +309,7 @@
       "noiseDb": 46,
       "powerW": 260,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:00.029Z",
+      "sourceUpdatedAt": "2026-08-28T09:49:23.400Z",
       "tankLiters": 3.7
     }
   ],
