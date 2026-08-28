@@ -21,6 +21,10 @@
     "robot-mower": {
       "catalog": "/data/robot-mower/catalog.json",
       "generatedAt": "2026-08-28T14:02:01.971Z"
+    },
+    "project-products": {
+      "catalog": "/data/project-products/catalog.json",
+      "generatedAt": "2026-08-28T14:02:01.971Z"
     }
   }
 }

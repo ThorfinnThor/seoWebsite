@@ -2,11 +2,15 @@ import { GardenHouseCatalogSchema, type GardenHouseCatalog } from "@/lib/garden-
 import { DehumidifierCatalogSchema, type DehumidifierCatalog } from "@/lib/dehumidifier/types";
 import { RobotMowerCatalogSchema, type RobotMowerCatalog } from "@/lib/robot-mower/types";
 import { FlooringCatalogSchema, type FlooringCatalog } from "@/lib/flooring/types";
+import { IrrigationCatalogSchema, type IrrigationCatalog } from "@/lib/irrigation/types";
+import { ProjectCatalogSchema, type ProjectCatalog } from "@/lib/project-products/types";
 
 let gardenHouseCatalogRequest: Promise<GardenHouseCatalog> | null = null;
 let dehumidifierCatalogRequest: Promise<DehumidifierCatalog> | null = null;
 let robotMowerCatalogRequest: Promise<RobotMowerCatalog> | null = null;
 let flooringCatalogRequest: Promise<FlooringCatalog> | null = null;
+let irrigationCatalogRequest: Promise<IrrigationCatalog> | null = null;
+let projectCatalogRequest: Promise<ProjectCatalog> | null = null;
 
 export async function loadGardenHouseCatalog(signal?: AbortSignal): Promise<GardenHouseCatalog> {
   if (signal) return fetchCatalog("/data/garden-house/catalog.json", GardenHouseCatalogSchema.parse, signal);
@@ -36,6 +40,18 @@ export async function loadFlooringCatalog(signal?: AbortSignal): Promise<Floorin
   if (signal) return fetchCatalog("/data/flooring/catalog.json", FlooringCatalogSchema.parse, signal);
   flooringCatalogRequest ??= fetchCatalog("/data/flooring/catalog.json", FlooringCatalogSchema.parse).catch((error) => { flooringCatalogRequest = null; throw error; });
   return flooringCatalogRequest;
+}
+
+export async function loadIrrigationCatalog(signal?: AbortSignal): Promise<IrrigationCatalog> {
+  if (signal) return fetchCatalog("/data/irrigation/catalog.json", IrrigationCatalogSchema.parse, signal);
+  irrigationCatalogRequest ??= fetchCatalog("/data/irrigation/catalog.json", IrrigationCatalogSchema.parse).catch((error) => { irrigationCatalogRequest = null; throw error; });
+  return irrigationCatalogRequest;
+}
+
+export async function loadProjectCatalog(signal?: AbortSignal): Promise<ProjectCatalog> {
+  if (signal) return fetchCatalog("/data/project-products/catalog.json", ProjectCatalogSchema.parse, signal);
+  projectCatalogRequest ??= fetchCatalog("/data/project-products/catalog.json", ProjectCatalogSchema.parse).catch((error) => { projectCatalogRequest = null; throw error; });
+  return projectCatalogRequest;
 }
 
 async function fetchCatalog<T>(url: string, parse: (value: unknown) => T, signal?: AbortSignal): Promise<T> {

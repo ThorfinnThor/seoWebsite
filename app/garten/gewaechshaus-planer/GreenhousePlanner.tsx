@@ -10,9 +10,8 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateGreenhousePlan } from "@/lib/greenhouse/rules";
 import { GreenhouseInputSchema, type GreenhouseInput } from "@/lib/greenhouse/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
-import { RealProductList } from "@/components/product/RealProductList";
+import { ProjectProductRecommendations } from "@/components/product/ProjectProductRecommendations";
 import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
-import { REAL_PLANNER_PRODUCTS } from "@/lib/real-products";
 
 const INITIAL: GreenhouseInput = {
   lengthM: 4,
@@ -99,7 +98,7 @@ export function GreenhousePlanner() {
         <article><span className="component-icon" aria-hidden="true">◒</span><div><p className="eyebrow">Regenwasser</p><h3>Theoretisch {plan.theoreticalRainwaterPer10MmL} Liter je 10 mm Regen</h3><p>Geometrischer Maximalwert aus der horizontalen Dachgrundfläche, bevor Rinnen-, Überlauf-, Spritz- und Speicherverluste berücksichtigt werden.</p><strong>Speicher und Überlauf anhand realer Niederschläge und Nutzung planen.</strong></div></article>
       </div>
       <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.greenhouse, { "greenhouse-kit": `${format(input.lengthM)} × ${format(input.widthM)} m`, "greenhouse-base": `${plan.baseBarCount} Basisprofile`, "greenhouse-vent": `${input.roofVentCount} Dachfenster`, "greenhouse-irrigation": `für ${format(plan.growingAreaM2)} m² Anbaufläche`, "greenhouse-benches": `${format(plan.flexibleFloorAreaM2)} m² flexibel stellbar`, "greenhouse-shade": input.useCase === "overwintering" ? "Frostschutz mitplanen" : "je Standort prüfen" })} />
-      <RealProductList items={REAL_PLANNER_PRODUCTS.greenhouse} />
+      <ProjectProductRecommendations vertical="greenhouse" preferredKinds={["kit", "base", "ventilation", "irrigation", "bench", "shade"]} />
       <div className="warning-panel"><h3>Vor Auswahl und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Standort, Verschattung, Dachausrichtung, Türanschlag, Arbeitsraum, örtliche Vorgaben und Herstellermaße gehören in die konkrete Planung.</li></ul></div>
       <PrintResultAction />
     </div>}

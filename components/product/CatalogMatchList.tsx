@@ -3,9 +3,11 @@ import { ProductImage } from "./ProductImage";
 import { PriceDisplay } from "./PriceDisplay";
 import type { FlooringMatch } from "@/lib/flooring/types";
 import type { RobotMowerMatch } from "@/lib/robot-mower/types";
+import type { IrrigationMatch } from "@/lib/irrigation/types";
+import type { ProjectMatch } from "@/lib/project-products/types";
 import { resolveOfferUrl } from "@/lib/catalog/offer-url";
 
-type Match = RobotMowerMatch | FlooringMatch;
+type Match = RobotMowerMatch | FlooringMatch | IrrigationMatch | ProjectMatch;
 
 export function CatalogMatchList({ matches, emptyLabel }: { matches: Match[]; emptyLabel: string }) {
   if (!matches.length) return <p className="info-box"><span aria-hidden="true">i</span><span>{emptyLabel}</span></p>;

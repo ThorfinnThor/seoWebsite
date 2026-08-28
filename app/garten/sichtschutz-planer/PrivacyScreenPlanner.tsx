@@ -10,9 +10,8 @@ import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculatePrivacyScreenPlan } from "@/lib/privacy-screen/rules";
 import { PrivacyScreenInputSchema, type PrivacyScreenInput } from "@/lib/privacy-screen/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
-import { RealProductList } from "@/components/product/RealProductList";
+import { ProjectProductRecommendations } from "@/components/product/ProjectProductRecommendations";
 import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
-import { REAL_PLANNER_PRODUCTS } from "@/lib/real-products";
 
 const INITIAL: PrivacyScreenInput = {
   totalLengthM: 10,
@@ -103,7 +102,7 @@ export function PrivacyScreenPlanner() {
         <article><span className="component-icon" aria-hidden="true">↔</span><div><p className="eyebrow">Rasterabschluss</p><h3>{plan.adjustmentRequired ? `${format(plan.endAdjustmentCm)} cm Anpassung` : "Das Raster geht rechnerisch auf"}</h3><p>{plan.adjustmentRequired ? `Das letzte Feld müsste ungefähr ${format(plan.lastFieldWidthCm)} cm Systembreite erhalten.` : "Standardfelder und Tor-Module entsprechen zusammen der eingegebenen Streckenlänge."}</p><strong>{plan.adjustmentRequired ? "Nur kürzen, wenn das gewählte System es ausdrücklich erlaubt." : "Aufmaß und Montagetoleranzen trotzdem vor Bestellung prüfen."}</strong></div></article>
       </div>
       <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.privacy, { "privacy-panels": `${plan.orderPanelCount} Felder`, "privacy-posts": `${plan.postCount} Stück`, "privacy-anchors": `${plan.anchoringPointCount} Punkte`, "privacy-gate": `${input.gateCount} Tor-Module`, "privacy-caps": "nach Pfostentyp", "privacy-brackets": plan.adjustmentRequired ? "für Rasterausgleich" : "für Eck- und Enddetails" })} />
-      <RealProductList items={REAL_PLANNER_PRODUCTS.privacy} />
+      <ProjectProductRecommendations vertical="privacy-screen" preferredKinds={["panel", "post", "gate", "foundation", "bracket", "cap"]} />
       <div className="warning-panel"><h3>Vor Bestellung und Montage prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Leitungen im Boden, Grundstücksgrenze, örtliche Vorgaben und Nachbarrecht gehören in die Standortprüfung.</li></ul></div>
       <PrintResultAction />
     </div>}

@@ -40,3 +40,4 @@ export type IrrigationCatalog=z.infer<typeof IrrigationCatalogSchema>;
 export type IrrigationOverride=z.infer<typeof IrrigationOverrideSchema>;
 export type IrrigationRules=z.infer<typeof IrrigationRulesSchema>;
 export interface IrrigationPlan { style:"drip"|"sprinkler"|"combined"; hedgeDriplineM:number; bedDriplineM:number; activeCategories:number; controllerZones:number; components:Array<{kind:string;label:string;quantity:string;note:string}>; warnings:string[] }
+export interface IrrigationMatch { product: IrrigationProduct; offer: z.infer<typeof OfferBaseSchema>; score: number; reasons: import("@/lib/catalog/types").MatchReason[] }

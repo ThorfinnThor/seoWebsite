@@ -76,7 +76,7 @@
       "applicationPriority": 6,
       "applicationStatus": "active",
       "enabled": true,
-      "verticals": ["irrigation"],
+      "verticals": ["irrigation", "project-products"],
       "plannerIds": ["drywall", "terrace", "privacy-screen", "irrigation", "carport"],
       "country": "DE"
     },
@@ -141,7 +141,7 @@
       "applicationPriority": 11,
       "applicationStatus": "active",
       "enabled": true,
-      "verticals": ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"],
+      "verticals": ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring", "project-products"],
       "plannerIds": ["drywall", "irrigation", "flooring"],
       "country": "DE"
     },

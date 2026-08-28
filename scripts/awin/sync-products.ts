@@ -6,6 +6,7 @@ import { DehumidifierCatalogSchema, DehumidifierOverrideSchema, DehumidifierProd
 import { GardenHouseCatalogSchema, GardenHouseOverrideSchema, GardenHouseProductSchema, type GardenHouseCatalog, type GardenHouseOffer, type GardenHouseProduct } from "@/lib/garden-house/types";
 import { IrrigationCatalogSchema, IrrigationOverrideSchema, IrrigationProductSchema, type IrrigationCatalog, type IrrigationOverride, type IrrigationProduct } from "@/lib/irrigation/types";
 import { FlooringCatalogSchema, FlooringOverrideSchema, FlooringProductSchema, type FlooringCatalog, type FlooringOverride, type FlooringProduct } from "@/lib/flooring/types";
+import { ProjectCatalogSchema, ProjectOverrideSchema, ProjectProductSchema, type ProjectCatalog, type ProjectOverride, type ProjectProduct } from "@/lib/project-products/types";
 import { RobotMowerCatalogSchema, RobotMowerOverrideSchema, RobotMowerProductSchema, type RobotMowerCatalog, type RobotMowerOverride, type RobotMowerProduct } from "@/lib/robot-mower/types";
 import { assertCatalogPayloadSafe, assertCatalogSafe } from "@/scripts/catalog/safeguards";
 import { stableJson, writeFilesAtomically } from "@/scripts/catalog/write-atomic";
@@ -14,18 +15,20 @@ import { isGardenHouseCandidate, normalizeGardenHouse } from "./garden-house-nor
 import { isIrrigationCandidate, normalizeIrrigation } from "./irrigation-normalizer";
 import { isFlooringCandidate, normalizeFlooring } from "./flooring-normalizer";
 import { isRobotMowerCandidate, normalizeRobotMower } from "./robot-mower-normalizer";
+import { isProjectProductCandidate, normalizeProjectProduct } from "./project-products-normalizer";
 import { extractFeedListUrl, filterFeedListEntries, parseFeedListRows, selectPreferredFeedEntries } from "./feed-list";
 import { streamFeedRows } from "./source";
-import type { AffiliateCandidate, DehumidifierCandidate, FlooringCandidate, GardenHouseCandidate, IrrigationCandidate, ProductOverride, RobotMowerCandidate } from "./types";
+import type { AffiliateCandidate, DehumidifierCandidate, FlooringCandidate, GardenHouseCandidate, IrrigationCandidate, ProductOverride, ProjectProductCandidate, RobotMowerCandidate } from "./types";
 
 const HttpsUrl = z.url().refine((url) => url.startsWith("https:"));
-const SupportedVerticalSchema = z.enum(["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"]);
+const SupportedVerticalSchema = z.enum(["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring", "project-products"]);
 const VerticalConfigSchema = z.object({
   "garden-house": z.array(HttpsUrl).default([]),
   dehumidifier: z.array(HttpsUrl).default([]),
   irrigation: z.array(HttpsUrl).default([]),
   "robot-mower": z.array(HttpsUrl).default([]),
   flooring: z.array(HttpsUrl).default([]),
+  "project-products": z.array(HttpsUrl).default([]),
 }).refine((config) => Object.values(config).some((urls) => urls.length > 0), "At least one feed URL is required");
 const LegacyConfigSchema = z.array(HttpsUrl).min(1);
 const GardenOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(GardenHouseOverrideSchema) });
@@ -33,9 +36,10 @@ const DehumidifierOverrideFileSchema = z.object({ schemaVersion: z.literal(1), o
 const IrrigationOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(IrrigationOverrideSchema) });
 const RobotMowerOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(RobotMowerOverrideSchema) });
 const FlooringOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(FlooringOverrideSchema) });
+const ProjectOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(ProjectOverrideSchema) });
 const FeedMerchantRegistrySchema = z.object({ merchants: z.array(z.object({ awinAdvertiserId: z.number().int().positive(), enabled: z.boolean(), verticals: z.array(SupportedVerticalSchema).min(1) })) });
 
-type Vertical = "garden-house" | "dehumidifier" | "irrigation" | "robot-mower" | "flooring";
+type Vertical = "garden-house" | "dehumidifier" | "irrigation" | "robot-mower" | "flooring" | "project-products";
 interface FeedMetrics { sourceFeeds: number; successfulFeeds: number; failedFeeds: number; rows: number; }
 type FeedJob = { url: string; verticals: Set<Vertical> };
 
@@ -74,6 +78,10 @@ function applyRobotMowerOverride(product: RobotMowerProduct, override?: RobotMow
 
 function applyFlooringOverride(product: FlooringProduct, override?: FlooringOverride): FlooringProduct {
   return override ? FlooringProductSchema.parse({ ...product, ...publicOverride(override), id: product.id }) : product;
+}
+
+function applyProjectOverride(product: ProjectProduct, override?: ProjectOverride): ProjectProduct {
+  return override ? ProjectProductSchema.parse({ ...product, ...publicOverride(override), id: product.id }) : product;
 }
 
 function autoReviewCompleteFeedProduct<TProduct extends ProductBase>(product: TProduct, candidate: AffiliateCandidate<TProduct>, hasOverride: boolean): TProduct {
@@ -162,6 +170,22 @@ export function assembleFlooringCatalog(candidates: FlooringCandidate[], overrid
   return FlooringCatalogSchema.parse({ schemaVersion: 1, vertical: "flooring", generatedAt, products: [...productMap.values()].filter((product) => reviewedIds.has(product.id)).sort((a, b) => a.id.localeCompare(b.id)), offers: [...offerMap.values()].filter((offer) => reviewedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });
 }
 
+export function assembleProjectCatalog(candidates: ProjectProductCandidate[], overrides: ProjectOverride[], generatedAt: string): ProjectCatalog {
+  const overrideMap = new Map(overrides.map((override) => [override.id, override]));
+  const productMap = new Map<string, ProjectProduct>();
+  const offerMap = new Map<string, OfferBase>();
+  for (const candidate of candidates) {
+    if (!candidate.product) continue;
+    const override = overrideMap.get(candidate.id);
+    const product = autoReviewCompleteFeedProduct(applyProjectOverride(candidate.product, override), candidate, Boolean(override));
+    const existing = productMap.get(product.id);
+    if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
+    if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
+  }
+  const reviewedIds = new Set([...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").map((product) => product.id));
+  return ProjectCatalogSchema.parse({ schemaVersion: 1, vertical: "project-products", generatedAt, products: [...productMap.values()].filter((product) => reviewedIds.has(product.id)).sort((a, b) => a.id.localeCompare(b.id)), offers: [...offerMap.values()].filter((offer) => reviewedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });
+}
+
 function buildReviewQueue<TProduct extends ProductBase>(candidates: AffiliateCandidate<TProduct>[], catalog: StaticCatalog<TProduct, OfferBase>, generatedAt: string) {
   const reviewed = new Set(catalog.products.map((product) => product.id));
   const grouped = new Map<string, AffiliateCandidate<TProduct>[]>();
@@ -227,6 +251,7 @@ async function run(): Promise<void> {
   const irrigationCandidates: IrrigationCandidate[] = [];
   const robotMowerCandidates: RobotMowerCandidate[] = [];
   const flooringCandidates: FlooringCandidate[] = [];
+  const projectCandidates: ProjectProductCandidate[] = [];
   for (const [index, job] of jobs.entries()) {
     let rows = 0;
     try {
@@ -237,6 +262,10 @@ async function run(): Promise<void> {
         if (job.verticals.has("irrigation") && isIrrigationCandidate(row)) irrigationCandidates.push(normalizeIrrigation(row));
         if (job.verticals.has("robot-mower") && isRobotMowerCandidate(row)) robotMowerCandidates.push(normalizeRobotMower(row));
         if (job.verticals.has("flooring") && isFlooringCandidate(row)) flooringCandidates.push(normalizeFlooring(row));
+        if (job.verticals.has("project-products") && isProjectProductCandidate(row)) {
+          const candidate = normalizeProjectProduct(row);
+          if (candidate) projectCandidates.push(candidate);
+        }
       }
       metrics.successfulFeeds += 1;
       metrics.rows += rows;
@@ -247,7 +276,7 @@ async function run(): Promise<void> {
     }
   }
   if (metrics.successfulFeeds === 0) throw new Error("All configured feeds failed; existing catalogs remain untouched");
-  if (gardenHouseCandidates.length + dehumidifierCandidates.length + irrigationCandidates.length + robotMowerCandidates.length + flooringCandidates.length === 0) throw new Error("No supported product candidates found; existing catalogs remain untouched");
+  if (gardenHouseCandidates.length + dehumidifierCandidates.length + irrigationCandidates.length + robotMowerCandidates.length + flooringCandidates.length + projectCandidates.length === 0) throw new Error("No supported product candidates found; existing catalogs remain untouched");
 
   const generatedAt = new Date().toISOString();
   const secretUrls = jobs.map((job) => job.url);
@@ -314,10 +343,21 @@ async function run(): Promise<void> {
     files["public/data/flooring/catalog.json"] = catalog; files["data/review/flooring.json"] = review; files["public/data/flooring/feed-report.json"] = report;
     manifest.verticals.flooring = { catalog: "/data/flooring/catalog.json", generatedAt: catalog.generatedAt };
   }
+  if (projectCandidates.length) {
+    const previous = ProjectCatalogSchema.parse(await readJson("public/data/project-products/catalog.json"));
+    const overrides = ProjectOverrideFileSchema.parse(await readJson("data/overrides/project-products.json")).overrides as ProjectOverride[];
+    const catalog = assertCatalogPayloadSafe(assembleProjectCatalog(projectCandidates, overrides, generatedAt), previous, secretUrls);
+    let review = buildReviewQueue(projectCandidates, catalog, generatedAt);
+    let report = buildReport(projectCandidates, metrics, catalog, review.products.length, generatedAt);
+    const oldReview = await readJson<unknown>("data/review/project-products.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
+    const oldReport = await readJson<unknown>("public/data/project-products/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
+    files["public/data/project-products/catalog.json"] = catalog; files["data/review/project-products.json"] = review; files["public/data/project-products/feed-report.json"] = report;
+    manifest.verticals["project-products"] = { catalog: "/data/project-products/catalog.json", generatedAt: catalog.generatedAt };
+  }
   manifest.generatedAt = generatedAt;
   files["public/data/manifest.json"] = manifest;
   await writeFilesAtomically(files);
-  console.log(`Sync complete: ${gardenHouseCandidates.length} garden-house, ${dehumidifierCandidates.length} dehumidifier, ${irrigationCandidates.length} irrigation, ${robotMowerCandidates.length} robot-mower and ${flooringCandidates.length} flooring candidates processed.`);
+  console.log(`Sync complete: ${gardenHouseCandidates.length} garden-house, ${dehumidifierCandidates.length} dehumidifier, ${irrigationCandidates.length} irrigation, ${robotMowerCandidates.length} robot-mower, ${flooringCandidates.length} flooring and ${projectCandidates.length} project candidates processed.`);
 }
 
 if (import.meta.url === `file://${process.argv[1]}`) run().catch((error) => { console.error(error instanceof Error ? error.message : error); process.exitCode = 1; });
