@@ -93,6 +93,47 @@ const PROJECT_KIND_PRIORITY: Record<string, number> = {
   drainage: 5, electric: 5, bench: 5, shade: 5, bracket: 6, cap: 6, irrigation: 6,
 };
 
+function projectProductQuality(product: ProjectProduct): number {
+  const present = (...values: unknown[]) => values.filter((value) => value !== undefined && value !== false).length;
+  if (product.vertical === "terrace" && product.kind === "decking") return present(product.boardLengthMm, product.boardWidthMm, product.boardThicknessMm, product.material);
+  if (product.vertical === "privacy-screen" && product.kind === "panel") return present(product.panelWidthCm, product.panelHeightCm, product.systemId, product.postSystemId);
+  if (product.vertical === "greenhouse" && product.kind === "kit") return present(product.externalWidthM, product.externalLengthM, product.completeKit, product.glazingType, product.roofVentCount, product.doorWidthCm);
+  if (product.vertical === "carport" && product.kind === "kit") return present(product.externalWidthM, product.externalLengthM, product.clearWidthM, product.clearLengthM, product.clearHeightM, product.vehicleCount, product.roofType);
+  if (product.vertical === "drywall" && product.kind === "board") return present(product.boardLengthMm, product.boardWidthMm, product.boardThicknessMm, product.boardType, product.material);
+  if (product.vertical === "drywall" && product.kind === "profile") return present(product.profileLengthMm, product.profileWidthMm, product.profileType);
+  return present(product.piecesPerPack, product.widthCm, product.depthCm, product.lengthCm);
+}
+
+function takeProjectProductsRoundRobin(
+  products: ProjectProduct[],
+  merchantByProductId: ReadonlyMap<string, string>,
+  limit: number,
+  selectedIds: Set<string>,
+): ProjectProduct[] {
+  if (limit <= 0) return [];
+  const groups = new Map<string, ProjectProduct[]>();
+  for (const product of products) {
+    if (selectedIds.has(product.id)) continue;
+    const merchantId = merchantByProductId.get(product.id) ?? "unknown";
+    const key = `${String(PROJECT_KIND_PRIORITY[product.kind] ?? 99).padStart(2, "0")}:${product.kind}:${merchantId}`;
+    groups.set(key, [...(groups.get(key) ?? []), product]);
+  }
+  const keys = [...groups.keys()].sort();
+  const selected: ProjectProduct[] = [];
+  let index = 0;
+  while (selected.length < limit && keys.some((key) => index < (groups.get(key)?.length ?? 0))) {
+    for (const key of keys) {
+      if (selected.length >= limit) break;
+      const product = groups.get(key)?.[index];
+      if (!product) continue;
+      selected.push(product);
+      selectedIds.add(product.id);
+    }
+    index += 1;
+  }
+  return selected;
+}
+
 function selectProjectProducts(
   published: ProjectProduct[],
   merchantByProductId: ReadonlyMap<string, string>,
@@ -103,29 +144,14 @@ function selectProjectProducts(
 
   for (const vertical of verticals) {
     const verticalProducts = published.filter((product) => product.vertical === vertical);
-    const priorities = [...new Set(verticalProducts.map((product) => PROJECT_KIND_PRIORITY[product.kind] ?? 99))].sort((a, b) => a - b);
-    let selectedForVertical = 0;
-
-    for (const priority of priorities) {
-      const byMerchant = new Map<string, ProjectProduct[]>();
-      for (const product of verticalProducts.filter((item) => (PROJECT_KIND_PRIORITY[item.kind] ?? 99) === priority)) {
-        const merchantId = merchantByProductId.get(product.id) ?? "unknown";
-        byMerchant.set(merchantId, [...(byMerchant.get(merchantId) ?? []), product]);
-      }
-      const merchantIds = [...byMerchant.keys()].sort();
-      let index = 0;
-      while (selectedForVertical < limitPerVertical && merchantIds.some((merchantId) => index < (byMerchant.get(merchantId)?.length ?? 0))) {
-        for (const merchantId of merchantIds) {
-          if (selectedForVertical >= limitPerVertical) break;
-          const product = byMerchant.get(merchantId)?.[index];
-          if (!product) continue;
-          selected.push(product);
-          selectedForVertical += 1;
-        }
-        index += 1;
-      }
-      if (selectedForVertical >= limitPerVertical) break;
-    }
+    const selectedIds = new Set<string>();
+    const primary = verticalProducts.filter((product) => (PROJECT_KIND_PRIORITY[product.kind] ?? 99) === 1);
+    const supplements = verticalProducts.filter((product) => (PROJECT_KIND_PRIORITY[product.kind] ?? 99) > 1);
+    const primaryLimit = Math.min(80, limitPerVertical);
+    const primarySelection = takeProjectProductsRoundRobin(primary, merchantByProductId, primaryLimit, selectedIds);
+    const supplementSelection = takeProjectProductsRoundRobin(supplements, merchantByProductId, limitPerVertical - primarySelection.length, selectedIds);
+    const remainingSelection = takeProjectProductsRoundRobin(verticalProducts, merchantByProductId, limitPerVertical - primarySelection.length - supplementSelection.length, selectedIds);
+    selected.push(...primarySelection, ...supplementSelection, ...remainingSelection);
   }
 
   return selected;
@@ -229,7 +255,7 @@ export function assembleProjectCatalog(candidates: ProjectProductCandidate[], ov
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
   }
-  const published = [...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").sort((a, b) => a.vertical.localeCompare(b.vertical) || (PROJECT_KIND_PRIORITY[a.kind] ?? 99) - (PROJECT_KIND_PRIORITY[b.kind] ?? 99) || a.kind.localeCompare(b.kind) || a.id.localeCompare(b.id));
+  const published = [...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").sort((a, b) => a.vertical.localeCompare(b.vertical) || (PROJECT_KIND_PRIORITY[a.kind] ?? 99) - (PROJECT_KIND_PRIORITY[b.kind] ?? 99) || projectProductQuality(b) - projectProductQuality(a) || a.kind.localeCompare(b.kind) || a.id.localeCompare(b.id));
   const merchantByProductId = new Map<string, string>();
   for (const offer of [...offerMap.values()].sort((a, b) => a.id.localeCompare(b.id))) {
     if (!merchantByProductId.has(offer.productId)) merchantByProductId.set(offer.productId, offer.merchantId);

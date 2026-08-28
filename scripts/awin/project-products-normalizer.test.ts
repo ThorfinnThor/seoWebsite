@@ -31,6 +31,12 @@ describe("project product feed normalization", () => {
     expect(isProjectProductCandidate({ product_name: "Hand-Stichsäge für Gipskartonplatten" })).toBe(false);
     expect(isProjectProductCandidate({ product_name: "Metall- und Holzdetektor für Trockenbauplatten" })).toBe(false);
     expect(isProjectProductCandidate({ product_name: "Schmuckzaun Schmiedeeisen Gartenzaun 60x190cm" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "VELUX Sichtschutzrollo Uni Blau MK12" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "Floraworld Klemmschienen für Sichtschutzstreifen" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "TraumGarten Sichtschutzzaun Rundum-Sorglos-Paket 20 m mit Klemmpfosten" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "NATURinFORM LED-Bodenstrahler für WPC-Terrassendielen" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "Gewächshaus aluminium 109x56x28cm" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "Gewächshaus 69x49x160cm" })).toBe(false);
   });
 
   it("normalizes a real product with a valid affiliate offer", () => {
@@ -47,6 +53,11 @@ describe("project product feed normalization", () => {
     expect(parseProjectProductAttributes("greenhouse", "kit", "Gewächshaus 193x319x195cm")).toMatchObject({ externalWidthM: 1.93, externalLengthM: 3.19, clearHeightM: 1.95, completeKit: true });
   });
   it("does not classify a carport sidewall as a complete kit", () => expect(projectProductKind("carport", "Seitenwand für Carport 300 cm")).toBe("panel"));
+  it("keeps curved carports and profile decking in their primary product kinds", () => {
+    expect(projectProductKind("carport", "Karibu Doppelcarport mit Rundbogen 598x860 cm")).toBe("kit");
+    expect(projectProductKind("terrace", "WPC-Terrassendiele Wabenprofildiele 21x140 mm")).toBe("decking");
+    expect(projectProductKind("terrace", "WPC-Terrassendiele Abschlussprofil 4000 mm")).toBe("bracket");
+  });
   it("does not classify InterGard foundations or hardwood names as complete kits or edge profiles", () => {
     expect(projectProductKind("carport", "Betonsockel Carport Terrassenüberdachung 170x170mm")).toBe("foundation");
     expect(projectProductKind("terrace", "Terrassendielen Massaranduba 580cm (21x145mm)")).toBe("decking");
@@ -87,5 +98,22 @@ describe("project product feed normalization", () => {
     const catalog = assembleProjectCatalog([...incumbent, intergard], [], "2026-08-28T00:00:00.000Z");
     expect(catalog.products).toHaveLength(120);
     expect(catalog.offers.some((offer) => offer.merchantName === "InterGard Heim und Garten DE")).toBe(true);
+  });
+
+  it("reserves capped planner catalogs for required accessory kinds", () => {
+    const panels = Array.from({ length: 130 }, (_, index) => normalizeProjectProduct({
+      ...row,
+      product_name: `Sichtschutzzaun Element 180x180cm ${index}`,
+      merchant_product_id: `panel-${index}`,
+      product_GTIN: "",
+    })!);
+    const supplements = [
+      normalizeProjectProduct({ ...row, product_name: "Sichtschutzpfosten 200 cm", merchant_product_id: "post", product_GTIN: "" })!,
+      normalizeProjectProduct({ ...row, product_name: "Sichtschutztor 100x180cm", merchant_product_id: "gate", product_GTIN: "" })!,
+      normalizeProjectProduct({ ...row, product_name: "Sichtschutz Elementhalter Edelstahl", merchant_product_id: "holder", product_GTIN: "" })!,
+    ];
+    const catalog = assembleProjectCatalog([...panels, ...supplements], [], "2026-08-28T00:00:00.000Z");
+    expect(catalog.products).toHaveLength(120);
+    expect(new Set(catalog.products.map((product) => product.kind))).toEqual(new Set(["panel", "post", "gate", "bracket"]));
   });
 });

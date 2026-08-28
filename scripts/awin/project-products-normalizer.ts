@@ -7,7 +7,7 @@ import type { AffiliateCandidate, RawFeedRow } from "./types";
 const PATTERNS: Array<{ vertical: ProjectVertical; pattern: RegExp }> = [
   { vertical: "carport", pattern: /carport|pkw[- ]?unterstand|stellplatzüberdachung|stellplatzueberdachung/i },
   { vertical: "greenhouse", pattern: /gewächshaus|gewaechshaus|folienhaus|greenhouse/i },
-  { vertical: "terrace", pattern: /terrassendiele|terrassenholz|wpc[- ]?terrasse|terrassenlager|terrassenunterkonstruktion/i },
+  { vertical: "terrace", pattern: /terrassendiele|terrassenholz|wpc[- ]?terrasse|terrassenlager|terrassenunterkonstruktion|terrassenschraub|terrassenclip|terrassenbefestig/i },
   { vertical: "privacy-screen", pattern: /sichtschutz|zaunelement|gartenzaun|sichtschutzzaun/i },
   { vertical: "drywall", pattern: /trockenbau|gipskarton|gipsfaser|cw[- ]?profil|uw[- ]?profil|fugenspachtel|trennwand/i },
 ];
@@ -23,8 +23,14 @@ export function isProjectProductCandidate(row: RawFeedRow): boolean {
   const name = value(row, "product_name", "product_title", "title") ?? "";
   const vertical = projectVertical(name);
   if (!vertical) return false;
-  if (vertical === "privacy-screen" && /schmuckzaun/i.test(name)) return false;
-  if (vertical === "greenhouse" && /ersatzdocht|gewächshausheizung|gewaechshausheizung|paraffinheizung/i.test(name)) return false;
+  if (vertical === "privacy-screen" && /schmuckzaun|sichtschutzrollo|\brollo\b|plissee|velux|mülltonnen[- ]?sichtschutz|muelltonnen[- ]?sichtschutz|sichtschutzstreifen|klemmschiene|klemmprofil|balkonsichtschutz|balkonverkleidung|rundum[- ]sorglos[- ]paket/i.test(name)) return false;
+  if (vertical === "greenhouse") {
+    if (/ersatzdocht|gewächshausheizung|gewaechshausheizung|paraffinheizung/i.test(name)) return false;
+    const parsed = dimensions(name);
+    if (parsed?.valuesMm.length === 3 && (Math.min(...parsed.valuesMm.slice(0, 2)) < 500 || parsed.valuesMm[2] < 1000)) return false;
+    if (parsed?.valuesMm.length === 2 && Math.min(...parsed.valuesMm) < 500) return false;
+  }
+  if (vertical === "terrace" && /led|bodenstrahler|leuchte|reiniger|reinigung|pflege|terrassenöl|terrassenoel|lasur|farbe/i.test(name)) return false;
   if (vertical === "drywall" && (/säge|saege|bohrer|schleifer|bit|fräs|fraes|lochrandsenker|tauchsäge|werkzeug|detektor|messgerät|messgeraet/i.test(name) || !/gipskartonplatte|gipsfaserplatte|rigipsplatte|trockenbauplatte|cw[- ]?profil|uw[- ]?profil|trockenbauprofil|fugenspachtel|fugenband|mineralwolle|trennwandband|trockenbauwand/i.test(name))) return false;
   return true;
 }
@@ -37,7 +43,7 @@ export function projectProductKind(vertical: ProjectVertical, text: string): Pro
     if (/pfosten|träger|traeger|balken/i.test(text)) return "post";
     if (/anker|fundament|pfostenträger|pfostentraeger|betonsockel/i.test(text)) return "foundation";
     if (/wallbox|steckdose|elektro/i.test(text)) return "electric";
-    if (/bogen|verbinder|halter|winkel/i.test(text)) return "bracket";
+    if (/verbinder|halter|winkel/i.test(text)) return "bracket";
     return "kit";
   }
   if (vertical === "greenhouse") {
@@ -53,7 +59,7 @@ export function projectProductKind(vertical: ProjectVertical, text: string): Pro
     if (/unterkonstruktion|terrassenlager|lagerholz/i.test(text)) return "substructure";
     if (/clip|schraub|befestiger/i.test(text)) return "fastening";
     if (/fundament|auflager|stelzlager/i.test(text)) return "foundation";
-    if (/randabschluss|\brand\b|abschluss|blende|profil/i.test(text)) return "bracket";
+    if (/randabschluss|randprofil|abschlussprofil|blendprofil|\brand\b|\babschluss\b|\bblende\b/i.test(text)) return "bracket";
     return "decking";
   }
   if (vertical === "privacy-screen") {
@@ -62,7 +68,7 @@ export function projectProductKind(vertical: ProjectVertical, text: string): Pro
     if (/tor|pforte|beschlag/i.test(text)) return "gate";
     if (/anker|fundament|pfostenträger|pfostentraeger/i.test(text)) return "foundation";
     if (/kappe|abdeckung/i.test(text)) return "cap";
-    if (/verbinder|halter|winkel|ausgleich/i.test(text)) return "bracket";
+    if (/verbinder|halter|winkel|ausgleich|adapter|profil/i.test(text)) return "bracket";
     return "panel";
   }
   if (/cw|uw|ständerprofil|staenderprofil|profil/i.test(text)) return "profile";
