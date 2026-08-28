@@ -139,6 +139,58 @@
       "tankLiters": 3,
       "refrigerantType": "R290",
       "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 50 m² bzw. 125 m³, 24 l/24 h, 3-l-Tank, Wäschetrocknungsfunktion und R290. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4052138013380",
+      "name": "Trotec Luftentfeuchter TTK 30 E",
+      "brand": "Trotec",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 15,
+      "maxRecommendedVolumeM3": 37,
+      "extractionLPerDay": 12,
+      "continuousDrain": false,
+      "tankLiters": 2.2,
+      "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 15 m² bzw. 37 m³, 12 l/24 h und 2,2-l-Tank. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4052138017364",
+      "name": "Trotec Luftentfeuchter TTK 32 E",
+      "brand": "Trotec",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 15,
+      "maxRecommendedVolumeM3": 37,
+      "extractionLPerDay": 14,
+      "continuousDrain": false,
+      "tankLiters": 2.1,
+      "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 15 m² bzw. 37 m³, 14 l/24 h und 2,1-l-Tank. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4052138016855",
+      "name": "Trotec Peltier-Luftentfeuchter TTP 5 E",
+      "brand": "Trotec",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 6,
+      "maxRecommendedVolumeM3": 15,
+      "extractionLPerDay": 0.3,
+      "continuousDrain": false,
+      "tankLiters": 0.7,
+      "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 6 m² bzw. 15 m³, 0,30 l/24 h und 0,7-l-Tank. Das thermoelektrische Gerät arbeitet ohne Kompressor und Kältemittel."
+    },
+    {
+      "id": "gtin:4052138007129",
+      "name": "Trotec Luftentfeuchter TTK 75 E",
+      "brand": "Trotec",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 45,
+      "maxRecommendedVolumeM3": 110,
+      "extractionLPerDay": 20,
+      "continuousDrain": false,
+      "tankLiters": 3,
+      "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 45 m² bzw. 110 m³, 20 l/24 h und 3-l-Tank. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
     }
   ]
 }

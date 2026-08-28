@@ -7,6 +7,7 @@ describe("dimension parsing", () => {
   it.each([["3 x 4 m", { widthCm: 300, depthCm: 400 }], ["300 x 400 cm", { widthCm: 300, depthCm: 400 }], ["3000 x 4000 mm", { widthCm: 300, depthCm: 400 }], ["3,5 × 4,2 m", { widthCm: 350, depthCm: 420 }]])("parses %s", (raw, expected) => expect(parseDimensions(raw)).toEqual(expected));
   it("finds a footprint after a model or area number in a product name", () => expect(parseDimensions("Utility V 4,9 295 x 261 cm")).toEqual({ widthCm: 295, depthCm: 261 }));
   it("rejects ambiguous three-dimensional values", () => expect(parseDimensions("300 x 400 x 220 cm")).toBeUndefined());
+  it("accepts labelled width-depth-height values", () => expect(parseDimensions("198,6 x 196,5 x 228,9 cm (B x T x H)")).toEqual({ widthCm: 198.6, depthCm: 196.5 }));
   it("rejects implausible values", () => expect(parseDimensions("30 x 40 cm")).toBeUndefined());
 });
 describe("price parsing", () => {

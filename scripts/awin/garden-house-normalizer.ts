@@ -68,6 +68,17 @@ export function isGardenHouseCandidate(row: RawFeedRow): boolean {
 export function parseDimensions(raw?: string): { widthCm: number; depthCm: number } | undefined {
   if (!raw) return undefined;
   const normalized = raw.toLowerCase().replace(/,/g, ".").replace(/×/g, "x");
+  const labelledThreeDimensional = /\(?\s*(?:b\s*x\s*t\s*x\s*h|l\s*x\s*b\s*x\s*h)\s*\)?/i.test(normalized)
+    ? normalized.match(/(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)\s*x\s*(\d+(?:\.\d+)?)\s*(mm|cm|m)/i)
+    : undefined;
+  if (labelledThreeDimensional) {
+    const factor = labelledThreeDimensional[4] === "m" ? 100 : labelledThreeDimensional[4] === "mm" ? 0.1 : 1;
+    const widthCm = Number(labelledThreeDimensional[1]) * factor;
+    const depthCm = Number(labelledThreeDimensional[2]) * factor;
+    if (Number.isFinite(widthCm) && Number.isFinite(depthCm) && widthCm >= 100 && depthCm >= 100 && widthCm <= 2000 && depthCm <= 2000) {
+      return { widthCm: Math.round(widthCm * 10) / 10, depthCm: Math.round(depthCm * 10) / 10 };
+    }
+  }
   // Product names often contain a model/area number before the actual
   // footprint, e.g. "Utility V 4.9 295 x 261 cm". Prefer the explicit
   // x-separated pair when the input contains exactly one separator, while

@@ -91,6 +91,35 @@
       "waterProtection": "IPX6",
       "obstacleDetection": true,
       "reviewNote": "ECOVACS product page and official model listing checked 2026-08-25: 3,000 m², 50% slope, LiDAR navigation, 3–9 cm cutting height, IPX6 and obstacle avoidance. Passage width is not published and remains unfilled."
+    },
+    {
+      "id": "gtin:4053423706543",
+      "name": "Bosch VISIMOW18V-100",
+      "brand": "Bosch",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 100,
+      "maxSlopePercent": 35,
+      "minPassageCm": 120,
+      "navigation": "camera",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 6,
+      "obstacleDetection": true,
+      "reviewNote": "Offizielle Bosch-DIY-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 100 m², 35 % Steigung, 120 cm Mindestbreite für Durchgänge, SmartVision-Kamera und 20–60 mm Schnitthöhe."
+    },
+    {
+      "id": "gtin:8008984852433",
+      "name": "STIGA Mähroboter G 300",
+      "brand": "STIGA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 300,
+      "maxSlopePercent": 45,
+      "minPassageCm": 70,
+      "navigation": "wire",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 6,
+      "reviewNote": "Offizielle STIGA-Installationsanleitung und Awin-Feed geprüft am 2026-08-28: G 300, bis 45 % Steigung, mindestens 70 cm Korridorbreite und Begrenzungskabel-System."
     }
   ]
 }
