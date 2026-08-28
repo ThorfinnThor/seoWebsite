@@ -1,19 +1,19 @@
 {
-  "candidateRows": 2463,
-  "candidateToProductRate": 33.5,
+  "candidateRows": 2259,
+  "candidateToProductRate": 30.3,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-28T12:49:34.268Z",
+  "generatedAt": "2026-08-28T13:28:22.892Z",
   "issues": {
-    "incomplete-product-data": 1636,
-    "missing-product-kind": 1636,
-    "unconfirmed-system-compatibility": 2108
+    "incomplete-product-data": 1573,
+    "missing-product-kind": 1573,
+    "unconfirmed-system-compatibility": 1961
   },
   "merchants": {},
-  "normalizedProducts": 826,
-  "offers": 827,
-  "reviewedProducts": 8,
-  "reviewQueue": 2448,
-  "rows": 170709,
+  "normalizedProducts": 685,
+  "offers": 686,
+  "reviewedProducts": 154,
+  "reviewQueue": 2098,
+  "rows": 170710,
   "schemaVersion": 1,
   "sourceFeeds": 7,
   "successfulFeeds": 7

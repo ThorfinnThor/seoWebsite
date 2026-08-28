@@ -1,6 +1,21 @@
 {
-  "generatedAt": "2026-08-28T09:49:36.760Z",
+  "generatedAt": "2026-08-28T13:28:22.892Z",
   "offers": [
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=43942506400&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 4.99,
+      "deliveryCostStatus": "known",
+      "id": "offer:11830:gfmc717fbcca",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a8/cd/c6/1783935086/7333282021740_90145592_1280x1280.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GFMc717fbcca",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-133050-bis-20-m2-10l-24h-0694600250/",
+      "priceEur": 149,
+      "productId": "gtin:7333282021740",
+      "updatedAt": "2026-08-28T13:28:10.911Z"
+    },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=41084226928&a=3037577&m=11830",
       "available": true,
@@ -14,7 +29,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/comfee-luftentfeuchter-mddf3-20den7-fuer-bis-zu-130-m3-3-liter-wassertank-0694600201/",
       "priceEur": 219,
       "productId": "gtin:4048164102853",
-      "updatedAt": "2026-08-28T09:49:17.025Z"
+      "updatedAt": "2026-08-28T13:27:59.581Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=40446521657&a=3037577&m=11830",
@@ -29,7 +44,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/comfee-luftentfeuchter-mddf3-30den7-fuer-bis-zu-130-m3-3-liter-wassertank-0694600203/",
       "priceEur": 239,
       "productId": "gtin:4048164102860",
-      "updatedAt": "2026-08-28T09:49:17.054Z"
+      "updatedAt": "2026-08-28T13:27:59.610Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=40622595461&a=3037577&m=11830",
@@ -44,7 +59,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/midea-luftentfeuchter-mddp-50den7-fuer-100-m2-50l-24h-0694600206/",
       "priceEur": 299,
       "productId": "gtin:4048164102877",
-      "updatedAt": "2026-08-28T09:49:19.524Z"
+      "updatedAt": "2026-08-28T13:28:02.093Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36258804370&a=3037577&m=11830",
@@ -59,7 +74,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-129238-bis-60-m2-30l-24h-0694600230/",
       "priceEur": 289,
       "productId": "gtin:7333282011055",
-      "updatedAt": "2026-08-28T09:49:21.937Z"
+      "updatedAt": "2026-08-28T13:28:05.164Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36305176249&a=3037577&m=11830",
@@ -74,7 +89,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-127463-bis-50-m2-25l-24h-schuhtrocknungsfunktion-0694600231/",
       "priceEur": 225,
       "productId": "gtin:7333282011048",
-      "updatedAt": "2026-08-28T09:49:21.937Z"
+      "updatedAt": "2026-08-28T13:28:05.164Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36248396869&a=3037577&m=11830",
@@ -89,7 +104,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-128153-bis-25-m2-12l-24h-0694600232/",
       "priceEur": 159,
       "productId": "gtin:7333282011024",
-      "updatedAt": "2026-08-28T09:49:21.937Z"
+      "updatedAt": "2026-08-28T13:28:05.164Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=36248396868&a=3037577&m=11830",
@@ -104,7 +119,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/emerio-luftentfeuchter-dh-122844-bis-40-m2-20l-24h-0694600233/",
       "priceEur": 249,
       "productId": "gtin:7333282011031",
-      "updatedAt": "2026-08-28T09:49:21.936Z"
+      "updatedAt": "2026-08-28T13:28:05.164Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=39671250019&a=3037577&m=11830",
@@ -119,7 +134,52 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/tristar-luftentfeuchter-dh-5424-48-m2-16l-24h-0694600239/",
       "priceEur": 209.99,
       "productId": "gtin:8712836970465",
-      "updatedAt": "2026-08-28T09:49:23.400Z"
+      "updatedAt": "2026-08-28T13:28:07.468Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=40275198826&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 4.99,
+      "deliveryCostStatus": "known",
+      "id": "offer:11830:glo694600244",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ea/05/3d/1738679440/4048164117079_90125893_1280x1280.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO694600244",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/comfee-luftentfeuchter-mddp3-30den7-30-l-24-h-led-display-timer-0694600244/",
+      "priceEur": 289,
+      "productId": "gtin:4048164117079",
+      "updatedAt": "2026-08-28T13:28:07.795Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=45764263279&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 49.99,
+      "deliveryCostStatus": "known",
+      "id": "offer:11830:glo761140625",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/48/c6/75/1705996847/4015671448606_2875102_1920x980.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO761140625",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/guede-bautrockner-gbt-50-1-220-240-v-900-w-0761360120/",
+      "priceEur": 439,
+      "productId": "gtin:4015671448606",
+      "updatedAt": "2026-08-28T13:28:02.105Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=40739872237&a=3037577&m=11830",
+      "available": true,
+      "deliveryCostEur": 49.99,
+      "deliveryCostStatus": "known",
+      "id": "offer:11830:glo761181135",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fe/65/2b/1775740507/9120039232782_90220702_1280x1280.jpg",
+      "merchantId": "11830",
+      "merchantName": "Globus Baumarkt DE",
+      "merchantProductId": "GLO761181135",
+      "merchantUrl": "https://www.globus-baumarkt.de/p/zipper-bautrockner-zi-bat50-50-l-max-70-m2-0761360124/",
+      "priceEur": 529.99,
+      "productId": "gtin:9120039232782",
+      "updatedAt": "2026-08-28T13:28:02.988Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=24243220215&a=3037577&m=14288",
@@ -134,7 +194,7 @@
       "merchantUrl": "https://de.trotec.com/shop/luftentfeuchter-ttk-26-e.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
       "priceEur": 99.99,
       "productId": "gtin:4052138016916",
-      "updatedAt": "2026-08-28T09:49:27.336Z"
+      "updatedAt": "2026-08-28T13:28:12.327Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=24243220701&a=3037577&m=14288",
@@ -149,10 +209,23 @@
       "merchantUrl": "https://de.trotec.com/shop/luftentfeuchter-ttk-66-e.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
       "priceEur": 189.99,
       "productId": "gtin:4052138015117",
-      "updatedAt": "2026-08-28T09:49:27.338Z"
+      "updatedAt": "2026-08-28T13:28:12.330Z"
     }
   ],
   "products": [
+    {
+      "brand": "Güde",
+      "continuousDrain": false,
+      "dataQuality": "mixed",
+      "gtin": "4015671448606",
+      "id": "gtin:4015671448606",
+      "maxRecommendedAreaM2": 120,
+      "mpn": "55547",
+      "name": "Güde Bautrockner GBT 50.1 220-240 V 900 W",
+      "powerW": 900,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T13:28:02.105Z"
+    },
     {
       "brand": "comfee",
       "continuousDrain": false,
@@ -167,7 +240,7 @@
       "powerW": 360,
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:17.025Z",
+      "sourceUpdatedAt": "2026-08-28T13:27:59.581Z",
       "tankLiters": 3
     },
     {
@@ -184,7 +257,7 @@
       "powerW": 550,
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:17.054Z",
+      "sourceUpdatedAt": "2026-08-28T13:27:59.610Z",
       "tankLiters": 3
     },
     {
@@ -202,8 +275,24 @@
       "powerW": 850,
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:19.524Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:02.093Z",
       "tankLiters": 6
+    },
+    {
+      "brand": "comfee",
+      "continuousDrain": false,
+      "dataQuality": "mixed",
+      "extractionLPerDay": 30,
+      "gtin": "4048164117079",
+      "id": "gtin:4048164117079",
+      "laundryMode": true,
+      "maxRecommendedAreaM2": 73,
+      "maxRecommendedVolumeM3": 190,
+      "mpn": "0694600244",
+      "name": "Comfee Luftentfeuchter MDDP3-30DEN7 30 l/24 h LED Display Timer",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T13:28:07.795Z",
+      "tankLiters": 3
     },
     {
       "brand": "Trotec",
@@ -219,7 +308,7 @@
       "name": "Trotec Luftentfeuchter TTK 66 E",
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:27.338Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:12.330Z",
       "tankLiters": 3
     },
     {
@@ -236,7 +325,7 @@
       "name": "Trotec Luftentfeuchter TTK 26 E",
       "refrigerantType": "R290",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:27.336Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:12.327Z",
       "tankLiters": 1.8
     },
     {
@@ -250,7 +339,7 @@
       "mpn": "DH-128153",
       "name": "Emerio Luftentfeuchter DH-128153",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:21.937Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:05.164Z",
       "tankLiters": 2
     },
     {
@@ -264,7 +353,7 @@
       "mpn": "DH-122844",
       "name": "Emerio Luftentfeuchter DH-122844",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:21.936Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:05.164Z",
       "tankLiters": 6
     },
     {
@@ -279,7 +368,7 @@
       "mpn": "DH-127463",
       "name": "Emerio Luftentfeuchter DH-127463",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:21.937Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:05.164Z",
       "tankLiters": 5.5
     },
     {
@@ -293,8 +382,21 @@
       "mpn": "DH-129238",
       "name": "Emerio Luftentfeuchter DH-129238",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:21.937Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:05.164Z",
       "tankLiters": 6
+    },
+    {
+      "brand": "Emerio",
+      "continuousDrain": false,
+      "dataQuality": "mixed",
+      "extractionLPerDay": 10,
+      "gtin": "7333282021740",
+      "id": "gtin:7333282021740",
+      "maxRecommendedAreaM2": 20,
+      "mpn": "0694600250",
+      "name": "Emerio Luftentfeuchter DH-133050 bis 20 m² 10L/24h",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T13:28:10.911Z"
     },
     {
       "brand": "Tristar",
@@ -309,8 +411,20 @@
       "noiseDb": 46,
       "powerW": 260,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-28T09:49:23.400Z",
+      "sourceUpdatedAt": "2026-08-28T13:28:07.468Z",
       "tankLiters": 3.7
+    },
+    {
+      "brand": "Zipper",
+      "continuousDrain": false,
+      "dataQuality": "mixed",
+      "gtin": "9120039232782",
+      "id": "gtin:9120039232782",
+      "maxRecommendedAreaM2": 70,
+      "mpn": "ZI-BAT60",
+      "name": "Zipper Bautrockner ZI-BAT50 50 l max. 70 m²",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T13:28:02.988Z"
     }
   ],
   "schemaVersion": 1,
