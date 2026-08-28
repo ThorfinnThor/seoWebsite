@@ -19,7 +19,12 @@ export function isProjectProductCandidate(row: RawFeedRow): boolean {
   // The product name is the only field reliable enough for cross-category
   // feeds. Category paths and descriptions often mention a project context
   // even when the item is an unrelated accessory (for example a gutter).
-  return Boolean(projectVertical(value(row, "product_name", "product_title", "title") ?? ""));
+  const name = value(row, "product_name", "product_title", "title") ?? "";
+  const vertical = projectVertical(name);
+  if (!vertical) return false;
+  if (vertical === "greenhouse" && /ersatzdocht|gewächshausheizung|gewaechshausheizung|paraffinheizung/i.test(name)) return false;
+  if (vertical === "drywall" && (/säge|saege|bohrer|schleifer|bit|fräs|fraes|lochrandsenker|tauchsäge|werkzeug/i.test(name) || !/gipskartonplatte|gipsfaserplatte|rigipsplatte|trockenbauplatte|cw[- ]?profil|uw[- ]?profil|trockenbauprofil|fugenspachtel|fugenband|mineralwolle|trennwandband|trockenbauwand/i.test(name))) return false;
+  return true;
 }
 
 function productKind(vertical: ProjectVertical, text: string): ProjectProductKind {

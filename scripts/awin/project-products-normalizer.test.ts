@@ -26,6 +26,11 @@ describe("project product feed normalization", () => {
     expect(projectVertical("Gipskartonplatte für Trockenbau")).toBe("drywall");
   });
 
+  it("rejects adjacent accessories that do not belong in the planner catalog", () => {
+    expect(isProjectProductCandidate({ product_name: "Ersatzdocht für Gewächshausheizung" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "Hand-Stichsäge für Gipskartonplatten" })).toBe(false);
+  });
+
   it("normalizes a real product with a valid affiliate offer", () => {
     expect(isProjectProductCandidate(row)).toBe(true);
     const candidate = normalizeProjectProduct(row);
