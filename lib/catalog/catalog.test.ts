@@ -7,8 +7,12 @@ import type { OfferBase } from "./types";
 const offer: OfferBase = { id: "o", productId: "p", merchantId: "m", merchantName: "M", merchantProductId: "mp", priceEur: 100, deliveryCostStatus: "known", deliveryCostEur: 10, available: true, affiliateUrl: "https://example.com/path?existing=yes", updatedAt: "2026-08-09T00:00:00.000Z" };
 
 describe("offer URL resolution", () => {
-  it("uses the canonical merchant URL by default when available", () => {
+  it("uses the canonical merchant URL for an unapproved merchant", () => {
     expect(resolveOfferUrl({ ...offer, merchantUrl: "https://shop.example/product" })).toBe("https://shop.example/product");
+  });
+
+  it("uses the affiliate URL for an active advertiser", () => {
+    expect(resolveOfferUrl({ ...offer, merchantId: "14288", merchantUrl: "https://de.trotec.com/product" })).toBe(offer.affiliateUrl);
   });
 
   it("falls back to the affiliate URL when no merchant URL exists", () => {

@@ -1,6 +1,6 @@
 # Awin onboarding for PassendPlanen
 
-Checked against Awin's official German signup and Partner Success documentation on 2026-08-11.
+Checked against Awin's official German signup and Partner Success documentation on 2026-08-28.
 
 ## Before applying
 
@@ -76,7 +76,9 @@ Programme profiles and IDs were rechecked against Awin on 2026-08-15. Apply only
 
 ### Confirmed active programmes
 
-Woodstore24 DE/AT (Awin advertiser ID `48707`) is now approved and enabled in the repository registry. Its current import scope is the supported flooring catalog; terrace decking and privacy-screen product catalogs remain separate follow-up adapters. Once Awin exposes the programme in the feed list, the next manual sync will discover it automatically.
+Woodstore24 DE/AT (Awin advertiser ID `48707`) is approved and enabled in the repository registry. Its current import scope is the supported flooring catalog; terrace decking and privacy-screen product catalogs remain separate follow-up adapters.
+
+Trotec DACH (Awin advertiser ID `14288`) is approved and enabled for the dehumidifier catalog. The next manual feed sync discovers its joined German product feed automatically. Trotec offers become public only after the existing manual product-review gate has approved the individual models.
 
 ### Wave 1: strongest calculator fit
 

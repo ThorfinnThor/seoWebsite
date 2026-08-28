@@ -13,7 +13,7 @@ export default function AffiliateTransparenzPage() {
     <LegalPage title="Affiliate-Transparenz" intro="Wie Empfehlungen entstehen, wie Partnerlinks gekennzeichnet werden und was eine mögliche Provision nicht beeinflusst." requiresContact={false}>
       <section>
         <h2>Aktueller Stand</h2>
-        <p>Auf PassendPlanen sind noch keine Affiliate-Angebote aktiviert. Die Produktkataloge bleiben leer, bis Datenquellen, Händlerfreigaben und Kennzeichnung geprüft sind.</p>
+        <p>PassendPlanen verwendet bei freigegebenen Händlerprogrammen gekennzeichnete Affiliate-Links. Ein neues Programm wie Trotec DACH erscheint erst in Vergleichen, nachdem die zugehörigen Produktdaten zusätzlich redaktionell geprüft wurden.</p>
       </section>
       <section>
         <h2>Bedarf vor Provision</h2>

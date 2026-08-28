@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastVerifiedAt": "2026-08-25",
+  "lastVerifiedAt": "2026-08-28",
   "merchants": [
     {
       "merchantId": "gfp",
@@ -143,6 +143,19 @@
       "enabled": true,
       "verticals": ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"],
       "plannerIds": ["drywall", "irrigation", "flooring"],
+      "country": "DE"
+    },
+    {
+      "merchantId": "trotec-dach",
+      "name": "Trotec DACH",
+      "network": "awin",
+      "awinAdvertiserId": 14288,
+      "profileUrl": "https://ui.awin.com/merchant-profile/14288",
+      "applicationPriority": 12,
+      "applicationStatus": "active",
+      "enabled": true,
+      "verticals": ["dehumidifier"],
+      "plannerIds": ["dehumidifier"],
       "country": "DE"
     }
   ]
