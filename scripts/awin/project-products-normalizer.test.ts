@@ -40,6 +40,7 @@ describe("project product feed normalization", () => {
 
   it("extracts matching dimensions and package sizes", () => {
     expect(parseProjectProductAttributes("terrace", "decking", "Terrassendiele Kiefer 200 x 14,5 x 2,8 cm")).toMatchObject({ boardLengthMm: 2000, boardWidthMm: 145, boardThicknessMm: 28, material: "wood" });
+    expect(parseProjectProductAttributes("terrace", "decking", "Terrassendielen Cumaru 240cm (19x140mm)")).toMatchObject({ boardLengthMm: 2400, boardWidthMm: 140, boardThicknessMm: 19, material: "wood" });
     expect(parseProjectProductAttributes("drywall", "board", "Knauf Gipskartonplatte GKBI 120 x 60 cm 12,5 mm 60 St.")).toMatchObject({ boardLengthMm: 1200, boardWidthMm: 600, boardThicknessMm: 12.5, piecesPerPack: 60, moistureApproved: true });
     expect(parseProjectProductAttributes("greenhouse", "kit", "Vitavia Gewächshaus 254 x 317 cm HKP")).toMatchObject({ externalWidthM: 2.54, externalLengthM: 3.17, glazingType: "polycarbonate", completeKit: true });
   });
@@ -59,5 +60,26 @@ describe("project product feed normalization", () => {
     const candidate = normalizeProjectProduct({ ...row, search_price: "" });
     expect(candidate?.offer).toBeUndefined();
     expect(assembleProjectCatalog(candidate ? [candidate] : [], [], "2026-08-28T00:00:00.000Z").products).toHaveLength(0);
+  });
+
+  it("keeps an approved merchant represented when a planner catalog reaches its cap", () => {
+    const incumbent = Array.from({ length: 130 }, (_, index) => normalizeProjectProduct({
+      ...row,
+      product_name: `WPC Terrassendiele 240 x 14 x 2 cm ${index}`,
+      merchant_product_id: `terrace-${index}`,
+      product_GTIN: "",
+    })!);
+    const intergard = normalizeProjectProduct({
+      ...row,
+      product_name: "Terrassendielen Cumaru 240cm (19x140mm)",
+      merchant_id: "24966",
+      merchant_name: "InterGard Heim und Garten DE",
+      merchant_product_id: "cumaru-240",
+      product_GTIN: "",
+    })!;
+
+    const catalog = assembleProjectCatalog([...incumbent, intergard], [], "2026-08-28T00:00:00.000Z");
+    expect(catalog.products).toHaveLength(120);
+    expect(catalog.offers.some((offer) => offer.merchantName === "InterGard Heim und Garten DE")).toBe(true);
   });
 });

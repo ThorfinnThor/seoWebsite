@@ -18,6 +18,9 @@ describe("merchant resolution", () => {
   it("recovers the registered advertiser from an Awin deep link", () => {
     expect(merchantDetails({ aw_deep_link: "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577" })).toEqual({ merchantId: "anthbot", merchantName: "ANTHBOT DE" });
   });
+  it("resolves InterGard from the approved advertiser ID", () => {
+    expect(merchantDetails({ aw_deep_link: "https://www.awin1.com/cread.php?awinmid=24966&awinaffid=3037577" })).toEqual({ merchantId: "intergard", merchantName: "InterGard Heim und Garten DE" });
+  });
 });
 describe("garden-house normalizer", () => {
   it("treats custom non-empty in_stock flags as available per Awin's feed contract", () => {

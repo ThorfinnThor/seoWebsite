@@ -93,6 +93,44 @@ const PROJECT_KIND_PRIORITY: Record<string, number> = {
   drainage: 5, electric: 5, bench: 5, shade: 5, bracket: 6, cap: 6, irrigation: 6,
 };
 
+function selectProjectProducts(
+  published: ProjectProduct[],
+  merchantByProductId: ReadonlyMap<string, string>,
+  limitPerVertical = 120,
+): ProjectProduct[] {
+  const selected: ProjectProduct[] = [];
+  const verticals = [...new Set(published.map((product) => product.vertical))].sort();
+
+  for (const vertical of verticals) {
+    const verticalProducts = published.filter((product) => product.vertical === vertical);
+    const priorities = [...new Set(verticalProducts.map((product) => PROJECT_KIND_PRIORITY[product.kind] ?? 99))].sort((a, b) => a - b);
+    let selectedForVertical = 0;
+
+    for (const priority of priorities) {
+      const byMerchant = new Map<string, ProjectProduct[]>();
+      for (const product of verticalProducts.filter((item) => (PROJECT_KIND_PRIORITY[item.kind] ?? 99) === priority)) {
+        const merchantId = merchantByProductId.get(product.id) ?? "unknown";
+        byMerchant.set(merchantId, [...(byMerchant.get(merchantId) ?? []), product]);
+      }
+      const merchantIds = [...byMerchant.keys()].sort();
+      let index = 0;
+      while (selectedForVertical < limitPerVertical && merchantIds.some((merchantId) => index < (byMerchant.get(merchantId)?.length ?? 0))) {
+        for (const merchantId of merchantIds) {
+          if (selectedForVertical >= limitPerVertical) break;
+          const product = byMerchant.get(merchantId)?.[index];
+          if (!product) continue;
+          selected.push(product);
+          selectedForVertical += 1;
+        }
+        index += 1;
+      }
+      if (selectedForVertical >= limitPerVertical) break;
+    }
+  }
+
+  return selected;
+}
+
 function autoReviewCompleteFeedProduct<TProduct extends ProductBase>(product: TProduct, candidate: AffiliateCandidate<TProduct>, hasOverride: boolean): TProduct {
   return !hasOverride && candidate.offer && candidate.issues.length === 0
     ? { ...product, reviewed: true, dataQuality: "mixed" }
@@ -192,13 +230,11 @@ export function assembleProjectCatalog(candidates: ProjectProductCandidate[], ov
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
   }
   const published = [...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").sort((a, b) => a.vertical.localeCompare(b.vertical) || (PROJECT_KIND_PRIORITY[a.kind] ?? 99) - (PROJECT_KIND_PRIORITY[b.kind] ?? 99) || a.kind.localeCompare(b.kind) || a.id.localeCompare(b.id));
-  const counts = new Map<string, number>();
-  const selected = published.filter((product) => {
-    const count = counts.get(product.vertical) ?? 0;
-    if (count >= 120) return false;
-    counts.set(product.vertical, count + 1);
-    return true;
-  });
+  const merchantByProductId = new Map<string, string>();
+  for (const offer of [...offerMap.values()].sort((a, b) => a.id.localeCompare(b.id))) {
+    if (!merchantByProductId.has(offer.productId)) merchantByProductId.set(offer.productId, offer.merchantId);
+  }
+  const selected = selectProjectProducts(published, merchantByProductId);
   const selectedIds = new Set(selected.map((product) => product.id));
   return ProjectCatalogSchema.parse({ schemaVersion: 1, vertical: "project-products", generatedAt, products: selected, offers: [...offerMap.values()].filter((offer) => selectedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });
 }

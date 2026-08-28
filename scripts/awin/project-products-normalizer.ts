@@ -74,6 +74,14 @@ export function projectProductKind(vertical: ProjectVertical, text: string): Pro
 function decimal(raw: string): number { return Number(raw.replace(",", ".")); }
 function unitFactor(unit: string): number { return unit.toLowerCase() === "m" ? 1000 : unit.toLowerCase() === "cm" ? 10 : 1; }
 
+function standaloneDimensionMm(name: string): number | undefined {
+  const withoutCrossDimensions = name.replace(/\d+(?:[.,]\d+)?\s*[x×]\s*\d+(?:[.,]\d+)?(?:\s*[x×]\s*\d+(?:[.,]\d+)?)?\s*(?:mm|cm|m)\b/gi, " ");
+  const match = withoutCrossDimensions.match(/\b(\d+(?:[.,]\d+)?)\s*(mm|cm|m)\b/i);
+  if (!match) return undefined;
+  const valueMm = decimal(match[1]) * unitFactor(match[2]);
+  return valueMm >= 500 && valueMm <= 20_000 ? valueMm : undefined;
+}
+
 function dimensions(name: string): { valuesMm: number[]; unit: string } | undefined {
   const triple = name.match(/(\d+(?:[.,]\d+)?)\s*[x×]\s*(\d+(?:[.,]\d+)?)\s*[x×]\s*(\d+(?:[.,]\d+)?)\s*(mm|cm|m)\b/i);
   if (triple) return { valuesMm: [decimal(triple[1]), decimal(triple[2]), decimal(triple[3])].map((value) => value * unitFactor(triple[4])), unit: triple[4] };
@@ -97,9 +105,9 @@ export function parseProjectProductAttributes(vertical: ProjectVertical, kind: P
     else if (parsed?.valuesMm.length === 2 && parsed.unit.toLowerCase() === "mm" && Math.max(...parsed.valuesMm) < 500) {
       attributes.boardThicknessMm = Math.min(...parsed.valuesMm);
       attributes.boardWidthMm = Math.max(...parsed.valuesMm);
-      attributes.boardLengthMm = decimal(name.match(/\b(\d{4,5})\s*mm\b(?![^,]*[x×])/i)?.[1] ?? "0") || undefined;
+      attributes.boardLengthMm = standaloneDimensionMm(name);
     }
-    attributes.material = /\bwpc\b/i.test(name) ? "wpc" : /douglasie|kiefer|lärche|laerche|bangkirai|holz/i.test(name) ? "wood" : /verbund|composite/i.test(name) ? "composite" : undefined;
+    attributes.material = /\bwpc\b/i.test(name) ? "wpc" : /douglasie|kiefer|lärche|laerche|bangkirai|cumaru|garapa|massaranduba|ip[eé]|bambus|holz/i.test(name) ? "wood" : /verbund|composite/i.test(name) ? "composite" : undefined;
   }
 
   if (vertical === "privacy-screen" && kind === "panel" && parsed?.valuesMm.length === 2) {

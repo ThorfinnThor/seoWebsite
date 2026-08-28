@@ -157,6 +157,19 @@
       "verticals": ["dehumidifier"],
       "plannerIds": ["dehumidifier"],
       "country": "DE"
+    },
+    {
+      "merchantId": "intergard",
+      "name": "InterGard Heim und Garten DE",
+      "network": "awin",
+      "awinAdvertiserId": 24966,
+      "profileUrl": "https://ui.awin.com/merchant-profile/24966",
+      "applicationPriority": 13,
+      "applicationStatus": "active",
+      "enabled": true,
+      "verticals": ["garden-house", "project-products"],
+      "plannerIds": ["terrace", "privacy-screen", "garden-house", "greenhouse"],
+      "country": "DE"
     }
   ]
 }

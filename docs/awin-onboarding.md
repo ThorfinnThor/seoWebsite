@@ -80,6 +80,8 @@ Woodstore24 DE/AT (Awin advertiser ID `48707`) is approved and enabled in the re
 
 Trotec DACH (Awin advertiser ID `14288`) is approved and enabled for the dehumidifier catalog. The next manual feed sync discovers its joined German product feed automatically. Trotec offers become public only after the existing manual product-review gate has approved the individual models.
 
+InterGard Heim und Garten DE (Awin advertiser ID `24966`) is approved and enabled for garden houses and project products. Its import scope covers terrace, privacy-screen, garden-house and greenhouse recommendations. The per-planner catalog cap balances eligible products across merchants so InterGard offers are not displaced by a larger general-purpose feed.
+
 ### Wave 1: strongest calculator fit
 
 | Order | Programme | Awin ID | Primary calculators |
@@ -102,6 +104,7 @@ Use the matching English message from [English Awin application messages](./awin
 | 9 | [Ecovacs DE](https://ui.awin.com/merchant-profile/30763) | 30763 | Robot mower models |
 | 10 | [ANTHBOT DE](https://ui.awin.com/merchant-profile/125144) | 125144 | Additional robot mower models |
 | 11 | [Globus Baumarkt DE](https://ui.awin.com/merchant-profile/11830) | 11830 | Broad DIY backup |
+| 13 | [InterGard Heim und Garten DE](https://ui.awin.com/merchant-profile/24966) | 24966 | Terrace, privacy screen, garden house and greenhouse |
 
 Do not start A/B tests when these programmes are merely approved. First validate feeds, product attributes, shipping-price handling and outgoing links. The repository keeps every programme disabled until `applicationStatus` is `active`, and the scheduled feed workflow additionally requires the repository variable `AWIN_FEED_SCHEDULE_ENABLED=true` after a successful manual run.
 
@@ -129,7 +132,8 @@ The importer selects only joined German feeds from that list, allows only Awin p
   "dehumidifier": ["https://…"],
   "irrigation": ["https://…"],
   "robot-mower": ["https://…"],
-  "flooring": ["https://…"]
+  "flooring": ["https://…"],
+  "project-products": ["https://…"]
 }
 ```
 5. In GitHub open **Actions → Sync affiliate product feeds → Run workflow**.
