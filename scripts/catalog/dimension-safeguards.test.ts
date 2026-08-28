@@ -8,4 +8,8 @@ describe("dimension safeguards", () => {
   it("rejects a 13 mm long terrace board", () => expect(catalogDimensionIssues(catalog("project-products", { ...base, vertical: "terrace", kind: "decking", boardLengthMm: 13 } as ProductBase))[0]?.code).toBe("suspicious-dimension"));
   it("rejects implausible mower capacity", () => expect(catalogDimensionIssues(catalog("robot-mower", { ...base, ratedAreaM2: 200_000 } as ProductBase))[0]?.code).toBe("suspicious-capacity"));
   it("accepts missing optional dimensions", () => expect(catalogDimensionIssues(catalog("project-products", { ...base, vertical: "carport", kind: "kit" } as ProductBase))).toEqual([]));
+  it("accepts a narrow wall greenhouse but keeps the carport minimum strict", () => {
+    expect(catalogDimensionIssues(catalog("project-products", { ...base, vertical: "greenhouse", kind: "kit", externalWidthM: 1.94, externalLengthM: 0.69 } as ProductBase))).toEqual([]);
+    expect(catalogDimensionIssues(catalog("project-products", { ...base, vertical: "carport", kind: "kit", externalWidthM: 1.94, externalLengthM: 0.69 } as ProductBase))[0]?.code).toBe("suspicious-dimension");
+  });
 });

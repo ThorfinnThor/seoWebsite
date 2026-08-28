@@ -14,7 +14,8 @@ export function catalogDimensionIssues(catalog: StaticCatalog<ProductBase, Offer
     }
     if (value.vertical === "privacy-screen" && value.kind === "panel" && (outside(value.panelWidthCm, 20, 1_000) || outside(value.panelHeightCm, 15, 500))) issues.push(issue(product.id, "privacy panel dimensions outside plausible range"));
     if (value.vertical === "drywall" && value.kind === "board" && (outside(value.boardLengthMm, 500, 6_000) || outside(value.boardWidthMm, 300, 2_000) || outside(value.boardThicknessMm, 5, 100))) issues.push(issue(product.id, "drywall board dimensions outside plausible range"));
-    if ((value.vertical === "greenhouse" || value.vertical === "carport") && value.kind === "kit" && (outside(value.externalWidthM, 1, 50) || outside(value.externalLengthM, 1, 50))) issues.push(issue(product.id, `${String(value.vertical)} outside dimensions outside plausible range`));
+    if (value.vertical === "greenhouse" && value.kind === "kit" && (outside(value.externalWidthM, 0.5, 50) || outside(value.externalLengthM, 0.5, 50))) issues.push(issue(product.id, "greenhouse outside dimensions outside plausible range"));
+    if (value.vertical === "carport" && value.kind === "kit" && (outside(value.externalWidthM, 1, 50) || outside(value.externalLengthM, 1, 50))) issues.push(issue(product.id, "carport outside dimensions outside plausible range"));
   }
   return issues;
 }
