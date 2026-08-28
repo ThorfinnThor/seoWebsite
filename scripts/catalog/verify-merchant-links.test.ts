@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { verifyOfferLink } from "./verify-merchant-links";
+import { applyLinkVerification, verifyOfferLink } from "./verify-merchant-links";
 import type { OfferBase, ProductBase } from "@/lib/catalog/types";
 
 const product: ProductBase = { id: "p", name: "ECOVACS GOAT A3000 LiDAR PRO", gtin: "6970135038183", reviewed: true, dataQuality: "curated" };
@@ -11,4 +11,9 @@ describe("merchant link verification", () => {
   });
   it("deactivates missing targets", async () => expect(await verifyOfferLink(offer, product, async () => new Response("missing", { status: 404 }))).toBe("not-found"));
   it("keeps bot-blocked targets separate", async () => expect(await verifyOfferLink(offer, product, async () => new Response("blocked", { status: 403 }))).toBe("blocked"));
+  it("removes invalid targets but retains bot-blocked offers for later manual verification", () => {
+    expect(applyLinkVerification(offer, "not-found", "2026-08-28T00:00:00.000Z")).toBeUndefined();
+    expect(applyLinkVerification(offer, "identity-mismatch", "2026-08-28T00:00:00.000Z")).toBeUndefined();
+    expect(applyLinkVerification(offer, "blocked", "2026-08-28T00:00:00.000Z")).toMatchObject({ available: true, linkVerificationStatus: "blocked" });
+  });
 });

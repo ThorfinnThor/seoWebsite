@@ -29,7 +29,7 @@ The production build is a pure static export in `out/`. There are no API routes,
 
 All public product catalogs start empty by design. Real Awin candidates are imported offline with `npm run sync:products` and become public only after semantic, price, dimension, stock and link validation. Curated overrides remain available for technical attributes that cannot be confirmed from a feed.
 
-Run `npm run verify:merchant-links -- --write` to follow Affiliate redirects, compare the final merchant domain and product identity, and store the verification status. Missing or mismatched targets are disabled; bot-blocked checks remain visible as `blocked` instead of being removed.
+Run `npm run verify:merchant-links -- --write` to follow Affiliate redirects, compare the final merchant domain and product identity, and store the verification status. Missing or mismatched targets are removed from the public offer list; bot-blocked checks remain visible as `blocked` instead of being removed.
 
 Never place `AWIN_FEED_URLS_JSON` in a local committed file or in Vercel. Configure it as a GitHub Actions repository secret.
 

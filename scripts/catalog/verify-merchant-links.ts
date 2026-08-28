@@ -25,6 +25,11 @@ export async function verifyOfferLink(offer: OfferBase, product: ProductBase, fe
   }
 }
 
+export function applyLinkVerification(offer: OfferBase, status: LinkVerificationStatus, checkedAt: string): OfferBase | undefined {
+  if (status === "not-found" || status === "identity-mismatch") return undefined;
+  return { ...offer, linkVerificationStatus: status, linkVerifiedAt: checkedAt };
+}
+
 function identityConfirmed(product: ProductBase, offer: OfferBase, haystack: string): boolean {
   const strongIds = [product.gtin, product.mpn, offer.merchantProductId].filter((value): value is string => Boolean(value && value.length >= 5));
   if (strongIds.some((value) => haystack.includes(value.toLowerCase()))) return true;
@@ -56,10 +61,10 @@ async function run(): Promise<void> {
   const statusByKey = new Map(results.map((result) => [result.key, result.status]));
   for (const result of results) totals[result.status] += 1;
   for (const { file, catalog } of loaded) {
-    const offers = catalog.offers.map((offer, index) => {
+    const offers = catalog.offers.flatMap((offer, index) => {
       const status = statusByKey.get(`${file}:${index}`);
-      return status ? { ...offer, linkVerificationStatus: status, linkVerifiedAt: checkedAt, available: status === "not-found" || status === "identity-mismatch" ? false : offer.available } : offer;
-    });
+      return status ? [applyLinkVerification(offer, status, checkedAt)] : [offer];
+    }).filter((offer): offer is OfferBase => Boolean(offer));
     if (write) {
       files[file] = { ...catalog, offers };
       const reportFile = file.replace(/catalog\.json$/, "feed-report.json");
