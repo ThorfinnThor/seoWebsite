@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T14:48:34.040Z",
+  "generatedAt": "2026-08-28T19:46:31.649Z",
   "schemaVersion": 1,
   "verticals": {
     "dehumidifier": {
@@ -12,15 +12,15 @@
     },
     "garden-house": {
       "catalog": "/data/garden-house/catalog.json",
-      "generatedAt": "2026-08-28T14:02:01.971Z"
+      "generatedAt": "2026-08-28T19:46:31.649Z"
     },
     "irrigation": {
       "catalog": "/data/irrigation/catalog.json",
-      "generatedAt": "2026-08-28T13:28:22.892Z"
+      "generatedAt": "2026-08-28T19:46:31.649Z"
     },
     "project-products": {
       "catalog": "/data/project-products/catalog.json",
-      "generatedAt": "2026-08-28T14:48:34.040Z"
+      "generatedAt": "2026-08-28T19:46:31.649Z"
     },
     "robot-mower": {
       "catalog": "/data/robot-mower/catalog.json",

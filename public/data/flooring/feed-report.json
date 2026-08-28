@@ -1,37 +1,37 @@
 {
-  "candidateRows": 2372,
+  "candidateRows": 2376,
   "candidateToProductRate": 92.7,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-28T13:28:22.892Z",
+  "generatedAt": "2026-08-28T19:46:31.649Z",
   "issues": {
     "incomplete-product-data": 170,
-    "missing-package-coverage": 2077,
-    "missing-plank-dimensions": 1235,
+    "missing-package-coverage": 2081,
+    "missing-plank-dimensions": 1239,
     "unhelpful-product-name": 101,
-    "unknown-installation": 1719
+    "unknown-installation": 1720
+  },
+  "linkVerification": {
+    "verified": 93
   },
   "merchants": {
     "Globus Baumarkt DE": 80,
-    "Woodstore24 DE/AT": 9,
-    "LaminatDEPOT DE": 4
+    "LaminatDEPOT DE": 4,
+    "Woodstore24 DE/AT": 9
   },
-  "normalizedProducts": 2198,
+  "normalizedProducts": 2202,
   "offers": 93,
-  "reviewedProducts": 93,
-  "reviewQueue": 2275,
-  "rows": 170710,
-  "schemaVersion": 1,
-  "sourceFeeds": 7,
-  "successfulFeeds": 7,
+  "priceStatsEur": {
+    "max": 2730.42,
+    "median": 70.34,
+    "min": 17.63
+  },
+  "productsWithoutOffers": 0,
   "publishedProducts": 93,
   "quarantinedProducts": 0,
-  "productsWithoutOffers": 0,
-  "priceStatsEur": {
-    "min": 17.63,
-    "median": 70.34,
-    "max": 2730.42
-  },
-  "linkVerification": {
-    "unknown": 93
-  }
+  "reviewedProducts": 93,
+  "reviewQueue": 2279,
+  "rows": 174364,
+  "schemaVersion": 1,
+  "sourceFeeds": 8,
+  "successfulFeeds": 8
 }
