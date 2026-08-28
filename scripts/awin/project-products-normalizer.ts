@@ -69,7 +69,7 @@ export function normalizeProjectProduct(row: RawFeedRow): AffiliateCandidate<Pro
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
   const identity = productIdentity(row, merchantId, merchantProductId);
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category")].filter(Boolean).join(" ");
-  const vertical = projectVertical(text);
+  const vertical = projectVertical(name);
   if (!vertical) return undefined;
   // Feeds occasionally reuse a GTIN for variant rows. Keep the merchant's
   // product key in the identity so one malformed duplicate cannot overwrite
