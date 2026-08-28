@@ -16,8 +16,10 @@ export function projectVertical(text: string): ProjectVertical | undefined {
 }
 
 export function isProjectProductCandidate(row: RawFeedRow): boolean {
-  const text = [value(row, "product_name"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path"), value(row, "description")].filter(Boolean).join(" ");
-  return Boolean(projectVertical(text));
+  // The product name is the only field reliable enough for cross-category
+  // feeds. Category paths and descriptions often mention a project context
+  // even when the item is an unrelated accessory (for example a gutter).
+  return Boolean(projectVertical(value(row, "product_name", "product_title", "title") ?? ""));
 }
 
 function productKind(vertical: ProjectVertical, text: string): ProjectProductKind {
@@ -30,7 +32,7 @@ function productKind(vertical: ProjectVertical, text: string): ProjectProductKin
     return "kit";
   }
   if (vertical === "greenhouse") {
-    if (/lüft|lueft|fenster|öffner|oeffner/i.test(text)) return "ventilation";
+    if (/lüftungsautomat|lueftungsautomat|fensteröffner|fensteroeffner|fensterantrieb|öffner für dachfenster|oeffner fuer dachfenster/i.test(text)) return "ventilation";
     if (/bewässer|bewaesser|tropf/i.test(text)) return "irrigation";
     if (/tisch|regal|bank/i.test(text)) return "bench";
     if (/schatt|frostschutz/i.test(text)) return "shade";

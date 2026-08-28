@@ -29,7 +29,7 @@ describe("project product feed normalization", () => {
   it("normalizes a real product with a valid affiliate offer", () => {
     expect(isProjectProductCandidate(row)).toBe(true);
     const candidate = normalizeProjectProduct(row);
-    expect(candidate).toMatchObject({ id: "gtin:4012345678901", product: { vertical: "greenhouse", kind: "ventilation" }, offer: { priceEur: 199 } });
+    expect(candidate).toMatchObject({ id: "gtin:4012345678901", product: { vertical: "greenhouse", kind: "kit" }, offer: { priceEur: 199 } });
   });
 
   it("publishes complete project products as mixed", () => {
