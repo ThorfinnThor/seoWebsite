@@ -167,6 +167,7 @@
       "applicationPriority": 13,
       "applicationStatus": "active",
       "enabled": true,
+      "availabilityPolicy": "feed-presence",
       "verticals": ["garden-house", "project-products"],
       "plannerIds": ["terrace", "privacy-screen", "garden-house", "greenhouse"],
       "country": "DE"

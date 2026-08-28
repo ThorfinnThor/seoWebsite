@@ -23,6 +23,7 @@ export function isProjectProductCandidate(row: RawFeedRow): boolean {
   const name = value(row, "product_name", "product_title", "title") ?? "";
   const vertical = projectVertical(name);
   if (!vertical) return false;
+  if (vertical === "privacy-screen" && /schmuckzaun/i.test(name)) return false;
   if (vertical === "greenhouse" && /ersatzdocht|gewächshausheizung|gewaechshausheizung|paraffinheizung/i.test(name)) return false;
   if (vertical === "drywall" && (/säge|saege|bohrer|schleifer|bit|fräs|fraes|lochrandsenker|tauchsäge|werkzeug|detektor|messgerät|messgeraet/i.test(name) || !/gipskartonplatte|gipsfaserplatte|rigipsplatte|trockenbauplatte|cw[- ]?profil|uw[- ]?profil|trockenbauprofil|fugenspachtel|fugenband|mineralwolle|trennwandband|trockenbauwand/i.test(name))) return false;
   return true;
@@ -34,7 +35,7 @@ export function projectProductKind(vertical: ProjectVertical, text: string): Pro
     if (/rinne|fallrohr|entwässer|entwaesser/i.test(text)) return "drainage";
     if (/dach|polycarbonat|blechdach/i.test(text) && !/carport/i.test(text)) return "roof";
     if (/pfosten|träger|traeger|balken/i.test(text)) return "post";
-    if (/anker|fundament|pfostenträger|pfostentraeger/i.test(text)) return "foundation";
+    if (/anker|fundament|pfostenträger|pfostentraeger|betonsockel/i.test(text)) return "foundation";
     if (/wallbox|steckdose|elektro/i.test(text)) return "electric";
     if (/bogen|verbinder|halter|winkel/i.test(text)) return "bracket";
     return "kit";
@@ -52,10 +53,11 @@ export function projectProductKind(vertical: ProjectVertical, text: string): Pro
     if (/unterkonstruktion|terrassenlager|lagerholz/i.test(text)) return "substructure";
     if (/clip|schraub|befestiger/i.test(text)) return "fastening";
     if (/fundament|auflager|stelzlager/i.test(text)) return "foundation";
-    if (/rand|abschluss|blende|profil/i.test(text)) return "bracket";
+    if (/randabschluss|\brand\b|abschluss|blende|profil/i.test(text)) return "bracket";
     return "decking";
   }
   if (vertical === "privacy-screen") {
+    if (/^sichtschutzzaun\b/i.test(text) && /\d+(?:[.,]\d+)?\s*[x×]\s*\d+(?:[.,]\d+)?\s*(?:mm|cm|m)\b/i.test(text)) return "panel";
     if (/pfosten|post/i.test(text)) return "post";
     if (/tor|pforte|beschlag/i.test(text)) return "gate";
     if (/anker|fundament|pfostenträger|pfostentraeger/i.test(text)) return "foundation";
@@ -132,9 +134,10 @@ export function parseProjectProductAttributes(vertical: ProjectVertical, kind: P
     attributes.profileWidthMm = decimal(name.match(/\b(\d{2,3})\s*x\s*\d{2,3}\s*mm\b/i)?.[1] ?? "0") || undefined;
   }
 
-  if ((vertical === "greenhouse" || vertical === "carport") && kind === "kit" && parsed?.valuesMm.length === 2 && parsed.valuesMm.every((value) => value >= 1000)) {
+  if ((vertical === "greenhouse" || vertical === "carport") && kind === "kit" && parsed && parsed.valuesMm.length >= 2 && parsed.valuesMm.slice(0, 2).every((value) => value >= 500)) {
     attributes.externalWidthM = parsed.valuesMm[0] / 1000;
     attributes.externalLengthM = parsed.valuesMm[1] / 1000;
+    if (parsed.valuesMm.length === 3 && parsed.valuesMm[2] >= 1000) attributes.clearHeightM = parsed.valuesMm[2] / 1000;
     attributes.completeKit = true;
   }
   if (vertical === "greenhouse") {

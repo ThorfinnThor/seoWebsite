@@ -6,7 +6,20 @@ import { parsePrice, parsePriceFromFields, priceIssue } from "./price-normalizer
 export { parsePrice, parsePriceFromFields } from "./price-normalizer";
 
 const CANDIDATE_PATTERN = /gartenhaus|gerätehaus|geraetehaus|gartenschuppen|geräteschuppen|geraeteschuppen|holzhaus|blockbohlenhaus/i;
+const INTERGARD_HOUSE_NAME = /^(?:(?:\d+\s*[- ]?\s*eck)\s+)?(?:gartenhaus|gerätehaus|geraetehaus|gartenschuppen|geräteschuppen|geraeteschuppen|holzhaus|blockbohlenhaus|ferienhaus)\b|^\d+[- ]?eck[- ]gartenhaus\b/i;
 const merchantsByAwinId = new Map(merchantRegistry.merchants.map((merchant) => [String(merchant.awinAdvertiserId), merchant]));
+
+function registryMerchant(row: RawFeedRow) {
+  const feedMerchantId = value(row, "merchant_id");
+  if (feedMerchantId && merchantsByAwinId.has(feedMerchantId)) return merchantsByAwinId.get(feedMerchantId);
+  const affiliateUrl = value(row, "aw_deep_link");
+  if (!affiliateUrl) return undefined;
+  try {
+    return merchantsByAwinId.get(new URL(affiliateUrl).searchParams.get("awinmid") ?? "");
+  } catch {
+    return undefined;
+  }
+}
 
 export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
   for (const key of keys) {
@@ -19,18 +32,10 @@ export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
 export function merchantDetails(row: RawFeedRow): { merchantId: string; merchantName: string } {
   const feedMerchantId = value(row, "merchant_id");
   const feedMerchantName = value(row, "merchant_name");
-  let registryMerchant;
-  const affiliateUrl = value(row, "aw_deep_link");
-  if (affiliateUrl) {
-    try {
-      registryMerchant = merchantsByAwinId.get(new URL(affiliateUrl).searchParams.get("awinmid") ?? "");
-    } catch {
-      // Keep the feed values when an advertiser uses a non-standard URL.
-    }
-  }
+  const registered = registryMerchant(row);
   return {
-    merchantId: feedMerchantId ?? registryMerchant?.merchantId ?? "unknown",
-    merchantName: feedMerchantName ?? registryMerchant?.name ?? "Unbekannter Händler",
+    merchantId: feedMerchantId ?? registered?.merchantId ?? "unknown",
+    merchantName: feedMerchantName ?? registered?.name ?? "Unbekannter Händler",
   };
 }
 
@@ -62,6 +67,9 @@ export function productDisplayName(row: RawFeedRow, fallback: string): { name: s
 }
 
 export function isGardenHouseCandidate(row: RawFeedRow): boolean {
+  if (registryMerchant(row)?.merchantId === "intergard") {
+    return INTERGARD_HOUSE_NAME.test(value(row, "product_name") ?? "");
+  }
   return CANDIDATE_PATTERN.test([
     value(row, "product_name"), value(row, "merchant_category"), value(row, "category_name"),
     value(row, "product_type"), value(row, "merchant_product_category_path"),
@@ -168,6 +176,10 @@ export function availability(row: RawFeedRow): { available: boolean; ambiguous: 
   if (forSale !== undefined) return { available: forSale, ambiguous: false };
   const quantity = value(row, "stock_quantity");
   if (quantity && /^\d+(?:[.,]\d+)?$/.test(quantity.trim())) return { available: Number(quantity.replace(",", ".")) > 0, ambiguous: false };
+  const registered = registryMerchant(row);
+  if (registered && "availabilityPolicy" in registered && registered.availabilityPolicy === "feed-presence" && value(row, "aw_deep_link") && value(row, "merchant_deep_link")) {
+    return { available: true, ambiguous: false };
+  }
   return { available: false, ambiguous: true };
 }
 

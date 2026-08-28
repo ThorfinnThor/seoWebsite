@@ -27,6 +27,7 @@ const MerchantSchema = z.object({
   applicationPriority: z.number().int().positive(),
   applicationStatus: z.enum(["candidate", "applied", "active", "rejected", "paused"]),
   enabled: z.boolean(),
+  availabilityPolicy: z.enum(["explicit-stock", "feed-presence"]).optional(),
   verticals: z.array(z.string()),
   plannerIds: z.array(z.string()).min(1),
   country: z.literal("DE"),

@@ -36,9 +36,18 @@ describe("garden-house normalizer", () => {
   it("keeps an out-of-stock offer unavailable", () => expect(normalizeGardenHouse({ ...row, in_stock: "false" }).offer?.available).toBe(false));
   it("interprets numeric in-stock flags without joining them to quantity", () => expect(availability({ in_stock: "1", stock_quantity: "68" })).toEqual({ available: true, ambiguous: false }));
   it("uses stock quantity when no explicit stock flag exists", () => expect(availability({ stock_quantity: "12" })).toEqual({ available: true, ambiguous: false }));
+  it("uses the documented feed-presence fallback only for InterGard", () => {
+    const links = { aw_deep_link: "https://www.awin1.com/pclick.php?awinmid=24966", merchant_deep_link: "https://www.intergardshop.de/gartenhaus-york", merchant_id: "24966" };
+    expect(availability(links)).toEqual({ available: true, ambiguous: false });
+    expect(availability({ ...links, merchant_id: "11830", aw_deep_link: "https://www.awin1.com/pclick.php?awinmid=11830" })).toEqual({ available: false, ambiguous: true });
+  });
   it("falls back to standard availability and sale flags", () => {
     expect(availability({ availability: "in_stock" })).toEqual({ available: true, ambiguous: false });
     expect(availability({ is_for_sale: "1" })).toEqual({ available: true, ambiguous: false });
   });
   it("prefers an explicit out-of-stock flag over a stale quantity", () => expect(availability({ in_stock: "0", stock_quantity: "68" })).toEqual({ available: false, ambiguous: false }));
+  it("keeps InterGard accessories out of the garden-house catalog", () => {
+    expect(isGardenHouseCandidate({ merchant_id: "24966", product_name: "Gartenhaus York 300x300cm" })).toBe(true);
+    expect(isGardenHouseCandidate({ merchant_id: "24966", product_name: "Dachschindeln für Gartenhaus 3m2" })).toBe(false);
+  });
 });

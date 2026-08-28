@@ -80,7 +80,7 @@ Woodstore24 DE/AT (Awin advertiser ID `48707`) is approved and enabled in the re
 
 Trotec DACH (Awin advertiser ID `14288`) is approved and enabled for the dehumidifier catalog. The next manual feed sync discovers its joined German product feed automatically. Trotec offers become public only after the existing manual product-review gate has approved the individual models.
 
-InterGard Heim und Garten DE (Awin advertiser ID `24966`) is approved and enabled for garden houses and project products. Its import scope covers terrace, privacy-screen, garden-house and greenhouse recommendations. The per-planner catalog cap balances eligible products across merchants so InterGard offers are not displaced by a larger general-purpose feed.
+InterGard Heim und Garten DE (Awin advertiser ID `24966`) is approved and enabled for garden houses and project products. Its import scope covers terrace, privacy-screen, garden-house and greenhouse recommendations. The per-planner catalog cap balances eligible products across merchants so InterGard offers are not displaced by a larger general-purpose feed. InterGard's feed does not expose a stock field, so its registry entry explicitly uses the `feed-presence` availability policy: only rows with both a valid Awin link and a direct merchant link qualify, and the workflow still verifies every published target before committing it.
 
 ### Wave 1: strongest calculator fit
 

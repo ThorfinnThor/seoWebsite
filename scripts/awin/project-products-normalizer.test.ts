@@ -30,6 +30,7 @@ describe("project product feed normalization", () => {
     expect(isProjectProductCandidate({ product_name: "Ersatzdocht für Gewächshausheizung" })).toBe(false);
     expect(isProjectProductCandidate({ product_name: "Hand-Stichsäge für Gipskartonplatten" })).toBe(false);
     expect(isProjectProductCandidate({ product_name: "Metall- und Holzdetektor für Trockenbauplatten" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "Schmuckzaun Schmiedeeisen Gartenzaun 60x190cm" })).toBe(false);
   });
 
   it("normalizes a real product with a valid affiliate offer", () => {
@@ -43,8 +44,13 @@ describe("project product feed normalization", () => {
     expect(parseProjectProductAttributes("terrace", "decking", "Terrassendielen Cumaru 240cm (19x140mm)")).toMatchObject({ boardLengthMm: 2400, boardWidthMm: 140, boardThicknessMm: 19, material: "wood" });
     expect(parseProjectProductAttributes("drywall", "board", "Knauf Gipskartonplatte GKBI 120 x 60 cm 12,5 mm 60 St.")).toMatchObject({ boardLengthMm: 1200, boardWidthMm: 600, boardThicknessMm: 12.5, piecesPerPack: 60, moistureApproved: true });
     expect(parseProjectProductAttributes("greenhouse", "kit", "Vitavia Gewächshaus 254 x 317 cm HKP")).toMatchObject({ externalWidthM: 2.54, externalLengthM: 3.17, glazingType: "polycarbonate", completeKit: true });
+    expect(parseProjectProductAttributes("greenhouse", "kit", "Gewächshaus 193x319x195cm")).toMatchObject({ externalWidthM: 1.93, externalLengthM: 3.19, clearHeightM: 1.95, completeKit: true });
   });
   it("does not classify a carport sidewall as a complete kit", () => expect(projectProductKind("carport", "Seitenwand für Carport 300 cm")).toBe("panel"));
+  it("does not classify InterGard foundations or hardwood names as complete kits or edge profiles", () => {
+    expect(projectProductKind("carport", "Betonsockel Carport Terrassenüberdachung 170x170mm")).toBe("foundation");
+    expect(projectProductKind("terrace", "Terrassendielen Massaranduba 580cm (21x145mm)")).toBe("decking");
+  });
   it("recognizes height-first privacy screen rolls", () => expect(parseProjectProductAttributes("privacy-screen", "panel", "Sichtschutzmatte 180 x 300 cm")).toMatchObject({ panelWidthCm: 300, panelHeightCm: 180 }));
 
   it("publishes complete project products as mixed", () => {
