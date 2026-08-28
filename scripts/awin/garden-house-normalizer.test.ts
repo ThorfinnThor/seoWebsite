@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { availability, isGardenHouseCandidate, normalizeGardenHouse, parseDimensions, parsePrice } from "./garden-house-normalizer";
+import { availability, isGardenHouseCandidate, normalizeGardenHouse, parseDimensions, parsePrice, parsePriceFromFields } from "./garden-house-normalizer";
 
 const row = { product_name: "Gartenhaus Modell 300 x 400 cm", merchant_id: "12", merchant_name: "Garten Markt", merchant_product_id: "abc", brand_name: "HausCo", description: "Gartenhaus aus Holz mit Boden im Lieferumfang und Satteldach", search_price: "2.499,00", currency: "EUR", delivery_cost: "49,00", in_stock: "true", aw_deep_link: "https://www.awin1.com/cread.php?x=1", merchant_image_url: "https://img.example/haus.jpg", ean: "4012345678901", last_updated: "2026-08-08T10:00:00Z" };
 
@@ -11,6 +11,7 @@ describe("dimension parsing", () => {
 });
 describe("price parsing", () => {
   it.each([["2.499,00", 2499], ["1,599.00", 1599], ["€ 1,599.00", 1599], ["2499,9", 2499.9]])("parses %s", (raw, expected) => expect(parsePrice(raw)).toBe(expected));
+  it("falls back to another current Awin price field", () => expect(parsePriceFromFields("0", "", "1,599.00")).toBe(1599));
 });
 describe("garden-house normalizer", () => {
   it("treats custom non-empty in_stock flags as available per Awin's feed contract", () => {

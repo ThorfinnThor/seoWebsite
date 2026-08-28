@@ -40,4 +40,9 @@ describe("robot mower normalizer", () => {
     const result = normalizeRobotMower({ ...goat, search_price: "1,599.00" });
     expect(result.offer?.priceEur).toBe(1599);
   });
+
+  it("uses an alternate current price field when search_price is empty", () => {
+    const result = normalizeRobotMower({ ...goat, search_price: "", base_price: "1,599.00" });
+    expect(result.offer?.priceEur).toBe(1599);
+  });
 });

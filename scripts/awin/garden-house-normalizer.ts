@@ -125,6 +125,14 @@ export function parsePrice(raw?: string): number | undefined {
   return Number.isFinite(price) && price > 0 ? price : undefined;
 }
 
+export function parsePriceFromFields(...rawValues: Array<string | undefined>): number | undefined {
+  for (const raw of rawValues) {
+    const price = parsePrice(raw);
+    if (price !== undefined) return price;
+  }
+  return undefined;
+}
+
 function material(text: string): "wood" | "metal" | "plastic" | undefined {
   if (/holz|wood|blockbohle/i.test(text)) return "wood";
   if (/metall|stahl|aluminium|metal/i.test(text)) return "metal";
@@ -191,7 +199,7 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   const affiliateUrl = value(row, "aw_deep_link");
   const merchantUrl = value(row, "merchant_deep_link");
   const currency = (value(row, "currency") ?? "EUR").toUpperCase();
-  const priceEur = parsePrice(value(row, "search_price"));
+  const priceEur = parsePriceFromFields(value(row, "search_price"), value(row, "base_price"), value(row, "store_price"), value(row, "price"));
   const stock = availability(row);
   const issues: string[] = [];
   if (!dimensions) issues.push("missing-or-ambiguous-dimensions");

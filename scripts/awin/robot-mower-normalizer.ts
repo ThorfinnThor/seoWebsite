@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { RobotMowerProductSchema, type RobotMowerProduct } from "@/lib/robot-mower/types";
-import { availability, delivery, isoDate, parsePrice, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /m(?:ä|ae)hroboter|rasenroboter|mowing robot|robot mower|rasenm(?:ä|ae)her|\bgoat\b/i;
@@ -65,7 +65,7 @@ export function normalizeRobotMower(row: RawFeedRow): RobotMowerCandidate {
   const affiliateUrl = value(row, "aw_deep_link");
   const merchantUrl = value(row, "merchant_deep_link");
   const currency = (value(row, "currency") ?? "EUR").toUpperCase();
-  const priceEur = parsePrice(value(row, "search_price"));
+  const priceEur = parsePriceFromFields(value(row, "search_price"), value(row, "base_price"), value(row, "store_price"), value(row, "price"));
   const stock = availability(row);
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
   if (merchantUrl && !merchantUrl.startsWith("https://")) issues.push("missing-or-invalid-merchant-link");

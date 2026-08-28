@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { FlooringProductSchema, type FlooringProduct } from "@/lib/flooring/types";
-import { availability, delivery, isoDate, looksLikeInternalProductCode, parsePrice, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, looksLikeInternalProductCode, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const TYPE_PATTERN = /laminat|vinyl|lvt|rigid|parkett|parquet|bodenbelag|flooring/i;
@@ -63,7 +63,7 @@ export function normalizeFlooring(row: RawFeedRow): FlooringCandidate {
   const affiliateUrl = value(row, "aw_deep_link");
   const merchantUrl = value(row, "merchant_deep_link");
   const currency = (value(row, "currency") ?? "EUR").toUpperCase();
-  const priceEur = parsePrice(value(row, "search_price"));
+  const priceEur = parsePriceFromFields(value(row, "search_price"), value(row, "base_price"), value(row, "store_price"), value(row, "price"));
   const stock = availability(row);
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
   if (merchantUrl && !merchantUrl.startsWith("https://")) issues.push("missing-or-invalid-merchant-link");
