@@ -182,8 +182,16 @@ export function assembleProjectCatalog(candidates: ProjectProductCandidate[], ov
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
   }
-  const reviewedIds = new Set([...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").map((product) => product.id));
-  return ProjectCatalogSchema.parse({ schemaVersion: 1, vertical: "project-products", generatedAt, products: [...productMap.values()].filter((product) => reviewedIds.has(product.id)).sort((a, b) => a.id.localeCompare(b.id)), offers: [...offerMap.values()].filter((offer) => reviewedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });
+  const published = [...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").sort((a, b) => a.vertical.localeCompare(b.vertical) || a.kind.localeCompare(b.kind) || a.id.localeCompare(b.id));
+  const counts = new Map<string, number>();
+  const selected = published.filter((product) => {
+    const count = counts.get(product.vertical) ?? 0;
+    if (count >= 120) return false;
+    counts.set(product.vertical, count + 1);
+    return true;
+  });
+  const selectedIds = new Set(selected.map((product) => product.id));
+  return ProjectCatalogSchema.parse({ schemaVersion: 1, vertical: "project-products", generatedAt, products: selected, offers: [...offerMap.values()].filter((offer) => selectedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });
 }
 
 function buildReviewQueue<TProduct extends ProductBase>(candidates: AffiliateCandidate<TProduct>[], catalog: StaticCatalog<TProduct, OfferBase>, generatedAt: string) {
