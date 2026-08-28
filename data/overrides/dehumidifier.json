@@ -109,6 +109,36 @@
       "tankLiters": 3.7,
       "powerW": 260,
       "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: bis 48 m², 16 l/Tag, 3,7-l-Tank, 260 W und 46 dB(A). Ein dauerhafter Ablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4052138016916",
+      "name": "Trotec Luftentfeuchter TTK 26 E",
+      "brand": "Trotec",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 15,
+      "maxRecommendedVolumeM3": 37,
+      "extractionLPerDay": 10,
+      "continuousDrain": false,
+      "laundryMode": true,
+      "tankLiters": 1.8,
+      "refrigerantType": "R290",
+      "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 15 m² bzw. 37 m³, 10 l/24 h, 1,8-l-Tank, Wäschetrocknungsfunktion und R290. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4052138015117",
+      "name": "Trotec Luftentfeuchter TTK 66 E",
+      "brand": "Trotec",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 50,
+      "maxRecommendedVolumeM3": 125,
+      "extractionLPerDay": 24,
+      "continuousDrain": false,
+      "laundryMode": true,
+      "tankLiters": 3,
+      "refrigerantType": "R290",
+      "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 50 m² bzw. 125 m³, 24 l/24 h, 3-l-Tank, Wäschetrocknungsfunktion und R290. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
     }
   ]
 }
