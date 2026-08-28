@@ -71,7 +71,10 @@ export function normalizeProjectProduct(row: RawFeedRow): AffiliateCandidate<Pro
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category")].filter(Boolean).join(" ");
   const vertical = projectVertical(text);
   if (!vertical) return undefined;
-  const kind = productKind(vertical, text);
+  // Use the product name for the component kind as well. Descriptions often
+  // list compatible accessories and would otherwise turn a complete kit into
+  // a gutter, bracket or fastening item.
+  const kind = productKind(vertical, name);
   const sourceUpdatedAt = isoDate(value(row, "last_updated"));
   const candidateAttributes: Partial<ProjectProduct> = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, vertical, kind, reviewed: false, dataQuality: "feed", sourceUpdatedAt };
   const issues: string[] = [];
