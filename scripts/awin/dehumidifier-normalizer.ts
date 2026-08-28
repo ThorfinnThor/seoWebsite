@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { DehumidifierProductSchema, type DehumidifierProduct } from "@/lib/dehumidifier/types";
-import { availability, delivery, isoDate, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, merchantDetails, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { DehumidifierCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /luftentfeuchter|entfeuchter|dehumidifier|bautrockner|raumtrockner|kondensationstrockner/i;
@@ -40,8 +40,7 @@ export function parseDehumidifierAttributes(text: string): Partial<DehumidifierP
 export function normalizeDehumidifier(row: RawFeedRow): DehumidifierCandidate {
   const named = productDisplayName(row, "Unbenannter Luftentfeuchter");
   const name = named.name;
-  const merchantId = value(row, "merchant_id") ?? "unknown";
-  const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
+  const { merchantId, merchantName } = merchantDetails(row);
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
   const identity = productIdentity(row, merchantId, merchantProductId);
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category")].filter(Boolean).join(" ");

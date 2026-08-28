@@ -1,7 +1,9 @@
 import { createHash } from "node:crypto";
+import merchantRegistry from "@/data/manual/merchants.json";
 import type { GardenHouseCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /gartenhaus|gerätehaus|geraetehaus|gartenschuppen|geräteschuppen|geraeteschuppen|holzhaus|blockbohlenhaus/i;
+const merchantsByAwinId = new Map(merchantRegistry.merchants.map((merchant) => [String(merchant.awinAdvertiserId), merchant]));
 
 export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
   for (const key of keys) {
@@ -9,6 +11,24 @@ export function value(row: RawFeedRow, ...keys: string[]): string | undefined {
     if (found?.trim()) return found.trim();
   }
   return undefined;
+}
+
+export function merchantDetails(row: RawFeedRow): { merchantId: string; merchantName: string } {
+  const feedMerchantId = value(row, "merchant_id");
+  const feedMerchantName = value(row, "merchant_name");
+  let registryMerchant;
+  const affiliateUrl = value(row, "aw_deep_link");
+  if (affiliateUrl) {
+    try {
+      registryMerchant = merchantsByAwinId.get(new URL(affiliateUrl).searchParams.get("awinmid") ?? "");
+    } catch {
+      // Keep the feed values when an advertiser uses a non-standard URL.
+    }
+  }
+  return {
+    merchantId: feedMerchantId ?? registryMerchant?.merchantId ?? "unknown",
+    merchantName: feedMerchantName ?? registryMerchant?.name ?? "Unbekannter Händler",
+  };
 }
 
 export function looksLikeInternalProductCode(name?: string): boolean {
@@ -189,8 +209,7 @@ export function isoDate(raw?: string): string {
 export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   const named = productDisplayName(row, "Unbenanntes Gartenhaus");
   const name = named.name;
-  const merchantId = value(row, "merchant_id") ?? "unknown";
-  const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
+  const { merchantId, merchantName } = merchantDetails(row);
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
   const identity = productIdentity(row, merchantId, merchantProductId);
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category")].filter(Boolean).join(" ");

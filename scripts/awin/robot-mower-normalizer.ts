@@ -1,6 +1,6 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { RobotMowerProductSchema, type RobotMowerProduct } from "@/lib/robot-mower/types";
-import { availability, delivery, isoDate, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { availability, delivery, isoDate, merchantDetails, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /m(?:ä|ae)hroboter|rasenroboter|mowing robot|robot mower|rasenm(?:ä|ae)her|\bgoat\b/i;
@@ -46,8 +46,7 @@ export function parseRobotMowerAttributes(text: string): Partial<RobotMowerProdu
 export function normalizeRobotMower(row: RawFeedRow): RobotMowerCandidate {
   const named = productDisplayName(row, "Unbenannter Mähroboter");
   const name = named.name;
-  const merchantId = value(row, "merchant_id") ?? "unknown";
-  const merchantName = value(row, "merchant_name") ?? "Unbekannter Händler";
+  const { merchantId, merchantName } = merchantDetails(row);
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
   const identity = productIdentity(row, merchantId, merchantProductId);
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category"), value(row, "product_short_description")].filter(Boolean).join(" ");
