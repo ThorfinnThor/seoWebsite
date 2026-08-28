@@ -36,7 +36,7 @@ function productKind(vertical: ProjectVertical, text: string): ProjectProductKin
     if (/bewässer|bewaesser|tropf/i.test(text)) return "irrigation";
     if (/tisch|regal|bank/i.test(text)) return "bench";
     if (/schatt|frostschutz/i.test(text)) return "shade";
-    if (/fundament|basisrahmen|sockel/i.test(text)) return "base";
+    if (/fundament|basisrahmen|sockel/i.test(text) && !/gewächshaus|gewaechshaus|folienhaus|greenhouse/i.test(text)) return "base";
     return "kit";
   }
   if (vertical === "terrace") {
@@ -71,12 +71,16 @@ export function normalizeProjectProduct(row: RawFeedRow): AffiliateCandidate<Pro
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category")].filter(Boolean).join(" ");
   const vertical = projectVertical(text);
   if (!vertical) return undefined;
+  // A shared GTIN can occur with variant rows from different project feeds.
+  // Scope the ID by planner area so one feed cannot overwrite another area's
+  // product metadata during catalog assembly.
+  const id = `project:${vertical}:${identity.id}`;
   // Use the product name for the component kind as well. Descriptions often
   // list compatible accessories and would otherwise turn a complete kit into
   // a gutter, bracket or fastening item.
   const kind = productKind(vertical, name);
   const sourceUpdatedAt = isoDate(value(row, "last_updated"));
-  const candidateAttributes: Partial<ProjectProduct> = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, vertical, kind, reviewed: false, dataQuality: "feed", sourceUpdatedAt };
+  const candidateAttributes: Partial<ProjectProduct> = { id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, vertical, kind, reviewed: false, dataQuality: "feed", sourceUpdatedAt };
   const issues: string[] = [];
   if (named.opaque) issues.push("unhelpful-product-name");
   const productResult = ProjectProductSchema.safeParse(candidateAttributes);
@@ -93,10 +97,10 @@ export function normalizeProjectProduct(row: RawFeedRow): AffiliateCandidate<Pro
   if (stock.ambiguous) issues.push("ambiguous-stock");
   const imageUrl = value(row, "large_image", "merchant_image_url");
   const offer: OfferBase | undefined = productResult.success && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur ? {
-    id: `offer:${slug(merchantId)}:${slug(merchantProductId)}`, productId: identity.id, merchantId, merchantName, merchantProductId, priceEur,
+    id: `offer:${slug(merchantId)}:${slug(merchantProductId)}:${slug(vertical)}`, productId: id, merchantId, merchantName, merchantProductId, priceEur,
     ...delivery(value(row, "delivery_cost")), available: stock.available, affiliateUrl,
     ...(merchantUrl?.startsWith("https://") ? { merchantUrl } : {}),
     imageUrl: imageUrl?.startsWith("https://") ? imageUrl : undefined, updatedAt: sourceUpdatedAt,
   } : undefined;
-  return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product: productResult.success ? productResult.data : undefined, offer, merchantProductUrl: merchantUrl ?? affiliateUrl, imageUrl, issues };
+  return { id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product: productResult.success ? productResult.data : undefined, offer, merchantProductUrl: merchantUrl ?? affiliateUrl, imageUrl, issues };
 }
