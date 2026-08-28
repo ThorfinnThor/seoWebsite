@@ -147,6 +147,54 @@
       "floorHeatingApproved": true,
       "wetRoomApproved": true,
       "reviewNote": "LaminatDEPOT product page checked 2026-08-25: package coverage, dimensions, thickness, click installation, floor-heating and wet-room claims verified."
+    },
+    {
+      "id": "gtin:4042456913943",
+      "name": "Laminat Muskat Oak braun",
+      "brand": "BoDomo",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "flooringType": "laminate",
+      "installation": "click",
+      "packageCoverageM2": 2.26,
+      "plankLengthMm": 1285,
+      "plankWidthMm": 192,
+      "thicknessMm": 8,
+      "floorHeatingApproved": true,
+      "wetRoomApproved": false,
+      "reviewNote": "LaminatDEPOT product page checked 2026-08-28: 2.26 m² package, 1285 × 192 × 8 mm, click installation, AC4, floor-heating approval and explicit non-suitability for wet rooms verified."
+    },
+    {
+      "id": "gtin:4262445635933",
+      "name": "Premium Laminat Fischgrät Eiche natur, 12 mm",
+      "brand": "Woodstore24",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "flooringType": "laminate",
+      "installation": "click",
+      "packageCoverageM2": 1.836,
+      "plankLengthMm": 606,
+      "plankWidthMm": 101,
+      "thicknessMm": 12,
+      "floorHeatingApproved": true,
+      "reviewNote": "Woodstore24 product page checked 2026-08-28: 1.836 m² package, 606 × 101 × 12 mm, click connection, AC4 and floor-heating approval verified; page marked the item as in stock."
+    },
+    {
+      "id": "gtin:4260749177579",
+      "name": "SPC Klick-Vinyl Eiche Royal, 6,5 mm",
+      "brand": "Woodstore24",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "flooringType": "vinyl-click",
+      "installation": "click",
+      "packageCoverageM2": 1.7374,
+      "plankLengthMm": 1524,
+      "plankWidthMm": 228,
+      "thicknessMm": 6.5,
+      "wearLayerMm": 0.5,
+      "floorHeatingApproved": true,
+      "wetRoomApproved": true,
+      "reviewNote": "Woodstore24 product page checked 2026-08-28: 1.7374 m² package, 1524 × 228 × 6.5 mm, 0.5 mm wear layer, click connection, floor-heating and wet-room suitability verified; page marked the item as in stock."
     }
   ]
 }

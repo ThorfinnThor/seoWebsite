@@ -68,6 +68,27 @@
       "kind": "sprinkler",
       "systemId": "GARDENA Pipeline",
       "reviewNote": "Globus-Baumarkt-Produktseite und Awin-Feed geprüft am 2026-08-25: Pipeline-Startset mit Viereckregner und 3/4-Zoll-Innengewinde für den Aufbau einer festen Gartenbewässerung."
+    },
+    {
+      "id": "gtin:4078500031752",
+      "name": "GARDENA Premium Hahnverbinder 26,5 mm (G 3/4\")",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "connector",
+      "systemId": "GARDENA Original System",
+      "pipeDiameterMm": 26.5,
+      "reviewNote": "GARDENA product page checked 2026-08-28: product 18241-50, GTIN 4078500031752, metal tap connector for 26.5 mm (G 3/4) threads, frost protection and five-year manufacturer warranty verified."
+    },
+    {
+      "id": "gtin:4078500293105",
+      "name": "GARDENA Kupplung 2931-20",
+      "brand": "Gardena",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "connector",
+      "systemId": "GARDENA Original System",
+      "reviewNote": "GARDENA product page checked 2026-08-28: product 2931-20, GTIN 4078500293105, hose-extension coupling for hose repair, frost protection and five-year manufacturer warranty verified."
     }
   ]
 }
