@@ -4,7 +4,7 @@ import { availability, delivery, isoDate, merchantDetails, parsePriceFromFields,
 import type { IrrigationCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /bewässer|bewaesser|tropf|regner|sprinkler|gartenschlauch|magnetventil|druckminder|bodenfeuchte|regensensor|bewässerungscomputer|bewaesserungscomputer/i;
-const EXCLUDED_PATTERN = /dachfenster|wohndachfenster|fensterantrieb|rollladen|rolladen|roto\s+regensensor/i;
+const EXCLUDED_PATTERN = /aquarium|aquaristik|teich|pool|solardusche|dachrinne|cleansystem|dachfenster|wohndachfenster|fensterantrieb|rollladen|rolladen|roto\s+regensensor|therm\s*block|kompressor|heißluft|heissluft/i;
 
 export function isIrrigationCandidate(row: RawFeedRow): boolean {
   const text = [value(row, "product_name"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path"), value(row, "description")].filter(Boolean).join(" ");

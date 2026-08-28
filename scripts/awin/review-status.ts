@@ -42,4 +42,4 @@ const merchants = await json<MerchantConfig>("data/manual/merchants.json");
 const statuses = new Map<string, number>();
 for (const merchant of merchants.merchants ?? []) statuses.set(merchant.applicationStatus, (statuses.get(merchant.applicationStatus) ?? 0) + 1);
 console.log(`\nAwin-Programme: ${[...statuses.entries()].map(([status, count]) => `${count} ${status}`).join(", ") || "keine"}`);
-console.log("Freigabe-Regel: Feed-Daten bleiben unsichtbar, bis ein Override reviewed=true und dataQuality=mixed oder curated setzt.\n");
+console.log("Freigabe-Regel: Vollständige Feed-Produkte mit gültigem Angebot werden automatisch als mixed veröffentlicht; Kandidaten mit Parser-Hinweisen benötigen weiterhin einen Override.\n");

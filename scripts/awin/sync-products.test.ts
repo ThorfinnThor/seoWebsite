@@ -11,10 +11,11 @@ describe("feed pipeline assembly", () => {
     for await (const fixtureRow of parseFeedStream(createReadStream("tests/fixtures/awin/garden-house.csv"))) candidates.push(normalizeGardenHouse(fixtureRow));
     const catalog = assembleGardenHouseCatalog(candidates, [{ id: "gtin:4012345678901", reviewed: true, dataQuality: "curated" }], "2026-08-09T00:00:00.000Z");
     expect(candidates).toHaveLength(2);
-    expect(catalog.products).toHaveLength(1);
+    expect(catalog.products).toHaveLength(2);
     expect(catalog.offers[0]).toMatchObject({ productId: "gtin:4012345678901", available: true });
   });
-  it("keeps feed-only products out of the public catalog", () => expect(assembleGardenHouseCatalog([normalizeGardenHouse(row)], [], "2026-08-09T00:00:00.000Z").products).toHaveLength(0));
+  it("publishes complete feed products as mixed", () => expect(assembleGardenHouseCatalog([normalizeGardenHouse(row)], [], "2026-08-09T00:00:00.000Z").products[0]).toMatchObject({ reviewed: true, dataQuality: "mixed" }));
+  it("keeps incomplete feed products out of the public catalog", () => expect(assembleGardenHouseCatalog([normalizeGardenHouse({ ...row, product_name: "Gartenhaus 300 x 400 cm", description: "Gartenhaus" })], [], "2026-08-09T00:00:00.000Z").products).toHaveLength(0));
   it("publishes product and offer only after a curated override", () => { const catalog = assembleGardenHouseCatalog([normalizeGardenHouse(row)], [{ id: "gtin:4012345678901", reviewed: true, dataQuality: "curated" }], "2026-08-09T00:00:00.000Z"); expect(catalog.products).toHaveLength(1); expect(catalog.offers).toHaveLength(1); });
   it("ignores volatile timestamps when detecting no-change output", () => expect(substantiveEqual({ generatedAt: "a", products: [{ id: "1", updatedAt: "a" }] }, { generatedAt: "b", products: [{ id: "1", updatedAt: "b" }] })).toBe(true));
   it("keeps direct grouped configurations scoped to their requested verticals", () => {

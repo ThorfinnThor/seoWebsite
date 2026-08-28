@@ -76,13 +76,20 @@ function applyFlooringOverride(product: FlooringProduct, override?: FlooringOver
   return override ? FlooringProductSchema.parse({ ...product, ...publicOverride(override), id: product.id }) : product;
 }
 
+function autoReviewCompleteFeedProduct<TProduct extends ProductBase>(product: TProduct, candidate: AffiliateCandidate<TProduct>, hasOverride: boolean): TProduct {
+  return !hasOverride && candidate.offer && candidate.issues.length === 0
+    ? { ...product, reviewed: true, dataQuality: "mixed" }
+    : product;
+}
+
 export function assembleGardenHouseCatalog(candidates: GardenHouseCandidate[], overrides: ProductOverride[], generatedAt: string): GardenHouseCatalog {
   const overrideMap = new Map(overrides.map((override) => [override.id, override]));
   const productMap = new Map<string, GardenHouseProduct>();
   const offerMap = new Map<string, GardenHouseOffer>();
   for (const candidate of candidates) {
     if (!candidate.product) continue;
-    const product = applyGardenOverride(candidate.product, overrideMap.get(candidate.id));
+    const override = overrideMap.get(candidate.id);
+    const product = autoReviewCompleteFeedProduct(applyGardenOverride(candidate.product, override), candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
@@ -97,7 +104,8 @@ export function assembleDehumidifierCatalog(candidates: DehumidifierCandidate[],
   const offerMap = new Map<string, OfferBase>();
   for (const candidate of candidates) {
     if (!candidate.product) continue;
-    const product = applyDehumidifierOverride(candidate.product, overrideMap.get(candidate.id));
+    const override = overrideMap.get(candidate.id);
+    const product = autoReviewCompleteFeedProduct(applyDehumidifierOverride(candidate.product, override), candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
@@ -112,7 +120,8 @@ export function assembleIrrigationCatalog(candidates: IrrigationCandidate[], ove
   const offerMap = new Map<string, OfferBase>();
   for (const candidate of candidates) {
     if (!candidate.product) continue;
-    const product = applyIrrigationOverride(candidate.product, overrideMap.get(candidate.id));
+    const override = overrideMap.get(candidate.id);
+    const product = autoReviewCompleteFeedProduct(applyIrrigationOverride(candidate.product, override), candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
@@ -127,7 +136,8 @@ export function assembleRobotMowerCatalog(candidates: RobotMowerCandidate[], ove
   const offerMap = new Map<string, OfferBase>();
   for (const candidate of candidates) {
     if (!candidate.product) continue;
-    const product = applyRobotMowerOverride(candidate.product, overrideMap.get(candidate.id));
+    const override = overrideMap.get(candidate.id);
+    const product = autoReviewCompleteFeedProduct(applyRobotMowerOverride(candidate.product, override), candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
@@ -142,7 +152,8 @@ export function assembleFlooringCatalog(candidates: FlooringCandidate[], overrid
   const offerMap = new Map<string, OfferBase>();
   for (const candidate of candidates) {
     if (!candidate.product) continue;
-    const product = applyFlooringOverride(candidate.product, overrideMap.get(candidate.id));
+    const override = overrideMap.get(candidate.id);
+    const product = autoReviewCompleteFeedProduct(applyFlooringOverride(candidate.product, override), candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);

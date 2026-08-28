@@ -20,7 +20,8 @@ const row = {
 
 describe("dehumidifier feed normalization", () => {
   it("extracts capacity and operating facts", () => expect(parseDehumidifierAttributes(`${row.product_name} ${row.description}`)).toMatchObject({ maxRecommendedAreaM2: 50, extractionLPerDay: 20, minOperatingTempC: 5, maxOperatingTempC: 35, continuousDrain: true, laundryMode: true, noiseDb: 42, powerW: 320 }));
-  it("keeps a feed candidate private until review", () => expect(assembleDehumidifierCatalog([normalizeDehumidifier(row)], [], "2026-08-16T00:00:00.000Z").products).toHaveLength(0));
+  it("publishes a complete feed candidate as mixed", () => expect(assembleDehumidifierCatalog([normalizeDehumidifier(row)], [], "2026-08-16T00:00:00.000Z").products[0]).toMatchObject({ reviewed: true, dataQuality: "mixed" }));
+  it("keeps a candidate with unresolved drainage private", () => expect(assembleDehumidifierCatalog([normalizeDehumidifier({ ...row, description: "Leiser Luftentfeuchter" })], [], "2026-08-16T00:00:00.000Z").products).toHaveLength(0));
   it("publishes only after an explicit curated override", () => {
     const catalog = assembleDehumidifierCatalog([normalizeDehumidifier(row)], [{ id: "gtin:4012345678902", reviewed: true, dataQuality: "curated", reviewNote: "Manufacturer data checked" }], "2026-08-16T00:00:00.000Z");
     expect(catalog.products).toHaveLength(1);

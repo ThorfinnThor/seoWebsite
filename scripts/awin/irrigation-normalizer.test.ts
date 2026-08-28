@@ -23,8 +23,12 @@ describe("irrigation feed normalization", () => {
   it("excludes roof-window rain sensors from garden irrigation", () => {
     expect(isIrrigationCandidate({ product_name: "Roto Regensensor ZEL STG RS 24 V", merchant_category: "Dachfenster Zubehör", description: "Regensensor am Wohndachfenster" })).toBe(false);
   });
+  it("excludes aquarium accessories from garden irrigation", () => {
+    expect(isIrrigationCandidate({ product_name: "Aquariumzubehör Rücklaufsicherung", category_name: "Aquaristik", description: "für Aquariumfilter" })).toBe(false);
+  });
   it("extracts controller capacity and compatibility", () => expect(parseIrrigationAttributes(`${row.product_name} ${row.description}`)).toMatchObject({ kind: "controller", maxZones: 6, smartCompatible: true, systemId: "AquaLine" }));
-  it("keeps feed products private until manual review", () => expect(assembleIrrigationCatalog([normalizeIrrigation(row)], [], "2026-08-16T00:00:00.000Z").products).toHaveLength(0));
+  it("publishes complete feed products as mixed", () => expect(assembleIrrigationCatalog([normalizeIrrigation(row)], [], "2026-08-16T00:00:00.000Z").products[0]).toMatchObject({ reviewed: true, dataQuality: "mixed" }));
+  it("keeps products without compatibility data private", () => expect(assembleIrrigationCatalog([normalizeIrrigation({ ...row, description: "Bewässerungscomputer 6 Zonen" })], [], "2026-08-16T00:00:00.000Z").products).toHaveLength(0));
   it("publishes a reviewed compatible product and offer", () => {
     const catalog = assembleIrrigationCatalog([normalizeIrrigation(row)], [{ id: "gtin:4012345678903", reviewed: true, dataQuality: "curated", reviewNote: "System and zones checked" }], "2026-08-16T00:00:00.000Z");
     expect(catalog.products[0]).toMatchObject({ kind: "controller", maxZones: 6, systemId: "AquaLine" });
