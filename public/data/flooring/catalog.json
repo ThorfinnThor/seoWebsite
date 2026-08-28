@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T17:18:11.915Z",
+  "generatedAt": "2026-08-28T11:08:19.987Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45072840279&a=3037577&m=11830",
@@ -14,7 +14,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/classen-vinylboden-ceramin-vita-oak-0780404009/",
       "priceEur": 44.48,
       "productId": "gtin:4003992646481",
-      "updatedAt": "2026-08-27T17:18:03.463Z"
+      "updatedAt": "2026-08-28T11:08:07.600Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=42515492153&a=3037577&m=11830",
@@ -29,7 +29,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/vinylboden-fliesenoptik-aosta-0780403937/",
       "priceEur": 37.93,
       "productId": "gtin:4260603939787",
-      "updatedAt": "2026-08-27T17:18:01.540Z"
+      "updatedAt": "2026-08-28T11:08:05.115Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=41039640961&a=3037577&m=11830",
@@ -44,7 +44,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/krono-original-laminat-wheat-cornforth-oak-eiche-0780403857/",
       "priceEur": 36.89,
       "productId": "gtin:4042456597297",
-      "updatedAt": "2026-08-27T17:18:00.477Z"
+      "updatedAt": "2026-08-28T11:08:03.751Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291511&a=3037577&m=48707",
@@ -58,7 +58,7 @@
       "merchantUrl": "https://woodstore24.de/premium-3d-7-mm-fischgrat-klick-vinyl-spc-mit-antibakterieller-trittschalldammung-eiche-grau-592-x-148-mm-0-55-mm-nutzschicht-1-40-m-paket.html",
       "priceEur": 41.3,
       "productId": "gtin:4262551037812",
-      "updatedAt": "2026-08-27T17:18:10.998Z"
+      "updatedAt": "2026-08-28T11:08:19.485Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291512&a=3037577&m=48707",
@@ -72,7 +72,7 @@
       "merchantUrl": "https://woodstore24.de/premium-3d-7-mm-fischgrat-klick-vinyl-spc-mit-antibakterieller-trittschalldammung-eiche-dunkel-592-x-148-mm-0-55-mm-nutzschicht-1-40-m-paket.html",
       "priceEur": 41.3,
       "productId": "gtin:4262551037829",
-      "updatedAt": "2026-08-27T17:18:10.998Z"
+      "updatedAt": "2026-08-28T11:08:19.485Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291514&a=3037577&m=48707",
@@ -86,7 +86,35 @@
       "merchantUrl": "https://woodstore24.de/premium-3d-7-5-mm-klick-vinyl-spc-mit-antibakterieller-trittschalldammung-eiche-gerauchert-1218-x-228-mm-0-55-mm-nutzschicht-1-67-m-paket.html",
       "priceEur": 47.6,
       "productId": "gtin:4262551037843",
-      "updatedAt": "2026-08-27T17:18:10.998Z"
+      "updatedAt": "2026-08-28T11:08:19.486Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968292446&a=3037577&m=48707",
+      "available": true,
+      "deliveryCostStatus": "unknown",
+      "id": "offer:48707:6596",
+      "imageUrl": "https://woodstore24.de/media/catalog/product/v/i/vijd6.5_xl032.1.jpg",
+      "merchantId": "48707",
+      "merchantName": "Woodstore24 DE/AT",
+      "merchantProductId": "6596",
+      "merchantUrl": "https://woodstore24.de/6-5-mm-klick-vinyl-spc-mit-integrierter-trittschalldammung-xl-holzoptik-eiche-royal-6-5-s-x-228-b-x-1524-l-mm-1-7374-m-paket.html",
+      "priceEur": 38.05,
+      "productId": "gtin:4260749177579",
+      "updatedAt": "2026-08-28T11:08:19.631Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44968291892&a=3037577&m=48707",
+      "available": true,
+      "deliveryCostStatus": "unknown",
+      "id": "offer:48707:8995",
+      "imageUrl": "https://woodstore24.de/media/catalog/product/l/j/ljdlh121.1_1.jpg",
+      "merchantId": "48707",
+      "merchantName": "Woodstore24 DE/AT",
+      "merchantProductId": "8995",
+      "merchantUrl": "https://woodstore24.de/premium-laminat-fischgrat-eiche-natur-12-mm-stark-abriebklasse-ac4-1-836-m-pro-paket.html",
+      "priceEur": 36.63,
+      "productId": "gtin:4262445635933",
+      "updatedAt": "2026-08-28T11:08:19.537Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44988021359&a=3037577&m=69012",
@@ -101,7 +129,22 @@
       "merchantUrl": "https://laminatdepot.de/lisbonloft-100016084",
       "priceEur": 91.14,
       "productId": "gtin:4017268405825",
-      "updatedAt": "2026-08-27T17:18:11.614Z"
+      "updatedAt": "2026-08-28T11:08:19.891Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=45577309415&a=3037577&m=69012",
+      "available": true,
+      "deliveryCostEur": 19.99,
+      "deliveryCostStatus": "known",
+      "id": "offer:69012:100029315",
+      "imageUrl": "https://laminatdepot.imgix.net/INTERSHOP/static/WFS/LaminatDEPOT-ConsumerDE-Site/-/LaminatDEPOT/de_DE//2023121814/100029315_Laminat BoDomo Premium Muskat Oak braun_LaminatDEPOT_1.jpg?auto=format&w=1300&h=1300&fit=crop",
+      "merchantId": "69012",
+      "merchantName": "LaminatDEPOT DE",
+      "merchantProductId": "100029315",
+      "merchantUrl": "https://laminatdepot.de/laminat-bodomo-premium-muskat-oak-braun-100029315",
+      "priceEur": 17.63,
+      "productId": "gtin:4042456913943",
+      "updatedAt": "2026-08-28T11:08:19.928Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44988021368&a=3037577&m=69012",
@@ -116,7 +159,7 @@
       "merchantUrl": "https://laminatdepot.de/30kn04-100032252",
       "priceEur": 32.96,
       "productId": "gtin:4032271222467",
-      "updatedAt": "2026-08-27T17:18:11.615Z"
+      "updatedAt": "2026-08-28T11:08:19.892Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44988021388&a=3037577&m=69012",
@@ -131,7 +174,7 @@
       "merchantUrl": "https://laminatdepot.de/atlas-natur-100032900",
       "priceEur": 73.24,
       "productId": "gtin:4262525144379",
-      "updatedAt": "2026-08-27T17:18:11.712Z"
+      "updatedAt": "2026-08-28T11:08:19.895Z"
     }
   ],
   "products": [
@@ -149,7 +192,7 @@
       "plankLengthMm": 1290,
       "plankWidthMm": 203,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:03.463Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:07.600Z",
       "thicknessMm": 4,
       "wetRoomApproved": true
     },
@@ -166,7 +209,7 @@
       "plankLengthMm": 1507,
       "plankWidthMm": 234,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:11.614Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:19.891Z",
       "thicknessMm": 5,
       "wearLayerMm": 0.4,
       "wetRoomApproved": true
@@ -184,7 +227,7 @@
       "plankLengthMm": 1380,
       "plankWidthMm": 193,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:11.615Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:19.892Z",
       "thicknessMm": 5.5,
       "wetRoomApproved": true
     },
@@ -202,9 +245,26 @@
       "plankLengthMm": 1290,
       "plankWidthMm": 245,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:00.477Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:03.751Z",
       "thicknessMm": 7,
       "wetRoomApproved": true
+    },
+    {
+      "brand": "BoDomo",
+      "dataQuality": "curated",
+      "floorHeatingApproved": true,
+      "flooringType": "laminate",
+      "gtin": "4042456913943",
+      "id": "gtin:4042456913943",
+      "installation": "click",
+      "name": "Laminat Muskat Oak braun",
+      "packageCoverageM2": 2.26,
+      "plankLengthMm": 1285,
+      "plankWidthMm": 192,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T11:08:19.928Z",
+      "thicknessMm": 8,
+      "wetRoomApproved": false
     },
     {
       "brand": "Decoflooring",
@@ -220,10 +280,44 @@
       "plankLengthMm": 610,
       "plankWidthMm": 305,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:01.540Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:05.115Z",
       "thicknessMm": 3.5,
       "wearLayerMm": 0.2,
       "wetRoomApproved": true
+    },
+    {
+      "brand": "Woodstore24",
+      "dataQuality": "curated",
+      "floorHeatingApproved": true,
+      "flooringType": "vinyl-click",
+      "gtin": "4260749177579",
+      "id": "gtin:4260749177579",
+      "installation": "click",
+      "name": "SPC Klick-Vinyl Eiche Royal, 6,5 mm",
+      "packageCoverageM2": 1.7374,
+      "plankLengthMm": 1524,
+      "plankWidthMm": 228,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T11:08:19.631Z",
+      "thicknessMm": 6.5,
+      "wearLayerMm": 0.5,
+      "wetRoomApproved": true
+    },
+    {
+      "brand": "Woodstore24",
+      "dataQuality": "curated",
+      "floorHeatingApproved": true,
+      "flooringType": "laminate",
+      "gtin": "4262445635933",
+      "id": "gtin:4262445635933",
+      "installation": "click",
+      "name": "Premium Laminat Fischgrät Eiche natur, 12 mm",
+      "packageCoverageM2": 1.836,
+      "plankLengthMm": 606,
+      "plankWidthMm": 101,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T11:08:19.537Z",
+      "thicknessMm": 12
     },
     {
       "brand": "BoDomo",
@@ -238,7 +332,7 @@
       "plankLengthMm": 1218,
       "plankWidthMm": 228,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:11.712Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:19.895Z",
       "thicknessMm": 5,
       "wearLayerMm": 0.4,
       "wetRoomApproved": true
@@ -256,7 +350,7 @@
       "plankLengthMm": 592,
       "plankWidthMm": 148,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:10.998Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:19.485Z",
       "thicknessMm": 7,
       "wearLayerMm": 0.55
     },
@@ -273,7 +367,7 @@
       "plankLengthMm": 592,
       "plankWidthMm": 148,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:10.998Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:19.485Z",
       "thicknessMm": 7,
       "wearLayerMm": 0.55
     },
@@ -290,7 +384,7 @@
       "plankLengthMm": 1218,
       "plankWidthMm": 228,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:10.998Z",
+      "sourceUpdatedAt": "2026-08-28T11:08:19.486Z",
       "thicknessMm": 7.5,
       "wearLayerMm": 0.55
     }
