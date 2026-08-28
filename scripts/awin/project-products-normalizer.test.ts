@@ -29,6 +29,7 @@ describe("project product feed normalization", () => {
   it("rejects adjacent accessories that do not belong in the planner catalog", () => {
     expect(isProjectProductCandidate({ product_name: "Ersatzdocht für Gewächshausheizung" })).toBe(false);
     expect(isProjectProductCandidate({ product_name: "Hand-Stichsäge für Gipskartonplatten" })).toBe(false);
+    expect(isProjectProductCandidate({ product_name: "Metall- und Holzdetektor für Trockenbauplatten" })).toBe(false);
   });
 
   it("normalizes a real product with a valid affiliate offer", () => {

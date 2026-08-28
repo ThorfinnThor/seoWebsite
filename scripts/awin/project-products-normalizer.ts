@@ -23,7 +23,7 @@ export function isProjectProductCandidate(row: RawFeedRow): boolean {
   const vertical = projectVertical(name);
   if (!vertical) return false;
   if (vertical === "greenhouse" && /ersatzdocht|gewächshausheizung|gewaechshausheizung|paraffinheizung/i.test(name)) return false;
-  if (vertical === "drywall" && (/säge|saege|bohrer|schleifer|bit|fräs|fraes|lochrandsenker|tauchsäge|werkzeug/i.test(name) || !/gipskartonplatte|gipsfaserplatte|rigipsplatte|trockenbauplatte|cw[- ]?profil|uw[- ]?profil|trockenbauprofil|fugenspachtel|fugenband|mineralwolle|trennwandband|trockenbauwand/i.test(name))) return false;
+  if (vertical === "drywall" && (/säge|saege|bohrer|schleifer|bit|fräs|fraes|lochrandsenker|tauchsäge|werkzeug|detektor|messgerät|messgeraet/i.test(name) || !/gipskartonplatte|gipsfaserplatte|rigipsplatte|trockenbauplatte|cw[- ]?profil|uw[- ]?profil|trockenbauprofil|fugenspachtel|fugenband|mineralwolle|trennwandband|trockenbauwand/i.test(name))) return false;
   return true;
 }
 
