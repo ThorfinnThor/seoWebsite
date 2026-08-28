@@ -133,8 +133,9 @@ The importer selects only joined German feeds from that list, allows only Awin p
 }
 ```
 5. In GitHub open **Actions → Sync affiliate product feeds → Run workflow**.
-6. Review new candidates under `data/review/` or run `npm run review:products` for a compact status. The importer now recognizes garden houses, dehumidifiers, irrigation components, robot mowers and flooring. Only products explicitly marked `reviewed: true` with `dataQuality: "mixed"` or `"curated"` in the matching override file can enter a public catalog.
-7. Keep the schedule disabled until at least one manual import and link test has succeeded. Only then create the GitHub repository variable `AWIN_FEED_SCHEDULE_ENABLED` with value `true`.
+6. Review new candidates under `data/review/` or run `npm run review:products` for a compact status. The importer recognizes all supported calculator verticals. Products enter a public catalog only after the required technical fields and semantic, price, dimension, stock and affiliate-link checks pass; curated overrides are still required where feed data cannot confirm an important property.
+7. Run `npm run verify:merchant-links -- --write`. The scheduled workflow performs the same redirect, target-domain and product-identity check automatically after every feed sync.
+8. Keep the schedule disabled until at least one manual import and link test has succeeded. Only then create the GitHub repository variable `AWIN_FEED_SCHEDULE_ENABLED` with value `true`.
 
 Never add Awin keys, feed download URLs or API tokens to Vercel, `.env.example`, `public/` or committed source files.
 

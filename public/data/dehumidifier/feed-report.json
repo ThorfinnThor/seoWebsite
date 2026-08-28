@@ -7,13 +7,27 @@
     "missing-capacity": 352,
     "unconfirmed-drainage": 353
   },
-  "merchants": {},
+  "merchants": {
+    "Globus Baumarkt DE": 12,
+    "Trotec DACH": 6
+  },
   "normalizedProducts": 380,
-  "offers": 380,
+  "offers": 18,
   "reviewedProducts": 18,
   "reviewQueue": 362,
   "rows": 170710,
   "schemaVersion": 1,
   "sourceFeeds": 7,
-  "successfulFeeds": 7
+  "successfulFeeds": 7,
+  "publishedProducts": 18,
+  "quarantinedProducts": 0,
+  "productsWithoutOffers": 0,
+  "priceStatsEur": {
+    "min": 34.99,
+    "median": 214.495,
+    "max": 529.99
+  },
+  "linkVerification": {
+    "unknown": 18
+  }
 }

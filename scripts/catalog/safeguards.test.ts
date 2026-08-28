@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { assertCatalogSafe } from "./safeguards";
+import { assertCatalogPayloadSafe, assertCatalogSafe } from "./safeguards";
+import type { IrrigationCatalog } from "@/lib/irrigation/types";
 import type { GardenHouseCatalog } from "@/lib/garden-house/types";
 
 function catalog(productCount: number, offerCount: number): GardenHouseCatalog {
@@ -12,4 +13,13 @@ describe("catalog safeguards", () => {
   it("rejects a reviewed-product regression above 20 percent", () => expect(() => assertCatalogSafe(catalog(7, 7), catalog(10, 10))).toThrow(/Reviewed products regressed/));
   it("rejects an offer regression above 40 percent", () => expect(() => assertCatalogSafe(catalog(20, 11), catalog(20, 20))).toThrow(/Offers regressed/));
   it("rejects a configured feed URL in public output", () => { const next = catalog(1, 1); next.offers[0].affiliateUrl = "https://secret.example/feed.csv?token=abc"; expect(() => assertCatalogSafe(next, undefined, [next.offers[0].affiliateUrl])).toThrow(/configured feed URL/); });
+  it("rejects prices outside the vertical range", () => { const next = catalog(1, 1); next.offers[0].priceEur = 1_000_000; expect(() => assertCatalogSafe(next)).toThrow(/suspicious price/); });
+  it("rejects implausible dimensions", () => {
+    const next = { schemaVersion: 1, vertical: "project-products", generatedAt: "2026-08-28T00:00:00.000Z", products: [{ id: "board", name: "Terrassendiele", reviewed: true, dataQuality: "curated" as const, vertical: "terrace", kind: "decking", boardLengthMm: 13 }], offers: [] };
+    expect(() => assertCatalogPayloadSafe(next)).toThrow(/suspicious dimension/);
+  });
+  it("rejects reviewed irrigation semantic mismatches", () => {
+    const irrigation: IrrigationCatalog = { schemaVersion: 1, vertical: "irrigation", generatedAt: "2026-08-28T00:00:00.000Z", products: [{ id: "tank", name: "ACO Zisterne Regenwassertank", reviewed: true, dataQuality: "curated", kind: "filter" }], offers: [] };
+    expect(() => assertCatalogPayloadSafe(irrigation)).toThrow(/semantic mismatch/);
+  });
 });

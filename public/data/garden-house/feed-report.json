@@ -7,7 +7,9 @@
     "missing-material": 94,
     "missing-or-ambiguous-dimensions": 279
   },
-  "merchants": {},
+  "merchants": {
+    "Globus Baumarkt DE": 393
+  },
   "normalizedProducts": 393,
   "offers": 393,
   "reviewedProducts": 393,
@@ -15,5 +17,16 @@
   "rows": 170710,
   "schemaVersion": 1,
   "sourceFeeds": 7,
-  "successfulFeeds": 7
+  "successfulFeeds": 7,
+  "publishedProducts": 393,
+  "quarantinedProducts": 0,
+  "productsWithoutOffers": 0,
+  "priceStatsEur": {
+    "min": 229,
+    "median": 4399,
+    "max": 19899
+  },
+  "linkVerification": {
+    "unknown": 393
+  }
 }

@@ -26,6 +26,13 @@ describe("irrigation feed normalization", () => {
   it("excludes aquarium accessories from garden irrigation", () => {
     expect(isIrrigationCandidate({ product_name: "Aquariumzubehör Rücklaufsicherung", category_name: "Aquaristik", description: "für Aquariumfilter" })).toBe(false);
   });
+  it.each([
+    { product_name: "Canopia Terrassendach 1275 x 400 cm", description: "mit Regensensor" },
+    { product_name: "Einhell PICOBELLA Oberflächenbürste", description: "mit Wasseranschluss" },
+    { product_name: "Gardena Klarwasser-Tauchpumpe 11000 Aquasensor", merchant_category: "Gartenbewässerung" },
+    { product_name: "ACO Rain4me Zisterne Regenwassertank", description: "mit Filterpaket" },
+  ])("rejects known false positive $product_name", (candidate) => expect(isIrrigationCandidate(candidate)).toBe(false));
+  it("does not infer a kind from a description-only keyword", () => expect(irrigationKind("ACO Zisterne")).toBeUndefined());
   it("extracts controller capacity and compatibility", () => expect(parseIrrigationAttributes(`${row.product_name} ${row.description}`)).toMatchObject({ kind: "controller", maxZones: 6, smartCompatible: true, systemId: "AquaLine" }));
   it("publishes complete feed products as mixed", () => expect(assembleIrrigationCatalog([normalizeIrrigation(row)], [], "2026-08-16T00:00:00.000Z").products[0]).toMatchObject({ reviewed: true, dataQuality: "mixed" }));
   it("keeps products without compatibility data private", () => expect(assembleIrrigationCatalog([normalizeIrrigation({ ...row, description: "Bewässerungscomputer 6 Zonen" })], [], "2026-08-16T00:00:00.000Z").products).toHaveLength(0));

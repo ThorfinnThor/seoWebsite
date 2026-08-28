@@ -9,6 +9,7 @@ import { FlooringCatalogSchema, FlooringOverrideSchema, FlooringProductSchema, t
 import { ProjectCatalogSchema, ProjectOverrideSchema, ProjectProductSchema, type ProjectCatalog, type ProjectOverride, type ProjectProduct } from "@/lib/project-products/types";
 import { RobotMowerCatalogSchema, RobotMowerOverrideSchema, RobotMowerProductSchema, type RobotMowerCatalog, type RobotMowerOverride, type RobotMowerProduct } from "@/lib/robot-mower/types";
 import { assertCatalogPayloadSafe, assertCatalogSafe } from "@/scripts/catalog/safeguards";
+import { quarantineSuspiciousCatalogOffers } from "@/scripts/catalog/price-safeguards";
 import { stableJson, writeFilesAtomically } from "@/scripts/catalog/write-atomic";
 import { isDehumidifierCandidate, normalizeDehumidifier } from "./dehumidifier-normalizer";
 import { isGardenHouseCandidate, normalizeGardenHouse } from "./garden-house-normalizer";
@@ -202,15 +203,23 @@ export function assembleProjectCatalog(candidates: ProjectProductCandidate[], ov
   return ProjectCatalogSchema.parse({ schemaVersion: 1, vertical: "project-products", generatedAt, products: selected, offers: [...offerMap.values()].filter((offer) => selectedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });
 }
 
-function buildReviewQueue<TProduct extends ProductBase>(candidates: AffiliateCandidate<TProduct>[], catalog: StaticCatalog<TProduct, OfferBase>, generatedAt: string) {
+export function reviewPriority(issues: string[], offerCount: number, minPrice?: number): number {
+  const weights: Record<string, number> = { "semantic-kind-mismatch": 10_000, "suspicious-price": 9_000, "price-outlier": 9_000, "suspicious-dimension": 8_000, "suspicious-capacity": 8_000, "identity-mismatch": 7_000, "not-found": 7_000, "missing-or-invalid-affiliate-link": 6_000 };
+  return Math.max(0, ...issues.map((issue) => weights[issue] ?? 100)) + offerCount * 10 + Math.min(999, Math.round((minPrice ?? 0) / 10));
+}
+
+export function buildReviewQueue<TProduct extends ProductBase>(candidates: AffiliateCandidate<TProduct>[], catalog: StaticCatalog<TProduct, OfferBase>, generatedAt: string) {
   const reviewed = new Set(catalog.products.map((product) => product.id));
   const grouped = new Map<string, AffiliateCandidate<TProduct>[]>();
   for (const candidate of candidates) if (!reviewed.has(candidate.id)) grouped.set(candidate.id, [...(grouped.get(candidate.id) ?? []), candidate]);
   const products = [...grouped.entries()].map(([id, entries]) => {
     const offers = entries.flatMap((entry) => entry.offer ? [entry.offer] : []);
     const first = entries[0];
-    return { id, name: first.name, brand: first.brand, gtin: first.gtin, mpn: first.mpn, candidateAttributes: first.candidateAttributes, offerCount: offers.length, minBasePriceEur: offers.length ? Math.min(...offers.map((offer) => offer.priceEur)) : undefined, merchants: [...new Set(offers.map((offer) => offer.merchantName))].sort(), imageUrl: first.imageUrl, merchantProductUrl: first.merchantProductUrl, issues: [...new Set(entries.flatMap((entry) => entry.issues))].sort() };
-  }).sort((a, b) => b.offerCount - a.offerCount || (a.minBasePriceEur ?? Infinity) - (b.minBasePriceEur ?? Infinity) || a.id.localeCompare(b.id));
+    const minBasePriceEur = offers.length ? Math.min(...offers.map((offer) => offer.priceEur)) : undefined;
+    const issues = [...new Set(entries.flatMap((entry) => entry.issues))].sort();
+    const priority = reviewPriority(issues, offers.length, minBasePriceEur);
+    return { id, name: first.name, brand: first.brand, gtin: first.gtin, mpn: first.mpn, candidateAttributes: first.candidateAttributes, offerCount: offers.length, minBasePriceEur, merchants: [...new Set(offers.map((offer) => offer.merchantName))].sort(), imageUrl: first.imageUrl, merchantProductUrl: first.merchantProductUrl, issues, priority, riskTier: priority >= 7000 ? "critical" : priority >= 1000 ? "high" : "normal" };
+  }).sort((a, b) => b.priority - a.priority || b.offerCount - a.offerCount || (b.minBasePriceEur ?? 0) - (a.minBasePriceEur ?? 0) || a.id.localeCompare(b.id));
   return { schemaVersion: 1, generatedAt, products };
 }
 
@@ -222,7 +231,19 @@ function issueCounts<TProduct extends ProductBase>(candidates: AffiliateCandidat
 
 function buildReport<TProduct extends ProductBase>(candidates: AffiliateCandidate<TProduct>[], metrics: FeedMetrics, catalog: StaticCatalog<TProduct, OfferBase>, reviewCount: number, generatedAt: string) {
   const normalizedProducts = new Set(candidates.filter((candidate) => candidate.product).map((candidate) => candidate.id)).size;
-  return { schemaVersion: 1, generatedAt, ...metrics, candidateRows: candidates.length, normalizedProducts, offers: candidates.filter((candidate) => candidate.offer).length, reviewedProducts: catalog.products.length, reviewQueue: reviewCount, candidateToProductRate: candidates.length ? Math.round((normalizedProducts / candidates.length) * 1000) / 10 : 0, issues: issueCounts(candidates), merchants: {} };
+  const offeredProducts = new Set(catalog.offers.map((offer) => offer.productId));
+  const prices = catalog.offers.map((offer) => offer.priceEur).sort((a, b) => a - b);
+  const medianPrice = prices.length ? (prices[Math.floor((prices.length - 1) / 2)] + prices[Math.ceil((prices.length - 1) / 2)]) / 2 : undefined;
+  const linkStatuses: Record<string, number> = {};
+  const merchants: Record<string, number> = {};
+  for (const offer of catalog.offers) {
+    const status = offer.linkVerificationStatus ?? "unknown";
+    linkStatuses[status] = (linkStatuses[status] ?? 0) + 1;
+    merchants[offer.merchantName] = (merchants[offer.merchantName] ?? 0) + 1;
+  }
+  const quarantineIssues = new Set(["semantic-kind-mismatch", "suspicious-price", "price-outlier", "suspicious-dimension", "suspicious-capacity", "identity-mismatch", "not-found"]);
+  const quarantinedProducts = new Set(candidates.filter((candidate) => candidate.issues.some((issue) => quarantineIssues.has(issue))).map((candidate) => candidate.id)).size;
+  return { schemaVersion: 1, generatedAt, ...metrics, candidateRows: candidates.length, normalizedProducts, offers: catalog.offers.length, reviewedProducts: catalog.products.length, publishedProducts: catalog.products.length, quarantinedProducts, productsWithoutOffers: catalog.products.filter((product) => !offeredProducts.has(product.id)).length, reviewQueue: reviewCount, candidateToProductRate: candidates.length ? Math.round((normalizedProducts / candidates.length) * 1000) / 10 : 0, priceStatsEur: prices.length ? { min: prices[0], median: medianPrice, max: prices.at(-1) } : null, linkVerification: Object.fromEntries(Object.entries(linkStatuses).sort(([a], [b]) => a.localeCompare(b))), issues: issueCounts(candidates), merchants: Object.fromEntries(Object.entries(merchants).sort(([a], [b]) => a.localeCompare(b))) };
 }
 
 export function parseFeedJobs(raw: string): FeedJob[] {
@@ -302,7 +323,7 @@ async function run(): Promise<void> {
   if (gardenHouseCandidates.length) {
     const previous = GardenHouseCatalogSchema.parse(await readJson("public/data/garden-house/catalog.json"));
     const overrides = GardenOverrideFileSchema.parse(await readJson("data/overrides/garden-house.json")).overrides as ProductOverride[];
-    let catalog = assertCatalogSafe(assembleGardenHouseCatalog(gardenHouseCandidates, overrides, generatedAt), previous, secretUrls);
+    let catalog = assertCatalogSafe(quarantineSuspiciousCatalogOffers(assembleGardenHouseCatalog(gardenHouseCandidates, overrides, generatedAt)), previous, secretUrls);
     let review = buildReviewQueue(gardenHouseCandidates, catalog, generatedAt);
     let report = buildReport(gardenHouseCandidates, metrics, catalog, review.products.length, generatedAt);
     if (substantiveEqual(catalog, previous)) catalog = previous;
@@ -314,7 +335,7 @@ async function run(): Promise<void> {
   if (dehumidifierCandidates.length) {
     const previous = DehumidifierCatalogSchema.parse(await readJson("public/data/dehumidifier/catalog.json"));
     const overrides = DehumidifierOverrideFileSchema.parse(await readJson("data/overrides/dehumidifier.json")).overrides as DehumidifierOverride[];
-    let catalog = assertCatalogPayloadSafe(assembleDehumidifierCatalog(dehumidifierCandidates, overrides, generatedAt), previous, secretUrls);
+    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleDehumidifierCatalog(dehumidifierCandidates, overrides, generatedAt)), previous, secretUrls);
     let review = buildReviewQueue(dehumidifierCandidates, catalog, generatedAt);
     let report = buildReport(dehumidifierCandidates, metrics, catalog, review.products.length, generatedAt);
     if (substantiveEqual(catalog, previous)) catalog = previous;
@@ -326,7 +347,7 @@ async function run(): Promise<void> {
   if (irrigationCandidates.length) {
     const previous = IrrigationCatalogSchema.parse(await readJson("public/data/irrigation/catalog.json"));
     const overrides = IrrigationOverrideFileSchema.parse(await readJson("data/overrides/irrigation.json")).overrides as IrrigationOverride[];
-    let catalog = assertCatalogPayloadSafe(assembleIrrigationCatalog(irrigationCandidates, overrides, generatedAt), previous, secretUrls);
+    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleIrrigationCatalog(irrigationCandidates, overrides, generatedAt)), previous, secretUrls);
     let review = buildReviewQueue(irrigationCandidates, catalog, generatedAt);
     let report = buildReport(irrigationCandidates, metrics, catalog, review.products.length, generatedAt);
     if (substantiveEqual(catalog, previous)) catalog = previous;
@@ -338,7 +359,7 @@ async function run(): Promise<void> {
   if (robotMowerCandidates.length) {
     const previous = RobotMowerCatalogSchema.parse(await readJson("public/data/robot-mower/catalog.json"));
     const overrides = RobotMowerOverrideFileSchema.parse(await readJson("data/overrides/robot-mower.json")).overrides as RobotMowerOverride[];
-    let catalog = assertCatalogPayloadSafe(assembleRobotMowerCatalog(robotMowerCandidates, overrides, generatedAt), previous, secretUrls);
+    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleRobotMowerCatalog(robotMowerCandidates, overrides, generatedAt)), previous, secretUrls);
     let review = buildReviewQueue(robotMowerCandidates, catalog, generatedAt);
     let report = buildReport(robotMowerCandidates, metrics, catalog, review.products.length, generatedAt);
     if (substantiveEqual(catalog, previous)) catalog = previous;
@@ -350,7 +371,7 @@ async function run(): Promise<void> {
   if (flooringCandidates.length) {
     const previous = FlooringCatalogSchema.parse(await readJson("public/data/flooring/catalog.json"));
     const overrides = FlooringOverrideFileSchema.parse(await readJson("data/overrides/flooring.json")).overrides as FlooringOverride[];
-    let catalog = assertCatalogPayloadSafe(assembleFlooringCatalog(flooringCandidates, overrides, generatedAt), previous, secretUrls);
+    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleFlooringCatalog(flooringCandidates, overrides, generatedAt)), previous, secretUrls);
     let review = buildReviewQueue(flooringCandidates, catalog, generatedAt);
     let report = buildReport(flooringCandidates, metrics, catalog, review.products.length, generatedAt);
     if (substantiveEqual(catalog, previous)) catalog = previous;
@@ -362,7 +383,7 @@ async function run(): Promise<void> {
   if (projectCandidates.length) {
     const previous = ProjectCatalogSchema.parse(await readJson("public/data/project-products/catalog.json"));
     const overrides = ProjectOverrideFileSchema.parse(await readJson("data/overrides/project-products.json")).overrides as ProjectOverride[];
-    const catalog = assertCatalogPayloadSafe(assembleProjectCatalog(projectCandidates, overrides, generatedAt), previous, secretUrls);
+    const catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleProjectCatalog(projectCandidates, overrides, generatedAt)), previous, secretUrls);
     let review = buildReviewQueue(projectCandidates, catalog, generatedAt);
     let report = buildReport(projectCandidates, metrics, catalog, review.products.length, generatedAt);
     const oldReview = await readJson<unknown>("data/review/project-products.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;

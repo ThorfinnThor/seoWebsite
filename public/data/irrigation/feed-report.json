@@ -8,13 +8,27 @@
     "missing-product-kind": 1573,
     "unconfirmed-system-compatibility": 1961
   },
-  "merchants": {},
+  "merchants": {
+    "Globus Baumarkt DE": 79,
+    "Benz24 DE/AT": 2
+  },
   "normalizedProducts": 685,
-  "offers": 686,
-  "reviewedProducts": 154,
+  "offers": 81,
+  "reviewedProducts": 80,
   "reviewQueue": 2098,
   "rows": 170710,
   "schemaVersion": 1,
   "sourceFeeds": 7,
-  "successfulFeeds": 7
+  "successfulFeeds": 7,
+  "publishedProducts": 80,
+  "quarantinedProducts": 0,
+  "productsWithoutOffers": 0,
+  "priceStatsEur": {
+    "min": 2.49,
+    "median": 9.49,
+    "max": 278
+  },
+  "linkVerification": {
+    "unknown": 81
+  }
 }

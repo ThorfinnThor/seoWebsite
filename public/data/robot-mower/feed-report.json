@@ -9,13 +9,28 @@
     "missing-rated-area": 223,
     "unknown-navigation": 283
   },
-  "merchants": {},
+  "merchants": {
+    "Globus Baumarkt DE": 7,
+    "Ecovacs DE": 3,
+    "ANTHBOT DE": 1
+  },
   "normalizedProducts": 325,
-  "offers": 329,
+  "offers": 11,
   "reviewedProducts": 10,
   "reviewQueue": 315,
   "rows": 170710,
   "schemaVersion": 1,
   "sourceFeeds": 7,
-  "successfulFeeds": 7
+  "successfulFeeds": 7,
+  "publishedProducts": 10,
+  "quarantinedProducts": 0,
+  "productsWithoutOffers": 0,
+  "priceStatsEur": {
+    "min": 322,
+    "median": 999,
+    "max": 2299
+  },
+  "linkVerification": {
+    "unknown": 11
+  }
 }

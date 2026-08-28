@@ -52,7 +52,11 @@ const MerchantsSchema = z.object({
   }
 });
 const ReviewSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), products: z.array(z.object({ id: z.string().min(1) }).passthrough()) });
-const FeedReportSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), sourceFeeds: z.number().int().nonnegative(), successfulFeeds: z.number().int().nonnegative(), failedFeeds: z.number().int().nonnegative(), rows: z.number().int().nonnegative(), candidateRows: z.number().int().nonnegative(), normalizedProducts: z.number().int().nonnegative(), offers: z.number().int().nonnegative(), reviewedProducts: z.number().int().nonnegative(), reviewQueue: z.number().int().nonnegative(), issues: z.record(z.string(), z.number().int().nonnegative()), merchants: z.record(z.string(), z.unknown()) });
+const FeedReportSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), sourceFeeds: z.number().int().nonnegative(), successfulFeeds: z.number().int().nonnegative(), failedFeeds: z.number().int().nonnegative(), rows: z.number().int().nonnegative(), candidateRows: z.number().int().nonnegative(), normalizedProducts: z.number().int().nonnegative(), offers: z.number().int().nonnegative(), reviewedProducts: z.number().int().nonnegative(), publishedProducts: z.number().int().nonnegative(), quarantinedProducts: z.number().int().nonnegative(), productsWithoutOffers: z.number().int().nonnegative(), reviewQueue: z.number().int().nonnegative(), priceStatsEur: z.object({ min: z.number().positive(), median: z.number().positive(), max: z.number().positive() }).nullable(), linkVerification: z.record(z.string(), z.number().int().nonnegative()), issues: z.record(z.string(), z.number().int().nonnegative()), merchants: z.record(z.string(), z.unknown()) });
+
+function assertLinkStatuses(catalogs: Array<{ vertical: string; offers: Array<{ linkVerificationStatus?: string }> }>) {
+  for (const catalog of catalogs) if (catalog.offers.some((offer) => !offer.linkVerificationStatus)) throw new Error(`${catalog.vertical} contains offers without link verification status`);
+}
 
 async function json(file: string): Promise<unknown> { return JSON.parse(await readFile(file, "utf8")); }
 
@@ -69,6 +73,7 @@ async function main() {
   assertCatalogPayloadSafe(robotMowers);
   assertCatalogPayloadSafe(flooring);
   assertCatalogPayloadSafe(projectProducts);
+  assertLinkStatuses([catalog, dehumidifiers, irrigation, robotMowers, flooring, projectProducts]);
   GardenHouseRulesSchema.parse(await json("data/manual/garden-house-rules.json"));
   DehumidifierRulesSchema.parse(await json("data/manual/dehumidifier-rules.json"));
   IrrigationRulesSchema.parse(await json("data/manual/irrigation-rules.json"));

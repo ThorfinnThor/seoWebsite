@@ -14,11 +14,11 @@ export function recommendIrrigation(catalog: IrrigationCatalog, input: Irrigatio
   return catalog.products.flatMap((product) => {
     const offer = offersByProduct.get(product.id);
     if (!offer) return [];
+    if (!wanted.has(product.kind)) return [];
     const reasons: MatchReason[] = [];
     let score = 0;
-    const relevant = wanted.has(product.kind) || (product.kind === "controller" && input.automaticControl);
-    if (relevant) { reasons.push({ code: "component", label: "Passt zu deinem Komponentenplan", strength: "positive" }); score += 5; }
-    else reasons.push({ code: "component", label: "Ergänzung für das Bewässerungssystem", strength: "warning" });
+    reasons.push({ code: "component", label: "Passt zu deinem Komponentenplan", strength: "positive" });
+    score += 5;
     if (input.smartControl && product.smartCompatible) { reasons.push({ code: "smart", label: "Smarte Steuerung bestätigt", strength: "positive" }); score += 2; }
     if (input.automaticControl && product.kind === "controller" && product.maxZones && product.maxZones >= plan.controllerZones) { reasons.push({ code: "zones", label: `Mindestens ${product.maxZones} Zonen`, strength: "positive" }); score += 3; }
     if (product.systemId) { reasons.push({ code: "system", label: `System ${product.systemId}`, strength: "positive" }); score += 1; }

@@ -1,11 +1,12 @@
 import { describe, expect, it } from "vitest";
 import { createReadStream } from "node:fs";
 import { normalizeGardenHouse } from "./garden-house-normalizer";
-import { assembleGardenHouseCatalog, parseFeedJobs, substantiveEqual } from "./sync-products";
+import { assembleGardenHouseCatalog, parseFeedJobs, reviewPriority, substantiveEqual } from "./sync-products";
 import { parseFeedStream } from "./source";
 
 const row = { product_name: "Holz Gartenhaus 300 x 400 cm", merchant_id: "12", merchant_name: "Garten Markt", merchant_product_id: "abc", description: "Holzhaus Satteldach inklusive Boden", search_price: "2499", currency: "EUR", delivery_cost: "kostenlos", in_stock: "true", aw_deep_link: "https://www.awin1.com/cread.php?x=1", ean: "4012345678901", last_updated: "2026-08-08T10:00:00Z" };
 describe("feed pipeline assembly", () => {
+  it("prioritizes semantic risks ahead of parser completeness", () => expect(reviewPriority(["semantic-kind-mismatch"], 0)).toBeGreaterThan(reviewPriority(["missing-product-kind"], 20, 1000)));
   it("streams the local CSV fixture through parse, normalize, override and public assembly", async () => {
     const candidates = [];
     for await (const fixtureRow of parseFeedStream(createReadStream("tests/fixtures/awin/garden-house.csv"))) candidates.push(normalizeGardenHouse(fixtureRow));

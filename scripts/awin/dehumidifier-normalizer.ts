@@ -1,6 +1,7 @@
 import type { OfferBase } from "@/lib/catalog/types";
 import { DehumidifierProductSchema, type DehumidifierProduct } from "@/lib/dehumidifier/types";
 import { availability, delivery, isoDate, merchantDetails, parsePriceFromFields, productDisplayName, productIdentity, shortHash, slug, value } from "./garden-house-normalizer";
+import { priceIssue } from "./price-normalizer";
 import type { DehumidifierCandidate, RawFeedRow } from "./types";
 
 const CANDIDATE_PATTERN = /luftentfeuchter|entfeuchter|dehumidifier|bautrockner|raumtrockner|kondensationstrockner/i;
@@ -62,14 +63,15 @@ export function normalizeDehumidifier(row: RawFeedRow): DehumidifierCandidate {
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
   if (merchantUrl && !merchantUrl.startsWith("https://")) issues.push("missing-or-invalid-merchant-link");
   if (currency !== "EUR") issues.push("non-eur-currency");
-  if (!priceEur) issues.push("invalid-price");
+  const offerPriceIssue = priceIssue("dehumidifier", priceEur);
+  if (offerPriceIssue) issues.push(offerPriceIssue);
   if (stock.ambiguous) issues.push("ambiguous-stock");
   const imageUrl = value(row, "large_image", "merchant_image_url");
-  const offer: OfferBase | undefined = productResult.success && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur ? {
+  const offer: OfferBase | undefined = productResult.success && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur && !offerPriceIssue ? {
     id: `offer:${slug(merchantId)}:${slug(merchantProductId)}`, productId: identity.id, merchantId, merchantName, merchantProductId, priceEur,
     ...delivery(value(row, "delivery_cost")), available: stock.available, affiliateUrl,
     ...(merchantUrl?.startsWith("https://") ? { merchantUrl } : {}),
-    imageUrl: imageUrl?.startsWith("https://") ? imageUrl : undefined, updatedAt: sourceUpdatedAt,
+    imageUrl: imageUrl?.startsWith("https://") ? imageUrl : undefined, updatedAt: sourceUpdatedAt, linkVerificationStatus: "unknown",
   } : undefined;
   return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product: productResult.success ? productResult.data : undefined, offer, merchantProductUrl: merchantUrl ?? affiliateUrl, imageUrl, issues };
 }

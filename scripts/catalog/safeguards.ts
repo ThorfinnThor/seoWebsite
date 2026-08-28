@@ -1,5 +1,8 @@
 import { GardenHouseCatalogSchema, type GardenHouseCatalog } from "@/lib/garden-house/types";
 import type { OfferBase, ProductBase, StaticCatalog } from "@/lib/catalog/types";
+import { catalogPriceIssues } from "./price-safeguards";
+import { irrigationSemanticIssues } from "./semantic-validation";
+import { catalogDimensionIssues } from "./dimension-safeguards";
 
 const MAX_CATALOG_BYTES = 2 * 1024 * 1024;
 
@@ -22,5 +25,13 @@ export function assertCatalogPayloadSafe<T extends StaticCatalog<ProductBase, Of
   if (previousReviewed >= 10 && reviewed < previousReviewed * 0.8) throw new Error(`Reviewed products regressed from ${previousReviewed} to ${reviewed}`);
   const previousOffers = previous?.offers.length ?? 0;
   if (previousOffers >= 20 && catalog.offers.length < previousOffers * 0.6) throw new Error(`Offers regressed from ${previousOffers} to ${catalog.offers.length}`);
+  const priceIssues = catalogPriceIssues(catalog);
+  if (priceIssues.length) throw new Error(`Catalog contains ${priceIssues.length} suspicious price offer(s): ${priceIssues[0].offerId} (${priceIssues[0].detail})`);
+  const dimensionIssues = catalogDimensionIssues(catalog);
+  if (dimensionIssues.length) throw new Error(`Catalog contains ${dimensionIssues.length} suspicious dimension/capacity value(s): ${dimensionIssues[0].productId} (${dimensionIssues[0].detail})`);
+  if (catalog.vertical === "irrigation") {
+    const semanticMismatches = catalog.products.filter((product) => product.reviewed && "kind" in product && irrigationSemanticIssues(product as Parameters<typeof irrigationSemanticIssues>[0]).length > 0);
+    if (semanticMismatches.length) throw new Error(`Reviewed irrigation products contain ${semanticMismatches.length} semantic mismatch(es): ${semanticMismatches[0].name}`);
+  }
   return catalog;
 }

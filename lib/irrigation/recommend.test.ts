@@ -11,10 +11,12 @@ const catalog: IrrigationCatalog = {
   products: [
     { id: "controller", name: "Smart Controller 4 Zonen", brand: "Test", reviewed: true, dataQuality: "curated", kind: "controller", maxZones: 4, smartCompatible: true, systemId: "TestSystem" },
     { id: "filter", name: "Wasserfilter", brand: "Test", reviewed: true, dataQuality: "curated", kind: "filter", systemId: "TestSystem" },
+    { id: "pipe", name: "Bewässerungsrohr", brand: "Test", reviewed: true, dataQuality: "curated", kind: "pipe", systemId: "TestSystem" },
   ],
   offers: [
     { id: "offer-controller", productId: "controller", merchantId: "m", merchantName: "Händler", merchantProductId: "controller", priceEur: 100, deliveryCostStatus: "free", deliveryCostEur: 0, available: true, affiliateUrl: "https://www.awin1.com/pclick.php?p=1", updatedAt: "2026-08-28T00:00:00.000Z" },
     { id: "offer-filter", productId: "filter", merchantId: "m", merchantName: "Händler", merchantProductId: "filter", priceEur: 10, deliveryCostStatus: "free", deliveryCostEur: 0, available: true, affiliateUrl: "https://www.awin1.com/pclick.php?p=2", updatedAt: "2026-08-28T00:00:00.000Z" },
+    { id: "offer-pipe", productId: "pipe", merchantId: "m", merchantName: "Händler", merchantProductId: "pipe", priceEur: 20, deliveryCostStatus: "free", deliveryCostEur: 0, available: true, affiliateUrl: "https://www.awin1.com/pclick.php?p=3", updatedAt: "2026-08-28T00:00:00.000Z" },
   ],
 };
 
@@ -28,5 +30,10 @@ describe("irrigation recommendations", () => {
   it("only recommends available offers", () => {
     const matches = recommendIrrigation({ ...catalog, offers: catalog.offers.map((offer) => ({ ...offer, available: false })) }, input, buildIrrigationPlan(input));
     expect(matches).toHaveLength(0);
+  });
+
+  it("does not show unneeded component kinds as matching products", () => {
+    const matches = recommendIrrigation(catalog, input, buildIrrigationPlan(input));
+    expect(matches.some((match) => match.product.kind === "pipe")).toBe(false);
   });
 });

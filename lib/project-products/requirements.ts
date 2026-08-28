@@ -1,0 +1,9 @@
+import type { ProjectProductKind, ProjectVertical } from "./types";
+
+interface BaseRequirements { vertical: ProjectVertical; requiredKinds: readonly ProjectProductKind[]; }
+export interface TerraceProductRequirements extends BaseRequirements { vertical: "terrace"; areaM2: number; requiredLinearM: number; boardLengthMm: number; boardWidthMm: number; requiredBoardCount: number; supportLinearM: number; material?: "wood" | "wpc" | "composite"; }
+export interface PrivacyScreenProductRequirements extends BaseRequirements { vertical: "privacy-screen"; fenceHeightCm: number; fieldWidthCm: number; panelCount: number; orderPanelCount: number; postCount: number; gateCount: number; mountingType: "ground" | "baseplate" | "existing"; }
+export interface DrywallProductRequirements extends BaseRequirements { vertical: "drywall"; purchaseAreaM2: number; boardLengthMm: number; boardWidthMm: number; boardCount: number; profileLengthMm: number; trackBarCount: number; moistureRequired: boolean; fireOrAcousticRequired: boolean; insulationRequired: boolean; }
+export interface GreenhouseProductRequirements extends BaseRequirements { vertical: "greenhouse"; widthM: number; lengthM: number; footprintM2: number; baseLengthM: number; glazing: "glass" | "polycarbonate" | "foil" | "undecided"; roofVentCount: number; showCompleteKits: boolean; }
+export interface CarportProductRequirements extends BaseRequirements { vertical: "carport"; clearWidthM: number; clearLengthM: number; clearHeightM: number; vehicleCount: 1 | 2; installation: "freestanding" | "attached"; roofType: "flat" | "mono-pitch" | "gable" | "undecided"; }
+export type ProjectRequirements = TerraceProductRequirements | PrivacyScreenProductRequirements | DrywallProductRequirements | GreenhouseProductRequirements | CarportProductRequirements;

@@ -11,6 +11,37 @@ export const ProjectProductSchema = ProductBaseSchema.extend({
   depthCm: z.number().positive().max(5000).optional(),
   lengthCm: z.number().positive().max(5000).optional(),
   coverageM2: z.number().positive().max(10000).optional(),
+  boardLengthMm: z.number().positive().max(20_000).optional(),
+  boardWidthMm: z.number().positive().max(5_000).optional(),
+  boardThicknessMm: z.number().positive().max(500).optional(),
+  packageLinearM: z.number().positive().max(10_000).optional(),
+  packageCoverageM2: z.number().positive().max(10_000).optional(),
+  material: z.enum(["wood", "wpc", "composite", "stone", "metal", "plastic", "gypsum", "gypsum-fiber", "other"]).optional(),
+  panelWidthCm: z.number().positive().max(2_000).optional(),
+  panelHeightCm: z.number().positive().max(1_000).optional(),
+  gateCompatible: z.boolean().optional(),
+  postSystemId: z.string().min(1).optional(),
+  mountingType: z.enum(["ground", "baseplate", "existing", "unknown"]).optional(),
+  systemId: z.string().min(1).optional(),
+  boardType: z.enum(["standard", "moisture", "fire-acoustic", "gypsum-fiber", "unknown"]).optional(),
+  moistureApproved: z.boolean().optional(),
+  fireClass: z.string().min(1).optional(),
+  piecesPerPack: z.number().int().positive().max(10_000).optional(),
+  profileType: z.enum(["cw", "uw", "other"]).optional(),
+  profileLengthMm: z.number().positive().max(20_000).optional(),
+  profileWidthMm: z.number().positive().max(1_000).optional(),
+  externalWidthM: z.number().positive().max(100).optional(),
+  externalLengthM: z.number().positive().max(100).optional(),
+  clearWidthM: z.number().positive().max(100).optional(),
+  clearLengthM: z.number().positive().max(100).optional(),
+  clearHeightM: z.number().positive().max(20).optional(),
+  vehicleCount: z.number().int().min(1).max(4).optional(),
+  installationType: z.enum(["freestanding", "attached", "unknown"]).optional(),
+  roofType: z.enum(["flat", "mono-pitch", "gable", "unknown"]).optional(),
+  doorWidthCm: z.number().positive().max(1_000).optional(),
+  roofVentCount: z.number().int().nonnegative().max(100).optional(),
+  glazingType: z.enum(["glass", "polycarbonate", "foil", "mixed", "unknown"]).optional(),
+  completeKit: z.boolean().optional(),
 });
 
 export const ProjectCatalogSchema = z.object({
@@ -38,4 +69,15 @@ export type ProjectProductKind = z.infer<typeof ProjectProductKindSchema>;
 export type ProjectProduct = z.infer<typeof ProjectProductSchema>;
 export type ProjectCatalog = z.infer<typeof ProjectCatalogSchema>;
 export type ProjectOverride = z.infer<typeof ProjectOverrideSchema>;
-export interface ProjectMatch { product: ProjectProduct; offer: OfferBase; score: number; reasons: MatchReason[] }
+export type MatchConfidence = "exact" | "compatible" | "category" | "supplement";
+export interface ProjectOrderEstimate {
+  requiredUnits: number;
+  packageCount: number;
+  orderedUnits: number;
+  overage: number;
+  unitLabel: string;
+  materialSubtotalEur: number;
+  shippingEur?: number;
+  estimatedTotalEur?: number;
+}
+export interface ProjectMatch { product: ProjectProduct; offer: OfferBase; score: number; reasons: MatchReason[]; confidence: MatchConfidence; orderEstimate?: ProjectOrderEstimate }

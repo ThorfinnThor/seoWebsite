@@ -7,6 +7,8 @@ export type DataQuality = z.infer<typeof DataQualitySchema>;
 
 export const DeliveryCostStatusSchema = z.enum(["known", "free", "unknown"]);
 export type DeliveryCostStatus = z.infer<typeof DeliveryCostStatusSchema>;
+export const LinkVerificationStatusSchema = z.enum(["verified", "redirect-ok", "identity-mismatch", "not-found", "blocked", "unknown"]);
+export type LinkVerificationStatus = z.infer<typeof LinkVerificationStatusSchema>;
 
 export const ProductBaseSchema = z.object({
   id: z.string().min(1),
@@ -35,6 +37,8 @@ export const OfferBaseSchema = z
     merchantUrl: z.url().refine((url) => url.startsWith("https:"), "Merchant URL must use HTTPS").optional(),
     imageUrl: z.url().optional(),
     updatedAt: z.iso.datetime(),
+    linkVerificationStatus: LinkVerificationStatusSchema.optional(),
+    linkVerifiedAt: z.iso.datetime().optional(),
   })
   .superRefine((offer, ctx) => {
     if (offer.deliveryCostStatus === "known" && offer.deliveryCostEur === undefined) {

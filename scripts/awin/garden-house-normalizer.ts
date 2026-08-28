@@ -1,6 +1,9 @@
 import { createHash } from "node:crypto";
 import merchantRegistry from "@/data/manual/merchants.json";
 import type { GardenHouseCandidate, RawFeedRow } from "./types";
+import { parsePrice, parsePriceFromFields, priceIssue } from "./price-normalizer";
+
+export { parsePrice, parsePriceFromFields } from "./price-normalizer";
 
 const CANDIDATE_PATTERN = /gartenhaus|gerätehaus|geraetehaus|gartenschuppen|geräteschuppen|geraeteschuppen|holzhaus|blockbohlenhaus/i;
 const merchantsByAwinId = new Map(merchantRegistry.merchants.map((merchant) => [String(merchant.awinAdvertiserId), merchant]));
@@ -127,43 +130,6 @@ export function productIdentity(row: RawFeedRow, merchantId: string, merchantPro
   return { id: `merchant:${slug(merchantId)}:${slug(merchantProductId)}`, brand, mpn };
 }
 
-export function parsePrice(raw?: string): number | undefined {
-  if (!raw) return undefined;
-  const cleaned = raw.replace(/\s/g, "").replace(/[^\d,.-]/g, "");
-  if (!cleaned || !/\d/.test(cleaned)) return undefined;
-
-  const lastComma = cleaned.lastIndexOf(",");
-  const lastDot = cleaned.lastIndexOf(".");
-  let normalized = cleaned;
-  if (lastComma >= 0 && lastDot >= 0) {
-    const decimalSeparator = lastComma > lastDot ? "," : ".";
-    const thousandsSeparator = decimalSeparator === "," ? "." : ",";
-    normalized = cleaned.split(thousandsSeparator).join("");
-    if (decimalSeparator === ",") normalized = normalized.replace(",", ".");
-  } else if (lastComma >= 0) {
-    const fractionalDigits = cleaned.length - lastComma - 1;
-    normalized = fractionalDigits === 1 || fractionalDigits === 2 ? cleaned.replace(",", ".") : cleaned.replace(/,/g, "");
-  } else if (lastDot >= 0) {
-    const fractionalDigits = cleaned.length - lastDot - 1;
-    if (fractionalDigits === 1 || fractionalDigits === 2) {
-      normalized = `${cleaned.slice(0, lastDot).replace(/\./g, "")}.${cleaned.slice(lastDot + 1)}`;
-    } else {
-      normalized = cleaned.replace(/\./g, "");
-    }
-  }
-
-  const price = Number(normalized);
-  return Number.isFinite(price) && price > 0 ? price : undefined;
-}
-
-export function parsePriceFromFields(...rawValues: Array<string | undefined>): number | undefined {
-  for (const raw of rawValues) {
-    const price = parsePrice(raw);
-    if (price !== undefined) return price;
-  }
-  return undefined;
-}
-
 function material(text: string): "wood" | "metal" | "plastic" | undefined {
   if (/holz|wood|blockbohle/i.test(text)) return "wood";
   if (/metall|stahl|aluminium|metal/i.test(text)) return "metal";
@@ -238,7 +204,8 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   if (!affiliateUrl?.startsWith("https://")) issues.push("missing-or-invalid-affiliate-link");
   if (merchantUrl && !merchantUrl.startsWith("https://")) issues.push("missing-or-invalid-merchant-link");
   if (currency !== "EUR") issues.push("non-eur-currency");
-  if (!priceEur) issues.push("invalid-price");
+  const offerPriceIssue = priceIssue("garden-house", priceEur);
+  if (offerPriceIssue) issues.push(offerPriceIssue);
   if (stock.ambiguous) issues.push("ambiguous-stock");
   const sourceUpdatedAt = isoDate(value(row, "last_updated"));
   const candidateAttributes = {
@@ -253,7 +220,7 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
   const product = dimensions && productMaterial ? candidateAttributes as GardenHouseCandidate["product"] : undefined;
   const deliveryInfo = delivery(value(row, "delivery_cost"));
   const imageUrl = value(row, "large_image", "merchant_image_url");
-  const offer = product && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur ? {
+  const offer = product && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur && !offerPriceIssue ? {
     id: `offer:${slug(merchantId)}:${slug(merchantProductId)}`,
     productId: identity.id,
     merchantId,
@@ -266,6 +233,7 @@ export function normalizeGardenHouse(row: RawFeedRow): GardenHouseCandidate {
     ...(merchantUrl?.startsWith("https://") ? { merchantUrl } : {}),
     imageUrl: imageUrl?.startsWith("https://") ? imageUrl : undefined,
     updatedAt: sourceUpdatedAt,
+    linkVerificationStatus: "unknown" as const,
   } : undefined;
   return { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, candidateAttributes, product, offer, merchantProductUrl: merchantUrl ?? affiliateUrl, imageUrl, issues };
 }

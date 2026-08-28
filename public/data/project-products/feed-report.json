@@ -4,13 +4,27 @@
   "failedFeeds": 0,
   "generatedAt": "2026-08-28T14:48:34.040Z",
   "issues": {},
-  "merchants": {},
+  "merchants": {
+    "Globus Baumarkt DE": 324,
+    "Benz24 DE/AT": 237
+  },
   "normalizedProducts": 17676,
-  "offers": 17676,
+  "offers": 561,
   "reviewedProducts": 561,
   "reviewQueue": 17115,
   "rows": 170710,
   "schemaVersion": 1,
   "sourceFeeds": 7,
-  "successfulFeeds": 7
+  "successfulFeeds": 7,
+  "publishedProducts": 561,
+  "quarantinedProducts": 0,
+  "productsWithoutOffers": 0,
+  "priceStatsEur": {
+    "min": 2.45,
+    "median": 102.77,
+    "max": 19998
+  },
+  "linkVerification": {
+    "unknown": 561
+  }
 }

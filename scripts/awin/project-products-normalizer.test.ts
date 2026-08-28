@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isProjectProductCandidate, normalizeProjectProduct, projectVertical } from "./project-products-normalizer";
+import { isProjectProductCandidate, normalizeProjectProduct, parseProjectProductAttributes, projectProductKind, projectVertical } from "./project-products-normalizer";
 import { assembleProjectCatalog } from "./sync-products";
 
 const row = {
@@ -37,6 +37,14 @@ describe("project product feed normalization", () => {
     const candidate = normalizeProjectProduct(row);
     expect(candidate).toMatchObject({ id: "project:greenhouse:11830:greenhouse-1", product: { id: "project:greenhouse:11830:greenhouse-1", vertical: "greenhouse", kind: "kit" }, offer: { priceEur: 199, productId: "project:greenhouse:11830:greenhouse-1" } });
   });
+
+  it("extracts matching dimensions and package sizes", () => {
+    expect(parseProjectProductAttributes("terrace", "decking", "Terrassendiele Kiefer 200 x 14,5 x 2,8 cm")).toMatchObject({ boardLengthMm: 2000, boardWidthMm: 145, boardThicknessMm: 28, material: "wood" });
+    expect(parseProjectProductAttributes("drywall", "board", "Knauf Gipskartonplatte GKBI 120 x 60 cm 12,5 mm 60 St.")).toMatchObject({ boardLengthMm: 1200, boardWidthMm: 600, boardThicknessMm: 12.5, piecesPerPack: 60, moistureApproved: true });
+    expect(parseProjectProductAttributes("greenhouse", "kit", "Vitavia Gewächshaus 254 x 317 cm HKP")).toMatchObject({ externalWidthM: 2.54, externalLengthM: 3.17, glazingType: "polycarbonate", completeKit: true });
+  });
+  it("does not classify a carport sidewall as a complete kit", () => expect(projectProductKind("carport", "Seitenwand für Carport 300 cm")).toBe("panel"));
+  it("recognizes height-first privacy screen rolls", () => expect(parseProjectProductAttributes("privacy-screen", "panel", "Sichtschutzmatte 180 x 300 cm")).toMatchObject({ panelWidthCm: 300, panelHeightCm: 180 }));
 
   it("publishes complete project products as mixed", () => {
     const candidate = normalizeProjectProduct(row);
