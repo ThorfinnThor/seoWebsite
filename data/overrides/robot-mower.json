@@ -48,6 +48,21 @@
       "reviewNote": "ECOVACS product page and official model listing checked 2026-08-25: 800 m², 45% slope, 0.7 m passage, hybrid LiDAR/RTK navigation, 3–8 cm cutting height, IPX6 and obstacle avoidance."
     },
     {
+      "id": "mpn:anthbot-de:105010095",
+      "name": "ANTHBOT N8",
+      "brand": "ANTHBOT",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 1500,
+      "maxSlopePercent": 45,
+      "navigation": "rtk",
+      "minCutHeightCm": 3,
+      "maxCutHeightCm": 7,
+      "waterProtection": "IPX6",
+      "obstacleDetection": true,
+      "reviewNote": "ANTHBOT N8 product page and manufacturer buying guide checked 2026-08-28: up to 1,500 m², 45%/24° slope, Full-Band RTK plus Dual Vision, 3–7 cm cutting height, IPX6 and obstacle detection verified. Passage width is not stated by the manufacturer and remains intentionally unset."
+    },
+    {
       "id": "gtin:6970135038176",
       "name": "ECOVACS GOAT A1600 LiDAR PRO",
       "brand": "Ecovacs",

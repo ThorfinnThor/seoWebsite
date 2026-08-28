@@ -98,8 +98,30 @@ export function productIdentity(row: RawFeedRow, merchantId: string, merchantPro
 
 export function parsePrice(raw?: string): number | undefined {
   if (!raw) return undefined;
-  const cleaned = raw.replace(/\s/g, "").replace(/\.(?=\d{3}(?:\D|$))/g, "").replace(",", ".").replace(/[^\d.-]/g, "");
-  const price = Number(cleaned);
+  const cleaned = raw.replace(/\s/g, "").replace(/[^\d,.-]/g, "");
+  if (!cleaned || !/\d/.test(cleaned)) return undefined;
+
+  const lastComma = cleaned.lastIndexOf(",");
+  const lastDot = cleaned.lastIndexOf(".");
+  let normalized = cleaned;
+  if (lastComma >= 0 && lastDot >= 0) {
+    const decimalSeparator = lastComma > lastDot ? "," : ".";
+    const thousandsSeparator = decimalSeparator === "," ? "." : ",";
+    normalized = cleaned.split(thousandsSeparator).join("");
+    if (decimalSeparator === ",") normalized = normalized.replace(",", ".");
+  } else if (lastComma >= 0) {
+    const fractionalDigits = cleaned.length - lastComma - 1;
+    normalized = fractionalDigits === 1 || fractionalDigits === 2 ? cleaned.replace(",", ".") : cleaned.replace(/,/g, "");
+  } else if (lastDot >= 0) {
+    const fractionalDigits = cleaned.length - lastDot - 1;
+    if (fractionalDigits === 1 || fractionalDigits === 2) {
+      normalized = `${cleaned.slice(0, lastDot).replace(/\./g, "")}.${cleaned.slice(lastDot + 1)}`;
+    } else {
+      normalized = cleaned.replace(/\./g, "");
+    }
+  }
+
+  const price = Number(normalized);
   return Number.isFinite(price) && price > 0 ? price : undefined;
 }
 

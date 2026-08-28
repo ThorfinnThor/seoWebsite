@@ -35,4 +35,9 @@ describe("robot mower normalizer", () => {
   it("keeps German thousands separators in area values", () => {
     expect(parseRobotMowerAttributes("für 1.000 m² geeignet").ratedAreaM2).toBe(1000);
   });
+
+  it("accepts international Awin price formatting", () => {
+    const result = normalizeRobotMower({ ...goat, search_price: "1,599.00" });
+    expect(result.offer?.priceEur).toBe(1599);
+  });
 });
