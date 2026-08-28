@@ -71,10 +71,10 @@ export function normalizeProjectProduct(row: RawFeedRow): AffiliateCandidate<Pro
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category")].filter(Boolean).join(" ");
   const vertical = projectVertical(text);
   if (!vertical) return undefined;
-  // A shared GTIN can occur with variant rows from different project feeds.
-  // Scope the ID by planner area so one feed cannot overwrite another area's
-  // product metadata during catalog assembly.
-  const id = `project:${vertical}:${identity.id}`;
+  // Feeds occasionally reuse a GTIN for variant rows. Keep the merchant's
+  // product key in the identity so one malformed duplicate cannot overwrite
+  // another product's project metadata during catalog assembly.
+  const id = `project:${vertical}:${slug(merchantId)}:${slug(merchantProductId)}`;
   // Use the product name for the component kind as well. Descriptions often
   // list compatible accessories and would otherwise turn a complete kit into
   // a gutter, bracket or fastening item.
