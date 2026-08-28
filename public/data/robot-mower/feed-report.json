@@ -2,7 +2,7 @@
   "candidateRows": 329,
   "candidateToProductRate": 98.8,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-28T09:46:16.520Z",
+  "generatedAt": "2026-08-28T12:49:34.268Z",
   "issues": {
     "invalid-price": 20,
     "missing-or-ambiguous-slope": 311,
@@ -13,9 +13,9 @@
   "merchants": {},
   "normalizedProducts": 325,
   "offers": 309,
-  "reviewedProducts": 5,
-  "reviewQueue": 320,
-  "rows": 170665,
+  "reviewedProducts": 6,
+  "reviewQueue": 319,
+  "rows": 170709,
   "schemaVersion": 1,
   "sourceFeeds": 7,
   "successfulFeeds": 7

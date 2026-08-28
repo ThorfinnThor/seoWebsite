@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T11:08:19.987Z",
+  "generatedAt": "2026-08-28T12:49:34.268Z",
   "schemaVersion": 1,
   "verticals": {
     "dehumidifier": {
@@ -20,7 +20,7 @@
     },
     "robot-mower": {
       "catalog": "/data/robot-mower/catalog.json",
-      "generatedAt": "2026-08-27T17:18:11.915Z"
+      "generatedAt": "2026-08-28T12:49:34.268Z"
     }
   }
 }

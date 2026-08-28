@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T17:18:11.915Z",
+  "generatedAt": "2026-08-28T12:49:34.268Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45022540692&a=3037577&m=11830",
@@ -14,7 +14,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/ecovacs-maehroboter-goat-a1600-lidar-pro-33-cm-schnittbreite-1600-m2-32-v-0687060389/",
       "priceEur": 999,
       "productId": "gtin:6970135038176",
-      "updatedAt": "2026-08-27T17:18:02.949Z"
+      "updatedAt": "2026-08-28T12:49:23.841Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44729188382&a=3037577&m=11830",
@@ -29,7 +29,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-g-600-25-2-v-18-cm-schnittbreite-0687060200/",
       "priceEur": 999,
       "productId": "gtin:8008984855465",
-      "updatedAt": "2026-08-27T17:17:57.358Z"
+      "updatedAt": "2026-08-28T12:49:18.406Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44729188381&a=3037577&m=11830",
@@ -44,7 +44,7 @@
       "merchantUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-g-1200-25-2-v-18-cm-schnittbreite-0687060201/",
       "priceEur": 1199,
       "productId": "gtin:8008984855472",
-      "updatedAt": "2026-08-27T17:17:57.358Z"
+      "updatedAt": "2026-08-28T12:49:18.406Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=40339894290&a=3037577&m=30763",
@@ -59,7 +59,7 @@
       "merchantUrl": "https://www.ecovacs.com/de/shop/goat-robotic-lawn-mower/goat-o800-rtk",
       "priceEur": 594,
       "productId": "gtin:6970135034789",
-      "updatedAt": "2026-08-27T17:18:10.338Z"
+      "updatedAt": "2026-08-28T12:49:33.237Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=43951870927&a=3037577&m=30763",
@@ -74,7 +74,7 @@
       "merchantUrl": "https://www.ecovacs.com/de/shop/goat-robotic-lawn-mower/goat-a1600-lidar-pro",
       "priceEur": 999,
       "productId": "gtin:6970135038176",
-      "updatedAt": "2026-08-27T17:18:10.339Z"
+      "updatedAt": "2026-08-28T12:49:33.238Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=43951870928&a=3037577&m=30763",
@@ -87,9 +87,9 @@
       "merchantName": "Ecovacs DE",
       "merchantProductId": "6970135038183",
       "merchantUrl": "https://www.ecovacs.com/de/shop/goat-robotic-lawn-mower/goat-a3000-lidar-pro",
-      "priceEur": 2299,
+      "priceEur": 22990000,
       "productId": "gtin:6970135038183",
-      "updatedAt": "2026-08-27T17:18:10.339Z"
+      "updatedAt": "2026-08-28T12:49:33.238Z"
     }
   ],
   "products": [
@@ -107,7 +107,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 800,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:10.338Z",
+      "sourceUpdatedAt": "2026-08-28T12:49:33.237Z",
       "waterProtection": "IPX6"
     },
     {
@@ -123,7 +123,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1600,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:10.339Z",
+      "sourceUpdatedAt": "2026-08-28T12:49:33.238Z",
       "waterProtection": "IPX6"
     },
     {
@@ -139,7 +139,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 3000,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:18:10.339Z",
+      "sourceUpdatedAt": "2026-08-28T12:49:33.238Z",
       "waterProtection": "IPX6"
     },
     {
@@ -156,7 +156,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 600,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:57.358Z",
+      "sourceUpdatedAt": "2026-08-28T12:49:18.406Z",
       "waterProtection": "IPX5"
     },
     {
@@ -173,8 +173,24 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1200,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-08-27T17:17:57.358Z",
+      "sourceUpdatedAt": "2026-08-28T12:49:18.406Z",
       "waterProtection": "IPX5"
+    },
+    {
+      "brand": "ANTHBOT",
+      "dataQuality": "curated",
+      "id": "mpn:anthbot-de:105010095",
+      "maxCutHeightCm": 7,
+      "maxSlopePercent": 45,
+      "minCutHeightCm": 3,
+      "mpn": "105010095",
+      "name": "ANTHBOT N8",
+      "navigation": "rtk",
+      "obstacleDetection": true,
+      "ratedAreaM2": 1500,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-08-28T12:49:09.100Z",
+      "waterProtection": "IPX6"
     }
   ],
   "schemaVersion": 1,
