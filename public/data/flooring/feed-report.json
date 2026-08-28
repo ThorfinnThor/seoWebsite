@@ -2,7 +2,7 @@
   "candidateRows": 2376,
   "candidateToProductRate": 92.7,
   "failedFeeds": 0,
-  "generatedAt": "2026-08-28T20:23:05.283Z",
+  "generatedAt": "2026-08-28T20:56:26.368Z",
   "issues": {
     "incomplete-product-data": 170,
     "missing-package-coverage": 2081,
