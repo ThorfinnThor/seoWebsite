@@ -1,10 +1,10 @@
 {
-  "generatedAt": "2026-08-28T13:28:22.892Z",
+  "generatedAt": "2026-08-28T14:02:01.971Z",
   "schemaVersion": 1,
   "verticals": {
     "dehumidifier": {
       "catalog": "/data/dehumidifier/catalog.json",
-      "generatedAt": "2026-08-28T13:28:22.892Z"
+      "generatedAt": "2026-08-28T14:02:01.971Z"
     },
     "flooring": {
       "catalog": "/data/flooring/catalog.json",
@@ -12,7 +12,7 @@
     },
     "garden-house": {
       "catalog": "/data/garden-house/catalog.json",
-      "generatedAt": "2026-08-28T13:28:22.892Z"
+      "generatedAt": "2026-08-28T14:02:01.971Z"
     },
     "irrigation": {
       "catalog": "/data/irrigation/catalog.json",
@@ -20,7 +20,7 @@
     },
     "robot-mower": {
       "catalog": "/data/robot-mower/catalog.json",
-      "generatedAt": "2026-08-28T13:28:22.892Z"
+      "generatedAt": "2026-08-28T14:02:01.971Z"
     }
   }
 }

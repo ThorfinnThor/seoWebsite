@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T13:28:22.892Z",
+  "generatedAt": "2026-08-28T14:02:01.971Z",
   "products": [
     {
       "brand": "Duramax",
@@ -12,7 +12,7 @@
         "mpn": "7452",
         "name": "Duramax Metallgerätehaus Palladium 6 x 5 198,6 x 196,5 x 228,9 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:01.553Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:42.525Z"
       },
       "gtin": "0638801418726",
       "id": "gtin:0638801418726",
@@ -31,38 +31,13 @@
       "candidateAttributes": {
         "brand": "Duramax",
         "dataQuality": "feed",
-        "gtin": "0638801608516",
-        "id": "gtin:0638801608516",
-        "material": "metal",
-        "mpn": "7260",
-        "name": "Duramax Metallgerätehaus Eco 6 x 4 202 x 122,1 x 180,5 cm (BxTxH)",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:00.806Z"
-      },
-      "gtin": "0638801608516",
-      "id": "gtin:0638801608516",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/81/62/6c/1765274847/0638801608516_1245434_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-dimensions"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/duramax-metallgeraetehaus-eco-6-x-4-202-x-122-1-x-180-5-cm-bxtxh-0692650468/",
-      "merchants": [],
-      "mpn": "7260",
-      "name": "Duramax Metallgerätehaus Eco 6 x 4 202 x 122,1 x 180,5 cm (BxTxH)",
-      "offerCount": 0
-    },
-    {
-      "brand": "Duramax",
-      "candidateAttributes": {
-        "brand": "Duramax",
-        "dataQuality": "feed",
         "gtin": "0638801618614",
         "id": "gtin:0638801618614",
         "material": "metal",
         "mpn": "0692650788",
         "name": "Duramax Metallgerätehaus ECO 6x6 ca. 202 x 182,1 x 180,5 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:01.786Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:42.759Z"
       },
       "gtin": "0638801618614",
       "id": "gtin:0638801618614",
@@ -87,7 +62,7 @@
         "mpn": "22500136",
         "name": "Grosfillex Schleppdach 119 x 222 x 188 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.793Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.632Z"
       },
       "gtin": "3100038078273",
       "id": "gtin:3100038078273",
@@ -112,7 +87,7 @@
         "mpn": "22805138",
         "name": "Grosfillex Gartenhaus Utility V 4,9 295 x 261 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.790Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.624Z"
       },
       "gtin": "3100038094266",
       "id": "gtin:3100038094266",
@@ -137,7 +112,7 @@
         "mpn": "22811138",
         "name": "Grosfillex Gartenhaus Utility V 11 370 x 407 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.791Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.627Z"
       },
       "gtin": "3100038094273",
       "id": "gtin:3100038094273",
@@ -162,7 +137,7 @@
         "mpn": "22905140",
         "name": "Grosfillex Gartenhaus Deco H 4,9 295 x 261 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.792Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.628Z"
       },
       "gtin": "3100038094280",
       "id": "gtin:3100038094280",
@@ -187,7 +162,7 @@
         "mpn": "22907140",
         "name": "Grosfillex Gartenhaus Deco H 7,5 370 x 298 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.792Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.629Z"
       },
       "gtin": "3100038094297",
       "id": "gtin:3100038094297",
@@ -212,7 +187,7 @@
         "mpn": "22911140",
         "name": "Grosfillex Gartenhaus Deco H 11 370 x 407 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.792Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.629Z"
       },
       "gtin": "3100038094303",
       "id": "gtin:3100038094303",
@@ -237,7 +212,7 @@
         "mpn": "22805137",
         "name": "Grosfillex Gartenhaus Utility V 4,9 295 x 261 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.790Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.623Z"
       },
       "gtin": "3100038103395",
       "id": "gtin:3100038103395",
@@ -262,7 +237,7 @@
         "mpn": "22811137",
         "name": "Grosfillex Gartenhaus Utility V 11 370 x 407 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.791Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.627Z"
       },
       "gtin": "3100038103401",
       "id": "gtin:3100038103401",
@@ -287,7 +262,7 @@
         "mpn": "22807137",
         "name": "Grosfillex Gartenhaus Utility V 7,5 370 x 298 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.791Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.624Z"
       },
       "gtin": "3100038105948",
       "id": "gtin:3100038105948",
@@ -312,7 +287,7 @@
         "mpn": "22807138",
         "name": "Grosfillex Gartenhaus Utility V 7,5 370 x 298 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.791Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.625Z"
       },
       "gtin": "3100038105955",
       "id": "gtin:3100038105955",
@@ -337,7 +312,7 @@
         "mpn": "23007242",
         "name": "Grosfillex Gartenhaus Deco H 7,5 370 x 298 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.793Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.631Z"
       },
       "gtin": "3100038120057",
       "id": "gtin:3100038120057",
@@ -362,7 +337,7 @@
         "mpn": "23011242",
         "name": "Grosfillex Gartenhaus Deco H 11 370 x 407 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.793Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.632Z"
       },
       "gtin": "3100038120064",
       "id": "gtin:3100038120064",
@@ -387,7 +362,7 @@
         "mpn": "23011276",
         "name": "Grosfillex Gartenhaus Deco H 11 370 x 407 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.793Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.632Z"
       },
       "gtin": "3100038132135",
       "id": "gtin:3100038132135",
@@ -412,7 +387,7 @@
         "mpn": "23007276",
         "name": "Grosfillex Gartenhaus Deco H 7,5 370 x 298 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:57.793Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.631Z"
       },
       "gtin": "3100038132142",
       "id": "gtin:3100038132142",
@@ -437,7 +412,7 @@
         "mpn": "22907140",
         "name": "Grosfillex Gartenhaus Deco H 7,5 370 x 298 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.877Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.597Z"
       },
       "gtin": "3100038156650",
       "id": "gtin:3100038156650",
@@ -462,7 +437,7 @@
         "mpn": "22911140",
         "name": "Grosfillex Gartenhaus Deco H 11 370 x 407 cm (inkl. Dachüberstand)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.877Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.597Z"
       },
       "gtin": "3100038156667",
       "id": "gtin:3100038156667",
@@ -487,7 +462,7 @@
         "mpn": "22905140",
         "name": "Grosfillex Gartenhaus Deco H 4,9",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.877Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.597Z"
       },
       "gtin": "3100038181416",
       "id": "gtin:3100038181416",
@@ -513,7 +488,7 @@
         "name": "Weka Gerätehaus 357 A 224 x 85 cm natur mit Fußboden",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:27:58.899Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:39.786Z"
       },
       "gtin": "4004581443177",
       "id": "gtin:4004581443177",
@@ -540,7 +515,7 @@
         "name": "Weka Gartenhaus Tilo 235 x 210 cm natur",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:05.944Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:46.152Z",
         "widthCm": 235
       },
       "gtin": "4004581587055",
@@ -566,7 +541,7 @@
         "mpn": "0692650820",
         "name": "Pergart Metallgerätehaus Köln II 64 184 x 98 cm tanne-creme",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:12.108Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.987Z"
       },
       "gtin": "4005717207212",
       "id": "gtin:4005717207212",
@@ -591,7 +566,7 @@
         "mpn": "40006167",
         "name": "Pergart Metallgerätehaus Rheinfelden 78 245 x 204 x 226 cm anthrazit",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.366Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.760Z"
       },
       "gtin": "4005717249816",
       "id": "gtin:4005717249816",
@@ -616,7 +591,7 @@
         "mpn": "40006170",
         "name": "Pergart Metallgerätehaus Rheinfelden 108 290 x 245 x 226 cm anthrazit",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.365Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.758Z"
       },
       "gtin": "4005717249847",
       "id": "gtin:4005717249847",
@@ -642,7 +617,7 @@
         "name": "Vitavia Metallgerätehaus Kosmos 7800 salbei-grau eloxiert 267 x 295 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:08.543Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.949Z"
       },
       "gtin": "4005717249984",
       "id": "gtin:4005717249984",
@@ -667,7 +642,7 @@
         "name": "Pergart Gerätehaus Lüttich 65, anthrazit matt",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:08.393Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.838Z"
       },
       "gtin": "4005717268879",
       "id": "gtin:4005717268879",
@@ -693,7 +668,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 1 purpurrot 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.131Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.033Z"
       },
       "gtin": "4005954382949",
       "id": "gtin:4005954382949",
@@ -719,7 +694,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 1 taubenblau 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.110Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.020Z"
       },
       "gtin": "4005954382956",
       "id": "gtin:4005954382956",
@@ -745,7 +720,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 1 moosgrün 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.185Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.084Z"
       },
       "gtin": "4005954382963",
       "id": "gtin:4005954382963",
@@ -771,7 +746,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 1 anthrazitgrau 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.132Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.033Z"
       },
       "gtin": "4005954382994",
       "id": "gtin:4005954382994",
@@ -798,7 +773,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 1 247,9 x 153 x 228,6 cm graualuminium",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.119Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.025Z"
       },
       "gtin": "4005954383168",
       "id": "gtin:4005954383168",
@@ -823,7 +798,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 purpurrot 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.192Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.089Z"
       },
       "gtin": "4005954383526",
       "id": "gtin:4005954383526",
@@ -849,7 +824,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 taubenblau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.216Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.109Z"
       },
       "gtin": "4005954383571",
       "id": "gtin:4005954383571",
@@ -875,7 +850,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 moosgrün 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.136Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.037Z"
       },
       "gtin": "4005954383588",
       "id": "gtin:4005954383588",
@@ -901,7 +876,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 anthrazitgrau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.121Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.026Z"
       },
       "gtin": "4005954383618",
       "id": "gtin:4005954383618",
@@ -928,7 +903,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 graualuminium 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.221Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.114Z"
       },
       "gtin": "4005954383762",
       "id": "gtin:4005954383762",
@@ -953,7 +928,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 purpurrot 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.197Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.095Z"
       },
       "gtin": "4005954383816",
       "id": "gtin:4005954383816",
@@ -979,7 +954,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 taubenblau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.213Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.106Z"
       },
       "gtin": "4005954383823",
       "id": "gtin:4005954383823",
@@ -1005,7 +980,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 moosgrün 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.178Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.077Z"
       },
       "gtin": "4005954383854",
       "id": "gtin:4005954383854",
@@ -1031,7 +1006,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 anthrazitgrau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.218Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.111Z"
       },
       "gtin": "4005954383861",
       "id": "gtin:4005954383861",
@@ -1058,7 +1033,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 2 247,9 x 283,4 x 232,3 cm graualuminium",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.120Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.025Z"
       },
       "gtin": "4005954383908",
       "id": "gtin:4005954383908",
@@ -1083,7 +1058,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 purpurrot 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.195Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.092Z"
       },
       "gtin": "4005954383953",
       "id": "gtin:4005954383953",
@@ -1109,7 +1084,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 312,7 x 283,4 x 232,3 cm taubenblau",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.045Z"
       },
       "gtin": "4005954393952",
       "id": "gtin:4005954393952",
@@ -1135,7 +1110,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 312,7 x 283,4 x 232,3 cm moosgrün",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.165Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.066Z"
       },
       "gtin": "4005954393969",
       "id": "gtin:4005954393969",
@@ -1161,7 +1136,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 anthrazitgrau 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.044Z"
       },
       "gtin": "4005954393976",
       "id": "gtin:4005954393976",
@@ -1188,7 +1163,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 graualuminium 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.179Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.078Z"
       },
       "gtin": "4005954394003",
       "id": "gtin:4005954394003",
@@ -1213,7 +1188,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 purpurrot 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.110Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.020Z"
       },
       "gtin": "4005954394058",
       "id": "gtin:4005954394058",
@@ -1239,7 +1214,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 taubenblau 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.196Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.093Z"
       },
       "gtin": "4005954394072",
       "id": "gtin:4005954394072",
@@ -1265,7 +1240,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 moosgrün 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.187Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.085Z"
       },
       "gtin": "4005954394089",
       "id": "gtin:4005954394089",
@@ -1291,7 +1266,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 anthrazitgrau 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.108Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.018Z"
       },
       "gtin": "4005954394096",
       "id": "gtin:4005954394096",
@@ -1318,7 +1293,7 @@
         "name": "EcoStar Gerätehaus Trend-P Typ 3 graualuminium 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.100Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.011Z"
       },
       "gtin": "4005954394164",
       "id": "gtin:4005954394164",
@@ -1343,7 +1318,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 1 purpurrot 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.220Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.113Z"
       },
       "gtin": "4005954394201",
       "id": "gtin:4005954394201",
@@ -1369,7 +1344,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 1 taubenblau 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.122Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.027Z"
       },
       "gtin": "4005954394218",
       "id": "gtin:4005954394218",
@@ -1395,7 +1370,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 1 moosgrün 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.164Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.065Z"
       },
       "gtin": "4005954394225",
       "id": "gtin:4005954394225",
@@ -1421,7 +1396,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 1 anthrazitgrau 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.197Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.095Z"
       },
       "gtin": "4005954394232",
       "id": "gtin:4005954394232",
@@ -1448,7 +1423,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 1 graualuminium 247,9 x 153 x 228,6 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.208Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.104Z"
       },
       "gtin": "4005954394263",
       "id": "gtin:4005954394263",
@@ -1473,7 +1448,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 purpurrot 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.117Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.023Z"
       },
       "gtin": "4005954394478",
       "id": "gtin:4005954394478",
@@ -1499,7 +1474,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 taubenblau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.179Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.078Z"
       },
       "gtin": "4005954394485",
       "id": "gtin:4005954394485",
@@ -1525,7 +1500,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 moosgrün 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.128Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.030Z"
       },
       "gtin": "4005954394492",
       "id": "gtin:4005954394492",
@@ -1551,7 +1526,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 anthrazitgrau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.218Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.111Z"
       },
       "gtin": "4005954394508",
       "id": "gtin:4005954394508",
@@ -1578,7 +1553,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 graualuminium 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.158Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.060Z"
       },
       "gtin": "4005954394539",
       "id": "gtin:4005954394539",
@@ -1603,7 +1578,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 Schilfgrün 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.215Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.108Z"
       },
       "gtin": "4005954394584",
       "id": "gtin:4005954394584",
@@ -1629,7 +1604,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 purpurrot 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.199Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.097Z"
       },
       "gtin": "4005954394607",
       "id": "gtin:4005954394607",
@@ -1655,7 +1630,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 taubenblau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.218Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.112Z"
       },
       "gtin": "4005954394614",
       "id": "gtin:4005954394614",
@@ -1681,7 +1656,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 moosgrün 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.045Z"
       },
       "gtin": "4005954394621",
       "id": "gtin:4005954394621",
@@ -1707,7 +1682,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 anthrazitgrau 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.187Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.085Z"
       },
       "gtin": "4005954394638",
       "id": "gtin:4005954394638",
@@ -1734,7 +1709,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 2 graualuminium 247,9 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.146Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.041Z"
       },
       "gtin": "4005954394652",
       "id": "gtin:4005954394652",
@@ -1759,7 +1734,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 purpurrot312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.123Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.028Z"
       },
       "gtin": "4005954394737",
       "id": "gtin:4005954394737",
@@ -1785,7 +1760,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 taubenblau 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.098Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.009Z"
       },
       "gtin": "4005954394744",
       "id": "gtin:4005954394744",
@@ -1811,7 +1786,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 moosgrün 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.213Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.106Z"
       },
       "gtin": "4005954394768",
       "id": "gtin:4005954394768",
@@ -1837,7 +1812,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 anthrazitgrau 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.135Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.036Z"
       },
       "gtin": "4005954394775",
       "id": "gtin:4005954394775",
@@ -1864,7 +1839,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 graualuminium 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.100Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.011Z"
       },
       "gtin": "4005954394812",
       "id": "gtin:4005954394812",
@@ -1889,7 +1864,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 purpurrot 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.207Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.103Z"
       },
       "gtin": "4005954395079",
       "id": "gtin:4005954395079",
@@ -1915,7 +1890,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 taubenblau 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.097Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.008Z"
       },
       "gtin": "4005954395086",
       "id": "gtin:4005954395086",
@@ -1941,7 +1916,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 moosgrün 312,7 x 283,4 x 232,3 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.120Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.026Z"
       },
       "gtin": "4005954395093",
       "id": "gtin:4005954395093",
@@ -1967,7 +1942,7 @@
         "name": "EcoStar Gerätehaus Elegant-P Typ 3 312,7 x 283,4 x 232,3 cm anthrazitgrau",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.219Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.112Z"
       },
       "gtin": "4005954395109",
       "id": "gtin:4005954395109",
@@ -1994,7 +1969,7 @@
         "name": "EcoStar Gerätehaus Elegant-P,Typ 3 312,7 x 283,4 x 232,3 cm graualuminium",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.218Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.111Z"
       },
       "gtin": "4005954395314",
       "id": "gtin:4005954395314",
@@ -2019,7 +1994,7 @@
         "mpn": "1343662",
         "name": "EcoStar Aluminium-Riffelblechboden Trend&Elegant Typ 3",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.111Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.021Z"
       },
       "gtin": "4005954954740",
       "id": "gtin:4005954954740",
@@ -2044,7 +2019,7 @@
         "mpn": "1343661",
         "name": "EcoStar Aluminium-Riffelblechboden Trend&Elegant Typ 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.100Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.011Z"
       },
       "gtin": "4005954954788",
       "id": "gtin:4005954954788",
@@ -2069,7 +2044,7 @@
         "mpn": "1343660",
         "name": "EcoStar Aluminium-Riffelblechboden Trend&Elegant Typ 1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.136Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.037Z"
       },
       "gtin": "4005954954825",
       "id": "gtin:4005954954825",
@@ -2093,7 +2068,7 @@
         "mpn": "1343650",
         "name": "EcoStar Unterkonstruktion für Fußböden Trend&Elegant Typ 1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.123Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.028Z"
       },
       "gtin": "4005954954832",
       "id": "gtin:4005954954832",
@@ -2118,7 +2093,7 @@
         "mpn": "1343651",
         "name": "EcoStar Unterkonstruktion für Fußböden Trend&Elegant Typ 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.202Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.099Z"
       },
       "gtin": "4005954954856",
       "id": "gtin:4005954954856",
@@ -2143,7 +2118,7 @@
         "mpn": "1343652",
         "name": "EcoStar Unterkonstruktion für Fußböden Trend&Elegant Typ 3",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:03.183Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.081Z"
       },
       "gtin": "4005954954863",
       "id": "gtin:4005954954863",
@@ -2168,7 +2143,7 @@
         "mpn": "869256",
         "name": "Bitumen-Gartenhausbahn 5 x 0,5 m = 2,5 m² schwarz",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:58.009Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.868Z"
       },
       "gtin": "4010499010400",
       "id": "gtin:4010499010400",
@@ -2193,7 +2168,7 @@
         "mpn": "869257",
         "name": "Bitumen-Gartenhausbahn 5 x 0,5 m = 2,5 m² silbergrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:58.009Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.869Z"
       },
       "gtin": "4010499010417",
       "id": "gtin:4010499010417",
@@ -2218,7 +2193,7 @@
         "mpn": "869258",
         "name": "Bitumen-Gartenhausbahn 5 x 0,5 m = 2,5 m² rot",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:58.009Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.869Z"
       },
       "gtin": "4010499010424",
       "id": "gtin:4010499010424",
@@ -2244,7 +2219,7 @@
         "mpn": "0692652442",
         "name": "Tepro Metallgerätehaus Garden Shed 8 x 6 Premium anthrazit 252 x 168 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.876Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.931Z"
       },
       "gtin": "4011964077195",
       "id": "gtin:4011964077195",
@@ -2270,7 +2245,7 @@
         "name": "Tepro Metallgerätehaus Premium Shed 8x10 inkl. Regenrinne 300 x 180 cm",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.689Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.769Z"
       },
       "gtin": "4011964077287",
       "id": "gtin:4011964077287",
@@ -2295,7 +2270,7 @@
         "mpn": "25557",
         "name": "Nobby WOODLAND Nager-Holzhaus GORDI 30 x 30 x 16 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:58.561Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:39.437Z"
       },
       "gtin": "4033766255571",
       "id": "gtin:4033766255571",
@@ -2320,7 +2295,7 @@
         "mpn": "0689401222",
         "name": "Nobby Nager-Holzhaus Hanni",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:09.618Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:48.828Z"
       },
       "gtin": "4033766255595",
       "id": "gtin:4033766255595",
@@ -2345,7 +2320,7 @@
         "mpn": "28058",
         "name": "Nobby Aqua Ornaments HOLZHAUS mit Pflanzen 15,5 x 8 x 12 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:58.016Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:38.876Z"
       },
       "gtin": "4033766280580",
       "id": "gtin:4033766280580",
@@ -2370,7 +2345,7 @@
         "mpn": "575000",
         "name": "Ollesch Holzhaus Tilo 28,5 x 22 x 16 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:00.531Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:41.457Z"
       },
       "gtin": "4038964216058",
       "id": "gtin:4038964216058",
@@ -2395,7 +2370,7 @@
         "name": "Ecostar Gerätehaus Trend-S Typ 1 258,8 x 121,3 x 216 cm purpurrot",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.183Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.082Z"
       },
       "gtin": "4042533294347",
       "id": "gtin:4042533294347",
@@ -2421,7 +2396,7 @@
         "name": "Ecostar Gerätehaus Trend-S Typ 1 258,8 x 121,3 x 216 cm taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.124Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.029Z"
       },
       "gtin": "4042533294354",
       "id": "gtin:4042533294354",
@@ -2447,7 +2422,7 @@
         "name": "Ecostar Gerätehaus Trend-S Typ 1 258,8 x 121,3 x 216 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.217Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.110Z"
       },
       "gtin": "4042533294415",
       "id": "gtin:4042533294415",
@@ -2473,7 +2448,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 1 258,8 x 121,3 x 216 cm anthrazitgrau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.111Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.021Z"
       },
       "gtin": "4042533294439",
       "id": "gtin:4042533294439",
@@ -2500,7 +2475,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 1 258,8 x 121,3 x 216 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.166Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.067Z"
       },
       "gtin": "4042533294446",
       "id": "gtin:4042533294446",
@@ -2525,7 +2500,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm v",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.198Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.096Z"
       },
       "gtin": "4042533294514",
       "id": "gtin:4042533294514",
@@ -2551,7 +2526,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.153Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.049Z"
       },
       "gtin": "4042533294521",
       "id": "gtin:4042533294521",
@@ -2577,7 +2552,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.182Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.080Z"
       },
       "gtin": "4042533294538",
       "id": "gtin:4042533294538",
@@ -2604,7 +2579,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm anthrazitgrau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.107Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.017Z"
       },
       "gtin": "4042533294545",
       "id": "gtin:4042533294545",
@@ -2630,7 +2605,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.213Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.106Z"
       },
       "gtin": "4042533294590",
       "id": "gtin:4042533294590",
@@ -2655,7 +2630,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm purpurrot",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.155Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.057Z"
       },
       "gtin": "4042533294620",
       "id": "gtin:4042533294620",
@@ -2681,7 +2656,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.194Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.091Z"
       },
       "gtin": "4042533294644",
       "id": "gtin:4042533294644",
@@ -2707,7 +2682,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.220Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.113Z"
       },
       "gtin": "4042533294682",
       "id": "gtin:4042533294682",
@@ -2733,7 +2708,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm anthrazitgrau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.160Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.063Z"
       },
       "gtin": "4042533294699",
       "id": "gtin:4042533294699",
@@ -2760,7 +2735,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 2 258,8 x 247,7 x 216 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.199Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.097Z"
       },
       "gtin": "4042533294743",
       "id": "gtin:4042533294743",
@@ -2785,7 +2760,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm purpurrot",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.164Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.065Z"
       },
       "gtin": "4042533294798",
       "id": "gtin:4042533294798",
@@ -2811,7 +2786,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.156Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.059Z"
       },
       "gtin": "4042533294804",
       "id": "gtin:4042533294804",
@@ -2837,7 +2812,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.123Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.028Z"
       },
       "gtin": "4042533294910",
       "id": "gtin:4042533294910",
@@ -2864,7 +2839,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.101Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.012Z"
       },
       "gtin": "4042533294965",
       "id": "gtin:4042533294965",
@@ -2890,7 +2865,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.154Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.052Z"
       },
       "gtin": "4042533295139",
       "id": "gtin:4042533295139",
@@ -2915,7 +2890,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 purpurrot 323,6 x 247,7 x 219,4 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.176Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.075Z"
       },
       "gtin": "4042533295146",
       "id": "gtin:4042533295146",
@@ -2941,7 +2916,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.214Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.107Z"
       },
       "gtin": "4042533295191",
       "id": "gtin:4042533295191",
@@ -2967,7 +2942,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.156Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.059Z"
       },
       "gtin": "4042533295207",
       "id": "gtin:4042533295207",
@@ -2993,7 +2968,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm anthrazitgrau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.199Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.096Z"
       },
       "gtin": "4042533295214",
       "id": "gtin:4042533295214",
@@ -3020,7 +2995,7 @@
         "name": "EcoStar Gerätehaus Trend-S Typ 3 323,6 x 247,7 x 219,4 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.191Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.088Z"
       },
       "gtin": "4042533295245",
       "id": "gtin:4042533295245",
@@ -3045,7 +3020,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 1 purpurrot 1 flg 258,8 x 121,3 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.155Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.057Z"
       },
       "gtin": "4042533295252",
       "id": "gtin:4042533295252",
@@ -3071,7 +3046,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 1 taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.190Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.087Z"
       },
       "gtin": "4042533295283",
       "id": "gtin:4042533295283",
@@ -3097,7 +3072,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 1 moosgrün 1 flg 258,8 x 121,3 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.194Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.091Z"
       },
       "gtin": "4042533295290",
       "id": "gtin:4042533295290",
@@ -3125,7 +3100,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 1 anthrazitgrau 1 flg 258,8 x 121,3 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.212Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:44.105Z",
         "widthCm": 258.8
       },
       "gtin": "4042533295306",
@@ -3151,7 +3126,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 purpurrot 1 flg 258,8 x 247,7 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.103Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.014Z"
       },
       "gtin": "4042533295320",
       "id": "gtin:4042533295320",
@@ -3177,7 +3152,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 taubenblau 1 flg 258,8 x 247,7 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.216Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.109Z"
       },
       "gtin": "4042533295337",
       "id": "gtin:4042533295337",
@@ -3203,7 +3178,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 moosgrün 1 flg 258,8 x 247,7 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.143Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.038Z"
       },
       "gtin": "4042533295351",
       "id": "gtin:4042533295351",
@@ -3231,7 +3206,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 anthrazitgrau 1 flg 258,8 x 247,7 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.200Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:44.098Z",
         "widthCm": 258.8
       },
       "gtin": "4042533295368",
@@ -3257,7 +3232,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 purpurrot 2 flg 258,8 x 247,7 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.162Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.063Z"
       },
       "gtin": "4042533295382",
       "id": "gtin:4042533295382",
@@ -3283,7 +3258,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 taubenblau 2 flg 258,8 x 247,7 x 216 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.199Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.097Z"
       },
       "gtin": "4042533295399",
       "id": "gtin:4042533295399",
@@ -3309,7 +3284,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 258,8 x 247,7 x 216 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.196Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.093Z"
       },
       "gtin": "4042533295405",
       "id": "gtin:4042533295405",
@@ -3335,7 +3310,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 258,8 x 247,7 x 216 cm anthrazitgrau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.221Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.114Z"
       },
       "gtin": "4042533295412",
       "id": "gtin:4042533295412",
@@ -3362,7 +3337,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 2 258,8 x 247,7 x 216 cm graualuminium",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.205Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.101Z"
       },
       "gtin": "4042533295429",
       "id": "gtin:4042533295429",
@@ -3387,7 +3362,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 purpurrot 1 flg 323,6 x 247,7 x 219,4 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.199Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.097Z"
       },
       "gtin": "4042533295436",
       "id": "gtin:4042533295436",
@@ -3415,7 +3390,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 taubenblau 1 flg 323,6 x 247,7 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.185Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:44.083Z",
         "widthCm": 323.6
       },
       "gtin": "4042533295443",
@@ -3441,7 +3416,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 323,6 x 247,7 x 219,4 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.180Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.079Z"
       },
       "gtin": "4042533295450",
       "id": "gtin:4042533295450",
@@ -3467,7 +3442,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 anthrazitgrau323,6 x 247,7 x 219,4 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.131Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.033Z"
       },
       "gtin": "4042533295467",
       "id": "gtin:4042533295467",
@@ -3494,7 +3469,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 graualuminium 323,6 x 247,7 x 219,4 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.122Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.027Z"
       },
       "gtin": "4042533295474",
       "id": "gtin:4042533295474",
@@ -3519,7 +3494,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 323,6 x 247,7 x 219,4 cm purpurrot",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.170Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.071Z"
       },
       "gtin": "4042533295481",
       "id": "gtin:4042533295481",
@@ -3545,7 +3520,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 323,6 x 247,7 x 219,4 cm taubenblau",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.173Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.072Z"
       },
       "gtin": "4042533295498",
       "id": "gtin:4042533295498",
@@ -3571,7 +3546,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 323,6 x 247,7 x 219,4 cm moosgrün",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.146Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:44.041Z"
       },
       "gtin": "4042533295504",
       "id": "gtin:4042533295504",
@@ -3599,7 +3574,7 @@
         "name": "EcoStar Gerätehaus Elegant-S Typ 3 anthrazitgrau 2 flg 323,6 x 247,7 cm",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:03.134Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:44.035Z",
         "widthCm": 323.6
       },
       "gtin": "4042533295511",
@@ -3625,7 +3600,7 @@
         "mpn": "0692653041",
         "name": "Floraworld Gerätehausbodenrahmen für Gerätehaus Premium Q7,5 Firstline",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.131Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.217Z"
       },
       "gtin": "4047883025016",
       "id": "gtin:4047883025016",
@@ -3650,7 +3625,7 @@
         "mpn": "0692652745",
         "name": "Floraworld Wandregal für Gerätehaus verzinkt 70 cm 2er-Set",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.191Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.358Z"
       },
       "gtin": "4047883050551",
       "id": "gtin:4047883050551",
@@ -3675,7 +3650,7 @@
         "mpn": "0692652746",
         "name": "Floraworld Klapptisch für Gerätehaus verzinkt 70 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.191Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.358Z"
       },
       "gtin": "4047883050568",
       "id": "gtin:4047883050568",
@@ -3700,7 +3675,7 @@
         "mpn": "0692652747",
         "name": "Floraworld Lochblech 2in1 für Gerätehaus verzinkt 177 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.191Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.358Z"
       },
       "gtin": "4047883050582",
       "id": "gtin:4047883050582",
@@ -3725,7 +3700,7 @@
         "mpn": "0692652748",
         "name": "Floraworld Lochblech 2in1 für Gerätehaus verzinkt 172 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.191Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.358Z"
       },
       "gtin": "4047883136200",
       "id": "gtin:4047883136200",
@@ -3750,7 +3725,7 @@
         "mpn": "0692653038",
         "name": "Floraworld Gerätehausboden Riffelblech für Gerätehaus Premium Q7,5 Firstline",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.130Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.215Z"
       },
       "gtin": "4047883136231",
       "id": "gtin:4047883136231",
@@ -3775,7 +3750,7 @@
         "mpn": "0692652749",
         "name": "Floraworld Regenfallrohrsatz für Gerätehaus anthrazit 2er-Set",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.191Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.358Z"
       },
       "gtin": "4047883141600",
       "id": "gtin:4047883141600",
@@ -3799,7 +3774,7 @@
         "mpn": "0692652701",
         "name": "EcoStar Kleiderhaken für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.392Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.837Z"
       },
       "gtin": "4067807054236",
       "id": "gtin:4067807054236",
@@ -3825,7 +3800,7 @@
         "mpn": "0692652616",
         "name": "EcoStar Regalboden 480 für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.391Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.836Z"
       },
       "gtin": "4067807054243",
       "id": "gtin:4067807054243",
@@ -3850,7 +3825,7 @@
         "mpn": "0692652617",
         "name": "EcoStar Regalboden 960 für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.391Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.836Z"
       },
       "gtin": "4067807054250",
       "id": "gtin:4067807054250",
@@ -3875,7 +3850,7 @@
         "mpn": "0692652674",
         "name": "EcoStar Klapptisch 480 für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.391Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.836Z"
       },
       "gtin": "4067807054267",
       "id": "gtin:4067807054267",
@@ -3900,7 +3875,7 @@
         "mpn": "0692652628",
         "name": "EcoStar Gerätehalter 480 für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.391Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.836Z"
       },
       "gtin": "4067807054298",
       "id": "gtin:4067807054298",
@@ -3925,7 +3900,7 @@
         "mpn": "0692652675",
         "name": "EcoStar Gerätehalter 960 für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.391Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.836Z"
       },
       "gtin": "4067807054304",
       "id": "gtin:4067807054304",
@@ -3950,7 +3925,7 @@
         "mpn": "0692652599",
         "name": "EcoStar Fahrradhalter 480 für Gerätehaus waagerecht",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.390Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.835Z"
       },
       "gtin": "4067807054311",
       "id": "gtin:4067807054311",
@@ -3975,7 +3950,7 @@
         "mpn": "0692652686",
         "name": "EcoStar Fahrradhalter 960 für Gerätehaus waagerecht",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.390Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.835Z"
       },
       "gtin": "4067807054328",
       "id": "gtin:4067807054328",
@@ -4000,7 +3975,7 @@
         "mpn": "0692652687",
         "name": "EcoStar Schlauchset für Gerätehaus 1 1/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.391Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.836Z"
       },
       "gtin": "4067807054571",
       "id": "gtin:4067807054571",
@@ -4025,7 +4000,7 @@
         "mpn": "0692652593",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.390Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.835Z"
       },
       "gtin": "4067807060367",
       "id": "gtin:4067807060367",
@@ -4050,7 +4025,7 @@
         "mpn": "0692652649",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD5/FD5/PD5",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.390Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.835Z"
       },
       "gtin": "4067807060374",
       "id": "gtin:4067807060374",
@@ -4075,7 +4050,7 @@
         "mpn": "0692652702",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD14/FD14/PD14",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.390Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.835Z"
       },
       "gtin": "4067807060398",
       "id": "gtin:4067807060398",
@@ -4100,7 +4075,7 @@
         "mpn": "0692652591",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD4/FD4/PD4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.389Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.834Z"
       },
       "gtin": "4067807060404",
       "id": "gtin:4067807060404",
@@ -4125,7 +4100,7 @@
         "mpn": "0692652703",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD6/FD6/PD6",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.389Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.834Z"
       },
       "gtin": "4067807060411",
       "id": "gtin:4067807060411",
@@ -4150,7 +4125,7 @@
         "mpn": "0692652664",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD10/FD10/PD10",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.389Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.834Z"
       },
       "gtin": "4067807060428",
       "id": "gtin:4067807060428",
@@ -4175,7 +4150,7 @@
         "mpn": "0692652596",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:09.789Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:48.973Z"
       },
       "gtin": "4067807060435",
       "id": "gtin:4067807060435",
@@ -4200,7 +4175,7 @@
         "mpn": "0692652689",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD5/FD5/PD5",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.389Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.834Z"
       },
       "gtin": "4067807060442",
       "id": "gtin:4067807060442",
@@ -4225,7 +4200,7 @@
         "mpn": "0692652676",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD14/FD14/PD14",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.388Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.833Z"
       },
       "gtin": "4067807060466",
       "id": "gtin:4067807060466",
@@ -4250,7 +4225,7 @@
         "mpn": "0692652594",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD4/FD4/PD4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:09.787Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:48.971Z"
       },
       "gtin": "4067807060473",
       "id": "gtin:4067807060473",
@@ -4275,7 +4250,7 @@
         "mpn": "0692652690",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD6/FD6/PD6",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.389Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.834Z"
       },
       "gtin": "4067807060480",
       "id": "gtin:4067807060480",
@@ -4300,7 +4275,7 @@
         "mpn": "0692652665",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD10/FD10/PD10",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.388Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.833Z"
       },
       "gtin": "4067807060497",
       "id": "gtin:4067807060497",
@@ -4325,7 +4300,7 @@
         "mpn": "0692652595",
         "name": "EcoStar Fußboden für Gerätehaus SD2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.388Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.833Z"
       },
       "gtin": "4067807060503",
       "id": "gtin:4067807060503",
@@ -4350,7 +4325,7 @@
         "mpn": "0692652666",
         "name": "EcoStar Fußboden für Gerätehaus SD5/FD5/PD5",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.388Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.833Z"
       },
       "gtin": "4067807060510",
       "id": "gtin:4067807060510",
@@ -4375,7 +4350,7 @@
         "mpn": "0692652600",
         "name": "EcoStar Fußboden für Gerätehaus SD14/FD14/PD14",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.388Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.833Z"
       },
       "gtin": "4067807060534",
       "id": "gtin:4067807060534",
@@ -4400,7 +4375,7 @@
         "mpn": "0692652597",
         "name": "EcoStar Fußboden für Gerätehaus SD4/FD4/PD4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.387Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.832Z"
       },
       "gtin": "4067807060541",
       "id": "gtin:4067807060541",
@@ -4425,7 +4400,7 @@
         "mpn": "0692652704",
         "name": "EcoStar Fußboden für Gerätehaus SD6/FD6/PD6",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.388Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.832Z"
       },
       "gtin": "4067807060558",
       "id": "gtin:4067807060558",
@@ -4450,7 +4425,7 @@
         "mpn": "0692652629",
         "name": "EcoStar Fußboden für Gerätehaus SD10/FD10/PD10",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.387Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.832Z"
       },
       "gtin": "4067807060565",
       "id": "gtin:4067807060565",
@@ -4475,7 +4450,7 @@
         "mpn": "0692652610",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.386Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.831Z"
       },
       "gtin": "4067807067151",
       "id": "gtin:4067807067151",
@@ -4500,7 +4475,7 @@
         "mpn": "0692652611",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.386Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.831Z"
       },
       "gtin": "4067807067168",
       "id": "gtin:4067807067168",
@@ -4525,7 +4500,7 @@
         "mpn": "0692652713",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD3",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.386Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.831Z"
       },
       "gtin": "4067807067175",
       "id": "gtin:4067807067175",
@@ -4550,7 +4525,7 @@
         "mpn": "0692652641",
         "name": "EcoStar Unterkonstruktion für Gerätehaus SD7/FD7/PD7",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.385Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.830Z"
       },
       "gtin": "4067807067182",
       "id": "gtin:4067807067182",
@@ -4575,7 +4550,7 @@
         "mpn": "0692652661",
         "name": "EcoStar Fußboden für Gerätehaus SD1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.386Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.830Z"
       },
       "gtin": "4067807067205",
       "id": "gtin:4067807067205",
@@ -4600,7 +4575,7 @@
         "mpn": "0692652624",
         "name": "EcoStar Fußboden für Gerätehaus SD3",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.385Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.830Z"
       },
       "gtin": "4067807067212",
       "id": "gtin:4067807067212",
@@ -4625,7 +4600,7 @@
         "mpn": "0692652642",
         "name": "EcoStar Fußboden für Gerätehaus SD7/FD7/PD7",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.385Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.829Z"
       },
       "gtin": "4067807067229",
       "id": "gtin:4067807067229",
@@ -4650,7 +4625,7 @@
         "mpn": "0692652682",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD3",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.386Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.831Z"
       },
       "gtin": "4067807067854",
       "id": "gtin:4067807067854",
@@ -4675,7 +4650,7 @@
         "mpn": "0692652612",
         "name": "EcoStar Bodenrahmen für Gerätehaus SD7/FD7/PD7",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.386Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.831Z"
       },
       "gtin": "4067807067861",
       "id": "gtin:4067807067861",
@@ -4700,7 +4675,7 @@
         "mpn": "0692652670",
         "name": "EcoStar Regalleiste für Gerätehaus",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.384Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.828Z"
       },
       "gtin": "4067807086398",
       "id": "gtin:4067807086398",
@@ -4725,7 +4700,7 @@
         "mpn": "0692652613",
         "name": "EcoStar Laubabdeckung für Gerätehaus SD1/SD3",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.385Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.830Z"
       },
       "gtin": "4067807087081",
       "id": "gtin:4067807087081",
@@ -4750,7 +4725,7 @@
         "mpn": "0692652696",
         "name": "EcoStar Laubabdeckung für Gerätehaus SD2/SD4/SD8",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.385Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.829Z"
       },
       "gtin": "4067807087098",
       "id": "gtin:4067807087098",
@@ -4775,7 +4750,7 @@
         "mpn": "0692652671",
         "name": "EcoStar Laubabdeckung für Gerätehaus SD5/SD9/SD12",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.384Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.828Z"
       },
       "gtin": "4067807087104",
       "id": "gtin:4067807087104",
@@ -4800,7 +4775,7 @@
         "mpn": "0692652662",
         "name": "EcoStar Laubabdeckung für Gerätehaus SD6/SD10/SD13",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.384Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.828Z"
       },
       "gtin": "4067807087111",
       "id": "gtin:4067807087111",
@@ -4825,7 +4800,7 @@
         "mpn": "0692652672",
         "name": "EcoStar Laubabdeckung für Gerätehaus SD7/SD11/SD14",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.385Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.829Z"
       },
       "gtin": "4067807087128",
       "id": "gtin:4067807087128",
@@ -4852,7 +4827,7 @@
         "name": "Palmako Gartenhaus Lydia 385 x 291 cm mit Glasschiebetüren grau lackiert",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:07.725Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:47.373Z",
         "widthCm": 385
       },
       "gtin": "4743142028964",
@@ -4880,7 +4855,7 @@
         "name": "Palmako Gartenhaus Lydia 450 x 330 cm mit Glasschiebetüren grau lackiert",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:07.724Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:47.372Z",
         "widthCm": 450
       },
       "gtin": "4743142028995",
@@ -4908,7 +4883,7 @@
         "name": "Palmako Gartenhaus Lydia 285 x 291 cm mit Glasschiebetüren grau lackiert",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:07.725Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:47.373Z",
         "widthCm": 285
       },
       "gtin": "4743142045114",
@@ -4935,7 +4910,7 @@
         "mpn": "0784104896",
         "name": "Palmako Gartenhaus Lydia 285 x 563 cm mit Glasschiebetüren grau lackiert",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:07.725Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:47.373Z",
         "widthCm": 285
       },
       "gtin": "4743142045121",
@@ -4962,7 +4937,7 @@
         "mpn": "0784104913",
         "name": "Palmako Gartenhaus Lydia 663 x 291 cm mit Glasschiebetüren grau lackiert",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:07.724Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:47.372Z",
         "widthCm": 663
       },
       "gtin": "4743142045138",
@@ -4989,7 +4964,7 @@
         "mpn": "0784104898",
         "name": "Palmako Gartenhaus Lydia 728 x 330 cm mit Glasschiebetüren grau lackiert",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:07.718Z",
+        "sourceUpdatedAt": "2026-08-28T14:01:47.371Z",
         "widthCm": 728
       },
       "gtin": "4743142045145",
@@ -5016,7 +4991,7 @@
         "name": "Plus Gartenhaus Shelter 225 x 291 x 170 cm natur mit Fußboden",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:02.690Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:43.644Z"
       },
       "gtin": "5703393167460",
       "id": "gtin:5703393167460",
@@ -5042,7 +5017,7 @@
         "name": "Plus Gartenhaus Shelter 203 x 121 x 198 cm natur mit Räder und Fußboden",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:02.690Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:43.644Z"
       },
       "gtin": "5703393167484",
       "id": "gtin:5703393167484",
@@ -5067,7 +5042,7 @@
         "mpn": "16756-1",
         "name": "Plus Fahrrad/Geräteschuppen 5,7 m² unbehandelt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:02.690Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:43.644Z"
       },
       "gtin": "5703393167569",
       "id": "gtin:5703393167569",
@@ -5092,7 +5067,7 @@
         "mpn": "167560-1",
         "name": "Plus Fahrrad/Geräteschuppen m/Doppeltür 5,7 m² unbehandelt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:02.690Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:43.644Z"
       },
       "gtin": "5703393734525",
       "id": "gtin:5703393734525",
@@ -5117,7 +5092,7 @@
         "mpn": "18001",
         "name": "Plus Geräteraum Glasanbau 316 x 208 x 295 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:27:58.770Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:39.655Z"
       },
       "gtin": "5706966180019",
       "id": "gtin:5706966180019",
@@ -5142,7 +5117,7 @@
         "mpn": "0692652464",
         "name": "Canopia Gerätehaus Voyager Alu grau 90 x 139 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:08.067Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.613Z"
       },
       "gtin": "7290108139785",
       "id": "gtin:7290108139785",
@@ -5168,7 +5143,7 @@
         "name": "Keter Kunststoff Gerätehaus Cortina 7x7 inkl. Fußboden 216 x 218 cm Holzoptik",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:07.286Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.064Z"
       },
       "gtin": "7290112634184",
       "id": "gtin:7290112634184",
@@ -5194,7 +5169,7 @@
         "name": "Keter Kunststoff Gerätehaus Signature Walnuss 7x7 inkl. Fußboden 216 x 218 cm braun Holzoptik",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:07.140Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:46.957Z"
       },
       "gtin": "7290112638632",
       "id": "gtin:7290112638632",
@@ -5220,7 +5195,7 @@
         "name": "Telluria Gerätehaus Classico Lounge S 3024 links weiß",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.013Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.071Z"
       },
       "gtin": "8720707960958",
       "id": "gtin:8720707960958",
@@ -5246,7 +5221,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 links granitgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.007Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.065Z"
       },
       "gtin": "8720707961276",
       "id": "gtin:8720707961276",
@@ -5272,7 +5247,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 rechts granitgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.007Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.065Z"
       },
       "gtin": "8720707961283",
       "id": "gtin:8720707961283",
@@ -5298,7 +5273,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 links lichtgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.007Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.065Z"
       },
       "gtin": "8720707961290",
       "id": "gtin:8720707961290",
@@ -5324,7 +5299,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 rechts lichtgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.007Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.065Z"
       },
       "gtin": "8720707961306",
       "id": "gtin:8720707961306",
@@ -5350,7 +5325,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 links weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.007Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.064Z"
       },
       "gtin": "8720707961313",
       "id": "gtin:8720707961313",
@@ -5376,7 +5351,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 links EW weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.007Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.065Z"
       },
       "gtin": "8720707961320",
       "id": "gtin:8720707961320",
@@ -5402,7 +5377,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 rechts weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.006Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.064Z"
       },
       "gtin": "8720707961337",
       "id": "gtin:8720707961337",
@@ -5428,7 +5403,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3030 rechts EW weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.006Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.064Z"
       },
       "gtin": "8720707961344",
       "id": "gtin:8720707961344",
@@ -5454,7 +5429,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 links granitgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.006Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.064Z"
       },
       "gtin": "8720707961351",
       "id": "gtin:8720707961351",
@@ -5480,7 +5455,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 rechts granitgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.006Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.064Z"
       },
       "gtin": "8720707961368",
       "id": "gtin:8720707961368",
@@ -5506,7 +5481,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 links lichtgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.005Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.063Z"
       },
       "gtin": "8720707961375",
       "id": "gtin:8720707961375",
@@ -5532,7 +5507,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 rechts lichtgrau 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.005Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.063Z"
       },
       "gtin": "8720707961382",
       "id": "gtin:8720707961382",
@@ -5558,7 +5533,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 links weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.005Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.063Z"
       },
       "gtin": "8720707961399",
       "id": "gtin:8720707961399",
@@ -5584,7 +5559,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 links EW weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.005Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.062Z"
       },
       "gtin": "8720707961405",
       "id": "gtin:8720707961405",
@@ -5610,7 +5585,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 rechts weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.005Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.062Z"
       },
       "gtin": "8720707961412",
       "id": "gtin:8720707961412",
@@ -5636,7 +5611,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3030 rechts EW weiß 762 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.004Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.062Z"
       },
       "gtin": "8720707961429",
       "id": "gtin:8720707961429",
@@ -5662,7 +5637,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 links granitgrau 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.907Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.961Z"
       },
       "gtin": "8720707961634",
       "id": "gtin:8720707961634",
@@ -5688,7 +5663,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 rechts granitgrau 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.907Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.961Z"
       },
       "gtin": "8720707961641",
       "id": "gtin:8720707961641",
@@ -5714,7 +5689,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 links lichtgrau 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.907Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.961Z"
       },
       "gtin": "8720707961658",
       "id": "gtin:8720707961658",
@@ -5740,7 +5715,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 rechts lichtgrau 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.907Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.961Z"
       },
       "gtin": "8720707961665",
       "id": "gtin:8720707961665",
@@ -5766,7 +5741,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 links weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.908Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.962Z"
       },
       "gtin": "8720707961672",
       "id": "gtin:8720707961672",
@@ -5792,7 +5767,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 links weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.908Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.962Z"
       },
       "gtin": "8720707961689",
       "id": "gtin:8720707961689",
@@ -5818,7 +5793,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 rechts weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.908Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.962Z"
       },
       "gtin": "8720707961696",
       "id": "gtin:8720707961696",
@@ -5844,7 +5819,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL 3330 rechts weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.908Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.962Z"
       },
       "gtin": "8720707961702",
       "id": "gtin:8720707961702",
@@ -5870,7 +5845,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 links anthrazit 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.908Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.962Z"
       },
       "gtin": "8720707961719",
       "id": "gtin:8720707961719",
@@ -5896,7 +5871,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 rechts anthrazit 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.909Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.963Z"
       },
       "gtin": "8720707961726",
       "id": "gtin:8720707961726",
@@ -5922,7 +5897,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 links hellgrau 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.909Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.963Z"
       },
       "gtin": "8720707961733",
       "id": "gtin:8720707961733",
@@ -5948,7 +5923,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 rechts hellgrau 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.909Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.963Z"
       },
       "gtin": "8720707961740",
       "id": "gtin:8720707961740",
@@ -5974,7 +5949,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 links weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.906Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.960Z"
       },
       "gtin": "8720707961757",
       "id": "gtin:8720707961757",
@@ -6000,7 +5975,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 links EW weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.001Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.058Z"
       },
       "gtin": "8720707961764",
       "id": "gtin:8720707961764",
@@ -6026,7 +6001,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 rechts weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:10.907Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.961Z"
       },
       "gtin": "8720707961771",
       "id": "gtin:8720707961771",
@@ -6052,7 +6027,7 @@
         "name": "Telluria Gerätehaus Classico Lounge XL mit Fenstern 3330 rechts EW weiß 792 x 298 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.000Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.057Z"
       },
       "gtin": "8720707961788",
       "id": "gtin:8720707961788",
@@ -6078,7 +6053,7 @@
         "name": "Telluria Gerätehaus Classico 5436+_2XW60 granitgrau 538 x 358 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.000Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.057Z"
       },
       "gtin": "8720707961832",
       "id": "gtin:8720707961832",
@@ -6104,7 +6079,7 @@
         "name": "Telluria Gerätehaus Classico 5436+_2XW60 lichtgrau 538 x 358 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.000Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.057Z"
       },
       "gtin": "8720707961849",
       "id": "gtin:8720707961849",
@@ -6130,7 +6105,7 @@
         "name": "Telluria Gerätehaus Classico 5436+_2XW60 weiß 538 x 358 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.000Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.057Z"
       },
       "gtin": "8720707961856",
       "id": "gtin:8720707961856",
@@ -6156,7 +6131,7 @@
         "name": "Telluria Gerätehaus Classico 5436+_2XW60 EW weiß 538 x 358 cm",
         "reviewed": false,
         "roofType": "flat",
-        "sourceUpdatedAt": "2026-08-28T13:28:11.000Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.057Z"
       },
       "gtin": "8720707961863",
       "id": "gtin:8720707961863",
@@ -6181,7 +6156,7 @@
         "mpn": "0692653010",
         "name": "Telluria Innenwand für Gerätehaus Classico 2121 lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.909Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.963Z"
       },
       "gtin": "8720707962198",
       "id": "gtin:8720707962198",
@@ -6206,7 +6181,7 @@
         "mpn": "0692653045",
         "name": "Telluria Innenwand 2424 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.151Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.241Z"
       },
       "gtin": "8720707962204",
       "id": "gtin:8720707962204",
@@ -6231,7 +6206,7 @@
         "mpn": "0692652804",
         "name": "Telluria Innenwand 2721 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.150Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.239Z"
       },
       "gtin": "8720707962211",
       "id": "gtin:8720707962211",
@@ -6256,7 +6231,7 @@
         "mpn": "0692653050",
         "name": "Telluria Innenwand 2724 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.151Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.241Z"
       },
       "gtin": "8720707962228",
       "id": "gtin:8720707962228",
@@ -6281,7 +6256,7 @@
         "mpn": "0692652843",
         "name": "Telluria Innenwand 3024 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.151Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.241Z"
       },
       "gtin": "8720707962235",
       "id": "gtin:8720707962235",
@@ -6306,7 +6281,7 @@
         "mpn": "0692652877",
         "name": "Telluria Innenwand 3030 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.151Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.241Z"
       },
       "gtin": "8720707962242",
       "id": "gtin:8720707962242",
@@ -6331,7 +6306,7 @@
         "mpn": "0692652945",
         "name": "Telluria Innenwand 3930+ für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.151Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.240Z"
       },
       "gtin": "8720707962266",
       "id": "gtin:8720707962266",
@@ -6356,7 +6331,7 @@
         "mpn": "0692652950",
         "name": "Telluria Innenwand Luminato 5436+ für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.150Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.239Z"
       },
       "gtin": "8720707962273",
       "id": "gtin:8720707962273",
@@ -6381,7 +6356,7 @@
         "mpn": "0692652965",
         "name": "Telluria Innenwand Duo 2721 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.150Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.239Z"
       },
       "gtin": "8720707962303",
       "id": "gtin:8720707962303",
@@ -6406,7 +6381,7 @@
         "mpn": "0692653027",
         "name": "Telluria Innenwand für Gerätehaus DUO 3336+ lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.909Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.963Z"
       },
       "gtin": "8720707962310",
       "id": "gtin:8720707962310",
@@ -6431,7 +6406,7 @@
         "mpn": "0692653028",
         "name": "Telluria Innenwand für Gerätehaus Luminato 2424 lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.910Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.964Z"
       },
       "gtin": "8720707962327",
       "id": "gtin:8720707962327",
@@ -6456,7 +6431,7 @@
         "mpn": "0692653029",
         "name": "Telluria Innenwand für Gerätehaus Luminato 3030 lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.910Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.964Z"
       },
       "gtin": "8720707962334",
       "id": "gtin:8720707962334",
@@ -6481,7 +6456,7 @@
         "mpn": "0692652762",
         "name": "Telluria Lochblech & Haken 2121-2721 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962341",
       "id": "gtin:8720707962341",
@@ -6506,7 +6481,7 @@
         "mpn": "0692653046",
         "name": "Telluria Lochblech & Haken 2424-2724-3024 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962358",
       "id": "gtin:8720707962358",
@@ -6531,7 +6506,7 @@
         "mpn": "0692653053",
         "name": "Telluria Lochblech & Haken 3030-3330-3930 für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962365",
       "id": "gtin:8720707962365",
@@ -6556,7 +6531,7 @@
         "mpn": "0692652763",
         "name": "Telluria Fußboden 2121 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962372",
       "id": "gtin:8720707962372",
@@ -6581,7 +6556,7 @@
         "mpn": "0692652769",
         "name": "Telluria Fußboden 2424 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962389",
       "id": "gtin:8720707962389",
@@ -6606,7 +6581,7 @@
         "mpn": "0692652805",
         "name": "Telluria Fußboden 2721 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.150Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.239Z"
       },
       "gtin": "8720707962396",
       "id": "gtin:8720707962396",
@@ -6631,7 +6606,7 @@
         "mpn": "0692652810",
         "name": "Telluria Fußboden 2724 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.147Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.233Z"
       },
       "gtin": "8720707962402",
       "id": "gtin:8720707962402",
@@ -6656,7 +6631,7 @@
         "mpn": "0692652844",
         "name": "Telluria Fußboden 3024 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962419",
       "id": "gtin:8720707962419",
@@ -6681,7 +6656,7 @@
         "mpn": "0692652878",
         "name": "Telluria Fußboden 3030 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707962426",
       "id": "gtin:8720707962426",
@@ -6706,7 +6681,7 @@
         "mpn": "0692652919",
         "name": "Telluria Fußboden 3330 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962433",
       "id": "gtin:8720707962433",
@@ -6731,7 +6706,7 @@
         "mpn": "0692652940",
         "name": "Telluria Fußboden 3930 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962440",
       "id": "gtin:8720707962440",
@@ -6756,7 +6731,7 @@
         "mpn": "0692652951",
         "name": "Telluria Fußboden 5436+ für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962457",
       "id": "gtin:8720707962457",
@@ -6781,7 +6756,7 @@
         "mpn": "0692652966",
         "name": "Telluria Fußboden Duo 2721 für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962464",
       "id": "gtin:8720707962464",
@@ -6806,7 +6781,7 @@
         "mpn": "0692652971",
         "name": "Telluria Fußboden Duo 3336+ für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962471",
       "id": "gtin:8720707962471",
@@ -6831,7 +6806,7 @@
         "mpn": "0692652764",
         "name": "Telluria Rampe Einzeltür für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962488",
       "id": "gtin:8720707962488",
@@ -6856,7 +6831,7 @@
         "mpn": "0692653051",
         "name": "Telluria Rampe Doppeltür für Gerätehaus aluminium",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.148Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.235Z"
       },
       "gtin": "8720707962495",
       "id": "gtin:8720707962495",
@@ -6881,7 +6856,7 @@
         "mpn": "0692653052",
         "name": "Telluria Innenwand 3030 & Lounge XL für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.150Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.239Z"
       },
       "gtin": "8720707965106",
       "id": "gtin:8720707965106",
@@ -6906,7 +6881,7 @@
         "mpn": "0692652918",
         "name": "Telluria Innenwand 3330 & Lounge XL für Gerätehaus lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:11.149Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:50.237Z"
       },
       "gtin": "8720707965113",
       "id": "gtin:8720707965113",
@@ -6931,7 +6906,7 @@
         "mpn": "0692653025",
         "name": "Telluria Innenwand für Gerätehaus Classico 3930 lichtgrau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:10.910Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:49.964Z"
       },
       "gtin": "8720707965281",
       "id": "gtin:8720707965281",
@@ -6956,7 +6931,7 @@
         "mpn": "40003179",
         "name": "Globel Metallerätehaus Dream 86 245 x 185 x 198 cm jade",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.368Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.762Z"
       },
       "gtin": "9340976000507",
       "id": "gtin:9340976000507",
@@ -6982,7 +6957,7 @@
         "name": "Globel Metallgerätehaus Lean-To 58 155 x 242 x 203 cm jade",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.760Z"
       },
       "gtin": "9340976000613",
       "id": "gtin:9340976000613",
@@ -7007,7 +6982,7 @@
         "mpn": "40004400",
         "name": "Globel Metallgerätehaus Tower 86 245 x 185 x 220 cm silber-metallic",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.762Z"
       },
       "gtin": "9340976000767",
       "id": "gtin:9340976000767",
@@ -7032,7 +7007,7 @@
         "mpn": "40003177",
         "name": "Globel Metallerätehaus Dream 65 184 x 154 x 193 cm jade",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.760Z"
       },
       "gtin": "9340976001290",
       "id": "gtin:9340976001290",
@@ -7057,7 +7032,7 @@
         "mpn": "40004330",
         "name": "Globel Erweiterungsmodul Metallgerätehaus Worker 125 x 308 x 225 cm anth.",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.762Z"
       },
       "gtin": "9340976002969",
       "id": "gtin:9340976002969",
@@ -7082,7 +7057,7 @@
         "mpn": "40004318",
         "name": "Globel Metallgerätehaus Parker MGR 1015 308 x 464 x 225 cm anthrazit",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.366Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.759Z"
       },
       "gtin": "9340976003409",
       "id": "gtin:9340976003409",
@@ -7107,7 +7082,7 @@
         "mpn": "40004411",
         "name": "Globel Metallgerätehaus Tower 86 245 x 185 x 220 cm jade",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.361Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.755Z"
       },
       "gtin": "9340976004406",
       "id": "gtin:9340976004406",
@@ -7132,7 +7107,7 @@
         "mpn": "40003256",
         "name": "Globel Fundamentbodenrahmen 6 x 5 zu Gerätehaus Dream 65 und Lean To 56",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.364Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.758Z"
       },
       "gtin": "9340976006615",
       "id": "gtin:9340976006615",
@@ -7157,7 +7132,7 @@
         "mpn": "40003262",
         "name": "Globel Fundamentbodenrahmen 5 x 8 zu Gerätehaus Lean To 58",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.760Z"
       },
       "gtin": "9340976006820",
       "id": "gtin:9340976006820",
@@ -7182,7 +7157,7 @@
         "mpn": "40003260",
         "name": "Globel Fundamentbodenrahmen 8 x 6 zu Gerätehaus Dream 86 und Tower 86",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.368Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.762Z"
       },
       "gtin": "9340976006837",
       "id": "gtin:9340976006837",
@@ -7207,7 +7182,7 @@
         "mpn": "40003263",
         "name": "Globel Fundamentbodenrahmen 8 x 8 zu Gerätehaus Dream 88",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.363Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.757Z"
       },
       "gtin": "9340976006844",
       "id": "gtin:9340976006844",
@@ -7232,7 +7207,7 @@
         "mpn": "40003264",
         "name": "Globel Fundamentbodenrahmen 10 x 8 zu Gerätehaus Dream 108 und Tower 108",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.762Z"
       },
       "gtin": "9340976006882",
       "id": "gtin:9340976006882",
@@ -7257,7 +7232,7 @@
         "mpn": "40003265",
         "name": "Globel Fundamentbodenrahmen 10 x 10 zu Gerätehaus Dream 1010",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.361Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.755Z"
       },
       "gtin": "9340976006899",
       "id": "gtin:9340976006899",
@@ -7283,7 +7258,7 @@
         "name": "Globel Metallgerätehaus Lean-To 56 155 x 180 x 203 cm silber-metallic",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:05.366Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.759Z"
       },
       "gtin": "9340976007193",
       "id": "gtin:9340976007193",
@@ -7308,7 +7283,7 @@
         "mpn": "40003133",
         "name": "Globel Metallerätehaus Dream 88 245 x 247 x 198 cm silber-metallic",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.367Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.760Z"
       },
       "gtin": "9340976007780",
       "id": "gtin:9340976007780",
@@ -7333,7 +7308,7 @@
         "mpn": "40003152",
         "name": "Globel Metallerätehaus Dream 1010 308 x 309 x 202 cm silber-metallic",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.361Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.755Z"
       },
       "gtin": "9340976007803",
       "id": "gtin:9340976007803",
@@ -7358,7 +7333,7 @@
         "mpn": "40003182",
         "name": "Globel Metallerätehaus Dream 88 245 x 247 x 198 cm jade",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.354Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.754Z"
       },
       "gtin": "9340976007865",
       "id": "gtin:9340976007865",
@@ -7383,7 +7358,7 @@
         "mpn": "40003185",
         "name": "Globel Metallerätehaus Dream 1010 308 x 309 x 202 cm jade",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T13:28:05.365Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.758Z"
       },
       "gtin": "9340976007889",
       "id": "gtin:9340976007889",
@@ -7409,7 +7384,7 @@
         "name": "Globel Schleppdach für Gerätehaus Dream 65 anthrazit",
         "reviewed": false,
         "roofType": "gable",
-        "sourceUpdatedAt": "2026-08-28T13:28:08.538Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:47.943Z"
       },
       "gtin": "9340976008800",
       "id": "gtin:9340976008800",
@@ -7435,7 +7410,7 @@
         "name": "Globel Metallgerätehaus Lean-To 56 155 x 180 x 203 cm jade",
         "reviewed": false,
         "roofType": "pent",
-        "sourceUpdatedAt": "2026-08-28T13:28:05.365Z"
+        "sourceUpdatedAt": "2026-08-28T14:01:45.759Z"
       },
       "gtin": "9340976009517",
       "id": "gtin:9340976009517",
