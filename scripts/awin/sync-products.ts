@@ -84,6 +84,14 @@ function applyProjectOverride(product: ProjectProduct, override?: ProjectOverrid
   return override ? ProjectProductSchema.parse({ ...product, ...publicOverride(override), id: product.id }) : product;
 }
 
+const PROJECT_KIND_PRIORITY: Record<string, number> = {
+  kit: 1, panel: 1, decking: 1, board: 1,
+  profile: 2, substructure: 2, gate: 2, base: 2,
+  post: 3, foundation: 3, roof: 3, ventilation: 3,
+  fastening: 4, joint: 4, insulation: 4, sealing: 4,
+  drainage: 5, electric: 5, bench: 5, shade: 5, bracket: 6, cap: 6, irrigation: 6,
+};
+
 function autoReviewCompleteFeedProduct<TProduct extends ProductBase>(product: TProduct, candidate: AffiliateCandidate<TProduct>, hasOverride: boolean): TProduct {
   return !hasOverride && candidate.offer && candidate.issues.length === 0
     ? { ...product, reviewed: true, dataQuality: "mixed" }
@@ -182,7 +190,7 @@ export function assembleProjectCatalog(candidates: ProjectProductCandidate[], ov
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
   }
-  const published = [...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").sort((a, b) => a.vertical.localeCompare(b.vertical) || a.kind.localeCompare(b.kind) || a.id.localeCompare(b.id));
+  const published = [...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").sort((a, b) => a.vertical.localeCompare(b.vertical) || (PROJECT_KIND_PRIORITY[a.kind] ?? 99) - (PROJECT_KIND_PRIORITY[b.kind] ?? 99) || a.kind.localeCompare(b.kind) || a.id.localeCompare(b.id));
   const counts = new Map<string, number>();
   const selected = published.filter((product) => {
     const count = counts.get(product.vertical) ?? 0;
