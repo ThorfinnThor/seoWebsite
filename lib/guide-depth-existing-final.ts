@@ -16,7 +16,7 @@ function depth(input: Input): SeoGuideDepth {
       ...input.faqs.map(([question, answer]) => ({ question, answer })),
       {
         question: `Wie nutze ich „${input.caption}“ für eine konkrete Entscheidung?`,
-        answer: "Übertrage zuerst alle Messwerte und Bedingungen deines Projekts in eine einfache Skizze oder Tabelle. Markiere bestätigte Herstellerdaten, eigene Messungen und noch offene Annahmen getrennt. Vergleiche anschließend nur Lösungen, die alle harten Anforderungen erfüllen. Preis und Komfort werden erst danach bewertet. Bleibt ein sicherheits-, bau- oder systemrelevanter Punkt offen, muss er vor Bestellung fachlich oder anhand der verbindlichen Produktunterlagen geklärt werden.",
+        answer: "Übertrage alle Messwerte und Bedingungen deines Projekts in eine einfache Skizze oder Tabelle. Markiere bestätigte Herstellerdaten, eigene Messungen und noch offene Annahmen getrennt. Vergleiche nur Lösungen, die alle harten Anforderungen erfüllen. Preis und Komfort gehören in den Vergleich, sobald die technischen Grenzen geklärt sind. Ein sicherheits-, bau- oder systemrelevanter offener Punkt muss vor der Bestellung fachlich oder anhand der verbindlichen Produktunterlagen geklärt werden.",
       },
     ],
     relatedLinks: input.links.map(([label, href, description]) => ({ label, href, description })),

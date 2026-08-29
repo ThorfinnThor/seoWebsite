@@ -1,5 +1,6 @@
 import type { GuideRelatedLink } from "@/components/seo/GuidePage";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
+import { editorialVariant, sentenceEnd } from "@/lib/editorial-style";
 import type { SeoGuide } from "@/lib/seo-guides";
 
 type Cluster = {
@@ -36,7 +37,7 @@ const clusters = {
     plannerHref: "/garten/gartenhaus-planer/",
     plannerLabel: "Gartenhaus dimensionieren",
     measurementMethod: "Miss jedes Lagergut an seiner breitesten und längsten Stelle einschließlich Lenker, Griffe, Körbe oder Anbauteile. Zeichne anschließend Türöffnung, Bewegungsfläche, Regaltiefe und nicht zustellbare Wandbereiche maßstäblich ein. Außenmaß, Sockelmaß und nutzbares Innenmaß sind dabei getrennte Werte.",
-    decisionMethod: "Eine belastbare Größenentscheidung entsteht aus dem Stellplan: häufig genutzte Dinge liegen am Zugang, schwere Geräte bleiben am Boden und lange Gegenstände erhalten eine eigene Wandzone. Erst wenn dieser Plan funktioniert, werden Bauart, Material und konkrete Modelle verglichen.",
+    decisionMethod: "Eine belastbare Größenentscheidung entsteht aus dem Stellplan: häufig genutzte Dinge liegen am Zugang, schwere Geräte bleiben am Boden und lange Gegenstände erhalten eine eigene Wandzone. Auf dieser Grundlage lassen sich Bauart, Material und konkrete Modelle sinnvoll vergleichen.",
     boundary: "Fundament, Bodenlast, Wind- und Schneelast, Grenzabstände sowie eine mögliche Genehmigung sind standort- und systemabhängig. Die Flächenrechnung ersetzt diese Prüfung nicht.",
     relatedLinks: [
       { label: "Gartenhaus-Größe berechnen", href: "/garten/gartenhaus-groesse/", description: "Lagergut und Bewegungsfläche strukturiert erfassen." },
@@ -106,7 +107,7 @@ const clusters = {
     plannerHref: "/garten/sichtschutz-planer/",
     plannerLabel: "Sichtschutz berechnen",
     measurementMethod: "Miss die Strecke entlang der tatsächlichen Flucht und markiere Ecken, Gefälle, Tor, Enden und Anschlüsse. Elementbreite, Pfostenbreite und notwendige Fugen werden separat gerechnet. Bei Gefälle ist zusätzlich festzulegen, ob die Oberkante waagerecht oder gestuft verlaufen soll.",
-    decisionMethod: "Erst die Teilung der Strecke bestimmt Element- und Pfostenzahl. Material, Höhe, Winddurchlässigkeit, Fundament und Befestigung werden anschließend als zusammengehöriges System bewertet. Ein passendes Restfeld ist meist besser als ein erzwungenes Standardraster.",
+    decisionMethod: "Die Teilung der Strecke bestimmt Element- und Pfostenzahl. Material, Höhe, Winddurchlässigkeit, Fundament und Befestigung werden als zusammengehöriges System bewertet. Ein passendes Restfeld ist meist besser als ein erzwungenes Standardraster.",
     boundary: "Windlast, Pfosten, Fundamente, Grenzverlauf und zulässige Höhe müssen für Standort und System geprüft werden. Die Mengenplanung ersetzt weder Statik noch lokales Baurecht.",
     relatedLinks: [
       { label: "Sichtschutz-Planer", href: "/garten/sichtschutz-planer/", description: "Strecke, Teilung und Pfosten nachvollziehbar berechnen." },
@@ -134,7 +135,7 @@ const clusters = {
     plannerHref: "/haus/boden/bodenbelag-rechner/",
     plannerLabel: "Bodenmenge berechnen",
     measurementMethod: "Zerlege den Raum in Rechtecke, addiere deren Flächen und behandle Nischen sowie Türlaibungen bewusst. Danach werden Verlegerichtung, Paketinhalt, Dielenformat und ein begründeter Verschnitt berücksichtigt. Bestellt wird in ganzen Paketen, nicht in rechnerischen Quadratmeterbruchteilen.",
-    decisionMethod: "Untergrund, Feuchte, Nutzung und Herstellerfreigabe entscheiden zuerst über das geeignete System. Die Materialmenge folgt erst danach. Für einen fairen Preisvergleich zählen Boden, Unterlage, Profile, Sockelleisten und mögliche Untergrundarbeiten zusammen.",
+    decisionMethod: "Untergrund, Feuchte, Nutzung und Herstellerfreigabe entscheiden über das geeignete System. Die Materialmenge wird aus dieser Entscheidung abgeleitet. Für einen fairen Preisvergleich zählen Boden, Unterlage, Profile, Sockelleisten und mögliche Untergrundarbeiten zusammen.",
     boundary: "Restfeuchte, Ebenheit, Fußbodenheizung, Feuchteschutz und Verlegung richten sich nach Untergrund und freigegebenem Produktsystem. Die Mengenrechnung ersetzt keine technische Prüfung.",
     relatedLinks: [
       { label: "Bodenbelag-Rechner", href: "/haus/boden/bodenbelag-rechner/", description: "Raumfläche, Verschnitt und Pakete berechnen." },
@@ -162,7 +163,7 @@ const clusters = {
     plannerHref: "/haus/raumklima/luftentfeuchter-rechner/",
     plannerLabel: "Entfeuchterbedarf berechnen",
     measurementMethod: "Berechne das Raumvolumen aus Länge, Breite und mittlerer Höhe. Dokumentiere Temperatur und relative Feuchte über mehrere Tage sowie Nutzung, Lüftung und erkennbare Feuchtequellen. Quadratmeter allein reichen nicht, weil Geräteleistung stark von Temperatur und Feuchtelast abhängt.",
-    decisionMethod: "Zuerst wird die Ursache eingeordnet, dann der betriebliche Bedarf. Verglichen werden Entfeuchtungsleistung unter passenden Testbedingungen, Hygrostat, Geräusch, Ablauf, Leistungsaufnahme und erwartete Laufzeit. Ein größeres Gerät ist nicht automatisch leiser oder sparsamer.",
+    decisionMethod: "Die Ursache und der betriebliche Bedarf gehören in dieselbe Prüfung. Verglichen werden Entfeuchtungsleistung unter passenden Testbedingungen, Hygrostat, Geräusch, Ablauf, Leistungsaufnahme und erwartete Laufzeit. Ein größeres Gerät ist nicht automatisch leiser oder sparsamer.",
     boundary: "Ein Entfeuchter behandelt Raumluft, aber keine Leckage, Wärmebrücke oder andere bauliche Ursache. Bei anhaltender Feuchte, Schimmel oder unklarer Ursache ist eine fachliche Prüfung erforderlich.",
     relatedLinks: [
       { label: "Luftentfeuchter-Rechner", href: "/haus/raumklima/luftentfeuchter-rechner/", description: "Raumvolumen, Feuchtelast und Nutzung einordnen." },
@@ -174,6 +175,149 @@ const clusters = {
 } satisfies Record<string, Cluster>;
 
 function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
+  const variant = editorialVariant(`${cluster.label}/${seed.slug}`, 3);
+  const measuredFocus = `${seed.measurement} ${cluster.measurementMethod}`;
+  const verification = `${seed.caution} ${cluster.boundary}`;
+  const sections = variant === 0
+    ? [
+        {
+          title: "Was in diesem Beispiel im Alltag zählt",
+          paragraphs: [
+            `${seed.intro} Bei dieser Nutzung entscheidet deshalb nicht allein die beworbene Größe. Maßgeblich ist, wie die Lösung am vorgesehenen Ort benutzt, gewartet und später verändert wird.`,
+            `${measuredFocus} Halte die Werte mit Einheit und Messdatum fest. So bleibt erkennbar, welche Angaben aus deinem Projekt stammen und welche später noch aus dem Datenblatt kommen müssen.`,
+          ],
+        },
+        {
+          title: "Eine Rechnung mit offenem Ausgang",
+          paragraphs: [
+            `${seed.calculation} Daraus ergibt sich ${seed.result}. Die Zahl beschreibt einen Planungsrahmen für dieses Beispiel. Sie ist keine Zusage, dass jedes Produkt mit derselben Angabe passt.`,
+            `Die Reserve gehört sichtbar in die Rechnung. Runde erst nach dem Rechenschritt auf Paket, Feld, Kapazität oder Systemgröße auf. Wenn sich eine Eingabe ändert, muss auch das Ergebnis neu betrachtet werden.`,
+          ],
+        },
+        {
+          title: `${seed.optionA} und ${seed.optionB} im Vergleich`,
+          paragraphs: [
+            `Die Variante ${seed.optionA} kann bei dieser Nutzung passen, wenn die gemessenen Voraussetzungen erfüllt sind. Die Variante ${seed.optionB} bringt einen anderen Lösungsweg oder mehr Spielraum, ist dadurch aber nicht automatisch die bessere Wahl.`,
+            `${cluster.decisionMethod} Für dieses Szenario sprechen außerdem folgende Punkte eine klare Sprache. ${seed.advice.join(" ")}`,
+          ],
+        },
+        {
+          title: "Die Stelle, an der die Planung kippen kann",
+          paragraphs: [
+            `Ein häufiger Irrtum liegt in einer einzelnen Maximalangabe. ${seed.caution} Prüfe deshalb Zugang, ungünstigste Stelle, Montage und Wartung gemeinsam.`,
+            `Für die Auswahl zählen am Ende die Unterlagen des konkreten Produkts und die Bedingungen vor Ort. ${cluster.boundary}`,
+          ],
+        },
+      ]
+    : variant === 1
+      ? [
+          {
+            title: "Dieses Beispiel braucht einen eigenen Plan",
+            paragraphs: [
+              `${seed.intro} Ein brauchbarer Plan beginnt bei der tatsächlichen Nutzung und nicht bei einer fertigen Produktklasse. ${seed.measurement}`,
+              `${cluster.measurementMethod} Für den Alltag ist bei diesem Beispiel besonders wichtig. ${seed.advice[0]}`,
+            ],
+          },
+          {
+            title: "Was die Beispielzahl wirklich aussagt",
+            paragraphs: [
+              `Die Rechnung lautet ${seed.calculation} Als Ergebnis stehen ${seed.result} im Raum. Dieser Wert hilft bei der Vorauswahl, ersetzt aber weder die Produktunterlage noch die Prüfung des Einbauorts.`,
+              `Eine Reserve ist nur sinnvoll, wenn sie einen konkreten Grund hat. Bei dieser Nutzung können das Zuschnitt, Zugriff, Betriebszeit, schwierige Geometrie oder eine spätere Änderung sein.`,
+            ],
+          },
+          {
+            title: "Zwei Lösungen, zwei praktische Folgen",
+            paragraphs: [
+              `${seed.optionA} ist interessant, wenn der beschriebene Vorteil im eigenen Ablauf gebraucht wird. ${seed.optionB} wird relevant, wenn ${seed.advice[2]}`,
+              `${cluster.decisionMethod} Übertrage diese Überlegung auf deinen eigenen Ablauf und streiche Varianten, die ein Muss-Kriterium nicht erfüllen.`,
+            ],
+          },
+          {
+            title: "Vor der Bestellung bleibt eine Gegenprobe",
+            paragraphs: [
+              `Prüfe die kritischste Stelle deines Projekts statt nur den Durchschnitt. ${verification}`,
+              `Bewahre Messung, Rechenweg und Produktunterlage zusammen auf. So lässt sich später nachvollziehen, warum die Auswahl für dieses Beispiel getroffen wurde.`,
+            ],
+          },
+        ]
+      : [
+          {
+            title: "Die konkrete Situation vor Ort",
+            paragraphs: [
+              `${seed.intro} Ob die Lösung funktioniert, zeigt sich an den Details des Projekts. ${seed.measurement}`,
+              `Halte die Messung am späteren Einsatzort mit Einheit und Datum fest. ${cluster.measurementMethod} So lässt sich ein Angebot mit deinem Standort vergleichen.`,
+            ],
+          },
+          {
+            title: "Vom Messwert zum Planungsrahmen",
+            paragraphs: [
+              `Die Rechnung lautet ${sentenceEnd(seed.calculation)} Der daraus abgeleitete Rahmen lautet ${seed.result}. Er soll eine Entscheidung greifbarer machen und bleibt an die genannten Annahmen gebunden.`,
+              `Die Rechnung wird nicht durch eine pauschale Sicherheitszahl ersetzt. Begründe jeden Aufschlag mit dem, was in deinem Projekt tatsächlich zusätzlich gebraucht wird.`,
+            ],
+          },
+          {
+            title: `${seed.optionA} kann reichen, ${seed.optionB} kann sinnvoller sein`,
+            paragraphs: [
+              `Die Variante ${seed.optionA} hat bei dieser Nutzung einen nachvollziehbaren Platz, wenn der beschriebene Ablauf zu den eigenen Anforderungen passt. Die Variante ${seed.optionB} verdient den Vorzug, wenn die dafür wichtige Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]}`,
+              `${seed.advice[2]} ${cluster.decisionMethod}`,
+            ],
+          },
+          {
+            title: "Nicht nur die schöne Ausgangslage prüfen",
+            paragraphs: [
+              `Plane mit der schwierigsten Stelle und dem späteren Wartungsfall. ${seed.caution}`,
+              `Ob der Plan trägt, entscheidet sich an den echten Maßen und den Freigaben. ${cluster.boundary}`,
+            ],
+          },
+        ];
+
+  const faqs = variant === 0
+    ? [
+        { question: "Welche Angabe ist in diesem Beispiel am wichtigsten?", answer: `${seed.measurement} Der Planungswert ${seed.result} wird anschließend mit der Produktunterlage und den Bedingungen vor Ort verglichen.` },
+        { question: "Wie viel Reserve ist in diesem Beispiel sinnvoll?", answer: `Eine Reserve braucht einen konkreten Grund. Bei dieser Nutzung ist vor allem der tatsächliche Ablauf entscheidend. ${seed.advice[0]} ${sentenceEnd(seed.calculation)} Ein begründeter Puffer kommt danach in die Rechnung.` },
+        { question: `Wann spricht mehr für ${seed.optionB}?`, answer: `${seed.optionB} passt besser, wenn die genannte Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]} ${seed.caution}` },
+        { question: "Was muss vor dem Kauf noch geklärt werden?", answer: `Kontrolliere Maße, Lieferumfang, Einsatzbedingungen und Montagehinweise. ${cluster.boundary}` },
+      ]
+    : variant === 1
+      ? [
+          { question: "Wie groß muss die Lösung für dieses Beispiel sein?", answer: `Übernimm nicht einfach eine Katalogklasse. ${seed.measurement} Die Beispielrechnung führt zu ${seed.result} und muss mit den echten Produktmaßen abgeglichen werden.` },
+          { question: "Warum reicht ein einzelner Maximalwert nicht?", answer: `Ein Maximalwert beschreibt nur eine bestimmte Prüfbedingung. ${seed.caution} ${cluster.boundary}` },
+          { question: `Welche Alternative gibt es zu ${seed.optionA}?`, answer: `${seed.optionB} kann sinnvoll sein, wenn dieser Punkt im eigenen Projekt regelmäßig vorkommt. ${seed.advice[2]} Vergleiche dafür Anschaffung, Zubehör, Platz, Montage und Wartung gemeinsam.` },
+        ]
+      : [
+          { question: "Was wird in diesem Beispiel gemessen?", answer: `${seed.measurement} Die Messung erhält ein Datum und eine Einheit, damit sie mit späteren Produktangaben vergleichbar bleibt.` },
+          { question: "Wie belastbar ist der berechnete Wert?", answer: `${seed.calculation} Das Ergebnis ${seed.result} ist ein offener Planungsrahmen. ${cluster.boundary}` },
+          { question: `Was spricht für ${seed.optionA} und was für ${seed.optionB}?`, answer: `${seed.optionA} ist passend, wenn der beschriebene Vorteil gebraucht wird. ${seed.optionB} wird interessant, wenn ${seed.advice[1]}` },
+          { question: "Welche Kontrolle verhindert eine Fehlbestellung?", answer: `Prüfe die ungünstigste Stelle, den Lieferumfang und die Montageanleitung. ${seed.caution}` },
+        ];
+  const finalSections = [
+    ...sections,
+    ...(variant === 1
+      ? [{
+          title: "Die Entscheidung für den eigenen Standort festhalten",
+          paragraphs: [
+            `Notiere für dieses Beispiel die gemessenen Werte, die gewählte Variante und den Grund für die Reserve. ${seed.advice[2]}`,
+            `Diese Dokumentation hilft auch später bei Nachbestellung, Wartung oder einer Änderung des Projekts. ${cluster.boundary}`,
+          ],
+        }]
+      : []),
+  ].map((section, index) => ({
+    ...section,
+    paragraphs: [
+      ...section.paragraphs,
+      [
+        `Der Planungswert für dieses Beispiel bleibt an die Messung und die genannten Bedingungen gebunden. Eine Übertragung auf ein anderes Grundstück braucht eine neue Rechnung.`,
+        `Für den Alltag ist dieser Punkt entscheidend. ${seed.advice[0]}`,
+        `Für die Gegenprobe genügt keine ideale Zeichnung. ${seed.caution} Prüfe die Stelle, an der die Nutzung am wenigsten Spielraum lässt.`,
+        `Auch dieser Punkt gehört in die Prüfung. ${seed.advice[1]} Die Unterlagen des gewählten Systems entscheiden über die endgültige Eignung.`,
+        `Wenn sich ${index % 2 === 0 ? "das Maß" : "die Nutzung"} ändert, gehört die Rechnung erneut auf den Tisch. So bleibt die Entscheidung nachvollziehbar und bezahlbar.`,
+      ][index % 5],
+    ],
+  }));
+  const finalFaqs = faqs.length >= 4
+    ? faqs
+    : [...faqs, { question: "Wie halte ich die Entscheidung nachvollziehbar fest?", answer: `Speichere Messwerte, Rechnung, Produktunterlage und offene Punkte gemeinsam. ${seed.caution}` }];
+
   return {
     slug: seed.slug,
     title: seed.title,
@@ -183,86 +327,40 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
     takeaway: seed.takeaway,
     plannerHref: cluster.plannerHref,
     plannerLabel: cluster.plannerLabel,
-    sections: [
-      {
-        title: `Ausgangslage für ${seed.scenario}`,
-        paragraphs: [
-          `${seed.intro} Für eine brauchbare Entscheidung werden Wunschmaß, reale Nutzung und harte Grenzen getrennt dokumentiert. Dadurch bleibt sichtbar, welche Annahme das Ergebnis verändert und welche Angabe später am konkreten Produkt verifiziert werden muss.`,
-          `${cluster.measurementMethod} Für dieses Szenario ist besonders wichtig: ${seed.measurement} Misswerte und Fotos sollten gemeinsam notiert werden, damit ein späterer Produktvergleich nicht wieder mit unklaren Voraussetzungen beginnt.`,
-        ],
-      },
-      {
-        title: "Rechenweg mit offengelegten Annahmen",
-        paragraphs: [
-          `Ein nachvollziehbares Beispiel lautet: ${seed.calculation} Daraus folgt als Planungswert: ${seed.result} Das ist kein universeller Sollwert, sondern eine prüfbare Ausgangsgröße. Ändert sich eine Eingabe, wird die Rechnung neu ausgeführt, statt die alte Zahl nur grob zu übertragen.`,
-          `Runde Material oder Kapazität nicht zu früh. Zuerst wird mit den gemessenen Werten gerechnet, danach werden Paketgrößen, Systemgrenzen oder eine begründete Reserve angewendet. Genau diese Reihenfolge verhindert, dass mehrere kleine Aufschläge unbemerkt zu einer überdimensionierten und teuren Lösung werden.`,
-        ],
-      },
-      {
-        title: `${seed.optionA} oder ${seed.optionB}?`,
-        paragraphs: [
-          `${seed.optionA} ist dann plausibel, wenn die gemessene Ausgangslage, der tägliche Ablauf und die verfügbaren Reserven zusammenpassen. ${seed.optionB} sollte gewählt werden, wenn eine harte Grenze der ersten Variante erreicht wird oder der zusätzliche Nutzen im Alltag konkret benannt werden kann.`,
-          `${cluster.decisionMethod} Für ${seed.scenario} gilt zusätzlich: ${seed.advice.join(" ")} Diese Punkte gehören als Muss-, Soll- oder Komfortkriterium in dieselbe Vergleichsliste.`,
-        ],
-      },
-      {
-        title: "Fehler vermeiden und Ergebnis verifizieren",
-        paragraphs: [
-          `Ein häufiger Fehler ist, nur mit einer beworbenen Maximalangabe zu planen. ${seed.caution} Prüfe deshalb Datenblatt, Montage- oder Bedienungsanleitung und Lieferumfang vor dem Kauf. Abweichende Einheiten werden zuerst umgerechnet; Schätzwerte bleiben als solche markiert.`,
-          `Nach der Vorauswahl wird das Ergebnis am Standort gegengeprüft: Passt der Zugang, bleibt Wartung möglich und funktioniert die ungünstigste Stelle? ${cluster.boundary} Eine gute Planung benennt diese Grenze offen und trennt Rechenwert, Produktaussage und fachlich zu prüfende Ausführung.`,
-        ],
-      },
-    ],
+    sections: finalSections,
     comparison: {
-      caption: `Entscheidung für ${seed.scenario}`,
+      caption: "Entscheidung für dieses Beispiel",
       columns: ["Prüfpunkt", seed.optionA, seed.optionB],
       rows: [
-        ["Ausgangslage", "Passt innerhalb der gemessenen Grundanforderung", "Bietet zusätzliche Kapazität oder eine andere Bauweise"],
-        ["Berechnung", seed.calculation, seed.result],
-        ["Stärke", seed.advice[0], seed.advice[1]],
-        ["Kritischer Punkt", seed.caution, cluster.boundary],
-        ["Entscheidung", "Wenn alle Muss-Kriterien erfüllt sind", "Wenn eine benannte Reserve tatsächlich benötigt wird"],
+        ["Projekt", seed.measurement, cluster.measurementMethod],
+        ["Rechenwert", seed.calculation, seed.result],
+        ["Praktischer Nutzen", seed.advice[0], seed.advice[1]],
+        ["Grenze", seed.caution, cluster.boundary],
+        ["Passend, wenn", "alle Muss-Kriterien erfüllt sind", "der zusätzliche Nutzen im Alltag belegt ist"],
       ],
     },
     checklist: [
-      `Messwerte für ${seed.scenario} mit Einheit und Datum notieren.`,
+      "Messwerte für dieses Beispiel mit Einheit und Datum festhalten.",
       seed.measurement,
-      `Rechenweg prüfen: ${seed.calculation}`,
+      `Den Rechenweg mit eigenen Werten nachrechnen. ${seed.calculation}`,
       seed.advice[0],
       seed.advice[1],
       seed.advice[2],
-      `Vor Bestellung kontrollieren: ${seed.caution}`,
+      `Vor der Bestellung kontrollieren. ${seed.caution}`,
     ],
-    faqs: [
-      {
-        question: `Welche Größe ist bei ${seed.scenario} entscheidend?`,
-        answer: `Entscheidend ist nicht eine einzelne Werbeangabe, sondern die kleinste belastbare Größe aus Messung, Nutzung und Systemgrenze. ${seed.measurement} Der Planungswert ${seed.result} wird deshalb anschließend am konkreten Datenblatt und am verfügbaren Platz geprüft.`,
-      },
-      {
-        question: "Wie viel Reserve sollte ich einplanen?",
-        answer: `Reserve braucht einen benannten Grund, etwa Zuschnitt, schwierige Geometrie, eingeschränkte Betriebszeit oder eine realistische spätere Erweiterung. Ein pauschaler Aufschlag ohne Bezug zur Ausgangslage macht die Auswahl nicht sicherer. Rechne zuerst ${seed.calculation} und ergänze die Reserve erst danach als eigene, sichtbare Position.`,
-      },
-      {
-        question: `Wann ist ${seed.optionB} sinnvoller?`,
-        answer: `${seed.optionB} ist sinnvoller, wenn ${seed.optionA} ein Muss-Kriterium nicht erfüllt oder der Mehrwert regelmäßig genutzt wird. Für die Entscheidung werden Anschaffung, notwendiges Zubehör, Platz, Wartung und Folgekosten mit denselben Annahmen verglichen. Eine bloß größere Zahl ist noch kein praktischer Vorteil.`,
-      },
-      {
-        question: "Was muss ich vor dem Kauf noch verifizieren?",
-        answer: `Kontrolliere Maße, Lieferumfang, Einsatzbedingungen, Montage- beziehungsweise Bedienhinweise und die für den Standort relevanten Grenzen. Besonders wichtig ist: ${seed.caution} ${cluster.boundary} Bewahre die verwendeten Produktunterlagen zusammen mit deiner Berechnung auf.`,
-      },
-    ],
+    faqs: finalFaqs,
     relatedLinks: cluster.relatedLinks,
     sources: [...cluster.sources],
     example: {
-      title: `Rechenbeispiel: ${seed.scenario}`,
-      intro: `Das Beispiel zeigt die im Ratgeber verwendete Planungsannahme als prüfbare Rechenkette. Eingaben und Einheiten müssen vor einer Übertragung auf das eigene Projekt ersetzt werden.`,
+      title: "Rechenbeispiel für diese Nutzung",
+      intro: `Dieses Beispiel zeigt, wie sich der Planungsrahmen aus einer konkreten Eingabe ableitet. Übertrage die Rechnung erst auf dein eigenes Projekt, wenn Maße und Einheiten feststehen.`,
       steps: [
         { label: "Ausgangslage", value: seed.measurement },
         { label: "Rechnung", value: seed.calculation },
         { label: "Planungswert", value: seed.result },
       ],
       result: seed.result,
-      note: `Der Wert ist ein transparenter Planungsrahmen. ${seed.caution}`,
+      note: `Der Wert bleibt an die genannten Annahmen gebunden. ${seed.caution}`,
     },
     limitation: cluster.boundary,
   };
@@ -412,7 +510,7 @@ const dehumidifierGuides = guides(clusters.dehumidifier, [
     slug: `luftentfeuchter-fuer-${area}-qm`, title: `Luftentfeuchter für ${area} m²: Leistung richtig wählen`, description: `Luftentfeuchter für ${area} Quadratmeter auswählen: Raumvolumen, Temperatur, Feuchtelast, Liter pro Tag, Geräusch und Stromverbrauch einordnen.`, heading: `Luftentfeuchter für ${area} m²: Volumen und Feuchtelast statt Fläche`, intro: `Eine Raumgröße von ${area} m² ist nur zusammen mit Höhe, Temperatur und Feuchteursache aussagekräftig. Herstellerwerte werden unter bestimmten Prüfbedingungen gemessen.`, takeaway: `Berechne das Raumvolumen und protokolliere Temperatur sowie Feuchte. Vergleiche Geräte anhand realistischer Leistungsdaten, Hygrostat, Geräusch, Ablauf und Laufzeit.`, scenario: `einen Raum mit ${area} m²`, measurement: "Miss Länge, Breite und mittlere Höhe und protokolliere relative Feuchte sowie Temperatur morgens und abends über mehrere Tage.", calculation: `${area} m² × 2,5 m Raumhöhe ergeben ${area * 2.5} m³ Raumvolumen; dieser Wert wird mit Temperatur und Feuchtelast bewertet.`, result: `${area * 2.5} m³ zu behandelndes Raumvolumen im Beispiel, nicht automatisch eine feste Liter-pro-Tag-Klasse.`, optionA: "Kompaktes Kompressorgerät", optionB: "Leistungsstärkeres Gerät mit Ablauf", advice: ["Liter-pro-Tag-Werte werden nur bei vergleichbaren Temperatur- und Feuchtebedingungen bewertet.", "Ein Hygrostat verhindert unnötigen Dauerbetrieb.", "Dauerablauf und Tankgröße müssen zur unbeaufsichtigten Nutzung passen."], caution: "Bei niedriger Temperatur kann die reale Leistung deutlich von einem bei warmen Testbedingungen beworbenen Maximalwert abweichen.",
   })),
   {
-    slug: "luftentfeuchter-fuer-badezimmer", title: "Luftentfeuchter fürs Badezimmer: Bedarf und Sicherheit", description: "Luftentfeuchter im Badezimmer planen: Raumvolumen, Duschfeuchte, Lüftung, elektrische Sicherheit, Geräusch, Hygrostat und Aufstellung prüfen.", heading: "Luftentfeuchter im Bad: Feuchtespitze und sichere Aufstellung", intro: "Im Badezimmer entsteht kurzzeitig viel Wasserdampf. Zuerst wird geprüft, ob Lüftung und Heizung die Feuchte ausreichend abführen können.", takeaway: "Protokolliere den Feuchteabfall nach dem Duschen und kläre die Ursache. Nutze nur Geräte und Aufstellorte, die für die elektrische Umgebung ausdrücklich geeignet sind.", scenario: "ein Badezimmer mit hoher Feuchtespitze", measurement: "Berechne Raumvolumen und miss Feuchte direkt nach Nutzung sowie nach 30, 60 und 120 Minuten bei dokumentierter Lüftung.", calculation: "Ein 8-m²-Bad mit 2,5 m Höhe besitzt 20 m³ Volumen; fällt die Feuchte trotz korrekter Lüftung über zwei Stunden kaum, besteht weiterer Prüfbedarf.", result: "20 m³ Raumvolumen plus ein zeitlicher Feuchteverlauf als Auswahlgrundlage.", optionA: "Lüftungsroutine ohne Zusatzgerät", optionB: "Geeigneter Entfeuchter außerhalb kritischer Nassbereiche", advice: ["Das Gerät darf Fluchtweg und Luftzirkulation nicht blockieren.", "Tank und Filter müssen leicht und hygienisch erreichbar sein.", "Geräusch ist bei Nutzung nahe Wohn- oder Schlafräumen relevant."], caution: "Schutzbereiche, Steckdosen und Geräteeignung im Bad müssen fachgerecht geprüft werden; ein normales Haushaltsgerät ist nicht automatisch überall zulässig.",
+    slug: "luftentfeuchter-fuer-badezimmer", title: "Luftentfeuchter fürs Badezimmer: Bedarf und Sicherheit", description: "Luftentfeuchter im Badezimmer planen: Raumvolumen, Duschfeuchte, Lüftung, elektrische Sicherheit, Geräusch, Hygrostat und Aufstellung prüfen.", heading: "Luftentfeuchter im Bad: Feuchtespitze und sichere Aufstellung", intro: "Im Badezimmer entsteht kurzzeitig viel Wasserdampf. Entscheidend ist, ob Lüftung und Heizung die Feuchte ausreichend abführen können.", takeaway: "Protokolliere den Feuchteabfall nach dem Duschen und kläre die Ursache. Nutze nur Geräte und Aufstellorte, die für die elektrische Umgebung ausdrücklich geeignet sind.", scenario: "ein Badezimmer mit hoher Feuchtespitze", measurement: "Berechne Raumvolumen und miss Feuchte direkt nach Nutzung sowie nach 30, 60 und 120 Minuten bei dokumentierter Lüftung.", calculation: "Ein 8-m²-Bad mit 2,5 m Höhe besitzt 20 m³ Volumen; fällt die Feuchte trotz korrekter Lüftung über zwei Stunden kaum, besteht weiterer Prüfbedarf.", result: "20 m³ Raumvolumen plus ein zeitlicher Feuchteverlauf als Auswahlgrundlage.", optionA: "Lüftungsroutine ohne Zusatzgerät", optionB: "Geeigneter Entfeuchter außerhalb kritischer Nassbereiche", advice: ["Das Gerät darf Fluchtweg und Luftzirkulation nicht blockieren.", "Tank und Filter müssen leicht und hygienisch erreichbar sein.", "Geräusch ist bei Nutzung nahe Wohn- oder Schlafräumen relevant."], caution: "Schutzbereiche, Steckdosen und Geräteeignung im Bad müssen fachgerecht geprüft werden; ein normales Haushaltsgerät ist nicht automatisch überall zulässig.",
   },
 ]);
 

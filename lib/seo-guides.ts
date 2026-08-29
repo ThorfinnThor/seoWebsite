@@ -5,6 +5,7 @@ import type {
   GuideSection,
 } from "@/components/seo/GuidePage";
 import type { GuideExample, GuideSource } from "@/lib/guide-enrichments";
+import { editorializeGuide } from "@/lib/editorial-style";
 import { SEO_GUIDE_DEPTH } from "@/lib/seo-guide-depth";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { SEO_GUIDES_WAVE2 } from "@/lib/seo-guides-wave2";
@@ -109,13 +110,13 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     title: "Mähroboter vergleichen: Diese Kriterien sind wichtiger als Top-10-Listen",
     description: "Mähroboter-Vergleich nach Gartenfläche, Steigung, Engstellen, Navigation, Kanten und Wartung – ohne pauschalen Testsieger.",
     heading: "Mähroboter vergleichen: Ein Testsieger passt nicht automatisch zu deinem Garten",
-    intro: "Eine belastbare Auswahl beginnt mit dem Geländeprofil. Erst danach lassen sich Modelle und Navigation sinnvoll gegenüberstellen.",
-    takeaway: "Bewerte Geräte in dieser Reihenfolge: Nettofläche, Steigung, Engstellen, Hindernisse, Randlösung, Navigation, Geräusch, Wartung und erst dann Preis.",
+    intro: "Eine belastbare Auswahl richtet sich nach dem Geländeprofil. Modelle und Navigation werden vor diesem Hintergrund sinnvoll gegenübergestellt.",
+    takeaway: "Bewerte Geräte nach Nettofläche, Steigung, Engstellen, Hindernissen, Randlösung, Navigation, Geräusch und Wartung. Der Preis wird im Zusammenhang mit diesem Anforderungsprofil betrachtet.",
     plannerHref: "/garten/maehroboter-rechner/",
     plannerLabel: "Gartenprofil prüfen",
     sections: [
       { title: "Warum pauschale Top-10-Rankings begrenzt sind", paragraphs: ["Ein Modell kann auf einer offenen Testfläche sehr gut abschneiden und im Garten mit Hang, Bäumen oder mehreren Zonen trotzdem ungeeignet sein. Rankings ändern sich außerdem mit Firmware, Lieferumfang und Preis.", "PassendPlanen veröffentlicht daher keinen erfundenen Testsieger. Die Auswahl sollte aus dokumentierten Anforderungen und überprüfbaren Herstellerdaten entstehen."] },
-      { title: "Der Vergleich in acht Schritten", paragraphs: ["Erfasse zuerst Fläche, Steigung, engste Passage, Randabstände, Hindernisse und getrennte Zonen. Danach vergleichst du Navigation, zulässige Bedingungen, Laufzeit, Diebstahlschutz, Geräusch und Service."] , bullets: ["Fläche inklusive realistischer Reserve", "Steigung und Boden bei feuchten Bedingungen", "Kabel, RTK, Kamera oder LiDAR", "Kanten, Passagen und Nebenflächen", "Wartung, Ersatzmesser und Winterlagerung"] },
+      { title: "Der Vergleich mit den Standortdaten", paragraphs: ["Fläche, Steigung, engste Passage, Randabstände, Hindernisse und getrennte Zonen bilden die Standortbasis. Gegen diese Angaben werden Navigation, zulässige Bedingungen, Laufzeit, Diebstahlschutz, Geräusch und Service gehalten."] , bullets: ["Fläche inklusive realistischer Reserve", "Steigung und Boden bei feuchten Bedingungen", "Kabel, RTK, Kamera oder LiDAR", "Kanten, Passagen und Nebenflächen", "Wartung, Ersatzmesser und Winterlagerung"] },
       { title: "Produktdaten erst nach dem Standortcheck", paragraphs: ["Wenn geprüfte Produktfeeds verfügbar sind, kann ein Katalog diese Kriterien filtern. Bis dahin bleibt eine transparente Anforderungsliste ehrlicher als eine Top-10-Tabelle ohne belastbare, aktuelle Daten."] },
     ],
   },
@@ -221,7 +222,7 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     sections: [
       { title: "Kompressorgeräte", paragraphs: ["Kompressorgeräte nutzen einen Kältekreislauf und werden häufig für wärmere Wohn- oder Kellerräume eingesetzt. Leistung, Lautstärke und Entfeuchtung sinken beziehungsweise verändern sich bei anderen Temperaturen."] },
       { title: "Adsorption", paragraphs: ["Adsorptionsgeräte arbeiten ohne klassischen Kompressor und können bei niedrigen Temperaturen Vorteile haben. Dafür können Stromverbrauch, Abwärme und Geräusch im konkreten Betrieb höher ausfallen."] },
-      { title: "Feuchteursache zuerst klären", paragraphs: ["Ein Gerät senkt Luftfeuchte, repariert aber keine Leckage, Wärmebrücke oder falsche Lüftung. Messe Raumvolumen, Temperatur und Feuchteverlauf und prüfe die bauliche Ursache."] },
+      { title: "Die Feuchteursache gehört zur Prüfung", paragraphs: ["Ein Gerät senkt Luftfeuchte, repariert aber keine Leckage, Wärmebrücke oder falsche Lüftung. Messe Raumvolumen, Temperatur und Feuchteverlauf und prüfe die bauliche Ursache."] },
     ],
   },
   {
@@ -241,13 +242,15 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
   },
 ] as const;
 
-export const SEO_GUIDES: readonly SeoGuide[] = [
+const RAW_SEO_GUIDES: readonly SeoGuide[] = [
   ...SEO_GUIDES_INITIAL,
   ...SEO_GUIDES_WAVE2,
   ...SEO_GUIDES_SCENARIOS,
 ];
 
+export const SEO_GUIDES: readonly SeoGuide[] = RAW_SEO_GUIDES.map(editorializeGuide);
+
 export function getSeoGuide(slug: string) {
   const guide = SEO_GUIDES.find((candidate) => candidate.slug === slug);
-  return guide ? { ...guide, ...SEO_GUIDE_DEPTH[slug] } : undefined;
+  return guide ? editorializeGuide({ ...guide, ...SEO_GUIDE_DEPTH[slug] }) : undefined;
 }

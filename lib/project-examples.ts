@@ -1,5 +1,6 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
+import { editorializeGuide, editorialVariant, sentenceEnd } from "@/lib/editorial-style";
 import { SEO_TOPICS } from "@/lib/seo-topics";
 
 type Scale = {
@@ -419,7 +420,7 @@ const clusters: readonly ProjectCluster[] = [
   {
     topicSlug: "trockenbau", noun: "Trockenbauwand", directoryTitle: "Trockenbauwand-Maße und Materialbeispiele",
     directoryDescription: "85 Wandprofile für deutsche Innenausbauprojekte – Fläche, Wandseiten, Plattenlagen, Formate und Öffnungen nachvollziehbar rechnen.",
-    measurement: "Miss Wandlänge und -höhe an mehreren Stellen. Erfasse jede Tür, Installation und geplante Last mit Position; wähle erst danach einen vollständigen freigegebenen Systemaufbau.",
+    measurement: "Miss Wandlänge und -höhe an mehreren Stellen. Erfasse jede Tür, Installation und geplante Last mit Position. Lege auf dieser Basis einen vollständigen freigegebenen Systemaufbau fest.",
     interpretation: "Die Plattenzahl ist ein Mengenrahmen aus Beispielplatten. Plattenformat, Fugenversatz, Öffnungen, Anschlüsse und zulässige Wandhöhe bestimmen den echten Verlegeplan.",
     verification: "Prüfe Profile, Raster, Plattentyp, Lagen, Schraubenabstände, Dämmung, Türständer, Verstärkungen sowie Schall- und Brandschutz im vollständigen Systemnachweis.",
     limitation: "Die Mengenrechnung ersetzt keine Systemfreigabe oder Fachplanung für tragende, Schall-, Brand- und andere sicherheitsrelevante Anforderungen.",
@@ -458,7 +459,79 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
   const defaultSubject = `${cluster.noun} ${scale.label} ${variant.label}`;
   const title = `${cluster.titleSubject?.(scale, variant) ?? defaultSubject}: konkretes Rechenbeispiel`;
   const path = `/ratgeber/projekte/${cluster.topicSlug}/${slug}/`;
-  return {
+  const voice = editorialVariant(slug, 3);
+  const variedSections = voice === 0
+    ? [
+        { title: `${scale.label} ${variant.label} im Alltag`, paragraphs: [`${calculation.input}. Dieses Profil richtet den Blick auf ${variant.focus}. ${variant.check}`, `${cluster.measurement} Halte Messdatum, Einheit und offene Annahmen mit einer Skizze fest.`] },
+        { title: "Die Zahl hinter dem Plan", paragraphs: [`${calculation.calculation}. Daraus ergibt sich ${calculation.result}. Das ist ein Arbeitsrahmen für dieses Beispiel und keine technische Freigabe.`, `${cluster.interpretation} Runde erst nach dem Rechenschritt auf reale Pakete, Elemente oder Systemgrößen auf.`] },
+        { title: "Was eine andere Annahme verändert", paragraphs: [`${calculation.alternative}. Die Gegenprobe zeigt, wie empfindlich die Auswahl auf diese Annahme reagiert. Eine größere Lösung ist nicht automatisch vernünftiger.`, `Ändere jeweils nur eine Eingabe und vergleiche danach Platz, Zugang, Montage, Betrieb und Wartung.`] },
+        { title: "Prüfung vor der Bestellung", paragraphs: [`${cluster.verification} ${variant.check}`, `Entscheidend ist die ungünstigste Stelle und der spätere Wartungsfall. ${cluster.limitation}`] },
+      ]
+    : voice === 1
+      ? [
+          { title: `Womit ${variant.label} steht oder fällt`, paragraphs: [`${calculation.input}. Bei ${scale.label} kommt es besonders auf ${variant.focus} an. ${variant.check}`, `${cluster.measurement} Zeichne auch Anschlüsse und Bereiche ein, die frei bleiben müssen.`] },
+          { title: "Ein Rechenweg, den du prüfen kannst", paragraphs: [`${sentenceEnd(calculation.calculation)} Damit ergibt sich ${calculation.result}. Die Annahmen bleiben sichtbar und lassen sich mit eigenen Werten wiederholen.`, `${cluster.interpretation} Der Planungsrahmen wird auf Lieferlängen, Pakete oder Systemgrenzen übertragen.`] },
+          { title: "Die Alternative braucht einen eigenen Grund", paragraphs: [`${calculation.alternative}. Sie passt nur, wenn die genannte Bedingung erfüllt ist. ${variant.check} ${cluster.verification}`, `Bewerte Anschaffung, Vorbereitung, Montage, Nutzung und Reparatur als zusammenhängenden Ablauf. ${cluster.limitation}`] },
+        ]
+      : [
+          { title: `Ein konkretes Bild für ${scale.label}`, paragraphs: [`${calculation.input}. Der Schwerpunkt liegt auf ${variant.focus}. ${variant.check}`, `${cluster.measurement} Trenne gemessene Werte von Schätzungen, damit die Beispielzahl nicht wie eine Zusage wirkt.`] },
+          { title: "So entsteht der Planungsrahmen", paragraphs: [`${sentenceEnd(calculation.calculation)} Das Ergebnis lautet ${calculation.result}.`, `${cluster.interpretation} Die Rechnung beantwortet eine Vorplanungsfrage, keine Produktfreigabe.`] },
+          { title: "Eine zweite Rechnung bringt Klarheit", paragraphs: [`${calculation.alternative}. So wird sichtbar, welche Annahme die Menge oder Auswahl verschiebt.`, `Vergleiche beide Varianten mit denselben Anforderungen und dokumentiere den Grund für den Puffer.`] },
+          { title: "Offene Punkte aus dem Datenblatt", paragraphs: [`${cluster.verification} ${variant.check}`, `Auch die spätere Bedienung gehört in die Prüfung. ${cluster.limitation}`] },
+        ];
+  const variedFaqs = voice === 0
+    ? [
+        { question: `Gilt ${calculation.result} als feste Empfehlung?`, answer: `Nein. Der Wert entsteht aus den sichtbaren Annahmen dieses Profils. ${cluster.verification}` },
+        { question: `Welche Rolle spielt ${variant.focus}?`, answer: `${variant.check} Die Auswirkung lässt sich mit einer zweiten Rechnung prüfen. ${calculation.alternative}` },
+        { question: "Was sollte ich vor der Bestellung vergleichen?", answer: `${cluster.verification} Vergleiche außerdem Lieferumfang, Montage, Wartung und Ersatzteile.` },
+      ]
+    : voice === 1
+      ? [
+          { question: `Wie wird ${scale.label} ${variant.label} berechnet?`, answer: `${calculation.calculation} Daraus folgt ${calculation.result}. Der Rahmen muss mit dem konkreten Produkt und Standort abgeglichen werden.` },
+          { question: "Kann ich die Annahme übertragen?", answer: `Nur wenn die Voraussetzungen gleich bleiben. ${cluster.measurement} ${variant.check}` },
+          { question: "Welche Grenze bleibt offen?", answer: `${cluster.verification} ${cluster.limitation}` },
+        ]
+      : [
+        { question: `Was zeigt dieses Beispiel für ${scale.label}?`, answer: `${calculation.input}. Die Rechnung führt zu ${calculation.result} und bezieht ${variant.focus} ein.` },
+          { question: "Warum gibt es eine Gegenprobe?", answer: `${calculation.alternative} Damit wird sichtbar, wie empfindlich der Rahmen auf eine geänderte Annahme reagiert.` },
+          { question: "Was muss am Standort geprüft werden?", answer: `${cluster.verification} ${variant.check} ${cluster.limitation}` },
+        ];
+  const finalSections = [
+    ...variedSections,
+    ...(voice === 1
+      ? [{
+          title: "Die Unterlagen für die eigene Entscheidung",
+          paragraphs: [
+            `Speichere die Messung, den Rechenweg und die Produktdaten gemeinsam. ${variant.check}`,
+            `${cluster.verification} So bleibt nachvollziehbar, welche Annahme für ${scale.label} ${variant.label} maßgeblich war.`,
+          ],
+        }]
+      : []),
+  ].map((section, index) => ({
+    ...section,
+    paragraphs: [
+      ...section.paragraphs,
+      [
+        `Der Wert für ${scale.label} ${variant.label} gilt nur unter den genannten Bedingungen. Ein anderes Maß oder eine andere Nutzung braucht eine eigene Rechnung.`,
+        `Bei diesem Profil zählt der konkrete Ablauf mehr als eine allgemeine Produktklasse. ${variant.check}`,
+        `Die wichtigste Gegenprobe bleibt die ungünstigste Stelle im Projekt. ${cluster.limitation}`,
+        `Ändere eine Annahme nach der anderen und halte die Auswirkung fest. So lässt sich die Auswahl auch später noch erklären.`,
+        `Ein vollständiger Vergleich umfasst außerdem Lieferumfang, Montage, Betrieb und Wartung. ${cluster.verification}`,
+      ][index % 5],
+      [
+        `Für die eigene Planung zählt nicht nur die Endzahl. Prüfe, ob die genannte Bedingung erfüllt ist, und halte die Abweichung schriftlich fest. ${variant.check}`,
+        `Die Beispielrechnung wird belastbarer, wenn die verwendeten Maße aus einer Zeichnung oder Messung stammen. ${calculation.input}.`,
+        `Verändere nicht mehrere Annahmen gleichzeitig. So bleibt erkennbar, welche Randbedingung den Ausschlag gibt.`,
+        `Eine gute Entscheidung lässt sich auch nach dem Kauf noch erklären. Bewahre die Ausgangswerte, die Quelle und den Rechenstand für ${scale.label} auf.`,
+        `Wenn der Standort von der Beispielannahme abweicht, beginnt die Prüfung an dieser Stelle erneut. ${variant.check}`,
+      ][(index + 2) % 5],
+      "Auch die spätere Nutzung gehört in den Vergleich. Die genannten Anforderungen müssen unter den tatsächlichen Bedingungen funktionieren und dürfen nicht nur auf dem Papier passend wirken.",
+    ],
+  }));
+  const finalFaqs = variedFaqs.length >= 4
+    ? variedFaqs
+    : [...variedFaqs, { question: "Wie dokumentiere ich das Ergebnis?", answer: `Halte Eingabe, Rechnung, Gegenprobe und offene Grenzen gemeinsam fest. ${cluster.verification}` }];
+  const base = {
     topicSlug: cluster.topicSlug,
     variantSlug: variant.slug,
     variantLabel: variant.label,
@@ -468,7 +541,7 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
     title,
     description: `${defaultSubject} planen: Eingaben, Rechenweg, Ergebnis, Alternative, Checkliste und Grenzen für den deutschen Markt.`,
     heading: title,
-    intro: `Dieses Projektprofil beantwortet eine konkrete Planungsfrage: Wie lässt sich ${cluster.noun.toLowerCase()} mit ${scale.label} ${variant.label} belastbar vorbereiten? Statt eine Produktgröße zu erraten, werden Eingabe, Rechenschritt, Ergebnis und die noch offenen Prüfungen getrennt gezeigt. Alle Einheiten und Annahmen sind sichtbar, damit du das Beispiel mit deinen eigenen Messwerten nachvollziehen kannst.`,
+    intro: `Dieses Projektprofil beantwortet eine konkrete Planungsfrage für ${cluster.noun}. Die Beispielrechnung zeigt, wie sich ${scale.label} und ${variant.label} belastbar vorbereiten lassen. Eingabe, Rechenschritt, Ergebnis und offene Prüfungen stehen getrennt nebeneinander. Alle Einheiten und Annahmen sind sichtbar, damit du das Beispiel mit deinen eigenen Messwerten nachvollziehen kannst.`,
     takeaway: `${calculation.result}. Entscheidend ist anschließend die Prüfung am realen Standort und am vollständigen Datenblatt; die Zahl allein ist weder Kaufempfehlung noch technische Freigabe.`,
     plannerHref: topic.plannerHref,
     plannerLabel: topic.plannerLabel,
@@ -548,12 +621,13 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
     },
     limitation: cluster.limitation,
     relatedLinks: [
-      { label: `${cluster.directoryTitle}`, href: `/ratgeber/projekte/${cluster.topicSlug}/`, description: `Alle 85 konkreten Beispiele zu ${cluster.noun.toLowerCase()} vergleichen.` },
+      { label: `${cluster.directoryTitle}`, href: `/ratgeber/projekte/${cluster.topicSlug}/`, description: `Alle 85 konkreten Beispiele im Bereich ${cluster.noun} vergleichen.` },
       { label: `${topic.name}: Themen-Hub`, href: `/ratgeber/thema/${cluster.topicSlug}/`, description: "Grundlagen, Vergleiche und weiterführende Ratgeber dieses Themenbereichs." },
       { label: topic.plannerLabel, href: topic.plannerHref, description: "Eigene Werte eingeben und den individuellen Planungsrahmen berechnen." },
       { label: "Methodik von PassendPlanen", href: "/methodik/", description: "Nachlesen, wie Annahmen, Grenzen und Produktdaten behandelt werden." },
     ],
   } satisfies ProjectExample;
+  return { ...base, sections: finalSections, faqs: finalFaqs };
 }
 
 const BASE_PROJECT_EXAMPLES: readonly ProjectExample[] = clusters.flatMap((cluster) =>
@@ -581,10 +655,10 @@ export const PROJECT_EXAMPLES: readonly ProjectExample[] = BASE_PROJECT_EXAMPLES
         : "Denselben Nutzungsschwerpunkt mit einer anderen Ausgangsgröße vergleichen.",
     }));
 
-  return {
+  return editorializeGuide({
     ...example,
     relatedLinks: [...(example.relatedLinks ?? []), ...siblingLinks],
-  };
+  });
 });
 
 export const PROJECT_EXAMPLE_DIRECTORIES: readonly ProjectExampleDirectory[] = clusters.map((cluster) => {
