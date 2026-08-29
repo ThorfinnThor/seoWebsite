@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ topic: st
     description: guide.description,
     path: `/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`,
     kind: "article",
+    robots: { index: false, follow: true },
   }) : {};
 }
 

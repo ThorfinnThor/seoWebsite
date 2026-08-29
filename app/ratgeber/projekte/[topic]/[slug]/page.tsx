@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ topic: st
     description: example.description,
     path: `/ratgeber/projekte/${example.topicSlug}/${example.slug}/`,
     kind: "article",
+    robots: { index: false, follow: true },
   }) : {};
 }
 
@@ -39,4 +40,3 @@ export default async function Page({ params }: { params: Promise<{ topic: string
     ]}
   />;
 }
-

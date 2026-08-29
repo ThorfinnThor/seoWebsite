@@ -1,8 +1,8 @@
 import type { MetadataRoute } from "next";
-import { DECISION_GUIDES, DECISION_GUIDE_DIRECTORIES } from "@/lib/decision-guides";
+import { DECISION_GUIDE_DIRECTORIES } from "@/lib/decision-guides";
 import { legalContactComplete } from "@/lib/legal";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
-import { PROJECT_EXAMPLES, PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
+import { PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 import { SEO_TOPICS } from "@/lib/seo-topics";
 import { SITE } from "@/lib/site";
@@ -59,20 +59,6 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
     label: "Redaktionelle Ratgeber",
     entries: SEO_GUIDES.map((guide) => entry(`/ratgeber/${guide.slug}`, CONTENT_UPDATED_AT)),
   },
-  ...SEO_TOPICS.map((topic) => ({
-    id: `projektprofile-${topic.slug}`,
-    label: `Projektprofile: ${topic.name}`,
-    entries: PROJECT_EXAMPLES
-      .filter((example) => example.topicSlug === topic.slug)
-      .map((example) => entry(`/ratgeber/projekte/${example.topicSlug}/${example.slug}`, CONTENT_UPDATED_AT)),
-  })),
-  ...SEO_TOPICS.map((topic) => ({
-    id: `vergleiche-${topic.slug}`,
-    label: `Direktvergleiche: ${topic.name}`,
-    entries: DECISION_GUIDES
-      .filter((guide) => guide.topicSlug === topic.slug)
-      .map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, CONTENT_UPDATED_AT)),
-  })),
 ];
 
 export const ALL_SITEMAP_ENTRIES: MetadataRoute.Sitemap = SITEMAP_SEGMENTS.flatMap((segment) => segment.entries);

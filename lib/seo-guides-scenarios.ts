@@ -31,6 +31,56 @@ type ScenarioSeed = {
   caution: string;
 };
 
+const SCENARIO_SECTION_HEADINGS: Record<string, readonly [string, string, string, string]> = {
+  "gartenhaus-fuer-zwei-fahrraeder": ["Radmaße und Türlichte", "Vier bis fünf Quadratmeter als Größenrahmen", "Kompakte Lagerung oder zusätzliche Zone", "Befestigung und Akkus sicher planen"],
+  "gartenhaus-fuer-sechs-fahrraeder": ["Zugriff für jedes Fahrrad", "Stellbreite und Fahrgasse berechnen", "Wandhalter oder Bodenständer", "Türöffnung und schwere Räder"],
+  "gartenhaus-fuer-rasenmaeher": ["Den Mäher in Lagerstellung vermessen", "Gerätezone und Rollweg", "Kompakt lagern oder Wartungsraum schaffen", "Boden, Lüftung und Betriebsstoffe"],
+  "gartenhaus-mit-werkstatt": ["Werkbank und Bediengang", "Flächenbedarf der Arbeitszone", "Gerade Werkbank oder Winkellösung", "Licht, Strom und Bodenlast"],
+  "gartenhaus-2x2-meter": ["Vom Außenmaß zum Innenmaß", "Was von vier Quadratmetern übrig bleibt", "Gerätehaus oder gemischte Lagerung", "Tür und Bewegungsfläche"],
+  "gartenhaus-3x3-meter": ["Neun Quadratmeter sinnvoll zonieren", "Regale und freie Mitte berechnen", "Lagerhaus oder kleine Werkstatt", "Fenster, Tür und Bodenlast"],
+  "gartenhaus-3x4-meter": ["Die lange Wand sinnvoll nutzen", "Arbeitszone und Lagerfläche", "Großes Lager oder kombinierte Werkstatt", "Freier Zugang zu langen Geräten"],
+  "maehroboter-fuer-250-qm": ["Nettofläche im kleinen Garten", "Reserve für 250 Quadratmeter", "Kompakte oder größere Flächenklasse", "Passagen bleiben ein eigenes Kriterium"],
+  "maehroboter-fuer-800-qm": ["Achthundert Quadratmeter richtig erfassen", "Kapazität bei mittlerer Komplexität", "Flächenklasse und tägliche Laufzeit", "Steigung und getrennte Zonen"],
+  "maehroboter-fuer-1000-qm": ["Tausend Quadratmeter als Nettofläche", "Kapazität mit sichtbarer Reserve", "Leistungsklasse und Zeitfenster", "Engstellen dürfen nicht untergehen"],
+  "maehroboter-fuer-1500-qm": ["Große Rasenflächen sauber aufteilen", "Planungsleistung für 1.500 Quadratmeter", "Kapazität oder längere Betriebszeit", "Navigation und Steigung nachweisen"],
+  "maehroboter-fuer-verwinkelten-garten": ["Zonen und Sackgassen kartieren", "Fahrwege erhöhen den Kapazitätsbedarf", "Korridore oder kartengestützte Navigation", "Die engste Verbindung entscheidet"],
+  "maehroboter-unter-baeumen": ["Baumzonen getrennt beurteilen", "Fläche unter dichter Krone", "RTK mit Sensorik oder lokale Navigation", "Wurzeln, Laub und weicher Boden"],
+  "maehroboter-fuer-mehrere-flaechen": ["Jede Rasenfläche einzeln aufnehmen", "Mehrzonenreserve berechnen", "Automatische Verbindung oder manueller Transport", "Laden und Rückkehr im Alltag"],
+  "terrasse-10-qm-material": ["Die kleine Terrasse genau vermessen", "Bestellfläche und Laufmeter", "Durchgehende Dielen oder geplante Stöße", "Randdetails kosten auf kleiner Fläche viel"],
+  "terrasse-20-qm-material": ["Zwanzig Quadratmeter in Verlegefelder teilen", "Dielenmenge mit Zuschnitt", "Lange Lieferlängen oder Stoßplan", "Unterkonstruktion und Befestiger"],
+  "terrasse-30-qm-material": ["Große Teilflächen getrennt erfassen", "Laufmeter für dreißig Quadratmeter", "Durchgehende Reihen oder Materialmix", "Lieferung und Lagerung mitplanen"],
+  "terrasse-40-qm-material": ["Vierzig Quadratmeter ohne Pauschalaufschlag", "Bestellrahmen aus Deckbreite und Fuge", "Lange Dielen oder kontrollierte Stöße", "Tragwerk und Wasserführung"],
+  "terrassendielen-laengs-oder-quer": ["Blickrichtung und Wasserlauf", "Reihen, Längen und Schnittreste", "Längsverlegung oder Querverlegung", "Die Unterkonstruktion folgt der Richtung"],
+  "terrasse-mit-pool-planen": ["Poolrand und Wartungszugang", "Zuschnitt entlang der Rundung", "Feste Umrandung oder demontierbare Felder", "Spritzwasser und sichere Oberflächen"],
+  "bewaesserung-kleiner-garten": ["Verbraucher im kleinen Garten trennen", "Durchfluss für kurze Leitungswege", "Eine Zone oder mehrere Kreise", "Druck und Pflanzenbedarf prüfen"],
+  "bewaesserung-500-qm-garten": ["Fünfhundert Quadratmeter in Zonen teilen", "Gemeinsamer Bedarf und verfügbare Zeit", "Große Kreise oder mehrere Ventilzonen", "Der Anschluss setzt die Grenze"],
+  "tropfbewaesserung-fuer-beete": ["Beetlängen und Pflanzabstände", "Tropferzahl und Zonenbedarf", "Tropfrohr oder einzelne Tropfer", "Filterung und Druckausgleich"],
+  "bewaesserung-fuer-hochbeete": ["Jedes Hochbeet separat erfassen", "Wasserbedarf pro Bewässerung", "Gemeinsame Leitung oder einzelne Abgänge", "Überlauf und ungleichmäßige Höhen"],
+  "bewaesserung-bei-wenig-wasserdruck": ["Durchfluss unter realem Fließdruck", "Kleine Zonen aus dem Messwert", "Wenige Verbraucher oder Zwischenspeicher", "Druckangaben nicht schätzen"],
+  "gewaechshaus-fuer-gurken": ["Rankhöhe und erreichbare Beetbreite", "Nutzbare Fläche zwischen den Wegen", "Bodenbeet oder geführte Kultur", "Lüftung darf nicht blockiert werden"],
+  "gewaechshaus-fuer-tomaten-und-gurken": ["Hohe Kulturen sinnvoll trennen", "Beetfläche und Mittelweg", "Gemeinsame oder getrennte Kulturzonen", "Beschattung und Luftführung"],
+  "gewaechshaus-klein-2x3-meter": ["Sechs Quadratmeter Innenraum aufteilen", "Weg und Beetfläche berechnen", "Zwei Seitenbeete oder flexible Stellflächen", "Türbereich und Arbeitshöhe"],
+  "gewaechshaus-automatisch-lueften": ["Dachöffnung und Zuluft gemeinsam planen", "Erforderlichen Lüftungsquerschnitt einordnen", "Automatische Öffner oder manuelle Lüftung", "Wind, Temperatur und Wartung"],
+  "sichtschutz-10-meter-berechnen": ["Zehn Meter zwischen festen Endpunkten", "Felder, Pfosten und Restmaß", "Standardraster oder angepasste Teilung", "Ecken und Fundamente gesondert planen"],
+  "sichtschutz-wpc-oder-holz": ["Standort und Pflegebereitschaft", "Feldteilung bleibt systemabhängig", "WPC oder Holz im Alltag", "Ausdehnung, Feuchte und Reparatur"],
+  "sichtschutz-bei-starkem-wind": ["Freie Anströmung und Projektionsfläche", "Windangriffsfläche sichtbar machen", "Offene Lamellen oder geschlossenes System", "Pfosten und Fundamente nachweisen"],
+  "sichtschutz-mit-gartentor": ["Torlichte und Öffnungsrichtung", "Die verbleibende Zaunlänge", "Ein Flügel oder breitere Torlösung", "Torpfosten als eigenes Bauteil"],
+  "carport-fuer-suv": ["SUV mit Spiegeln und Dachaufbau", "Lichte Breite statt Dachmaß", "Kompakter oder breiter Stellplatz", "Pfosten, Rinne und Rangierlinie"],
+  "einzelcarport-oder-doppelcarport": ["Zwei Fahrzeuge gleichzeitig einzeichnen", "Nutzbare Gesamtbreite", "Getrennte Dächer oder gemeinsames Tragwerk", "Mittelpfosten und Entwässerung"],
+  "carport-mit-abstellraum": ["Stellplatz und Lager als zwei Zonen", "Freie Fläche zwischen den Regalen", "Abstellraum am Ende oder an der Seite", "Tür, Lüftung und Brandlast"],
+  "laminat-fuer-20-qm": ["Zwanzig Quadratmeter sauber zerlegen", "Verschnitt und ganze Pakete", "Gerader Raum oder komplexer Grundriss", "Sockelleisten folgen dem Umfang"],
+  "laminat-fuer-50-qm": ["Fünfzig Quadratmeter ohne Doppelzählung", "Paketanzahl mit Verschnitt", "Einheitliche Verlegung oder mehrere Räume", "Restpakete und Übergänge"],
+  "vinyl-klick-oder-kleben": ["Untergrund und Aufbauhöhe", "Schichtaufbau statt Quadratmeterpreis", "Klickvinyl oder Klebevinyl", "Feuchte und Fußbodenheizung"],
+  "bodenbelag-fuer-kueche": ["Verlegefläche in der Küche festlegen", "Einbauten und Verschnitt", "Klicksystem oder geklebter Belag", "Feuchte, Stühle und Übergänge"],
+  "trockenbauwand-3-meter": ["Wandmaß und Anschlüsse aufnehmen", "Plattenfläche für beide Seiten", "Eine oder zwei Plattenlagen", "Profile folgen dem freigegebenen Raster"],
+  "trockenbauwand-mit-tuer": ["Rohbauöffnung und Türgewicht", "Nettofläche plus Zusatzprofile", "Leichte oder schwere Tür", "Sturz und Fugen nicht improvisieren"],
+  "trockenbau-schallschutzwand": ["Schutzziel und flankierende Bauteile", "Plattenmenge für den Systemaufbau", "Standardwand oder geprüftes Schallschutzsystem", "Anschlüsse entscheiden über das Ergebnis"],
+  "luftentfeuchter-fuer-20-qm": ["Raumvolumen statt Fläche", "Fünfzig Kubikmeter im Beispiel", "Kompaktes Gerät oder Dauerablauf", "Temperatur verändert die Leistung"],
+  "luftentfeuchter-fuer-50-qm": ["Verbundene Räume vollständig messen", "Hundertfünfundzwanzig Kubikmeter", "Tankbetrieb oder fester Ablauf", "Feuchteursache vor der Gerätewahl"],
+  "luftentfeuchter-fuer-100-qm": ["Große Raumvolumen getrennt bewerten", "Zweihundertfünfzig Kubikmeter", "Ein großes oder mehrere kleinere Geräte", "Luftführung und Laufzeit"],
+  "luftentfeuchter-fuer-badezimmer": ["Feuchteabfall nach dem Duschen", "Raumvolumen und zeitlicher Verlauf", "Lüftungsroutine oder Zusatzgerät", "Elektrische Schutzbereiche"],
+};
+
 function phrase(text: string) {
   return text.replace(/[.!?]+$/, "");
 }
@@ -239,189 +289,81 @@ const clusters = {
 } satisfies Record<string, Cluster>;
 
 function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
-  const variant = editorialVariant(`${cluster.label}/${seed.slug}`, 3);
-  const measuredFocus = cluster.label === "Bodenbelag" && /Zerlege den Grundriss/i.test(seed.measurement)
-    ? `${seed.measurement} ${cluster.measurementMethod.split(". ").slice(1).join(". ")}`
-    : `${seed.measurement} ${cluster.measurementMethod}`;
-  const verification = `${seed.caution} ${cluster.boundary}`;
   const resultSentence = scenarioResultSentence(seed.result, cluster.label);
-  const sections = variant === 0
-    ? [
-        {
-          title: `Was im Szenario „${seed.scenario}“ im Alltag zählt`,
-          paragraphs: [
-            `${seed.intro} Im Szenario „${seed.scenario}“ entscheidet nicht allein die beworbene Größe oder rechnerische Endzahl. Maßgeblich sind reale Maße, Nutzung und die Daten des konkreten Produkts oder Systems.`,
-            `${measuredFocus} Halte die Werte für „${seed.scenario}“ mit Einheit und Messdatum fest, damit Projektangaben und noch offene Datenblattwerte klar getrennt bleiben.`,
-          ],
-        },
-        {
-          title: `Die Rechnung für ${seed.scenario}`,
-          paragraphs: [
-            `${sentenceEnd(seed.calculation)} ${resultSentence} Der Wert beschreibt den Planungsrahmen für „${seed.scenario}“ und keine Zusage für jedes Produkt mit derselben Angabe.`,
-            `Eine Reserve für „${seed.scenario}“ braucht einen sichtbaren Grund. Die Rundung folgt der tatsächlich angebotenen Einheit des konkreten Produkts oder Systems. Eine geänderte Eingabe für „${seed.scenario}“ verlangt eine neue Rechnung.`,
-          ],
-        },
-        {
-          title: `${seed.optionA} und ${seed.optionB} im Szenario „${seed.scenario}“`,
-          paragraphs: [
-            `${seed.optionA} kann bei „${seed.scenario}“ passen, wenn die gemessenen Voraussetzungen erfüllt sind. ${seed.optionB} bringt einen anderen Lösungsweg oder mehr Spielraum, ist dadurch aber nicht automatisch die bessere Wahl.`,
-            `${cluster.decisionMethod} Für „${seed.scenario}“ sind außerdem diese Punkte relevant. ${seed.advice.join(" ")}`,
-          ],
-        },
-        {
-          title: `Wo das Szenario „${seed.scenario}“ scheitern kann`,
-          paragraphs: [
-            `Bei „${seed.scenario}“ liegt ein häufiger Irrtum in einer einzelnen Maximalangabe. ${seed.caution} Prüfe Zugang, ungünstigste Stelle, Montage und Wartung gemeinsam.`,
-            `Für „${seed.scenario}“ zählen die Unterlagen des konkreten Produkts und die Bedingungen vor Ort. ${cluster.boundary}`,
-          ],
-        },
-      ]
-    : variant === 1
-      ? [
-          {
-            title: `Ein eigener Plan für ${seed.scenario}`,
-            paragraphs: [
-              `${seed.intro} Ein brauchbarer Plan für „${seed.scenario}“ beginnt bei der tatsächlichen Nutzung und nicht bei einer fertigen Produktklasse. ${seed.measurement}`,
-              `${cluster.measurementMethod} Im Alltag beginnt die Prüfung für „${seed.scenario}“ an einem konkreten Punkt. ${seed.advice[0]}`,
-            ],
-          },
-          {
-            title: `Was die Zahl im Szenario „${seed.scenario}“ aussagt`,
-            paragraphs: [
-              `${sentenceEnd(seed.calculation)} ${resultSentence} Dieser Wert hilft bei der Vorauswahl, ersetzt aber weder die Produktunterlage noch die Prüfung des Einbauorts.`,
-              `Eine Reserve für „${seed.scenario}“ ist nur sinnvoll, wenn Zuschnitt, Zugriff, Betriebszeit, schwierige Geometrie oder eine spätere Änderung sie begründen.`,
-            ],
-          },
-          {
-            title: `${seed.optionA} oder ${seed.optionB} im Szenario „${seed.scenario}“`,
-            paragraphs: [
-              `${seed.optionA} passt, wenn der beschriebene Vorteil im eigenen Ablauf gebraucht wird. ${seed.optionB} wird relevant, sobald dieser Punkt im Projekt „${seed.scenario}“ regelmäßig auftritt. ${seed.advice[2]}`,
-              `${cluster.decisionMethod} Übertrage diese Überlegung auf „${seed.scenario}“ und streiche Varianten, die ein Muss-Kriterium nicht erfüllen.`,
-            ],
-          },
-          {
-            title: `Die Gegenprobe für ${seed.scenario}`,
-            paragraphs: [
-              `Prüfe bei „${seed.scenario}“ die kritischste Stelle statt nur den Durchschnitt. ${verification}`,
-              `Bewahre Messung, Rechenweg und Produktunterlage für „${seed.scenario}“ zusammen auf. So bleibt der Grund der Auswahl nachvollziehbar.`,
-            ],
-          },
-        ]
-      : [
-          {
-            title: `Die Situation im Szenario „${seed.scenario}“`,
-            paragraphs: [
-              `${seed.intro} Ob die Lösung für „${seed.scenario}“ funktioniert, zeigt sich an den Details des Projekts. ${seed.measurement}`,
-              `Halte die Messung für „${seed.scenario}“ am späteren Einsatzort mit Einheit und Datum fest. ${cluster.measurementMethod} So lässt sich ein Angebot mit deinem Standort vergleichen.`,
-            ],
-          },
-          {
-            title: `Der Planungsrahmen für ${seed.scenario}`,
-            paragraphs: [
-              `${sentenceEnd(seed.calculation)} ${resultSentence} Der Wert soll eine Entscheidung greifbarer machen und bleibt an die genannten Annahmen gebunden.`,
-              `Die Rechnung für „${seed.scenario}“ wird nicht durch eine pauschale Sicherheitszahl ersetzt. Jeder Aufschlag braucht einen konkreten zusätzlichen Bedarf.`,
-            ],
-          },
-          {
-            title: `${seed.optionA} und ${seed.optionB} für ${seed.scenario}`,
-            paragraphs: [
-              `${seed.optionA} hat bei „${seed.scenario}“ einen nachvollziehbaren Platz, wenn der beschriebene Ablauf zu den eigenen Anforderungen passt. ${seed.optionB} verdient den Vorzug, wenn die dafür wichtige Bedingung erfüllt ist. ${seed.advice[1]}`,
-              `${seed.advice[2]} ${cluster.decisionMethod} Beide Varianten bleiben an das Szenario „${seed.scenario}“ gebunden.`,
-            ],
-          },
-          {
-            title: `Die schwierige Stelle im Szenario „${seed.scenario}“`,
-            paragraphs: [
-              `Plane „${seed.scenario}“ mit der schwierigsten Stelle und dem späteren Wartungsfall. ${seed.caution}`,
-              `Ob der Plan für „${seed.scenario}“ trägt, entscheidet sich an den echten Maßen und Freigaben. ${cluster.boundary}`,
-            ],
-          },
-        ];
+  const headings = SCENARIO_SECTION_HEADINGS[seed.slug];
+  if (!headings) throw new Error(`Fehlende redaktionelle Überschriften für ${seed.slug}`);
 
-  const faqs = variant === 0
-    ? [
-        { question: `Welche Angabe ist für „${seed.scenario}“ am wichtigsten?`, answer: `${seed.measurement} ${resultSentence} Vergleiche den Wert mit der Produktunterlage und den Bedingungen vor Ort.` },
-        { question: `Wie viel Reserve ist für „${seed.scenario}“ sinnvoll?`, answer: `Eine Reserve braucht einen konkreten Grund. Bei dieser Nutzung ist vor allem der tatsächliche Ablauf entscheidend. ${seed.advice[0]} ${sentenceEnd(seed.calculation)} Ein begründeter Puffer gehört in die Rechnung.` },
-          { question: `Wann passt ${seed.optionB} besser?`, answer: `${seed.optionB} passt besser, wenn die genannte Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]} ${seed.caution}` },
-        { question: `Was muss vor dem Kauf für „${seed.scenario}“ noch geklärt werden?`, answer: `Kontrolliere Maße, Lieferumfang, Einsatzbedingungen und Montagehinweise. ${cluster.boundary}` },
-      ]
-    : variant === 1
-      ? [
-          { question: `Wie groß muss die Lösung für „${seed.scenario}“ sein?`, answer: `Übernimm nicht einfach eine Katalogklasse. ${seed.measurement} ${resultSentence} Der Wert muss mit den echten Produktmaßen abgeglichen werden.` },
-          { question: `Warum reicht bei „${seed.scenario}“ ein einzelner Maximalwert nicht?`, answer: `Ein Maximalwert beschreibt nur eine bestimmte Prüfbedingung. ${seed.caution} ${cluster.boundary}` },
-          { question: `Welche Alternative bietet ${seed.optionB}?`, answer: `${seed.optionB} kann sinnvoll sein, wenn dieser Punkt im eigenen Projekt regelmäßig vorkommt. ${seed.advice[2]} Vergleiche dafür Anschaffung, Zubehör, Platz, Montage und Wartung gemeinsam.` },
-        ]
-      : [
-          { question: `Was wird für „${seed.scenario}“ gemessen?`, answer: `${seed.measurement} Die Messung erhält ein Datum und eine Einheit, damit sie mit späteren Produktangaben vergleichbar bleibt.` },
-          { question: `Wie belastbar ist der Wert für „${seed.scenario}“?`, answer: `${sentenceEnd(seed.calculation)} ${resultSentence} Dieser Wert ist ein offener Planungsrahmen. ${cluster.boundary}` },
-          { question: `Was spricht für ${seed.optionA} oder ${seed.optionB}?`, answer: `${seed.optionA} passt, wenn der beschriebene Vorteil gebraucht wird. ${seed.optionB} wird interessant, sobald die dafür genannte Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]}` },
-          { question: `Welche Kontrolle verhindert bei „${seed.scenario}“ eine Fehlbestellung?`, answer: `Prüfe die ungünstigste Stelle, den Lieferumfang und die Montageanleitung. ${seed.caution}` },
-        ];
-  const finalSections = [
-    ...sections,
-    ...(variant === 1
-      ? [{
-          title: `Die Entscheidung für ${seed.scenario} festhalten`,
-          paragraphs: [
-            `Notiere für „${seed.scenario}“ die gemessenen Werte, die gewählte Variante und den Grund für die Reserve. ${seed.advice[2]}`,
-            `Die Dokumentation zu „${seed.scenario}“ hilft bei Nachbestellung, Wartung oder einer Änderung des Projekts. ${cluster.boundary}`,
-          ],
-        }]
-      : []),
-  ].map((section, index) => ({
-    ...section,
-    paragraphs: [
-      section.paragraphs.join(" "),
-      [
-        `Der Planungswert für „${seed.scenario}“ gehört zum Vergleich zwischen „${seed.optionA}“ und „${seed.optionB}“. Ein anderer Standort braucht eine eigene Rechnung für „${seed.scenario}“.`,
-        `Im Alltag von „${seed.scenario}“ ist dieser Punkt entscheidend. ${seed.advice[0]}`,
-        `Die Gegenprobe für „${seed.scenario}“ arbeitet nicht mit einer idealen Zeichnung. ${seed.caution} Maßgeblich ist bei „${seed.scenario}“ die Stelle mit dem geringsten Spielraum.`,
-        `Auch dieser Punkt gehört bei „${seed.scenario}“ in die Prüfung. ${seed.advice[1]} Die Unterlagen des gewählten Systems entscheiden über die Eignung für „${seed.scenario}“.`,
-        `Ändert sich bei „${seed.scenario}“ ${index % 2 === 0 ? "das Maß" : "die Nutzung"}, braucht die Rechnung einen neuen Stand.`,
-      ][index % 5],
+  const layout = editorialVariant(`${cluster.label}/${seed.slug}`, 4);
+  const optionLeads = [
+    [
+      `Die Variante „${seed.optionA}“ wird an den gemessenen Anforderungen beurteilt.`,
+      `Für „${seed.optionB}“ zählt, ob der zusätzliche Spielraum tatsächlich gebraucht wird.`,
     ],
-  }));
-  const finalFaqs = faqs.length >= 4
-    ? faqs
-    : [...faqs, { question: "Wie halte ich die Entscheidung nachvollziehbar fest?", answer: `Speichere Messwerte, Rechnung, Produktunterlage und offene Punkte gemeinsam. Prüfe diese Unterlagen für ${seed.scenario} erneut, sobald sich Maß oder Nutzung ändern. ${seed.caution}` }];
-  const contextualFaqs = finalFaqs.map((faq) => ({
-    ...faq,
-    answer: `${faq.answer} Für ${seed.scenario} bleibt dieser Abgleich an die Bedingungen vor Ort gebunden.`,
-  }));
-  const scenarioChecklist = variant === 0
-    ? [
-        `Messung für ${seed.scenario} mit Einheit und Datum sichern.`,
-        seed.measurement,
-        `Rechenweg mit den eigenen Werten nachvollziehen: ${seed.calculation}`,
-        seed.advice[0],
-        seed.advice[1],
-        seed.advice[2],
-        `Grenze des Beispiels beachten. ${seed.caution}`,
-      ]
-    : variant === 1
-      ? [
-          `Ausgangslage am Standort beschreiben: ${seed.measurement}`,
-          `Planungswert und Annahmen dokumentieren. ${resultSentence}`,
-          `Die Rechnung an den eigenen Maßen prüfen: ${seed.calculation}`,
-          `${seed.optionA} gegen ${seed.optionB} am realen Ablauf abgleichen.`,
-          seed.advice[0],
-          seed.advice[2],
-          `Offene technische Grenze klären. ${cluster.boundary}`,
-        ]
-      : [
-          `Eingaben für ${seed.scenario} aufnehmen: ${seed.measurement}`,
-          `Rechnung und Gegenprobe getrennt festhalten: ${seed.calculation}`,
-          `Ergebnis mit den Bedingungen vor Ort vergleichen. ${resultSentence}`,
-          seed.advice[1],
-          seed.advice[2],
-          `Montage und Nutzung anhand der Herstellerangaben prüfen.`,
-          `Vor der Bestellung die Grenze beachten: ${seed.caution}`,
-        ];
-  const scenarioExampleIntro = variant === 0
-    ? `Dieses Beispiel folgt der Frage, wie ${seed.scenario} unter den genannten Bedingungen geplant werden kann. Eingabe, Rechenweg und Ergebnis gehören zusammen.`
-    : variant === 1
-      ? `Für ${seed.scenario} stehen hier Messung, Planungswert und Gegenprobe nebeneinander. Übertrage den Rahmen nur, wenn die Voraussetzungen am eigenen Standort vergleichbar sind.`
-      : `Für ${seed.scenario} zeigt die Rechenkette, welche Annahmen zu diesem Ergebnis führen. Produktdaten und Einbauort bleiben für die endgültige Auswahl maßgeblich.`;
+    [
+      `Bei der Option „${seed.optionA}“ stehen die Bedingungen am Einsatzort im Mittelpunkt.`,
+      `Die Option „${seed.optionB}“ wird mit denselben Anforderungen gegengeprüft.`,
+    ],
+    [
+      `Für „${seed.optionA}“ ist die praktische Nutzung entscheidend.`,
+      `Die Eignung von „${seed.optionB}“ hängt von den dokumentierten Rahmenbedingungen ab.`,
+    ],
+    [
+      `Die Option „${seed.optionA}“ gehört nur in die Auswahl, wenn die Voraussetzungen erfüllt sind.`,
+      `Auch die Option „${seed.optionB}“ muss sich am konkreten Projekt messen lassen.`,
+    ],
+  ][layout];
+  const optionAStatement = `${optionLeads[0]} ${seed.advice[0]}`;
+  const optionBStatement = `${optionLeads[1]} ${seed.advice[1]}`;
+  const sectionParagraphs = [
+    [
+      seed.intro,
+      `${seed.measurement} ${seed.takeaway}`,
+    ],
+    [
+      sentenceEnd(seed.calculation),
+      `${resultSentence} ${cluster.measurementMethod}`,
+    ],
+    [
+      `${optionAStatement} ${resultSentence}`,
+      `${optionBStatement} ${seed.takeaway}`,
+    ],
+    [
+      `${seed.advice[2]} ${seed.caution}`,
+      `Für ${seed.scenario} sind auch die folgenden Punkte wichtig. ${cluster.decisionMethod} ${cluster.boundary}`,
+    ],
+  ];
+
+  if (layout === 0) sectionParagraphs[0] = [sectionParagraphs[0].join(" ")];
+  if (layout === 1) sectionParagraphs[1] = [sectionParagraphs[1].join(" ")];
+  if (layout === 2) sectionParagraphs[2] = [sectionParagraphs[2].join(" ")];
+  sectionParagraphs[3] = [sectionParagraphs[3].join(" ")];
+
+  const faqVariants = [
+    [
+      `Welche Maße brauche ich für ${seed.scenario}?`,
+      `Was lässt sich aus der Rechnung für ${seed.scenario} ableiten?`,
+      `Wann ist die Option „${seed.optionB}“ passender als „${seed.optionA}“?`,
+      `Wo liegt die fachliche Grenze für ${seed.scenario}?`,
+    ],
+    [
+      `Wie messe ich ${seed.scenario} sinnvoll aus?`,
+      `Welcher Planungswert ergibt sich für ${seed.scenario}?`,
+      `Worin unterscheiden sich die Optionen „${seed.optionA}“ und „${seed.optionB}“?`,
+      `Was muss vor der Auswahl für ${seed.scenario} geklärt sein?`,
+    ],
+    [
+      `Welche Ausgangsdaten sind für ${seed.scenario} wichtig?`,
+      `Wie belastbar ist die Beispielrechnung für ${seed.scenario}?`,
+      `Welche Variante passt zur beschriebenen Nutzung?`,
+      `Was kann die Rechnung für ${seed.scenario} nicht prüfen?`,
+    ],
+    [
+      `Was sollte ich für ${seed.scenario} vor Ort aufnehmen?`,
+      `Wie kommt der Rechenwert für ${seed.scenario} zustande?`,
+      `Was spricht für die Option „${seed.optionA}“ und was für „${seed.optionB}“?`,
+      `Welche Kontrolle ist für ${seed.scenario} notwendig?`,
+    ],
+  ][layout];
 
   return {
     slug: seed.slug,
@@ -432,37 +374,49 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
     takeaway: seed.takeaway,
     plannerHref: cluster.plannerHref,
     plannerLabel: cluster.plannerLabel,
-    sections: finalSections,
+    sections: headings.map((title, index) => ({ title, paragraphs: sectionParagraphs[index] })),
     comparison: {
-      caption: "Entscheidung für dieses Beispiel",
-      columns: ["Prüfpunkt", seed.optionA, seed.optionB],
+      caption: `${headings[1]} und passende Varianten`,
+      columns: ["Prüfpunkt", "Wert oder Bedingung", "Einordnung"],
       rows: [
         ["Projekt", seed.measurement, cluster.measurementMethod],
-        ["Rechenwert", seed.calculation, resultSentence],
-        ["Praktischer Nutzen", seed.advice[0], seed.advice[1]],
+        ["Rechnung", seed.calculation, resultSentence],
+        ["Variante A", seed.optionA, seed.advice[0]],
+        ["Variante B", seed.optionB, seed.advice[1]],
         ["Grenze", seed.caution, cluster.boundary],
-        ["Passend, wenn", "alle Muss-Kriterien erfüllt sind", "der zusätzliche Nutzen im Alltag belegt ist"],
       ],
     },
-    checklist: scenarioChecklist,
-    faqs: contextualFaqs,
+    checklist: [
+      seed.measurement,
+      sentenceEnd(seed.calculation),
+      resultSentence,
+      optionAStatement,
+      optionBStatement,
+      seed.advice[2],
+      seed.caution,
+    ],
+    faqs: [
+      { question: faqVariants[0], answer: `${seed.measurement} ${cluster.measurementMethod}` },
+      { question: faqVariants[1], answer: `${sentenceEnd(seed.calculation)} ${resultSentence}` },
+      { question: faqVariants[2], answer: `${optionAStatement} ${optionBStatement}` },
+      { question: faqVariants[3], answer: `${seed.caution} ${cluster.boundary}` },
+    ],
     relatedLinks: cluster.relatedLinks,
     sources: [...cluster.sources],
     example: {
-      title: "Rechenbeispiel für diese Nutzung",
-      intro: scenarioExampleIntro,
+      title: headings[1],
+      intro: `${seed.measurement} ${sentenceEnd(seed.calculation)}`,
       steps: [
         { label: "Ausgangslage", value: seed.measurement },
         { label: "Rechnung", value: seed.calculation },
         { label: "Planungswert", value: seed.result },
       ],
       result: seed.result,
-      note: `Der Wert bleibt an die genannten Annahmen gebunden. ${seed.caution}`,
+      note: seed.caution,
     },
     limitation: cluster.boundary,
   };
 }
-
 function guides(cluster: Cluster, seeds: ScenarioSeed[]) {
   return seeds.map((seed) => makeGuide(cluster, seed));
 }

@@ -1,4 +1,4 @@
-import { mkdir, writeFile } from "node:fs/promises";
+import { mkdir, readdir, unlink, writeFile } from "node:fs/promises";
 import path from "node:path";
 import { SITEMAP_SEGMENTS, sitemapSegmentUrl } from "@/lib/sitemap-entries";
 
@@ -52,6 +52,13 @@ function renderSitemapIndex() {
 }
 
 await mkdir(outputDirectory, { recursive: true });
+
+const expectedFiles = new Set([...SITEMAP_SEGMENTS.map((segment) => `${segment.id}.xml`), "index.xml"]);
+for (const filename of await readdir(outputDirectory)) {
+  if (filename.endsWith(".xml") && !expectedFiles.has(filename)) {
+    await unlink(path.join(outputDirectory, filename));
+  }
+}
 
 for (const segment of SITEMAP_SEGMENTS) {
   await writeFile(path.join(outputDirectory, `${segment.id}.xml`), renderSitemap(segment.entries), "utf8");

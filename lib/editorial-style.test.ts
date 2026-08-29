@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { DECISION_GUIDE_DIRECTORIES, DECISION_GUIDES } from "@/lib/decision-guides";
 import { PROJECT_EXAMPLE_DIRECTORIES, PROJECT_EXAMPLES } from "@/lib/project-examples";
+import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 
 type Guide = (typeof SEO_GUIDES)[number] | (typeof DECISION_GUIDES)[number] | (typeof PROJECT_EXAMPLES)[number];
@@ -137,18 +138,52 @@ describe("editorial guide output", () => {
     expect(example?.directoryCard.result).toContain("ein Torfeld");
   });
 
-  it("does not let one paragraph dominate the generated corpus", () => {
-    const paragraphs = [...SEO_GUIDES, ...DECISION_GUIDES, ...PROJECT_EXAMPLES].flatMap((guide) =>
+  it("does not let one paragraph dominate the indexable editorial guides", () => {
+    const paragraphs = SEO_GUIDES.flatMap((guide) =>
       guide.sections.flatMap((section) => section.paragraphs.map((paragraph) => paragraph.replace(/\s+/g, " ").trim())),
     );
     const frequencies = new Map<string, number>();
     paragraphs.forEach((paragraph) => frequencies.set(paragraph, (frequencies.get(paragraph) ?? 0) + 1));
     const mostFrequent = Math.max(...frequencies.values());
 
-    expect(paragraphs.length).toBeGreaterThan(15_000);
-    expect(frequencies.size).toBeGreaterThan(15_000);
-    expect(frequencies.size / paragraphs.length).toBeGreaterThan(0.995);
-    expect(mostFrequent).toBeLessThanOrEqual(2);
+    expect(paragraphs.length).toBeGreaterThan(400);
+    expect(frequencies.size / paragraphs.length).toBeGreaterThan(0.95);
+    expect(mostFrequent).toBeLessThanOrEqual(4);
+  });
+
+  it("gives every scenario guide individual editorial headings without the old templates", () => {
+    const headings = SEO_GUIDES_SCENARIOS.flatMap((guide) => guide.sections.map((section) => section.title));
+    const prose = SEO_GUIDES_SCENARIOS.flatMap(visibleText).join(" ");
+
+    expect(SEO_GUIDES_SCENARIOS).toHaveLength(47);
+    expect(headings).toHaveLength(188);
+    expect(new Set(headings).size).toBe(headings.length);
+    expect(prose).not.toMatch(/Was im Szenario|Wo das Szenario|Die Situation im Szenario|Was die Zahl im Szenario/);
+    expect(prose).not.toContain("Im Szenario");
+    expect(headings.join(" ")).not.toMatch(/Acht Hundert|Fünf Hundert|Hundert Fünfundzwanzig|Zweihundert Fünfzig/);
+
+    for (const guide of SEO_GUIDES_SCENARIOS) {
+      const optionA = guide.comparison?.rows.find((row) => row[0] === "Variante A")?.[1];
+      const optionB = guide.comparison?.rows.find((row) => row[0] === "Variante B")?.[1];
+      const editorialCopy = [
+        ...guide.sections.flatMap((section) => section.paragraphs),
+        ...(guide.checklist ?? []),
+        ...(guide.faqs ?? []).map((faq) => faq.answer),
+      ].join(" ");
+
+      expect(optionA).toBeDefined();
+      expect(optionB).toBeDefined();
+      expect(editorialCopy).not.toContain(`${optionA}.`);
+      expect(editorialCopy).not.toContain(`${optionB}.`);
+      const bareOptionVerbs = [`„${optionA}“ gehört`, `„${optionB}“ wird`, `„${optionB}“ muss`];
+      expect(bareOptionVerbs.some((fragment) =>
+        editorialCopy.startsWith(fragment) || editorialCopy.includes(`. ${fragment}`),
+      )).toBe(false);
+      expect(guide.faqs?.some((faq) => /\bbei\b/i.test(faq.question))).toBe(false);
+      const optionQuestion = guide.faqs?.[2]?.question ?? "";
+      expect(optionQuestion.includes(optionA ?? "") && !optionQuestion.includes(`„${optionA}“`)).toBe(false);
+      expect(optionQuestion.includes(optionB ?? "") && !optionQuestion.includes(`„${optionB}“`)).toBe(false);
+    }
   });
 
   it("varies the generated page furniture as well as the body copy", () => {

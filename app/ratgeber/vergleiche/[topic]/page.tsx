@@ -16,6 +16,11 @@ export function generateStaticParams() {
   return DECISION_GUIDE_DIRECTORIES.map((directory) => ({ topic: directory.topicSlug }));
 }
 
+const score = (value: number) => value.toLocaleString("de-DE", {
+  minimumFractionDigits: 2,
+  maximumFractionDigits: 2,
+});
+
 export async function generateMetadata({ params }: { params: Promise<{ topic: string }> }): Promise<Metadata> {
   const directory = getDecisionGuideDirectory((await params).topic);
   return directory ? createPageMetadata({
@@ -67,9 +72,11 @@ export default async function Page({ params }: { params: Promise<{ topic: string
           <div className="section-heading"><div><p className="eyebrow">Direkter Vergleich</p><h2>{pairLabel}</h2></div><p>Zehn konkrete Nutzungen mit eigener Gewichtung, Gegenprobe, Checkliste und Quellen.</p></div>
           <div className="project-example-grid">
             {guides.map((guide) => <article className="project-example-card" key={guide.slug}>
-              <p className="eyebrow">{guide.contextLabel}</p>
-              <h3>{guide.title}</h3>
-              <p>{guide.takeaway}</p>
+              <h3>{guide.contextLabel}</h3>
+              <div className="project-example-card__facts">
+                <p><span>{guide.optionA}</span>{score(guide.scoreA)} von 5</p>
+                <p><span>{guide.optionB}</span>{score(guide.scoreB)} von 5</p>
+              </div>
               <Link className="text-link" href={`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`}>Vergleich öffnen →</Link>
             </article>)}
           </div>
