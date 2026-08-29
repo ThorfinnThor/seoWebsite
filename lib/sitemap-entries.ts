@@ -16,8 +16,6 @@ export type SitemapSegment = {
 };
 
 const SITE_URL = SITE.url.replace(/\/$/, "");
-const PROJECT_PROFILES_UPDATED_AT = "2026-08-16";
-const DECISION_GUIDES_UPDATED_AT = "2026-08-20";
 
 const CORE_PATHS = [
   "", "/rechner", "/garten", "/ratgeber",
@@ -66,14 +64,14 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
     label: `Projektprofile: ${topic.name}`,
     entries: PROJECT_EXAMPLES
       .filter((example) => example.topicSlug === topic.slug)
-      .map((example) => entry(`/ratgeber/projekte/${example.topicSlug}/${example.slug}`, PROJECT_PROFILES_UPDATED_AT)),
+      .map((example) => entry(`/ratgeber/projekte/${example.topicSlug}/${example.slug}`, CONTENT_UPDATED_AT)),
   })),
   ...SEO_TOPICS.map((topic) => ({
     id: `vergleiche-${topic.slug}`,
     label: `Direktvergleiche: ${topic.name}`,
     entries: DECISION_GUIDES
       .filter((guide) => guide.topicSlug === topic.slug)
-      .map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, DECISION_GUIDES_UPDATED_AT)),
+      .map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, CONTENT_UPDATED_AT)),
   })),
 ];
 

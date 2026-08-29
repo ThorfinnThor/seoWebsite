@@ -10,6 +10,7 @@ import {
 } from "@/lib/project-examples";
 import { absoluteUrl } from "@/lib/site";
 import { getSeoTopic } from "@/lib/seo-topics";
+import { editorializeText } from "@/lib/editorial-style";
 
 export function generateStaticParams() {
   return PROJECT_EXAMPLE_DIRECTORIES.map((directory) => ({ topic: directory.topicSlug }));
@@ -63,8 +64,8 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         { label: "Projektbeispiele" },
       ]} />
       <p className="eyebrow">85 nachvollziehbare Rechenprofile</p>
-      <h1>{directory.title}: <em>konkret gerechnet.</em></h1>
-      <p>{directory.intro}</p>
+      <h1>{editorializeText(directory.title)} <em>konkret gerechnet.</em></h1>
+      <p>{editorializeText(directory.intro)}</p>
       <div className="hero-actions">
         <Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link>
         <a className="text-link" href="#beispiele">Alle Beispiele ansehen ↓</a>
@@ -74,7 +75,7 @@ export default async function Page({ params }: { params: Promise<{ topic: string
       <div>
         <p className="eyebrow">So nutzt du die Bibliothek</p>
         <h2 id="project-directory-method">Passendes Beispiel finden, eigene Werte einsetzen.</h2>
-        <p>Wähle zuerst die Größe, die deinem Projekt am nächsten kommt. Öffne danach das passende Nutzungsszenario und ersetze die sichtbaren Eingaben durch deine Messwerte. Jede Seite zeigt außerdem, welche Angaben vor einer Auswahl noch verifiziert werden müssen.</p>
+        <p>Suche die Größe, die deinem Projekt am nächsten kommt. Im passenden Nutzungsszenario ersetzt du die sichtbaren Eingaben durch deine Messwerte. Jede Seite zeigt außerdem, welche Angaben vor einer Auswahl noch verifiziert werden müssen.</p>
       </div>
       <ol>
         <li><span>01</span><strong>Größe und Nutzung gemeinsam auswählen.</strong></li>

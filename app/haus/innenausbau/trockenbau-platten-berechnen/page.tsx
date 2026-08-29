@@ -16,7 +16,7 @@ export default function Page() {
     breadcrumbs={[{ label: "Start", href: "/" }, { label: "Haus", href: "/haus/" }, { label: "Innenausbau", href: "/haus/innenausbau/" }, { label: "Trockenbau-Platten berechnen" }]}
     plannerHref="/haus/innenausbau/trockenbau-rechner/"
     plannerLabel="Plattenmenge berechnen"
-    takeaway="Berechne zuerst die Nettofläche einer Wandseite. Multipliziere sie mit der Anzahl bekleideter Seiten und Plattenlagen, ergänze Reserve und runde erst danach auf volle Platten auf."
+    takeaway="Die Nettofläche einer Wandseite bildet die Grundlage. Multipliziere sie mit der Anzahl bekleideter Seiten und Plattenlagen, ergänze eine begründete Reserve und runde die Menge auf volle Platten auf."
     limitation="Eine reine Flächenrechnung ersetzt keinen Verlege- und Fugenplan. Zulässige Plattenrichtung, Stoßversatz, Befestigungsabstände und Formate folgen dem konkreten System."
     sections={[
       { title: "Nettofläche je Wandseite", paragraphs: ["Wandlänge mal Wandhöhe ergibt die Bruttofläche. Türen und Fenster können geometrisch abgezogen werden, verursachen aber zugleich Randzuschnitte und zusätzliche Unterkonstruktion.", "Erfasse Öffnungen deshalb separat und behalte ihre Anzahl im Blick. Eine große ruhige Fläche lässt sich anders belegen als dieselbe Nettofläche mit mehreren kleinen Ausschnitten."] },

@@ -16,7 +16,7 @@ export default function Page() {
     breadcrumbs={[{ label: "Start", href: "/" }, { label: "Garten", href: "/garten/" }, { label: "Gewächshaus-Größe" }]}
     plannerHref="/garten/gewaechshaus-planer/"
     plannerLabel="Gewächshaus aufteilen"
-    takeaway="Zeichne zuerst Beete, einen durchgehenden Weg und den Türbereich in das Innenmaß. Prüfe erst danach, welches Außenmaß und welches konkrete Modell dazu passen."
+    takeaway="Zeichne Beete, einen durchgehenden Weg und den Türbereich in das Innenmaß. Daraus lässt sich ableiten, welches Außenmaß und welches konkrete Modell passen."
     limitation="Der Rechner verwendet Außenmaße als Flächenrahmen. Innenprofile, schräge Wände, Verstrebungen, Türschwelle und herstellerspezifische Nutzmaße können die reale Fläche verkleinern."
     sections={[
       { title: "Außenmaß ist nicht Nutzmaß", paragraphs: ["Profile, Sockel und geneigte Seitenwände nehmen Raum ein. Besonders an niedrigen Traufen kann eine rechnerisch breite Beetfläche nicht über die gesamte Höhe genutzt werden.", "Prüfe in der technischen Zeichnung Innenbreite, Seitenhöhe, Firsthöhe und lichte Türmaße. Produktnamen oder nominelle Grundflächen ersetzen diese Maße nicht."] },

@@ -23,7 +23,7 @@ export default function ImpressumPage() {
       </section>
       <section>
         <h2>Kontakt</h2>
-        <p>E-Mail: <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></p>
+        <p>E-Mail <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></p>
       </section>
       <section>
         <h2>Redaktionell verantwortlich</h2>

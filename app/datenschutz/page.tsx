@@ -15,7 +15,7 @@ export default function DatenschutzPage() {
       <section>
         <h2>1. Verantwortlicher</h2>
         <address>{LEGAL.owner}<br />{LEGAL.street}<br />{LEGAL.postalCode} {LEGAL.city}<br />{LEGAL.country}</address>
-        <p>E-Mail: <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></p>
+        <p>E-Mail <a href={`mailto:${LEGAL.email}`}>{LEGAL.email}</a></p>
       </section>
       <section>
         <h2>2. Bereitstellung und Hosting</h2>

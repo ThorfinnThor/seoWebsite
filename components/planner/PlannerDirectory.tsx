@@ -45,7 +45,7 @@ export function PlannerDirectory() {
           <div className="tool-card-top"><span className="feature-icon" aria-hidden="true"><PlannerIcon name={planner.icon} /></span><span className="status-pill">{planner.category}</span></div>
           <h3>{planner.title}</h3>
           <p>{planner.description}</p>
-          <p className="tool-card-results-label">Das Ergebnis:</p>
+          <p className="tool-card-results-label">Das Ergebnis</p>
           <ul>{planner.outputs.map((output) => <li key={output}><span aria-hidden="true">✓</span>{output}</li>)}</ul>
           <Link className="button button--primary" href={planner.href}>{planner.cta} →</Link>
         </article>)}

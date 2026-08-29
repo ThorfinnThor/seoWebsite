@@ -41,4 +41,31 @@ describe("editorial guide output", () => {
 
     expect(layouts.size).toBeGreaterThan(100);
   });
+
+  it("does not let one paragraph dominate the generated corpus", () => {
+    const paragraphs = [...SEO_GUIDES, ...DECISION_GUIDES, ...PROJECT_EXAMPLES].flatMap((guide) =>
+      guide.sections.flatMap((section) => section.paragraphs.map((paragraph) => paragraph.replace(/\s+/g, " ").trim())),
+    );
+    const frequencies = new Map<string, number>();
+    paragraphs.forEach((paragraph) => frequencies.set(paragraph, (frequencies.get(paragraph) ?? 0) + 1));
+    const mostFrequent = Math.max(...frequencies.values());
+
+    expect(paragraphs.length).toBeGreaterThan(20_000);
+    expect(frequencies.size).toBeGreaterThan(8_000);
+    expect(mostFrequent).toBeLessThan(100);
+  });
+
+  it("varies the generated page furniture as well as the body copy", () => {
+    const generated = [...DECISION_GUIDES, ...PROJECT_EXAMPLES];
+    const values = [
+      ...generated.map((guide) => guide.intro),
+      ...generated.map((guide) => guide.takeaway),
+      ...generated.flatMap((guide) => guide.checklist ?? []),
+      ...generated.map((guide) => guide.example?.intro ?? ""),
+    ].map((value) => value.replace(/\s+/g, " ").trim());
+    const frequencies = new Map<string, number>();
+    values.forEach((value) => frequencies.set(value, (frequencies.get(value) ?? 0) + 1));
+
+    expect(Math.max(...frequencies.values())).toBeLessThan(100);
+  });
 });

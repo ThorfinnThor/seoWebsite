@@ -274,7 +274,7 @@ const GUIDE_DEPTH_EXISTING_INITIAL: Record<string, SeoGuideDepth> = {
     ]},
     checklist: ["Pflanzenarten und Anzahl festlegen.", "Erreichbare Beetbreiten zeichnen.", "Weg und Tür für Arbeitsgeräte prüfen.", "Nutzbare Höhe an Pflanzenposition messen.", "Lüftungsöffnungen und Beschattung planen.", "Fundament, Verankerung und Außenmaß ergänzen."],
     faqs: [
-      { question: "Welche Gewächshausgröße eignet sich für Anfänger?", answer: "Sie sollte zum konkreten Kulturplan und verfügbaren Standort passen. Ein sehr kleines Haus ist günstig, kann aber Wege, Lüftung und Fruchtfolge begrenzen. Plane zuerst Pflanzenzahl, Beetbreite und Arbeitsweg; daraus entsteht eine nachvollziehbare Mindestfläche statt einer pauschalen Anfängergröße." },
+      { question: "Welche Gewächshausgröße eignet sich für Anfänger?", answer: "Sie sollte zum konkreten Kulturplan und verfügbaren Standort passen. Ein sehr kleines Haus ist günstig, kann aber Wege, Lüftung und Fruchtfolge begrenzen. Pflanzenzahl, Beetbreite und Arbeitsweg ergeben gemeinsam eine nachvollziehbare Mindestfläche statt einer pauschalen Anfängergröße." },
       { question: "Wie breit sollte der Weg sein?", answer: "Der Weg muss zu Körper, Gießkanne, Kisten und eventuell Schubkarre passen. Eine universelle Breite gibt es nicht. Teste die geplante Breite praktisch und beachte, dass Pflanzen in den Weg wachsen können. Erreichbarkeit ist wichtiger als maximal gefüllte Beetfläche." },
       { question: "Warum ist ein größeres Gewächshaus nicht immer besser?", answer: "Mehr Volumen kann Klima und Nutzung erleichtern, erhöht aber Kosten, Fundament, Verankerung, Reinigungsfläche und möglichen Heizbedarf. Das Haus muss zum Standort und zur regelmäßig gepflegten Pflanzenmenge passen. Ungenutzte Fläche liefert keinen automatischen Vorteil." },
     ],
@@ -312,7 +312,7 @@ const GUIDE_DEPTH_EXISTING_INITIAL: Record<string, SeoGuideDepth> = {
       ["Tor-Modulmaß", "Kompletter Platzbedarf des Tores.", "Nur Türblatt statt Beschläge und Pfosten gerechnet."],
       ["Restfeld", "Abweichung am Streckenende.", "Unzulässiger oder optisch ungünstiger Zuschnitt."],
     ]},
-    checklist: ["Gesamtstrecke an mehreren Punkten messen.", "Echtes Montage- oder Achsmaß verwenden.", "Tor zuerst als eigenes Modul abziehen.", "Start-, Zwischen- und Endpfosten zählen.", "Restfeld und zulässigen Zuschnitt prüfen.", "Fundament und Windlast separat planen."],
+    checklist: ["Gesamtstrecke an mehreren Punkten messen.", "Echtes Montage- oder Achsmaß verwenden.", "Das Tor als eigenes Modul berücksichtigen.", "Start-, Zwischen- und Endpfosten zählen.", "Restfeld und zulässigen Zuschnitt prüfen.", "Fundament und Windlast separat planen."],
     faqs: [
       { question: "Wie viele Sichtschutzelemente brauche ich?", answer: "Teile die nach Toren verbleibende Strecke durch das echte Montageraster des Systems und runde entsprechend der geplanten Randlösung. Die sichtbare Elementbreite allein reicht nicht, weil Pfosten, Halter und Fugen das Gesamtmaß verändern." },
       { question: "Braucht jedes Feld zwei eigene Pfosten?", answer: "Benachbarte Felder teilen sich üblicherweise einen Zwischenpfosten, während Anfang und Ende eigene Pfosten benötigen. Tore und Richtungswechsel können zusätzliche Pfosten erfordern. Zähle anhand einer gezeichneten Modulfolge statt mit einer pauschalen Multiplikation." },

@@ -31,6 +31,10 @@ type ScenarioSeed = {
   caution: string;
 };
 
+function phrase(text: string) {
+  return text.replace(/[.!?]+$/, "");
+}
+
 const clusters = {
   gartenhaus: {
     label: "Gartenhaus",
@@ -92,7 +96,7 @@ const clusters = {
     label: "Gewächshaus",
     plannerHref: "/garten/gewaechshaus-planer/",
     plannerLabel: "Gewächshaus planen",
-    measurementMethod: "Plane zuerst nutzbare Beetbreiten, Wege, Tür und Arbeitshöhe. Pflanzenabstände werden nicht bis an Wand und Tür gerechnet; hohe Kulturen brauchen zusätzlich Luftvolumen, Rankhilfe und Abstand zu Lüftungsöffnungen. Außenmaß und reale Anbaufläche bleiben getrennt.",
+    measurementMethod: "Nutzbare Beetbreiten, Wege, Tür und Arbeitshöhe geben die Planung vor. Pflanzenabstände werden nicht bis an Wand und Tür gerechnet; hohe Kulturen brauchen zusätzlich Luftvolumen, Rankhilfe und Abstand zu Lüftungsöffnungen. Außenmaß und reale Anbaufläche bleiben getrennt.",
     decisionMethod: "Die Größe folgt Kulturplan und Arbeitsweg, die Ausstattung folgt dem Temperatur- und Feuchteprofil. Lüftungsfläche, Beschattung, Bewässerung und Fundament werden deshalb vor einem Produktvergleich als eigene Anforderungen dokumentiert.",
     boundary: "Wind- und Schneelast, Verankerung, Sicherheitsabstände sowie bau- oder nachbarrechtliche Fragen sind standortabhängig. Kulturhinweise müssen an Sorte, Klima und Saison angepasst werden.",
     relatedLinks: [
@@ -121,7 +125,7 @@ const clusters = {
     plannerHref: "/garten/carport-planer/",
     plannerLabel: "Carport dimensionieren",
     measurementMethod: "Miss Fahrzeug einschließlich Spiegeln, Dachaufbauten und geöffneter Türen. Ergänze Rangierweg, Pfostenpositionen, Dachüberstand und lichte Durchfahrtshöhe. Nicht die Dachfläche, sondern der kleinste nutzbare Querschnitt entscheidet über die Alltagstauglichkeit.",
-    decisionMethod: "Die Abmessungen werden aus Fahrzeug, Ein- und Ausstieg, Zufahrt und Zusatznutzung abgeleitet. Danach folgen Tragwerk, Dachwasser, Fundament und Material. Ein größeres Dach hilft wenig, wenn Pfosten oder Rinne den Fahrweg einschränken.",
+    decisionMethod: "Die Abmessungen werden aus Fahrzeug, Ein- und Ausstieg, Zufahrt und Zusatznutzung abgeleitet. Tragwerk, Dachwasser, Fundament und Material müssen zu diesem Platzrahmen passen. Ein größeres Dach hilft wenig, wenn Pfosten oder Rinne den Fahrweg einschränken.",
     boundary: "Statik, Wind- und Schneelast, Fundamente, Entwässerung, Brandschutz und Genehmigung sind standortabhängig und müssen fachlich beziehungsweise behördlich geprüft werden.",
     relatedLinks: [
       { label: "Carport-Planer", href: "/garten/carport-planer/", description: "Fahrzeug, Bewegungsraum und Zusatzfläche erfassen." },
@@ -134,7 +138,7 @@ const clusters = {
     label: "Bodenbelag",
     plannerHref: "/haus/boden/bodenbelag-rechner/",
     plannerLabel: "Bodenmenge berechnen",
-    measurementMethod: "Zerlege den Raum in Rechtecke, addiere deren Flächen und behandle Nischen sowie Türlaibungen bewusst. Danach werden Verlegerichtung, Paketinhalt, Dielenformat und ein begründeter Verschnitt berücksichtigt. Bestellt wird in ganzen Paketen, nicht in rechnerischen Quadratmeterbruchteilen.",
+    measurementMethod: "Zerlege den Raum in Rechtecke, addiere deren Flächen und behandle Nischen sowie Türlaibungen bewusst. Verlegerichtung, Paketinhalt, Dielenformat und ein begründeter Verschnitt schließen an diese Flächenrechnung an. Bestellt wird in ganzen Paketen, nicht in rechnerischen Quadratmeterbruchteilen.",
     decisionMethod: "Untergrund, Feuchte, Nutzung und Herstellerfreigabe entscheiden über das geeignete System. Die Materialmenge wird aus dieser Entscheidung abgeleitet. Für einen fairen Preisvergleich zählen Boden, Unterlage, Profile, Sockelleisten und mögliche Untergrundarbeiten zusammen.",
     boundary: "Restfeuchte, Ebenheit, Fußbodenheizung, Feuchteschutz und Verlegung richten sich nach Untergrund und freigegebenem Produktsystem. Die Mengenrechnung ersetzt keine technische Prüfung.",
     relatedLinks: [
@@ -149,7 +153,7 @@ const clusters = {
     plannerHref: "/haus/innenausbau/trockenbau-rechner/",
     plannerLabel: "Trockenbau berechnen",
     measurementMethod: "Miss Wandlänge und -höhe an mehreren Stellen und erfasse jede Öffnung mit Position und Abmessung. Platten werden je Wandseite und Lage gerechnet; Profile folgen dem freigegebenen Raster. Türständer, Randanschlüsse und zusätzliche Tragprofile werden separat ergänzt.",
-    decisionMethod: "Wandfunktion, Höhe, Lasten, Schall- und Brandschutz bestimmen das System. Erst aus diesem freigegebenen Aufbau lassen sich Platten, Profile, Dämmung und Befestiger sinnvoll ermitteln. Eine reine Quadratmeterrechnung bleibt nur der erste Mengenrahmen.",
+    decisionMethod: "Wandfunktion, Höhe, Lasten, Schall- und Brandschutz bestimmen das System. Aus dem freigegebenen Aufbau lassen sich Platten, Profile, Dämmung und Befestiger sinnvoll ermitteln. Eine reine Quadratmeterrechnung bleibt ein erster Mengenrahmen.",
     boundary: "Profilabstände, Plattenlagen, Befestigung, Anschlüsse sowie Schall- und Brandschutz müssen dem freigegebenen System entsprechen. Tragende oder sicherheitsrelevante Details brauchen Fachplanung.",
     relatedLinks: [
       { label: "Trockenbau-Rechner", href: "/haus/innenausbau/trockenbau-rechner/", description: "Wandflächen, Lagen und Materialrahmen erfassen." },
@@ -191,7 +195,7 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
           title: "Eine Rechnung mit offenem Ausgang",
           paragraphs: [
             `${seed.calculation} Daraus ergibt sich ${seed.result}. Die Zahl beschreibt einen Planungsrahmen für dieses Beispiel. Sie ist keine Zusage, dass jedes Produkt mit derselben Angabe passt.`,
-            `Die Reserve gehört sichtbar in die Rechnung. Runde erst nach dem Rechenschritt auf Paket, Feld, Kapazität oder Systemgröße auf. Wenn sich eine Eingabe ändert, muss auch das Ergebnis neu betrachtet werden.`,
+            `Die Reserve gehört sichtbar in die Rechnung. Runde nach dem Rechenschritt auf Paket, Feld, Kapazität oder Systemgröße auf. Wenn sich eine Eingabe ändert, muss auch das Ergebnis neu betrachtet werden.`,
           ],
         },
         {
@@ -215,20 +219,20 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
             title: "Dieses Beispiel braucht einen eigenen Plan",
             paragraphs: [
               `${seed.intro} Ein brauchbarer Plan beginnt bei der tatsächlichen Nutzung und nicht bei einer fertigen Produktklasse. ${seed.measurement}`,
-              `${cluster.measurementMethod} Für den Alltag ist bei diesem Beispiel besonders wichtig. ${seed.advice[0]}`,
+              `${cluster.measurementMethod} Im Alltag beginnt die Prüfung an einem konkreten Punkt. ${seed.advice[0]}`,
             ],
           },
           {
             title: "Was die Beispielzahl wirklich aussagt",
             paragraphs: [
-              `Die Rechnung lautet ${seed.calculation} Als Ergebnis stehen ${seed.result} im Raum. Dieser Wert hilft bei der Vorauswahl, ersetzt aber weder die Produktunterlage noch die Prüfung des Einbauorts.`,
+              `Die Rechnung lautet ${sentenceEnd(seed.calculation)} Daraus ergibt sich ${phrase(seed.result)}. Dieser Wert hilft bei der Vorauswahl, ersetzt aber weder die Produktunterlage noch die Prüfung des Einbauorts.`,
               `Eine Reserve ist nur sinnvoll, wenn sie einen konkreten Grund hat. Bei dieser Nutzung können das Zuschnitt, Zugriff, Betriebszeit, schwierige Geometrie oder eine spätere Änderung sein.`,
             ],
           },
           {
             title: "Zwei Lösungen, zwei praktische Folgen",
             paragraphs: [
-              `${seed.optionA} ist interessant, wenn der beschriebene Vorteil im eigenen Ablauf gebraucht wird. ${seed.optionB} wird relevant, wenn ${seed.advice[2]}`,
+              `Die erste Variante passt, wenn der beschriebene Vorteil im eigenen Ablauf gebraucht wird. Die zweite Variante wird relevant, sobald dieser Punkt im eigenen Projekt regelmäßig auftritt. ${seed.advice[2]}`,
               `${cluster.decisionMethod} Übertrage diese Überlegung auf deinen eigenen Ablauf und streiche Varianten, die ein Muss-Kriterium nicht erfüllen.`,
             ],
           },
@@ -273,21 +277,21 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
 
   const faqs = variant === 0
     ? [
-        { question: "Welche Angabe ist in diesem Beispiel am wichtigsten?", answer: `${seed.measurement} Der Planungswert ${seed.result} wird anschließend mit der Produktunterlage und den Bedingungen vor Ort verglichen.` },
-        { question: "Wie viel Reserve ist in diesem Beispiel sinnvoll?", answer: `Eine Reserve braucht einen konkreten Grund. Bei dieser Nutzung ist vor allem der tatsächliche Ablauf entscheidend. ${seed.advice[0]} ${sentenceEnd(seed.calculation)} Ein begründeter Puffer kommt danach in die Rechnung.` },
-        { question: `Wann spricht mehr für ${seed.optionB}?`, answer: `${seed.optionB} passt besser, wenn die genannte Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]} ${seed.caution}` },
+        { question: "Welche Angabe ist in diesem Beispiel am wichtigsten?", answer: `${seed.measurement} Der Planungswert liegt in diesem Beispiel bei ${phrase(seed.result)}. Vergleiche ihn mit der Produktunterlage und den Bedingungen vor Ort.` },
+        { question: "Wie viel Reserve ist in diesem Beispiel sinnvoll?", answer: `Eine Reserve braucht einen konkreten Grund. Bei dieser Nutzung ist vor allem der tatsächliche Ablauf entscheidend. ${seed.advice[0]} ${sentenceEnd(seed.calculation)} Ein begründeter Puffer gehört in die Rechnung.` },
+          { question: "Wann passt die zweite Variante besser?", answer: `Die zweite Variante passt besser, wenn die genannte Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]} ${seed.caution}` },
         { question: "Was muss vor dem Kauf noch geklärt werden?", answer: `Kontrolliere Maße, Lieferumfang, Einsatzbedingungen und Montagehinweise. ${cluster.boundary}` },
       ]
     : variant === 1
       ? [
-          { question: "Wie groß muss die Lösung für dieses Beispiel sein?", answer: `Übernimm nicht einfach eine Katalogklasse. ${seed.measurement} Die Beispielrechnung führt zu ${seed.result} und muss mit den echten Produktmaßen abgeglichen werden.` },
+          { question: "Wie groß muss die Lösung für dieses Beispiel sein?", answer: `Übernimm nicht einfach eine Katalogklasse. ${seed.measurement} Die Beispielrechnung ergibt ${seed.result} und muss mit den echten Produktmaßen abgeglichen werden.` },
           { question: "Warum reicht ein einzelner Maximalwert nicht?", answer: `Ein Maximalwert beschreibt nur eine bestimmte Prüfbedingung. ${seed.caution} ${cluster.boundary}` },
-          { question: `Welche Alternative gibt es zu ${seed.optionA}?`, answer: `${seed.optionB} kann sinnvoll sein, wenn dieser Punkt im eigenen Projekt regelmäßig vorkommt. ${seed.advice[2]} Vergleiche dafür Anschaffung, Zubehör, Platz, Montage und Wartung gemeinsam.` },
+          { question: "Welche Alternative gibt es zu dieser Lösung?", answer: `${seed.optionB} kann sinnvoll sein, wenn dieser Punkt im eigenen Projekt regelmäßig vorkommt. ${seed.advice[2]} Vergleiche dafür Anschaffung, Zubehör, Platz, Montage und Wartung gemeinsam.` },
         ]
       : [
           { question: "Was wird in diesem Beispiel gemessen?", answer: `${seed.measurement} Die Messung erhält ein Datum und eine Einheit, damit sie mit späteren Produktangaben vergleichbar bleibt.` },
           { question: "Wie belastbar ist der berechnete Wert?", answer: `${seed.calculation} Das Ergebnis ${seed.result} ist ein offener Planungsrahmen. ${cluster.boundary}` },
-          { question: `Was spricht für ${seed.optionA} und was für ${seed.optionB}?`, answer: `${seed.optionA} ist passend, wenn der beschriebene Vorteil gebraucht wird. ${seed.optionB} wird interessant, wenn ${seed.advice[1]}` },
+          { question: "Was spricht für die erste oder die zweite Variante?", answer: `Die erste Variante passt, wenn der beschriebene Vorteil gebraucht wird. Die zweite Variante wird interessant, sobald die dafür genannte Bedingung im eigenen Projekt erfüllt ist. ${seed.advice[1]}` },
           { question: "Welche Kontrolle verhindert eine Fehlbestellung?", answer: `Prüfe die ungünstigste Stelle, den Lieferumfang und die Montageanleitung. ${seed.caution}` },
         ];
   const finalSections = [
@@ -306,7 +310,7 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
     paragraphs: [
       ...section.paragraphs,
       [
-        `Der Planungswert für dieses Beispiel bleibt an die Messung und die genannten Bedingungen gebunden. Eine Übertragung auf ein anderes Grundstück braucht eine neue Rechnung.`,
+        `Der Planungswert dieses Beispiels gehört zum Vergleich zwischen „${seed.optionA}“ und „${seed.optionB}“. Er bleibt an die Messung und die genannten Bedingungen gebunden. Eine Übertragung auf ein anderes Grundstück braucht eine neue Rechnung.`,
         `Für den Alltag ist dieser Punkt entscheidend. ${seed.advice[0]}`,
         `Für die Gegenprobe genügt keine ideale Zeichnung. ${seed.caution} Prüfe die Stelle, an der die Nutzung am wenigsten Spielraum lässt.`,
         `Auch dieser Punkt gehört in die Prüfung. ${seed.advice[1]} Die Unterlagen des gewählten Systems entscheiden über die endgültige Eignung.`,
@@ -316,7 +320,45 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
   }));
   const finalFaqs = faqs.length >= 4
     ? faqs
-    : [...faqs, { question: "Wie halte ich die Entscheidung nachvollziehbar fest?", answer: `Speichere Messwerte, Rechnung, Produktunterlage und offene Punkte gemeinsam. ${seed.caution}` }];
+    : [...faqs, { question: "Wie halte ich die Entscheidung nachvollziehbar fest?", answer: `Speichere Messwerte, Rechnung, Produktunterlage und offene Punkte gemeinsam. Prüfe diese Unterlagen für ${seed.scenario} erneut, sobald sich Maß oder Nutzung ändern. ${seed.caution}` }];
+  const contextualFaqs = finalFaqs.map((faq) => ({
+    ...faq,
+    answer: `${faq.answer} Für ${seed.scenario} bleibt dieser Abgleich an die Bedingungen vor Ort gebunden.`,
+  }));
+  const scenarioChecklist = variant === 0
+    ? [
+        `Messung für ${seed.scenario} mit Einheit und Datum sichern.`,
+        seed.measurement,
+        `Rechenweg mit den eigenen Werten nachvollziehen: ${seed.calculation}`,
+        seed.advice[0],
+        seed.advice[1],
+        seed.advice[2],
+        `Grenze des Beispiels beachten. ${seed.caution}`,
+      ]
+    : variant === 1
+      ? [
+          `Ausgangslage am Standort beschreiben: ${seed.measurement}`,
+          `Planungswert und Annahmen dokumentieren: ${seed.result}`,
+          `Die Rechnung an den eigenen Maßen prüfen: ${seed.calculation}`,
+          `${seed.optionA} gegen ${seed.optionB} am realen Ablauf abgleichen.`,
+          seed.advice[0],
+          seed.advice[2],
+          `Offene technische Grenze klären. ${cluster.boundary}`,
+        ]
+      : [
+          `Eingaben für ${seed.scenario} aufnehmen: ${seed.measurement}`,
+          `Rechnung und Gegenprobe getrennt festhalten: ${seed.calculation}`,
+          `Ergebnis mit den Bedingungen vor Ort vergleichen: ${seed.result}`,
+          seed.advice[1],
+          seed.advice[2],
+          `Montage und Nutzung anhand der Herstellerangaben prüfen.`,
+          `Vor der Bestellung die Grenze beachten: ${seed.caution}`,
+        ];
+  const scenarioExampleIntro = variant === 0
+    ? `Dieses Beispiel folgt der Frage, wie ${seed.scenario} unter den genannten Bedingungen geplant werden kann. Eingabe, Rechenweg und Ergebnis gehören zusammen.`
+    : variant === 1
+      ? `Für ${seed.scenario} stehen hier Messung, Planungswert und Gegenprobe nebeneinander. Übertrage den Rahmen nur, wenn die Voraussetzungen am eigenen Standort vergleichbar sind.`
+      : `Für ${seed.scenario} zeigt die Rechenkette, welche Annahmen zu diesem Ergebnis führen. Produktdaten und Einbauort bleiben für die endgültige Auswahl maßgeblich.`;
 
   return {
     slug: seed.slug,
@@ -339,21 +381,13 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
         ["Passend, wenn", "alle Muss-Kriterien erfüllt sind", "der zusätzliche Nutzen im Alltag belegt ist"],
       ],
     },
-    checklist: [
-      "Messwerte für dieses Beispiel mit Einheit und Datum festhalten.",
-      seed.measurement,
-      `Den Rechenweg mit eigenen Werten nachrechnen. ${seed.calculation}`,
-      seed.advice[0],
-      seed.advice[1],
-      seed.advice[2],
-      `Vor der Bestellung kontrollieren. ${seed.caution}`,
-    ],
-    faqs: finalFaqs,
+    checklist: scenarioChecklist,
+    faqs: contextualFaqs,
     relatedLinks: cluster.relatedLinks,
     sources: [...cluster.sources],
     example: {
       title: "Rechenbeispiel für diese Nutzung",
-      intro: `Dieses Beispiel zeigt, wie sich der Planungsrahmen aus einer konkreten Eingabe ableitet. Übertrage die Rechnung erst auf dein eigenes Projekt, wenn Maße und Einheiten feststehen.`,
+      intro: scenarioExampleIntro,
       steps: [
         { label: "Ausgangslage", value: seed.measurement },
         { label: "Rechnung", value: seed.calculation },

@@ -10,6 +10,7 @@ import {
   getDecisionGuideDirectory,
 } from "@/lib/decision-guides";
 import { getSeoTopic } from "@/lib/seo-topics";
+import { editorializeText } from "@/lib/editorial-style";
 
 export function generateStaticParams() {
   return DECISION_GUIDE_DIRECTORIES.map((directory) => ({ topic: directory.topicSlug }));
@@ -54,9 +55,9 @@ export default async function Page({ params }: { params: Promise<{ topic: string
     }} />
     <section className="page-hero project-directory-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Direkte Vergleiche", href: "/ratgeber/vergleiche/" }, { label: topic.name }]} />
-      <p className="eyebrow">10 Paare · 10 Nutzungssituationen · 100 Seiten</p>
-      <h1>{directory.title}: <em>konkret gewichtet.</em></h1>
-      <p>{directory.description} Jede Seite verwendet dieselben fünf Kriterien für beide Optionen und zeigt, wie der Nutzungskontext die Gewichtung verändert.</p>
+      <p className="eyebrow">10 Paare, 10 Nutzungssituationen, 100 Seiten</p>
+      <h1>{editorializeText(directory.title)} <em>konkret gewichtet.</em></h1>
+      <p>{editorializeText(directory.description)} Jede Seite verwendet dieselben fünf Kriterien für beide Optionen und zeigt, wie der Nutzungskontext die Gewichtung verändert.</p>
       <div className="hero-actions"><Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link><a className="text-link" href="#vergleiche">Alle Vergleiche ansehen ↓</a></div>
     </section>
     <div id="vergleiche">
@@ -75,6 +76,6 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         </section>;
       })}
     </div>
-    <section className="topic-boundary"><div><p className="eyebrow">Keine Scheingenauigkeit</p><h2>Die Matrix sortiert – sie gibt nicht frei.</h2></div><p>{topic.boundary} Ein höherer Orientierungswert darf kein nicht erfülltes Muss-Kriterium überstimmen.</p></section>
+    <section className="topic-boundary"><div><p className="eyebrow">Keine Scheingenauigkeit</p><h2>Die Matrix sortiert und gibt nicht frei.</h2></div><p>{topic.boundary} Ein höherer Orientierungswert darf kein nicht erfülltes Muss-Kriterium überstimmen.</p></section>
   </>;
 }

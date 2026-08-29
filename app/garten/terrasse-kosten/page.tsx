@@ -16,7 +16,7 @@ export default function Page() {
     breadcrumbs={[{label:"Start",href:"/"},{label:"Garten",href:"/garten/"},{label:"Terrassen-Kosten"}]}
     plannerHref="/garten/terrassen-dielen-rechner/"
     plannerLabel="Materialmenge abschätzen"
-    takeaway="Berechne zuerst Dielen- und Unterkonstruktionsmengen. Hole Preise anschließend getrennt für Belag, Unterbau, Befestigung, Lieferung und Ausführung ein."
+    takeaway="Ermittle Dielen- und Unterkonstruktionsmengen aus dem konkreten Grundriss. Preise für Belag, Unterbau, Befestigung, Lieferung und Ausführung gehören in getrennte Positionen."
     limitation="Pauschale Quadratmeterpreise sind ohne Standort, Untergrund und Konstruktionsdetails nicht belastbar. Der Rechner erstellt deshalb bewusst kein verbindliches Kostenangebot."
     sections={[
       {title:"Sechs Kostenblöcke statt eines Dielenpreises",paragraphs:["Ein vollständiger Vergleich trennt Belag, Unterkonstruktion, Gründung, Befestigung, Rand- und Entwässerungsdetails sowie Arbeits- und Lieferkosten."],bullets:["Dielen inklusive Zuschnittreserve","Unterkonstruktion und zusätzliche Stoßauflager","Fundamente, Lager oder vorbereiteter Untergrund","Clips, Schrauben, Verbinder und Trennlagen","Blenden, Stufen, Entwässerung und Anschlüsse","Lieferung, Werkzeug, Zuschnitt und Montage"]},

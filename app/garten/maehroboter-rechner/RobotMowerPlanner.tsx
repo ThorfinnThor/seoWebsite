@@ -14,6 +14,7 @@ import { loadRobotMowerCatalog } from "@/lib/catalog/load-client-catalog";
 import { recommendRobotMowers } from "@/lib/robot-mower/recommend";
 import type { RobotMowerCatalog } from "@/lib/robot-mower/types";
 import { CatalogMatchList } from "@/components/product/CatalogMatchList";
+import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 
 const INITIAL: RobotMowerInput = {
   areas: [{ id: "area-1", label: "Hauptrasen", lengthM: 20, widthM: 15, excludedAreaM2: 25 }],
@@ -121,7 +122,7 @@ export function RobotMowerPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor der Geräteauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}{plan.setupTasks.map((task) => <li key={task}>{task}</li>)}<li>Randgestaltung, Stufen, Wasserflächen, öffentliche Wege, Kinder- und Tierbereiche sowie Aufbewahrung nach Anleitung und örtlicher Situation planen.</li></ul></div>
       <PrintResultAction />
-      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Mähroboter</h3><p>Nur redaktionell freigegebene Produkte erscheinen hier. Feed-Daten mit fehlenden Flächen- oder Passagenwerten bleiben bis zur Prüfung ausgeschlossen.</p><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Mähroboter. Die Ecovacs-Feeddaten sind erfasst und warten auf die manuelle Bestätigung der technischen Werte." /></section>
+      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Mähroboter</h3><p>Nur redaktionell freigegebene Produkte erscheinen hier. Feed-Daten mit fehlenden Flächen- oder Passagenwerten bleiben bis zur Prüfung ausgeschlossen.</p><AffiliateDisclosure /><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Mähroboter. Die Ecovacs-Feeddaten sind erfasst und warten auf die manuelle Bestätigung der technischen Werte." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}

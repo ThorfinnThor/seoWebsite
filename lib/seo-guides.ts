@@ -42,7 +42,7 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     sections: [
       { title: "Holz: anpassbar und wohnlicher", paragraphs: ["Holz lässt sich leichter reparieren, streichen und an vorhandene Gartenarchitektur anpassen. Dafür braucht die Außenhaut einen passenden konstruktiven und regelmäßigen Schutz vor dauerhafter Feuchte.", "Für Fahrräder, Werkbank oder Regale ist nicht nur das Material entscheidend. Türbreite, Innenmaß, Bodenaufbau und eine trockene Aufstellung bestimmen die Alltagstauglichkeit stärker als das Etikett Holzhaus."] },
       { title: "Metall: pflegearm, aber nicht automatisch wartungsfrei", paragraphs: ["Ein Metallhaus kann bei guter Beschichtung wenig Pflege benötigen. Kondensat, scharfe Kanten, Belüftung und Korrosionsschutz an Schnitt- oder Befestigungsstellen bleiben trotzdem zu prüfen.", "Im Sommer kann sich ein dünnwandiges Haus stark aufheizen. Für empfindliches Lagergut zählen deshalb Lüftung, Beschattung und ein geeigneter Bodenaufbau."] },
-      { title: "Die Entscheidung in vier Fragen", paragraphs: ["Prüfe zuerst, was gelagert wird, wie oft du zugreifst, ob du nachstreichen möchtest und welches Außenmaß am Standort zulässig und praktisch ist. Vergleiche anschließend reale Innen- und Außenmaße, nicht nur Katalogbegriffe."] , bullets: ["Werkstatt und sichtbarer Gartenbau: häufig Vorteile für Holz.", "Schnelles, pflegearmes Geräte-Lager: Metall kann sinnvoll sein.", "Feuchte und Kondensat: Boden, Lüftung und Standort zuerst planen."] },
+      { title: "Die Entscheidung in vier Fragen", paragraphs: ["Was gelagert wird, wie oft du zugreifst, ob du nachstreichen möchtest und welches Außenmaß am Standort zulässig ist, gibt die Richtung vor. Reale Innen- und Außenmaße sind aussagekräftiger als Katalogbegriffe."] , bullets: ["Werkstatt und sichtbarer Gartenbau: häufig Vorteile für Holz.", "Schnelles, pflegearmes Geräte-Lager: Metall kann sinnvoll sein.", "Feuchte und Kondensat: Boden, Lüftung und Standort passend einordnen."] },
     ],
   },
   {
@@ -71,8 +71,8 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     plannerLabel: "Gartenhaus-Kosten einordnen",
     sections: [
       { title: "Direkte und indirekte Kosten trennen", paragraphs: ["Zum Produkt gehören je nach Angebot Wände, Dach, Tür, Fenster und Boden. Fundament, Unterbau, Schutzanstrich, Dachrinne, Lieferung und Montage stehen häufig separat daneben.", "Auch der Standort kann Zusatzaufwand verursachen: Gefälle, schwieriger Zugang, Entsorgung oder eine notwendige Anpassung der Stellfläche."] },
-      { title: "Angebote vergleichbar machen", paragraphs: ["Notiere Außenmaß, Innenfläche, Wandstärke, Boden, Dachform, Tür, Fenster und Lieferumfang in einer gemeinsamen Tabelle. Erst danach ist der Preis pro nutzbarer Fläche sinnvoll interpretierbar."] , bullets: ["Nicht nur den Preis pro Quadratmeter vergleichen.", "Lieferung und Aufbau mit derselben Annahme rechnen.", "Reserve für Entwässerung, Befestigung und kleine Anpassungen lassen."] },
-      { title: "Budgetgrenze vor der Produktsuche", paragraphs: ["Setze zuerst eine Budgetspanne und prüfe, welche Nutzung wirklich geschützt untergebracht werden muss. Eine kleinere, zugängliche Lösung kann besser funktionieren als ein größeres Haus, dessen Zusatzkosten das Budget sprengen."] },
+      { title: "Angebote vergleichbar machen", paragraphs: ["Notiere Außenmaß, Innenfläche, Wandstärke, Boden, Dachform, Tür, Fenster und Lieferumfang in einer gemeinsamen Tabelle. Mit dieser Grundlage lässt sich der Preis pro nutzbarer Fläche sinnvoll einordnen."] , bullets: ["Nicht nur den Preis pro Quadratmeter vergleichen.", "Lieferung und Aufbau mit derselben Annahme rechnen.", "Reserve für Entwässerung, Befestigung und kleine Anpassungen lassen."] },
+      { title: "Budgetgrenze vor der Produktsuche", paragraphs: ["Setze eine Budgetspanne und kläre, welche Nutzung geschützt untergebracht werden muss. Eine kleinere, zugängliche Lösung kann besser funktionieren als ein größeres Haus, dessen Zusatzkosten das Budget sprengen."] },
     ],
   },
   {
@@ -141,7 +141,7 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     description: "Terrassenkosten vergleichen: Dielen, Verschnitt, Unterkonstruktion, Befestigung, Fundamente und Pflege als vollständigen Materialrahmen planen.",
     heading: "Terrassenkosten: Materialpreis und Aufbau getrennt sichtbar machen",
     intro: "Die Dielen sind nur ein Teil der Terrasse. Ein transparenter Vergleich zeigt, welche Kosten von Fläche, Aufbau und gewünschter Lebensdauer abhängen.",
-    takeaway: "Ermittle zuerst Reihen, Laufmeter und Unterkonstruktion. Ergänze anschließend Befestiger, Randdetails, Fundamente, Lieferung und Pflege.",
+    takeaway: "Reihen, Laufmeter und Unterkonstruktion ergeben den Grundbedarf. Befestiger, Randdetails, Fundamente, Lieferung und Pflege werden als eigene Positionen ergänzt.",
     plannerHref: "/garten/terrassen-dielen-rechner/",
     plannerLabel: "Terrassenmaterial berechnen",
     sections: [
@@ -177,7 +177,7 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     sections: [
       { title: "Glas: klar und klassisch", paragraphs: ["Glas wirkt optisch offen und lässt sich gut reinigen. Es ist schwerer und empfindlicher gegen Schlag oder Montagefehler; Konstruktion, Fundament und Sicherheitsglas-Variante müssen zum System passen."] },
       { title: "Polycarbonat: leicht und robuster bei Stößen", paragraphs: ["Mehrwandige Platten können Gewicht und Wärmeverlust reduzieren und sind im Alltag weniger bruchempfindlich. Lichtstreuung, Alterung, UV-Schutz und Reinigung hängen von der konkreten Platte ab."] },
-      { title: "Lüftung bleibt bei beiden entscheidend", paragraphs: ["Kein Wandmaterial ersetzt Dachlüftung, Türlüftung und Beschattung. Plane die erreichbare Beetfläche und Wege zuerst, danach Material, Profile und Öffnungen."] },
+      { title: "Lüftung bleibt bei beiden entscheidend", paragraphs: ["Kein Wandmaterial ersetzt Dachlüftung, Türlüftung und Beschattung. Erreichbare Beetfläche und Wege bestimmen den Bedarf an Material, Profilen und Öffnungen."] },
     ],
   },
   {
@@ -185,8 +185,8 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     title: "Carport aus Holz oder Aluminium: Was passt zum Stellplatz?",
     description: "Carport aus Holz oder Aluminium vergleichen: Pflege, Optik, Spannweiten, Entwässerung, Montage und Standortanforderungen prüfen.",
     heading: "Holz oder Aluminium beim Carport: Nicht nur eine Stilfrage",
-    intro: "Holz und Aluminium unterscheiden sich bei Pflege, Optik, Gewicht und Systemaufbau. Für die Auswahl zählen zuerst Fahrzeug, Zufahrt und Standort.",
-    takeaway: "Plane lichte Breite, Länge, Höhe und Rangierraum zuerst. Vergleiche dann Materialpflege, Tragwerk, Entwässerung und die Montagebedingungen des konkreten Systems.",
+    intro: "Holz und Aluminium unterscheiden sich bei Pflege, Optik, Gewicht und Systemaufbau. Fahrzeug, Zufahrt und Standort geben der Auswahl ihren Rahmen.",
+    takeaway: "Lichte Breite, Länge, Höhe und Rangierraum bilden die Grundlage. Danach lassen sich Materialpflege, Tragwerk, Entwässerung und Montagebedingungen des konkreten Systems einordnen.",
     plannerHref: "/garten/carport-planer/",
     plannerLabel: "Carport-Raum planen",
     sections: [
@@ -201,7 +201,7 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     description: "Laminat oder Vinyl vergleichen: Feuchte, Trittschall, Pflege, Nutzung, Fußbodenheizung, Untergrund und Paketbedarf einordnen.",
     heading: "Laminat oder Vinyl: Die Raumnutzung entscheidet",
     intro: "Laminat und Vinyl sehen sich oft ähnlich, reagieren aber unterschiedlich auf Feuchte, Untergrund, Wärme und Belastung.",
-    takeaway: "Prüfe zuerst Raumfeuchte, Untergrund, Nutzung, Trittschall und Herstellerfreigaben für Fußbodenheizung. Erst danach vergleichst du Dekor und Paketpreis.",
+    takeaway: "Raumfeuchte, Untergrund, Nutzung, Trittschall und Herstellerfreigaben für Fußbodenheizung entscheiden über die Eignung. Dekor und Paketpreis sind im nächsten Schritt sinnvoll vergleichbar.",
     plannerHref: "/haus/boden/bodenbelag-rechner/",
     plannerLabel: "Bodenmaterial berechnen",
     sections: [

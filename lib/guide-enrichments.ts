@@ -312,7 +312,7 @@ export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
     sources: [source.mold],
     example: {
       title: "Tageskosten bei gemessenen acht Betriebsstunden",
-      intro: "Leistung wird zuerst in Kilowatt umgerechnet und dann mit Zeit und Arbeitspreis multipliziert.",
+      intro: "Leistung in Kilowatt, Laufzeit und Arbeitspreis ergeben gemeinsam die Kostenrechnung.",
       steps: [
         { label: "Leistungsaufnahme", value: "300 W = 0,3 kW" },
         { label: "Betriebszeit", value: "8 h" },

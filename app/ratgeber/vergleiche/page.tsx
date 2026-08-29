@@ -5,10 +5,11 @@ import { DECISION_GUIDE_COUNT, DECISION_GUIDE_DIRECTORIES } from "@/lib/decision
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
 import { getSeoTopic } from "@/lib/seo-topics";
+import { editorializeText } from "@/lib/editorial-style";
 
 export const metadata = createPageMetadata({
   title: "1.000 direkte Vergleiche für Haus und Garten",
-  description: "1.000 konkrete Vergleiche für Gartenhaus, Mähroboter, Terrasse, Bewässerung, Boden und Raumklima – mit Matrix, Quellen und Prüfschritten.",
+  description: "1.000 konkrete Vergleiche für Gartenhaus, Mähroboter, Terrasse, Bewässerung, Boden und Raumklima. Mit Matrix, Quellen und Prüfschritten.",
   path: "/ratgeber/vergleiche/",
 });
 
@@ -37,11 +38,11 @@ export default function Page() {
     <section className="page-hero project-directory-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Direkte Vergleiche" }]} />
       <p className="eyebrow">{DECISION_GUIDE_COUNT.toLocaleString("de-DE")} konkrete Entscheidungssituationen</p>
-      <h1>Direkt vergleichen – <em>konkret entscheiden.</em></h1>
-      <p>Keine pauschalen Testsieger: Jede Seite vergleicht zwei Lösungswege für eine klar benannte Nutzung. Gewichtung, Gegenprobe, Quellen und Grenzen bleiben sichtbar.</p>
+      <h1>Direkt vergleichen und <em>konkret entscheiden.</em></h1>
+      <p>Keine pauschalen Testsieger. Jede Seite vergleicht zwei Lösungswege für eine klar benannte Nutzung. Gewichtung, Gegenprobe, Quellen und Grenzen bleiben sichtbar.</p>
     </section>
     <section className="topic-method" aria-labelledby="comparison-method-title">
-      <div><p className="eyebrow">Menschen zuerst</p><h2 id="comparison-method-title">Ein Vergleich muss eine echte Entscheidung lösen.</h2><p>Die Bibliothek kombiniert keine Ortsnamen und tauscht keine Synonyme aus. Jede URL besitzt einen eigenen Entscheidungskontext, dessen Prioritäten den Rechenwert tatsächlich verändern.</p></div>
+      <div><p className="eyebrow">Praxisnah entscheiden</p><h2 id="comparison-method-title">Ein Vergleich muss eine echte Entscheidung lösen.</h2><p>Die Bibliothek kombiniert keine Ortsnamen und tauscht keine Synonyme aus. Jede URL besitzt einen eigenen Entscheidungskontext, dessen Prioritäten den Rechenwert tatsächlich verändern.</p></div>
       <ol>
         <li><span>01</span><strong>Zwei reale Lösungswege mit denselben Kriterien prüfen.</strong></li>
         <li><span>02</span><strong>Gewichte und Muss-Kriterien offenlegen.</strong></li>
@@ -56,8 +57,8 @@ export default function Page() {
           if (!topic) return null;
           return <article className="directory-card topic-card" key={directory.topicSlug}>
             <p className="eyebrow">100 Direktvergleiche</p>
-            <h2>{directory.title}</h2>
-            <p>{directory.description}</p>
+            <h2>{editorializeText(directory.title)}</h2>
+            <p>{editorializeText(directory.description)}</p>
             <Link className="text-link" href={`/ratgeber/vergleiche/${directory.topicSlug}/`}>{topic.name} vergleichen →</Link>
           </article>;
         })}

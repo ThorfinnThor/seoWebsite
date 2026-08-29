@@ -17,7 +17,7 @@ export default function AffiliateTransparenzPage() {
       </section>
       <section>
         <h2>Bedarf vor Provision</h2>
-        <p>Die Planer berechnen zuerst Anforderungen aus deinen Eingaben. Produkte, die harte Kriterien nicht erfüllen, werden ausgeschlossen. Eine mögliche Vergütung beeinflusst weder diese Filter noch die fachliche Reihenfolge.</p>
+        <p>Die Planer leiten Anforderungen aus deinen Eingaben ab. Produkte, die harte Kriterien nicht erfüllen, werden ausgeschlossen. Eine mögliche Vergütung beeinflusst weder diese Filter noch die fachliche Reihenfolge.</p>
       </section>
       <section>
         <h2>So werden Partnerlinks erkennbar</h2>

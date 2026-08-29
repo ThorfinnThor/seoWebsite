@@ -16,7 +16,7 @@ export default function Page() {
     breadcrumbs={[{label:"Start",href:"/"},{label:"Garten",href:"/garten/"},{label:"Gartentor planen"}]}
     plannerHref="/garten/sichtschutz-planer/"
     plannerLabel="Tor-Modul einrechnen"
-    takeaway="Lege zuerst die benötigte lichte Durchgangsbreite und Öffnungsrichtung fest. Übernimm danach das vollständige Tor-Systemmaß in den Streckenplan."
+    takeaway="Die benötigte lichte Durchgangsbreite und Öffnungsrichtung bestimmen den Streckenplan. Berücksichtige darin das vollständige Tor-Systemmaß."
     limitation="Der Planer behandelt jedes Tor mit einem eingegebenen Systemmaß. Verstärkungen, Beschläge, Anschläge, Fundamente und elektrische Antriebe werden nicht dimensioniert."
     sections={[
       {title:"Lichte Öffnung ist das Nutzmaß",paragraphs:["Mülltonne, Fahrrad, Schubkarre oder Gartengerät bestimmen, wie breit der freie Durchgang sein muss. Das äußere Modulmaß fällt durch Pfosten, Bänder und Spiel meist größer aus.","Prüfe in der technischen Zeichnung, welche Breite der Hersteller nennt. Für den Planer wird das vollständige Einbauraster des Tor-Moduls benötigt, nicht nur die freie Öffnung."]},

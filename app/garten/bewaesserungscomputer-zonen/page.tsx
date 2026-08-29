@@ -10,7 +10,7 @@ export const metadata = createPageMetadata({
 
 export default function Page() {
   return <GuidePage path="/garten/bewaesserungscomputer-zonen/"
-    title="Bewässerungscomputer: Zonen zuerst planen"
+    title="Bewässerungscomputer: Zonen passend planen"
     intro="Eine Steuerung ist nur dann passend dimensioniert, wenn klar ist, welche Bereiche unabhängig laufen sollen. Rasen, Beet und Hecke benötigen meist unterschiedliche Laufzeiten und Ausbringungsarten."
     updated="August 2026"
     breadcrumbs={[{label:"Start",href:"/"},{label:"Garten",href:"/garten/"},{label:"Bewässerungscomputer und Zonen"}]}

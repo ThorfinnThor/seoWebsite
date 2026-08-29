@@ -9,6 +9,7 @@ import { SEO_GUIDES } from "@/lib/seo-guides";
 import { getGuidesForTopic, getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 import { getProjectExampleDirectory } from "@/lib/project-examples";
 import { getDecisionGuideDirectory } from "@/lib/decision-guides";
+import { editorializeText } from "@/lib/editorial-style";
 
 export function generateStaticParams() {
   return SEO_TOPICS.map((topic) => ({ slug: topic.slug }));
@@ -45,16 +46,16 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <section className="page-hero topic-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: topic.name }]} />
       <p className="eyebrow">{topic.eyebrow}</p>
-      <h1>{topic.name}: <em>klarer entscheiden.</em></h1>
-      <p>{topic.intro}</p>
+      <h1>{topic.name} <em>klarer entscheiden.</em></h1>
+      <p>{editorializeText(topic.intro)}</p>
       <div className="hero-actions"><Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link><a className="text-link" href="#ratgeber">{guides.length} Ratgeber ansehen ↓</a></div>
     </section>
     <section className="topic-method" aria-labelledby="topic-method-title">
-      <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Erst messen, dann vergleichen.</h2><p>{topic.method}</p></div>
+      <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Messen und passend vergleichen.</h2><p>{editorializeText(topic.method)}</p></div>
       <ol>{topic.questions.map((question, index) => <li key={question}><span>0{index + 1}</span><strong>{question}</strong></li>)}</ol>
     </section>
     <section className="directory-section" id="ratgeber">
-      <div className="section-heading"><div><p className="eyebrow">{topic.name}</p><h2>Alle Rechner, Szenarien und Vergleiche</h2></div><p>{topic.description}</p></div>
+      <div className="section-heading"><div><p className="eyebrow">{topic.name}</p><h2>Alle Rechner, Szenarien und Vergleiche</h2></div><p>{editorializeText(topic.description)}</p></div>
       <div className="directory-grid">{guides.map((guide) => <article className="directory-card" key={guide.slug}><p className="eyebrow">Ratgeber & Entscheidungshilfe</p><h3>{guide.title}</h3><p>{guide.description}</p><Link className="text-link" href={`/ratgeber/${guide.slug}/`}>Ratgeber lesen →</Link></article>)}</div>
     </section>
     {projectDirectory && <section className="project-library-callout">
@@ -65,6 +66,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div><p className="eyebrow">Zwei Optionen, ein konkreter Kontext</p><h2>100 gewichtete Direktvergleiche</h2><p>{comparisonDirectory.description} Jede Seite zeigt dieselben fünf Kriterien für beide Optionen und eine nachvollziehbare Gegenprobe.</p></div>
       <Link className="button button--primary" href={`/ratgeber/vergleiche/${topic.slug}/`}>Direktvergleiche öffnen →</Link>
     </section>}
-    <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{topic.boundary}</p></section>
+    <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{editorializeText(topic.boundary)}</p></section>
   </>;
 }

@@ -118,7 +118,7 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
     outputs: ["Anzahl der Sichtschutzfelder", "Tor- und Pfostenanzahl", "Restfeld und tatsächlicher Rasterabschluss"],
     faqs: [
       { question: "Welches Maß gehört in den Sichtschutz-Planer?", answer: "Verwende das echte Montage- oder Achsmaß des gewählten Systems. Die sichtbare Elementbreite allein reicht nicht, weil Pfosten und Fugen das Raster verändern." },
-      { question: "Wie wird ein Gartentor berücksichtigt?", answer: "Toranzahl und Tor-Modulmaß werden zuerst von der Gesamtstrecke abgezogen. Danach berechnet der Planer Standardfelder, Pfosten und eine mögliche Anpassung am letzten Feld." },
+      { question: "Wie wird ein Gartentor berücksichtigt?", answer: "Toranzahl und Tor-Modulmaß gehen als eigener Abschnitt in die Gesamtstrecke ein. Aus der verbleibenden Strecke berechnet der Planer Standardfelder, Pfosten und eine mögliche Anpassung am letzten Feld." },
       { question: "Berechnet der Planer auch die Fundamente?", answer: "Nein. Windlast, Pfostenquerschnitt, Untergrund, Befestigung und Fundamentabmessung müssen zum konkreten System und Standort fachlich festgelegt werden." },
     ],
   },

@@ -8,6 +8,7 @@ import {
 import { GUIDE_DEPTH_EXISTING } from "@/lib/guide-depth-existing";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { absoluteUrl, SITE } from "@/lib/site";
+import { editorializeText } from "@/lib/editorial-style";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { JsonLd } from "./JsonLd";
 
@@ -88,11 +89,20 @@ export function GuidePage({
       allSources.findIndex((candidate) => candidate.href === source.href) === index,
   );
   const resolvedExample = example ?? enrichment?.example;
+  const displayTitle = editorializeText(title);
+  const displayIntro = editorializeText(intro);
+  const displayTakeaway = editorializeText(takeaway);
+  const displaySections = sections.map((section) => ({
+    ...section,
+    title: editorializeText(section.title),
+    paragraphs: section.paragraphs.map(editorializeText),
+    bullets: section.bullets?.map(editorializeText),
+  }));
   const articleWordCount = [
-    title,
-    intro,
-    takeaway,
-    ...sections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.bullets ?? [])]),
+    displayTitle,
+    displayIntro,
+    displayTakeaway,
+    ...displaySections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.bullets ?? [])]),
     ...(resolvedComparison ? [resolvedComparison.caption, ...resolvedComparison.columns, ...resolvedComparison.rows.flat()] : []),
     ...resolvedChecklist,
     ...resolvedFaqs.flatMap((faq) => [faq.question, faq.answer]),
@@ -109,10 +119,10 @@ export function GuidePage({
           "@type": "Article",
           "@id": `${url}#article`,
           mainEntityOfPage: { "@type": "WebPage", "@id": url },
-          headline: title,
-          description: intro,
-          abstract: takeaway,
-          articleSection: sections.map((section) => section.title),
+          headline: displayTitle,
+          description: displayIntro,
+          abstract: displayTakeaway,
+          articleSection: displaySections.map((section) => section.title),
           dateModified: updatedAt,
           wordCount: articleWordCount,
           inLanguage: "de-DE",
@@ -148,18 +158,18 @@ export function GuidePage({
           items={breadcrumbs ?? [
             { label: "Start", href: "/" },
             { label: "Garten", href: "/garten/" },
-            { label: title },
+            { label: displayTitle },
           ]}
         />
         <header>
           <p className="eyebrow">PassendPlanen Ratgeber</p>
           <p className="guide-meta">
             Von <Link href="/ueber-passendplanen/" rel="author">Schayan Yousefian</Link>
-            {" · zuletzt geprüft "}
+            {" Zuletzt geprüft "}
             <time dateTime={updatedAt}>{updated}</time>
           </p>
-          <h1>{title}</h1>
-          <p>{intro}</p>
+          <h1>{displayTitle}</h1>
+          <p>{displayIntro}</p>
         </header>
 
         {calculator && <div className="guide-calculator">{calculator}</div>}
@@ -167,14 +177,14 @@ export function GuidePage({
         <div className="guide-layout">
           <aside aria-labelledby="guide-answer-title">
             <h2 id="guide-answer-title">Kurzantwort</h2>
-            <p>{takeaway}</p>
+            <p>{displayTakeaway}</p>
             <Link className="button button--primary" href={plannerHref}>
               {plannerLabel} →
             </Link>
           </aside>
 
           <div className="guide-copy">
-            {sections.map((section) => (
+            {displaySections.map((section) => (
               <section key={section.title}>
                 <h2>{section.title}</h2>
                 {section.paragraphs.map((paragraph) => (
@@ -222,7 +232,7 @@ export function GuidePage({
                     </div>
                   ))}
                 </dl>
-                <p className="guide-example-result"><strong>Ergebnis:</strong> {resolvedExample.result}</p>
+                <p className="guide-example-result"><strong>Ergebnis</strong> {resolvedExample.result}</p>
                 {resolvedExample.note && <p className="guide-example-note">{resolvedExample.note}</p>}
               </section>
             )}

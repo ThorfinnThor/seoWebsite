@@ -29,6 +29,17 @@ type GuideLike = {
  */
 export function editorializeText(text: string) {
   return text
+    .replace(/Erst messen, dann vergleichen/gi, "Messen und vergleichen")
+    .replace(/Erst harte Kriterien, dann Vergleich/gi, "Harte Kriterien im Vergleich")
+    .replace(/erst notwendig, dann komfortabel/gi, "notwendig und komfortabel")
+    .replace(/Plane zuerst Werkbanktiefe, Bediengang und Werkzeugzugriff\./gi, "Werkbanktiefe, Bediengang und Werkzeugzugriff bestimmen den Arbeitsraum.")
+    .replace(/Berechne zuerst Reihen und Laufmeter, dann Zuschnitt und Verschnitt\./gi, "Reihen und Laufmeter ergeben den Mengenrahmen. Zuschnitt und Verschnitt kommen als eigene Prüfung hinzu.")
+    .replace(/Wenig Wasserdruck: erst messen, dann Zonen verkleinern/gi, "Wenig Wasserdruck. Zonen passend zum Anschluss planen")
+    .replace(/Plane zuerst ausreichend Dach- und Zuluftöffnungen, dann passende Öffner\./gi, "Ausreichende Dach- und Zuluftöffnungen schaffen die Grundlage für passende Öffner.")
+    .replace(/Öffnung zuerst festlegen/gi, "Öffnung sinnvoll einordnen")
+    .replace(/verteile verbleibende Sichtschutzfelder erst danach/gi, "verteile die verbleibenden Sichtschutzfelder auf die Reststrecke")
+    .replace(/teile erst danach durch den Paketinhalt; aufgerundet wird am Ende/gi, "berücksichtige den Paketinhalt und runde die Bestellmenge auf ganze Pakete")
+    .replace(/Lege Türsystem und Öffnungsmaß zuerst fest\. Ergänze/gi, "Türsystem und Öffnungsmaß geben den Rahmen vor. Ergänze")
     .replace(/\s+[–—]\s+/g, ", ")
     .replace(/\s+-\s+/g, ", ")
     .replace(/:\s+/g, ". ")

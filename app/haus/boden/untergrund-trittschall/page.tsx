@@ -16,7 +16,7 @@ export default function Page() {
     breadcrumbs={[{label:"Start",href:"/"},{label:"Haus",href:"/haus/"},{label:"Boden",href:"/haus/boden/"},{label:"Untergrund und Trittschall"}]}
     plannerHref="/haus/boden/bodenbelag-rechner/"
     plannerLabel="Materialmenge berechnen"
-    takeaway="Prüfe zuerst Untergrund und Herstelleranforderungen. Entscheide danach, ob eine separate Unterlage, Feuchteschutz oder ein bereits integrierter Aufbau zum konkreten Boden passt."
+    takeaway="Untergrund und Herstelleranforderungen geben die Grundlage. Danach lässt sich einordnen, ob separate Unterlage, Feuchteschutz oder ein integrierter Aufbau zum konkreten Boden passen."
     limitation="Der Rechner zählt Unterlagenrollen mit einer Flächenreserve. Er prüft weder Restfeuchte noch Ebenheit und wählt keine Trittschall-, Dampfbrems- oder Fußbodenheizungslösung aus."
     sections={[
       {title:"Der Untergrund muss verlegereif sein",paragraphs:["Ein Untergrund muss ausreichend fest, sauber, trocken und innerhalb der zulässigen Ebenheit liegen. Kleine weiche Unterlagen korrigieren keine größeren Unebenheiten und können Klickverbindungen zusätzlich belasten.","Messmethode, zulässige Werte und notwendige Vorbereitung hängen von Untergrund, Bodenprodukt und Herstellersystem ab. Alte Beläge dürfen nur bleiben, wenn der Aufbau ausdrücklich dafür freigegeben ist."]},

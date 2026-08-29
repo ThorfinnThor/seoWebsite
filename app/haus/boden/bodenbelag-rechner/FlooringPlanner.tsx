@@ -14,6 +14,7 @@ import { loadFlooringCatalog } from "@/lib/catalog/load-client-catalog";
 import { recommendFlooring } from "@/lib/flooring/recommend";
 import type { FlooringCatalog } from "@/lib/flooring/types";
 import { CatalogMatchList } from "@/components/product/CatalogMatchList";
+import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 
 const INITIAL: FlooringInput = {
   rooms: [{ id: "room-1", label: "Raum 1", lengthM: 5, widthM: 4 }],
@@ -126,7 +127,7 @@ export function FlooringPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Verlegung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Chargengleichheit, Sockelleistenprofile, Übergänge, Abschlussprofile und eine mögliche Paketreserve für spätere Reparaturen separat entscheiden.</li></ul></div>
       <PrintResultAction />
-      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bodenbeläge</h3><p>Die Auswahl berücksichtigt Bodenart und – wenn redaktionell bestätigt – Fußbodenheizung und Feuchtraumfreigabe.</p><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Bodenbeläge. Die LaminatDEPOT-Feeddaten sind erfasst; Paketinhalt und Maße werden vor Veröffentlichung geprüft." /></section>
+      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bodenbeläge</h3><p>Die Auswahl berücksichtigt Bodenart und – wenn redaktionell bestätigt – Fußbodenheizung und Feuchtraumfreigabe.</p><AffiliateDisclosure /><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Bodenbeläge. Die LaminatDEPOT-Feeddaten sind erfasst; Paketinhalt und Maße werden vor Veröffentlichung geprüft." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}
