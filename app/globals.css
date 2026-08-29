@@ -446,11 +446,13 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .topic-directory { background: var(--cream); }
 .directory-section { padding: 90px max(24px,calc((100vw - 1272px)/2)); }
 .directory-section > .section-heading { display: grid; max-width: none; margin-bottom: 42px; grid-template-columns: minmax(0,1fr) minmax(280px,.72fr); align-items: end; gap: 54px; }
-.directory-section > .section-heading h2 { margin: 8px 0 0; }
+.directory-section > .section-heading h2 { margin: 8px 0 0; font-size: clamp(1.9rem,3vw,3rem); }
 .directory-section > .section-heading > p { margin: 0; }
 .directory-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 18px; }
 .directory-card { display: flex; min-width: 0; padding: 30px; flex-direction: column; border: 1px solid var(--line); border-radius: var(--radius); background: #fff; }
-.directory-card h2, .directory-card h3 { margin: 10px 0 12px; overflow-wrap: anywhere; }
+.directory-card h2, .directory-card h3 { margin: 10px 0 12px; line-height: 1.16; overflow-wrap: normal; hyphens: none; }
+.directory-card h2 { font-size: clamp(1.6rem,2vw,2.15rem); letter-spacing: -.025em; }
+.directory-card h3 { font-size: 1.35rem; }
 .directory-card > p:not(.eyebrow) { color: var(--muted); }
 .directory-card .text-link { margin-top: auto; }
 .topic-card { position: relative; }

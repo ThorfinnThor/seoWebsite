@@ -1,6 +1,6 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
-import { editorializeGuide, editorialVariant } from "@/lib/editorial-style";
+import { editorializeGuide, editorialVariant, scopedStatement } from "@/lib/editorial-style";
 import { getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 
 type Scores = readonly [number, number, number, number, number];
@@ -83,8 +83,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "gartenhaus",
     noun: "Gartenhaus",
-    directoryTitle: "Gartenhaus-Materialien im direkten Vergleich",
-    directoryDescription: "100 konkrete Gartenhaus-Vergleiche für Nutzung, Standort und Pflege – mit nachvollziehbarer Entscheidungsmatrix statt pauschalem Materialsieger.",
+    directoryTitle: "Materialien für das passende Gartenhaus",
+    directoryDescription: "Die Vergleiche berücksichtigen Nutzung, Standort und Pflege. Holz, Metall, Kunststoff, WPC und Mauerwerk werden anhand derselben nachvollziehbaren Fragen eingeordnet.",
     measurement: "Miss Stellfläche, lichte Türbreite, benötigte Innenfläche und die größten einzulagernden Gegenstände. Dokumentiere Bodenfeuchte, Beschattung und Schlagregen am vorgesehenen Standort.",
     verification: "Vergleiche beim vollständigen Bausatz Innen- und Außenmaß, Wand- und Dachaufbau, Boden, Lüftung, Korrosions- oder Holzschutz, Verankerung, Lieferumfang und Montageanleitung.",
     limitation: "Materialvergleiche ersetzen weder Baurecht noch Fundament-, Statik- oder Standortprüfung. Maßgeblich bleiben Landesrecht, örtliche Vorgaben und die Unterlagen des konkreten Bausystems.",
@@ -113,8 +113,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "maehroboter",
     noun: "Mähroboter-Navigation",
-    directoryTitle: "Mähroboter-Systeme und Navigation vergleichen",
-    directoryDescription: "100 Mähroboter-Vergleiche nach Fläche, Empfang, Passagen und Zonen – Kabel, RTK, LiDAR, Kamera und Hybrid nachvollziehbar abwägen.",
+    directoryTitle: "Die passende Navigation für den Mähroboter",
+    directoryDescription: "Fläche, Empfang, Passagen und getrennte Zonen bestimmen die Auswahl. Kabel, RTK, LiDAR, Kamera und kombinierte Systeme werden passend zum Garten eingeordnet.",
     measurement: "Miss Netto-Rasenfläche, maximale Steigung und engste Passage. Zeichne hohe Bäume, Hauswände, getrennte Zonen, Kanten, Wasserflächen und den Platz der Ladestation ein.",
     verification: "Prüfe für das konkrete Modell Nennfläche, Navigation, Empfangsvoraussetzungen, Mindestpassage, Steigung, Randabstände, Zonenlogik, Sicherheitsfunktionen, Geräusch und Updateversorgung.",
     limitation: "Die Matrix ist keine Modell- oder Sicherheitsfreigabe. Empfang, Hinderniserkennung, Traktion und Firmwareverhalten müssen am konkreten Grundstück und nach Herstellerangaben geprüft werden.",
@@ -143,8 +143,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "terrasse",
     noun: "Terrassenbelag",
-    directoryTitle: "Terrassenbeläge für konkrete Nutzungen vergleichen",
-    directoryDescription: "100 Materialvergleiche für Terrasse, Sonne, Schatten, Familie und Pflege – Holz, Thermoholz, WPC und Stein mit klaren Prüfkriterien.",
+    directoryTitle: "Terrassenbeläge passend zur Nutzung auswählen",
+    directoryDescription: "Sonne, Schatten, Familienalltag und Pflege verändern die Materialwahl. Die Vergleiche ordnen Holz, Thermoholz, WPC und Stein für konkrete Situationen ein.",
     measurement: "Miss Nettofläche, Aufbauhöhe, Gefälle und jede Aussparung. Lege Verlegerichtung, erreichbare Lieferlängen, Entwässerung und den vollständigen Unterbau fest.",
     verification: "Prüfe Deck- beziehungsweise Formatmaß, Fugen, Auflager, Befestigung, Temperaturausdehnung, Rutschverhalten, Oberflächentemperatur, Pflege und Freigabe für den vorhandenen Untergrund.",
     limitation: "Die Entscheidungsmatrix ersetzt weder Untergrund-, Entwässerungs- noch statische Planung. Aufbau, Abstände und Befestigung müssen zum vollständigen Materialsystem passen.",
@@ -173,8 +173,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "bewaesserung",
     noun: "Bewässerungssystem",
-    directoryTitle: "Bewässerungssysteme für Rasen, Beet und Hecke vergleichen",
-    directoryDescription: "100 Bewässerungsvergleiche nach Pflanzenfläche, Durchfluss und Wartung – Tropfrohr, Perlschlauch, Sprüher und Regner ohne Scheingenauigkeit.",
+    directoryTitle: "Bewässerung für Rasen, Beet und Hecke planen",
+    directoryDescription: "Pflanzenfläche, verfügbarer Durchfluss und Wartung geben den Rahmen vor. Tropfrohr, Perlschlauch, Sprüher und Regner werden mit realen Anschlusswerten verglichen.",
     measurement: "Miss Durchfluss am späteren Anschluss und Fließdruck unter Entnahme. Erfasse Fläche, Leitungslänge, Höhenunterschied, Pflanzenzonen und den erlaubten Bewässerungszeitraum.",
     verification: "Prüfe zulässigen Druck, Abgabe je Verbraucher, Stranglänge, Filter, Druckminderer, Rückflussschutz, Überdeckung, Wartung und Winterentleerung für das konkrete System.",
     limitation: "Die Matrix ist keine hydraulische Auslegung und kein Pflanzen-Sollwert. Boden, Wetter, Wurzeltiefe, Trinkwasserschutz und lokale Regeln müssen gesondert berücksichtigt werden.",
@@ -203,8 +203,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "gewaechshaus",
     noun: "Gewächshaus-Eindeckung",
-    directoryTitle: "Gewächshaus-Materialien nach Kultur und Standort vergleichen",
-    directoryDescription: "100 Gewächshaus-Vergleiche für Licht, Wärme, Sicherheit und Pflege – Glas, Polycarbonat, Acrylglas und Folie kontextbezogen einordnen.",
+    directoryTitle: "Das Gewächshaus passend zu Kultur und Standort",
+    directoryDescription: "Licht, Wärme, Sicherheit und Pflege werden gemeinsam betrachtet. So lassen sich Glas, Polycarbonat, Acrylglas und Folie für den geplanten Anbau einordnen.",
     measurement: "Erfasse reales Innenmaß, Kulturhöhe, Tür, Dachlüftung, Beschattung, Windlage und Fundament. Dokumentiere, ob Kinder, Bälle oder herabfallende Äste die Eindeckung erreichen können.",
     verification: "Prüfe Lichtdurchlässigkeit, UV-Seite, Plattenstärke, Befestigung, Windsog, Schneelast, Bruchverhalten, Ersatzteilformat, Reinigung und Freigabe des vollständigen Rahmensystems.",
     limitation: "Die Materialmatrix ersetzt weder Statik, Sicherheitsglas-Auswahl, Fundament noch Kultur- und Lüftungsplanung. Maßgeblich sind Standort und vollständige Herstellerunterlagen.",
@@ -233,8 +233,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "sichtschutz",
     noun: "Sichtschutz",
-    directoryTitle: "Sichtschutz-Materialien für Wind, Pflege und Gartenstil vergleichen",
-    directoryDescription: "100 Sichtschutz-Vergleiche für Grundstück, Terrasse und Hang – Holz, WPC, Aluminium, HPL und Hecke mit sichtbaren Grenzen.",
+    directoryTitle: "Sichtschutz für Wind, Pflege und Gartenstil",
+    directoryDescription: "Grundstück, Terrasse und Hang stellen unterschiedliche Anforderungen. Holz, WPC, Aluminium, HPL und Hecken werden mit ihren praktischen Grenzen betrachtet.",
     measurement: "Miss die reale Flucht zwischen festen Endpunkten, Höhe, Gefälle, Ecken und Tor. Dokumentiere Windlage, Boden, Leitungen, Grenzverlauf und zugängliche Pflegeseiten.",
     verification: "Prüfe reale Montagebreite, Pfostenabstand, Windfreigabe, Fundament, Fugen, Ausdehnung, Korrosionsschutz, Torbeschläge, Ersatzteile und lokal zulässige Höhe.",
     limitation: "Die Matrix bemisst weder Windlast, Pfosten noch Fundamente und klärt keine Grundstücksgrenze. Nachbarrecht, Ortsrecht und Systemstatik bleiben gesondert zu prüfen.",
@@ -263,8 +263,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "carport",
     noun: "Carport-Konstruktion",
-    directoryTitle: "Carport-Konstruktionen nach Fahrzeug und Grundstück vergleichen",
-    directoryDescription: "100 Carport-Vergleiche für Einzel-, Doppel- und E-Auto-Stellplätze – Holz, Stahl, Aluminium, Anlehn- und Solarcarport nachvollziehbar prüfen.",
+    directoryTitle: "Carports passend zu Fahrzeug und Grundstück",
+    directoryDescription: "Fahrzeugmaße, Stellplatz und Grundstück entscheiden über die Konstruktion. Holz, Stahl, Aluminium, Anlehncarports und Solardächer werden im konkreten Einsatz geprüft.",
     measurement: "Miss Fahrzeug mit Spiegeln und Dachaufbauten, geöffnete Türen, Rangierlinie, lichte Höhe und Grundstücksbreite. Markiere Wand, Grenze, Leitungen und Wasserweg.",
     verification: "Prüfe lichte Maße, Pfostenposition, Dachaufbau, Entwässerung, Korrosions- oder Holzschutz, Wind- und Schneelast, Fundamente, Brandschutzabstände, PV-Lasten und Genehmigung.",
     limitation: "Die Matrix ersetzt keine Tragwerks-, Fundament-, Elektro-, Entwässerungs- oder Genehmigungsplanung. Standortbezogene Nachweise und das vollständige System sind verbindlich.",
@@ -293,8 +293,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "bodenbelag",
     noun: "Bodenbelag",
-    directoryTitle: "Bodenbeläge nach Raum und Untergrund vergleichen",
-    directoryDescription: "100 Bodenbelag-Vergleiche für Küche, Keller, Fußbodenheizung und Mietwohnung – Laminat, Vinyl, Parkett und Linoleum systematisch prüfen.",
+    directoryTitle: "Bodenbeläge passend zu Raum und Untergrund",
+    directoryDescription: "Küche, Keller, Fußbodenheizung und Mietwohnung verlangen unterschiedliche Eigenschaften. Laminat, Vinyl, Parkett und Linoleum werden anhand der Raumbedingungen eingeordnet.",
     measurement: "Miss Nettofläche und Raumgeometrie. Dokumentiere Ebenheit, Restfeuchte, vorhandenen Aufbau, Fußbodenheizung, Türhöhen, Übergänge und geplante Verlegerichtung.",
     verification: "Prüfe Nutzungsklasse, Feuchtefreigabe, Untergrund, Unterlage, Wärmedurchlasswiderstand, Verlegeart, Fugen, Emissionen, Pflege, Reparatur und Paketinhalt des konkreten Produkts.",
     limitation: "Die Matrix ist keine Verlegefreigabe. Restfeuchte, Ebenheit, Untergrundvorbereitung und vollständiger Systemaufbau müssen nach Hersteller- und Fachvorgaben geprüft werden.",
@@ -323,8 +323,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "trockenbau",
     noun: "Trockenbauplatte",
-    directoryTitle: "Trockenbauplatten nach Raumfunktion und Wandaufbau vergleichen",
-    directoryDescription: "100 Trockenbau-Vergleiche für Bad, Schallschutz, Lasten und Brandschutz – Plattentypen und Verstärkungen als vollständiges System einordnen.",
+    directoryTitle: "Trockenbau passend zu Raum und Wandaufbau",
+    directoryDescription: "Feuchte, Schallschutz, Lasten und Brandschutz betreffen immer den vollständigen Aufbau. Die Vergleiche ordnen Platten, Profile und Verstärkungen gemeinsam ein.",
     measurement: "Miss Wandlänge, Höhe und jede Öffnung. Dokumentiere Raumfeuchte, geplante Lasten, Installationen sowie Schall- oder Brandschutzanforderungen vor der Materialwahl.",
     verification: "Prüfe vollständigen Systemnachweis aus Profil, Raster, Plattentyp, Lagen, Dämmung, Schrauben, Fugen, Anschlüssen, Türständern, Lastbefestigung sowie Schall- und Brandschutz.",
     limitation: "Die Matrix ersetzt keine Systemfreigabe oder Fachplanung. Sicherheitsrelevante, tragende, Schall-, Feuchte- und Brandschutzanforderungen müssen vollständig nachgewiesen werden.",
@@ -353,8 +353,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "luftentfeuchter",
     noun: "Entfeuchtungslösung",
-    directoryTitle: "Luftentfeuchter-Techniken nach Raum und Temperatur vergleichen",
-    directoryDescription: "100 Luftentfeuchter-Vergleiche für Keller, Bad, Wäsche und Baustelle – Kompressor, Adsorption, Peltier und Lüftung realistisch einordnen.",
+    directoryTitle: "Luftentfeuchtung passend zu Raum und Temperatur",
+    directoryDescription: "Keller, Bad, Wäschetrocknung und Baustelle erzeugen verschiedene Feuchtelasten. Kompressor, Adsorption, Peltier und Lüftung werden realistisch eingeordnet.",
     measurement: "Berechne verbundenes Raumvolumen und protokolliere Temperatur sowie relative Feuchte über mehrere Tage. Notiere Nutzung, Außenklima, Wasseranfall und erkennbare Feuchteursachen.",
     verification: "Prüfe Leistung bei vergleichbarer Temperatur und Feuchte, Einsatztemperatur, Hygrostat, Leistungsaufnahme, Geräusch, Kondensatablauf, Abtauung, Filter und sicheren Aufstellort.",
     limitation: "Ein Gerät oder Lüftungskonzept beseitigt keine Leckage, Wärmebrücke oder andere bauliche Ursache. Anhaltende Feuchte und Schimmel benötigen fachliche Ursachenklärung.",
@@ -418,130 +418,190 @@ function makeDecisionGuide(
   const loser = scoreA > scoreB ? second : first;
   const isClose = difference < 0.25;
   const verdict = isClose
-    ? `${first.label} und ${second.label} liegen in diesem Planungsmodell nah beieinander. Die Entscheidung fällt deshalb über die am Standort verifizierten Muss-Kriterien, nicht über den Gesamtwert allein.`
-    : `Im beschriebenen Kontext liegt der höhere Planungswert bei ${winner.label}. Die andere Variante bleibt sinnvoll, wenn ihre besondere Stärke für dein Projekt ein Muss-Kriterium ist.`;
+    ? `${first.label} und ${second.label} liegen im Einsatz „${usage.label}“ rechnerisch nah beieinander. Die am Standort geprüften Muss-Kriterien entscheiden deshalb über diese konkrete Paarung.`
+    : `Im Einsatz „${usage.label}“ erreicht ${winner.label} den höheren Planungswert. ${loser.label} bleibt gegenüber ${winner.label} sinnvoll, wenn seine besondere Stärke im eigenen Projekt unverzichtbar ist.`;
+  const faqVerdict = isClose
+    ? `Zwischen ${first.label} und ${second.label} beträgt der Abstand im Einsatz „${usage.label}“ weniger als 0,25 Punkte. Eine Standortbedingung kann daher den Ausschlag geben.`
+    : `${winner.label} liegt im Einsatz „${usage.label}“ um ${deScore(difference)} Punkte vor ${loser.label}. Der Abstand zwischen ${winner.label} und ${loser.label} gilt nur für die dokumentierten Gewichte und Messbedingungen dieser Paarung.`;
+  const takeawayVerdict = isClose
+    ? `Für den Einsatz „${usage.label}“ liefert die Matrix keinen belastbaren Alleinsieger zwischen ${first.label} und ${second.label}.`
+    : `Für den Einsatz „${usage.label}“ spricht die Gewichtung zunächst für ${winner.label} statt ${loser.label}.`;
+  const exampleVerdict = isClose
+    ? `${first.label} erreicht ${deScore(scoreA)} von 5 und ${second.label} ${deScore(scoreB)} von 5. Der geringe Abstand im Einsatz „${usage.label}“ verlangt eine Prüfung der Muss-Kriterien.`
+    : `${winner.label} erreicht im Einsatz „${usage.label}“ den höheren Wert. Der Abstand zu ${loser.label} beträgt ${deScore(difference)} Punkte und bleibt an die sichtbaren Annahmen gebunden.`;
+  const scopedVerification = scopedStatement(cluster.verification, `Dieser Prüfumfang gilt für ${pairLabel} im Einsatz „${usage.label}“`);
+  const scopedLimitation = scopedStatement(cluster.limitation, `Diese fachliche Grenze gilt für ${pairLabel} im Einsatz „${usage.label}“`);
   const path = `/ratgeber/vergleiche/${cluster.topicSlug}/${slug}/`;
   const title = `${pairLabel}: ${cluster.noun} ${usage.searchLabel}`;
   const voice = editorialVariant(slug, 3);
   const variedSections = voice === 0
     ? [
-        { title: `${pairLabel} im beschriebenen Einsatz`, paragraphs: [`${usage.situation} ${usage.priority}`, `${cluster.measurement} ${usage.risk}`] },
-        { title: `Was für ${first.label} spricht`, paragraphs: [`${first.summary} ${first.strengths}`, `${first.limits} Für diesen Kontext zählen besonders ${first.evidence.join(", ")}.`] },
-        { title: `Was für ${second.label} spricht`, paragraphs: [`${second.summary} ${second.strengths}`, `${second.limits} Bei der Prüfung helfen ${second.evidence.join(", ")}.`] },
-        { title: "Das Ergebnis richtig lesen", paragraphs: [`Die gewichteten Orientierungswerte liegen bei ${deScore(scoreA)} von 5 für ${first.label} und ${deScore(scoreB)} von 5 für ${second.label}. ${verdict}`, `Die Punktzahl ersetzt kein Muss-Kriterium. ${cluster.verification} ${cluster.limitation}`] },
+        { title: `${pairLabel} bei ${usage.label}`, paragraphs: [`${usage.situation} ${usage.priority}`, `${cluster.measurement} ${usage.risk}`] },
+        { title: `Was für ${first.label} bei ${usage.label} spricht`, paragraphs: [`${first.summary} ${first.strengths}`, `${first.limits} Für diesen Kontext zählen besonders ${first.evidence.join(", ")}.`] },
+        { title: `Was für ${second.label} bei ${usage.label} spricht`, paragraphs: [`${second.summary} ${second.strengths}`, `${second.limits} Bei der Prüfung helfen ${second.evidence.join(", ")}.`] },
+        { title: `Das Ergebnis für ${usage.label}`, paragraphs: [`Die gewichteten Orientierungswerte liegen bei ${deScore(scoreA)} von 5 für ${first.label} und ${deScore(scoreB)} von 5 für ${second.label}. ${verdict}`, `Bei ${pairLabel} ersetzt die Punktzahl im Einsatz „${usage.label}“ kein Muss-Kriterium. ${scopedVerification} ${scopedLimitation}`] },
       ]
     : voice === 1
       ? [
-          { title: "Die Entscheidung hängt am Einsatzort", paragraphs: [`${usage.situation} ${usage.priority}`, `${cluster.measurement} Eine fehlende Angabe bleibt offen. ${usage.risk}`] },
-          { title: `${first.label} im beschriebenen Einsatz`, paragraphs: [`${first.summary} ${first.strengths}`, `Prüfe ${first.evidence.join(", ")}. ${first.limits}`] },
-          { title: `${second.label} im beschriebenen Einsatz`, paragraphs: [`${second.summary} ${second.strengths}`, `Prüfe ${second.evidence.join(", ")}. ${second.limits}`] },
-          { title: "Kosten, Wartung und spätere Änderungen", paragraphs: [`Für ${pairLabel} gehören Anschaffung, Systemteile, Lieferung, Montage, Pflege und Ersatzteile in dieselbe Betrachtung.`, `${cluster.verification} Eine Lösung mit höherer Punktzahl scheidet aus, wenn sie eine harte Grenze nicht erfüllt.`] },
+          { title: `Der Einsatzort bei ${usage.label}`, paragraphs: [`${usage.situation} ${usage.priority}`, `${cluster.measurement} Eine fehlende Angabe zu ${pairLabel} bleibt offen. ${usage.risk}`] },
+          { title: `${first.label} im Einsatz bei ${usage.label}`, paragraphs: [`${first.summary} ${first.strengths}`, `Prüfe ${first.evidence.join(", ")}. ${first.limits}`] },
+          { title: `${second.label} im Einsatz bei ${usage.label}`, paragraphs: [`${second.summary} ${second.strengths}`, `Prüfe ${second.evidence.join(", ")}. ${second.limits}`] },
+          { title: `Kosten und Wartung bei ${pairLabel}`, paragraphs: [`Für ${pairLabel} gehören Anschaffung, Systemteile, Lieferung, Montage, Pflege und Ersatzteile in dieselbe Betrachtung.`, `${scopedVerification} Eine Option aus ${pairLabel} scheidet trotz höherer Punktzahl aus, wenn sie eine harte Grenze nicht erfüllt.`] },
         ]
       : [
-          { title: `Dein Kontext bei ${pairLabel}`, paragraphs: [`${usage.situation} ${usage.priority}`, `${cluster.measurement} ${usage.risk}`] },
-          { title: "Die Eigenschaften von Option eins", paragraphs: [`${first.summary} ${first.strengths} ${first.limits}`, `Die Unterlagen sollten klare Angaben zu folgenden Punkten enthalten. ${first.evidence.join(", ")}.`] },
-          { title: "Die Eigenschaften von Option zwei", paragraphs: [`${second.summary} ${second.strengths} ${second.limits}`, `Die Unterlagen sollten klare Angaben zu folgenden Punkten enthalten. ${second.evidence.join(", ")}.`] },
-          { title: "Ein Ergebnis mit klarer Grenze", paragraphs: [`${verdict} Die Matrix kommt auf ${deScore(scoreA)} von 5 für ${first.label} und ${deScore(scoreB)} von 5 für ${second.label}.`, `${cluster.verification} ${cluster.limitation}`] },
+          { title: `${pairLabel} im Kontext ${usage.label}`, paragraphs: [`${usage.situation} ${usage.priority}`, `${cluster.measurement} ${usage.risk}`] },
+          { title: `${first.label} bei ${usage.label}`, paragraphs: [`${first.summary} ${first.strengths} ${first.limits}`, `Die Unterlagen zu ${first.label} sollten im Vergleich mit ${second.label} klare Angaben zu folgenden Punkten enthalten. ${first.evidence.join(", ")}.`] },
+          { title: `${second.label} bei ${usage.label}`, paragraphs: [`${second.summary} ${second.strengths} ${second.limits}`, `Die Unterlagen zu ${second.label} sollten im Vergleich mit ${first.label} klare Angaben zu folgenden Punkten enthalten. ${second.evidence.join(", ")}.`] },
+          { title: `Die Grenze des Ergebnisses bei ${usage.label}`, paragraphs: [`${verdict} Die Matrix kommt auf ${deScore(scoreA)} von 5 für ${first.label} und ${deScore(scoreB)} von 5 für ${second.label}.`, `${scopedVerification} ${scopedLimitation}`] },
         ];
   const variedFaqs = voice === 0
     ? [
-        { question: `Was passt besser für ${usage.label}?`, answer: `${verdict} Harte Grenzen aus Maß, Standort und Freigabe gehen vor der Punktzahl.` },
+        { question: `Welche Option passt beim Vergleich ${pairLabel} zum Einsatz „${usage.label}“?`, answer: `${faqVerdict} Bei ${pairLabel} gehen harte Grenzen aus Maß, Standort und Freigabe vor der Punktzahl.` },
         { question: `Warum liegt ${winner.label} vorn?`, answer: `${usage.priority} Die Werte ${deScore(scoreA)} und ${deScore(scoreB)} beschreiben nur die fünf Kriterien für diesen Kontext.` },
-        { question: "Was muss ich noch prüfen?", answer: `${cluster.verification} ${usage.risk}` },
+        { question: `Was muss ich bei ${pairLabel} noch prüfen?`, answer: `${scopedVerification} ${usage.risk}` },
       ]
     : voice === 1
       ? [
-          { question: "Wie entsteht der Orientierungswert?", answer: `Fünf Kriterien werden mit den Gewichten dieses Einsatzes verrechnet. ${verdict}` },
-          { question: "Kann ein Muss-Kriterium die Punktzahl überstimmen?", answer: `Ja. Wenn nur eine Option Maß, Einsatzbedingung oder Freigabe erfüllt, scheidet die andere aus. ${cluster.limitation}` },
-          { question: "Wie vergleiche ich die Kosten?", answer: `Nimm für beide Varianten Hauptmaterial, Systemteile, Lieferung, Montage, Pflege und Ersatzteile auf. Unbekannte Positionen bleiben offen.` },
+          { question: `Wie entsteht der Orientierungswert für ${pairLabel}?`, answer: `Fünf Kriterien werden mit den Gewichten des Einsatzes „${usage.label}“ verrechnet. ${faqVerdict}` },
+          { question: `Kann ein Muss-Kriterium bei ${pairLabel} die Punktzahl überstimmen?`, answer: `Ja. Wenn bei ${pairLabel} nur eine Option Maß, Einsatzbedingung oder Freigabe erfüllt, scheidet die andere aus. ${scopedLimitation}` },
+          { question: `Wie vergleiche ich die Kosten von ${first.label} und ${second.label}?`, answer: `Nimm für ${first.label} und ${second.label} Hauptmaterial, Systemteile, Lieferung, Montage, Pflege und Ersatzteile auf. Unbekannte Positionen bei ${pairLabel} bleiben offen.` },
         ]
       : [
-          { question: `Welche Messung entscheidet bei ${usage.label}?`, answer: `${cluster.measurement} ${usage.risk}` },
+          { question: `Welche Messung entscheidet im Einsatz „${usage.label}“?`, answer: `${cluster.measurement} ${usage.risk}` },
           { question: `Wann ist ${first.label} sinnvoll?`, answer: `${first.strengths} ${first.limits}` },
           { question: `Wann ist ${second.label} sinnvoll?`, answer: `${second.strengths} ${second.limits}` },
-          { question: "Was bleibt nach dem Vergleich offen?", answer: `${cluster.verification} ${cluster.limitation}` },
+          { question: `Was bleibt nach dem Vergleich ${pairLabel} offen?`, answer: `${scopedVerification} ${scopedLimitation}` },
         ];
   const additionalSections = voice === 0
     ? [
-        { title: "Kosten und Lieferumfang", paragraphs: [`Anschaffung, Zubehör, Lieferung, Montage, Pflege und Ersatzteile gehören für ${first.label} und ${second.label} in dieselbe Rechnung. Ein Preis ist ohne den tatsächlichen Lieferumfang kaum einzuordnen.`, `Preise und Verfügbarkeit ändern sich. Halte für ${usage.label} Quelle und Datum fest und behandle fehlende Angaben als offen.`] },
-        { title: "Der Punkt mit dem kleinsten Spielraum", paragraphs: [`Bei ${pairLabel} prüfst du die engste Passage, die feuchteste Zone, die höchste Last, den ungünstigsten Empfang oder die niedrigste Temperatur. Der Durchschnitt beschreibt selten die Stelle, an der eine Auswahl scheitert.`, `${usage.risk} Wenn eine Option dort ausscheidet, darf die Gesamtpunktzahl das nicht verdecken.`] },
-        { title: "Spätere Änderungen mitdenken", paragraphs: [`Garten, Nutzung, Software, Ersatzteile und Preise bleiben nicht immer gleich. Vergleiche deshalb auch, wie sich ${first.label} und ${second.label} an neue Bedingungen anpassen lassen.`, `Dokumentiere die Entscheidung für ${usage.label} so, dass eine spätere Änderung nicht mit einer alten Annahme verwechselt wird.`] },
-        { title: "Die Unterlagen zum Abschluss", paragraphs: [`Übertrage die fünf Kriterien auf die technischen Angaben des konkreten Angebots. ${cluster.verification}`, `Der höhere Orientierungswert bleibt ein Hinweis für ${usage.label}. ${cluster.limitation}`] },
+        { title: `Kosten und Lieferumfang bei ${pairLabel}`, paragraphs: [`Anschaffung, Zubehör, Lieferung, Montage, Pflege und Ersatzteile gehören für ${first.label} und ${second.label} in dieselbe Rechnung. Ein Preis für ${pairLabel} ist ohne den tatsächlichen Lieferumfang kaum einzuordnen.`, `Preise und Verfügbarkeit von ${first.label} und ${second.label} ändern sich. Halte für den Einsatz „${usage.label}“ Quelle und Datum fest und behandle fehlende Angaben als offen.`] },
+        { title: `Wo ${usage.label} wenig Spielraum lässt`, paragraphs: [`Bei ${pairLabel} prüfst du die engste Passage, die feuchteste Zone, die höchste Last, den ungünstigsten Empfang oder die niedrigste Temperatur. Im Einsatz „${usage.label}“ beschreibt der Durchschnitt selten die Stelle, an der eine Auswahl scheitert.`, `${usage.risk} Scheidet ${first.label} oder ${second.label} dort aus, darf die Gesamtpunktzahl das nicht verdecken.`] },
+        { title: `Wie sich ${usage.label} später verändern kann`, paragraphs: [`Für ${pairLabel} können sich Nutzung, Ersatzteile, Preise oder technische Rahmenbedingungen verändern. Vergleiche deshalb auch, wie sich ${first.label} und ${second.label} an neue Bedingungen anpassen lassen.`, `Dokumentiere die Entscheidung für den Einsatz „${usage.label}“ so, dass eine spätere Änderung nicht mit einer alten Annahme verwechselt wird.`] },
+        { title: `Die Unterlagen für ${pairLabel}`, paragraphs: [`Übertrage die fünf Kriterien für ${pairLabel} auf die technischen Angaben des konkreten Angebots. ${scopedVerification}`, `Der höhere Orientierungswert bleibt ein Hinweis für den Einsatz „${usage.label}“. ${scopedLimitation}`] },
       ]
     : voice === 1
       ? [
-          { title: "Was im Angebot enthalten sein muss", paragraphs: [`Vergleiche ${first.label} und ${second.label} mit demselben Blick auf Zubehör, Lieferung, Montage, Pflege und Ersatzteile. Erst der vollständige Umfang zeigt, welche Variante im Projekt wirklich günstiger oder einfacher ist.`, `Notiere für ${pairLabel} Quelle und Datum der Angaben. Unklare Positionen bleiben offen, bis der Händler oder Hersteller sie bestätigt.`] },
-          { title: "Die Entscheidung am Grenzfall", paragraphs: [`Bei ${pairLabel} hilft der Durchschnitt beim Einstieg. Entscheidend bleibt jedoch die engste Passage, die feuchteste Zone, die höchste Last oder die niedrigste Temperatur deines Projekts.`, `${usage.risk} Eine harte Grenze wiegt schwerer als ein kleiner Vorsprung in der Punktzahl.`] },
-          { title: "Pflege und Ersatz im Alltag", paragraphs: [`Eine Lösung muss auch nach der Montage erreichbar und wartbar bleiben. Prüfe, ob Teile, Software oder Betriebsweisen bei ${first.label} und ${second.label} später angepasst werden können.`, `Halte für ${usage.label} fest, welche Annahmen nur für den heutigen Zustand gelten.`] },
-          { title: "Was vor der Auswahl noch fehlt", paragraphs: [`Gleiche die fünf Kriterien mit den Unterlagen des konkreten Angebots ab. ${cluster.verification}`, `Der Orientierungswert ersetzt keine Standortprüfung und keine Herstellerfreigabe. ${cluster.limitation}`] },
+          { title: `Der vollständige Umfang bei ${pairLabel}`, paragraphs: [`Vergleiche ${first.label} und ${second.label} mit demselben Blick auf Zubehör, Lieferung, Montage, Pflege und Ersatzteile. Der vollständige Umfang von ${pairLabel} zeigt, welche Variante im Projekt wirklich günstiger oder einfacher ist.`, `Notiere für ${pairLabel} Quelle und Datum der Angaben. Unklare Positionen bei ${first.label} oder ${second.label} bleiben offen, bis der Händler oder Hersteller sie bestätigt.`] },
+          { title: `Der Grenzfall bei ${usage.label}`, paragraphs: [`Bei ${pairLabel} hilft der Durchschnitt beim Einstieg. Im Einsatz „${usage.label}“ entscheidet jedoch die engste Passage, feuchteste Zone, höchste Last oder niedrigste Temperatur.`, `${usage.risk} Bei ${pairLabel} wiegt eine harte Grenze schwerer als ein kleiner Punktvorsprung.`] },
+          { title: `Pflege und Ersatz bei ${pairLabel}`, paragraphs: [`${first.label} und ${second.label} müssen auch nach der Montage erreichbar und wartbar bleiben. Prüfe, ob Teile, Software oder Betriebsweisen von ${first.label} und ${second.label} später angepasst werden können.`, `Halte für den Einsatz „${usage.label}“ fest, welche Annahmen nur für den heutigen Zustand gelten.`] },
+          { title: `Offene Fragen bei ${pairLabel}`, paragraphs: [`Gleiche die fünf Kriterien von ${pairLabel} mit den Unterlagen des konkreten Angebots ab. ${scopedVerification}`, `Der Orientierungswert für ${pairLabel} ersetzt keine Standortprüfung oder Herstellerfreigabe. ${scopedLimitation}`] },
         ]
       : [
-          { title: "Das gesamte Kostenbild", paragraphs: [`Bei ${first.label} und ${second.label} zählen nicht nur die Anschaffungskosten. Zubehör, Lieferung, Montage, Pflege und Ersatzteile können den Vergleich deutlich verändern.`, `Preise sind Momentaufnahmen. Speichere deshalb Quelle und Datum für ${pairLabel} zusammen mit deiner Entscheidung.`] },
-          { title: "Die schwierigste Stelle im Projekt", paragraphs: [`Bei ${pairLabel} beginnt die Prüfung am Abschnitt mit dem kleinsten Spielraum. Das kann eine enge Passage, eine feuchte Zone, eine hohe Last oder eine niedrige Temperatur sein.`, `${usage.risk} Ein solcher Punkt kann die Gesamtwertung überstimmen.`] },
-          { title: "Wenn sich die Nutzung verändert", paragraphs: [`Garten, Nutzung, Software, Ersatzteile und Preise entwickeln sich weiter. Ein guter Vergleich zeigt deshalb auch, wie viel Anpassung ${first.label} und ${second.label} später erlauben.`, `Schreibe für ${usage.label} den damaligen Ausgangspunkt auf, damit du eine spätere Änderung sauber bewerten kannst.`] },
-          { title: "Der letzte Abgleich", paragraphs: [`Prüfe die fünf Kriterien mit den technischen Unterlagen des konkreten Angebots. ${cluster.verification}`, `Die Punktzahl liefert eine Richtung für ${usage.label}. Maß, Sicherheit und Herstellergrenzen bleiben entscheidend. ${cluster.limitation}`] },
+          { title: `Das Kostenbild für ${pairLabel}`, paragraphs: [`Bei ${first.label} und ${second.label} zählen nicht nur die Anschaffungskosten. Zubehör, Lieferung, Montage, Pflege und Ersatzteile können den Vergleich ${pairLabel} deutlich verändern.`, `Die Preise für ${pairLabel} sind Momentaufnahmen. Speichere Quelle und Datum für ${first.label} und ${second.label} zusammen mit deiner Entscheidung.`] },
+          { title: `Die schwierigste Stelle bei ${usage.label}`, paragraphs: [`Bei ${pairLabel} beginnt die Prüfung am Abschnitt mit dem kleinsten Spielraum. Im Einsatz „${usage.label}“ kann das eine enge Passage, feuchte Zone, hohe Last oder niedrige Temperatur sein.`, `${usage.risk} Bei ${pairLabel} kann ein solcher Punkt die Gesamtwertung überstimmen.`] },
+          { title: `Veränderungen bei ${usage.label}`, paragraphs: [`Bei ${pairLabel} können sich Nutzung, Ersatzteile, Preise oder technische Rahmenbedingungen verändern. Ein guter Vergleich zeigt deshalb auch, wie viel Anpassung ${first.label} und ${second.label} später erlauben.`, `Schreibe für den Einsatz „${usage.label}“ den damaligen Ausgangspunkt auf, damit du eine spätere Änderung sauber bewerten kannst.`] },
+          { title: `Der Abgleich für ${pairLabel}`, paragraphs: [`Prüfe die fünf Kriterien von ${pairLabel} mit den technischen Unterlagen des konkreten Angebots. ${scopedVerification}`, `Die Punktzahl liefert eine Richtung für den Einsatz „${usage.label}“. Bei ${pairLabel} bleiben Maß, Sicherheit und Herstellergrenzen entscheidend. ${scopedLimitation}`] },
         ];
-  const finalSections = [...variedSections, ...additionalSections];
+  const sectionTitles = voice === 0
+    ? [
+        `${pairLabel} im Einsatz „${usage.label}“`,
+        `${first.label} gegenüber ${second.label} im Einsatz „${usage.label}“`,
+        `${second.label} gegenüber ${first.label} im Einsatz „${usage.label}“`,
+        `Das Ergebnis für ${pairLabel} im Einsatz „${usage.label}“`,
+        `Kosten und Lieferumfang für ${pairLabel} im Einsatz „${usage.label}“`,
+        `Die engste Grenze für ${pairLabel} im Einsatz „${usage.label}“`,
+        `Spätere Änderungen bei ${pairLabel} im Einsatz „${usage.label}“`,
+        `Die nötigen Unterlagen für ${pairLabel} im Einsatz „${usage.label}“`,
+      ]
+    : voice === 1
+      ? [
+          `Der Einsatz „${usage.label}“ bei ${pairLabel}`,
+          `Was ${first.label} gegenüber ${second.label} im Einsatz „${usage.label}“ leistet`,
+          `Was ${second.label} gegenüber ${first.label} im Einsatz „${usage.label}“ leistet`,
+          `Kosten und Wartung für ${pairLabel} im Einsatz „${usage.label}“`,
+          `Der vollständige Umfang für ${pairLabel} im Einsatz „${usage.label}“`,
+          `Der Grenzfall für ${pairLabel} im Einsatz „${usage.label}“`,
+          `Pflege und Ersatz bei ${pairLabel} im Einsatz „${usage.label}“`,
+          `Offene Fragen zu ${pairLabel} im Einsatz „${usage.label}“`,
+        ]
+      : [
+          `${pairLabel} im Kontext „${usage.label}“`,
+          `${first.label} im Vergleich mit ${second.label} im Einsatz „${usage.label}“`,
+          `${second.label} im Vergleich mit ${first.label} im Einsatz „${usage.label}“`,
+          `Die Grenze des Ergebnisses für ${pairLabel} im Einsatz „${usage.label}“`,
+          `Das Kostenbild für ${pairLabel} im Einsatz „${usage.label}“`,
+          `Die schwierigste Stelle für ${pairLabel} im Einsatz „${usage.label}“`,
+          `Veränderungen bei ${pairLabel} im Einsatz „${usage.label}“`,
+          `Der Abgleich für ${pairLabel} im Einsatz „${usage.label}“`,
+        ];
+  const finalSections = [...variedSections, ...additionalSections].map((section, index) => ({
+    ...section,
+    title: sectionTitles[index],
+    paragraphs: (() => {
+      let paragraph = section.paragraphs.join(" ");
+      const namesBothOptions = paragraph.includes(pairLabel)
+        || (paragraph.includes(first.label) && paragraph.includes(second.label));
+      const namesUsage = paragraph.includes(usage.label);
+      if (!namesBothOptions && !namesUsage) {
+        paragraph += ` Maßstab für ${first.label} und ${second.label} ist dabei die Nutzung „${usage.label}“.`;
+      } else if (!namesBothOptions) {
+        paragraph += ` Gegenübergestellt werden ${first.label} und ${second.label}.`;
+      } else if (!namesUsage) {
+        paragraph += ` Maßstab bleibt die Nutzung „${usage.label}“.`;
+      }
+      return [paragraph];
+    })(),
+  }));
   const finalFaqs = variedFaqs.length >= 5
     ? variedFaqs
     : [...variedFaqs,
-        { question: "Wie halte ich die Auswahl fest?", answer: `Notiere Kontext, Messwerte, Gewichte, Quellen und offene Punkte mit Datum. ${cluster.verification}` },
-        { question: "Was darf die Punktzahl nicht ersetzen?", answer: `Maß, Sicherheit, Standort und Herstellerfreigabe bleiben Muss-Kriterien. ${cluster.limitation}` },
+        { question: `Wie halte ich die Auswahl zwischen ${first.label} und ${second.label} fest?`, answer: `Notiere für den Einsatz „${usage.label}“ Messwerte, Gewichte, Quellen und offene Punkte mit Datum. ${scopedVerification}` },
+        { question: `Was darf die Punktzahl bei ${pairLabel} nicht ersetzen?`, answer: `Für den Einsatz „${usage.label}“ bleiben Maß, Sicherheit, Standort und Herstellerfreigabe verbindliche Muss-Kriterien. ${scopedLimitation}` },
       ];
   const contextualFaqs = finalFaqs.map((faq) => ({
     ...faq,
     answer: `${faq.answer} Für den Vergleich ${pairLabel} im Einsatz „${usage.label}“ bleibt diese Aussage an die genannten Bedingungen gebunden.`,
   }));
   const decisionIntro = voice === 0
-    ? `Bei ${pairLabel} im Kontext „${usage.label}“ zählen die Bedingungen am Einsatzort. Diese Seite legt die fünf Kriterien offen und zeigt, wie sich ihre Gewichtung auf die vorläufige Entscheidung auswirkt.`
+    ? `Bei ${pairLabel} im Kontext „${usage.label}“ zählen die Bedingungen am Einsatzort. Der Vergleich von ${first.label} und ${second.label} legt fünf Kriterien offen und zeigt, wie ihre Gewichtung die vorläufige Entscheidung verändert.`
     : voice === 1
-      ? `${pairLabel} werden hier im Kontext „${usage.label}“ verglichen. Neben dem Orientierungswert siehst du die Messpunkte, die technischen Grenzen und die Angaben, die im konkreten Angebot noch fehlen können.`
-      : `Ob ${first.label} oder ${second.label} besser passt, hängt an ${usage.label}. Der Vergleich verbindet Situation, Gewichtung und Gegenprobe, damit aus einer allgemeinen Präferenz eine prüfbare Entscheidung wird.`;
+      ? `${pairLabel} werden hier im Kontext „${usage.label}“ verglichen. Neben dem Orientierungswert für ${first.label} und ${second.label} siehst du die Messpunkte, technischen Grenzen und noch offenen Angebotsangaben.`
+      : `Ob ${first.label} oder ${second.label} besser passt, hängt vom Einsatz „${usage.label}“ ab. Der Vergleich ${pairLabel} verbindet Situation, Gewichtung und Gegenprobe zu einer prüfbaren Entscheidung.`;
   const decisionTakeaway = voice === 0
-    ? `${verdict} Die Werte ${deScore(scoreA)} und ${deScore(scoreB)} helfen bei der Einordnung, ersetzen aber keine Prüfung von Maß, Standort und Herstellerangaben.`
+    ? `${takeawayVerdict} Die Werte ${deScore(scoreA)} und ${deScore(scoreB)} helfen bei der Einordnung, ersetzen aber keine Prüfung von Maß, Standort und Herstellerangaben.`
     : voice === 1
-      ? `${verdict} Behandle die Punktzahl als Orientierung. Eine harte technische Grenze kann das Ergebnis unabhängig vom Abstand zwischen den Optionen entscheiden.`
-      : `Für ${usage.label} ergibt die Matrix ${deScore(scoreA)} von 5 für ${first.label} und ${deScore(scoreB)} von 5 für ${second.label}. Die bessere Wahl muss zusätzlich am echten Projekt belegt werden.`;
+      ? `${takeawayVerdict} Behandle die Punktzahl von ${pairLabel} als Orientierung. Im Einsatz „${usage.label}“ kann eine harte technische Grenze unabhängig vom Abstand entscheiden.`
+      : `Im Einsatz „${usage.label}“ ergibt die Matrix ${deScore(scoreA)} von 5 für ${first.label} und ${deScore(scoreB)} von 5 für ${second.label}. Die bessere Wahl zwischen ${first.label} und ${second.label} muss am echten Projekt belegt werden.`;
   const decisionChecklist = voice === 0
     ? [
-        `Einsatz und Priorität festhalten: ${usage.situation}`,
+        `Einsatz und Priorität für ${pairLabel} festhalten: ${usage.situation}`,
         cluster.measurement,
-        `Gewichte und Muss-Kriterien auf das eigene Projekt übertragen: ${usage.weights.join(" / ")} Prozent.`,
+        `Gewichte und Muss-Kriterien für ${pairLabel} auf das eigene Projekt übertragen: ${usage.weights.join(" / ")} Prozent.`,
         `${first.label} mit technischen Unterlagen prüfen.`,
         `${second.label} mit denselben Datenfeldern und demselben Lieferumfang prüfen.`,
-        `Die kritischste Bedingung kontrollieren: ${usage.risk}`,
+        `Die kritischste Bedingung für ${pairLabel} kontrollieren: ${usage.risk}`,
         `Anschaffung, Montage, Pflege und Ersatzteile für ${first.label} und ${second.label} gemeinsam kalkulieren.`,
-        cluster.verification,
-        `Entscheidung und Datenstand für ${usage.label} mit Datum dokumentieren.`,
+        scopedVerification,
+        `Entscheidung und Datenstand zum Einsatz „${usage.label}“ mit Datum dokumentieren.`,
       ]
     : voice === 1
       ? [
-          `Kontext und Standort beschreiben: ${usage.situation}`,
-          `Messbedingungen und offene Angaben notieren. ${cluster.measurement}`,
-          `Die Gewichtung mit den eigenen Prioritäten vergleichen: ${usage.weights.join(" / ")} Prozent.`,
+          `Kontext und Standort für ${pairLabel} beschreiben: ${usage.situation}`,
+          `Messbedingungen und offene Angaben für ${pairLabel} notieren. ${cluster.measurement}`,
+          `Die Gewichtung von ${pairLabel} mit den eigenen Prioritäten vergleichen: ${usage.weights.join(" / ")} Prozent.`,
           `${first.label} und ${second.label} anhand derselben Unterlagen bewerten.`,
           `Lieferumfang, Montageweg und spätere Pflege bei ${pairLabel} getrennt betrachten.`,
-          `Grenzfall im Projekt kontrollieren: ${usage.risk}`,
-          cluster.verification,
+          `Grenzfall für ${pairLabel} im Projekt kontrollieren: ${usage.risk}`,
+          scopedVerification,
           `Offene Punkte und Quelle des Vergleichs für ${pairLabel} mit Datum sichern.`,
-          `Ergebnis und Gegenprobe für ${usage.label} getrennt festhalten.`,
+          `Ergebnis und Gegenprobe zum Einsatz „${usage.label}“ getrennt festhalten.`,
         ]
       : [
-          `Die Nutzungssituation in eigenen Worten festhalten: ${usage.situation}`,
-          `Relevante Messung mit Einheit und Datum ergänzen. ${cluster.measurement}`,
-          `Die fünf Gewichte auf die eigene Entscheidung anwenden: ${usage.weights.join(" / ")} Prozent.`,
+          `Die Nutzungssituation für ${pairLabel} in eigenen Worten festhalten: ${usage.situation}`,
+          `Die relevante Messung für ${pairLabel} mit Einheit und Datum ergänzen. ${cluster.measurement}`,
+          `Die fünf Gewichte auf die Entscheidung zwischen ${first.label} und ${second.label} anwenden: ${usage.weights.join(" / ")} Prozent.`,
           `Stärken und Grenzen von ${first.label} dokumentieren.`,
           `Stärken und Grenzen von ${second.label} mit denselben Fragen dokumentieren.`,
-          `Die härteste Grenze prüfen: ${usage.risk}`,
-          `${cluster.verification} Fehlende Nachweise bleiben offen.`,
+          `Die härteste Grenze bei ${pairLabel} prüfen: ${usage.risk}`,
+          `${scopedVerification} Fehlende Nachweise zu ${pairLabel} bleiben offen.`,
           `Entscheidung für ${pairLabel}, Quelle und technische Unterlage gemeinsam ablegen.`,
           `Das Ergebnis für ${pairLabel} mit einer veränderten Annahme gegenprüfen.`,
         ];
   const decisionExampleIntro = voice === 0
-    ? `Die Gegenprobe verteilt die Gewichtung für ${usage.label} auf fünf Kriterien. Sie zeigt, wie weit ${first.label} und ${second.label} unter denselben Annahmen auseinanderliegen.`
+    ? `Die Gegenprobe verteilt die Gewichtung im Einsatz „${usage.label}“ auf fünf Kriterien. Sie zeigt, wie weit ${first.label} und ${second.label} unter denselben Annahmen auseinanderliegen.`
     : voice === 1
-      ? `Für ${pairLabel} wird die Rechnung mit den Prioritäten im Einsatz „${usage.label}“ durchgeführt. Jeder Wert ist ein Orientierungswert und keine technische Messnorm.`
-      : `Die Matrix macht die Entscheidung für ${usage.label} nachvollziehbar. Sie verbindet die Einzelwerte von ${first.label} und ${second.label} mit den dazugehörigen Kontextgewichten.`;
+      ? `Für ${pairLabel} wird die Rechnung mit den Prioritäten im Einsatz „${usage.label}“ durchgeführt. Die Werte von ${first.label} und ${second.label} sind Orientierung und keine technische Messnorm.`
+      : `Die Matrix macht die Entscheidung im Einsatz „${usage.label}“ nachvollziehbar. Sie verbindet die Einzelwerte von ${first.label} und ${second.label} mit den dazugehörigen Kontextgewichten.`;
 
   const base = {
     topicSlug: cluster.topicSlug,
@@ -564,56 +624,56 @@ function makeDecisionGuide(
     plannerLabel: topic.plannerLabel,
     sections: [
       {
-        title: `Die konkrete Suchfrage: ${pairLabel} ${usage.searchLabel}`,
+        title: `Die Entscheidung bei ${usage.label}`,
         paragraphs: [
           `${usage.situation} ${usage.priority} Dadurch unterscheidet sich diese Entscheidung von einem allgemeinen Material- oder Systemvergleich. Eine Eigenschaft, die in einem anderen Projekt entscheidend ist, kann hier bewusst weniger Gewicht erhalten. Die Matrix zeigt diese Priorisierung sichtbar, damit das Ergebnis nicht wie ein pauschaler Testsieger missverstanden wird.`,
-          `${cluster.measurement} Für dieses Szenario gilt außerdem: ${usage.risk} Notiere Maße, Messbedingungen und offene Punkte vor der Produktsuche. Erst wenn diese Eingangsdaten belastbar sind, lässt sich ein konkretes Angebot gegen dieselben Kriterien prüfen.`,
+          `${cluster.measurement} Für dieses Szenario gilt außerdem. ${usage.risk} Notiere Maße, Messbedingungen und offene Punkte vor der Produktsuche. Sobald diese Eingangsdaten belastbar sind, lässt sich ein konkretes Angebot gegen dieselben Kriterien prüfen.`,
         ],
       },
       {
-        title: `${first.label}: Stärken und Grenzen in diesem Kontext`,
+        title: `${first.label} bei ${usage.label}`,
         paragraphs: [
           `${first.summary} ${first.strengths} Bezogen auf „${usage.label}“ erreicht die Lösung ihren Nutzen nur dann, wenn die Stärke tatsächlich am schwierigsten Projektpunkt gebraucht wird. Die Einzelbewertungen lauten ${cluster.criteria.map((criterion, index) => `${criterion} ${first.scores[index]}/5`).join(", ")}.`,
           `${first.limits} Besonders zu prüfen ist: ${first.evidence.join("; ")}. Diese Hinweise sind keine versteckten Abzüge, sondern die Bedingungen, unter denen der rechnerische Orientierungswert praktisch tragfähig wird. Fehlt eine relevante Herstellerangabe, bleibt das betreffende Kriterium offen statt automatisch positiv.`,
         ],
       },
       {
-        title: `${second.label}: Stärken und Grenzen in diesem Kontext`,
+        title: `${second.label} bei ${usage.label}`,
         paragraphs: [
           `${second.summary} ${second.strengths} Für das Szenario „${usage.label}“ wird auch diese Lösung nicht nach Bekanntheit oder Einstiegspreis bewertet, sondern nach denselben fünf Projektkriterien. Die Einzelbewertungen lauten ${cluster.criteria.map((criterion, index) => `${criterion} ${second.scores[index]}/5`).join(", ")}.`,
           `${second.limits} Vor einer Auswahl sind diese Punkte sichtbar zu klären: ${second.evidence.join("; ")}. Eine hohe Punktzahl in einem Komfortkriterium darf keine harte technische Grenze ausgleichen. Deshalb bleiben Muss-Kriterien wie Maß, Standortfreigabe, sichere Montage oder zulässiger Einsatz unabhängig vom Gesamtwert bestehen.`,
         ],
       },
       {
-        title: "So funktioniert die gewichtete Entscheidungsmatrix",
+        title: `So wird ${pairLabel} gewichtet`,
         paragraphs: [
           `Jede Option erhält je Kriterium einen Orientierungswert von eins bis fünf. Dieser Wert wird mit dem Kontextgewicht multipliziert; die fünf Gewichte ergeben zusammen 100 Prozent. Für ${usage.label} lauten die Gewichte ${cluster.criteria.map((criterion, index) => `${criterion} ${usage.weights[index]} %`).join(", ")}. Die Rechnung liefert ${deScore(scoreA)} Punkte für ${first.label} und ${deScore(scoreB)} Punkte für ${second.label}.`,
           `${verdict} Ein Unterschied von weniger als 0,25 Punkten wird bewusst als knappe Entscheidung behandelt. Selbst bei größerem Abstand darf ein Muss-Kriterium das Ergebnis umkehren. Wenn beispielsweise nur eine Lösung das reale Maß, die Temperatur, den Druck, die Last oder die Herstellerfreigabe erfüllt, ist die gewichtete Komfortsumme nachrangig.`,
         ],
       },
       {
-        title: "Kosten und Aufwand ohne erfundene Preisgenauigkeit vergleichen",
+        title: `Das vollständige Kostenbild für ${pairLabel}`,
         paragraphs: [
           `Ein belastbarer Vergleich beginnt nicht mit einem einzelnen Shoppreis. Für ${first.label} gehören Anschaffung, notwendige Systemteile, Lieferung, Vorbereitung, Montage, Werkzeug, Verbrauchsmaterial, Pflege und mögliche Ersatzteile in dieselbe Liste. Für ${second.label} wird exakt dieselbe Kostenstruktur verwendet. Nur so wird sichtbar, ob ein günstiger Einstieg später zusätzlichen Aufwand erzeugt.`,
           `Die Seite nennt absichtlich keinen pauschalen Euro-Sieger, weil Preise, Lieferumfang und regionale Arbeiten veränderlich sind. Trage stattdessen zwei aktuelle, vollständig vergleichbare Angebote ein und markiere jede fehlende Position als offen. Bewerte Zeitaufwand separat von Geld: Eigenleistung ist nicht kostenlos, wenn Spezialwerkzeug, Nacharbeit oder ein höheres Fehlerrisiko entstehen.`,
         ],
       },
       {
-        title: "Montage, Betrieb und spätere Änderungen gemeinsam denken",
+        title: `Montage und Betrieb bei ${usage.label}`,
         paragraphs: [
           `${cluster.verification} Prüfe dabei nicht nur die Erstmontage. Zugang für Reinigung, Inspektion, Filter, Befestiger, Fugen, Kabel, Ablauf oder austauschbare Teile gehört bereits in die Planung. Eine Lösung, die am ersten Tag kompakt wirkt, kann im Betrieb unpraktisch werden, wenn Wartungsstellen verdeckt sind.`,
           `${first.label} bietet in diesem Vergleich insbesondere: ${first.evidence[4]}. Bei ${second.label} lautet der entsprechende Punkt: ${second.evidence[4]}. Übertrage diese Aussagen auf die nächsten fünf bis zehn Jahre deines Projekts. Geplante Erweiterungen, geänderte Nutzung und verfügbare Ersatzteile können wichtiger sein als ein kleiner Vorteil beim ersten Aufbau.`,
         ],
       },
       {
-        title: "Typische Fehlentscheidung und sinnvolle Gegenprobe",
+        title: `Die Gegenprobe für ${pairLabel}`,
         paragraphs: [
           `Die häufigste Fehlentscheidung wäre, ${winner.label} allein wegen des höheren Gesamtwerts zu wählen. Der Wert gilt nur für die dokumentierte Gewichtung „${usage.label}“. Ändert sich die Priorität, kann sich das Ergebnis drehen. Setze deshalb das wichtigste persönliche Kriterium probeweise um zehn Prozentpunkte höher und reduziere ein weniger wichtiges Kriterium entsprechend.`,
           `Kontrolliere danach den schwierigsten realen Punkt statt eine ideale Fläche: die engste Stelle, die feuchteste Zone, den ungünstigsten Empfang, die höchste Last oder die niedrigste Temperatur. ${usage.risk} Wenn eine Option dort ausscheidet, dokumentiere den Grund. Diese Gegenprobe liefert mehr Nutzwert als zusätzliche Durchschnittspunkte.`,
         ],
       },
       {
-        title: "Vom Vergleich zur belastbaren Auswahl",
+        title: `Die Auswahl für ${usage.label} absichern`,
         paragraphs: [
           `Erstelle für beide Optionen ein Datenblatt mit denselben Spalten und verlinke die jeweilige technische Quelle. Markiere Angaben als gemessen, berechnet, Herstellerwert oder noch unbekannt. Streiche keine offene Zeile aus der Tabelle, nur weil ein Angebot ansonsten attraktiv wirkt. Eine Entscheidung wird erst belastbar, wenn alle Muss-Kriterien beantwortet sind und die Montage am realen Standort nachvollziehbar bleibt.`,
           `Nutze anschließend den Rechner „${topic.plannerLabel}“, um Maße oder Leistungsrahmen mit deinen eigenen Eingaben zu bestimmen. Vergleiche nur konkrete Produkte oder Systeme, die diesen Rahmen erfüllen. ${cluster.limitation} Genau diese Grenze gehört sichtbar zum Ergebnis, damit aus einer Suchhilfe keine Scheingenauigkeit oder unzulässige Freigabe wird.`,
@@ -664,10 +724,10 @@ function makeDecisionGuide(
         { label: `Gesamt ${first.label}`, value: `${deScore(scoreA)} von 5` },
         { label: `Gesamt ${second.label}`, value: `${deScore(scoreB)} von 5` },
       ],
-      result: verdict,
-      note: `${usage.risk} ${cluster.limitation}`,
+      result: exampleVerdict,
+      note: `${usage.risk} ${scopedLimitation}`,
     },
-    limitation: cluster.limitation,
+    limitation: scopedLimitation,
     relatedLinks: [
       { label: cluster.directoryTitle, href: `/ratgeber/vergleiche/${cluster.topicSlug}/`, description: `Alle 100 kontextbezogenen Vergleiche im Themenbereich ${topic.name} öffnen.` },
       { label: `${topic.name}: Themen-Hub`, href: `/ratgeber/thema/${topic.slug}/`, description: "Grundlagen, Rechner und redaktionelle Ratgeber dieses Themenbereichs." },

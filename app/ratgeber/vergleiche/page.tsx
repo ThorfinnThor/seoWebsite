@@ -59,7 +59,7 @@ export default function Page() {
             <p className="eyebrow">100 Direktvergleiche</p>
             <h2>{editorializeText(directory.title)}</h2>
             <p>{editorializeText(directory.description)}</p>
-            <Link className="text-link" href={`/ratgeber/vergleiche/${directory.topicSlug}/`}>{topic.name} vergleichen →</Link>
+            <Link className="text-link" href={`/ratgeber/vergleiche/${directory.topicSlug}/`}>Vergleiche öffnen →</Link>
           </article>;
         })}
       </div>

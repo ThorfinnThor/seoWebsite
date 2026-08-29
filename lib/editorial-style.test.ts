@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { DECISION_GUIDES } from "@/lib/decision-guides";
-import { PROJECT_EXAMPLES } from "@/lib/project-examples";
+import { DECISION_GUIDE_DIRECTORIES, DECISION_GUIDES } from "@/lib/decision-guides";
+import { PROJECT_EXAMPLE_DIRECTORIES, PROJECT_EXAMPLES } from "@/lib/project-examples";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 
 type Guide = (typeof SEO_GUIDES)[number] | (typeof DECISION_GUIDES)[number] | (typeof PROJECT_EXAMPLES)[number];
@@ -32,6 +32,26 @@ describe("editorial guide output", () => {
 
     expect(prose).not.toContain("Erst verstehen, was du brauchst");
     expect(prose).not.toContain("Dann Produkte vergleichen");
+    expect(prose).not.toMatch(/\b(?:erst|danach|anschließend|zuerst)\b/i);
+  });
+
+  it("keeps calculated results grammatically connected to their sentences", () => {
+    const projectProse = PROJECT_EXAMPLES.flatMap(visibleText).join(" ");
+    const scenarioProse = SEO_GUIDES.flatMap(visibleText).join(" ");
+
+    expect(projectProse).not.toMatch(/(?:ergibt sich|Ergebnis lautet|Rechnung führt zu)\s+\d+(?:[,.]\d+)?\s*m²\s+bleiben/i);
+    expect(projectProse).not.toMatch(/(?:ergibt sich|Daraus folgt)\s+(?:Modelle|Geräte).+?\bprüfen\b/i);
+    expect(projectProse).not.toMatch(/wenn .{0,300}? und (?:Bei|Mit|Ohne)\b.{0,300}?nebeneinander notiert werden/i);
+    expect(projectProse).not.toMatch(/\bwerden Für das Profil\b/);
+    expect(scenarioProse).not.toMatch(/Die Rechnung lautet (?:Bei|Aus|Für|Mit)\b/);
+    expect(scenarioProse).not.toMatch(/Daraus ergibt sich .{0,300}?\bbleiben\b/i);
+    expect(scenarioProse).not.toMatch(/\. (?:Und muss|Ist ein offener Planungsrahmen)\b/);
+    expect(scenarioProse).not.toMatch(/liegt bei (?:kleine Zonen|rund \d+ laufende Meter|min(?:destens)?.+nutzbare Breite)/i);
+    expect(scenarioProse).not.toMatch(/Als Ergebnis ergibt sich/i);
+    expect(scenarioProse).not.toMatch(/umfasst (?:rund [\d,]+ l\/min gemeinsamer Bedarf|kleine Zonen|ein zu verifizierender)/i);
+    expect(scenarioProse).not.toMatch(/ergibt sich (?:[\d,]+ m² zu bewertende|[\d,]+ m separat aufzuteilende)/i);
+    expect(scenarioProse).not.toMatch(/Nutzbar sind .{0,80}? nutzbare\b/i);
+    expect(scenarioProse).not.toMatch(/Als Auswahlgrundlage gelten .{0,120}? als Auswahlgrundlage\b/i);
   });
 
   it("retains several editorial section layouts", () => {
@@ -42,6 +62,24 @@ describe("editorial guide output", () => {
     expect(layouts.size).toBeGreaterThan(100);
   });
 
+  it("gives generated guides individual section headings", () => {
+    const headings = [...SEO_GUIDES, ...DECISION_GUIDES, ...PROJECT_EXAMPLES]
+      .flatMap((guide) => guide.sections.map((section) => section.title));
+    const frequencies = new Map<string, number>();
+    headings.forEach((heading) => frequencies.set(heading, (frequencies.get(heading) ?? 0) + 1));
+
+    expect(headings.length).toBeGreaterThan(11_000);
+    expect(frequencies.size / headings.length).toBeGreaterThan(0.999);
+    expect(Math.max(...frequencies.values())).toBeLessThanOrEqual(2);
+  });
+
+  it("keeps directory copy free from dash and colon styling", () => {
+    const values = [...DECISION_GUIDE_DIRECTORIES, ...PROJECT_EXAMPLE_DIRECTORIES]
+      .flatMap((directory) => [directory.title, directory.description]);
+
+    expect(values.some((value) => /[-–—:]/.test(value))).toBe(false);
+  });
+
   it("does not let one paragraph dominate the generated corpus", () => {
     const paragraphs = [...SEO_GUIDES, ...DECISION_GUIDES, ...PROJECT_EXAMPLES].flatMap((guide) =>
       guide.sections.flatMap((section) => section.paragraphs.map((paragraph) => paragraph.replace(/\s+/g, " ").trim())),
@@ -50,9 +88,10 @@ describe("editorial guide output", () => {
     paragraphs.forEach((paragraph) => frequencies.set(paragraph, (frequencies.get(paragraph) ?? 0) + 1));
     const mostFrequent = Math.max(...frequencies.values());
 
-    expect(paragraphs.length).toBeGreaterThan(20_000);
-    expect(frequencies.size).toBeGreaterThan(8_000);
-    expect(mostFrequent).toBeLessThan(100);
+    expect(paragraphs.length).toBeGreaterThan(15_000);
+    expect(frequencies.size).toBeGreaterThan(15_000);
+    expect(frequencies.size / paragraphs.length).toBeGreaterThan(0.999);
+    expect(mostFrequent).toBeLessThanOrEqual(2);
   });
 
   it("varies the generated page furniture as well as the body copy", () => {

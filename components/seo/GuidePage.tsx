@@ -92,23 +92,67 @@ export function GuidePage({
   const displayTitle = editorializeText(title);
   const displayIntro = editorializeText(intro);
   const displayTakeaway = editorializeText(takeaway);
+  const displayPlannerLabel = editorializeText(plannerLabel);
+  const displayLimitation = editorializeText(limitation);
   const displaySections = sections.map((section) => ({
     ...section,
     title: editorializeText(section.title),
     paragraphs: section.paragraphs.map(editorializeText),
     bullets: section.bullets?.map(editorializeText),
   }));
+  const displayComparison = resolvedComparison
+    ? {
+        ...resolvedComparison,
+        caption: editorializeText(resolvedComparison.caption),
+        columns: resolvedComparison.columns.map(editorializeText),
+        rows: resolvedComparison.rows.map((row) => row.map(editorializeText)),
+      }
+    : undefined;
+  const displayChecklist = resolvedChecklist.map(editorializeText);
+  const displayFaqs = resolvedFaqs.map((faq) => ({
+    question: editorializeText(faq.question),
+    answer: editorializeText(faq.answer),
+  }));
+  const displayRelatedLinks = resolvedRelatedLinks.map((link) => ({
+    ...link,
+    label: editorializeText(link.label),
+    description: editorializeText(link.description),
+  }));
+  const displaySources = resolvedSources.map((source) => ({
+    ...source,
+    label: editorializeText(source.label),
+    publisher: editorializeText(source.publisher),
+    note: editorializeText(source.note),
+  }));
+  const displayExample = resolvedExample
+    ? {
+        ...resolvedExample,
+        title: editorializeText(resolvedExample.title),
+        intro: editorializeText(resolvedExample.intro),
+        steps: resolvedExample.steps.map((step) => ({
+          label: editorializeText(step.label),
+          value: editorializeText(step.value),
+        })),
+        result: editorializeText(resolvedExample.result),
+        note: resolvedExample.note ? editorializeText(resolvedExample.note) : undefined,
+      }
+    : undefined;
+  const displayBreadcrumbs = (breadcrumbs ?? [
+    { label: "Start", href: "/" },
+    { label: "Garten", href: "/garten/" },
+    { label: displayTitle },
+  ]).map((item) => ({ ...item, label: editorializeText(item.label) }));
   const articleWordCount = [
     displayTitle,
     displayIntro,
     displayTakeaway,
     ...displaySections.flatMap((section) => [section.title, ...section.paragraphs, ...(section.bullets ?? [])]),
-    ...(resolvedComparison ? [resolvedComparison.caption, ...resolvedComparison.columns, ...resolvedComparison.rows.flat()] : []),
-    ...resolvedChecklist,
-    ...resolvedFaqs.flatMap((faq) => [faq.question, faq.answer]),
-    ...resolvedRelatedLinks.flatMap((link) => [link.label, link.description]),
-    ...(resolvedExample ? [resolvedExample.title, resolvedExample.intro, ...resolvedExample.steps.flatMap((step) => [step.label, step.value]), resolvedExample.result, resolvedExample.note ?? ""] : []),
-    limitation,
+    ...(displayComparison ? [displayComparison.caption, ...displayComparison.columns, ...displayComparison.rows.flat()] : []),
+    ...displayChecklist,
+    ...displayFaqs.flatMap((faq) => [faq.question, faq.answer]),
+    ...displayRelatedLinks.flatMap((link) => [link.label, link.description]),
+    ...(displayExample ? [displayExample.title, displayExample.intro, ...displayExample.steps.flatMap((step) => [step.label, step.value]), displayExample.result, displayExample.note ?? ""] : []),
+    displayLimitation,
   ].join(" ").trim().split(/\s+/).filter(Boolean).length;
 
   return (
@@ -139,15 +183,15 @@ export function GuidePage({
             url: `${siteRoot}/`,
           },
           isPartOf: { "@type": "WebSite", "@id": `${siteRoot}/#website` },
-          ...(resolvedSources.length > 0
-            ? { citation: resolvedSources.map((source) => source.href) }
+          ...(displaySources.length > 0
+            ? { citation: displaySources.map((source) => source.href) }
             : {}),
         }}
       />
-      {resolvedFaqs.length > 0 && <JsonLd data={{
+      {displayFaqs.length > 0 && <JsonLd data={{
         "@context": "https://schema.org",
         "@type": "FAQPage",
-        mainEntity: resolvedFaqs.map((faq) => ({
+        mainEntity: displayFaqs.map((faq) => ({
           "@type": "Question",
           name: faq.question,
           acceptedAnswer: { "@type": "Answer", text: faq.answer },
@@ -155,11 +199,7 @@ export function GuidePage({
       }} />}
       <article className="guide-page">
         <Breadcrumbs
-          items={breadcrumbs ?? [
-            { label: "Start", href: "/" },
-            { label: "Garten", href: "/garten/" },
-            { label: displayTitle },
-          ]}
+          items={displayBreadcrumbs}
         />
         <header>
           <p className="eyebrow">PassendPlanen Ratgeber</p>
@@ -179,7 +219,7 @@ export function GuidePage({
             <h2 id="guide-answer-title">Kurzantwort</h2>
             <p>{displayTakeaway}</p>
             <Link className="button button--primary" href={plannerHref}>
-              {plannerLabel} →
+              {displayPlannerLabel} →
             </Link>
           </aside>
 
@@ -198,51 +238,51 @@ export function GuidePage({
               </section>
             ))}
 
-            {resolvedComparison && (
+            {displayComparison && (
               <section className="guide-comparison" aria-labelledby="guide-comparison-title">
                 <p className="eyebrow">Direkter Vergleich</p>
-                <h2 id="guide-comparison-title">{resolvedComparison.caption}</h2>
+                <h2 id="guide-comparison-title">{displayComparison.caption}</h2>
                 <div className="guide-table-wrap">
                   <table>
-                    <thead><tr>{resolvedComparison.columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr></thead>
-                    <tbody>{resolvedComparison.rows.map((row) => <tr key={row[0]}>{row.map((cell, index) => index === 0 ? <th key={cell} scope="row">{cell}</th> : <td key={cell}>{cell}</td>)}</tr>)}</tbody>
+                    <thead><tr>{displayComparison.columns.map((column) => <th key={column} scope="col">{column}</th>)}</tr></thead>
+                    <tbody>{displayComparison.rows.map((row) => <tr key={row[0]}>{row.map((cell, index) => index === 0 ? <th key={cell} scope="row">{cell}</th> : <td key={cell}>{cell}</td>)}</tr>)}</tbody>
                   </table>
                 </div>
               </section>
             )}
 
-            {resolvedChecklist.length > 0 && (
+            {displayChecklist.length > 0 && (
               <section className="guide-checklist" aria-labelledby="guide-checklist-title">
                 <p className="eyebrow">Vor dem Kauf prüfen</p>
                 <h2 id="guide-checklist-title">Deine Projekt-Checkliste</h2>
-                <ol>{resolvedChecklist.map((item) => <li key={item}>{item}</li>)}</ol>
+                <ol>{displayChecklist.map((item) => <li key={item}>{item}</li>)}</ol>
               </section>
             )}
 
-            {resolvedExample && (
+            {displayExample && (
               <section className="guide-example" aria-labelledby="guide-example-title">
                 <p className="eyebrow">Nachvollziehbares Rechenbeispiel</p>
-                <h2 id="guide-example-title">{resolvedExample.title}</h2>
-                <p>{resolvedExample.intro}</p>
+                <h2 id="guide-example-title">{displayExample.title}</h2>
+                <p>{displayExample.intro}</p>
                 <dl>
-                  {resolvedExample.steps.map((step) => (
+                  {displayExample.steps.map((step) => (
                     <div key={step.label}>
                       <dt>{step.label}</dt>
                       <dd>{step.value}</dd>
                     </div>
                   ))}
                 </dl>
-                <p className="guide-example-result"><strong>Ergebnis</strong> {resolvedExample.result}</p>
-                {resolvedExample.note && <p className="guide-example-note">{resolvedExample.note}</p>}
+                <p className="guide-example-result"><strong>Ergebnis</strong> {displayExample.result}</p>
+                {displayExample.note && <p className="guide-example-note">{displayExample.note}</p>}
               </section>
             )}
 
-            {resolvedSources.length > 0 && (
+            {displaySources.length > 0 && (
               <section className="guide-sources">
                 <p className="eyebrow">Geprüfte Ausgangspunkte</p>
                 <h2>Quellen und weiterführende Hinweise</h2>
                 <ul>
-                  {resolvedSources.map((source) => (
+                  {displaySources.map((source) => (
                     <li key={source.href}>
                       <a href={source.href} rel="noopener noreferrer">
                         {source.label}
@@ -255,19 +295,19 @@ export function GuidePage({
               </section>
             )}
 
-            {resolvedFaqs.length > 0 && (
+            {displayFaqs.length > 0 && (
               <section className="guide-faq" aria-labelledby="guide-faq-title">
                 <p className="eyebrow">Häufige Fragen</p>
                 <h2 id="guide-faq-title">Kurz und konkret beantwortet</h2>
-                <div>{resolvedFaqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
+                <div>{displayFaqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
               </section>
             )}
 
-            {resolvedRelatedLinks.length > 0 && (
+            {displayRelatedLinks.length > 0 && (
               <section className="guide-related" aria-labelledby="guide-related-title">
                 <p className="eyebrow">Passend weiterplanen</p>
                 <h2 id="guide-related-title">Verwandte Rechner und Ratgeber</h2>
-                <div>{resolvedRelatedLinks.map((link) => <Link key={link.href} href={link.href}><strong>{link.label}</strong><span>{link.description}</span></Link>)}</div>
+                <div>{displayRelatedLinks.map((link) => <Link key={link.href} href={link.href}><strong>{link.label}</strong><span>{link.description}</span></Link>)}</div>
               </section>
             )}
 
@@ -280,7 +320,7 @@ export function GuidePage({
             </div>
             <div className="guide-limit">
               <strong>Wichtige Grenze</strong>
-              <p>{limitation}</p>
+              <p>{displayLimitation}</p>
             </div>
           </div>
         </div>

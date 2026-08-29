@@ -40,6 +40,11 @@ export function editorializeText(text: string) {
     .replace(/verteile verbleibende Sichtschutzfelder erst danach/gi, "verteile die verbleibenden Sichtschutzfelder auf die Reststrecke")
     .replace(/teile erst danach durch den Paketinhalt; aufgerundet wird am Ende/gi, "berücksichtige den Paketinhalt und runde die Bestellmenge auf ganze Pakete")
     .replace(/Lege Türsystem und Öffnungsmaß zuerst fest\. Ergänze/gi, "Türsystem und Öffnungsmaß geben den Rahmen vor. Ergänze")
+    .replace(/werden zuerst festgelegt/gi, "geben den Ausgangspunkt vor")
+    .replace(/\bnicht erst nach\b/gi, "bereits vor")
+    .replace(/\banschließend\b/gi, "dabei")
+    .replace(/\bdanach\b/gi, "dabei")
+    .replace(/\berst\b/gi, "nur")
     .replace(/\s+[–—]\s+/g, ", ")
     .replace(/\s+-\s+/g, ", ")
     .replace(/:\s+/g, ". ")
@@ -58,6 +63,10 @@ export function lowercaseInitial(text: string) {
 export function sentenceEnd(text: string) {
   const trimmed = text.trim();
   return /[.!?]$/.test(trimmed) ? trimmed : `${trimmed}.`;
+}
+
+export function scopedStatement(text: string, scope: string) {
+  return `${sentenceEnd(text)} ${sentenceEnd(scope)}`;
 }
 
 export function editorializeGuide<T extends GuideLike>(guide: T): T {
