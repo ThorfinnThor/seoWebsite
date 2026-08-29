@@ -1,6 +1,6 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
-import { editorializeGuide, editorialVariant, scopedStatement, sentenceEnd } from "@/lib/editorial-style";
+import { editorializeGuide, editorializeText, sentenceEnd } from "@/lib/editorial-style";
 import { SEO_TOPICS } from "@/lib/seo-topics";
 
 type Scale = {
@@ -23,6 +23,7 @@ type Calculation = {
   result: string;
   resultSentence: string;
   alternative: string;
+  countercheck: string;
   rows: Array<[string, string, string]>;
 };
 
@@ -35,6 +36,7 @@ type ProjectCluster = {
   interpretation: string;
   verification: string;
   limitation: string;
+  application: string;
   scales: readonly Scale[];
   variants: readonly Variant[];
   sources: readonly GuideSource[];
@@ -48,6 +50,13 @@ export type ProjectExample = SeoGuide & {
   variantLabel: string;
   scaleSlug: string;
   qualitySignature: string;
+  directoryCard: {
+    title: string;
+    result: string;
+    alternative: string;
+    check: string;
+    linkLabel: string;
+  };
 };
 
 export type ProjectExampleDirectory = {
@@ -103,6 +112,7 @@ function gardenHouseCalculation(scale: Scale, variant: Variant): Calculation {
     result: `eine rechnerisch freie Zugangs- und Bewegungsfläche von ${de(free)} m²`,
     resultSentence: `Rechnerisch bleibt eine freie Zugangs- und Bewegungsfläche von ${de(free)} m².`,
     alternative: `Bei nur ${Math.round(Math.max(.35, variant.factor - .12) * 100)} % Belegung blieben ${de(inner * (1 - Math.max(.35, variant.factor - .12)))} m² frei`,
+    countercheck: `${de(inner * (1 - Math.max(.35, variant.factor - .12)))} m² frei bei ${Math.round(Math.max(.35, variant.factor - .12) * 100)} % Belegung`,
     rows: [
       ["Außenfläche", `${de(outer)} m²`, "Dachüberstand zusätzlich prüfen"],
       ["Beispiel-Innenfläche", `${de(inner)} m²`, "Echtes Produkt-Innenmaß einsetzen"],
@@ -115,13 +125,15 @@ function gardenHouseCalculation(scale: Scale, variant: Variant): Calculation {
 function mowerCalculation(scale: Scale, variant: Variant): Calculation {
   const [area] = scale.values;
   const target = Math.ceil(area * variant.factor / 50) * 50;
-  const relaxed = Math.ceil(area * Math.max(1.2, variant.factor - .15) / 50) * 50;
+  const relaxedCandidate = Math.ceil(area * Math.max(1, variant.factor - .15) / 50) * 50;
+  const relaxed = Math.max(Math.ceil(area / 50) * 50, Math.min(target - 50, relaxedCandidate));
   return {
     input: `${area} m² gemessene Netto-Rasenfläche`,
     calculation: `${area} m² werden mit dem Kapazitätsfaktor ${de(variant.factor, 2)} multipliziert. Der Wert wird auf die nächste 50-m²-Klasse aufgerundet`,
-    result: `Modelle ab etwa ${target} m² Nennflächen-Rahmen prüfen`,
+    result: `Modelle ab etwa ${target} m² Nennflächenrahmen prüfen`,
     resultSentence: `Für die Vorauswahl kommen Modelle ab etwa ${target} m² Nennflächenrahmen in Betracht.`,
     alternative: `Bei vereinfachter Geometrie ergäbe derselbe Ansatz etwa ${relaxed} m²`,
+    countercheck: `etwa ${relaxed} m² bei vereinfachter Geometrie`,
     rows: [
       ["Netto-Rasenfläche", `${area} m²`, "Wege, Beete und Terrasse abziehen"],
       ["Szenariofaktor", `× ${de(variant.factor, 2)}`, variant.focus],
@@ -142,6 +154,7 @@ function terraceCalculation(scale: Scale, variant: Variant): Calculation {
     result: `${de(orderArea)} m² Bestellrahmen beziehungsweise rund ${de(runningMeters, 0)} laufende Dielenmeter`,
     resultSentence: `Der Bestellrahmen liegt bei ${de(orderArea)} m² beziehungsweise rund ${de(runningMeters, 0)} laufenden Dielenmetern.`,
     alternative: `Ohne den ausgewiesenen Zuschnitt wären es rechnerisch ${de(area / boardWidth, 0)} laufende Meter`,
+    countercheck: `${de(area / boardWidth, 0)} laufende Meter ohne ausgewiesenen Zuschnitt`,
     rows: [
       ["Nettofläche", `${area} m²`, "Geometrie vollständig messen"],
       ["Mengenfaktor", `× ${de(variant.factor, 2)}`, variant.focus],
@@ -163,6 +176,7 @@ function irrigationCalculation(scale: Scale, variant: Variant): Calculation {
     result: `${de(minutesAt15, 0)} Minuten theoretische Abgabezeit; mindestens ${timeBlocks} ${timeBlocks === 1 ? "Zeitblock" : "Zeitblöcke"} von höchstens 45 Minuten einplanen`,
     resultSentence: `Die theoretische Abgabezeit liegt bei ${de(minutesAt15, 0)} Minuten. Dafür sind mindestens ${timeBlocks} ${timeBlocks === 1 ? "Zeitblock" : "Zeitblöcke"} mit höchstens 45 Minuten einzuplanen.`,
     alternative: `Bei 20 l/min verkürzt sich die reine Abgabezeit rechnerisch auf ${de(liters / 20, 0)} Minuten`,
+    countercheck: `${de(liters / 20, 0)} Minuten bei 20 l/min`,
     rows: [
       ["Planungsfläche", `${area} m²`, variant.focus],
       ["Beispiel-Abgabe", `${de(litersPerEvent)} l/m²`, "Kein allgemeiner Pflanzen-Sollwert"],
@@ -184,6 +198,7 @@ function greenhouseCalculation(scale: Scale, variant: Variant): Calculation {
     result: `Rund ${de(bed)} m² rechnerische Beet- und Stellfläche vor Profilen und Türbereich`,
     resultSentence: `Vor Profilen und Türbereich bleiben rechnerisch rund ${de(bed)} m² Beet- und Stellfläche.`,
     alternative: `Mit einem 10 cm schmaleren Weg wären es etwa ${de(total - (aisleWidth - .1) * length)} m²`,
+    countercheck: `${de(total - (aisleWidth - .1) * length)} m² bei 10 cm schmalerem Weg`,
     rows: [
       ["Grundfläche", `${de(total)} m²`, "Innenmaß des Systems verwenden"],
       ["Beispiel-Wegbreite", `${de(aisleWidth)} m`, variant.focus],
@@ -196,17 +211,40 @@ function greenhouseCalculation(scale: Scale, variant: Variant): Calculation {
 function privacyCalculation(scale: Scale, variant: Variant): Calculation {
   const [length] = scale.values;
   const moduleWidth = variant.factor;
-  const elements = Math.ceil(length / moduleWidth);
-  const posts = elements + 1 + (variant.slug.includes("tor") ? 1 : 0);
-  const rest = elements * moduleWidth - length;
+  const gateWidth = variant.slug.includes("tor") ? 1 : 0;
+  const fenceLength = Math.max(0, length - gateWidth);
+  const elements = Math.ceil(fenceLength / moduleWidth);
+  const fields = elements + (gateWidth > 0 ? 1 : 0);
+  const posts = fields + 1;
+  const rest = elements * moduleWidth - fenceLength;
+  const alternativeWidth = Math.abs(moduleWidth - 1.8) < .001 ? 1.75 : 1.8;
+  const alternativeElements = Math.ceil(fenceLength / alternativeWidth);
+  const alternativeRest = alternativeElements * alternativeWidth - fenceLength;
+  const input = gateWidth > 0
+    ? `${de(length)} m gemessene Sichtschutzflucht mit ${de(gateWidth, 2)} m angenommener Torlichte und ${de(fenceLength, 2)} m verfügbarer Zaunlänge`
+    : `${de(length)} m gemessene Sichtschutzflucht`;
+  const result = gateWidth > 0
+    ? `${elements} Zaunelemente, ein Torfeld und mindestens ${posts} Pfosten als Rasterrahmen; ${de(rest, 2)} m rechnerisches Restmaß der Zaunelemente`
+    : `${elements} Felder und mindestens ${posts} Pfosten als Rasterrahmen; ${de(rest, 2)} m rechnerisches Restmaß`;
+  const resultSentence = gateWidth > 0
+    ? `Nach Abzug von ${de(gateWidth, 2)} m Torlichte umfasst der Rasterrahmen ${elements} Zaunelemente, ein Torfeld und mindestens ${posts} Pfosten. Das rechnerische Restmaß der Zaunelemente beträgt ${de(rest, 2)} m.`
+    : `Der Rasterrahmen umfasst ${elements} Felder und mindestens ${posts} Pfosten. Das rechnerische Restmaß beträgt ${de(rest, 2)} m.`;
+  const alternative = gateWidth > 0
+    ? `Nach Abzug von ${de(gateWidth, 2)} m Torlichte ergeben sich mit ${de(alternativeWidth, 2)} m Montagebreite ${alternativeElements} Zaunelemente und ${de(alternativeRest, 2)} m Restmaß`
+    : `Mit ${de(alternativeWidth, 2)} m Montagebreite ergeben sich ${alternativeElements} Elemente und ${de(alternativeRest, 2)} m Restmaß vor Ecken und Toren`;
   return {
-    input: `${de(length)} m gemessene Sichtschutzflucht`,
-    calculation: `${de(length)} m ÷ ${de(moduleWidth, 2)} m angenommene Montagebreite ergeben ${de(length / moduleWidth, 2)} Felder. Die Feldzahl wird auf eine ganze Zahl aufgerundet`,
-    result: `${elements} Felder und mindestens ${posts} Pfosten als Rasterrahmen; ${de(rest, 2)} m rechnerisches Restmaß`,
-    resultSentence: `Der Rasterrahmen umfasst ${elements} Felder und mindestens ${posts} Pfosten. Das rechnerische Restmaß beträgt ${de(rest, 2)} m.`,
-    alternative: `Mit 1,80-m-Feldern wären ${Math.ceil(length / 1.8)} Elemente vor Ecken und Toren nötig`,
+    input,
+    calculation: `${de(fenceLength, 2)} m verfügbare Zaunlänge ÷ ${de(moduleWidth, 2)} m angenommene Montagebreite ergeben ${de(fenceLength / moduleWidth, 2)} Elemente. Die Elementzahl wird auf eine ganze Zahl aufgerundet`,
+    result,
+    resultSentence,
+    alternative,
+    countercheck: gateWidth > 0
+      ? `${alternativeElements} Zaunelemente bei ${de(alternativeWidth, 2)} m Montagebreite plus ${de(gateWidth, 2)} m Tor`
+      : `${alternativeElements} Elemente bei ${de(alternativeWidth, 2)} m Montagebreite`,
     rows: [
       ["Gemessene Flucht", `${de(length)} m`, "Zwischen festen Endpunkten messen"],
+      ...(gateWidth > 0 ? [["Angenommene Torlichte", `${de(gateWidth, 2)} m`, "Reales Torsystem einsetzen"] as [string, string, string]] : []),
+      ["Verfügbare Zaunlänge", `${de(fenceLength, 2)} m`, gateWidth > 0 ? "Gesamtflucht abzüglich Torlichte" : "Gesamte gemessene Flucht"],
       ["Montagebreite", `${de(moduleWidth, 2)} m`, variant.focus],
       ["Elemente", `${elements}`, "Restmaß bewusst verteilen"],
       ["Pfostenrahmen", `${posts}`, "Ecken, Tor und Endsystem ergänzen"],
@@ -226,6 +264,7 @@ function carportCalculation(scale: Scale, variant: Variant): Calculation {
     result: `Mindestens etwa ${de(lightWidth)} × ${de(lightLength)} m lichte Nutzungszone beziehungsweise ${de(area)} m²`,
     resultSentence: `Die lichte Nutzungszone sollte mindestens etwa ${de(lightWidth)} × ${de(lightLength)} m beziehungsweise ${de(area)} m² umfassen.`,
     alternative: `Mit 10 cm weniger je Seite sinkt die lichte Breite auf ${de(lightWidth - .2)} m, die Alltagstauglichkeit muss dann praktisch geprüft werden`,
+    countercheck: `${de(lightWidth - .2)} m lichte Breite bei 10 cm weniger je Seite`,
     rows: [
       ["Fahrzeugmaß", `${de(vehicleWidth)} × ${de(vehicleLength)} m`, "Spiegel und Anbauten erfassen"],
       ["Seitenraum je Seite", `${de(sideAllowance, 2)} m`, variant.focus],
@@ -246,6 +285,7 @@ function flooringCalculation(scale: Scale, variant: Variant): Calculation {
     result: `${packages} ganze Pakete beziehungsweise ${de(packages * packageArea)} m² Bestellmenge`,
     resultSentence: `Die Bestellmenge umfasst ${packages} ganze Pakete beziehungsweise ${de(packages * packageArea)} m².`,
     alternative: `Bei einem Produkt mit 2,50 m² je Paket wären ${Math.ceil(orderArea / 2.5)} Pakete nötig`,
+    countercheck: `${Math.ceil(orderArea / 2.5)} Pakete bei 2,50 m² Paketinhalt`,
     rows: [
       ["Netto-Raumfläche", `${area} m²`, "Teilflächen ohne Überlappung addieren"],
       ["Verschnittfaktor", `× ${de(variant.factor, 2)}`, variant.focus],
@@ -268,6 +308,7 @@ function drywallCalculation(scale: Scale, variant: Variant): Calculation {
     result: `${de(grossBoardArea)} m² Plattenrahmen beziehungsweise etwa ${boards} Beispielplatten à 1,25 × 2,60 m`,
     resultSentence: `Der Plattenrahmen liegt bei ${de(grossBoardArea)} m² beziehungsweise etwa ${boards} Beispielplatten im Format 1,25 × 2,60 m.`,
     alternative: `Ohne den 10-%-Mengenfaktor wären rechnerisch ${Math.ceil(wallArea * 2 * layers / boardArea)} Beispielplatten nötig`,
+    countercheck: `${Math.ceil(wallArea * 2 * layers / boardArea)} Beispielplatten ohne 10 % Mengenfaktor`,
     rows: [
       ["Wandfläche je Seite", `${de(wallArea)} m²`, "Öffnungen separat dokumentieren"],
       ["Beplankung", `${layers} ${layers === 1 ? "Lage" : "Lagen"}`, variant.focus],
@@ -289,6 +330,7 @@ function dehumidifierCalculation(scale: Scale, variant: Variant): Calculation {
     result: `Geräte mit dokumentierter Eignung für mindestens etwa ${target} m³ unter vergleichbaren Bedingungen prüfen`,
     resultSentence: `Für die Vorauswahl kommen Geräte mit dokumentierter Eignung für mindestens etwa ${target} m³ unter vergleichbaren Bedingungen in Betracht.`,
     alternative: `Ohne Zusatzlast läge der reine Volumenwert bei ${de(volume)} m³; das ersetzt keine Feuchtediagnose`,
+    countercheck: `${de(volume)} m³ reines Raumvolumen ohne Zusatzlast`,
     rows: [
       ["Raumfläche", `${area} m²`, "Alle verbundenen Bereiche erfassen"],
       ["Raumvolumen", `${de(volume)} m³`, variant.focus],
@@ -306,6 +348,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die Rechnung zeigt, wie viel Fläche nach einem transparenten Belegungsansatz frei bleibt. Sie sagt nicht, dass jedes Haus mit demselben Nennmaß innen identisch groß ist.",
     verification: "Vergleiche das Ergebnis mit Maßzeichnung, Türlichte, Bodenlast, Dachüberstand, Fundamentplan und der am Standort geltenden Rechtslage.",
     limitation: "Das Beispiel ersetzt weder Produktmaßzeichnung noch Prüfung von Fundament, Statik, Grenzabstand oder Landes- und Ortsrecht.",
+    application: "Übertrage die freie Fläche auf das reale Innenmaß, die Türlichte und den maßstäblichen Stellplan des konkreten Gartenhauses.",
     scales: sharedDimensions,
     variants: [
       { slug: "geraete", label: "für Gartengeräte", focus: "Regale, lange Geräte und Rollweg", factor: .52, check: "Lange Geräte müssen entnommen werden können, ohne den Zugang leerzuräumen." },
@@ -322,6 +365,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Der Kapazitätsfaktor ist ein offengelegter PassendPlanen-Auswahlrahmen. Er bildet Planungserschwernisse ab, ist aber keine Zusage für tägliche Laufzeit oder vollständige Abdeckung.",
     verification: "Prüfe beim konkreten Modell Nennfläche, maximale Steigung, Mindestpassage, Navigation, erlaubte Zonen, Randabstände, Geräusch und Installationsanleitung gemeinsam.",
     limitation: "Herstellerwerte gelten unter definierten Bedingungen. Empfang, Traktion, Wachstum, Firmware und reale Mähzeit bleiben grundstücks- und modellabhängig.",
+    application: "Vergleiche den Auswahlrahmen mit Nennfläche, erlaubter Mähzeit, Navigation, Passage und Steigung konkreter Geräte.",
     scales: areas([100, 150, 200, 250, 300, 400, 500, 600, 750, 900, 1000, 1250, 1500, 2000, 2500, 3500, 5000]),
     variants: [
       { slug: "offen", label: "für eine offene Fläche", focus: "wenige Hindernisse und klare Außenkante", factor: 1.2, check: "Auch offene Flächen brauchen eine geeignete Rand- und Ladestationslösung." },
@@ -338,6 +382,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Bestellfläche und Dielen-Laufmeter sind eine Mengenbasis. Lieferlängen, Stoßanordnung und Zuschnittplan entscheiden, ob diese Menge tatsächlich reicht.",
     verification: "Prüfe Lieferformat, Fugen, Auflagerabstände, doppelte Unterkonstruktion an Stößen, Befestigung, Randabschlüsse, Gefälle und Untergrund als vollständiges System.",
     limitation: "Die Mengenrechnung ist keine konstruktive Freigabe. Herstellerangaben und fachgerechter Aufbau haben Vorrang vor pauschalen Raster- oder Verschnittwerten.",
+    application: "Runde die Menge auf lieferbare Dielenlängen und ergänze Unterkonstruktion, Befestigung, Randdetails sowie Stoßauflager separat.",
     scales: standardAreas,
     variants: [
       { slug: "holz-gerade", label: "mit Holz, gerade verlegt", focus: "gerade Verlegung mit 8 % Mengenreserve", factor: 1.08, check: "Holzfeuchte, Sortierung und spätere Pflege gehören zur Materialentscheidung." },
@@ -354,6 +399,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die Liter je Quadratmeter sind hier ausdrücklich eine Rechenannahme für ein Ereignis, kein allgemeiner Pflanzenbedarf. Boden, Wetter, Wurzeltiefe und Niederschlag verändern die reale Bewässerung.",
     verification: "Vergleiche die rechnerische Gesamtmenge mit gemessenem Anschluss, zulässiger Stranglänge, Druckregler, Filter, Rückflussschutz, Regnerüberdeckung und Steuerungslogik.",
     limitation: "Das Beispiel ersetzt keine hydraulische Auslegung, Pflanzenberatung oder Prüfung des Trinkwasserschutzes. Ohne reale Messung bleibt die Zonierung vorläufig.",
+    application: "Ordne den Zeitwert realen Ventilzonen zu und prüfe Durchfluss, Fließdruck, Leitungsweg sowie Abgabe jedes angeschlossenen Verbrauchers.",
     scales: areas([50, 75, 100, 125, 150, 200, 250, 300, 400, 500, 600, 750, 900, 1100, 1300, 1600, 2000]),
     variants: [
       { slug: "rasen", label: "für Rasen", focus: "gleichmäßige Regnerüberdeckung als eigene Zone", factor: 15, check: "Regner müssen sich nach Systemvorgabe überdecken und dürfen Wege nicht unnötig bewässern." },
@@ -370,6 +416,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die verbleibende Beet- und Stellfläche ist eine geometrische Orientierung. Profile, Streben, Türschwenkbereich, Tische und Technik reduzieren sie im konkreten System.",
     verification: "Prüfe Fundament, Verankerung, Tür, Dachlüftung, Zuluft, Beschattung, Bewässerung, maximale Pflanzenhöhe und Wind- beziehungsweise Schneelasten am konkreten Standort.",
     limitation: "Die Flächenaufteilung ersetzt weder Kulturplan noch Statik, Fundament- oder Montagefreigabe. Pflanzabstände hängen von Sorte, Erziehung und Klima ab.",
+    application: "Vergleiche die verbleibende Beetfläche mit Innenmaß, Profilen, Türbereich, Lüftung, Arbeitshöhe und der geplanten Kulturführung.",
     scales: sharedDimensions,
     variants: [
       { slug: "tomaten", label: "für Tomaten", focus: "80 cm Mittelweg und hohe Kulturen", factor: .8, check: "Tomatenhöhe, Bindesystem und Dachlüftung gemeinsam einzeichnen." },
@@ -386,6 +433,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die Element- und Pfostenzahl ist ein Rasterrahmen. Pfostenbreite, Fugen, Halter, Eckausbildung und reale Montagebreite des Systems müssen anschließend eingesetzt werden.",
     verification: "Prüfe Grenzverlauf, zulässige Höhe, Windlast, Boden, Fundamente, Pfostenabstände, Korrosionsschutz, Torbeschläge und die Hersteller-Montagezeichnung.",
     limitation: "Die Rasterrechnung bemisst weder Windlast noch Pfosten oder Fundamente und entscheidet nicht über Grundstücksgrenze, Nachbarrecht oder örtlich zulässige Höhe.",
+    application: "Übertrage Elementzahl und Restmaß auf die Montagebreite des gewählten Systems und plane Ecken, Enden, Tore sowie Pfosten gesondert.",
     scales: lengths([3, 4, 5, 6, 7.5, 9, 10, 12, 15, 18, 20, 22.5, 25, 30, 35, 40, 50]),
     variants: [
       { slug: "180-module", label: "mit 1,80-m-Elementen", focus: "1,80 m reale Montagebreite", factor: 1.8, check: "Nennbreite und Montagebreite inklusive Fugen und Halter nicht verwechseln." },
@@ -402,6 +450,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die lichte Zielzone ist kein Außen- oder Dachmaß. Pfosten, Rinne, Dachüberstand und Tragwerk liegen außerhalb oder innerhalb unterschiedlicher Herstellerangaben.",
     verification: "Prüfe Maßzeichnung, lichte Höhe, Pfostenposition, Zufahrt, Entwässerung, Wind- und Schneelast, Fundamente, Brandschutzabstände und Genehmigung am Standort.",
     limitation: "Das Beispiel ersetzt keine Tragwerks-, Fundament-, Entwässerungs- oder Genehmigungsplanung. Maßgeblich sind Fahrzeug, vollständiges System und örtliche Regeln.",
+    application: "Prüfe die lichte Nutzungszone gegen Pfosten, Dachkante, Rinne, geöffnete Fahrzeugtüren und die tatsächliche Rangierlinie.",
     scales: dimensions([[1.7, 4], [1.75, 4.2], [1.8, 4.4], [1.82, 4.5], [1.85, 4.6], [1.88, 4.7], [1.9, 4.8], [1.92, 4.9], [1.95, 5], [1.98, 5.1], [2, 5.2], [2.02, 5.3], [2.05, 5.4], [2.08, 5.5], [2.1, 5.6], [2.15, 5.8], [2.2, 6]]),
     variants: [
       { slug: "kompakt", label: "für einen kompakten Stellplatz", focus: "55 cm Bedienraum je Fahrzeugseite", factor: .55, check: "Die engste Pfostenstelle muss bei geöffneten Spiegeln und Türen funktionieren." },
@@ -419,6 +468,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die Rechenmenge wird vor der Rundung auf ganze Pakete bestimmt. Ein Restpaket ist nicht automatisch Abfall, sondern kann für Reparatur und Musterabgleich sinnvoll sein.",
     verification: "Prüfe Restfeuchte, Ebenheit, Unterlage, Trittschall, Fußbodenheizungsfreigabe, Dehnfugen, Übergangsprofile, Sockelleisten und Lieferchargen als Gesamtsystem.",
     limitation: "Die Paketberechnung ist keine Verlegefreigabe. Untergrundprüfung, Herstellerangaben und vollständiger Bodenaufbau bleiben entscheidend.",
+    application: "Runde die Bestellmenge mit dem echten Paketinhalt und ergänze Unterlage, Sockelleisten, Übergänge sowie Reparaturreserve getrennt.",
     scales: standardAreas,
     variants: [
       { slug: "laminat-gerade", label: "mit Laminat, gerade verlegt", focus: "8 % Verschnitt für einen einfachen Raum", factor: 1.08, check: "Dielenrichtung und erste beziehungsweise letzte Reihe vor dem Öffnen der Pakete planen." },
@@ -435,6 +485,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Die Plattenzahl ist ein Mengenrahmen aus Beispielplatten. Plattenformat, Fugenversatz, Öffnungen, Anschlüsse und zulässige Wandhöhe bestimmen den echten Verlegeplan.",
     verification: "Prüfe Profile, Raster, Plattentyp, Lagen, Schraubenabstände, Dämmung, Türständer, Verstärkungen sowie Schall- und Brandschutz im vollständigen Systemnachweis.",
     limitation: "Die Mengenrechnung ersetzt keine Systemfreigabe oder Fachplanung für tragende, Schall-, Brand- und andere sicherheitsrelevante Anforderungen.",
+    application: "Übertrage den Plattenrahmen auf Format, Lagen, Fugenversatz und Zuschnittplan des vollständig freigegebenen Wandsystems.",
     scales: dimensions([[2, 2.5], [2.5, 2.5], [3, 2.5], [3.5, 2.5], [4, 2.5], [4.5, 2.5], [5, 2.5], [5.5, 2.5], [6, 2.5], [3, 2.75], [4, 2.75], [5, 2.75], [6, 2.75], [3, 3], [4, 3], [5, 3], [6, 3]]),
     variants: [
       { slug: "einlagig", label: "einlagig beplankt", focus: "eine Plattenlage je Wandseite", factor: 1, check: "Wandhöhe, Lasten und geforderte Eigenschaften müssen zur einlagigen Systemvariante passen." },
@@ -451,6 +502,7 @@ const clusters: readonly ProjectCluster[] = [
     interpretation: "Der Volumenrahmen ist ein transparenter Filter, keine bauphysikalische Leistungsberechnung. Liter-pro-Tag-Angaben sind nur bei den zugehörigen Temperatur- und Feuchtebedingungen vergleichbar.",
     verification: "Prüfe Einsatztemperatur, dokumentierte Flächen- oder Volumeneignung, Entfeuchtungsleistung unter passenden Bedingungen, Hygrostat, Geräusch, Leistungsaufnahme und sicheren Dauerablauf.",
     limitation: "Ein Entfeuchter beseitigt keine Leckage, Wärmebrücke oder andere bauliche Ursache. Anhaltende Feuchte und Schimmel benötigen fachliche Ursachenklärung.",
+    application: "Vergleiche den Volumenrahmen mit Leistung bei realer Temperatur, Hygrostat, Geräusch, Tank, Dauerablauf und dokumentierter Feuchtelast.",
     scales: standardAreas,
     variants: [
       { slug: "wohnraum", label: "für einen Wohnraum", focus: "2,50 m Deckenhöhe und regelmäßige Nutzung", factor: 2.5, check: "Geräusch, Luftstrom und Zielwert müssen im Alltag akzeptabel sein." },
@@ -462,96 +514,103 @@ const clusters: readonly ProjectCluster[] = [
   },
 ] as const;
 
-function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): ProjectExample {
+function makeExample(
+  cluster: ProjectCluster,
+  scale: Scale,
+  variant: Variant,
+  clusterIndex: number,
+  variantIndex: number,
+  scaleIndex: number,
+): ProjectExample {
   const topic = SEO_TOPICS.find((candidate) => candidate.slug === cluster.topicSlug);
   if (!topic) throw new Error(`Unbekannter SEO-Themenbereich: ${cluster.topicSlug}`);
   const calculation = cluster.calculate(scale, variant);
   const slug = `${cluster.topicSlug}-${scale.slug}-${variant.slug}`;
   const defaultSubject = `${cluster.noun} ${scale.label} ${variant.label}`;
   const profileLabel = `${scale.label} ${variant.label}`;
-  const scopedMeasurement = scopedStatement(cluster.measurement, `Diese Messhinweise gelten für „${profileLabel}“`);
-  const scopedInterpretation = scopedStatement(cluster.interpretation, `Diese Einordnung gilt für „${profileLabel}“`);
-  const scopedVerification = scopedStatement(cluster.verification, `Dieser Prüfumfang gilt für „${profileLabel}“`);
-  const scopedLimitation = scopedStatement(cluster.limitation, `Diese fachliche Grenze gilt für „${profileLabel}“`);
+  const scopedMeasurement = `${sentenceEnd(cluster.measurement)} Für „${defaultSubject}“ wird die Messung mit dem dokumentierten Nutzungsschwerpunkt ausgewertet.`;
+  const scopedInterpretation = `${sentenceEnd(cluster.interpretation)} Die Einordnung bezieht sich auf „${defaultSubject}“.`;
+  const scopedVerification = `${sentenceEnd(cluster.verification)} Der Prüfumfang gilt für „${defaultSubject}“.`;
+  const scopedLimitation = `${sentenceEnd(cluster.limitation)} Die fachliche Grenze bleibt bei „${defaultSubject}“ bestehen.`;
   const title = `${cluster.titleSubject?.(scale, variant) ?? defaultSubject}: konkretes Rechenbeispiel`;
   const path = `/ratgeber/projekte/${cluster.topicSlug}/${slug}/`;
-  const voice = editorialVariant(slug, 3);
+  const voice = (scaleIndex + variantIndex * 2 + clusterIndex) % 3;
   const variedSections = voice === 0
     ? [
-        { title: `Das Profil „${profileLabel}“ im Alltag`, paragraphs: [`${calculation.input}. Dieses Profil richtet den Blick auf ${variant.focus}. ${variant.check}`, `${scopedMeasurement} Halte Messdatum, Einheit und offene Annahmen für „${profileLabel}“ mit einer Skizze fest.`] },
-        { title: `Die Rechnung im Profil „${profileLabel}“`, paragraphs: [`${calculation.calculation}. ${calculation.resultSentence} Für „${profileLabel}“ ist das ein Arbeitsrahmen und keine technische Freigabe.`, `${scopedInterpretation} Die Rundung für „${profileLabel}“ auf reale Pakete, Elemente oder Systemgrößen folgt nach dem vollständigen Rechenschritt.`] },
-        { title: `Was sich im Profil „${profileLabel}“ verändert`, paragraphs: [`${calculation.alternative}. Die Gegenprobe für „${profileLabel}“ zeigt, wie empfindlich die Auswahl auf diese Annahme reagiert. Eine größere Lösung ist in diesem Profil nicht automatisch vernünftiger.`, `Ändere jeweils nur eine Eingabe und vergleiche anschließend Platz, Zugang, Montage, Betrieb und Wartung im Profil „${profileLabel}“ neu.`] },
-        { title: `Prüfung des Profils „${profileLabel}“`, paragraphs: [`${scopedVerification} ${variant.check}`, `Für „${profileLabel}“ entscheidet die ungünstigste Stelle zusammen mit dem späteren Wartungsfall. ${scopedLimitation}`] },
+        { title: `${defaultSubject} im Alltag einordnen`, paragraphs: [`${calculation.input}. Der praktische Schwerpunkt lautet „${variant.focus}“. ${variant.check}`, `${scopedMeasurement} Eine Skizze mit Messdatum, Einheit und offenen Annahmen hält die Ausgangslage nachvollziehbar fest.`] },
+        { title: `Rechenwert für ${defaultSubject}`, paragraphs: [`${sentenceEnd(calculation.calculation)} ${calculation.resultSentence} Der Wert ist ein Arbeitsrahmen und keine technische Freigabe.`, `${scopedInterpretation} ${cluster.application}`] },
+        { title: `Gegenprobe für ${defaultSubject}`, paragraphs: [`${sentenceEnd(calculation.alternative)} In der Rechnung für ${defaultSubject} zeigt die Abweichung, wie empfindlich die Auswahl auf diese Annahme reagiert. Eine größere Lösung ist deshalb nicht automatisch vernünftiger.`, `Ändere nur eine Eingabe und vergleiche Platz, Zugang, Montage, Betrieb und Wartung mit dem neuen Ergebnis.`] },
+        { title: `Technisch offene Punkte für ${defaultSubject}`, paragraphs: [`${scopedVerification} ${variant.check}`, `Die ungünstigste Stelle und der spätere Wartungsfall entscheiden über die Eignung. ${scopedLimitation}`] },
       ]
     : voice === 1
       ? [
-          { title: `Was im Profil „${profileLabel}“ ausschlaggebend ist`, paragraphs: [`${calculation.input}. Bei ${scale.label} kommt es besonders auf ${variant.focus} an. ${variant.check}`, `${scopedMeasurement} Zeichne für „${profileLabel}“ auch Anschlüsse und freie Bereiche ein.`] },
-          { title: `Der Rechenweg im Profil „${profileLabel}“`, paragraphs: [`${sentenceEnd(calculation.calculation)} ${calculation.resultSentence} Die Annahmen für „${profileLabel}“ bleiben sichtbar und mit eigenen Werten wiederholbar.`, `${scopedInterpretation} Der Planungsrahmen dieses Profils wird auf Lieferlängen, Pakete oder Systemgrenzen übertragen.`] },
-          { title: `Die Alternative zum Profil „${profileLabel}“`, paragraphs: [`${calculation.alternative}. Diese Alternative passt zu „${profileLabel}“ nur unter der genannten Bedingung. ${variant.check} ${scopedVerification}`, `Bewerte für „${profileLabel}“ Anschaffung, Vorbereitung, Montage, Nutzung und Reparatur als zusammenhängenden Ablauf. ${scopedLimitation}`] },
+          { title: `Wichtige Bedingungen für ${defaultSubject}`, paragraphs: [`${calculation.input}. Ausschlaggebend bleibt der Schwerpunkt „${variant.focus}“. ${variant.check}`, `${scopedMeasurement} Anschlüsse und freie Bereiche gehören ebenfalls in die Zeichnung.`] },
+          { title: `Rechnung und Rundung für ${defaultSubject}`, paragraphs: [`${sentenceEnd(calculation.calculation)} ${calculation.resultSentence} Die Annahmen bleiben sichtbar und mit eigenen Werten wiederholbar.`, `${scopedInterpretation} ${cluster.application}`] },
+          { title: `Alternative Rechnung für ${defaultSubject}`, paragraphs: [`${sentenceEnd(calculation.alternative)} Diese Alternative passt nur unter der genannten Bedingung. ${variant.check} ${scopedVerification}`, `Anschaffung, Vorbereitung, Montage, Nutzung und Reparatur gehören in einen gemeinsamen Vergleich. ${scopedLimitation}`] },
         ]
       : [
-          { title: `Das Profil „${profileLabel}“ im Überblick`, paragraphs: [`${calculation.input}. Der Schwerpunkt dieses Profils lautet „${variant.focus}“. ${variant.check}`, `${scopedMeasurement} Trenne für „${profileLabel}“ gemessene Werte von Schätzungen, damit die Beispielzahl nicht wie eine Zusage wirkt.`] },
-          { title: `Der Planungsrahmen im Profil „${profileLabel}“`, paragraphs: [`${sentenceEnd(calculation.calculation)} ${calculation.resultSentence}`, `${scopedInterpretation} Die Rechnung dieses Profils beantwortet eine Vorplanungsfrage, keine Produktfreigabe.`] },
-          { title: `Die Gegenrechnung im Profil „${profileLabel}“`, paragraphs: [`${calculation.alternative}. Bei „${profileLabel}“ wird so sichtbar, welche Annahme die Menge oder Auswahl verschiebt.`, `Vergleiche beide Varianten mit denselben Anforderungen und dokumentiere den Grund für den Puffer im Profil „${profileLabel}“.`] },
-          { title: `Offene Produktangaben im Profil „${profileLabel}“`, paragraphs: [`${scopedVerification} ${variant.check}`, `Auch die spätere Bedienung von „${profileLabel}“ gehört in die Prüfung. ${scopedLimitation}`] },
+          { title: `Ausgangsmaß und Nutzung für ${defaultSubject}`, paragraphs: [`${calculation.input}. Der Schwerpunkt lautet „${variant.focus}“. ${variant.check}`, `${scopedMeasurement} Gemessene Werte und Schätzungen bleiben getrennt, damit die Beispielzahl nicht wie eine Zusage wirkt.`] },
+          { title: `Auswahlrahmen für ${defaultSubject}`, paragraphs: [`${sentenceEnd(calculation.calculation)} ${calculation.resultSentence}`, `${scopedInterpretation} Die Rechnung beantwortet eine Vorplanungsfrage und keine Produktfreigabe.`] },
+          { title: `Empfindliche Annahme in der Rechnung für ${defaultSubject}`, paragraphs: [`${sentenceEnd(calculation.alternative)} In der Rechnung für ${defaultSubject} wird daran sichtbar, welche Annahme Menge oder Auswahl verschiebt.`, `Beide Varianten werden mit denselben Anforderungen verglichen. Der Grund für den Puffer gehört sichtbar neben den Rechenwert.`] },
+          { title: `Technische Grenzen für ${defaultSubject}`, paragraphs: [`${scopedVerification} ${variant.check}`, `Die spätere Bedienung gehört ebenfalls in die Prüfung. ${scopedLimitation}`] },
         ];
   const variedFaqs = voice === 0
     ? [
-        { question: `Ist der Planungswert für das Profil „${profileLabel}“ eine feste Empfehlung?`, answer: `Nein. Der Wert für „${profileLabel}“ entsteht aus den sichtbaren Annahmen. ${scopedVerification}` },
-        { question: `Welche Rolle spielt der Schwerpunkt „${variant.focus}“?`, answer: `${variant.check} Für „${profileLabel}“ lässt sich die Auswirkung mit einer zweiten Rechnung prüfen. ${calculation.alternative}` },
-        { question: `Was sollte ich für „${profileLabel}“ vor der Bestellung vergleichen?`, answer: `${scopedVerification} Vergleiche für „${profileLabel}“ außerdem Lieferumfang, Montage, Wartung und Ersatzteile.` },
+        { question: `Ist der Planungswert für ${scale.label} eine feste Empfehlung?`, answer: `Nein. Der Wert entsteht aus den sichtbaren Annahmen. ${scopedVerification}` },
+        { question: `Welche Rolle spielt der Schwerpunkt „${variant.focus}“?`, answer: `${variant.check} Die Auswirkung lässt sich mit einer zweiten Rechnung prüfen. ${calculation.alternative}` },
+        { question: `Was sollte vor der Bestellung verglichen werden?`, answer: `${scopedVerification} Vergleiche außerdem Lieferumfang, Montage, Wartung und Ersatzteile.` },
       ]
     : voice === 1
       ? [
-          { question: `Wie wird das Profil „${profileLabel}“ berechnet?`, answer: `${sentenceEnd(calculation.calculation)} ${calculation.resultSentence} Der Rahmen für „${profileLabel}“ muss mit dem konkreten Produkt und Standort abgeglichen werden.` },
-          { question: `Kann ich die Annahme aus „${profileLabel}“ übertragen?`, answer: `Bei „${profileLabel}“ geht das nur unter gleichbleibenden Voraussetzungen. ${scopedMeasurement} ${variant.check}` },
-          { question: `Welche Grenze bleibt bei „${profileLabel}“ offen?`, answer: `${scopedVerification} ${scopedLimitation}` },
+          { question: `Wie wird der Wert für ${scale.label} berechnet?`, answer: `${sentenceEnd(calculation.calculation)} ${calculation.resultSentence} Der Rahmen muss mit dem konkreten Produkt und Standort abgeglichen werden.` },
+          { question: `Lässt sich die Annahme auf andere Projekte übertragen?`, answer: `Das geht nur unter gleichbleibenden Voraussetzungen. ${scopedMeasurement} ${variant.check}` },
+          { question: `Welche fachliche Grenze bleibt offen?`, answer: `${scopedVerification} ${scopedLimitation}` },
         ]
       : [
-        { question: `Was zeigt dieses Beispiel für ${scale.label}?`, answer: `${calculation.input}. ${calculation.resultSentence} Die Rechnung bezieht ${variant.focus} ein.` },
-          { question: `Warum gibt es für „${profileLabel}“ eine Gegenprobe?`, answer: `${sentenceEnd(calculation.alternative)} Damit wird sichtbar, wie empfindlich der Rahmen dieses Profils auf eine geänderte Annahme reagiert.` },
-          { question: `Was muss für „${profileLabel}“ am Standort geprüft werden?`, answer: `${scopedVerification} ${variant.check} ${scopedLimitation}` },
+          { question: `Was zeigt dieses Beispiel für ${scale.label}?`, answer: `${calculation.input}. ${calculation.resultSentence} Die Rechnung bezieht den Schwerpunkt „${variant.focus}“ ein.` },
+          { question: `Warum gehört eine Gegenprobe zur Rechnung?`, answer: `${sentenceEnd(calculation.alternative)} Damit wird sichtbar, wie empfindlich der Rahmen auf eine geänderte Annahme reagiert.` },
+          { question: `Was muss am Standort geprüft werden?`, answer: `${scopedVerification} ${variant.check} ${scopedLimitation}` },
         ];
   const sectionsBeforeAdditions = [
     ...variedSections,
     ...(voice === 1
       ? [{
-          title: `Die Unterlagen zum Profil „${profileLabel}“`,
+          title: `Unterlagen für ${defaultSubject} zusammenführen`,
           paragraphs: [
-            `Speichere für „${profileLabel}“ Messung, Rechenweg und Produktdaten gemeinsam. ${variant.check}`,
-            `${scopedVerification} So bleibt nachvollziehbar, welche Annahme für dieses Profil maßgeblich war.`,
+            `Speichere Messung, Rechenweg und Produktdaten gemeinsam. ${variant.check}`,
+            `${scopedVerification} So bleibt nachvollziehbar, welche Annahme für ${scale.label} maßgeblich war.`,
           ],
         }]
       : []),
   ];
   const editorialAdditions = voice === 0
     ? [
-        `Für das Profil „${profileLabel}“ bleibt der Wert an die genannten Bedingungen gebunden. Ein anderes Maß oder eine andere Nutzung von „${profileLabel}“ braucht eine eigene Rechnung.`,
-        `Die Gegenprobe im Profil „${profileLabel}“ zeigt, welche Annahme die Auswahl am stärksten verschiebt. Halte die Abweichung für „${profileLabel}“ neben dem Ausgangswert fest.`,
-        `Für „${profileLabel}“ bleibt die Prüfung am konkreten Standort offen. ${scopedLimitation} ${variant.check}`,
-        `Für die Auswahl in diesem Profil ist außerdem wichtig, ob ${variant.focus} im tatsächlichen Ablauf ausreichend berücksichtigt wurde. Ergänze diese Prüfung für „${profileLabel}“ neben den reinen Maßangaben.`,
-        `Der Rechenweg für „${profileLabel}“ endet nicht beim ausgewiesenen Planungswert. Vergleiche ihn mit Lieferumfang, Montageweg und späterem Betrieb, bevor du für dieses Profil eine Systemgröße oder Paketanzahl festlegst.`,
-        `${sentenceEnd(calculation.alternative)} Dieser Rechenweg zeigt, ob Eingabe und Ergebnis für „${profileLabel}“ angepasst werden müssen. Bewahre beide Stände dieses Profils auf, damit die Änderung nachvollziehbar bleibt.`,
-        `Ein Foto, eine Skizze oder ein Messprotokoll ergänzt die Zahlen des Profils „${profileLabel}“ und beantwortet spätere Rückfragen zu diesem Standort schneller.`,
+        `Die Rechnung verwendet ${calculation.input}. Ein anderes Maß oder eine andere Nutzung verlangt eine vollständige neue Rechnung.`,
+        `${sentenceEnd(calculation.alternative)} Die Abweichung zur Hauptrechnung zeigt, welche Annahme die Auswahl am stärksten verschiebt.`,
+        `${scopedLimitation} ${variant.check}`,
+        `Neben den reinen Maßangaben muss der Schwerpunkt „${variant.focus}“ im tatsächlichen Ablauf ausreichend berücksichtigt sein.`,
+        `Vergleiche den für ${defaultSubject} ausgewiesenen Wert mit Lieferumfang, Montageweg und späterem Betrieb, bevor eine Systemgröße oder Paketanzahl feststeht.`,
+        `Bewahre Hauptrechnung und Gegenprobe gemeinsam auf. So bleibt eine spätere Anpassung von Eingabe und Ergebnis nachvollziehbar.`,
+        `Ein Foto, eine Skizze oder ein Messprotokoll ergänzt die Zahlen für ${defaultSubject} und beantwortet spätere Rückfragen zum Standort schneller.`,
       ]
     : voice === 1
       ? [
-          `Der Planungswert des Profils „${profileLabel}“ beschreibt keine allgemeine Produktklasse. Ändern sich Maß, Zugang oder Nutzung von „${profileLabel}“, braucht der Rechenweg einen neuen Stand.`,
-          `Für den späteren Ablauf von „${profileLabel}“ zählt die Erreichbarkeit bei Reinigung, Nachjustierung und Reparatur. ${variant.check}`,
-          `Bewahre Eingaben, Quelle und Rechenstand von „${profileLabel}“ gemeinsam auf. ${scopedVerification}`,
-          `Die Angabe ${calculation.input} beantwortet nur die erste Planungsfrage. Im Profil „${profileLabel}“ kommen die Bedingungen hinzu, unter denen das gewählte Produkt tatsächlich betrieben oder montiert wird.`,
-          `Ein Angebot passt in diesem Profil nur, wenn ${variant.focus} mit den technischen Unterlagen übereinstimmt. Fehlt diese Angabe bei „${profileLabel}“, sollte sie vor dem Kauf geklärt werden.`,
-          `Die spätere Kontrolle von „${profileLabel}“ wird leichter, wenn der ausgewiesene Planungswert neben der Gegenprobe steht. So wird sichtbar, wie viel Spielraum die Annahme in diesem Profil wirklich lässt.`,
-          `Ergänze den Rechenstand des Profils „${profileLabel}“ um ein Messdatum und die verwendete Einheit. Damit wandern alte Werte von „${profileLabel}“ nicht unbemerkt in eine neue Bestellung.`,
+          `Der Planungswert für ${defaultSubject} beschreibt keine allgemeine Produktklasse. Ändern sich Maß, Zugang oder Nutzung, braucht der Rechenweg einen neuen Stand.`,
+          `Für den späteren Ablauf zählt die Erreichbarkeit bei Reinigung, Nachjustierung und Reparatur. ${variant.check}`,
+          `Bewahre Eingaben, Quelle und Rechenstand gemeinsam auf. ${scopedVerification}`,
+          `Die Angabe ${calculation.input} beantwortet nur die erste Planungsfrage. Hinzu kommen die Bedingungen für Betrieb und Montage.`,
+          `Ein Angebot für ${defaultSubject} passt nur, wenn der Schwerpunkt „${variant.focus}“ in den technischen Unterlagen abgedeckt ist. Eine fehlende Angabe gehört vor dem Kauf geklärt.`,
+          `Der Planungswert neben der Gegenprobe macht sichtbar, wie viel Spielraum die Annahme wirklich lässt.`,
+          `Messdatum und verwendete Einheit für ${defaultSubject} verhindern, dass alte Werte unbemerkt in eine neue Bestellung wandern.`,
         ]
       : [
-          `Dieses Rechenbeispiel zum Profil „${profileLabel}“ macht eine Annahme sichtbar, die im Alltag leicht übersehen wird. Prüfe diese Annahme für „${profileLabel}“ vor der Bestellung am eigenen Standort.`,
-          `Die passende Größe im Profil „${profileLabel}“ ergibt sich nicht allein aus der Endzahl. Bei „${profileLabel}“ gehören Lieferumfang, Aufbau, Zugang und spätere Pflege zur praktischen Prüfung.`,
-          `${scopedLimitation} Für die nächste Rechnung zu „${profileLabel}“ werden die veränderte Eingabe und ihre Auswirkung dokumentiert.`,
-          `Der wichtigste Prüfpunkt des Profils liegt in ${variant.focus}. Eine Maßangabe für „${profileLabel}“ allein zeigt noch nicht, ob der geplante Ablauf funktioniert.`,
-          `${calculation.resultSentence} Nutze diesen Wert für „${profileLabel}“ als Ausgangspunkt für das Gespräch mit Händler oder Fachbetrieb. Die technische Unterlage muss die passende Leistung oder Menge für dieses Profil erklären.`,
-          `Falls sich ${calculation.input} im eigenen Projekt unterscheidet, sollte der komplette Vergleich neu beginnen. Eine einzelne Korrektur bei „${profileLabel}“ würde den geänderten Rechenweg verdecken.`,
-          `Notiere für das Profil „${profileLabel}“ auch die Entscheidung gegen naheliegende Alternativen. Diese Begründung zu „${profileLabel}“ hilft später bei geänderten Rahmenbedingungen oder Preisen.`,
+          `Das Rechenbeispiel zu ${defaultSubject} macht eine Annahme sichtbar, die im Alltag leicht übersehen wird. Prüfe sie vor der Bestellung am eigenen Standort.`,
+          `Die passende Größe ergibt sich nicht allein aus der Endzahl. Lieferumfang, Aufbau, Zugang und spätere Pflege gehören zur praktischen Prüfung.`,
+          `${scopedLimitation} Veränderte Eingaben und ihre Auswirkungen werden in der nächsten Rechnung dokumentiert.`,
+          `Der wichtigste Prüfpunkt liegt im Schwerpunkt „${variant.focus}“. Eine Maßangabe allein zeigt noch nicht, ob der geplante Ablauf funktioniert.`,
+          `${calculation.resultSentence} Nutze diesen Wert als Ausgangspunkt für das Gespräch mit Händler oder Fachbetrieb. Die technische Unterlage muss die passende Leistung oder Menge erklären.`,
+          `Wenn die eigene Eingabe von „${calculation.input}“ abweicht, beginnt der Vergleich mit den geänderten Werten neu. Eine einzelne Korrektur würde den Rechenweg verdecken.`,
+          `Notiere für ${defaultSubject} auch die Entscheidung gegen naheliegende Alternativen. Diese Begründung hilft später bei geänderten Rahmenbedingungen oder Preisen.`,
         ];
   const finalSections = sectionsBeforeAdditions.map((section, index) => ({
     ...section,
@@ -561,89 +620,76 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
         if (paragraphIndex % 2 === 0) groups.push([paragraph]);
         else groups[groups.length - 1].push(paragraph);
         return groups;
-      }, []).map((paragraphs, paragraphIndex) => {
-        const contextualParagraph = paragraphs.join(" ")
-          .replace(/\bin diesem Profil\b/g, `im Profil „${profileLabel}“`)
-          .replace(/\bdieses Profils\b/g, `des Profils „${profileLabel}“`)
-          .replace(/\bdiesem Profil\b/g, `dem Profil „${profileLabel}“`)
-          .replace(/\bdieses Profil\b/g, `das Profil „${profileLabel}“`);
-        if (contextualParagraph.includes(profileLabel)) return contextualParagraph;
-        const contextLines = [
-          `Damit ist der Ausgangspunkt des Profils „${profileLabel}“ klar beschrieben.`,
-          `Diese Messung gehört zur dokumentierten Grundlage des Profils „${profileLabel}“.`,
-          `Die Rechnung verwendet genau die Annahmen des Profils „${profileLabel}“.`,
-          `Der Planungswert gilt unter den Bedingungen des Profils „${profileLabel}“.`,
-          `Die Gegenrechnung zeigt den Spielraum des Profils „${profileLabel}“.`,
-          `Beide Varianten werden für das Profil „${profileLabel}“ mit denselben Anforderungen geprüft.`,
-          `Die technische Kontrolle bezieht sich auf das Profil „${profileLabel}“.`,
-          `Für das Profil „${profileLabel}“ bleibt die Herstellerangabe verbindlich.`,
-          `Der Kostenrahmen gehört zur konkreten Planung des Profils „${profileLabel}“.`,
-          `Diese Grenze wird im Profil „${profileLabel}“ ausdrücklich dokumentiert.`,
-          `Die Standortprüfung entscheidet über die Eignung im Profil „${profileLabel}“.`,
-          `Der Datenstand des Profils „${profileLabel}“ bleibt damit nachvollziehbar.`,
-        ];
-        return `${contextualParagraph} ${contextLines[(index * 2 + paragraphIndex) % contextLines.length]}`;
-      }),
+      }, []).map((paragraphs) => paragraphs.join(" ")),
   }));
   const finalFaqs = variedFaqs.length >= 4
     ? variedFaqs
-    : [...variedFaqs, { question: `Wie dokumentiere ich das Ergebnis für „${profileLabel}“?`, answer: `Halte Eingabe, Rechnung, Gegenprobe und offene Grenzen für das Profil „${profileLabel}“ gemeinsam fest. ${scopedVerification}` }];
+    : [...variedFaqs, { question: `Wie dokumentiere ich das Ergebnis für ${scale.label}?`, answer: `Halte Eingabe, Rechnung, Gegenprobe und offene Grenzen gemeinsam fest. ${scopedVerification}` }];
   const contextualFaqs = finalFaqs.map((faq) => ({
     ...faq,
-    answer: `${sentenceEnd(faq.answer)} Für das Profil „${scale.label} ${variant.label}“ bleibt diese Prüfung an die Bedingungen vor Ort gebunden.`,
+    answer: sentenceEnd(faq.answer),
   }));
-  const projectIntro = voice === 0
-    ? `Das Profil „${profileLabel}“ verbindet im Bereich ${cluster.noun} die Eingabe mit dem nachvollziehbaren Rechenweg und den noch offenen Standortfragen. Die Beispielrechnung zu „${profileLabel}“ lässt sich direkt mit eigenen Messwerten abgleichen.`
-    : voice === 1
-      ? `Im Profil „${profileLabel}“ kommt es auf mehr als eine Endzahl an. Es verbindet Maß, Nutzung, Rechnung und technische Prüfung im Bereich ${cluster.noun}. Die Annahmen zu „${profileLabel}“ bleiben mit eigenen Daten kontrollierbar.`
-      : `Die Planung des Profils „${profileLabel}“ beginnt mit einem konkreten Szenario. Die Angaben zu „${profileLabel}“ zeigen den Planungsrahmen und die Punkte, die in einem echten Angebot noch geprüft werden müssen.`;
+  const projectIntros = [
+    `Das Maß ${scale.label} verbindet in diesem Beispiel die Eingabe mit dem Rechenweg und den noch offenen Standortfragen. Eigene Messwerte lassen sich direkt neben die Annahme zum Schwerpunkt „${variant.focus}“ stellen.`,
+    `Dieses Beispiel ordnet „${profileLabel}“ als konkreten Planungsfall ein. Maß, Nutzung und technische Prüfung bleiben getrennt sichtbar, damit die Endzahl nicht für eine Produktzusage gehalten wird.`,
+    `Der Planungsfall „${profileLabel}“ beginnt mit einer nachvollziehbaren Eingabe. Der Rechenweg zeigt, wie sich der Schwerpunkt „${variant.focus}“ auf Mengenrahmen oder Auswahl auswirkt.`,
+    `Im Mittelpunkt stehen ${scale.label} und die Frage, wie der Schwerpunkt „${variant.focus}“ praktisch berücksichtigt wird. Die Rechnung lässt sich mit eigenen Daten wiederholen und macht offene Produktangaben sichtbar.`,
+    `${scale.label} allein reichen für eine belastbare Auswahl nicht aus. Dieses Beispiel ergänzt den Nutzungsschwerpunkt, die Gegenprobe und die technischen Grenzen des konkreten Projekts.`,
+    `Der Rechenfall „${profileLabel}“ zeigt nicht nur einen Endwert. Er verbindet Messung, Gegenrechnung und die Prüfung, ob das Ergebnis unter realen Bedingungen tragfähig bleibt.`,
+  ];
+  const projectIntro = projectIntros[(scaleIndex + variantIndex + clusterIndex) % projectIntros.length];
   const projectTakeaway = voice === 0
-    ? `${calculation.resultSentence} Für „${profileLabel}“ dient der Wert als Arbeitsrahmen zum Abgleich mit Standort, Datenblatt, Lieferumfang und Wartungszugang. Eine technische Freigabe für „${profileLabel}“ entsteht daraus nicht.`
-    : voice === 1
-      ? `${calculation.resultSentence} Im Profil „${profileLabel}“ wird die Auswahl nur tragfähig, wenn Standort, Produktunterlage und späterer Betrieb dieselben Bedingungen abbilden.`
-      : `${calculation.resultSentence} Für „${profileLabel}“ hilft die Zahl bei der Vorauswahl. Bei „${profileLabel}“ bleiben reale Maße, vollständiger Lieferumfang und Systemgrenzen entscheidend.`;
+    ? `${calculation.resultSentence} ${variant.check}`
+    : `${variant.check} ${calculation.resultSentence}`;
   const projectChecklist = voice === 0
     ? [
-        `Messwerte für ${scale.label} festhalten: ${calculation.input}.`,
-        `Nutzung und Schwerpunkt für „${profileLabel}“ dokumentieren: ${variant.focus}.`,
+        `Messwerte für ${scale.label} festhalten. Die Rechnung verwendet „${calculation.input}“.`,
+        `Den Nutzungsschwerpunkt „${variant.focus}“ dokumentieren.`,
         scopedMeasurement,
-        `Rechenschritt für „${profileLabel}“ mit eigenen Werten nachvollziehen: ${calculation.calculation}.`,
-        `Gegenprobe für „${profileLabel}“ mit einer abweichenden Annahme prüfen: ${calculation.alternative}.`,
+        `Den Rechenschritt mit eigenen Werten nachvollziehen. ${sentenceEnd(calculation.calculation)}`,
+        `Eine Gegenprobe für ${defaultSubject} mit einer abweichenden Annahme berechnen.`,
         variant.check,
         scopedVerification,
-        `Ergebnis und offene Grenzen für „${profileLabel}“ speichern: ${calculation.result}.`,
+        `Ergebnis und offene Grenzen speichern. ${calculation.resultSentence}`,
       ]
     : voice === 1
       ? [
-          `Ausgangslage des Profils „${profileLabel}“ aufnehmen: ${calculation.input}.`,
+          `Die Ausgangslage für ${scale.label} aufnehmen. Die Rechnung beginnt mit „${calculation.input}“.`,
           scopedMeasurement,
-          `Rechenweg und Gegenprobe für „${profileLabel}“ getrennt notieren: ${calculation.calculation} ${calculation.alternative}`,
-          `Die technische Bedingung von „${profileLabel}“ abgleichen: ${variant.check}`,
-          `Zugang, Montage und spätere Wartung im Profil „${profileLabel}“ mitplanen.`,
+          `Rechenweg und Gegenprobe für ${defaultSubject} getrennt notieren. ${sentenceEnd(calculation.calculation)}`,
+          `Die technische Bedingung abgleichen. ${variant.check}`,
+          `Zugang, Montage und spätere Wartung für ${defaultSubject} mitplanen.`,
           scopedVerification,
-          `Offene Annahmen zu „${profileLabel}“ mit Datum sichern: ${calculation.result}.`,
+          `Offene Annahmen mit Datum sichern. ${calculation.resultSentence}`,
         ]
       : [
-          `Standort und Maß für ${scale.label} erfassen: ${calculation.input}.`,
-          `Den praktischen Schwerpunkt von „${profileLabel}“ prüfen: ${variant.focus}.`,
-          `Messung und Einheit für „${profileLabel}“ mit Datum ergänzen. ${scopedMeasurement}`,
-          `Die Rechnung für „${profileLabel}“ an den eigenen Werten durchspielen: ${calculation.calculation}.`,
-          `Alternative Annahme danebenlegen: ${calculation.alternative}.`,
+          `Standort und Maß für ${scale.label} erfassen. Die Rechnung verwendet „${calculation.input}“.`,
+          `Den praktischen Schwerpunkt „${variant.focus}“ prüfen.`,
+          `Messung und Einheit mit Datum ergänzen. ${scopedMeasurement}`,
+          `Die Rechnung an den eigenen Werten durchspielen. ${sentenceEnd(calculation.calculation)}`,
+          `Eine alternative Annahme für ${defaultSubject} als Gegenprobe danebenlegen.`,
           variant.check,
-          `${scopedVerification} Offene Angaben zu „${profileLabel}“ nicht stillschweigend ergänzen.`,
-          `Den Planungsstand von „${profileLabel}“ für später sichern: ${calculation.result}.`,
+          `${scopedVerification} Offene Angaben nicht stillschweigend ergänzen.`,
+          `Den Planungsstand für später sichern. ${calculation.resultSentence}`,
         ];
   const projectExampleIntro = voice === 0
-    ? `Die Rechenkette des Profils „${profileLabel}“ verbindet Eingabe, Ergebnis und Gegenprobe. Für „${profileLabel}“ dient sie als Arbeitsblatt mit eigenen Werten.`
+    ? `Die Rechenkette verbindet Eingabe, Ergebnis und Gegenprobe für ${scale.label}. Sie dient als Arbeitsblatt mit eigenen Werten.`
     : voice === 1
-      ? `Im Profil „${profileLabel}“ stehen die drei Rechenschritte in einem Zusammenhang. Übertrage diese Schritte für „${profileLabel}“ nur mit passenden Maßen und Einheiten.`
-      : `Am Profil „${profileLabel}“ lässt sich nachvollziehen, wie der Planungsrahmen entsteht. Der Wert für „${profileLabel}“ bleibt an die genannten Bedingungen gebunden.`;
+      ? `Die drei Rechenschritte gehören zusammen. Übertrage sie für ${scale.label} nur mit passenden Maßen und Einheiten.`
+      : `An diesem Beispiel lässt sich nachvollziehen, wie der Planungsrahmen entsteht. Der Wert bleibt an den Schwerpunkt „${variant.focus}“ gebunden.`;
   const base = {
     topicSlug: cluster.topicSlug,
     variantSlug: variant.slug,
     variantLabel: variant.label,
     scaleSlug: scale.slug,
     qualitySignature: `${cluster.topicSlug}|${scale.values.join("x")}|${variant.slug}|${calculation.result}`,
+    directoryCard: {
+      title: editorializeText(cluster.titleSubject?.(scale, variant) ?? defaultSubject),
+      result: editorializeText(calculation.result),
+      alternative: editorializeText(calculation.countercheck),
+      check: editorializeText(variant.check),
+      linkLabel: "Rechnung ansehen",
+    },
     slug,
     title,
     description: `${defaultSubject} planen: Eingaben, Rechenweg, Ergebnis, Alternative, Checkliste und Grenzen für den deutschen Markt.`,
@@ -652,63 +698,17 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
     takeaway: projectTakeaway,
     plannerHref: topic.plannerHref,
     plannerLabel: topic.plannerLabel,
-    sections: [
-      {
-        title: `Ausgangslage: ${scale.label} ${variant.label}`,
-        paragraphs: [
-          `${calculation.input}. Der besondere Schwerpunkt dieses Profils lautet: ${variant.focus}. Diese Kombination verändert nicht nur das Endergebnis, sondern auch die Reihenfolge der Prüfung. Deshalb wird sie als eigenes Projektszenario behandelt und nicht als austauschbares Keyword auf einer allgemeinen Übersichtsseite.`,
-          `${cluster.measurement} Für dieses Profil gilt zusätzlich: ${variant.check} Halte Messdatum, Einheit und erkennbare Unsicherheiten fest. Schon kleine Abweichungen können sich nach Paket-, Element- oder Kapazitätsrundung deutlich auf die Auswahl auswirken.`,
-        ],
-      },
-      {
-        title: "Rechenweg ohne versteckte Annahmen",
-        paragraphs: [
-          `Der offen gelegte Rechenweg lautet: ${calculation.calculation}. Daraus folgt als Planungsrahmen: ${calculation.result}. Erst nach der vollständigen Rechnung wird auf eine sinnvolle Produkt-, Paket- oder Systemgröße gerundet. So bleibt erkennbar, welcher Anteil gemessen, welcher berechnet und welcher als Reserve ergänzt wurde.`,
-          `${cluster.interpretation} Der Wert sollte deshalb nicht isoliert in eine Shop-Suche kopiert werden. Übertrage deine realen Maße, prüfe die ungünstigste Stelle und dokumentiere, warum der gewählte Puffer für genau dieses Projekt notwendig ist.`,
-        ],
-      },
-      {
-        title: "Alternative und Sensitivität des Ergebnisses",
-        paragraphs: [
-          `${calculation.alternative}. Dieser Gegenwert zeigt, wie empfindlich die Planung auf nur eine geänderte Annahme reagiert. Eine größere Zahl ist nicht automatisch sicherer: Überdimensionierung kann Platz, Anschaffung, Material, Energie oder Wartung unnötig erhöhen, während eine zu knappe Wahl Reserven an der falschen Stelle streicht.`,
-          `Ändere deshalb immer nur einen Parameter und rechne danach vollständig neu. Vergleiche anschließend beide Varianten mit denselben Muss-Kriterien: verfügbare Fläche, Zugang, Betriebsbedingungen, Montage, Folgekosten und Wartung. Die Variante mit dem nachvollziehbaren Alltagsnutzen ist belastbarer als die Variante mit dem größten Werbewert.`,
-        ],
-      },
-      {
-        title: "So wird aus dem Rechenwert eine belastbare Auswahl",
-        paragraphs: [
-          `${cluster.verification} Speichere die verwendete technische Unterlage zusammen mit dem Rechenstand. Wenn Produktdaten nur als Marketingtext vorliegen oder die Prüfbedingungen fehlen, ist die betreffende Angabe noch kein belastbares Auswahlkriterium.`,
-          `Prüfe zum Schluss das Zusammenspiel: Passt die ungünstigste Abmessung, bleibt Bedienung möglich, sind Montage und Wartung zugänglich und gelten die Annahmen auch unter realen deutschen Standortbedingungen? ${cluster.limitation} Diese offene Grenze ist Teil des Ergebnisses und kein Kleingedrucktes.`,
-        ],
-      },
-    ],
+    sections: finalSections,
     comparison: {
       caption: `${cluster.noun} ${scale.label}: Ergebnis und Gegenprobe`,
-      columns: ["Prüfpunkt", "Dieses Profil", "Vor der Auswahl verifizieren"],
+      columns: ["Prüfpunkt", "Dieser Rechenfall", "Vor der Auswahl verifizieren"],
       rows: calculation.rows,
     },
     checklist: projectChecklist,
-    faqs: [
-      {
-        question: `Ist ${calculation.result} eine verbindliche Empfehlung?`,
-        answer: `Nein. Das Ergebnis ist ein nachvollziehbarer Planungsrahmen aus den sichtbaren Eingaben dieses Profils. Es hilft, unpassende Größen früh auszusortieren. Verbindlich werden Maße, Leistung, Aufbau oder Einsatzbereich erst durch die Unterlagen des konkreten Produkts, die Bedingungen am Standort und gegebenenfalls eine fachliche Prüfung.`,
-      },
-      {
-        question: "Warum gibt es für jede Kombination eine eigene Seite?",
-        answer: `Weil ${scale.label} und der Schwerpunkt „${variant.focus}“ gemeinsam einen anderen Rechenweg, andere Rundungen und andere Prüfgrenzen erzeugen. Die Seite soll keine allgemeine Suchphrase wiederholen, sondern eine konkrete Rechenreferenz liefern, die direkt mit den eigenen Messwerten verglichen werden kann.`,
-      },
-      {
-        question: "Welche Eingabe verändert das Ergebnis am stärksten?",
-        answer: `Meist wirkt die Kombination aus gemessener Basisgröße und dem ausdrücklich ausgewiesenen Szenariofaktor am stärksten. In diesem Profil lautet die Basis ${calculation.input}; der Schwerpunkt ist ${variant.focus}. Ändere diese Werte einzeln und führe die Rundung erst am Ende aus, damit der Einfluss sichtbar bleibt.`,
-      },
-      {
-        question: "Was muss ich vor einer Bestellung noch kontrollieren?",
-        answer: `${cluster.verification} Kontrolliere außerdem Lieferumfang, verfügbare Ersatz- und Ergänzungsteile, Montagebedingungen und Rückgabemöglichkeiten. ${variant.check} ${cluster.limitation}`,
-      },
-    ],
+    faqs: contextualFaqs,
     sources: [...cluster.sources],
     example: {
-      title: `Rechenkette des Profils „${profileLabel}“`,
+      title: `Rechenkette für ${scale.label} ${variant.label}`,
       intro: projectExampleIntro,
       steps: [
         { label: "Eingabe", value: calculation.input },
@@ -716,7 +716,7 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
         { label: "Gegenprobe", value: calculation.alternative },
       ],
       result: calculation.result,
-      note: `Szenario: ${variant.focus}. ${scopedLimitation}`,
+      note: `Der Schwerpunkt liegt auf „${variant.focus}“. ${scopedLimitation}`,
     },
     limitation: scopedLimitation,
     relatedLinks: [
@@ -726,11 +726,13 @@ function makeExample(cluster: ProjectCluster, scale: Scale, variant: Variant): P
       { label: "Methodik von PassendPlanen", href: "/methodik/", description: "Nachlesen, wie Annahmen, Grenzen und Produktdaten behandelt werden." },
     ],
   } satisfies ProjectExample;
-  return { ...base, sections: finalSections, faqs: contextualFaqs };
+  return base;
 }
 
-const BASE_PROJECT_EXAMPLES: readonly ProjectExample[] = clusters.flatMap((cluster) =>
-  cluster.variants.flatMap((variant) => cluster.scales.map((scale) => makeExample(cluster, scale, variant))),
+const BASE_PROJECT_EXAMPLES: readonly ProjectExample[] = clusters.flatMap((cluster, clusterIndex) =>
+  cluster.variants.flatMap((variant, variantIndex) =>
+    cluster.scales.map((scale, scaleIndex) => makeExample(cluster, scale, variant, clusterIndex, variantIndex, scaleIndex)),
+  ),
 );
 
 export const PROJECT_EXAMPLES: readonly ProjectExample[] = BASE_PROJECT_EXAMPLES.map((example) => {

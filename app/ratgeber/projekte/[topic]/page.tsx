@@ -88,15 +88,17 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         const examples = directory.examples.filter((example) => example.variantSlug === variant.slug);
         return <section className="directory-section directory-section--cluster project-example-group" key={variant.slug}>
           <div className="section-heading">
-            <div><p className="eyebrow">17 Größenprofile</p><h2>{topic.name} {variant.label}</h2></div>
-            <p>Alle Beispiele enthalten Eingabe, Berechnung, Gegenprobe, Checkliste, FAQ, Quellen und den direkten Rechner-Einstieg.</p>
+            <div><p className="eyebrow">{examples.length} Rechenfälle</p><h2>{topic.name} {variant.label}</h2></div>
+            <p>{examples[0]?.directoryCard.check}</p>
           </div>
           <div className="project-example-grid">
             {examples.map((example) => <article className="project-example-card" key={example.slug}>
-              <p className="eyebrow">Konkretes Rechenprofil</p>
-              <h3>{example.title.split(":")[0]}</h3>
-              <p>{example.takeaway}</p>
-              <Link className="text-link" href={`/ratgeber/projekte/${example.topicSlug}/${example.slug}/`}>Beispiel öffnen →</Link>
+              <h3>{example.directoryCard.title}</h3>
+              <div className="project-example-card__facts">
+                <p><span>Rechenwert</span>{example.directoryCard.result}</p>
+                <p><span>Gegenprobe</span>{example.directoryCard.alternative}</p>
+              </div>
+              <Link className="text-link" href={`/ratgeber/projekte/${example.topicSlug}/${example.slug}/`}>{example.directoryCard.linkLabel} →</Link>
             </article>)}
           </div>
         </section>;

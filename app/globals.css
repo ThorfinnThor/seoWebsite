@@ -477,8 +477,11 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .project-example-group { content-visibility: auto; contain-intrinsic-size: 1100px; }
 .project-example-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
 .project-example-card { display: flex; min-width: 0; padding: 26px; flex-direction: column; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
-.project-example-card h3 { margin: 8px 0 12px; font-size: 1.35rem; overflow-wrap: anywhere; }
+.project-example-card h3 { margin: 0 0 18px; font-size: 1.35rem; overflow-wrap: anywhere; }
 .project-example-card > p:not(.eyebrow) { color: var(--muted); font-size: .9rem; }
+.project-example-card__facts { display: grid; gap: 12px; margin-bottom: 20px; }
+.project-example-card__facts p { margin: 0; color: var(--muted); font-size: .9rem; }
+.project-example-card__facts span { display: block; margin-bottom: 4px; color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .project-example-card .text-link { margin-top: auto; }
 .guide-cta { display: flex; padding: 65px max(24px,calc((100vw - 1272px)/2)); align-items: center; justify-content: space-between; gap: 40px; color: #fff; background: var(--green); }
 .guide-cta h2 { max-width: 720px; margin-bottom: 10px; font-size: clamp(2rem,4vw,3.4rem); }
