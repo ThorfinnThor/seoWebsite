@@ -39,20 +39,24 @@ function entry(path: string, lastModified: string): SitemapEntry {
   };
 }
 
+function coreLastModified(path: string) {
+  return path === "/nutzungshinweise" ? "2026-08-30" : CONTENT_UPDATED_AT;
+}
+
 const corePaths = [
   ...CORE_PATHS,
   ...SEO_TOPICS.map((topic) => `/ratgeber/thema/${topic.slug}`),
   ...PROJECT_EXAMPLE_DIRECTORIES.map((directory) => `/ratgeber/projekte/${directory.topicSlug}`),
   "/ratgeber/vergleiche",
   ...DECISION_GUIDE_DIRECTORIES.map((directory) => `/ratgeber/vergleiche/${directory.topicSlug}`),
-  ...(legalContactComplete ? ["/impressum", "/datenschutz"] : []),
+  ...(legalContactComplete ? ["/impressum", "/datenschutz", "/nutzungshinweise"] : []),
 ];
 
 export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
   {
     id: "core",
     label: "Kernseiten und Themenverzeichnisse",
-    entries: corePaths.map((path) => entry(path, CONTENT_UPDATED_AT)),
+    entries: corePaths.map((path) => entry(path, coreLastModified(path))),
   },
   {
     id: "redaktionelle-ratgeber",

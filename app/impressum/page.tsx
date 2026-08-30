@@ -1,6 +1,7 @@
 import { createPageMetadata } from "@/lib/metadata";
 import { LegalPage } from "@/components/legal/LegalPage";
 import { LEGAL, legalContactComplete } from "@/lib/legal";
+import Link from "next/link";
 
 export const metadata = createPageMetadata({
   title: "Impressum",
@@ -31,7 +32,7 @@ export default function ImpressumPage() {
       </section>
       <section>
         <h2>Hinweis zum Angebot</h2>
-        <p>PassendPlanen stellt redaktionelle Informationen und deterministische Planungshilfen bereit. Ergebnisse ersetzen keine amtliche, technische, medizinische oder sonstige fachliche Prüfung.</p>
+        <p>PassendPlanen stellt redaktionelle Informationen und deterministische Planungshilfen bereit. Ergebnisse ersetzen keine amtliche, technische, medizinische oder sonstige fachliche Prüfung. Einzelheiten zur eigenverantwortlichen Nutzung und zum gesetzlichen Haftungsrahmen stehen in den <Link href="/nutzungshinweise/">Nutzungshinweisen</Link>.</p>
       </section>
     </LegalPage>
   );
