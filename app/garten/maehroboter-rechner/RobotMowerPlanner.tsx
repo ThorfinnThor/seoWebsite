@@ -15,6 +15,7 @@ import { recommendRobotMowers } from "@/lib/robot-mower/recommend";
 import type { RobotMowerCatalog } from "@/lib/robot-mower/types";
 import { CatalogMatchList } from "@/components/product/CatalogMatchList";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
+import { useProductResultTracking } from "@/lib/analytics";
 
 const INITIAL: RobotMowerInput = {
   areas: [{ id: "area-1", label: "Hauptrasen", lengthM: 20, widthM: 15, excludedAreaM2: 25 }],
@@ -55,6 +56,7 @@ export function RobotMowerPlanner() {
   const [catalog, setCatalog] = useState<RobotMowerCatalog | null>(null);
   useEffect(() => { const controller = new AbortController(); loadRobotMowerCatalog(controller.signal).then(setCatalog).catch(() => setCatalog(null)); return () => controller.abort(); }, []);
   const matches = catalog && plan && parsed.success ? recommendRobotMowers(catalog, parsed.data, plan) : [];
+  useProductResultTracking({ planner: "robot-mower", ready: step === 4 && catalog !== null, matchCount: matches.length });
 
   useEffect(() => {
     if (step > 1) document.getElementById("calculator-heading")?.focus();
@@ -86,7 +88,7 @@ export function RobotMowerPlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Mähroboter-Flächencheck" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="robot-mower" step={step} totalSteps={4} title={TITLES[step - 1]} label="Mähroboter-Flächencheck" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="room-list">{input.areas.map((area, index) => <article className="room-editor" key={area.id}>
         <div className="room-editor-heading"><div><span>Teilfläche {index + 1}</span><input className="text-input" aria-label={`Name der Rasenfläche ${index + 1}`} value={area.label} maxLength={40} onChange={(event) => updateArea(area.id, { label: event.target.value })} /></div>{input.areas.length > 1 && <button type="button" onClick={() => removeArea(area.id)} aria-label={`${area.label} entfernen`}>Entfernen</button>}</div>
@@ -122,7 +124,7 @@ export function RobotMowerPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor der Geräteauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}{plan.setupTasks.map((task) => <li key={task}>{task}</li>)}<li>Randgestaltung, Stufen, Wasserflächen, öffentliche Wege, Kinder- und Tierbereiche sowie Aufbewahrung nach Anleitung und örtlicher Situation planen.</li></ul></div>
       <PrintResultAction />
-      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Mähroboter</h3><p>Nur redaktionell freigegebene Produkte erscheinen hier. Feed-Daten mit fehlenden Flächen- oder Passagenwerten bleiben bis zur Prüfung ausgeschlossen.</p><AffiliateDisclosure /><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Mähroboter. Die Ecovacs-Feeddaten sind erfasst und warten auf die manuelle Bestätigung der technischen Werte." /></section>
+      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Mähroboter</h3><p>Nur redaktionell freigegebene Produkte erscheinen hier. Feed-Daten mit fehlenden Flächen- oder Passagenwerten bleiben bis zur Prüfung ausgeschlossen.</p><AffiliateDisclosure /><CatalogMatchList planner="robot-mower" matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Mähroboter. Die Ecovacs-Feeddaten sind erfasst und warten auf die manuelle Bestätigung der technischen Werte." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}

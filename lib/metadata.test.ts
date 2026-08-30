@@ -11,7 +11,21 @@ describe("createPageMetadata", () => {
 
     expect(metadata).toMatchObject({
       alternates: { canonical: "/garten/testseite/" },
-      openGraph: { type: "website", url: "/garten/testseite/" },
+      openGraph: { type: "website", url: "/garten/testseite/", images: [{ url: "/social/passendplanen.png", width: 1200, height: 630 }] },
+      twitter: { card: "summary_large_image", images: ["/social/passendplanen.png"] },
+    });
+  });
+
+  it("ordnet Themenseiten einer passenden Social Preview zu", () => {
+    const metadata = createPageMetadata({
+      title: "Mähroboter für kleine Flächen",
+      description: "Ein konkreter Flächencheck.",
+      path: "/garten/maehroboter-flaeche-berechnen/",
+    });
+
+    expect(metadata).toMatchObject({
+      openGraph: { images: [{ url: "/social/robot-mower.png" }] },
+      twitter: { images: ["/social/robot-mower.png"] },
     });
   });
 

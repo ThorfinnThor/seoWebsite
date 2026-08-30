@@ -78,7 +78,7 @@ export function IrrigationPlanner() {
   }
 
   const titles = ["Welche Flächen sollen bewässert werden?", "Was liefert dein Wasseranschluss?", "Wie soll das System gesteuert werden?", "Dein erster Komponentenplan"];
-  return <CalculatorShell step={step} totalSteps={4} title={titles[step - 1]} label="Bewässerungsplaner" onReset={reset}>
+  return <CalculatorShell planner="irrigation" step={step} totalSteps={4} title={titles[step - 1]} label="Bewässerungsplaner" onReset={reset}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two">
         <NumberField id="lawn" label="Rasenfläche" value={input.lawnAreaM2} unit="m²" min={0} max={10000} error={fieldErrors.lawnAreaM2} onChange={(value) => update("lawnAreaM2", value)} />

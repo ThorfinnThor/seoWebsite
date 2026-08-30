@@ -1,4 +1,7 @@
+"use client";
+
 import type { AnchorHTMLAttributes, PropsWithChildren } from "react";
+import { trackAnalyticsEvent } from "@/lib/analytics";
 import { addAwinClickRefs, shortProductRef } from "@/lib/catalog/tracking";
 
 interface AffiliateLinkProps extends PropsWithChildren, Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
@@ -6,9 +9,10 @@ interface AffiliateLinkProps extends PropsWithChildren, Omit<AnchorHTMLAttribute
   productId: string;
   pageSlug?: string;
   verticalRef?: string;
+  merchantName?: string;
 }
 
-export function AffiliateLink({ href, productId, pageSlug, verticalRef = "gardenhouse", children, ...props }: AffiliateLinkProps) {
+export function AffiliateLink({ href, productId, pageSlug, verticalRef = "garden-house", merchantName, children, onClick, ...props }: AffiliateLinkProps) {
   const isAwinUrl = (() => {
     try {
       const hostname = new URL(href).hostname.toLowerCase();
@@ -24,7 +28,15 @@ export function AffiliateLink({ href, productId, pageSlug, verticalRef = "garden
     clickref4: pageSlug,
   }) : href;
   return (
-    <a href={trackedUrl} rel={`${isAwinUrl ? "sponsored " : ""}noopener noreferrer`} target="_blank" {...props}>
+    <a href={trackedUrl} rel="sponsored noopener noreferrer" target="_blank" onClick={(event) => {
+      trackAnalyticsEvent("affiliate_click", {
+        planner: verticalRef,
+        merchant: merchantName ?? "unknown",
+        product_ref: shortProductRef(productId),
+        network: isAwinUrl ? "awin" : "direct",
+      });
+      onClick?.(event);
+    }} {...props}>
       {children}
     </a>
   );

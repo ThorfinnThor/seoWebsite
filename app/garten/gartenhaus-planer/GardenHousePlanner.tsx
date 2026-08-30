@@ -13,6 +13,7 @@ import { calculateRequirements } from "@/lib/garden-house/rules";
 import { explainNoMatches, recommendGardenHouses } from "@/lib/garden-house/recommend";
 import { GardenHouseInputSchema, type GardenHouseCatalog, type GardenHouseInput } from "@/lib/garden-house/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
+import { useProductResultTracking } from "@/lib/analytics";
 
 const INITIAL_INPUT: GardenHouseInput = {
   availableWidthCm: 400,
@@ -50,6 +51,7 @@ export function GardenHousePlanner() {
   const requirements = validatedInput ? calculateRequirements(validatedInput) : null;
   const results = catalog && validatedInput ? recommendGardenHouses(catalog, validatedInput) : [];
   const explanations = catalog && validatedInput ? explainNoMatches(catalog, validatedInput) : [];
+  useProductResultTracking({ planner: "garden-house", ready: step === 5 && status === "ready", matchCount: results.length });
 
   useEffect(() => {
     if (step > 1) document.getElementById("calculator-heading")?.focus();
@@ -112,7 +114,7 @@ export function GardenHousePlanner() {
 
   const titles = ["Wie viel Platz steht zur Verfügung?", "Was soll ins Gartenhaus?", "Welche Ausführung passt zu dir?", "Prüfe deinen Planungsrahmen", "Dein Ergebnis"];
   return (
-      <CalculatorShell step={step} totalSteps={5} title={titles[step - 1]} label="Gartenhaus-Planer" intro={step === 1 ? <p>Gib nur die Fläche an, die du baulich und rechtlich tatsächlich nutzen kannst.</p> : undefined} onReset={reset}>
+      <CalculatorShell planner="garden-house" step={step} totalSteps={5} title={titles[step - 1]} label="Gartenhaus-Planer" intro={step === 1 ? <p>Gib nur die Fläche an, die du baulich und rechtlich tatsächlich nutzen kannst.</p> : undefined} onReset={reset}>
         {step === 1 && <div className="form-step">
           <div className="field-grid field-grid--two">
             <NumberField id="width" label="Verfügbare Breite" value={input.availableWidthCm} min={150} max={2000} unit="cm" error={fieldErrors.availableWidthCm} onChange={(value) => update("availableWidthCm", value)} />

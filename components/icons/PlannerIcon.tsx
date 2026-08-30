@@ -1,13 +1,16 @@
 import type { PlannerIconName } from "@/lib/planners";
+import type { CSSProperties } from "react";
 
 type PlannerIconProps = {
   name: PlannerIconName;
   className?: string;
+  style?: CSSProperties;
 };
 
-export function PlannerIcon({ name, className = "planner-icon-svg" }: PlannerIconProps) {
+export function PlannerIcon({ name, className = "planner-icon-svg", style }: PlannerIconProps) {
   const common = {
     className,
+    style,
     viewBox: "0 0 48 48",
     fill: "none",
     stroke: "currentColor",

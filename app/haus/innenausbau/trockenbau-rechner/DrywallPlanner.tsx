@@ -66,7 +66,7 @@ export function DrywallPlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Trockenbauwand-Rechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="drywall" step={step} totalSteps={4} title={TITLES[step - 1]} label="Trockenbauwand-Rechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two"><NumberField id="wall-length" label="Wandlänge" value={input.wallLengthM} unit="m" min={1} max={50} step="0.1" error={fieldErrors.wallLengthM} onChange={(value) => update("wallLengthM", value)} /><NumberField id="wall-height" label="Wandhöhe" value={input.wallHeightM} unit="m" min={1.8} max={6} step="0.05" error={fieldErrors.wallHeightM} onChange={(value) => update("wallHeightM", value)} /></div>
       <div className="field-grid field-grid--two"><NumberField id="opening-area" label="Summe der Tür- und Fensteröffnungen" value={input.openingsAreaM2} unit="m²" min={0} max={50} step="0.1" error={fieldErrors.openingsAreaM2} onChange={(value) => update("openingsAreaM2", value)} /><NumberField id="opening-count" label="Anzahl der Öffnungen" value={input.openingCount} unit="Stk." min={0} max={12} integer error={fieldErrors.openingCount} onChange={(value) => update("openingCount", value)} /></div>

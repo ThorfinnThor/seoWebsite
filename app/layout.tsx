@@ -3,6 +3,7 @@ import Link from "next/link";
 import { Analytics } from "@vercel/analytics/react";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { SITE } from "@/lib/site";
+import { SOCIAL_IMAGE_SIZE } from "@/lib/social-images";
 import "./globals.css";
 
 const googleSiteVerification = process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION?.trim();
@@ -21,8 +22,9 @@ export const metadata: Metadata = {
     title: "PassendPlanen – Haus- und Gartenprojekte besser planen",
     description: SITE.description,
     url: "/",
+    images: [{ url: "/social/passendplanen.png", ...SOCIAL_IMAGE_SIZE, alt: "PassendPlanen für Haus und Garten" }],
   },
-  twitter: { card: "summary", title: "PassendPlanen – Haus- und Gartenprojekte besser planen", description: SITE.description },
+  twitter: { card: "summary_large_image", title: "PassendPlanen – Haus- und Gartenprojekte besser planen", description: SITE.description, images: ["/social/passendplanen.png"] },
   category: "Haus und Garten",
   ...(googleSiteVerification ? { verification: { google: googleSiteVerification } } : {}),
 };

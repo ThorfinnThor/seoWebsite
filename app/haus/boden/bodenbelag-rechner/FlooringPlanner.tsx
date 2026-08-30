@@ -15,6 +15,7 @@ import { recommendFlooring } from "@/lib/flooring/recommend";
 import type { FlooringCatalog } from "@/lib/flooring/types";
 import { CatalogMatchList } from "@/components/product/CatalogMatchList";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
+import { useProductResultTracking } from "@/lib/analytics";
 
 const INITIAL: FlooringInput = {
   rooms: [{ id: "room-1", label: "Raum 1", lengthM: 5, widthM: 4 }],
@@ -58,6 +59,7 @@ export function FlooringPlanner() {
   const [catalog, setCatalog] = useState<FlooringCatalog | null>(null);
   useEffect(() => { const controller = new AbortController(); loadFlooringCatalog(controller.signal).then(setCatalog).catch(() => setCatalog(null)); return () => controller.abort(); }, []);
   const matches = catalog && parsed.success ? recommendFlooring(catalog, parsed.data) : [];
+  useProductResultTracking({ planner: "flooring", ready: step === 4 && catalog !== null, matchCount: matches.length });
 
   useEffect(() => {
     if (step > 1) document.getElementById("calculator-heading")?.focus();
@@ -89,7 +91,7 @@ export function FlooringPlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Bodenbelag-Mengenrechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="flooring" step={step} totalSteps={4} title={TITLES[step - 1]} label="Bodenbelag-Mengenrechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="room-list">{input.rooms.map((room, index) => <article className="room-editor" key={room.id}>
         <div className="room-editor-heading"><div><span>Teilfläche {index + 1}</span><input className="text-input" aria-label={`Name der Teilfläche ${index + 1}`} value={room.label} maxLength={40} onChange={(event) => updateRoom(room.id, { label: event.target.value })} /></div>{input.rooms.length > 1 && <button type="button" onClick={() => removeRoom(room.id)} aria-label={`${room.label} entfernen`}>Entfernen</button>}</div>
@@ -127,7 +129,7 @@ export function FlooringPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Verlegung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Chargengleichheit, Sockelleistenprofile, Übergänge, Abschlussprofile und eine mögliche Paketreserve für spätere Reparaturen separat entscheiden.</li></ul></div>
       <PrintResultAction />
-      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bodenbeläge</h3><p>Die Auswahl berücksichtigt Bodenart und – wenn redaktionell bestätigt – Fußbodenheizung und Feuchtraumfreigabe.</p><AffiliateDisclosure /><CatalogMatchList matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Bodenbeläge. Die LaminatDEPOT-Feeddaten sind erfasst; Paketinhalt und Maße werden vor Veröffentlichung geprüft." /></section>
+      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bodenbeläge</h3><p>Die Auswahl berücksichtigt Bodenart und – wenn redaktionell bestätigt – Fußbodenheizung und Feuchtraumfreigabe.</p><AffiliateDisclosure /><CatalogMatchList planner="flooring" matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Bodenbeläge. Die LaminatDEPOT-Feeddaten sind erfasst; Paketinhalt und Maße werden vor Veröffentlichung geprüft." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}

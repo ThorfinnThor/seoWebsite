@@ -8,7 +8,8 @@
   },
   "scripts": {
     "dev": "next dev",
-    "build": "npm run generate:sitemaps && next build",
+    "build": "npm run generate:social && npm run generate:sitemaps && next build",
+    "generate:social": "node --import tsx scripts/generate-social-images.tsx",
     "generate:sitemaps": "node --import tsx scripts/generate-segmented-sitemaps.ts",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",

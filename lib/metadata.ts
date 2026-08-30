@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { absoluteUrl, SITE } from "@/lib/site";
+import { SOCIAL_IMAGE_SIZE, socialImageForPath } from "@/lib/social-images";
 
 export const CONTENT_UPDATED_AT = "2026-08-29";
 
@@ -26,6 +27,8 @@ export function createPageMetadata({
 }: PageMetadataInput): Metadata {
   const canonical = canonicalPath(path);
   const article = kind === "article";
+  const socialImage = socialImageForPath(canonical);
+  const socialImages = [{ url: socialImage, ...SOCIAL_IMAGE_SIZE, alt: `${title} bei ${SITE.name}` }];
 
   return {
     title,
@@ -40,6 +43,7 @@ export function createPageMetadata({
       title,
       description,
       url: canonical,
+      images: socialImages,
       ...(article
         ? {
             modifiedTime: CONTENT_UPDATED_AT,
@@ -47,6 +51,6 @@ export function createPageMetadata({
           }
         : {}),
     },
-    twitter: { card: "summary", title, description },
+    twitter: { card: "summary_large_image", title, description, images: [socialImage] },
   };
 }

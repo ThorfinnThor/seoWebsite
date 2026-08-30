@@ -27,7 +27,7 @@ export function ProductCard({ match, position }: { match: GardenHouseMatch; posi
         <ProductReasons reasons={match.reasons} />
         <div className="offer-row">
           <div><p className="merchant">Angebot von {offer.merchantName}</p><PriceDisplay offer={offer} /></div>
-          <AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id}>Beim Händler ansehen <span aria-hidden="true">↗</span></AffiliateLink>
+          <AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id} verticalRef="garden-house" merchantName={offer.merchantName}>Beim Händler ansehen <span aria-hidden="true">↗</span></AffiliateLink>
         </div>
         <p className="freshness">Preis und Verfügbarkeit: Stand {new Intl.DateTimeFormat("de-DE", { dateStyle: "medium" }).format(new Date(offer.updatedAt))}. Bitte beim Händler prüfen.</p>
       </div>

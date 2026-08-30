@@ -68,7 +68,7 @@ export function CarportPlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Carport-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="carport" step={step} totalSteps={4} title={TITLES[step - 1]} label="Carport-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <fieldset className="choice-group"><legend>Anzahl der Stellplätze</legend><div className="radio-grid radio-grid--two"><Choice name="vehicle-count" label="Ein Fahrzeug" detail="ein lichter Stellbereich" checked={input.vehicleCount === 1} onChange={() => update("vehicleCount", 1)} /><Choice name="vehicle-count" label="Zwei Fahrzeuge" detail="gemeinsamer Doppelcarport" checked={input.vehicleCount === 2} onChange={() => update("vehicleCount", 2)} /></div></fieldset>
       <div className="field-grid field-grid--three"><NumberField id="vehicle-length" label="Fahrzeuglänge" value={input.vehicleLengthM} unit="m" min={3} max={8} step="0.05" error={fieldErrors.vehicleLengthM} onChange={(value) => update("vehicleLengthM", value)} /><NumberField id="vehicle-width" label="Fahrzeugbreite" value={input.vehicleWidthM} unit="m" min={1.4} max={3} step="0.05" error={fieldErrors.vehicleWidthM} onChange={(value) => update("vehicleWidthM", value)} /><NumberField id="vehicle-height" label="Fahrzeughöhe" value={input.vehicleHeightM} unit="m" min={1.2} max={4} step="0.05" error={fieldErrors.vehicleHeightM} onChange={(value) => update("vehicleHeightM", value)} /></div>

@@ -12,6 +12,7 @@ concurrency:
 jobs:
   sync:
     runs-on: ubuntu-latest
+    timeout-minutes: 45
     env:
       AWIN_FEED_URLS_JSON: ${{ secrets.AWIN_FEED_URLS_JSON }}
       FEED_SYNC_SCHEDULED: ${{ github.event_name == 'schedule' && 'true' || 'false' }}
@@ -21,39 +22,35 @@ jobs:
         with:
           fetch-depth: 0
       - name: Check feed configuration
-        id: feed
         shell: bash
         run: |
           if [ -z "$AWIN_FEED_URLS_JSON" ]; then
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Affiliate feed secret is not configured; skipping sync."
-            echo "### Affiliate-Feed-Sync deaktiviert" >> "$GITHUB_STEP_SUMMARY"
-            echo "Das Secret AWIN_FEED_URLS_JSON fehlt. Es wurden keine Produktdaten geladen oder geändert." >> "$GITHUB_STEP_SUMMARY"
-          elif [ "$FEED_SYNC_SCHEDULED" = "true" ] && [ "$AWIN_FEED_SCHEDULE_ENABLED" != "true" ]; then
-            echo "enabled=false" >> "$GITHUB_OUTPUT"
-            echo "Scheduled affiliate feed sync is not enabled; skipping sync."
-            echo "### Automatischer Affiliate-Feed-Sync pausiert" >> "$GITHUB_STEP_SUMMARY"
-            echo "Setze die Repository-Variable AWIN_FEED_SCHEDULE_ENABLED erst nach einem erfolgreichen manuellen Test auf true." >> "$GITHUB_STEP_SUMMARY"
-          else
-            echo "enabled=true" >> "$GITHUB_OUTPUT"
+            echo "::error::Das Secret AWIN_FEED_URLS_JSON fehlt."
+            exit 1
           fi
+          if [ "$FEED_SYNC_SCHEDULED" = "true" ] && [ "$AWIN_FEED_SCHEDULE_ENABLED" != "true" ]; then
+            echo "::error::Der Zeitplan ist nicht freigegeben. Setze AWIN_FEED_SCHEDULE_ENABLED auf true."
+            exit 1
+          fi
+          node -e 'const value=JSON.parse(process.env.AWIN_FEED_URLS_JSON); if (!value || typeof value !== "object") throw new Error("AWIN_FEED_URLS_JSON muss eine JSON-Liste oder ein JSON-Objekt enthalten.")'
+          echo "### Affiliate-Feed-Konfiguration geprüft" >> "$GITHUB_STEP_SUMMARY"
+          echo "Secret vorhanden, JSON lesbar und Zeitplan freigegeben." >> "$GITHUB_STEP_SUMMARY"
       - uses: actions/setup-node@v6
-        if: steps.feed.outputs.enabled == 'true'
         with:
           node-version: 24
           cache: npm
       - run: npm ci
-        if: steps.feed.outputs.enabled == 'true'
       - run: npm run sync:products
-        if: steps.feed.outputs.enabled == 'true'
       - name: Verify merchant and affiliate targets
         run: npm run verify:merchant-links -- --write
-        if: steps.feed.outputs.enabled == 'true'
       - name: Verify catalogs and production export
         run: npm run verify
-        if: steps.feed.outputs.enabled == 'true'
+      - name: Record successful feed health check
+        shell: bash
+        run: |
+          echo "### Affiliate-Feed-Sync vollständig ausgeführt" >> "$GITHUB_STEP_SUMMARY"
+          echo "Produktimport, Linkprüfung und vollständiger Produktions-Build waren erfolgreich." >> "$GITHUB_STEP_SUMMARY"
       - name: Commit catalog changes
-        if: steps.feed.outputs.enabled == 'true'
         shell: bash
         run: |
           if git diff --quiet -- public/data data/review; then

@@ -55,7 +55,7 @@ export function TerracePlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Terrassendielen-Rechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="terrace" step={step} totalSteps={4} title={TITLES[step - 1]} label="Terrassendielen-Rechner" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two">
         <NumberField id="terrace-length" label="Länge der Terrasse" value={input.terraceLengthM} unit="m" min={1} max={30} step="0.1" error={fieldErrors.terraceLengthM} onChange={(value) => update("terraceLengthM", value)} />

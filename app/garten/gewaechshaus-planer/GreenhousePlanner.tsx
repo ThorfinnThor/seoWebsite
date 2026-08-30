@@ -66,7 +66,7 @@ export function GreenhousePlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Gewächshaus-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="greenhouse" step={step} totalSteps={4} title={TITLES[step - 1]} label="Gewächshaus-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two"><NumberField id="greenhouse-length" label="Außenlänge" value={input.lengthM} unit="m" min={1.5} max={30} step="0.1" error={fieldErrors.lengthM} onChange={(value) => update("lengthM", value)} /><NumberField id="greenhouse-width" label="Außenbreite" value={input.widthM} unit="m" min={1.2} max={12} step="0.1" error={fieldErrors.widthM} onChange={(value) => update("widthM", value)} /></div>
       <NumberField id="greenhouse-door" label="Bekannte lichte Türbreite" value={input.doorWidthCm} unit="cm" min={50} max={200} error={fieldErrors.doorWidthCm} onChange={(value) => update("doorWidthCm", value)} />

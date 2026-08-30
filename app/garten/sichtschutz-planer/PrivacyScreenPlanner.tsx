@@ -60,7 +60,7 @@ export function PrivacyScreenPlanner() {
     goToStep(Math.min(4, step + 1));
   }
 
-  return <CalculatorShell step={step} totalSteps={4} title={TITLES[step - 1]} label="Sichtschutz- und Zaunfeld-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
+  return <CalculatorShell planner="privacy-screen" step={step} totalSteps={4} title={TITLES[step - 1]} label="Sichtschutz- und Zaunfeld-Planer" onReset={() => { resetInput(); setStep(1); resetValidation(); }}>
     {step === 1 && <div className="form-step">
       <div className="field-grid field-grid--two">
         <NumberField id="screen-length" label="Länge der geraden Strecke" value={input.totalLengthM} unit="m" min={1} max={100} step="0.1" error={fieldErrors.totalLengthM} onChange={(value) => update("totalLengthM", value)} />

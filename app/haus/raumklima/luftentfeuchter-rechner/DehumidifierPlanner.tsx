@@ -16,6 +16,7 @@ import { recommendDehumidifiers } from "@/lib/dehumidifier/recommend";
 import { calculateDehumidifierRequirements } from "@/lib/dehumidifier/rules";
 import { DehumidifierInputSchema, type DehumidifierCatalog, type DehumidifierInput } from "@/lib/dehumidifier/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
+import { useProductResultTracking } from "@/lib/analytics";
 
 const INITIAL: DehumidifierInput = { roomType: "basement", areaM2: 25, ceilingHeightM: 2.3, approximateTemperatureC: 14, humiditySeverity: "moderate", laundryDrying: false, continuousDrainPossible: true, noisePriority: "medium", budgetMaxEur: 300 };
 const ROOMS = [["basement", "Keller"], ["living", "Wohnraum"], ["bedroom", "Schlafzimmer"], ["bathroom", "Bad"], ["laundry", "Waschraum"], ["garage", "Garage"], ["other", "Anderer Raum"]] as const;
@@ -36,6 +37,7 @@ export function DehumidifierPlanner() {
   const validatedInput = validation.success ? validation.data : null;
   const requirements = validatedInput ? calculateDehumidifierRequirements(validatedInput) : null;
   const matches = catalog && validatedInput ? recommendDehumidifiers(catalog, validatedInput) : [];
+  useProductResultTracking({ planner: "dehumidifier", ready: step === 4 && status === "ready", matchCount: matches.length });
 
   useEffect(() => { if (step > 1) document.getElementById("calculator-heading")?.focus(); }, [step]);
 
@@ -94,7 +96,7 @@ export function DehumidifierPlanner() {
   }
 
   const titles = ["Welcher Raum soll entfeuchtet werden?", "Wie hoch ist die Belastung?", "Welche Eigenschaften sind wichtig?", "Dein Auswahlrahmen"];
-  return <CalculatorShell step={step} totalSteps={4} title={titles[step - 1]} label="Luftentfeuchter-Rechner" onReset={reset}>
+  return <CalculatorShell planner="dehumidifier" step={step} totalSteps={4} title={titles[step - 1]} label="Luftentfeuchter-Rechner" onReset={reset}>
     {step === 1 && <div className="form-step">
       <div className="field"><label htmlFor="room">Raumtyp</label><select id="room" value={input.roomType} onChange={(event) => update("roomType", event.target.value as DehumidifierInput["roomType"])}>{ROOMS.map(([value, label]) => <option value={value} key={value}>{label}</option>)}</select></div>
       <div className="field-grid field-grid--two compact-fields">
@@ -123,7 +125,7 @@ export function DehumidifierPlanner() {
       {status === "error" && <State title="Produktdaten konnten nicht geladen werden." text="Deine Berechnung bleibt erhalten. Du kannst den Katalog erneut laden."><button type="button" className="button button--secondary" onClick={showResults}>Erneut versuchen</button></State>}
       {status === "ready" && catalog?.products.length === 0 && <State title="Der geprüfte Gerätekatalog wird noch aufgebaut." text="Dein Auswahlrahmen ist vollständig. Modelle erscheinen erst nach manueller Prüfung ihrer Herstellerangaben." />}
       {status === "ready" && catalog && catalog.products.length > 0 && matches.length === 0 && <State title="Kein geprüftes Modell erfüllt alle Kriterien." text="Ändere Budget, Ablaufanforderung oder Raumdaten bewusst – wir lockern keine Kriterien im Hintergrund." />}
-      {matches.length > 0 && <><AffiliateDisclosure /><div className="product-list">{matches.map(({ product, offer, reasons }, index) => <article className="product-card" key={product.id}><div className="rank-badge">#{index + 1}</div><ProductImage src={offer.imageUrl} alt={product.name} /><div className="product-content"><p className="product-brand">{product.brand ?? "Luftentfeuchter"}</p><h3>{product.name}</h3><dl className="product-facts"><div><dt>Fläche</dt><dd>{product.maxRecommendedAreaM2 ?? "–"} m²</dd></div><div><dt>Ablauf</dt><dd>{product.continuousDrain ? "ja" : "nein"}</dd></div><div><dt>Geräusch</dt><dd>{product.noiseDb ?? "–"} dB</dd></div><div><dt>Leistung</dt><dd>{product.powerW ?? "–"} W</dd></div></dl><ProductReasons reasons={reasons} /><div className="offer-row"><PriceDisplay offer={offer} /><AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id} verticalRef="dehumidifier">Beim Händler ansehen ↗</AffiliateLink></div></div></article>)}</div></>}
+      {matches.length > 0 && <><AffiliateDisclosure /><div className="product-list">{matches.map(({ product, offer, reasons }, index) => <article className="product-card" key={product.id}><div className="rank-badge">#{index + 1}</div><ProductImage src={offer.imageUrl} alt={product.name} /><div className="product-content"><p className="product-brand">{product.brand ?? "Luftentfeuchter"}</p><h3>{product.name}</h3><dl className="product-facts"><div><dt>Fläche</dt><dd>{product.maxRecommendedAreaM2 ?? "–"} m²</dd></div><div><dt>Ablauf</dt><dd>{product.continuousDrain ? "ja" : "nein"}</dd></div><div><dt>Geräusch</dt><dd>{product.noiseDb ?? "–"} dB</dd></div><div><dt>Leistung</dt><dd>{product.powerW ?? "–"} W</dd></div></dl><ProductReasons reasons={reasons} /><div className="offer-row"><PriceDisplay offer={offer} /><AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id} verticalRef="dehumidifier" merchantName={offer.merchantName}>Beim Händler ansehen ↗</AffiliateLink></div></div></article>)}</div></>}
       <PrintResultAction />
     </div>}
     <div className="calculator-actions">

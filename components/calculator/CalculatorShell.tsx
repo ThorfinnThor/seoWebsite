@@ -1,15 +1,37 @@
-import type { PropsWithChildren, ReactNode } from "react";
+"use client";
+
+import { useEffect, useRef, type PropsWithChildren, type ReactNode } from "react";
+import { trackAnalyticsEvent } from "@/lib/analytics";
+import type { PlannerId } from "@/lib/planners";
 
 export function CalculatorShell({
   step,
   totalSteps,
   title,
+  planner,
   intro,
   label = "Projektplaner",
   onReset,
   children,
-}: PropsWithChildren<{ step: number; totalSteps: number; title: string; intro?: ReactNode; label?: string; onReset?: () => void }>) {
+}: PropsWithChildren<{ step: number; totalSteps: number; title: string; planner: PlannerId; intro?: ReactNode; label?: string; onReset?: () => void }>) {
   const progress = Math.round((step / totalSteps) * 100);
+  const previousStep = useRef(step);
+
+  useEffect(() => {
+    const previous = previousStep.current;
+    if (previous === 1 && step > 1) {
+      trackAnalyticsEvent("planner_started", { planner, total_steps: totalSteps });
+    }
+    if (previous < totalSteps && step === totalSteps) {
+      trackAnalyticsEvent("planner_completed", { planner, total_steps: totalSteps });
+    }
+    previousStep.current = step;
+  }, [planner, step, totalSteps]);
+
+  function reset() {
+    trackAnalyticsEvent("planner_reset", { planner, step });
+    onReset?.();
+  }
   return (
     <section className="calculator-shell" aria-labelledby="calculator-heading">
       <div className="calculator-progress" role="progressbar" aria-label={`Schritt ${step} von ${totalSteps}`} aria-valuemin={1} aria-valuemax={totalSteps} aria-valuenow={step}>
@@ -20,7 +42,7 @@ export function CalculatorShell({
         <p className="eyebrow">{label}</p>
         <h2 id="calculator-heading" className="focus-target" tabIndex={-1}>{title}</h2>
         {intro && <div className="calculator-intro">{intro}</div>}
-        {onReset && <div className="session-note"><span>Eingaben bleiben nur in diesem Browser-Tab gespeichert.</span><button type="button" onClick={onReset}>Zurücksetzen</button></div>}
+        {onReset && <div className="session-note"><span>Eingaben bleiben nur in diesem Browser-Tab gespeichert.</span><button type="button" onClick={reset}>Zurücksetzen</button></div>}
         {children}
       </div>
     </section>
