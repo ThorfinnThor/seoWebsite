@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-28T19:46:31.649Z",
+  "generatedAt": "2026-08-31T08:39:36.338Z",
   "products": [
     {
       "brand": "UHU",
@@ -13,7 +13,7 @@
         "mpn": "47015",
         "name": "UHU Luftentfeuchter Nachfüllbeutel Sparpack, 3 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.073Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.383Z"
       },
       "gtin": "4026700470154",
       "id": "gtin:4026700470154",
@@ -42,7 +42,7 @@
         "mpn": "47040",
         "name": "UHU Luftentfeuchter Nachfüllbeutel Sparpack, 3 x 1000 g Sparpack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.072Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.382Z"
       },
       "gtin": "4026700470406",
       "id": "gtin:4026700470406",
@@ -71,7 +71,7 @@
         "mpn": "47085",
         "name": "UHU Luftentfeuchter Nachfüllbeutel 1000 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:05.152Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:11.310Z"
       },
       "gtin": "4026700470857",
       "id": "gtin:4026700470857",
@@ -100,7 +100,7 @@
         "mpn": "47135",
         "name": "UHU Luftentfeuchter Nachfüllbeutel 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:05.154Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:11.312Z"
       },
       "gtin": "4026700471359",
       "id": "gtin:4026700471359",
@@ -128,7 +128,7 @@
         "mpn": "47140",
         "name": "UHU Luftentfeuchter Mobil, neutral 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:05.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:12.122Z"
       },
       "gtin": "4026700471403",
       "id": "gtin:4026700471403",
@@ -156,7 +156,7 @@
         "mpn": "47165",
         "name": "UHU Luftentfeuchter Mobil, Lavendel 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:07.048Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:13.366Z"
       },
       "gtin": "4026700471656",
       "id": "gtin:4026700471656",
@@ -185,7 +185,7 @@
         "mpn": "47255",
         "name": "UHU Luftentfeuchter Nachfüllbeutel 450g 2+1 gratis",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.076Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.386Z"
       },
       "gtin": "4026700472554",
       "id": "gtin:4026700472554",
@@ -213,7 +213,7 @@
         "mpn": "50505",
         "name": "UHU Luftentfeuchter Nachfülltabs neutral, 2 x 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:05.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:12.122Z"
       },
       "gtin": "4026700505054",
       "id": "gtin:4026700505054",
@@ -242,7 +242,7 @@
         "mpn": "50590",
         "name": "UHU Luftentfeuchter Ambiance anthrazit, 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:05.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:12.122Z"
       },
       "gtin": "4026700505900",
       "id": "gtin:4026700505900",
@@ -271,7 +271,7 @@
         "mpn": "50595",
         "name": "UHU Ambiance Originalpackung weiß, 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:05.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:12.122Z"
       },
       "gtin": "4026700505955",
       "id": "gtin:4026700505955",
@@ -300,7 +300,7 @@
         "mpn": "50765",
         "name": "UHU Luftentfeuchter Nachfülltabs Lavendel, 2 x 100 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.049Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.357Z"
       },
       "gtin": "4026700507652",
       "id": "gtin:4026700507652",
@@ -329,7 +329,7 @@
         "mpn": "52155",
         "name": "UHU Luftentfeuchter Original 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.073Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.382Z"
       },
       "gtin": "4026700521559",
       "id": "gtin:4026700521559",
@@ -358,7 +358,7 @@
         "mpn": "52160",
         "name": "UHU Luftentfeuchter Original 450g 2. Nachfüller gratis",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.069Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.379Z"
       },
       "gtin": "4026700521603",
       "id": "gtin:4026700521603",
@@ -386,7 +386,7 @@
         "mpn": "52185",
         "name": "UHU Luftentfeuchter Original 1000 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.072Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.382Z"
       },
       "gtin": "4026700521856",
       "id": "gtin:4026700521856",
@@ -414,7 +414,7 @@
         "mpn": "52195",
         "name": "UHU Luftentfeuchter Original 1000 g gratis Nachfüllbeutel",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.072Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.382Z"
       },
       "gtin": "4026700521955",
       "id": "gtin:4026700521955",
@@ -442,7 +442,7 @@
         "mpn": "53024",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Original, 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.073Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.383Z"
       },
       "gtin": "4026700530254",
       "id": "gtin:4026700530254",
@@ -470,7 +470,7 @@
         "mpn": "53125",
         "name": "UHU Luftentfeuchter Ambiance weiß, 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.073Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.383Z"
       },
       "gtin": "4026700531251",
       "id": "gtin:4026700531251",
@@ -499,7 +499,7 @@
         "mpn": "53135",
         "name": "UHU Luftentfeuchter Ambiance weiß, 2. Magnet-Tab Gratis",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:13.337Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:19.516Z"
       },
       "gtin": "4026700531350",
       "id": "gtin:4026700531350",
@@ -528,7 +528,7 @@
         "mpn": "53155",
         "name": "UHU Luftentfeuchter Ambiance anthrazit, 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.091Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.401Z"
       },
       "gtin": "4026700531558",
       "id": "gtin:4026700531558",
@@ -557,7 +557,7 @@
         "mpn": "53165",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Neutral, 2 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:06.814Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:13.142Z"
       },
       "gtin": "4026700531657",
       "id": "gtin:4026700531657",
@@ -586,7 +586,7 @@
         "mpn": "53175",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Lavendel, 2 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:06.814Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:13.141Z"
       },
       "gtin": "4026700531756",
       "id": "gtin:4026700531756",
@@ -615,7 +615,7 @@
         "mpn": "53194",
         "name": "UHU Luftentfeuchter Feuchtigkeitsmagnet Original, 2 x 450 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.073Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.383Z"
       },
       "gtin": "4026700531954",
       "id": "gtin:4026700531954",
@@ -643,7 +643,7 @@
         "mpn": "53495",
         "name": "UHU Luftentfeuchter Auto 300 g",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:11.464Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:17.702Z"
       },
       "gtin": "4026700534955",
       "id": "gtin:4026700534955",
@@ -672,7 +672,7 @@
         "mpn": "370030",
         "name": "Thomar AirDry FUN Scheiben-Entfeuchter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:10.255Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:16.514Z"
       },
       "gtin": "4037433700302",
       "id": "gtin:4037433700302",
@@ -701,7 +701,7 @@
         "mpn": "10402",
         "name": "Cartrend Luftentfeuchter mikrowellengeeignet 1kg",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:08.268Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:14.579Z"
       },
       "gtin": "4038373058195",
       "id": "gtin:4038373058195",
@@ -730,7 +730,7 @@
         "mpn": "6100000130",
         "name": "Gummi Adapter VE/VX Serie",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138003084",
       "id": "gtin:4052138003084",
@@ -759,7 +759,7 @@
         "mpn": "6100009044",
         "name": "Endstutzen PVC für 38 mm Schlauch (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.804Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138003466",
       "id": "gtin:4052138003466",
@@ -788,7 +788,7 @@
         "mpn": "6100009048",
         "name": "Lufteinflutstutzen Gummi für 38 mm Schlauch (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.804Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138003473",
       "id": "gtin:4052138003473",
@@ -817,7 +817,7 @@
         "mpn": "6100009050",
         "name": "Lufteinflut-Winkelstutzen Gummi 90° 50 mm (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138003497",
       "id": "gtin:4052138003497",
@@ -846,7 +846,7 @@
         "mpn": "6100009051",
         "name": "Y-Verteiler PVC mit Außengewinde für 38 mm-Schläuche (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138003503",
       "id": "gtin:4052138003503",
@@ -875,7 +875,7 @@
         "mpn": "6100009055",
         "name": "Verbindungsstutzen für PVC Schlauch 38 mm (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.804Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138003558",
       "id": "gtin:4052138003558",
@@ -904,7 +904,7 @@
         "mpn": "6100009056",
         "name": "T-Verteiler PVC mit Außengewinde für 38 mm-Schläuche (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138003565",
       "id": "gtin:4052138003565",
@@ -933,7 +933,7 @@
         "mpn": "7160000210",
         "name": "WA 6-Mikrofilterelement Klasse F8",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138003626",
       "id": "gtin:4052138003626",
@@ -962,7 +962,7 @@
         "mpn": "6100009046",
         "name": "Dichtmuffen für Endstutzen PVC",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138004203",
       "id": "gtin:4052138004203",
@@ -991,7 +991,7 @@
         "mpn": "1125000173",
         "name": "Industrietrockner DH 300 BY F ES",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.347Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.466Z"
       },
       "gtin": "4052138006634",
       "id": "gtin:4052138006634",
@@ -1020,7 +1020,7 @@
         "mpn": "6100003101",
         "name": "Schutzhaube TTK 125 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138009192",
       "id": "gtin:4052138009192",
@@ -1049,7 +1049,7 @@
         "mpn": "6100003105",
         "name": "Schutzhaube für TTK 175 S / Qube+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.365Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.490Z"
       },
       "gtin": "4052138009208",
       "id": "gtin:4052138009208",
@@ -1078,7 +1078,7 @@
         "mpn": "6100003115",
         "name": "Schutzhaube TTK 655 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138009222",
       "id": "gtin:4052138009222",
@@ -1107,7 +1107,7 @@
         "mpn": "7160000212",
         "name": "VX Serie Feinfilter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138009284",
       "id": "gtin:4052138009284",
@@ -1137,7 +1137,7 @@
         "mpn": "1125000221",
         "name": "Industrie-Kondenstrockner DH 115 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.359Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.483Z"
       },
       "gtin": "4052138009864",
       "id": "gtin:4052138009864",
@@ -1165,7 +1165,7 @@
         "mpn": "6100009707",
         "name": "Standard-Einleger T8",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.797Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138010341",
       "id": "gtin:4052138010341",
@@ -1194,7 +1194,7 @@
         "mpn": "6100009719",
         "name": "Standard-Einleger T20",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.797Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138010464",
       "id": "gtin:4052138010464",
@@ -1223,7 +1223,7 @@
         "mpn": "1125000415",
         "name": "Luftentfeuchter DH 30 VPR+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.364Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.489Z"
       },
       "gtin": "4052138010822",
       "id": "gtin:4052138010822",
@@ -1252,7 +1252,7 @@
         "mpn": "1125000420",
         "name": "Luftentfeuchter DH 60 VPR+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.359Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.483Z"
       },
       "gtin": "4052138010839",
       "id": "gtin:4052138010839",
@@ -1281,7 +1281,7 @@
         "mpn": "1125000416",
         "name": "Luftentfeuchter DH 30 VPR+ Edelstahl",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.348Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.469Z"
       },
       "gtin": "4052138011119",
       "id": "gtin:4052138011119",
@@ -1310,7 +1310,7 @@
         "mpn": "1125000421",
         "name": "Luftentfeuchter DH 60 VPR+ Edelstahl",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.348Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.469Z"
       },
       "gtin": "4052138011140",
       "id": "gtin:4052138011140",
@@ -1339,7 +1339,7 @@
         "mpn": "7160000214",
         "name": "G4-Filtermanschette",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138011720",
       "id": "gtin:4052138011720",
@@ -1368,7 +1368,7 @@
         "mpn": "6100009045",
         "name": "VQuick-Endstutzen PVC für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.572Z"
       },
       "gtin": "4052138011928",
       "id": "gtin:4052138011928",
@@ -1397,7 +1397,7 @@
         "mpn": "6100009049",
         "name": "VQuick-Lufteinflutstutzen Gummi für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.572Z"
       },
       "gtin": "4052138011935",
       "id": "gtin:4052138011935",
@@ -1426,7 +1426,7 @@
         "mpn": "6100009047",
         "name": "VQuick-Lufteinflut-Winkelstutzen Gummi für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.572Z"
       },
       "gtin": "4052138011942",
       "id": "gtin:4052138011942",
@@ -1455,7 +1455,7 @@
         "mpn": "6100009060",
         "name": "VQuick-Schlauchverbinder für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.804Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.572Z"
       },
       "gtin": "4052138011959",
       "id": "gtin:4052138011959",
@@ -1484,7 +1484,7 @@
         "mpn": "6100009059",
         "name": "VQuick-Verbindungsstutzen für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.804Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.572Z"
       },
       "gtin": "4052138011966",
       "id": "gtin:4052138011966",
@@ -1513,7 +1513,7 @@
         "mpn": "6100009063",
         "name": "Deckenstutzen, Länge 250 mm für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138011973",
       "id": "gtin:4052138011973",
@@ -1542,7 +1542,7 @@
         "mpn": "6100009062",
         "name": "Aluminium-Eindreher für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138011997",
       "id": "gtin:4052138011997",
@@ -1571,7 +1571,7 @@
         "mpn": "7160000006",
         "name": "Luftfilter für TTK 105 S / TTK 125 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.791Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.560Z"
       },
       "gtin": "4052138012079",
       "id": "gtin:4052138012079",
@@ -1600,7 +1600,7 @@
         "mpn": "7160000008",
         "name": "Luftfilter für TTK 355 S / TFV Pro 1 / TTK 500",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.334Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.452Z"
       },
       "gtin": "4052138012093",
       "id": "gtin:4052138012093",
@@ -1629,7 +1629,7 @@
         "mpn": "7160000009",
         "name": "Luftfilter für TTK 655 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012109",
       "id": "gtin:4052138012109",
@@ -1658,7 +1658,7 @@
         "mpn": "7710000920",
         "name": "Standardfilter für DH 15 VPR+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138012147",
       "id": "gtin:4052138012147",
@@ -1687,7 +1687,7 @@
         "mpn": "6100009057",
         "name": "VQuick-T-Verteiler PVC für 38 mm Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.329Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.449Z"
       },
       "gtin": "4052138012840",
       "id": "gtin:4052138012840",
@@ -1716,7 +1716,7 @@
         "mpn": "3510205918",
         "name": "Energiekosten-Messgerät BX09",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.354Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.478Z"
       },
       "gtin": "4052138012918",
       "id": "gtin:4052138012918",
@@ -1745,7 +1745,7 @@
         "mpn": "1125000335",
         "name": "Schwimmbadluftentfeuchter DS 60",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.359Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.483Z"
       },
       "gtin": "4052138013212",
       "id": "gtin:4052138013212",
@@ -1775,7 +1775,7 @@
         "mpn": "1125000224",
         "name": "Industrie-Kondenstrockner DH 145 SH",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.361Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.485Z"
       },
       "gtin": "4052138013359",
       "id": "gtin:4052138013359",
@@ -1803,7 +1803,7 @@
         "mpn": "7333000015",
         "name": "Verbindungskabel VX-DA zur Datenübertragung an DA 4 MultiQube / Qube+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.804Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138013533",
       "id": "gtin:4052138013533",
@@ -1832,7 +1832,7 @@
         "mpn": "7710000836",
         "name": "Carbon Filter für TTK 110 HEPA",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.370Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.496Z"
       },
       "gtin": "4052138013564",
       "id": "gtin:4052138013564",
@@ -1861,7 +1861,7 @@
         "mpn": "6100004205",
         "name": "Steckdosen-Hygrostat BH30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.373Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.500Z"
       },
       "gtin": "4052138015391",
       "id": "gtin:4052138015391",
@@ -1890,7 +1890,7 @@
         "mpn": "7333000373",
         "name": "PVC-Verlängerungskabel 5 m / 230 V / 1,5 mm²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138016930",
       "id": "gtin:4052138016930",
@@ -1919,7 +1919,7 @@
         "mpn": "1105000001",
         "name": "Peltier-Luftentfeuchter TTP 1 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.375Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.502Z"
       },
       "gtin": "4052138016947",
       "id": "gtin:4052138016947",
@@ -1948,7 +1948,7 @@
         "mpn": "7200000001",
         "name": "50-mm-Schlauchanschlussstutzen zur Prozessluftabfuhr",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138017586",
       "id": "gtin:4052138017586",
@@ -1976,7 +1976,7 @@
         "mpn": "7331000476",
         "name": "Wasserabfuhrschlauch, Länge 5 m, Ø 8mm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138017593",
       "id": "gtin:4052138017593",
@@ -2005,7 +2005,7 @@
         "mpn": "7710000817",
         "name": "Luftfilter für TTK 69 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138017623",
       "id": "gtin:4052138017623",
@@ -2034,7 +2034,7 @@
         "mpn": "7710000819",
         "name": "Luftfilter für TTK 68 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138017678",
       "id": "gtin:4052138017678",
@@ -2063,7 +2063,7 @@
         "mpn": "1125000161",
         "name": "Industrieentfeuchter DH 160 BX",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.380Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.507Z"
       },
       "gtin": "4052138019245",
       "id": "gtin:4052138019245",
@@ -2092,7 +2092,7 @@
         "mpn": "7710000844",
         "name": "Luftfilter für TTK 90 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138019764",
       "id": "gtin:4052138019764",
@@ -2121,7 +2121,7 @@
         "mpn": "7710000846",
         "name": "Luftfilter für TTK 100 E / TTK 100 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.564Z"
       },
       "gtin": "4052138019771",
       "id": "gtin:4052138019771",
@@ -2150,7 +2150,7 @@
         "mpn": "7710000843",
         "name": "Luftfilter für TTK 50 S / TTK 50 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.563Z"
       },
       "gtin": "4052138019795",
       "id": "gtin:4052138019795",
@@ -2179,7 +2179,7 @@
         "mpn": "7710000815",
         "name": "Luftfilter für TTK 31 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.568Z"
       },
       "gtin": "4052138019825",
       "id": "gtin:4052138019825",
@@ -2208,7 +2208,7 @@
         "mpn": "7710000800",
         "name": "Luftfilter für TTK 25 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138019856",
       "id": "gtin:4052138019856",
@@ -2237,7 +2237,7 @@
         "mpn": "7710000834",
         "name": "Luftfilter für TTK 75 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.564Z"
       },
       "gtin": "4052138019863",
       "id": "gtin:4052138019863",
@@ -2266,7 +2266,7 @@
         "mpn": "7700000001",
         "name": "VX Filtersieb für Trocknungen im Über- und Unterdruckverfahren",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138019870",
       "id": "gtin:4052138019870",
@@ -2295,7 +2295,7 @@
         "mpn": "7710000826",
         "name": "Luftfilter für TTK 171 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138019894",
       "id": "gtin:4052138019894",
@@ -2324,7 +2324,7 @@
         "mpn": "7710000825",
         "name": "Luftfilter für TTK 75 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138019917",
       "id": "gtin:4052138019917",
@@ -2353,7 +2353,7 @@
         "mpn": "7710001183",
         "name": "Luftfilter für TTK 29 E / TTK 51 E / TTK 70 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138019924",
       "id": "gtin:4052138019924",
@@ -2382,7 +2382,7 @@
         "mpn": "7710000849",
         "name": "Luftfilter für TTK 54 E / TTK 66 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138020326",
       "id": "gtin:4052138020326",
@@ -2411,7 +2411,7 @@
         "mpn": "7710001186",
         "name": "Luftfilter für TTK 127 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138020333",
       "id": "gtin:4052138020333",
@@ -2440,7 +2440,7 @@
         "mpn": "7710001182",
         "name": "Luftfilter für TTK 24 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138020623",
       "id": "gtin:4052138020623",
@@ -2469,7 +2469,7 @@
         "mpn": "7710000334",
         "name": "Filtervlies für TTK 350 S (ab Modelljahr 2013)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.564Z"
       },
       "gtin": "4052138020708",
       "id": "gtin:4052138020708",
@@ -2498,7 +2498,7 @@
         "mpn": "1125000162",
         "name": "Industrieentfeuchter DH 160 BX ES Edelstahl",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.746Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.516Z"
       },
       "gtin": "4052138020876",
       "id": "gtin:4052138020876",
@@ -2527,7 +2527,7 @@
         "mpn": "7710000850",
         "name": "Luftfilter für TTK 166 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138021026",
       "id": "gtin:4052138021026",
@@ -2556,7 +2556,7 @@
         "mpn": "7710000813",
         "name": "Luftfilter für TTK 26 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138021187",
       "id": "gtin:4052138021187",
@@ -2585,7 +2585,7 @@
         "mpn": "7200000002",
         "name": "Anschlussstutzen VE/VX Serie",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138021248",
       "id": "gtin:4052138021248",
@@ -2614,7 +2614,7 @@
         "mpn": "7200000003",
         "name": "Kupplung Fugenkreuzverteiler",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.573Z"
       },
       "gtin": "4052138021286",
       "id": "gtin:4052138021286",
@@ -2643,7 +2643,7 @@
         "mpn": "7710000848",
         "name": "Luftfilter für TTK 28 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138021507",
       "id": "gtin:4052138021507",
@@ -2672,7 +2672,7 @@
         "mpn": "7710000057",
         "name": "Luftfilter für TTK 53 E / TTK 72 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138045381",
       "id": "gtin:4052138045381",
@@ -2701,7 +2701,7 @@
         "mpn": "7710000051",
         "name": "HEPA Filter für TTR 57 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.568Z"
       },
       "gtin": "4052138048634",
       "id": "gtin:4052138048634",
@@ -2730,7 +2730,7 @@
         "mpn": "7710000845",
         "name": "Luftfilter für TTK 96 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138049013",
       "id": "gtin:4052138049013",
@@ -2759,7 +2759,7 @@
         "mpn": "7710000861",
         "name": "Luftfilter für TTK 95 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138049075",
       "id": "gtin:4052138049075",
@@ -2788,7 +2788,7 @@
         "mpn": "6100002090",
         "name": "Durchziehplomben",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138052105",
       "id": "gtin:4052138052105",
@@ -2817,7 +2817,7 @@
         "mpn": "1125000175",
         "name": "Industrieentfeuchter DH 310 BX",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.747Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.516Z"
       },
       "gtin": "4052138055366",
       "id": "gtin:4052138055366",
@@ -2846,7 +2846,7 @@
         "mpn": "1125000176",
         "name": "Industrieentfeuchter DH 310 BX ES Edelstahl",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.747Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.517Z"
       },
       "gtin": "4052138055373",
       "id": "gtin:4052138055373",
@@ -2875,7 +2875,7 @@
         "mpn": "1125000177",
         "name": "Industriekondenstrockner DH 310 BXF",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.747Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.517Z"
       },
       "gtin": "4052138055380",
       "id": "gtin:4052138055380",
@@ -2904,7 +2904,7 @@
         "mpn": "7710000847",
         "name": "Luftfilter für TTK 30 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138083987",
       "id": "gtin:4052138083987",
@@ -2933,7 +2933,7 @@
         "mpn": "7710000852",
         "name": "Luftfilter für TTK 570 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138084007",
       "id": "gtin:4052138084007",
@@ -2962,7 +2962,7 @@
         "mpn": "7710000856",
         "name": "Luftfilter für TTK 52 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138084021",
       "id": "gtin:4052138084021",
@@ -2991,7 +2991,7 @@
         "mpn": "7710000005",
         "name": "HEPA-Filter für TTK 27 HEPA",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.754Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.524Z"
       },
       "gtin": "4052138093306",
       "id": "gtin:4052138093306",
@@ -3020,7 +3020,7 @@
         "mpn": "7710000009",
         "name": "Luftfilter für TTK 32 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138096468",
       "id": "gtin:4052138096468",
@@ -3049,7 +3049,7 @@
         "mpn": "7710000869",
         "name": "Carbon Filter für TTK 33 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138105450",
       "id": "gtin:4052138105450",
@@ -3078,7 +3078,7 @@
         "mpn": "7160000013",
         "name": "Luftfilter für TTK 900 MP",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.800Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138105825",
       "id": "gtin:4052138105825",
@@ -3107,7 +3107,7 @@
         "mpn": "6100009064",
         "name": "Y-Verteiler PVC für 38 mm-Schläuche (1er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.808Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138117279",
       "id": "gtin:4052138117279",
@@ -3136,7 +3136,7 @@
         "mpn": "7700000008",
         "name": "Bodenfiltermatte Qube+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.808Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138121504",
       "id": "gtin:4052138121504",
@@ -3165,7 +3165,7 @@
         "mpn": "3510205917",
         "name": "Energiekosten-Messgerät BX09 UK - Stecker-Typ G",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.762Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.531Z"
       },
       "gtin": "4052138123690",
       "id": "gtin:4052138123690",
@@ -3194,7 +3194,7 @@
         "mpn": "3510205916",
         "name": "Energiekosten-Messgerät BX09 CH - Stecker-Typ J",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.762Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.531Z"
       },
       "gtin": "4052138123706",
       "id": "gtin:4052138123706",
@@ -3223,7 +3223,7 @@
         "mpn": "7333000206",
         "name": "Steckdosenleiste mit selbstschließender Schutzklappe PVP6",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.760Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.530Z"
       },
       "gtin": "4052138125526",
       "id": "gtin:4052138125526",
@@ -3252,7 +3252,7 @@
         "mpn": "3510205919",
         "name": "Energiekosten-Messgerät BX09 FR - Stecker Typ E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.761Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.530Z"
       },
       "gtin": "4052138125830",
       "id": "gtin:4052138125830",
@@ -3281,7 +3281,7 @@
         "mpn": "7710000076",
         "name": "Aktivkohlefilter für TTK 120 E / TTK 122 E (für Modelle mit Kältemittel R-290)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138176221",
       "id": "gtin:4052138176221",
@@ -3310,7 +3310,7 @@
         "mpn": "1125000140",
         "name": "Schwimmbad- und Gewerbeentfeuchter DH 120",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138176542",
       "id": "gtin:4052138176542",
@@ -3339,7 +3339,7 @@
         "mpn": "351532",
         "name": "Schwimmbadentfeuchter SET 3501 T",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.782Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.550Z"
       },
       "gtin": "4052138180327",
       "id": "gtin:4052138180327",
@@ -3368,7 +3368,7 @@
         "mpn": "1125000136",
         "name": "Schwimmbad- und Gewerbeentfeuchter DH 65",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.542Z"
       },
       "gtin": "4052138185926",
       "id": "gtin:4052138185926",
@@ -3397,7 +3397,7 @@
         "mpn": "1125000240",
         "name": "Schwimmbad- und Gewerbeentfeuchter DH 65 H",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138185957",
       "id": "gtin:4052138185957",
@@ -3426,7 +3426,7 @@
         "mpn": "2004640",
         "name": "Ersatzfilter für AD 955",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.780Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.549Z"
       },
       "gtin": "4052138186671",
       "id": "gtin:4052138186671",
@@ -3455,7 +3455,7 @@
         "mpn": "2004641",
         "name": "Ersatzfilter für AD 975/995",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.778Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4052138186688",
       "id": "gtin:4052138186688",
@@ -3484,7 +3484,7 @@
         "mpn": "351512",
         "name": "Schwimmbadentfeuchter CDP 70",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4052138192665",
       "id": "gtin:4052138192665",
@@ -3513,7 +3513,7 @@
         "mpn": "7710000097",
         "name": "Luftfilter für TTK 27 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.784Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.553Z"
       },
       "gtin": "4052138200506",
       "id": "gtin:4052138200506",
@@ -3542,7 +3542,7 @@
         "mpn": "7710000098",
         "name": "Luftfilter für TTK 167 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.785Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.554Z"
       },
       "gtin": "4052138205259",
       "id": "gtin:4052138205259",
@@ -3571,7 +3571,7 @@
         "mpn": "1306532",
         "name": "Kondensatschlauchstück für KT 20-Pumpe",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.773Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.542Z"
       },
       "gtin": "4052228033922",
       "id": "gtin:4052228033922",
@@ -3600,7 +3600,7 @@
         "mpn": "2001236",
         "name": "Ersatzfilter für AD 740",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.548Z"
       },
       "gtin": "4260393633322",
       "id": "gtin:4260393633322",
@@ -3629,7 +3629,7 @@
         "mpn": "2001192",
         "name": "Ersatzfilter für AD 740/750",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4260393633339",
       "id": "gtin:4260393633339",
@@ -3658,7 +3658,7 @@
         "mpn": "2001193",
         "name": "Ersatzfilter für AD 770/780/790",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.778Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.546Z"
       },
       "gtin": "4260393633346",
       "id": "gtin:4260393633346",
@@ -3687,7 +3687,7 @@
         "mpn": "2001219",
         "name": "Ersatzfilter für AD 420/520",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.548Z"
       },
       "gtin": "4260393633353",
       "id": "gtin:4260393633353",
@@ -3716,7 +3716,7 @@
         "mpn": "2002058",
         "name": "Kondensatschlauch für AD 20",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.778Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4260393633445",
       "id": "gtin:4260393633445",
@@ -3745,7 +3745,7 @@
         "mpn": "2001231",
         "name": "G4-Vorfilter für AERCUBE® HEPA Filter HF 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.548Z"
       },
       "gtin": "4260393633612",
       "id": "gtin:4260393633612",
@@ -3775,7 +3775,7 @@
         "mpn": "1125000216",
         "name": "Industrie-Kondenstrockner DH 105 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.359Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.483Z"
       },
       "gtin": "4052138009857",
       "id": "gtin:4052138009857",
@@ -3805,7 +3805,7 @@
         "mpn": "1125000121",
         "name": "Industrieentfeuchter DH 60",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.366Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.491Z"
       },
       "gtin": "4052138011669",
       "id": "gtin:4052138011669",
@@ -3836,7 +3836,7 @@
         "mpn": "1125000411",
         "name": "Luftentfeuchter DH 15 VPR+ Edelstahl",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.352Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.474Z"
       },
       "gtin": "4052138011133",
       "id": "gtin:4052138011133",
@@ -3867,7 +3867,7 @@
         "mpn": "2000127",
         "name": "AD 995 Kondensations-Luftentfeuchter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138160763",
       "id": "gtin:4052138160763",
@@ -3899,7 +3899,7 @@
         "mpn": "2000137",
         "name": "Wäschetrockner - Luftentfeuchter WT 280",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.538Z"
       },
       "gtin": "4260393632660",
       "id": "gtin:4260393632660",
@@ -3930,7 +3930,7 @@
         "mpn": "1125000410",
         "name": "Luftentfeuchter DH 15 VPR+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.364Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.489Z"
       },
       "gtin": "4052138010815",
       "id": "gtin:4052138010815",
@@ -3961,7 +3961,7 @@
         "mpn": "1110000025",
         "name": "Adsorptionsluftentfeuchter TTR 500 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.488Z"
       },
       "gtin": "4052138007495",
       "id": "gtin:4052138007495",
@@ -3992,7 +3992,7 @@
         "mpn": "1120000414",
         "name": "Bautrockner TTK 500 ES Edelstahl",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.751Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.521Z"
       },
       "gtin": "4052138104187",
       "id": "gtin:4052138104187",
@@ -4023,7 +4023,7 @@
         "mpn": "1125001133",
         "name": "Schwimmbad-Gewerbeentfeuchter DH 35",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.775Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138188484",
       "id": "gtin:4052138188484",
@@ -4054,7 +4054,7 @@
         "mpn": "1120000802",
         "name": "Bautrockner TTK 900 MP",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.747Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.517Z"
       },
       "gtin": "4052138055304",
       "id": "gtin:4052138055304",
@@ -4085,7 +4085,7 @@
         "mpn": "2000170",
         "name": "Adsorptions-Luftentfeuchter ASE 400",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.770Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.539Z"
       },
       "gtin": "4260393632837",
       "id": "gtin:4260393632837",
@@ -4116,7 +4116,7 @@
         "mpn": "2000216",
         "name": "AERCUBE Turbine VP 6",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.768Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.537Z"
       },
       "gtin": "4260393630697",
       "id": "gtin:4260393630697",
@@ -4147,7 +4147,7 @@
         "mpn": "1560000055",
         "name": "Dämmschichttrockner Qube+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.371Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.498Z"
       },
       "gtin": "4052138954584",
       "id": "gtin:4052138954584",
@@ -4178,7 +4178,7 @@
         "mpn": "1110000021",
         "name": "Adsorptionsluftentfeuchter TTR 400 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.488Z"
       },
       "gtin": "4052138007594",
       "id": "gtin:4052138007594",
@@ -4209,7 +4209,7 @@
         "mpn": "1125000319",
         "name": "Schwimmbadluftentfeuchter DS 30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.359Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.483Z"
       },
       "gtin": "4052138013144",
       "id": "gtin:4052138013144",
@@ -4240,7 +4240,7 @@
         "mpn": "2000126",
         "name": "AD 975 Kondensations-Luftentfeuchter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138160749",
       "id": "gtin:4052138160749",
@@ -4271,7 +4271,7 @@
         "mpn": "2000125",
         "name": "Kondensations-Luftentfeuchter AD 955",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138180266",
       "id": "gtin:4052138180266",
@@ -4302,7 +4302,7 @@
         "mpn": "2000073-33",
         "name": "Adsorptions-Luftentfeuchter ASE 300",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.771Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.540Z"
       },
       "gtin": "4260393634374",
       "id": "gtin:4260393634374",
@@ -4334,7 +4334,7 @@
         "mpn": "1125000210",
         "name": "Industrie-Kondenstrockner DH 95 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.358Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.482Z"
       },
       "gtin": "4052138007372",
       "id": "gtin:4052138007372",
@@ -4364,7 +4364,7 @@
         "mpn": "1110000020",
         "name": "Adsorptionsluftentfeuchter TTR 400",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.488Z"
       },
       "gtin": "4052138007488",
       "id": "gtin:4052138007488",
@@ -4395,7 +4395,7 @@
         "mpn": "2000098",
         "name": "Kondensations-Luftentfeuchter AD 740",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4260393632240",
       "id": "gtin:4260393632240",
@@ -4426,7 +4426,7 @@
         "mpn": "2000109",
         "name": "Kondensations-Luftentfeuchter AD 750",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4260393632264",
       "id": "gtin:4260393632264",
@@ -4457,7 +4457,7 @@
         "mpn": "1120000174",
         "name": "Luftentfeuchter TTK 655 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.358Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.482Z"
       },
       "gtin": "4052138007440",
       "id": "gtin:4052138007440",
@@ -4488,7 +4488,7 @@
         "mpn": "2000245",
         "name": "AERCUBE Wasserabscheider VT 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.537Z"
       },
       "gtin": "4260393630666",
       "id": "gtin:4260393630666",
@@ -4519,7 +4519,7 @@
         "mpn": "2000157-21",
         "name": "Adsorptions-Luftentfeuchter ASE 200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.771Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.540Z"
       },
       "gtin": "4052138160831",
       "id": "gtin:4052138160831",
@@ -4550,7 +4550,7 @@
         "mpn": "1120000410",
         "name": "Bautrockner TTK 500",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.747Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.517Z"
       },
       "gtin": "4052138018170",
       "id": "gtin:4052138018170",
@@ -4581,7 +4581,7 @@
         "mpn": "2000052",
         "name": "Kondensations-Luftentfeuchter AD 40",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4260393630659",
       "id": "gtin:4260393630659",
@@ -4613,7 +4613,7 @@
         "mpn": "1125000207",
         "name": "Industrie-Kondenstrockner DH 65 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.361Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.485Z"
       },
       "gtin": "4052138013243",
       "id": "gtin:4052138013243",
@@ -4643,7 +4643,7 @@
         "mpn": "1110000015",
         "name": "Adsorptionsluftentfeuchter TTR 300",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.488Z"
       },
       "gtin": "4052138007471",
       "id": "gtin:4052138007471",
@@ -4674,7 +4674,7 @@
         "mpn": "2003188",
         "name": "Kondensations-Luftentfeuchter AD 935",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.770Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.539Z"
       },
       "gtin": "4052138160688",
       "id": "gtin:4052138160688",
@@ -4705,7 +4705,7 @@
         "mpn": "1125001200",
         "name": "Schwimmbad- und Gewerbeentfeuchter DH 20",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.775Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052138188477",
       "id": "gtin:4052138188477",
@@ -4736,7 +4736,7 @@
         "mpn": "1110000130",
         "name": "Adsorptionstrockner TTR 250",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.329Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.449Z"
       },
       "gtin": "4052138002445",
       "id": "gtin:4052138002445",
@@ -4767,7 +4767,7 @@
         "mpn": "1560000042",
         "name": "Dämmschichttrocknungsaggregat VX 5 MultiQube",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.329Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.449Z"
       },
       "gtin": "4052138010167",
       "id": "gtin:4052138010167",
@@ -4798,7 +4798,7 @@
         "mpn": "4603801",
         "name": "Kondensations-Luftentfeuchter DH 792",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.771Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.540Z"
       },
       "gtin": "8053670895546",
       "id": "gtin:8053670895546",
@@ -4829,7 +4829,7 @@
         "mpn": "2000203",
         "name": "Seitenkanalverdichter AB 200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.771Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.540Z"
       },
       "gtin": "4260393631144",
       "id": "gtin:4260393631144",
@@ -4860,7 +4860,7 @@
         "mpn": "2000009",
         "name": "Aerial AD 20 Kondensations-Luftentfeuchter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.768Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.537Z"
       },
       "gtin": "4260393631199",
       "id": "gtin:4260393631199",
@@ -4891,7 +4891,7 @@
         "mpn": "1110570",
         "name": "KT 45 Bautrockner",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.775Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052228039634",
       "id": "gtin:4052228039634",
@@ -4922,7 +4922,7 @@
         "mpn": "1110000120",
         "name": "Adsorptionstrockner TTR 160",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.336Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.453Z"
       },
       "gtin": "4052138000748",
       "id": "gtin:4052138000748",
@@ -4953,7 +4953,7 @@
         "mpn": "1110000010",
         "name": "Adsorptionsluftentfeuchter TTR 200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.488Z"
       },
       "gtin": "4052138007464",
       "id": "gtin:4052138007464",
@@ -4984,7 +4984,7 @@
         "mpn": "4140581",
         "name": "Kondensations-Luftentfeuchter DH 44",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.776Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.545Z"
       },
       "gtin": "8053670895058",
       "id": "gtin:8053670895058",
@@ -5015,7 +5015,7 @@
         "mpn": "1120000171",
         "name": "Luftentfeuchter TTK 650 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.343Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.460Z"
       },
       "gtin": "4052138007730",
       "id": "gtin:4052138007730",
@@ -5047,7 +5047,7 @@
         "mpn": "1125000204",
         "name": "Industrie-Kondenstrockner DH 25 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.345Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.463Z"
       },
       "gtin": "4052138010990",
       "id": "gtin:4052138010990",
@@ -5077,7 +5077,7 @@
         "mpn": "4140590",
         "name": "Kondensations-Luftentfeuchter DHP 55",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.770Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.539Z"
       },
       "gtin": "8053670895201",
       "id": "gtin:8053670895201",
@@ -5108,7 +5108,7 @@
         "mpn": "1120000163",
         "name": "Luftentfeuchter TTK 355 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.488Z"
       },
       "gtin": "4052138007433",
       "id": "gtin:4052138007433",
@@ -5139,7 +5139,7 @@
         "mpn": "2000068",
         "name": "Aerial AD 110 Kondensations-Luftentfeuchter zur Wandmontage",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.538Z"
       },
       "gtin": "4260393632288",
       "id": "gtin:4260393632288",
@@ -5170,7 +5170,7 @@
         "mpn": "1560000025",
         "name": "Seitenkanalverdichter VE 4 MultiQube",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.786Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.555Z"
       },
       "gtin": "4052138006696",
       "id": "gtin:4052138006696",
@@ -5201,7 +5201,7 @@
         "mpn": "1110584",
         "name": "Kondensations-Luftentfeuchter DT 860",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.538Z"
       },
       "gtin": "4052228037715",
       "id": "gtin:4052228037715",
@@ -5232,7 +5232,7 @@
         "mpn": "1120001180",
         "name": "Gewerbe-Luftentfeuchter TTK 570 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.379Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.505Z"
       },
       "gtin": "4052138019634",
       "id": "gtin:4052138019634",
@@ -5263,7 +5263,7 @@
         "mpn": "1560000024",
         "name": "Seitenkanalverdichter VE 4 S MultiQube",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.353Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.476Z"
       },
       "gtin": "4052138002995",
       "id": "gtin:4052138002995",
@@ -5294,7 +5294,7 @@
         "mpn": "1120000157",
         "name": "Luftentfeuchter TTK 175 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.358Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.482Z"
       },
       "gtin": "4052138007501",
       "id": "gtin:4052138007501",
@@ -5325,7 +5325,7 @@
         "mpn": "6100000006",
         "name": "Wasserabscheider WA 4i MultiQube",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.786Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.555Z"
       },
       "gtin": "4052138003046",
       "id": "gtin:4052138003046",
@@ -5356,7 +5356,7 @@
         "mpn": "1110588",
         "name": "Kondensations-Luftentfeuchter DT 760",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.773Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.541Z"
       },
       "gtin": "4052228038033",
       "id": "gtin:4052228038033",
@@ -5387,7 +5387,7 @@
         "mpn": "4603800",
         "name": "Kondensations-Luftentfeuchter DH 752 P",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.538Z"
       },
       "gtin": "8053670895133",
       "id": "gtin:8053670895133",
@@ -5418,7 +5418,7 @@
         "mpn": "1110587",
         "name": "Kondensations-Luftentfeuchter DT 750",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.770Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.539Z"
       },
       "gtin": "4052228038125",
       "id": "gtin:4052228038125",
@@ -5449,7 +5449,7 @@
         "mpn": "1120000160",
         "name": "Luftentfeuchter TTK 350 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.342Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.459Z"
       },
       "gtin": "4052138007723",
       "id": "gtin:4052138007723",
@@ -5480,7 +5480,7 @@
         "mpn": "1110579",
         "name": "KT 20 Entfeuchter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.537Z"
       },
       "gtin": "4052228037357",
       "id": "gtin:4052228037357",
@@ -5511,7 +5511,7 @@
         "mpn": "2000263",
         "name": "AERCUBE® HEPA Filter HF 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.538Z"
       },
       "gtin": "4260393631113",
       "id": "gtin:4260393631113",
@@ -5542,7 +5542,7 @@
         "mpn": "1120000124",
         "name": "Luftentfeuchter TTK 125 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.363Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.487Z"
       },
       "gtin": "4052138006337",
       "id": "gtin:4052138006337",
@@ -5573,7 +5573,7 @@
         "mpn": "0761360190",
         "name": "Güde Bautrockner GBT 130-ST",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:17.619Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:23.759Z"
       },
       "gtin": "4015671953506",
       "id": "gtin:4015671953506",
@@ -5603,7 +5603,7 @@
         "mpn": "1120001160",
         "name": "Gewerbe-Luftentfeuchter TTK 380 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.379Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.505Z"
       },
       "gtin": "4052138019627",
       "id": "gtin:4052138019627",
@@ -5634,7 +5634,7 @@
         "mpn": "1120000117",
         "name": "Gewerbe-Kompaktluftentfeuchter TTK Qube",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.748Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.517Z"
       },
       "gtin": "4052138091999",
       "id": "gtin:4052138091999",
@@ -5665,7 +5665,7 @@
         "mpn": "2000262",
         "name": "AERCUBE Schalldämpfer SD 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.769Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.538Z"
       },
       "gtin": "4260393631120",
       "id": "gtin:4260393631120",
@@ -5696,7 +5696,7 @@
         "mpn": "4512493",
         "name": "Kondensations-Luftentfeuchter DH 732 P",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.775Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.544Z"
       },
       "gtin": "5904542924853",
       "id": "gtin:5904542924853",
@@ -5727,7 +5727,7 @@
         "mpn": "6100000170",
         "name": "Bohrmaschine - Komplettset für Trockenbohren",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.786Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.555Z"
       },
       "gtin": "4052138012017",
       "id": "gtin:4052138012017",
@@ -5758,7 +5758,7 @@
         "mpn": "2000266",
         "name": "AERCUBE CC4 MID geeichter Energiezähler",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.771Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.540Z"
       },
       "gtin": "4260393633858",
       "id": "gtin:4260393633858",
@@ -5789,7 +5789,7 @@
         "mpn": "1110581",
         "name": "Kondensations-Luftentfeuchter DT 650",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.778Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.547Z"
       },
       "gtin": "4052228043174",
       "id": "gtin:4052228043174",
@@ -5820,7 +5820,7 @@
         "mpn": "1120000155",
         "name": "Luftentfeuchter TTK 170 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.342Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.459Z"
       },
       "gtin": "4052138007716",
       "id": "gtin:4052138007716",
@@ -5851,7 +5851,7 @@
         "mpn": "6100000019",
         "name": "Externe Kondensatpumpe",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.568Z"
       },
       "gtin": "4052138046548",
       "id": "gtin:4052138046548",
@@ -5882,7 +5882,7 @@
         "mpn": "2002342",
         "name": "Pumpen-Kit für Kondensations-Luftentfeuchter AD 955",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.780Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.549Z"
       },
       "gtin": "4052138185797",
       "id": "gtin:4052138185797",
@@ -5913,7 +5913,7 @@
         "mpn": "2002341",
         "name": "Pumpen-Kit für Kondensations-Luftentfeuchter AD 935, AD 935 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.780Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.549Z"
       },
       "gtin": "4052138185803",
       "id": "gtin:4052138185803",
@@ -5947,7 +5947,7 @@
         "name": "Güde Bautrockner GBT 80.1 1300 W 80 l/Tag",
         "powerW": 1300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:10.816Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:17.076Z"
       },
       "gtin": "4015671448613",
       "id": "gtin:4015671448613",
@@ -5977,7 +5977,7 @@
         "mpn": "1120000141",
         "name": "Luftentfeuchter TTK 140 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.342Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.459Z"
       },
       "gtin": "4052138007709",
       "id": "gtin:4052138007709",
@@ -6008,7 +6008,7 @@
         "mpn": "4512492",
         "name": "Kondensationsentfeuchter DH 721",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.775Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "5904542923283",
       "id": "gtin:5904542923283",
@@ -6039,7 +6039,7 @@
         "mpn": "1120000123",
         "name": "Luftentfeuchter TTK 122 E mit Heißgas-Abtausystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.349Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.470Z"
       },
       "gtin": "4052138008669",
       "id": "gtin:4052138008669",
@@ -6070,7 +6070,7 @@
         "mpn": "1120001125",
         "name": "Luftentfeuchter TTK 171 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.366Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.491Z"
       },
       "gtin": "4052138009840",
       "id": "gtin:4052138009840",
@@ -6101,7 +6101,7 @@
         "mpn": "1120001116",
         "name": "Gewerbe-Luftentfeuchter TTK 166 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.373Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.500Z"
       },
       "gtin": "4052138016787",
       "id": "gtin:4052138016787",
@@ -6132,7 +6132,7 @@
         "mpn": "6100000070",
         "name": "Allwetter-Schallschutzhaube Qube+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138017746",
       "id": "gtin:4052138017746",
@@ -6163,7 +6163,7 @@
         "mpn": "4512491",
         "name": "Kondensations-Luftentfeuchter DH 720 P",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.775Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.544Z"
       },
       "gtin": "5904542925270",
       "id": "gtin:5904542925270",
@@ -6196,7 +6196,7 @@
         "mpn": "1120000110",
         "name": "Luftentfeuchter TTK 105 S mit Betriebsstundenzähler",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.326Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.447Z"
       },
       "gtin": "4052138010297",
       "id": "gtin:4052138010297",
@@ -6226,7 +6226,7 @@
         "mpn": "1120000109",
         "name": "Luftentfeuchter TTK 105 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.326Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.447Z"
       },
       "gtin": "4052138010280",
       "id": "gtin:4052138010280",
@@ -6257,7 +6257,7 @@
         "mpn": "6100002042",
         "name": "Elektronischer Thermohygrostat HG 125",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138011126",
       "id": "gtin:4052138011126",
@@ -6288,7 +6288,7 @@
         "mpn": "1120000119",
         "name": "Luftentfeuchter TTK 120 E mit Heißgas-Abtausystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.349Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.470Z"
       },
       "gtin": "4052138008652",
       "id": "gtin:4052138008652",
@@ -6319,7 +6319,7 @@
         "mpn": "1120001120",
         "name": "Luftentfeuchter TTK 170 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.329Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.449Z"
       },
       "gtin": "4052138009833",
       "id": "gtin:4052138009833",
@@ -6351,7 +6351,7 @@
         "name": "Güde Bautrockner GBT 50.2 50 L 900 W",
         "powerW": 900,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:17.578Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:23.717Z"
       },
       "gtin": "4015671781093",
       "id": "gtin:4015671781093",
@@ -6381,7 +6381,7 @@
         "mpn": "1510003041",
         "name": "Turbolüfter TFV 30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.370Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.497Z"
       },
       "gtin": "4052138013410",
       "id": "gtin:4052138013410",
@@ -6412,7 +6412,7 @@
         "mpn": "1120001115",
         "name": "Luftentfeuchter TTK 165 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.373Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.500Z"
       },
       "gtin": "4052138015483",
       "id": "gtin:4052138015483",
@@ -6443,7 +6443,7 @@
         "mpn": "1120001015",
         "name": "Luftentfeuchter TTK-I 110 E mit Inverter-Technologie und WiFi",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.785Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.553Z"
       },
       "gtin": "4052138199336",
       "id": "gtin:4052138199336",
@@ -6474,7 +6474,7 @@
         "mpn": "6100002048",
         "name": "Hygrostat HG 125 Verlängerungskabel 30m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.801Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138057032",
       "id": "gtin:4052138057032",
@@ -6505,7 +6505,7 @@
         "mpn": "1510003031",
         "name": "Turbolüfter TFV 30 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.362Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.486Z"
       },
       "gtin": "4052138008607",
       "id": "gtin:4052138008607",
@@ -6536,7 +6536,7 @@
         "mpn": "6100000043",
         "name": "HEPA-Filter HC MultiQube",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138003732",
       "id": "gtin:4052138003732",
@@ -6567,7 +6567,7 @@
         "mpn": "1120000126",
         "name": "Luftentfeuchter TTK 127 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.354Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.478Z"
       },
       "gtin": "4052138012819",
       "id": "gtin:4052138012819",
@@ -6598,7 +6598,7 @@
         "mpn": "7710001257",
         "name": "Luftfilter für TTK 1500",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138012130",
       "id": "gtin:4052138012130",
@@ -6629,7 +6629,7 @@
         "mpn": "1510003025",
         "name": "Radialventilator TFV 29 FS",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.373Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.500Z"
       },
       "gtin": "4052138017395",
       "id": "gtin:4052138017395",
@@ -6660,7 +6660,7 @@
         "mpn": "6100000015",
         "name": "Kondensatpumpe DH 15",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.369Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.495Z"
       },
       "gtin": "4052138012703",
       "id": "gtin:4052138012703",
@@ -6691,7 +6691,7 @@
         "mpn": "6100000025",
         "name": "Kondensatpumpe DH 60",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.369Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.496Z"
       },
       "gtin": "4052138012710",
       "id": "gtin:4052138012710",
@@ -6722,7 +6722,7 @@
         "mpn": "6100000020",
         "name": "Kondensatpumpe DH 30 / DS 30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.369Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.495Z"
       },
       "gtin": "4052138012741",
       "id": "gtin:4052138012741",
@@ -6753,7 +6753,7 @@
         "mpn": "1120001110",
         "name": "Luftentfeuchter TTK 75 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.364Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.489Z"
       },
       "gtin": "4052138009826",
       "id": "gtin:4052138009826",
@@ -6784,7 +6784,7 @@
         "mpn": "6100000176",
         "name": "Duplex-Bohrkrone",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.786Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.555Z"
       },
       "gtin": "4052138012048",
       "id": "gtin:4052138012048",
@@ -6815,7 +6815,7 @@
         "mpn": "1510003024",
         "name": "Turbolüfter TFV 20",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.372Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.499Z"
       },
       "gtin": "4052138017432",
       "id": "gtin:4052138017432",
@@ -6846,7 +6846,7 @@
         "mpn": "1120000103",
         "name": "Luftentfeuchter und Luftreiniger TTK 99 HEPA",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.754Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.524Z"
       },
       "gtin": "4052138109106",
       "id": "gtin:4052138109106",
@@ -6877,7 +6877,7 @@
         "mpn": "1120000065",
         "name": "Adsorptionstrockner TTR 57 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.378Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.505Z"
       },
       "gtin": "4052138020012",
       "id": "gtin:4052138020012",
@@ -6908,7 +6908,7 @@
         "mpn": "6100010340",
         "name": "Vorsatz 4er Verteiler TTR 300 - TTR 500 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.801Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138015414",
       "id": "gtin:4052138015414",
@@ -6940,7 +6940,7 @@
         "mpn": "1120001005",
         "name": "Komfort Luftentfeuchter TTK 100 E mit Heißgas-Abtausystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.358Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.482Z"
       },
       "gtin": "4052138007143",
       "id": "gtin:4052138007143",
@@ -6970,7 +6970,7 @@
         "mpn": "1120000106",
         "name": "Luftentfeuchter TTK 95 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.348Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.469Z"
       },
       "gtin": "4052138009802",
       "id": "gtin:4052138009802",
@@ -7001,7 +7001,7 @@
         "mpn": "1120000101",
         "name": "Luftentfeuchter TTK 96 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.354Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.478Z"
       },
       "gtin": "4052138012802",
       "id": "gtin:4052138012802",
@@ -7032,7 +7032,7 @@
         "mpn": "6100003030",
         "name": "Kondensatpumpe TTK 125 S / TTK 175 S / TTK 355 S / TTK 655 S / TTK 500 / TTK 900 MP",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.564Z"
       },
       "gtin": "4052138019498",
       "id": "gtin:4052138019498",
@@ -7063,7 +7063,7 @@
         "mpn": "1120000105",
         "name": "Luftentfeuchter TTK 90 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.343Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.460Z"
       },
       "gtin": "4052138007518",
       "id": "gtin:4052138007518",
@@ -7094,7 +7094,7 @@
         "mpn": "6100010210",
         "name": "Filterbox Prozessluft TTR 400/ TTR 400 D / TTR 500 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.334Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.452Z"
       },
       "gtin": "4052138011225",
       "id": "gtin:4052138011225",
@@ -7125,7 +7125,7 @@
         "mpn": "6100000178",
         "name": "Bohrkrone Standbohrmaschine 65 mm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.786Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.555Z"
       },
       "gtin": "4052138012024",
       "id": "gtin:4052138012024",
@@ -7151,12 +7151,43 @@
         "brand": "Trotec",
         "continuousDrain": false,
         "dataQuality": "feed",
+        "gtin": "4052138109090",
+        "id": "gtin:4052138109090",
+        "mpn": "1120000069",
+        "name": "Luftentfeuchter und Luftreiniger TTK 70 HEPA (Plus)",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-08-31T08:39:24.524Z"
+      },
+      "gtin": "4052138109090",
+      "id": "gtin:4052138109090",
+      "imageUrl": "https://cdn.trotec.com/de_DE/1120000069/Luftentfeuchter-und-Luftreiniger-TTK-70-HEPA-142094-1634220673.jpg",
+      "issues": [
+        "missing-capacity",
+        "unconfirmed-drainage"
+      ],
+      "merchantProductUrl": "https://de.trotec.com/shop/luftentfeuchter-und-luftreiniger-ttk-70-hepa.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
+      "merchants": [
+        "Trotec DACH"
+      ],
+      "minBasePriceEur": 219.99,
+      "mpn": "1120000069",
+      "name": "Luftentfeuchter und Luftreiniger TTK 70 HEPA (Plus)",
+      "offerCount": 1,
+      "priority": 132,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Trotec",
+      "candidateAttributes": {
+        "brand": "Trotec",
+        "continuousDrain": false,
+        "dataQuality": "feed",
         "gtin": "4052138003831",
         "id": "gtin:4052138003831",
         "mpn": "6100000052",
         "name": "Fliesenaufnahme-System TilexPro 50",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.787Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.556Z"
       },
       "gtin": "4052138003831",
       "id": "gtin:4052138003831",
@@ -7187,7 +7218,7 @@
         "mpn": "2001230",
         "name": "H13-Filter für AERCUBE® HEPA Filter HF 2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.548Z"
       },
       "gtin": "4260393633629",
       "id": "gtin:4260393633629",
@@ -7218,7 +7249,7 @@
         "mpn": "1120000051",
         "name": "Design Luftentfeuchter und Luftreiniger TTK 64 HEPA",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.753Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.524Z"
       },
       "gtin": "4052138109083",
       "id": "gtin:4052138109083",
@@ -7244,43 +7275,12 @@
         "brand": "Trotec",
         "continuousDrain": false,
         "dataQuality": "feed",
-        "gtin": "4052138109090",
-        "id": "gtin:4052138109090",
-        "mpn": "1120000069",
-        "name": "Luftentfeuchter und Luftreiniger TTK 70 HEPA (Plus)",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.754Z"
-      },
-      "gtin": "4052138109090",
-      "id": "gtin:4052138109090",
-      "imageUrl": "https://cdn.trotec.com/de_DE/1120000069/Luftentfeuchter-und-Luftreiniger-TTK-70-HEPA-142094-1634220673.jpg",
-      "issues": [
-        "missing-capacity",
-        "unconfirmed-drainage"
-      ],
-      "merchantProductUrl": "https://de.trotec.com/shop/luftentfeuchter-und-luftreiniger-ttk-70-hepa.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
-      "merchants": [
-        "Trotec DACH"
-      ],
-      "minBasePriceEur": 209.99,
-      "mpn": "1120000069",
-      "name": "Luftentfeuchter und Luftreiniger TTK 70 HEPA (Plus)",
-      "offerCount": 1,
-      "priority": 131,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Trotec",
-      "candidateAttributes": {
-        "brand": "Trotec",
-        "continuousDrain": false,
-        "dataQuality": "feed",
         "gtin": "4052138014950",
         "id": "gtin:4052138014950",
         "mpn": "7710000926",
         "name": "Kombinationsfilter für DH 30 VPR+ (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138014950",
       "id": "gtin:4052138014950",
@@ -7311,7 +7311,7 @@
         "mpn": "6100010301",
         "name": "Filterbox Regenerationslufteintritt TTR 400 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.794Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138011867",
       "id": "gtin:4052138011867",
@@ -7342,7 +7342,7 @@
         "mpn": "1120000045",
         "name": "Luftentfeuchter TTK 63 E WiFi",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.785Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.553Z"
       },
       "gtin": "4052138199862",
       "id": "gtin:4052138199862",
@@ -7374,7 +7374,7 @@
         "name": "Schalldämpfer NR 19 MultiQube",
         "noiseDb": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138003794",
       "id": "gtin:4052138003794",
@@ -7405,7 +7405,7 @@
         "mpn": "7160000603",
         "name": "Filter Z-Line G4 TTR 300 (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138011324",
       "id": "gtin:4052138011324",
@@ -7436,7 +7436,7 @@
         "mpn": "7160000604",
         "name": "Filter Z-Line G4 TTR 400 / TTR 400 D / TTR 500 D Prozessluft 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138012253",
       "id": "gtin:4052138012253",
@@ -7467,7 +7467,7 @@
         "mpn": "1120000041",
         "name": "Luftentfeuchter TTK 55 E WiFi",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.785Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.553Z"
       },
       "gtin": "4052138199855",
       "id": "gtin:4052138199855",
@@ -7498,7 +7498,7 @@
         "mpn": "4512442",
         "name": "Wasserpumpe DH 752/792",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.777Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.546Z"
       },
       "gtin": "4052138162903",
       "id": "gtin:4052138162903",
@@ -7529,7 +7529,7 @@
         "mpn": "7160000634",
         "name": "Filter Z-Line F7 TTR 500 D Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138011331",
       "id": "gtin:4052138011331",
@@ -7560,7 +7560,7 @@
         "mpn": "6100002050",
         "name": "Taupunktsteuerung HG 140",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138003923",
       "id": "gtin:4052138003923",
@@ -7591,7 +7591,7 @@
         "mpn": "7160000605",
         "name": "Filter Z-Line G4 TTR 400 D Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138012260",
       "id": "gtin:4052138012260",
@@ -7622,7 +7622,7 @@
         "mpn": "6100001220",
         "name": "SP-T Schlauch 700 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138003244",
       "id": "gtin:4052138003244",
@@ -7653,7 +7653,7 @@
         "mpn": "7160000630",
         "name": "Filter Z-Line F7 TTR 200 (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138011348",
       "id": "gtin:4052138011348",
@@ -7684,7 +7684,7 @@
         "mpn": "7160000633",
         "name": "Filter Z-Line F7 TTR 400 D Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138011355",
       "id": "gtin:4052138011355",
@@ -7715,7 +7715,7 @@
         "mpn": "7160000632",
         "name": "Filter Z-Line F7 TTR 400 / TTR 400 D / TTR 500 D Prozessluft 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138011362",
       "id": "gtin:4052138011362",
@@ -7746,7 +7746,7 @@
         "mpn": "7160000602",
         "name": "Filter Z-Line G4 TTR 200 (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012246",
       "id": "gtin:4052138012246",
@@ -7777,7 +7777,7 @@
         "mpn": "1120000073",
         "name": "Luftentfeuchter TTK 72 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.361Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.485Z"
       },
       "gtin": "4052138013397",
       "id": "gtin:4052138013397",
@@ -7808,7 +7808,7 @@
         "mpn": "7160000610",
         "name": "Filter Z-Line G4 TTR 1000 / TTR 1500 Prozesslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.797Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138013045",
       "id": "gtin:4052138013045",
@@ -7839,7 +7839,7 @@
         "mpn": "7160000611",
         "name": "Filter Z-Line G4 TTR 1000 / TTR 1500 Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138013052",
       "id": "gtin:4052138013052",
@@ -7870,7 +7870,7 @@
         "mpn": "6100003003",
         "name": "Kondensatpumpe TTK 140 S/TTK 170 S/TTK 350 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.797Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138003978",
       "id": "gtin:4052138003978",
@@ -7901,7 +7901,7 @@
         "mpn": "6100010305",
         "name": "Filterbox Regenerationslufteintritt TTR 500 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.794Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.563Z"
       },
       "gtin": "4052138011874",
       "id": "gtin:4052138011874",
@@ -7932,7 +7932,7 @@
         "mpn": "1510003021",
         "name": "Turbolüfter TFV 10",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.370Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.496Z"
       },
       "gtin": "4052138013267",
       "id": "gtin:4052138013267",
@@ -7963,7 +7963,7 @@
         "mpn": "7160000631",
         "name": "Filter Z-Line F7 TTR 300 (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.793Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138011508",
       "id": "gtin:4052138011508",
@@ -7994,7 +7994,7 @@
         "mpn": "7160000606",
         "name": "Filter Z-Line G4 TTR 500 D Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.794Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138012277",
       "id": "gtin:4052138012277",
@@ -8025,7 +8025,7 @@
         "mpn": "6100010205",
         "name": "Filterbox Prozesslufteintritt TTR 300",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.794Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138011850",
       "id": "gtin:4052138011850",
@@ -8057,7 +8057,7 @@
         "name": "Wärmetauscher für KT 20",
         "powerW": 20,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.773Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.542Z"
       },
       "gtin": "4052138186800",
       "id": "gtin:4052138186800",
@@ -8088,7 +8088,7 @@
         "mpn": "7710000929",
         "name": "Kombinationsfilter für DH 60 VPR+ (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.568Z"
       },
       "gtin": "4052138014967",
       "id": "gtin:4052138014967",
@@ -8119,7 +8119,7 @@
         "mpn": "6100003015",
         "name": "Kondensatpumpe TTK 800 inkl. Einbausatz",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.791Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.560Z"
       },
       "gtin": "4052138003961",
       "id": "gtin:4052138003961",
@@ -8150,7 +8150,7 @@
         "mpn": "6100000050",
         "name": "Fliesenaufnahme-System TilexPro 30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.787Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.556Z"
       },
       "gtin": "4052138003824",
       "id": "gtin:4052138003824",
@@ -8182,7 +8182,7 @@
         "mpn": "6100002047",
         "name": "Hygrostat HG 125 Verlängerungskabel 20m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.801Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138057025",
       "id": "gtin:4052138057025",
@@ -8212,7 +8212,7 @@
         "mpn": "1120000043",
         "name": "Luftentfeuchter TTK 53 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.361Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.485Z"
       },
       "gtin": "4052138013373",
       "id": "gtin:4052138013373",
@@ -8243,7 +8243,7 @@
         "mpn": "1120000044",
         "name": "Luftentfeuchter TTK 54 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.371Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.498Z"
       },
       "gtin": "4052138015100",
       "id": "gtin:4052138015100",
@@ -8275,7 +8275,7 @@
         "name": "Wärmetauscher für KT 20",
         "powerW": 20,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.774Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.543Z"
       },
       "gtin": "4052228043341",
       "id": "gtin:4052228043341",
@@ -8306,7 +8306,7 @@
         "mpn": "6100010201",
         "name": "Filterbox Prozesslufteintritt TTR 200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.794Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.562Z"
       },
       "gtin": "4052138011843",
       "id": "gtin:4052138011843",
@@ -8336,7 +8336,7 @@
         "mpn": "1120000042",
         "name": "Luftentfeuchter TTK 52 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.354Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.478Z"
       },
       "gtin": "4052138012932",
       "id": "gtin:4052138012932",
@@ -8367,7 +8367,7 @@
         "mpn": "6100001218",
         "name": "SP-T Schlauch 600 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.345Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.464Z"
       },
       "gtin": "4052138003237",
       "id": "gtin:4052138003237",
@@ -8398,7 +8398,7 @@
         "mpn": "6100001217",
         "name": "SP-T Schlauch 560 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138003213",
       "id": "gtin:4052138003213",
@@ -8429,7 +8429,7 @@
         "mpn": "1120000037",
         "name": "Komfort Luftentfeuchter TTK 33 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.751Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.521Z"
       },
       "gtin": "4052138105801",
       "id": "gtin:4052138105801",
@@ -8460,7 +8460,7 @@
         "mpn": "6100002043",
         "name": "Adaptertrafo für Thermohygrostat HG 125",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138011157",
       "id": "gtin:4052138011157",
@@ -8491,7 +8491,7 @@
         "mpn": "6100000160",
         "name": "Türschlitzdüse PlanoPro 4 inkl. Protector",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.576Z"
       },
       "gtin": "4052138003886",
       "id": "gtin:4052138003886",
@@ -8522,7 +8522,7 @@
         "mpn": "6100010105",
         "name": "Schlauchadapter Regenerationslufteintritt TTR 500 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.563Z"
       },
       "gtin": "4052138011836",
       "id": "gtin:4052138011836",
@@ -8547,13 +8547,44 @@
         "brand": "Trotec",
         "continuousDrain": false,
         "dataQuality": "feed",
+        "gtin": "4052138109076",
+        "id": "gtin:4052138109076",
+        "mpn": "1120000029",
+        "name": "Design Luftentfeuchter und Luftreiniger TTK 27 HEPA",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-08-31T08:39:24.523Z"
+      },
+      "gtin": "4052138109076",
+      "id": "gtin:4052138109076",
+      "imageUrl": "https://cdn.trotec.com/de_DE/1120000029/Design-Luftentfeuchter-und-Luftreiniger-TTK-27-HEPA-141884-1633679504.jpg",
+      "issues": [
+        "missing-capacity",
+        "unconfirmed-drainage"
+      ],
+      "merchantProductUrl": "https://de.trotec.com/shop/design-luftentfeuchter-und-luftreiniger-ttk-27-hepa.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
+      "merchants": [
+        "Trotec DACH"
+      ],
+      "minBasePriceEur": 119.99,
+      "mpn": "1120000029",
+      "name": "Design Luftentfeuchter und Luftreiniger TTK 27 HEPA",
+      "offerCount": 1,
+      "priority": 122,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Trotec",
+      "candidateAttributes": {
+        "brand": "Trotec",
+        "continuousDrain": false,
+        "dataQuality": "feed",
         "gtin": "4052138003787",
         "id": "gtin:4052138003787",
         "mpn": "6100000119",
         "name": "Schalldämpfer NR 14 extern",
         "noiseDb": 14,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138003787",
       "id": "gtin:4052138003787",
@@ -8584,7 +8615,7 @@
         "mpn": "6100000172",
         "name": "Bohrkrone Trocken 50 x 160 mm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.786Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.555Z"
       },
       "gtin": "4052138012031",
       "id": "gtin:4052138012031",
@@ -8615,7 +8646,7 @@
         "mpn": "6100002040",
         "name": "Raumhygrostat HG 120",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.342Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.459Z"
       },
       "gtin": "4052138003916",
       "id": "gtin:4052138003916",
@@ -8646,7 +8677,7 @@
         "mpn": "6100000068",
         "name": "Raumhygrostat HG 135 mit Schaltsteckdose",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138126295",
       "id": "gtin:4052138126295",
@@ -8677,7 +8708,7 @@
         "mpn": "6100001020",
         "name": "PV-A-Schlauch 51 mm, 1 x 15 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138003077",
       "id": "gtin:4052138003077",
@@ -8703,43 +8734,12 @@
         "brand": "Trotec",
         "continuousDrain": false,
         "dataQuality": "feed",
-        "gtin": "4052138109076",
-        "id": "gtin:4052138109076",
-        "mpn": "1120000029",
-        "name": "Design Luftentfeuchter und Luftreiniger TTK 27 HEPA",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.753Z"
-      },
-      "gtin": "4052138109076",
-      "id": "gtin:4052138109076",
-      "imageUrl": "https://cdn.trotec.com/de_DE/1120000029/Design-Luftentfeuchter-und-Luftreiniger-TTK-27-HEPA-141884-1633679504.jpg",
-      "issues": [
-        "missing-capacity",
-        "unconfirmed-drainage"
-      ],
-      "merchantProductUrl": "https://de.trotec.com/shop/design-luftentfeuchter-und-luftreiniger-ttk-27-hepa.html?mtm_group=affiliate&utm_source=awin&utm_medium=datafeed&utm_campaign=de",
-      "merchants": [
-        "Trotec DACH"
-      ],
-      "minBasePriceEur": 109.99,
-      "mpn": "1120000029",
-      "name": "Design Luftentfeuchter und Luftreiniger TTK 27 HEPA",
-      "offerCount": 1,
-      "priority": 121,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Trotec",
-      "candidateAttributes": {
-        "brand": "Trotec",
-        "continuousDrain": false,
-        "dataQuality": "feed",
         "gtin": "4052138003206",
         "id": "gtin:4052138003206",
         "mpn": "6100001216",
         "name": "SP-T Schlauch 525 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.347Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.466Z"
       },
       "gtin": "4052138003206",
       "id": "gtin:4052138003206",
@@ -8770,7 +8770,7 @@
         "mpn": "6100002049",
         "name": "Hygrostat HG 125 Verlängerung 10m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.801Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138057049",
       "id": "gtin:4052138057049",
@@ -8801,7 +8801,7 @@
         "mpn": "1510003011",
         "name": "Turbolüfter TFV 10 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.361Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.485Z"
       },
       "gtin": "4052138008508",
       "id": "gtin:4052138008508",
@@ -8832,7 +8832,7 @@
         "mpn": "1120000040",
         "name": "Luftentfeuchter TTK 27 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.766Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.535Z"
       },
       "gtin": "4052138181270",
       "id": "gtin:4052138181270",
@@ -8863,7 +8863,7 @@
         "mpn": "6100001214",
         "name": "SP-T Schlauch 457 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.347Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.466Z"
       },
       "gtin": "4052138003183",
       "id": "gtin:4052138003183",
@@ -8894,7 +8894,7 @@
         "mpn": "6100002044",
         "name": "Hygrostat HG 110 mit Klinkenstecker",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138011072",
       "id": "gtin:4052138011072",
@@ -8925,7 +8925,7 @@
         "mpn": "3510250075",
         "name": "Simplify Bohrlochsonde 275mm VQuick",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.761Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.530Z"
       },
       "gtin": "4052138176436",
       "id": "gtin:4052138176436",
@@ -8956,7 +8956,7 @@
         "mpn": "7430000935",
         "name": "Einbauhygrostat für TTK 400",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.791Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.560Z"
       },
       "gtin": "4052138028155",
       "id": "gtin:4052138028155",
@@ -8987,7 +8987,7 @@
         "mpn": "7160000684",
         "name": "Filtermatte TTR 500 D Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012239",
       "id": "gtin:4052138012239",
@@ -9018,7 +9018,7 @@
         "mpn": "6100001212",
         "name": "SP-T Schlauch 425 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.378Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.504Z"
       },
       "gtin": "4052138003176",
       "id": "gtin:4052138003176",
@@ -9049,7 +9049,7 @@
         "mpn": "6100010005",
         "name": "Schlauchadapter Prozesslufteintritt TTR 300",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.563Z"
       },
       "gtin": "4052138011096",
       "id": "gtin:4052138011096",
@@ -9079,7 +9079,7 @@
         "mpn": "6100009020",
         "name": "Aluminium-Fugenkreuzsystem 10er Verteiler",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138004197",
       "id": "gtin:4052138004197",
@@ -9110,7 +9110,7 @@
         "mpn": "7430000930",
         "name": "Einbauhygrostat für TTK 800",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.330Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.450Z"
       },
       "gtin": "4052138022467",
       "id": "gtin:4052138022467",
@@ -9141,7 +9141,7 @@
         "mpn": "7160000220",
         "name": "Filterelement HEPA Klasse H 13 / DIN EN 1822-1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138003633",
       "id": "gtin:4052138003633",
@@ -9172,7 +9172,7 @@
         "mpn": "6100003020",
         "name": "Kondensatpumpe extern",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138011041",
       "id": "gtin:4052138011041",
@@ -9203,7 +9203,7 @@
         "mpn": "7710000060",
         "name": "Filtermatte TTR 160 (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138012178",
       "id": "gtin:4052138012178",
@@ -9234,7 +9234,7 @@
         "mpn": "6100010101",
         "name": "Schlauchadapter Regenerationslufteintritt TTR 400 D",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.563Z"
       },
       "gtin": "4052138011829",
       "id": "gtin:4052138011829",
@@ -9264,7 +9264,7 @@
         "mpn": "7160000682",
         "name": "Filtermatte TTR 400 / TTR 400 D / TTR 500 D Prozesslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012215",
       "id": "gtin:4052138012215",
@@ -9295,7 +9295,7 @@
         "mpn": "6100001202",
         "name": "SP-T Schlauch 255 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138013250",
       "id": "gtin:4052138013250",
@@ -9326,7 +9326,7 @@
         "mpn": "6100010001",
         "name": "Schlauchadapter Prozesslufteintritt TTR 200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.563Z"
       },
       "gtin": "4052138011805",
       "id": "gtin:4052138011805",
@@ -9356,7 +9356,7 @@
         "mpn": "7710000921",
         "name": "Kombinationsfilter für DH 15 VPR+ (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.567Z"
       },
       "gtin": "4052138014943",
       "id": "gtin:4052138014943",
@@ -9387,7 +9387,7 @@
         "mpn": "6100001210",
         "name": "SP-T Schlauch 356 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.340Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.457Z"
       },
       "gtin": "4052138003169",
       "id": "gtin:4052138003169",
@@ -9418,7 +9418,7 @@
         "mpn": "6100002083",
         "name": "PlugSafe - Unterlegplatte für Einbausteckdosen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138050569",
       "id": "gtin:4052138050569",
@@ -9449,7 +9449,7 @@
         "mpn": "7160000680",
         "name": "Filtermatte TTR 200 Prozesslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012192",
       "id": "gtin:4052138012192",
@@ -9480,7 +9480,7 @@
         "mpn": "1105000020",
         "name": "Peltier-Luftentfeuchter TTP 10 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.374Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.500Z"
       },
       "gtin": "4052138016862",
       "id": "gtin:4052138016862",
@@ -9511,7 +9511,7 @@
         "mpn": "7430000934",
         "name": "Einbauhygrostat für TTK 200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.330Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.449Z"
       },
       "gtin": "4052138022450",
       "id": "gtin:4052138022450",
@@ -9542,7 +9542,7 @@
         "mpn": "7710000061",
         "name": "Filtermatte TTR 250 / TTR 250 HP (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138012185",
       "id": "gtin:4052138012185",
@@ -9573,7 +9573,7 @@
         "mpn": "2001229",
         "name": "Filter für VP 6 Schallbox",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.779Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.548Z"
       },
       "gtin": "4260393633599",
       "id": "gtin:4260393633599",
@@ -9604,7 +9604,7 @@
         "mpn": "6100002046",
         "name": "Hygrostat HG 125 Anschlusskupplung 7-polig",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.801Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.569Z"
       },
       "gtin": "4052138057018",
       "id": "gtin:4052138057018",
@@ -9635,7 +9635,7 @@
         "mpn": "6100009053",
         "name": "Aluminium-Endstutzen Flachdach Folie",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138003534",
       "id": "gtin:4052138003534",
@@ -9666,7 +9666,7 @@
         "mpn": "6100001010",
         "name": "PV-A Schlauch 38 mm: 1 x 15 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.362Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.486Z"
       },
       "gtin": "4052138003053",
       "id": "gtin:4052138003053",
@@ -9697,7 +9697,7 @@
         "mpn": "7160000681",
         "name": "Filtermatte TTR 300 Prozesslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012208",
       "id": "gtin:4052138012208",
@@ -9728,7 +9728,7 @@
         "mpn": "7160000683",
         "name": "Filtermatte TTR 400 D Regenerationslufteintritt 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012222",
       "id": "gtin:4052138012222",
@@ -9759,7 +9759,7 @@
         "mpn": "6100000142",
         "name": "Vierer Verteiler Pro VE/VX-Serie",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.572Z"
       },
       "gtin": "4052138011911",
       "id": "gtin:4052138011911",
@@ -9790,7 +9790,7 @@
         "mpn": "6100009010",
         "name": "Randfugendüse Edelstahl 300 mm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.576Z"
       },
       "gtin": "4052138004173",
       "id": "gtin:4052138004173",
@@ -9821,7 +9821,7 @@
         "mpn": "6100009054",
         "name": "Aluminium-Endstutzen Flachdach Bitumen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138003541",
       "id": "gtin:4052138003541",
@@ -9852,7 +9852,7 @@
         "mpn": "6100001205",
         "name": "SP-T Schlauch 305 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.340Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.458Z"
       },
       "gtin": "4052138003152",
       "id": "gtin:4052138003152",
@@ -9883,7 +9883,7 @@
         "mpn": "6100001120",
         "name": "TF-L 127 mm / 6 m Luftschlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.345Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.464Z"
       },
       "gtin": "4052138003121",
       "id": "gtin:4052138003121",
@@ -9914,7 +9914,7 @@
         "mpn": "7710000930",
         "name": "Standardfilter für DH 60 VPR+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138012161",
       "id": "gtin:4052138012161",
@@ -9945,7 +9945,7 @@
         "mpn": "6100009078",
         "name": "100er-Pack Schlauchschelle L 32-50 mm, W1, nach DIN 3017",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.576Z"
       },
       "gtin": "4052138003572",
       "id": "gtin:4052138003572",
@@ -9976,7 +9976,7 @@
         "mpn": "6100001115",
         "name": "TF-L 100 mm / 6 m Luftschlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.345Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.464Z"
       },
       "gtin": "4052138003114",
       "id": "gtin:4052138003114",
@@ -10007,7 +10007,7 @@
         "mpn": "6100001200",
         "name": "SP-T Schlauch 203 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.342Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.459Z"
       },
       "gtin": "4052138003145",
       "id": "gtin:4052138003145",
@@ -10038,7 +10038,7 @@
         "mpn": "6100001125",
         "name": "TF-L 160 mm / 6 m Luftschlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.345Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.464Z"
       },
       "gtin": "4052138003138",
       "id": "gtin:4052138003138",
@@ -10069,7 +10069,7 @@
         "mpn": "7160000205",
         "name": "Filtermatte WA 4i (5er Pack)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.805Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138008416",
       "id": "gtin:4052138008416",
@@ -10100,7 +10100,7 @@
         "mpn": "6100000040",
         "name": "WA 6-Mikrofiltergehäuse inkl. Mikrofilterelement",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138003589",
       "id": "gtin:4052138003589",
@@ -10131,7 +10131,7 @@
         "mpn": "6100001155",
         "name": "SP-T Schlauch 155 mm, 7,6 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138009994",
       "id": "gtin:4052138009994",
@@ -10162,7 +10162,7 @@
         "mpn": "7710000025",
         "name": "HEPA-Filter für TTK 99 HEPA",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.754Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.524Z"
       },
       "gtin": "4052138109168",
       "id": "gtin:4052138109168",
@@ -10193,7 +10193,7 @@
         "mpn": "6100009052",
         "name": "Aluminium-Endstutzen Estrich",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.807Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.577Z"
       },
       "gtin": "4052138003527",
       "id": "gtin:4052138003527",
@@ -10224,7 +10224,7 @@
         "mpn": "6100000150",
         "name": "Rückschlagventil VE/VX-Serie",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138003879",
       "id": "gtin:4052138003879",
@@ -10255,7 +10255,7 @@
         "mpn": "7160000211",
         "name": "WA 4i-Mikrofilterkassette",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138005873",
       "id": "gtin:4052138005873",
@@ -10286,7 +10286,7 @@
         "mpn": "7333000372",
         "name": "Qualitäts-Verlängerungskabel 15 m / 230 V / 1,5 mm²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.373Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.500Z"
       },
       "gtin": "4052138016923",
       "id": "gtin:4052138016923",
@@ -10317,7 +10317,7 @@
         "mpn": "3510205950",
         "name": "Energieverbrauchsmessgerät BX50 MID",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.740Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.510Z"
       },
       "gtin": "4052138050576",
       "id": "gtin:4052138050576",
@@ -10348,7 +10348,7 @@
         "mpn": "1306530",
         "name": "Kondensatwanne für KT 20",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.773Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.542Z"
       },
       "gtin": "4052138181102",
       "id": "gtin:4052138181102",
@@ -10379,7 +10379,7 @@
         "mpn": "7333000369",
         "name": "Qualitäts-Verlängerungskabel 25 m / 230 V / 1,5 mm²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.742Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.512Z"
       },
       "gtin": "4052138093207",
       "id": "gtin:4052138093207",
@@ -10410,7 +10410,7 @@
         "mpn": "6100001105",
         "name": "TF-L 63 mm / 6 m Luftschlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138003091",
       "id": "gtin:4052138003091",
@@ -10441,7 +10441,7 @@
         "mpn": "6100001110",
         "name": "TF-L 83 mm / 6 m Luftschlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138003107",
       "id": "gtin:4052138003107",
@@ -10472,7 +10472,7 @@
         "mpn": "7710000851",
         "name": "Luftfilter für TTK 380 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138083994",
       "id": "gtin:4052138083994",
@@ -10503,7 +10503,7 @@
         "mpn": "7160000216",
         "name": "MQ Qube F8-Filtermanschette im 5er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.806Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.575Z"
       },
       "gtin": "4052138013960",
       "id": "gtin:4052138013960",
@@ -10534,7 +10534,7 @@
         "mpn": "7710000457",
         "name": "Luftfilter für TTK 120 S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.564Z"
       },
       "gtin": "4052138026793",
       "id": "gtin:4052138026793",
@@ -10565,7 +10565,7 @@
         "mpn": "7160000215",
         "name": "F8-Filtermanschette für HEPA-Filtermodul (5er Pack), Filterklasse 8 (DIN EN 779)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.803Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.571Z"
       },
       "gtin": "4052138011713",
       "id": "gtin:4052138011713",
@@ -10596,7 +10596,7 @@
         "mpn": "7710000133",
         "name": "Filter für TTK 120 E / TTK 122 E (für Modelle mit Kältemittel R-134a)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.799Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.568Z"
       },
       "gtin": "4052138017753",
       "id": "gtin:4052138017753",
@@ -10627,7 +10627,7 @@
         "mpn": "7710000335",
         "name": "Filtervlies für TTK 650 S (Modelljahr 2013)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.797Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138020340",
       "id": "gtin:4052138020340",
@@ -10658,7 +10658,7 @@
         "mpn": "7710000023",
         "name": "HEPA-Filter für TTK 64 HEPA",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.754Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.524Z"
       },
       "gtin": "4052138109144",
       "id": "gtin:4052138109144",
@@ -10689,7 +10689,7 @@
         "mpn": "1105000002",
         "name": "Peltier-Luftentfeuchter TTP 2 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.375Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.502Z"
       },
       "gtin": "4052138016954",
       "id": "gtin:4052138016954",
@@ -10720,7 +10720,7 @@
         "mpn": "7710000075",
         "name": "Luftfilter für TTK 120 E / TTK 122 E (für Modelle mit Kältemittel R-290)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.802Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.570Z"
       },
       "gtin": "4052138176214",
       "id": "gtin:4052138176214",
@@ -10751,7 +10751,7 @@
         "mpn": "7710000824",
         "name": "Luftfilter für TTK 71 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138019931",
       "id": "gtin:4052138019931",
@@ -10782,7 +10782,7 @@
         "mpn": "7160000007",
         "name": "Luftfilter für TTK 175 S, TTK 200, TTK 400",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.792Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.561Z"
       },
       "gtin": "4052138012086",
       "id": "gtin:4052138012086",
@@ -10813,7 +10813,7 @@
         "mpn": "7710000833",
         "name": "Luftfilter für TTK 75 E",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.796Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.565Z"
       },
       "gtin": "4052138019788",
       "id": "gtin:4052138019788",
@@ -10844,7 +10844,7 @@
         "mpn": "7710000332",
         "name": "Filtervlies für TTK 140 S und TTK 170 S (ab Modelljahr 2013)",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.795Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.564Z"
       },
       "gtin": "4052138020746",
       "id": "gtin:4052138020746",
@@ -10875,7 +10875,7 @@
         "mpn": "7710000925",
         "name": "Standardfilter für DH 30 VPR+",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138012154",
       "id": "gtin:4052138012154",
@@ -10906,7 +10906,7 @@
         "mpn": "7331001160",
         "name": "Schlauchadapter TTK 171 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.798Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.566Z"
       },
       "gtin": "4052138017555",
       "id": "gtin:4052138017555",
@@ -10937,7 +10937,7 @@
         "mpn": "7710000827",
         "name": "Luftfilter für TTK 165 ECO / TTK 170 ECO",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-08-28T19:46:18.763Z"
+        "sourceUpdatedAt": "2026-08-31T08:39:24.532Z"
       },
       "gtin": "4052138019900",
       "id": "gtin:4052138019900",
