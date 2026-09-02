@@ -2,7 +2,7 @@
   "candidateRows": 510,
   "candidateToProductRate": 68,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-01T07:49:42.086Z",
+  "generatedAt": "2026-09-02T07:06:40.624Z",
   "issues": {
     "missing-material": 11,
     "missing-or-ambiguous-dimensions": 156,
@@ -28,7 +28,7 @@
   "quarantinedProducts": 9,
   "reviewedProducts": 347,
   "reviewQueue": 163,
-  "rows": 174009,
+  "rows": 174051,
   "schemaVersion": 1,
   "sourceFeeds": 8,
   "successfulFeeds": 8
