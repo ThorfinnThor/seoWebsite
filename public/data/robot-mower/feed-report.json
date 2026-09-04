@@ -1,14 +1,14 @@
 {
-  "candidateRows": 332,
+  "candidateRows": 336,
   "candidateToProductRate": 99.1,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-03T07:11:15.872Z",
+  "generatedAt": "2026-09-04T07:15:23.589Z",
   "issues": {
-    "missing-or-ambiguous-slope": 315,
-    "missing-passage-width": 329,
-    "missing-rated-area": 224,
-    "suspicious-price": 120,
-    "unknown-navigation": 285
+    "missing-or-ambiguous-slope": 319,
+    "missing-passage-width": 333,
+    "missing-rated-area": 227,
+    "suspicious-price": 121,
+    "unknown-navigation": 288
   },
   "linkVerification": {
     "verified": 10
@@ -18,7 +18,7 @@
     "Ecovacs DE": 3,
     "Globus Baumarkt DE": 6
   },
-  "normalizedProducts": 329,
+  "normalizedProducts": 333,
   "offers": 10,
   "priceStatsEur": {
     "max": 2299,
@@ -27,10 +27,10 @@
   },
   "productsWithoutOffers": 0,
   "publishedProducts": 10,
-  "quarantinedProducts": 118,
+  "quarantinedProducts": 119,
   "reviewedProducts": 10,
-  "reviewQueue": 319,
-  "rows": 174067,
+  "reviewQueue": 323,
+  "rows": 174090,
   "schemaVersion": 1,
   "sourceFeeds": 8,
   "successfulFeeds": 8
