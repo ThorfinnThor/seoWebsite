@@ -2,13 +2,13 @@
   "candidateRows": 336,
   "candidateToProductRate": 99.1,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-04T07:15:23.589Z",
+  "generatedAt": "2026-09-05T06:57:18.444Z",
   "issues": {
-    "missing-or-ambiguous-slope": 319,
+    "missing-or-ambiguous-slope": 318,
     "missing-passage-width": 333,
-    "missing-rated-area": 227,
+    "missing-rated-area": 228,
     "suspicious-price": 121,
-    "unknown-navigation": 288
+    "unknown-navigation": 287
   },
   "linkVerification": {
     "verified": 10
@@ -30,7 +30,7 @@
   "quarantinedProducts": 119,
   "reviewedProducts": 10,
   "reviewQueue": 323,
-  "rows": 174090,
+  "rows": 174157,
   "schemaVersion": 1,
   "sourceFeeds": 8,
   "successfulFeeds": 8

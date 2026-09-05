@@ -1,11 +1,11 @@
 {
-  "candidateRows": 2378,
+  "candidateRows": 2379,
   "candidateToProductRate": 92.6,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-04T07:15:23.589Z",
+  "generatedAt": "2026-09-05T06:57:18.444Z",
   "issues": {
     "incomplete-product-data": 173,
-    "missing-package-coverage": 2081,
+    "missing-package-coverage": 2082,
     "missing-plank-dimensions": 1241,
     "unhelpful-product-name": 101,
     "unknown-installation": 1717
@@ -18,7 +18,7 @@
     "LaminatDEPOT DE": 3,
     "Woodstore24 DE/AT": 9
   },
-  "normalizedProducts": 2201,
+  "normalizedProducts": 2202,
   "offers": 97,
   "priceStatsEur": {
     "max": 297.06,
@@ -29,8 +29,8 @@
   "publishedProducts": 97,
   "quarantinedProducts": 0,
   "reviewedProducts": 97,
-  "reviewQueue": 2277,
-  "rows": 174090,
+  "reviewQueue": 2278,
+  "rows": 174157,
   "schemaVersion": 1,
   "sourceFeeds": 8,
   "successfulFeeds": 8
