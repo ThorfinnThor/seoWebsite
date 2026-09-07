@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "lastVerifiedAt": "2026-08-28",
+  "lastVerifiedAt": "2026-09-07",
   "merchants": [
     {
       "merchantId": "gfp",
@@ -61,8 +61,8 @@
       "awinAdvertiserId": 45487,
       "profileUrl": "https://ui.awin.com/merchant-profile/45487",
       "applicationPriority": 5,
-      "applicationStatus": "candidate",
-      "enabled": false,
+      "applicationStatus": "active",
+      "enabled": true,
       "verticals": ["dehumidifier"],
       "plannerIds": ["dehumidifier"],
       "country": "DE"
@@ -170,6 +170,19 @@
       "availabilityPolicy": "feed-presence",
       "verticals": ["garden-house", "project-products"],
       "plannerIds": ["terrace", "privacy-screen", "garden-house", "greenhouse"],
+      "country": "DE"
+    },
+    {
+      "merchantId": "tink",
+      "name": "tink DE",
+      "network": "awin",
+      "awinAdvertiserId": 13686,
+      "profileUrl": "https://ui.awin.com/merchant-profile/13686",
+      "applicationPriority": 14,
+      "applicationStatus": "active",
+      "enabled": true,
+      "verticals": ["irrigation", "robot-mower"],
+      "plannerIds": ["irrigation", "robot-mower"],
       "country": "DE"
     }
   ]

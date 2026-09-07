@@ -72,7 +72,7 @@ Complete the identity/payment verification shown by Awin and submit the applicat
 
 ## Advertiser application order
 
-Programme profiles and IDs were rechecked against Awin on 2026-08-15. Apply only after the public site shows the PassendPlanen brand, the canonical `https://www.passendplanen.de/` URL and a complete legal contact.
+Programme profiles and IDs were last updated on 2026-09-07. Apply only after the public site shows the PassendPlanen brand, the canonical `https://www.passendplanen.de/` URL and a complete legal contact.
 
 ### Confirmed active programmes
 
@@ -81,6 +81,10 @@ Woodstore24 DE/AT (Awin advertiser ID `48707`) is approved and enabled in the re
 Trotec DACH (Awin advertiser ID `14288`) is approved and enabled for the dehumidifier catalog. The next manual feed sync discovers its joined German product feed automatically. Trotec offers become public only after the existing manual product-review gate has approved the individual models.
 
 InterGard Heim und Garten DE (Awin advertiser ID `24966`) is approved and enabled for garden houses and project products. Its import scope covers terrace, privacy-screen, garden-house and greenhouse recommendations. The per-planner catalog cap balances eligible products across merchants so InterGard offers are not displaced by a larger general-purpose feed. InterGard's feed does not expose a stock field, so its registry entry explicitly uses the `feed-presence` availability policy: only rows with both a valid Awin link and a direct merchant link qualify, and the workflow still verifies every published target before committing it.
+
+Meaco GmbH DE (Awin advertiser ID `45487`) is approved and enabled only for the dehumidifier catalog. Products are published only when the feed confirms capacity, drainage, price, availability and valid destination links.
+
+tink DE (Awin advertiser ID `13686`) is approved and enabled only for irrigation and robot-mower products. The import intentionally excludes the rest of tink's smart-home range. Gardena, Husqvarna, Bosch and other garden products are still subject to the same technical-data, availability and link checks as every other merchant.
 
 ### Wave 1: strongest calculator fit
 
@@ -105,6 +109,7 @@ Use the matching English message from [English Awin application messages](./awin
 | 10 | [ANTHBOT DE](https://ui.awin.com/merchant-profile/125144) | 125144 | Additional robot mower models |
 | 11 | [Globus Baumarkt DE](https://ui.awin.com/merchant-profile/11830) | 11830 | Broad DIY backup |
 | 13 | [InterGard Heim und Garten DE](https://ui.awin.com/merchant-profile/24966) | 24966 | Terrace, privacy screen, garden house and greenhouse |
+| 14 | [tink DE](https://ui.awin.com/merchant-profile/13686) | 13686 | Irrigation and robot mower products |
 
 Do not start A/B tests when these programmes are merely approved. First validate feeds, product attributes, shipping-price handling and outgoing links. The repository keeps every programme disabled until `applicationStatus` is `active`, and the scheduled feed workflow additionally requires the repository variable `AWIN_FEED_SCHEDULE_ENABLED=true` after a successful manual run.
 
