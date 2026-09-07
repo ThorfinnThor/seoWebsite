@@ -179,6 +179,21 @@
       "maxCutHeightCm": 6,
       "obstacleDetection": true,
       "reviewNote": "Offizielle eufy-Produktinformationen und Awin-Feed geprüft am 2026-09-07: für Rasenflächen bis 500 m², visuelle KI-Navigation ohne Begrenzungskabel, 32 % Steigung, 20–60 mm Schnitthöhe und Hinderniserkennung. Eine belastbare Mindestpassage wird nicht veröffentlicht und bleibt offen."
+    },
+    {
+      "id": "gtin:7333377093980",
+      "name": "Husqvarna Automower 305E NERA B-Ware",
+      "brand": "Husqvarna",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 600,
+      "maxSlopePercent": 30,
+      "minPassageCm": 60,
+      "navigation": "wire",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 5.5,
+      "waterProtection": "IPX5",
+      "reviewNote": "Offizielle Husqvarna-Produktinformationen, Bedienungsanleitung und Awin-Feed geprüft am 2026-09-07: GTIN 7333377093980, bis 600 m² im unregelmäßigen Betrieb mit Begrenzungskabel, 30 % Steigung, 60 cm engste Passage, 20–55 mm Schnitthöhe und IPX5. Das Tink-Angebot ist ausdrücklich als B-Ware gekennzeichnet."
     }
   ]
 }

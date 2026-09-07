@@ -191,6 +191,51 @@
       "continuousDrain": false,
       "tankLiters": 3,
       "reviewNote": "Offizielle Trotec-Produktseite und Awin-Feed geprüft am 2026-08-28: bis 45 m² bzw. 110 m³, 20 l/24 h und 3-l-Tank. Ein dauerhafter Kondensatablauf ist nicht redaktionell bestätigt."
+    },
+    {
+      "id": "gtin:4069143047750",
+      "name": "Bosch Home Comfort Dry 1000 Set mit Ersatzfilter",
+      "brand": "Bosch Home Comfort",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 17,
+      "maxRecommendedVolumeM3": 40,
+      "extractionLPerDay": 10,
+      "continuousDrain": true,
+      "laundryMode": true,
+      "noiseDb": 34,
+      "tankLiters": 2.5,
+      "reviewNote": "Offizielle Bosch-Home-Comfort-Produktseite und Awin-Feed geprüft am 2026-09-07: bis 17 m² beziehungsweise etwa 40 m³, 10 l/Tag, 34 dB(A), 2,5-l-Tank, Wäschetrocknungsmodus und kontinuierlicher Kondensatablauf über den mitgelieferten Schlauch. Das Tink-Angebot enthält zusätzlich einen Ersatzfilter."
+    },
+    {
+      "id": "gtin:4069143047767",
+      "name": "Bosch Home Comfort Dry 2000 Set mit Ersatzfilter",
+      "brand": "Bosch Home Comfort",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 24,
+      "maxRecommendedVolumeM3": 55,
+      "extractionLPerDay": 12,
+      "continuousDrain": true,
+      "laundryMode": true,
+      "noiseDb": 35,
+      "tankLiters": 2.5,
+      "reviewNote": "Offizielle Bosch-Home-Comfort-Produktseite und Awin-Feed geprüft am 2026-09-07: bis 24 m² beziehungsweise etwa 55 m³, 12 l/Tag, 35 dB(A), 2,5-l-Tank, Wäschetrocknungsmodus und kontinuierlicher Kondensatablauf über den Ablaufschlauch. Das Tink-Angebot enthält zusätzlich einen Ersatzfilter."
+    },
+    {
+      "id": "gtin:4069143047774",
+      "name": "Bosch Home Comfort Dry 4000 Set mit Ersatzfilter",
+      "brand": "Bosch Home Comfort",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "maxRecommendedAreaM2": 33,
+      "maxRecommendedVolumeM3": 75,
+      "extractionLPerDay": 16,
+      "continuousDrain": true,
+      "laundryMode": true,
+      "noiseDb": 38,
+      "tankLiters": 2.5,
+      "reviewNote": "Offizielle Bosch-Home-Comfort-Produktseite und Awin-Feed geprüft am 2026-09-07: bis 33 m² beziehungsweise etwa 75 m³, 16 l/Tag, 38 dB(A), 2,5-l-Tank, Wäschetrocknungsmodus und kontinuierlicher Kondensatablauf über den Ablaufschlauch. Das Tink-Angebot enthält zusätzlich einen Ersatzfilter."
     }
   ]
 }
