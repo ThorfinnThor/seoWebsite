@@ -1,0 +1,39 @@
+name: Inspect one affiliate product feed
+
+on:
+  workflow_dispatch:
+    inputs:
+      advertiser_id:
+        description: Awin advertiser ID already enabled in the repository
+        required: true
+        type: string
+      brands:
+        description: Comma separated brand names to sample
+        required: false
+        default: ""
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: affiliate-feed-inspection-${{ inputs.advertiser_id }}
+  cancel-in-progress: true
+
+jobs:
+  inspect:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      AWIN_FEED_URLS_JSON: ${{ secrets.AWIN_FEED_URLS_JSON }}
+      AWIN_INSPECT_ADVERTISER_ID: ${{ inputs.advertiser_id }}
+      AWIN_INSPECT_BRANDS: ${{ inputs.brands }}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - name: Inspect current joined programme feed
+        run: node --import tsx scripts/awin/inspect-programme-feed.ts

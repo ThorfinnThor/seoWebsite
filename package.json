@@ -15,6 +15,7 @@
     "test": "vitest run",
     "validate:data": "node --import tsx scripts/validate-data.ts",
     "sync:products": "node --import tsx scripts/awin/sync-products.ts",
+    "inspect:programme-feed": "node --import tsx scripts/awin/inspect-programme-feed.ts",
     "review:products": "node --import tsx scripts/awin/review-status.ts",
     "verify:merchant-links": "node --import tsx scripts/catalog/verify-merchant-links.ts",
     "verify:static": "node --import tsx scripts/verify-static-build.ts",
