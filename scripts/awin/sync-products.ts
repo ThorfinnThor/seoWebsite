@@ -240,9 +240,14 @@ export function assembleSecurityCameraCatalog(candidates: SecurityCameraCandidat
   const productMap = new Map<string, SecurityCameraProduct>();
   const offerMap = new Map<string, OfferBase>();
   for (const candidate of candidates) {
-    if (!candidate.product) continue;
     const override = overrideMap.get(candidate.id);
-    const product = autoReviewCompleteFeedProduct(applySecurityCameraOverride(candidate.product, override), candidate, Boolean(override));
+    const completedProduct = candidate.product
+      ? applySecurityCameraOverride(candidate.product, override)
+      : override
+        ? SecurityCameraProductSchema.safeParse({ ...candidate.candidateAttributes, ...publicOverride(override), id: candidate.id }).data
+        : undefined;
+    if (!completedProduct) continue;
+    const product = autoReviewCompleteFeedProduct(completedProduct, candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
     if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);

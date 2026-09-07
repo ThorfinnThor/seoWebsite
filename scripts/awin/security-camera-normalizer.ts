@@ -5,13 +5,15 @@ import { priceIssue } from "./price-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
 const CAMERA_PATTERN = /(?:überwachungs|sicherheits|außen|innen|outdoor|indoor|spotlight|floodlight|wall.?light|solo)?\s*(?:kamera|camera)|\beufycam\b|\bsolocam\b/i;
-const EXCLUDED_PATTERN = /türklingel|doorbell|intercom|türgong|chime|homebase(?![^\n]{0,30}(?:kamera|camera))|smarthub(?![^\n]{0,30}(?:kamera|camera))|halterung|\bmount\b|ersatz|battery pack|solarpanel\s+(?:für|kompatibel)|solar panel\s+(?:for|für)|schutzglas|\bcover\b|gehäuse|\bcase\b|dummy/i;
+const EXCLUDED_PATTERN = /türklingel|doorbell|intercom|türgong|chime|homebase(?![^\n]{0,30}(?:kamera|camera))|smarthub(?![^\n]{0,30}(?:kamera|camera))|halterung|\bmount\b|ersatz|kamera[ -]?akku|akku[ -]?pack|battery[ -]?pack|schutzglas|\bcover\b|gehäuse|\bcase\b|dummy|babycam|babykamera|baby camera/i;
 
 export type SecurityCameraCandidate = AffiliateCandidate<SecurityCameraProduct>;
 
 export function isSecurityCameraCandidate(row: RawFeedRow): boolean {
   const name = value(row, "product_name", "aw_product_name", "title") ?? "";
-  return CAMERA_PATTERN.test(name) && !EXCLUDED_PATTERN.test(name);
+  const mentionsSolarPanel = /solar[ -]?panel|solarpanel/i.test(name);
+  const cameraBundledWithPanel = /(?:mit|with|\+)\s*(?:\d+\s*)?(?:solar[ -]?panel|solarpanel)/i.test(name);
+  return CAMERA_PATTERN.test(name) && !EXCLUDED_PATTERN.test(name) && (!mentionsSolarPanel || cameraBundledWithPanel);
 }
 
 export function parseSecurityCameraAttributes(text: string): Partial<SecurityCameraProduct> {
@@ -39,8 +41,9 @@ export function normalizeSecurityCamera(row: RawFeedRow): SecurityCameraCandidat
   const { merchantId, merchantName } = merchantDetails(row);
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
   const identity = productIdentity(row, merchantId, merchantProductId);
-  const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category"), value(row, "product_short_description")].filter(Boolean).join(" ");
-  const attributes = parseSecurityCameraAttributes(text);
+  // Only infer hard recommendation attributes from the product title. Long feed
+  // descriptions often mention compatible accessories or comparison products.
+  const attributes = parseSecurityCameraAttributes(name);
   const sourceUpdatedAt = isoDate(value(row, "last_updated"));
   const candidateAttributes = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, reviewed: false as const, dataQuality: "feed" as const, sourceUpdatedAt, ...attributes };
   const issues: string[] = [];
@@ -64,7 +67,9 @@ export function normalizeSecurityCamera(row: RawFeedRow): SecurityCameraCandidat
   if (offerPriceIssue) issues.push(offerPriceIssue);
   if (stock.ambiguous) issues.push("ambiguous-stock");
   const imageUrl = value(row, "large_image", "merchant_image_url");
-  const offer: OfferBase | undefined = productResult.success && affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur && !offerPriceIssue ? {
+  // Preserve a valid offer even when the product still needs a curated override.
+  // The public assembly step only publishes it once the product schema is complete.
+  const offer: OfferBase | undefined = affiliateUrl?.startsWith("https://") && currency === "EUR" && priceEur && !offerPriceIssue ? {
     id: `offer:${slug(merchantId)}:${slug(merchantProductId)}`, productId: identity.id, merchantId, merchantName, merchantProductId, priceEur,
     ...delivery(value(row, "delivery_cost")), available: stock.available, affiliateUrl,
     ...(merchantUrl?.startsWith("https://") ? { merchantUrl } : {}),

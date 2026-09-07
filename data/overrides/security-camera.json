@@ -1,4 +1,46 @@
 {
   "schemaVersion": 1,
-  "overrides": []
+  "overrides": [
+    {
+      "id": "gtin:0194644126377",
+      "connection": "wifi",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "reviewNote": "Tink product page checked on 2026-09-07. Four outdoor cameras with 2K resolution, integrated solar panels and WLAN app connection."
+    },
+    {
+      "id": "gtin:0194644296896",
+      "connection": "wifi",
+      "power": "mains",
+      "integratedLight": true,
+      "reviewed": true,
+      "dataQuality": "curated",
+      "reviewNote": "Tink product page checked on 2026-09-07. Indoor camera with 4K, pan and tilt, WLAN, supplied mains adapter and integrated spotlight."
+    },
+    {
+      "id": "gtin:194644126384",
+      "connection": "wifi",
+      "power": "mains",
+      "integratedLight": false,
+      "reviewed": true,
+      "dataQuality": "curated",
+      "reviewNote": "Tink product page checked on 2026-09-07. Two indoor cameras with 4K wide-angle lens, pan and tilt, dual-band WLAN and USB-C mains power."
+    },
+    {
+      "id": "gtin:194644146160",
+      "connection": "wifi",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "reviewNote": "Tink product page checked on 2026-09-07. Two outdoor cameras with 3K, pan and tilt, supplied solar panels and WLAN app connection."
+    },
+    {
+      "id": "gtin:194644176136",
+      "connection": "wifi",
+      "power": "mains",
+      "integratedLight": false,
+      "reviewed": true,
+      "dataQuality": "curated",
+      "reviewNote": "Tink product page checked on 2026-09-07. Two indoor cameras with 2K, pan and tilt, WLAN and mains power."
+    }
+  ]
 }
