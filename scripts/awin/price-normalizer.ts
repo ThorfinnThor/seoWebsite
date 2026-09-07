@@ -3,6 +3,7 @@ export type CatalogVertical =
   | "dehumidifier"
   | "irrigation"
   | "robot-mower"
+  | "security-camera"
   | "flooring"
   | "project-products";
 
@@ -11,6 +12,7 @@ export const PRICE_LIMITS: Record<CatalogVertical, { min: number; max: number }>
   dehumidifier: { min: 20, max: 5_000 },
   irrigation: { min: 0.5, max: 10_000 },
   "robot-mower": { min: 100, max: 15_000 },
+  "security-camera": { min: 35, max: 20_000 },
   flooring: { min: 1, max: 10_000 },
   "project-products": { min: 0.5, max: 100_000 },
 };

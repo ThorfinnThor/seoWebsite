@@ -3,7 +3,7 @@ import path from "node:path";
 import type { LinkVerificationStatus, OfferBase, ProductBase, StaticCatalog } from "@/lib/catalog/types";
 import { writeFilesAtomically } from "./write-atomic";
 
-const CATALOG_FILES = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring", "project-products"].map((vertical) => `public/data/${vertical}/catalog.json`);
+const CATALOG_FILES = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "security-camera", "flooring", "project-products"].map((vertical) => `public/data/${vertical}/catalog.json`);
 type Fetcher = (input: string | URL | Request, init?: RequestInit) => Promise<Response>;
 
 export async function verifyOfferLink(offer: OfferBase, product: ProductBase, fetcher: Fetcher = fetch): Promise<LinkVerificationStatus> {

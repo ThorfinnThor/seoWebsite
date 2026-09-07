@@ -4,6 +4,7 @@ import type { DehumidifierProduct } from "@/lib/dehumidifier/types";
 import type { IrrigationProduct } from "@/lib/irrigation/types";
 import type { FlooringProduct } from "@/lib/flooring/types";
 import type { RobotMowerProduct } from "@/lib/robot-mower/types";
+import type { SecurityCameraProduct } from "@/lib/security-camera/types";
 import type { ProjectProduct } from "@/lib/project-products/types";
 
 export type RawFeedRow = Record<string, string | undefined>;
@@ -45,5 +46,6 @@ export interface AffiliateCandidate<TProduct> {
 export type DehumidifierCandidate = AffiliateCandidate<DehumidifierProduct>;
 export type IrrigationCandidate = AffiliateCandidate<IrrigationProduct>;
 export type RobotMowerCandidate = AffiliateCandidate<RobotMowerProduct>;
+export type SecurityCameraCandidate = AffiliateCandidate<SecurityCameraProduct>;
 export type FlooringCandidate = AffiliateCandidate<FlooringProduct>;
 export type ProjectProductCandidate = AffiliateCandidate<ProjectProduct>;

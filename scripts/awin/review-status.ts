@@ -10,7 +10,7 @@ async function json<T>(file: string): Promise<T> {
   return JSON.parse(await readFile(path.resolve(file), "utf8")) as T;
 }
 
-const verticals = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "flooring"] as const;
+const verticals = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "security-camera", "flooring"] as const;
 function isLikelyMatch(vertical: typeof verticals[number], product: ReviewProduct): boolean {
   if (vertical !== "garden-house") return true;
   const name = product.name ?? "";

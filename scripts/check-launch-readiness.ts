@@ -16,12 +16,13 @@ const exists = async (path: string) => access(path).then(() => true).catch(() =>
 const read = (path: string) => readFile(path, "utf8");
 const catalog = async (path: string): Promise<Catalog> => JSON.parse(await read(path));
 
-const [nextConfig, gardenHouse, dehumidifier, irrigation, robotMower, flooring, projectProducts] = await Promise.all([
+const [nextConfig, gardenHouse, dehumidifier, irrigation, robotMower, securityCamera, flooring, projectProducts] = await Promise.all([
   read("next.config.ts"),
   catalog("public/data/garden-house/catalog.json"),
   catalog("public/data/dehumidifier/catalog.json"),
   catalog("public/data/irrigation/catalog.json"),
   catalog("public/data/robot-mower/catalog.json"),
+  catalog("public/data/security-camera/catalog.json"),
   catalog("public/data/flooring/catalog.json"),
   catalog("public/data/project-products/catalog.json"),
 ]);
@@ -30,8 +31,8 @@ const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.passendplanen.
 const legalEmail = LEGAL.email;
 const emailReady = Boolean(legalEmail && !/^(you|test|example)@/i.test(legalEmail));
 const temporaryDomain = /vercel\.app|seo-website/i.test(siteUrl);
-const catalogProducts = [gardenHouse, dehumidifier, irrigation, robotMower, flooring, projectProducts].reduce((sum, value) => sum + (value.products?.length ?? 0), 0);
-const catalogOffers = [gardenHouse, dehumidifier, irrigation, robotMower, flooring, projectProducts].reduce((sum, value) => sum + (value.offers?.length ?? 0), 0);
+const catalogProducts = [gardenHouse, dehumidifier, irrigation, robotMower, securityCamera, flooring, projectProducts].reduce((sum, value) => sum + (value.products?.length ?? 0), 0);
+const catalogOffers = [gardenHouse, dehumidifier, irrigation, robotMower, securityCamera, flooring, projectProducts].reduce((sum, value) => sum + (value.offers?.length ?? 0), 0);
 
 const checks: Check[] = [
   {
@@ -45,9 +46,9 @@ const checks: Check[] = [
     detail: "Startseite und Rechnerübersicht müssen im Export vorhanden sein.",
   },
   {
-    status: PLANNERS.length === 10 ? "ready" : "blocked",
+    status: PLANNERS.length === 11 ? "ready" : "blocked",
     label: "Rechner",
-    detail: `${PLANNERS.length} von 10 geplanten Rechnern sind registriert.`,
+    detail: `${PLANNERS.length} von 11 geplanten Rechnern sind registriert.`,
   },
   {
     status: await exists(".github/workflows/ci.yml") ? "ready" : "blocked",

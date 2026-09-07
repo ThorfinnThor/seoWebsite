@@ -29,7 +29,7 @@ export default function AffiliateTransparenzPage() {
       </section>
       <section>
         <h2>Mehr zur Methode</h2>
-        <p><Link href="/methodik/">Unsere Methodik</Link> beschreibt harte Filter, nachvollziehbare Berechnungen und die Grenzen der zehn Planer.</p>
+        <p><Link href="/methodik/">Unsere Methodik</Link> beschreibt harte Filter, nachvollziehbare Berechnungen und die Grenzen der elf Planer.</p>
       </section>
     </LegalPage>
   );

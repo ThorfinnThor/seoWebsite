@@ -4,6 +4,7 @@ import { RobotMowerCatalogSchema, type RobotMowerCatalog } from "@/lib/robot-mow
 import { FlooringCatalogSchema, type FlooringCatalog } from "@/lib/flooring/types";
 import { IrrigationCatalogSchema, type IrrigationCatalog } from "@/lib/irrigation/types";
 import { ProjectCatalogSchema, type ProjectCatalog } from "@/lib/project-products/types";
+import { SecurityCameraCatalogSchema, type SecurityCameraCatalog } from "@/lib/security-camera/types";
 
 let gardenHouseCatalogRequest: Promise<GardenHouseCatalog> | null = null;
 let dehumidifierCatalogRequest: Promise<DehumidifierCatalog> | null = null;
@@ -11,6 +12,7 @@ let robotMowerCatalogRequest: Promise<RobotMowerCatalog> | null = null;
 let flooringCatalogRequest: Promise<FlooringCatalog> | null = null;
 let irrigationCatalogRequest: Promise<IrrigationCatalog> | null = null;
 let projectCatalogRequest: Promise<ProjectCatalog> | null = null;
+let securityCameraCatalogRequest: Promise<SecurityCameraCatalog> | null = null;
 
 export async function loadGardenHouseCatalog(signal?: AbortSignal): Promise<GardenHouseCatalog> {
   if (signal) return fetchCatalog("/data/garden-house/catalog.json", GardenHouseCatalogSchema.parse, signal);
@@ -52,6 +54,12 @@ export async function loadProjectCatalog(signal?: AbortSignal): Promise<ProjectC
   if (signal) return fetchCatalog("/data/project-products/catalog.json", ProjectCatalogSchema.parse, signal);
   projectCatalogRequest ??= fetchCatalog("/data/project-products/catalog.json", ProjectCatalogSchema.parse).catch((error) => { projectCatalogRequest = null; throw error; });
   return projectCatalogRequest;
+}
+
+export async function loadSecurityCameraCatalog(signal?: AbortSignal): Promise<SecurityCameraCatalog> {
+  if (signal) return fetchCatalog("/data/security-camera/catalog.json", SecurityCameraCatalogSchema.parse, signal);
+  securityCameraCatalogRequest ??= fetchCatalog("/data/security-camera/catalog.json", SecurityCameraCatalogSchema.parse).catch((error) => { securityCameraCatalogRequest = null; throw error; });
+  return securityCameraCatalogRequest;
 }
 
 async function fetchCatalog<T>(url: string, parse: (value: unknown) => T, signal?: AbortSignal): Promise<T> {

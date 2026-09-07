@@ -25,6 +25,8 @@ function drawingFor(planner: PlannerId) {
       return <><path d="M88 74l72-44 72 44v68H88z" /><path d="M137 142V96h46v46M74 151h172M74 151l8-5m-8 5 8 5m164-5-8-5m8 5-8 5" /><circle cx="202" cy="92" r="12" /><path d="M62 72v70m0-70-5 8m5-8 5 8m-5 62-5-8m5 8 5-8" /><text x="128" y="169">Stellfläche</text><text x="38" y="112" transform="rotate(-90 38 112)">Höhe</text></>;
     case "dehumidifier":
       return <><path d="M70 33h220v116H70zM95 126V72h56v54z" /><path d="M181 63c18 10 18 24 0 34s-18 24 0 34M218 57c18 10 18 24 0 34s-18 24 0 34" /><path d="M112 45c-10 15-13 21-13 28a13 13 0 0026 0c0-7-3-13-13-28z" /><circle cx="258" cy="76" r="13" /><path d="M258 63v13l8 7" /><text x="179" y="166">Luftweg und Raumvolumen</text></>;
+    case "security-camera":
+      return <><path d="M76 48h118v82H76zM194 69l38-20v80l-38-20" /><circle cx="139" cy="89" r="24" /><circle cx="139" cy="89" r="9" /><path d="M104 130v20m-22 0h44M246 61c26 9 39 28 39 56M252 43c38 13 58 42 58 79" strokeDasharray="6 7" /><text x="118" y="170">Blickwinkel und Verbindung</text></>;
     case "irrigation":
       return <><path d="M61 136h238M87 136V88h186v48M117 88V58m62 30V42m63 46V61" /><path d="M105 74l12-16 12 16M167 58l12-16 12 16M230 77l12-16 12 16" /><circle cx="87" cy="136" r="8" /><circle cx="273" cy="136" r="8" /><path d="M61 151h238" /><text x="119" y="169">Zonen und Leitungswege</text></>;
     case "terrace":

@@ -25,6 +25,10 @@
     "robot-mower": {
       "catalog": "/data/robot-mower/catalog.json",
       "generatedAt": "2026-09-07T11:47:43.261Z"
+    },
+    "security-camera": {
+      "catalog": "/data/security-camera/catalog.json",
+      "generatedAt": "2026-09-07T11:47:43.261Z"
     }
   }
 }

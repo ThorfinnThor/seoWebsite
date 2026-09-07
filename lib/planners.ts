@@ -7,6 +7,7 @@ export type PlannerIconName =
   | "flooring"
   | "greenhouse"
   | "robot-mower"
+  | "security-camera"
   | "carport"
   | "drywall";
 
@@ -66,6 +67,24 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
       { question: "Welche Angaben braucht der Luftentfeuchter-Rechner?", answer: "Benötigt werden Raumfläche und Höhe, Temperatur, Feuchtebelastung, Nutzung sowie Anforderungen an Ablauf, Geräusch und Wäschetrocknung." },
       { question: "Reicht die Liter-pro-Tag-Angabe für die Auswahl?", answer: "Nein. Die Nennleistung wird unter definierten Prüfbedingungen ermittelt. Raumtemperatur, reale Feuchtelast, Luftführung, Hygrostat und Laufzeit entscheiden mit." },
       { question: "Kann ein Luftentfeuchter Schimmelursachen lösen?", answer: "Ein Gerät kann die Luftfeuchte senken, beseitigt aber keine Leckage, Wärmebrücke oder andere bauliche Ursache. Sichtbarer Schimmel und Wasserschäden gehören fachlich bewertet." },
+    ],
+  },
+  {
+    id: "security-camera",
+    area: "house",
+    title: "Sicherheitskamera Finder",
+    category: "Haus · Sicherheit",
+    shortCategory: "Sicherheit",
+    description: "Einsatzort, Verbindung, Stromversorgung, Auflösung und benötigte Anzahl zu einer prüfbaren Kameraauswahl verbinden.",
+    homeDescription: "Kameras nach Standort, Verbindung, Strom, Auflösung und Funktionsbedarf auswählen.",
+    href: "/haus/sicherheit/sicherheitskamera-finder/",
+    icon: "security-camera",
+    cta: "Kamera auswählen",
+    outputs: ["Geeignete Verbindung und Stromversorgung", "Benötigte Angebote für alle Bereiche", "Geprüfte Kameras innerhalb des Budgets"],
+    faqs: [
+      { question: "Wie viele Sicherheitskameras brauche ich?", answer: "Zähle getrennte Blickwinkel statt nur Quadratmeter. Hausecken, geschlossene Türen und verdeckte Zufahrten benötigen meist eigene Positionen. Der Finder rechnet die Setgröße auf deine Bereiche hoch." },
+      { question: "Wann ist eine PoE Kamera sinnvoll?", answer: "PoE verbindet Netzwerk und Strom in einem geeigneten Kabel. Das kann stabiler als WLAN sein, setzt aber eine geplante Leitung, kompatible Netzwerkhardware und eine fachgerechte Montage voraus." },
+      { question: "Darf eine private Kamera Straße oder Nachbargrundstück filmen?", answer: "Der zulässige Bildbereich hängt von der konkreten Situation und den geltenden Datenschutzregeln ab. Richte die Kamera so aus, dass fremde und öffentliche Bereiche nicht unnötig erfasst werden, und hole bei Unsicherheit rechtlichen Rat ein." },
     ],
   },
   {

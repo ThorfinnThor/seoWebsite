@@ -4,6 +4,7 @@ import { extractFeedListUrl, filterFeedListEntries, parseFeedListRows, selectPre
 import { isDehumidifierCandidate } from "./dehumidifier-normalizer";
 import { isIrrigationCandidate } from "./irrigation-normalizer";
 import { isRobotMowerCandidate } from "./robot-mower-normalizer";
+import { isSecurityCameraCandidate } from "./security-camera-normalizer";
 import { isGardenHouseCandidate, value } from "./garden-house-normalizer";
 import { streamFeedRows } from "./source";
 import type { RawFeedRow } from "./types";
@@ -44,6 +45,7 @@ function candidateVerticals(row: RawFeedRow) {
   if (isDehumidifierCandidate(row)) matches.push("dehumidifier");
   if (isIrrigationCandidate(row)) matches.push("irrigation");
   if (isRobotMowerCandidate(row)) matches.push("robot-mower");
+  if (isSecurityCameraCandidate(row)) matches.push("security-camera");
   return matches;
 }
 

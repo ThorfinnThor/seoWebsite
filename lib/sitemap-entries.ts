@@ -27,6 +27,7 @@ const CORE_PATHS = [
   "/garten/maehroboter-rechner", "/garten/maehroboter-flaeche-berechnen", "/garten/maehroboter-steigung-engstellen", "/garten/maehroboter-begrenzungskabel-kabellos",
   "/garten/carport-planer", "/garten/carport-groesse", "/garten/carport-fundament", "/garten/carport-dachentwaesserung",
   "/haus", "/haus/boden", "/haus/boden/bodenbelag-rechner", "/haus/boden/laminat-verschnitt-berechnen", "/haus/boden/untergrund-trittschall", "/haus/boden/sockelleisten-berechnen",
+  "/haus/sicherheit/sicherheitskamera-finder",
   "/haus/innenausbau", "/haus/innenausbau/trockenbau-rechner", "/haus/innenausbau/trockenbau-platten-berechnen", "/haus/innenausbau/trockenbau-profile-staenderwerk", "/haus/innenausbau/trockenbau-tuer-oeffnungen",
   "/haus/raumklima", "/haus/raumklima/luftentfeuchter-rechner", "/haus/raumklima/luftentfeuchter-keller", "/haus/raumklima/luftentfeuchter-stromverbrauch", "/haus/raumklima/luftentfeuchter-waesche",
   "/methodik", "/ueber-passendplanen", "/affiliate-transparenz",

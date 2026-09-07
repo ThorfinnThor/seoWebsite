@@ -25,6 +25,8 @@ export function PlannerIcon({ name, className = "planner-icon-svg", style }: Pla
       return <svg {...common}><path d="M7 22 24 7l17 15v19H7Z" /><path d="M18 41V27h12v14M13 17V9h6v3" /></svg>;
     case "dehumidifier":
       return <svg {...common}><rect x="9" y="5" width="30" height="38" rx="5" /><path d="M15 12h18M15 17h18M24 23s-7 8-7 12a7 7 0 0 0 14 0c0-4-7-12-7-12Z" /></svg>;
+    case "security-camera":
+      return <svg {...common}><path d="M7 17h25a5 5 0 0 1 5 5v13H12a5 5 0 0 1-5-5Z" /><circle cx="26" cy="26" r="6" /><path d="m37 24 6-4v14l-6-4M15 35v6m-6 0h12" /></svg>;
     case "irrigation":
       return <svg {...common}><path d="M7 39h34M24 39V27M18 27h12M11 23c2-5 6-8 11-9M37 23c-2-5-6-8-11-9M7 30c3-7 8-12 15-14M41 30c-3-7-8-12-15-14" /><path d="M11 27v2M37 27v2M16 21v2M32 21v2" /></svg>;
     case "terrace":

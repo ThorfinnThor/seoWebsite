@@ -4,17 +4,19 @@ import { GardenHouseCatalogSchema, GardenHouseOverrideSchema, GardenHouseRulesSc
 import { DehumidifierCatalogSchema, DehumidifierOverrideSchema, DehumidifierRulesSchema } from "@/lib/dehumidifier/types";
 import { IrrigationCatalogSchema, IrrigationOverrideSchema, IrrigationRulesSchema } from "@/lib/irrigation/types";
 import { RobotMowerCatalogSchema, RobotMowerOverrideSchema } from "@/lib/robot-mower/types";
+import { SecurityCameraCatalogSchema, SecurityCameraOverrideSchema } from "@/lib/security-camera/types";
 import { FlooringCatalogSchema, FlooringOverrideSchema } from "@/lib/flooring/types";
 import { ProjectCatalogSchema, ProjectOverrideSchema } from "@/lib/project-products/types";
 import { PLANNERS } from "@/lib/planners";
 import { assertCatalogPayloadSafe, assertCatalogSafe } from "./catalog/safeguards";
 
 const ManifestEntrySchema = z.object({ catalog: z.string().startsWith("/data/"), generatedAt: z.iso.datetime() });
-const ManifestSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), verticals: z.object({ "garden-house": ManifestEntrySchema, dehumidifier: ManifestEntrySchema, irrigation: ManifestEntrySchema, "robot-mower": ManifestEntrySchema, flooring: ManifestEntrySchema, "project-products": ManifestEntrySchema }) });
+const ManifestSchema = z.object({ schemaVersion: z.literal(1), generatedAt: z.iso.datetime(), verticals: z.object({ "garden-house": ManifestEntrySchema, dehumidifier: ManifestEntrySchema, irrigation: ManifestEntrySchema, "robot-mower": ManifestEntrySchema, "security-camera": ManifestEntrySchema, flooring: ManifestEntrySchema, "project-products": ManifestEntrySchema }) });
 const GardenHouseOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(GardenHouseOverrideSchema) });
 const DehumidifierOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(DehumidifierOverrideSchema) });
 const IrrigationOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(IrrigationOverrideSchema) });
 const RobotMowerOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(RobotMowerOverrideSchema) });
+const SecurityCameraOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(SecurityCameraOverrideSchema) });
 const FlooringOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(FlooringOverrideSchema) });
 const ProjectOverridesSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(ProjectOverrideSchema) });
 const knownPlannerIds = new Set(PLANNERS.map((planner) => planner.id));
@@ -66,15 +68,17 @@ async function main() {
   const dehumidifiers = DehumidifierCatalogSchema.parse(await json("public/data/dehumidifier/catalog.json"));
   const irrigation = IrrigationCatalogSchema.parse(await json("public/data/irrigation/catalog.json"));
   const robotMowers = RobotMowerCatalogSchema.parse(await json("public/data/robot-mower/catalog.json"));
+  const securityCameras = SecurityCameraCatalogSchema.parse(await json("public/data/security-camera/catalog.json"));
   const flooring = FlooringCatalogSchema.parse(await json("public/data/flooring/catalog.json"));
   const projectProducts = ProjectCatalogSchema.parse(await json("public/data/project-products/catalog.json"));
   assertCatalogSafe(catalog);
   assertCatalogPayloadSafe(dehumidifiers);
   assertCatalogPayloadSafe(irrigation);
   assertCatalogPayloadSafe(robotMowers);
+  assertCatalogPayloadSafe(securityCameras);
   assertCatalogPayloadSafe(flooring);
   assertCatalogPayloadSafe(projectProducts);
-  assertLinkStatuses([catalog, dehumidifiers, irrigation, robotMowers, flooring, projectProducts]);
+  assertLinkStatuses([catalog, dehumidifiers, irrigation, robotMowers, securityCameras, flooring, projectProducts]);
   GardenHouseRulesSchema.parse(await json("data/manual/garden-house-rules.json"));
   DehumidifierRulesSchema.parse(await json("data/manual/dehumidifier-rules.json"));
   IrrigationRulesSchema.parse(await json("data/manual/irrigation-rules.json"));
@@ -83,6 +87,7 @@ async function main() {
   DehumidifierOverridesSchema.parse(await json("data/overrides/dehumidifier.json"));
   IrrigationOverridesSchema.parse(await json("data/overrides/irrigation.json"));
   RobotMowerOverridesSchema.parse(await json("data/overrides/robot-mower.json"));
+  SecurityCameraOverridesSchema.parse(await json("data/overrides/security-camera.json"));
   FlooringOverridesSchema.parse(await json("data/overrides/flooring.json"));
   ProjectOverridesSchema.parse(await json("data/overrides/project-products.json"));
   const merchants = MerchantsSchema.parse(await json("data/manual/merchants.json"));
@@ -90,15 +95,17 @@ async function main() {
   ReviewSchema.parse(await json("data/review/dehumidifier.json"));
   ReviewSchema.parse(await json("data/review/irrigation.json"));
   ReviewSchema.parse(await json("data/review/robot-mower.json"));
+  ReviewSchema.parse(await json("data/review/security-camera.json"));
   ReviewSchema.parse(await json("data/review/flooring.json"));
   ReviewSchema.parse(await json("data/review/project-products.json"));
   FeedReportSchema.parse(await json("public/data/garden-house/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/dehumidifier/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/irrigation/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/robot-mower/feed-report.json"));
+  FeedReportSchema.parse(await json("public/data/security-camera/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/flooring/feed-report.json"));
   FeedReportSchema.parse(await json("public/data/project-products/feed-report.json"));
-  console.log(`Validated catalogs: garden-house ${catalog.products.length}, dehumidifier ${dehumidifiers.products.length}, irrigation ${irrigation.products.length}, robot-mower ${robotMowers.products.length}, flooring ${flooring.products.length}, project-products ${projectProducts.products.length}; ${merchants.merchants.length} Awin programmes registered.`);
+  console.log(`Validated catalogs: garden-house ${catalog.products.length}, dehumidifier ${dehumidifiers.products.length}, irrigation ${irrigation.products.length}, robot-mower ${robotMowers.products.length}, security-camera ${securityCameras.products.length}, flooring ${flooring.products.length}, project-products ${projectProducts.products.length}; ${merchants.merchants.length} Awin programmes registered.`);
 }
 
 main().catch((error) => { console.error(error); process.exitCode = 1; });

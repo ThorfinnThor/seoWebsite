@@ -7,7 +7,7 @@ import { absoluteUrl } from "@/lib/site";
 
 export const metadata = createPageMetadata({
   title: "Alle Rechner und Planer",
-  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Carport, Mähroboter, Trockenbau, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge – ohne Anmeldung.",
+  description: "Kostenlose Planer für Gartenhaus, Gewächshaus, Carport, Mähroboter, Sicherheitskameras, Trockenbau, Luftentfeuchter, Bewässerung, Terrasse, Sichtschutz und Bodenbeläge.",
   path: "/rechner/",
 });
 
@@ -21,7 +21,7 @@ export default function RechnerPage() {
     }} />
     <section className="page-hero tool-hub-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Rechner & Planer" }]} />
-      <p className="eyebrow">10 Rechner · kostenlos · ohne Anmeldung</p>
+      <p className="eyebrow">11 Rechner · kostenlos · ohne Anmeldung</p>
       <h1>Welches Projekt möchtest du als Nächstes klären?</h1>
       <p>Jeder Planer übersetzt wenige Angaben in nachvollziehbare Anforderungen. Die Karten zeigen dir jetzt direkt, welche konkreten Ergebnisse du erhältst.</p>
     </section>
