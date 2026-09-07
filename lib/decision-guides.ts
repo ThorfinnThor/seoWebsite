@@ -1,5 +1,6 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
+import { applyEditorialDecisionGuide } from "@/lib/decision-guide-editorials";
 import { editorializeGuide, editorialVariant, scopedStatement } from "@/lib/editorial-style";
 import { getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 
@@ -50,6 +51,7 @@ export type DecisionGuide = SeoGuide & {
   scoreA: number;
   scoreB: number;
   qualitySignature: string;
+  indexable?: boolean;
 };
 
 export type DecisionGuideDirectory = {
@@ -113,8 +115,8 @@ const clusters: readonly DecisionCluster[] = [
   {
     topicSlug: "maehroboter",
     noun: "Mähroboter-Navigation",
-    directoryTitle: "Die passende Navigation für den Mähroboter",
-    directoryDescription: "Fläche, Empfang, Passagen und getrennte Zonen bestimmen die Auswahl. Kabel, RTK, LiDAR, Kamera und kombinierte Systeme werden passend zum Garten eingeordnet.",
+    directoryTitle: "Mähroboter mit Kabel, RTK, LiDAR oder Kamera",
+    directoryDescription: "Welche Navigation zum Garten passt, zeigt sich an Empfang, Passagen, Bäumen und getrennten Rasenflächen. Die Vergleiche ordnen diese Bedingungen ohne pauschalen Testsieger ein.",
     measurement: "Miss Netto-Rasenfläche, maximale Steigung und engste Passage. Zeichne hohe Bäume, Hauswände, getrennte Zonen, Kanten, Wasserflächen und den Platz der Ladestation ein.",
     verification: "Prüfe für das konkrete Modell Nennfläche, Navigation, Empfangsvoraussetzungen, Mindestpassage, Steigung, Randabstände, Zonenlogik, Sicherheitsfunktionen, Geräusch und Updateversorgung.",
     limitation: "Die Matrix ist keine Modell- oder Sicherheitsfreigabe. Empfang, Hinderniserkennung, Traktion und Firmwareverhalten müssen am konkreten Grundstück und nach Herstellerangaben geprüft werden.",
@@ -138,7 +140,7 @@ const clusters: readonly DecisionCluster[] = [
       context("ohne-wlan", "ohne stabiles WLAN", "ohne stabiles WLAN", "Am entferntesten Gartenpunkt kann die Hausverbindung schwach sein, obwohl Navigation oder Updates Netzwerkfunktionen voraussetzen.", "Eigenständiger Betrieb und verständliche Störungssuche stehen im Vordergrund.", "WLAN, Mobilfunk, Bluetooth, RTK-Korrekturdienst und Navigation sind getrennte Voraussetzungen.", [25, 30, 15, 20, 10]),
       context("haeufige-aenderungen", "häufige Änderungen", "bei häufig veränderten Flächen", "Trampolin, Beete, Spielbereiche und saisonale Sperrzonen verändern die nutzbare Rasenfläche regelmäßig.", "Änderbarkeit bekommt das höchste Gewicht.", "Virtuelle Grenzen müssen nach jeder Änderung kontrolliert werden; physische Gefahren benötigen weiterhin sichere Abgrenzung.", [20, 20, 10, 15, 35]),
     ],
-    sources: [GUIDE_SOURCE_LIBRARY.mowerSlope, GUIDE_SOURCE_LIBRARY.mowerPassages, GUIDE_SOURCE_LIBRARY.mowerSecondaryArea],
+    sources: [GUIDE_SOURCE_LIBRARY.mowerSlope, GUIDE_SOURCE_LIBRARY.mowerPassages, GUIDE_SOURCE_LIBRARY.mowerSecondaryArea, GUIDE_SOURCE_LIBRARY.mowerWirelessPlanning],
   },
   {
     topicSlug: "terrasse",
@@ -756,31 +758,34 @@ const BASE_DECISION_GUIDES: readonly DecisionGuide[] = clusters.flatMap((cluster
 );
 
 export const DECISION_GUIDES: readonly DecisionGuide[] = BASE_DECISION_GUIDES.map((guide) => {
+  const editorialGuide = applyEditorialDecisionGuide(guide);
   const alternateContext = BASE_DECISION_GUIDES.find((candidate) =>
-    candidate.topicSlug === guide.topicSlug
-    && candidate.pairSlug === guide.pairSlug
-    && candidate.contextSlug !== guide.contextSlug,
+    candidate.topicSlug === editorialGuide.topicSlug
+    && candidate.pairSlug === editorialGuide.pairSlug
+    && candidate.contextSlug !== editorialGuide.contextSlug,
   );
   const alternatePair = BASE_DECISION_GUIDES.find((candidate) =>
-    candidate.topicSlug === guide.topicSlug
-    && candidate.contextSlug === guide.contextSlug
-    && candidate.pairSlug !== guide.pairSlug,
+    candidate.topicSlug === editorialGuide.topicSlug
+    && candidate.contextSlug === editorialGuide.contextSlug
+    && candidate.pairSlug !== editorialGuide.pairSlug,
   );
   const siblingLinks = [alternateContext, alternatePair]
     .filter((candidate): candidate is DecisionGuide => Boolean(candidate))
     .map((candidate) => ({
       label: `${candidate.pairLabel}: ${candidate.contextLabel}`,
       href: `/ratgeber/vergleiche/${candidate.topicSlug}/${candidate.slug}/`,
-      description: candidate.contextSlug === guide.contextSlug
-        ? `Eine alternative Material- oder Systempaarung für denselben Einsatz „${guide.contextLabel}“ prüfen.`
+      description: candidate.contextSlug === editorialGuide.contextSlug
+        ? `Eine alternative Material- oder Systempaarung für denselben Einsatz „${editorialGuide.contextLabel}“ prüfen.`
         : `Dieselbe Paarung im abweichenden Einsatz „${candidate.contextLabel}“ gegenprüfen.`,
     }));
 
   return editorializeGuide({
-    ...guide,
-    relatedLinks: [...(guide.relatedLinks ?? []), ...siblingLinks],
+    ...editorialGuide,
+    relatedLinks: [...(editorialGuide.relatedLinks ?? []), ...siblingLinks],
   });
 });
+
+export const INDEXABLE_DECISION_GUIDES = DECISION_GUIDES.filter((guide) => guide.indexable);
 
 export const DECISION_GUIDE_DIRECTORIES: readonly DecisionGuideDirectory[] = clusters.map((cluster) => ({
   topicSlug: cluster.topicSlug,

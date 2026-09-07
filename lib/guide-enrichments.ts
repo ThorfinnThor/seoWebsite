@@ -121,6 +121,12 @@ const source = {
     publisher: "Husqvarna",
     note: "Konkretes Herstellerbeispiel für getrennte Rasenflächen, manuelles Umsetzen und die Grenzen einer gemeinsamen Installation.",
   },
+  mowerWirelessPlanning: {
+    label: "Kabellose Mähroboter Installation im Garten planen",
+    href: "https://www.husqvarna.com/de/lernen-und-entdecken/planung-kabelloser-maehroboter-installationsanleitung/",
+    publisher: "Husqvarna",
+    note: "Herstellerhinweise zu virtuellen Grenzen, Referenzstation, Stromversorgung und möglichst freier Sicht zum Himmel.",
+  },
   terraceConstruction: {
     label: "Special Terrassendielen – regelkonformer Aufbau von Terrassen",
     href: "https://gdholz.de/wp-content/uploads/2024/08/Artikel_ParkettMagazin_03-24_kurz.pdf",

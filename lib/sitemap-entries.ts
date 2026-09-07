@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import { DECISION_GUIDE_DIRECTORIES } from "@/lib/decision-guides";
+import { DECISION_GUIDE_DIRECTORIES, INDEXABLE_DECISION_GUIDES } from "@/lib/decision-guides";
 import { legalContactComplete } from "@/lib/legal";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
@@ -61,7 +61,10 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
   {
     id: "redaktionelle-ratgeber",
     label: "Redaktionelle Ratgeber",
-    entries: SEO_GUIDES.map((guide) => entry(`/ratgeber/${guide.slug}`, CONTENT_UPDATED_AT)),
+    entries: [
+      ...SEO_GUIDES.map((guide) => entry(`/ratgeber/${guide.slug}`, CONTENT_UPDATED_AT)),
+      ...INDEXABLE_DECISION_GUIDES.map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, "2026-09-07")),
+    ],
   },
 ];
 

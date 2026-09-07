@@ -18,4 +18,12 @@ describe("indexing policy for programmatic detail pages", () => {
 
     expect(metadata.robots).toEqual({ index: false, follow: true });
   });
+
+  it("indexes the fully edited mower comparison", async () => {
+    const metadata = await comparisonMetadata({
+      params: Promise.resolve({ topic: "maehroboter", slug: "maehroboter-begrenzungskabel-oder-rtk-500-qm" }),
+    });
+
+    expect(metadata.robots).toBeUndefined();
+  });
 });
