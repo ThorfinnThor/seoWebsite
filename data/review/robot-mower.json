@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T11:47:43.261Z",
+  "generatedAt": "2026-09-07T15:29:58.311Z",
   "products": [
     {
       "brand": "ANTHBOT-DE",
@@ -11,7 +11,7 @@
         "name": "4G Service - 1 Jahr 4G-Service",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.234Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.294Z"
       },
       "id": "mpn:anthbot-de:103020003",
       "issues": [
@@ -42,7 +42,7 @@
         "name": "eufy Ersatzklingenbox - für Mähroboter E15 und E18 - Grau",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:29.788Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.524Z"
       },
       "gtin": "0194644231200",
       "id": "gtin:0194644231200",
@@ -72,7 +72,7 @@
         "name": "Bosch Ersatzmesser für Rasenmäher UniversalRotak 36V 38 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.197Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.141Z"
       },
       "gtin": "3165140923187",
       "id": "gtin:3165140923187",
@@ -103,7 +103,7 @@
         "name": "Bosch Ersatzmesser für Rasenmäher AdvancedRotak 36V 42 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.197Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.141Z"
       },
       "gtin": "3165140923194",
       "id": "gtin:3165140923194",
@@ -134,7 +134,7 @@
         "name": "Kunststoff Rad 150 x 30 mm Tragkr. 25 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.232Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.395Z"
       },
       "gtin": "4002350507846",
       "id": "gtin:4002350507846",
@@ -165,7 +165,7 @@
         "name": "Kunststoff Rad 175 x 34 mm Tragkr. 35 kg rot",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.232Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.394Z"
       },
       "gtin": "4002350562791",
       "id": "gtin:4002350562791",
@@ -195,7 +195,7 @@
         "name": "Kunststoff Rad 175 x 34 mm Tragkr. 35 kg schwarz",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.225Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.385Z"
       },
       "gtin": "4002350562807",
       "id": "gtin:4002350562807",
@@ -225,7 +225,7 @@
         "name": "Kunststoff Rad 200 x 42 mm Tragkr. 60 kg rot",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.232Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.394Z"
       },
       "gtin": "4002350562814",
       "id": "gtin:4002350562814",
@@ -255,7 +255,7 @@
         "name": "Kunststoff Rad 200 x 40 mm Tragkr. 40 kg rot",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.232Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.394Z"
       },
       "gtin": "4002350562821",
       "id": "gtin:4002350562821",
@@ -285,7 +285,7 @@
         "name": "Alko Lüfterwalze für Elektro Vertikutierer Combi Care 36.8 E Comfort",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.407Z"
       },
       "gtin": "4003718058604",
       "id": "gtin:4003718058604",
@@ -317,7 +317,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.050Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.192Z"
       },
       "gtin": "4003718061819",
       "id": "gtin:4003718061819",
@@ -348,7 +348,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.050Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.193Z"
       },
       "gtin": "4003718061826",
       "id": "gtin:4003718061826",
@@ -378,7 +378,7 @@
         "name": "Alko Doppelladegerät Energy Flex C 200Li",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.461Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.615Z"
       },
       "gtin": "4003718063967",
       "id": "gtin:4003718063967",
@@ -409,7 +409,7 @@
         "name": "AL-KO Ladegerät C40.6 Li für 18 V und 18/36 V Akkus",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.346Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.535Z"
       },
       "gtin": "4003718066456",
       "id": "gtin:4003718066456",
@@ -439,7 +439,7 @@
         "name": "AL-KO Ladegerät C150.6 Li für 18 V und 18/36 V Li-Ion Akkus",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.347Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.535Z"
       },
       "gtin": "4003718066463",
       "id": "gtin:4003718066463",
@@ -469,7 +469,7 @@
         "name": "AL-KO Doppel-Ladegerät C300.6 Li für 18 V und 18/36 V Li-Ion Akkus",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.347Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.535Z"
       },
       "gtin": "4003718066470",
       "id": "gtin:4003718066470",
@@ -499,7 +499,7 @@
         "name": "AL-KO Mährobotergarage für Robolinho Vision Modelle",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.347Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.536Z"
       },
       "gtin": "4003718067675",
       "id": "gtin:4003718067675",
@@ -529,7 +529,7 @@
         "name": "AL-KO Rasentraktor-Mulchkeil 86 cm für Rasentraktor Comfort und Easy",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.372Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.553Z"
       },
       "gtin": "4003718067729",
       "id": "gtin:4003718067729",
@@ -560,7 +560,7 @@
         "name": "AL-KO Rasentraktor-Deflektor für Heckauswurf-Rasentraktor",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.372Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.552Z"
       },
       "gtin": "4003718067736",
       "id": "gtin:4003718067736",
@@ -591,7 +591,7 @@
         "name": "AL-KO Rasentraktor-Anhängerkupplung für AL-KO Traktoren",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.372Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.552Z"
       },
       "gtin": "4003718067743",
       "id": "gtin:4003718067743",
@@ -622,7 +622,7 @@
         "name": "AL-KO Mulchkit 103 cm, für Rasentraktor Comfort 18-103.2 HD",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.053Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.196Z"
       },
       "gtin": "4003718353440",
       "id": "gtin:4003718353440",
@@ -653,7 +653,7 @@
         "name": "Al-Ko Mähroboter-Garage Gen III für alle Robolinho-Modelle",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.406Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.538Z"
       },
       "gtin": "4003718356267",
       "id": "gtin:4003718356267",
@@ -684,7 +684,7 @@
         "name": "Neudorff Rasendünger Spezial 5 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.253Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.408Z"
       },
       "gtin": "4005240021095",
       "id": "gtin:4005240021095",
@@ -715,7 +715,7 @@
         "name": "APA Kraftstofffilter Kunststoff Ø 6 mm - 8 mm weiß",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.241Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.222Z"
       },
       "gtin": "4006132313465",
       "id": "gtin:4006132313465",
@@ -746,7 +746,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GE-CM 33 Li+36/34",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.655Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.061Z"
       },
       "gtin": "4006825610611",
       "id": "gtin:4006825610611",
@@ -777,7 +777,7 @@
         "name": "Einhell Akku Rasenmäher GE-CM 18/30 Li-solo 30 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.442Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.554Z"
       },
       "gtin": "4006825631869",
       "id": "gtin:4006825631869",
@@ -808,7 +808,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GE-CM 18/30 Li",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.655Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.061Z"
       },
       "gtin": "4006825633092",
       "id": "gtin:4006825633092",
@@ -839,7 +839,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GE-CM 36/37+38",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.654Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.061Z"
       },
       "gtin": "4006825635843",
       "id": "gtin:4006825635843",
@@ -870,7 +870,7 @@
         "name": "Einhell Ersatzklingen für Mähroboter Freelexo - 12 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.642Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.033Z"
       },
       "gtin": "4006825648775",
       "id": "gtin:4006825648775",
@@ -901,7 +901,7 @@
         "name": "Einhell Verbindungklemmen für Mähroboter 4 Stück",
         "navigation": "wire",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.795Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.920Z"
       },
       "gtin": "4006825648799",
       "id": "gtin:4006825648799",
@@ -932,7 +932,7 @@
         "navigation": "wire",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.798Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.922Z"
       },
       "gtin": "4006825648805",
       "id": "gtin:4006825648805",
@@ -961,7 +961,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher Rasarro 36/42",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.655Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.061Z"
       },
       "gtin": "4006825651386",
       "id": "gtin:4006825651386",
@@ -992,7 +992,7 @@
         "name": "Einhell Magnetband 20 m für Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.797Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.921Z"
       },
       "gtin": "4006825670929",
       "id": "gtin:4006825670929",
@@ -1023,7 +1023,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GP-CM 36/47 S BL",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.654Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.061Z"
       },
       "gtin": "4006825672497",
       "id": "gtin:4006825672497",
@@ -1054,7 +1054,7 @@
         "name": "Wolfcraft Kapselgehörschütz Compact rot/schwarz 26 dB 1 Paar",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.953Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.173Z"
       },
       "gtin": "4006885495807",
       "id": "gtin:4006885495807",
@@ -1085,7 +1085,7 @@
         "name": "Wolfcraft Gehörschutzstöpsel mit Bügel blau/orange 24 dB 1 Paar",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.952Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.172Z"
       },
       "gtin": "4006885496309",
       "id": "gtin:4006885496309",
@@ -1116,7 +1116,7 @@
         "name": "Safe-Box Caravan IP44, grün, 36,5 x 9 x 9 cm (H x B x T)",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.416Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:41.550Z",
         "waterProtection": "IP44"
       },
       "gtin": "4008153308802",
@@ -1148,7 +1148,7 @@
         "name": "Steckerbox Safe-Box IP44, rot",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:20.023Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:39.281Z",
         "waterProtection": "IP44"
       },
       "gtin": "4008153440892",
@@ -1180,7 +1180,7 @@
         "name": "Steckerbox Safe-Box groß IP44 grün",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:20.430Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:39.705Z",
         "waterProtection": "IP44"
       },
       "gtin": "4008153441011",
@@ -1213,7 +1213,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.801Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.002Z"
       },
       "gtin": "4008398146139",
       "id": "gtin:4008398146139",
@@ -1244,7 +1244,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 130,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.969Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.012Z"
       },
       "gtin": "4008398160258",
       "id": "gtin:4008398160258",
@@ -1274,7 +1274,7 @@
         "name": "Wolf Garten Rasenrechen Multi-Star UH-M 60 58 cm Arbeitsbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.062Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.233Z"
       },
       "gtin": "4008423878011",
       "id": "gtin:4008423878011",
@@ -1305,7 +1305,7 @@
         "name": "Caramba Kontaktspray 250ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:16.821Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:36.321Z"
       },
       "gtin": "4009076009029",
       "id": "gtin:4009076009029",
@@ -1336,7 +1336,7 @@
         "name": "Caramba Starthilfespray 300ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.380Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.127Z"
       },
       "gtin": "4009076102133",
       "id": "gtin:4009076102133",
@@ -1367,7 +1367,7 @@
         "name": "Primaster Akku Rasentrimmer mit Trimmercart PATF 20 V ohne Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.848Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.007Z"
       },
       "gtin": "4010951112260",
       "id": "gtin:4010951112260",
@@ -1398,7 +1398,7 @@
         "name": "Ikra Elektro Rasentrimmer IGT 300 DA 25 cm Schnittkreis",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.449Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.603Z"
       },
       "gtin": "4010951112932",
       "id": "gtin:4010951112932",
@@ -1429,7 +1429,7 @@
         "name": "Primaster Akku Rasentrimmer PMAT 2025-1 20 V ohne Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.115Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.398Z"
       },
       "gtin": "4010951152013",
       "id": "gtin:4010951152013",
@@ -1461,7 +1461,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.496Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.618Z"
       },
       "gtin": "4010951770224",
       "id": "gtin:4010951770224",
@@ -1491,7 +1491,7 @@
         "name": "Primaster Ersatzmesser 21 cm für Einhandmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.001Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.169Z"
       },
       "gtin": "4010951772334",
       "id": "gtin:4010951772334",
@@ -1522,7 +1522,7 @@
         "name": "Ikra Ersatzmesser 43 cm für Rasenmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.709Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.871Z"
       },
       "gtin": "4010951773102",
       "id": "gtin:4010951773102",
@@ -1553,7 +1553,7 @@
         "name": "Primaster Ersatzmesser 43 cm für Elektro-Rasenmäher PERM 2043",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.943Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.603Z"
       },
       "gtin": "4010951773232",
       "id": "gtin:4010951773232",
@@ -1584,7 +1584,7 @@
         "name": "Ikra Ersatzmesser 32 cm für Elektro-Rasenmäher IERM 1232",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.943Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.603Z"
       },
       "gtin": "4010951773256",
       "id": "gtin:4010951773256",
@@ -1615,7 +1615,7 @@
         "name": "Güde Schärfstation GUS 650 65 W mit Bohrerschärfgerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:16.514Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:36.041Z"
       },
       "gtin": "4015671941022",
       "id": "gtin:4015671941022",
@@ -1646,7 +1646,7 @@
         "name": "SprayTEC Starthilfe Spray 400ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:19.633Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:38.896Z"
       },
       "gtin": "4015962094031",
       "id": "gtin:4015962094031",
@@ -1677,7 +1677,7 @@
         "name": "Cartec Rasenmäherbatterie 30Ah/300A +rechts",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.343Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.044Z"
       },
       "gtin": "4017568723704",
       "id": "gtin:4017568723704",
@@ -1708,7 +1708,7 @@
         "name": "Cartec Rasenmäherbatterie 30Ah/300A +links",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.343Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.045Z"
       },
       "gtin": "4017568723711",
       "id": "gtin:4017568723711",
@@ -1739,7 +1739,7 @@
         "name": "Ballistol Startwunder-Spray 200ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:20.421Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:39.683Z"
       },
       "gtin": "4017777255003",
       "id": "gtin:4017777255003",
@@ -1770,7 +1770,7 @@
         "name": "Xervex Startspray Motor Z30 200 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.529Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.712Z"
       },
       "gtin": "4023055989300",
       "id": "gtin:4023055989300",
@@ -1801,7 +1801,7 @@
         "name": "Kann Rasenkante Antik 25,7 x 10 x 4 cm braun",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:16.483Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:36.018Z"
       },
       "gtin": "4024991555901",
       "id": "gtin:4024991555901",
@@ -1832,7 +1832,7 @@
         "name": "Kann Mähkante Nativa 35 x 20 x 4 cm kalksteinfarben",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.560Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.119Z"
       },
       "gtin": "4024991921065",
       "id": "gtin:4024991921065",
@@ -1862,7 +1862,7 @@
         "name": "Kann Mähkante Nativa 35 x 20 x 4 cm grau-nuanciert",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.561Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.119Z"
       },
       "gtin": "4024991921089",
       "id": "gtin:4024991921089",
@@ -1892,7 +1892,7 @@
         "name": "Scheppach Motorenöl SAE 30W API CF/CF-2/SF 1 Liter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.942Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.108Z"
       },
       "gtin": "4046664115656",
       "id": "gtin:4046664115656",
@@ -1923,7 +1923,7 @@
         "name": "Scheppach Mäh und Mulchmesser 61 cm für Aufsitzmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.320Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.476Z"
       },
       "gtin": "4046664225478",
       "id": "gtin:4046664225478",
@@ -1954,7 +1954,7 @@
         "name": "Xervex Ölwechsel-Set mit Pumpe 3 tlg.",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.619Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.758Z"
       },
       "gtin": "4050444176874",
       "id": "gtin:4050444176874",
@@ -1985,7 +1985,7 @@
         "name": "Ratioparts Ersatzmesser und Schraube für Gardena und Greenworks Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.120Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4050444188587",
       "id": "gtin:4050444188587",
@@ -2016,7 +2016,7 @@
         "name": "Ratioparts Ersatzmesser und Schraube für Moworx und Worx Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.120Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4050444188600",
       "id": "gtin:4050444188600",
@@ -2047,7 +2047,7 @@
         "name": "Ratioparts Ersatzmesser und Schraube für Bosch Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.120Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4050444188617",
       "id": "gtin:4050444188617",
@@ -2078,7 +2078,7 @@
         "name": "ratioparts Mähroboter Leitungsverbinder 3M Scotchlok 3 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.521Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.044Z"
       },
       "gtin": "4050444203921",
       "id": "gtin:4050444203921",
@@ -2109,7 +2109,7 @@
         "name": "ratioparts Mähroboter Abzweigverbinder 3M Scotchlok 3 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.521Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.044Z"
       },
       "gtin": "4050444203945",
       "id": "gtin:4050444203945",
@@ -2140,7 +2140,7 @@
         "name": "ratioparts roborepkit Mähroboter Reparaturset für Begrenzungsleitung 5 m",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.521Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.044Z"
       },
       "gtin": "4050444207639",
       "id": "gtin:4050444207639",
@@ -2171,7 +2171,7 @@
         "name": "ratioparts roboline Mähroboter Begrenzungskabel 100 m grün",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.521Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.043Z"
       },
       "gtin": "4050444244351",
       "id": "gtin:4050444244351",
@@ -2202,7 +2202,7 @@
         "name": "Ratioparts roboconnect Mähroboter Kabelverbinder eXtreme Premium black 2 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.522Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.045Z"
       },
       "gtin": "4050444280618",
       "id": "gtin:4050444280618",
@@ -2234,7 +2234,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.821Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.946Z"
       },
       "gtin": "4062700682319",
       "id": "gtin:4062700682319",
@@ -2265,7 +2265,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 100,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.821Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.946Z"
       },
       "gtin": "4062700682326",
       "id": "gtin:4062700682326",
@@ -2296,7 +2296,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.924Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.088Z"
       },
       "gtin": "4062700872109",
       "id": "gtin:4062700872109",
@@ -2327,7 +2327,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 133,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:18.560Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:37.916Z"
       },
       "gtin": "4062700887479",
       "id": "gtin:4062700887479",
@@ -2357,7 +2357,7 @@
         "name": "Substral Naturen 6 in 1 Komplett-Rasendünger f. 266 m² 20 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:18.593Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:37.950Z"
       },
       "gtin": "4062700887486",
       "id": "gtin:4062700887486",
@@ -2388,7 +2388,7 @@
         "name": "Substral Naturen Bio Herbst Rasendünger 10 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.039Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.138Z"
       },
       "gtin": "4062700888759",
       "id": "gtin:4062700888759",
@@ -2420,7 +2420,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 50,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.164Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.340Z"
       },
       "gtin": "4062700899991",
       "id": "gtin:4062700899991",
@@ -2450,7 +2450,7 @@
         "name": "Gardena Starter-Kit 1 x PBA 18V/45 2,5 A+ AL 18V-20",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.849Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.007Z"
       },
       "gtin": "4066407024724",
       "id": "gtin:4066407024724",
@@ -2482,7 +2482,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.587Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.179Z"
       },
       "gtin": "4066407028333",
       "id": "gtin:4066407028333",
@@ -2512,7 +2512,7 @@
         "name": "Gardena Ersatzmesser 37 cm für Akku-Rasenmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.246Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.402Z"
       },
       "gtin": "4078500035156",
       "id": "gtin:4078500035156",
@@ -2544,7 +2544,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 30,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.116Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.277Z"
       },
       "gtin": "4099682852621",
       "id": "gtin:4099682852621",
@@ -2574,7 +2574,7 @@
         "name": "Liqui Moly 2-Takt Motoröl 1:50 mischbar 100 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:16.859Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:36.348Z"
       },
       "gtin": "4100420010293",
       "id": "gtin:4100420010293",
@@ -2605,7 +2605,7 @@
         "name": "Liqui Moly 2-Takt Motoröl 250 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:15.682Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:35.414Z"
       },
       "gtin": "4100420010514",
       "id": "gtin:4100420010514",
@@ -2636,7 +2636,7 @@
         "name": "Liqui Moly 2-Takt Motoröl (Selbstmisch-Gebinde) 1 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:15.632Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:35.430Z"
       },
       "gtin": "4100420010521",
       "id": "gtin:4100420010521",
@@ -2667,7 +2667,7 @@
         "name": "Liqui Moly 2-Takt-Motoröl 150 5 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:16.127Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:35.693Z"
       },
       "gtin": "4100420011894",
       "id": "gtin:4100420011894",
@@ -2698,7 +2698,7 @@
         "name": "Liqui Moly Garten-/Wintergeräteöl 5W-30 1 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:17.878Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:37.274Z"
       },
       "gtin": "4100420012792",
       "id": "gtin:4100420012792",
@@ -2729,7 +2729,7 @@
         "name": "Liqui Moly Benzin Stabilisator 250 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:15.635Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:35.432Z"
       },
       "gtin": "4100420051074",
       "id": "gtin:4100420051074",
@@ -2760,7 +2760,7 @@
         "name": "Litheli Akku SE 20 V 2,0 Ah Li-Ion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.927Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.089Z"
       },
       "gtin": "4262443060362",
       "id": "gtin:4262443060362",
@@ -2791,7 +2791,7 @@
         "name": "Primaster Akku Rasentrimmer mit Trimmercart PATF 20 V mit Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.389Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.571Z"
       },
       "gtin": "4333692862745",
       "id": "gtin:4333692862745",
@@ -2821,7 +2821,7 @@
         "name": "Worx Ersatzmesser 12 Stk. Für Landroid - Mähroboter Zubehör - Silber",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:29.911Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.538Z"
       },
       "gtin": "6924328308508",
       "id": "gtin:6924328308508",
@@ -2851,7 +2851,7 @@
         "name": "Worx Reinigungsset für Worx Landroid Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.220Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.327Z"
       },
       "gtin": "6924328327059",
       "id": "gtin:6924328327059",
@@ -2882,7 +2882,7 @@
         "name": "Worx Mähzonenerkennung RFID für Worx Mähroboter Vision",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.233Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.339Z"
       },
       "gtin": "6925387194422",
       "id": "gtin:6925387194422",
@@ -2913,7 +2913,7 @@
         "navigation": "camera",
         "obstacleDetection": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.868Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.862Z"
       },
       "gtin": "6941504408982",
       "id": "gtin:6941504408982",
@@ -2943,7 +2943,7 @@
         "name": "Worx Mährobotermodul Cut to Zero für Vision Cloud 2WD S/M",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.868Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.862Z"
       },
       "gtin": "6941504411500",
       "id": "gtin:6941504411500",
@@ -2973,7 +2973,7 @@
         "name": "Worx Ersatzfadenspule",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.233Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.339Z"
       },
       "gtin": "6947372510925",
       "id": "gtin:6947372510925",
@@ -3004,7 +3004,7 @@
         "name": "Suntek Ersatzmesser & Schrauben für Mähroboter - 12 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:29.059Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.285Z"
       },
       "gtin": "6976114900335",
       "id": "gtin:6976114900335",
@@ -3035,7 +3035,7 @@
         "name": "Suntek Mähroboter-Garage SAC1043 Kunststoff/Metall grau",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.945Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.961Z"
       },
       "gtin": "6976114901165",
       "id": "gtin:6976114901165",
@@ -3066,7 +3066,7 @@
         "name": "Robomow Erdnägel für Begrenzungskabel 50 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.422Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.553Z"
       },
       "gtin": "7290014674400",
       "id": "gtin:7290014674400",
@@ -3097,7 +3097,7 @@
         "name": "Stiga Ersatzmesser für Mähroboter der A-Serie und G-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.938Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.105Z"
       },
       "gtin": "7313324006720",
       "id": "gtin:7313324006720",
@@ -3128,7 +3128,7 @@
         "name": "Stiga Installationswagen für Rasenroboter der A-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.184Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.368Z"
       },
       "gtin": "7313324008502",
       "id": "gtin:7313324008502",
@@ -3159,7 +3159,7 @@
         "name": "STIGA Mähroboter Kletterräder",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.093Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.256Z"
       },
       "gtin": "7313324008656",
       "id": "gtin:7313324008656",
@@ -3189,7 +3189,7 @@
         "name": "Stiga Ersatzmesser 46 cm für Rasenmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.255Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.410Z"
       },
       "gtin": "7313329115823",
       "id": "gtin:7313329115823",
@@ -3220,7 +3220,7 @@
         "name": "Alpina Anhängerkupplung für 84er und 98er Rasentraktoren",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.414Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.263Z"
       },
       "gtin": "8008984508446",
       "id": "gtin:8008984508446",
@@ -3251,7 +3251,7 @@
         "name": "Stiga Ersatzakku E 24 20 V / 4 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.750Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.909Z"
       },
       "gtin": "8008984843929",
       "id": "gtin:8008984843929",
@@ -3282,7 +3282,7 @@
         "name": "Stiga Ersatzakku E 420 48 V / 2 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.751Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.910Z"
       },
       "gtin": "8008984844216",
       "id": "gtin:8008984844216",
@@ -3313,7 +3313,7 @@
         "name": "Alpina Elektro-Rasenmäher BL 320e 1.000 Watt, 32 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.179Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.362Z"
       },
       "gtin": "8008984871397",
       "id": "gtin:8008984871397",
@@ -3344,7 +3344,7 @@
         "name": "Alpina Elektro-Rasenmäher BL 380e 1.400 Watt, 38 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.179Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.362Z"
       },
       "gtin": "8008984871403",
       "id": "gtin:8008984871403",
@@ -3375,7 +3375,7 @@
         "name": "Reinigungswerkzeug Scraper 360",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.128Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.284Z"
       },
       "gtin": "8055162200043",
       "id": "gtin:8055162200043",
@@ -3406,7 +3406,7 @@
         "name": "SEGWAY Navimow Antennen-Verlängerungs-Kit für H- und I-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.810Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.719Z"
       },
       "gtin": "8720254405223",
       "id": "gtin:8720254405223",
@@ -3437,7 +3437,7 @@
         "name": "SEGWAY Mähroboter Antennen-Verlängerungskabel Navimow",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.810Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.720Z"
       },
       "gtin": "8720254406183",
       "id": "gtin:8720254406183",
@@ -3462,44 +3462,13 @@
       "candidateAttributes": {
         "brand": "Navimow",
         "dataQuality": "feed",
-        "gtin": "8721008412016",
-        "id": "gtin:8721008412016",
-        "mpn": "0687060340",
-        "name": "Segway Mähroboter Navigationsempfänger Access+ für Navimow i1-Serie",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.810Z"
-      },
-      "gtin": "8721008412016",
-      "id": "gtin:8721008412016",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0c/de/be/1788269468/8721008412016_90235142_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "suspicious-price",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navigationsempfaenger-access-fuer-navimow-i1-serie-0687060340/",
-      "merchants": [],
-      "mpn": "0687060340",
-      "name": "Segway Mähroboter Navigationsempfänger Access+ für Navimow i1-Serie",
-      "offerCount": 0,
-      "priority": 9000,
-      "riskTier": "critical"
-    },
-    {
-      "brand": "Navimow",
-      "candidateAttributes": {
-        "brand": "Navimow",
-        "dataQuality": "feed",
         "gtin": "8721008412139",
         "id": "gtin:8721008412139",
         "mpn": "0687060338",
         "name": "Segway Mähroboter Off-Road Räder für Navimow i1-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.810Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.719Z"
       },
       "gtin": "8721008412139",
       "id": "gtin:8721008412139",
@@ -3528,7 +3497,7 @@
         "name": "Batterie für Pion-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.217Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.282Z"
       },
       "id": "merchant:anthbot:eb6081b667ca",
       "issues": [
@@ -3555,7 +3524,7 @@
         "name": "Rasenmäher-Oberabdeckung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.231Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.292Z"
       },
       "id": "mpn:anthbot-de:303010221",
       "issues": [
@@ -3583,7 +3552,7 @@
         "name": "5-Klingenscheibe",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.208Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.274Z"
       },
       "id": "mpn:anthbot:210010113",
       "issues": [
@@ -3611,7 +3580,7 @@
         "name": "15-teiliges Klingen-Kit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.212Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.278Z"
       },
       "id": "mpn:anthbot:210010141",
       "issues": [
@@ -3639,7 +3608,7 @@
         "name": "Batterie für Genie/ M Serie - 2500 mAh(Genie 600/600E/M5/M5 LiDAR)",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.210Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.276Z"
       },
       "id": "mpn:anthbot:210010250",
       "issues": [
@@ -3666,7 +3635,7 @@
         "name": "3-Klingenscheibe",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.207Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.273Z"
       },
       "id": "mpn:anthbot:3-klingenscheibe",
       "issues": [
@@ -3696,7 +3665,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.248Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.403Z"
       },
       "gtin": "8008984852600",
       "id": "gtin:8008984852600",
@@ -3728,7 +3697,7 @@
         "name": "Stiga Benzin Rasentraktor Estate 598, 7,9 kW, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.250Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.404Z"
       },
       "gtin": "8008984852341",
       "id": "gtin:8008984852341",
@@ -3762,7 +3731,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.251Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.404Z"
       },
       "gtin": "8008984852617",
       "id": "gtin:8008984852617",
@@ -3795,7 +3764,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 6500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.541Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.597Z"
       },
       "gtin": "8008984869752",
       "id": "gtin:8008984869752",
@@ -3827,7 +3796,7 @@
         "name": "Stiga Akku Rasentraktor Tornado 398e, 48 V, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.243Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.400Z"
       },
       "gtin": "8008984852594",
       "id": "gtin:8008984852594",
@@ -3861,7 +3830,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 5000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.541Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.598Z"
       },
       "gtin": "8008984851467",
       "id": "gtin:8008984851467",
@@ -3893,7 +3862,7 @@
         "name": "Stiga Akku-Rasentraktor Swift 372e inkl. 4x5 Ah Akku (48 Volt)",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.080Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.244Z"
       },
       "gtin": "8008984873339",
       "id": "gtin:8008984873339",
@@ -3927,7 +3896,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.253Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.409Z"
       },
       "gtin": "8008984852587",
       "id": "gtin:8008984852587",
@@ -3959,7 +3928,7 @@
         "name": "Güde Aufsitzrasenmäher Zero Turn GZT 1070",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.819Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.977Z"
       },
       "gtin": "4015671448309",
       "id": "gtin:4015671448309",
@@ -3993,7 +3962,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 6000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.597Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.721Z"
       },
       "gtin": "4003718356892",
       "id": "gtin:4003718356892",
@@ -4026,7 +3995,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 5000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.364Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.547Z"
       },
       "gtin": "4046664289562",
       "id": "gtin:4046664289562",
@@ -4059,7 +4028,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.739Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.898Z"
       },
       "gtin": "8008984851450",
       "id": "gtin:8008984851450",
@@ -4092,7 +4061,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 6000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.250Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.404Z"
       },
       "gtin": "8008984852471",
       "id": "gtin:8008984852471",
@@ -4125,7 +4094,7 @@
         "name": "Palmako Gartenhaus Lila 2 390 x 276 cm naturbelassen",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.635Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.773Z"
       },
       "gtin": "4743142032466",
       "id": "gtin:4743142032466",
@@ -4157,7 +4126,7 @@
         "name": "Stiga Benzin Rasentraktor Estate 384 6,8 kW, 84 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.749Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.907Z"
       },
       "gtin": "8008984852303",
       "id": "gtin:8008984852303",
@@ -4191,7 +4160,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.449Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.585Z"
       },
       "gtin": "4003718356540",
       "id": "gtin:4003718356540",
@@ -4223,7 +4192,7 @@
         "name": "Alpina Rasentraktor AT3 98 HA 7,1 kW, 98 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.734Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.893Z"
       },
       "gtin": "8008984851559",
       "id": "gtin:8008984851559",
@@ -4256,7 +4225,7 @@
         "name": "Alpina Benzin Rasentraktor AT3 108 HA, 7,5 kW, 65 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.255Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.410Z"
       },
       "gtin": "8008984860667",
       "id": "gtin:8008984860667",
@@ -4290,7 +4259,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.349Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718067118",
       "id": "gtin:4003718067118",
@@ -4322,7 +4291,7 @@
         "name": "Güde Benzin-Rasentraktor GAR 960 T 8,2 kW 96 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.329Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.481Z"
       },
       "gtin": "4015671576040",
       "id": "gtin:4015671576040",
@@ -4355,7 +4324,7 @@
         "name": "Alpina Rasentraktor AT4 84 A 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.732Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.891Z"
       },
       "gtin": "8008984851337",
       "id": "gtin:8008984851337",
@@ -4389,7 +4358,7 @@
         "name": "Palmako Gartenhaus Lila 1 306 x 276 cm naturbelassen",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.635Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.773Z"
       },
       "gtin": "4743142032411",
       "id": "gtin:4743142032411",
@@ -4421,7 +4390,7 @@
         "name": "AL-KO Benzin-Rasentraktor Comfort 14-92.6 HDS-A 8,8 kW 92 cm Schnittbreite Seitenauswurf",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.349Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.536Z"
       },
       "gtin": "4003718067125",
       "id": "gtin:4003718067125",
@@ -4454,7 +4423,7 @@
         "name": "Alpina Rasentraktor AT4 84 HA 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.718Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.880Z"
       },
       "gtin": "8008984851344",
       "id": "gtin:8008984851344",
@@ -4487,7 +4456,7 @@
         "name": "Stiga Benzin Rasentraktor Combi 372 7,1 kW, 66 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.744Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.902Z"
       },
       "gtin": "8008984852181",
       "id": "gtin:8008984852181",
@@ -4521,7 +4490,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.406Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.538Z"
       },
       "gtin": "4003718356533",
       "id": "gtin:4003718356533",
@@ -4553,7 +4522,7 @@
         "name": "Stiga Rasentraktor Estate 384 M 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.891Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.054Z"
       },
       "gtin": "8008984852198",
       "id": "gtin:8008984852198",
@@ -4587,7 +4556,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.348Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.536Z"
       },
       "gtin": "4003718067095",
       "id": "gtin:4003718067095",
@@ -4620,7 +4589,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.819Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.977Z"
       },
       "gtin": "4015671510891",
       "id": "gtin:4015671510891",
@@ -4653,7 +4622,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 5000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.255Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.358Z"
       },
       "gtin": "4015671999085",
       "id": "gtin:4015671999085",
@@ -4686,7 +4655,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.570Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.658Z"
       },
       "gtin": "8008984830691",
       "id": "gtin:8008984830691",
@@ -4718,7 +4687,7 @@
         "name": "Stiga Rasentraktor TORNADO 398 7,5 kW, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.746Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.903Z"
       },
       "gtin": "8008984852327",
       "id": "gtin:8008984852327",
@@ -4751,7 +4720,7 @@
         "name": "Canopia Gerätehaus Rubicon Alu grau 603 x 227 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.861Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.020Z"
       },
       "gtin": "7290108613872",
       "id": "gtin:7290108613872",
@@ -4784,7 +4753,7 @@
         "name": "AL-KO Benzin-Rasentraktor Easy 13-92.6 CS-A 7,2 kW 92 cm Schnittbreite Seitenauswurf",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.347Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.536Z"
       },
       "gtin": "4003718067101",
       "id": "gtin:4003718067101",
@@ -4817,7 +4786,7 @@
         "name": "Alpina Rasentraktor AT2 66QA",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.740Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.899Z"
       },
       "gtin": "8008984851313",
       "id": "gtin:8008984851313",
@@ -4850,7 +4819,7 @@
         "name": "Stiga Rasentraktor Tornado 398 M 6,5 kW, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.891Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.054Z"
       },
       "gtin": "8008984852310",
       "id": "gtin:8008984852310",
@@ -4884,7 +4853,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 900,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.546Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.608Z"
       },
       "gtin": "8008984866157",
       "id": "gtin:8008984866157",
@@ -4917,7 +4886,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 1500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.092Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.255Z"
       },
       "gtin": "8008984872097",
       "id": "gtin:8008984872097",
@@ -4948,7 +4917,7 @@
         "name": "Canopia Gerätehaus Rubicon Alu grau 528 x 227 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.860Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.020Z"
       },
       "gtin": "7290108613865",
       "id": "gtin:7290108613865",
@@ -4983,7 +4952,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.819Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.977Z"
       },
       "gtin": "4015671430960",
       "id": "gtin:4015671430960",
@@ -5014,7 +4983,7 @@
         "name": "Alpina Rasentraktor AT3 98 A 6,5 kW, 98 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.751Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.909Z"
       },
       "gtin": "8008984851177",
       "id": "gtin:8008984851177",
@@ -5048,7 +5017,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.723Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.883Z"
       },
       "gtin": "8008984852174",
       "id": "gtin:8008984852174",
@@ -5081,7 +5050,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 2600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.741Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.895Z"
       },
       "gtin": "4046664259466",
       "id": "gtin:4046664259466",
@@ -5113,7 +5082,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.092Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.255Z"
       },
       "gtin": "8008984872080",
       "id": "gtin:8008984872080",
@@ -5145,7 +5114,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 700,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.587Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.710Z"
       },
       "gtin": "8008984865846",
       "id": "gtin:8008984865846",
@@ -5178,7 +5147,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.091Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.255Z"
       },
       "gtin": "8008984872073",
       "id": "gtin:8008984872073",
@@ -5210,7 +5179,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 450,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.545Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.607Z"
       },
       "gtin": "8008984868014",
       "id": "gtin:8008984868014",
@@ -5232,6 +5201,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Navimow",
+      "candidateAttributes": {
+        "brand": "Navimow",
+        "dataQuality": "feed",
+        "gtin": "4333692994392",
+        "id": "gtin:4333692994392",
+        "maxCutHeightCm": 7,
+        "minCutHeightCm": 2,
+        "mpn": "0687060387",
+        "name": "Segway Mähroboter Navimow i210E Lidar 21,6 V 22 cm Schnittbreite 1000 m² inkl. Garage",
+        "navigation": "lidar",
+        "ratedAreaM2": 1000,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-07T15:29:47.559Z"
+      },
+      "gtin": "4333692994392",
+      "id": "gtin:4333692994392",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0a/65/3d/1772609419/4333692994392_90241710_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i210e-lidar-21-6-v-22-cm-schnittbreite-1000-m2-inkl-garage-0687060387/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 999,
+      "mpn": "0687060387",
+      "name": "Segway Mähroboter Navimow i210E Lidar 21,6 V 22 cm Schnittbreite 1000 m² inkl. Garage",
+      "offerCount": 1,
+      "priority": 210,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -5243,7 +5246,7 @@
         "name": "AL-KO Benzin-Balkenmäher BM 875 IV 2,7 kW 87 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.373Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.553Z"
       },
       "gtin": "4003718065831",
       "id": "gtin:4003718065831",
@@ -5277,7 +5280,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.867Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.861Z"
       },
       "gtin": "6941504400375",
       "id": "gtin:6941504400375",
@@ -5308,7 +5311,7 @@
         "navigation": "wire",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.012Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.091Z"
       },
       "gtin": "8721264220356",
       "id": "gtin:8721264220356",
@@ -5329,40 +5332,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Navimow",
-      "candidateAttributes": {
-        "brand": "Navimow",
-        "dataQuality": "feed",
-        "gtin": "4333692994392",
-        "id": "gtin:4333692994392",
-        "maxCutHeightCm": 7,
-        "minCutHeightCm": 2,
-        "mpn": "0687060387",
-        "name": "Segway Mähroboter Navimow i210E Lidar 21,6 V 22 cm Schnittbreite 1000 m² inkl. Garage",
-        "navigation": "lidar",
-        "ratedAreaM2": 1000,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.383Z"
-      },
-      "gtin": "4333692994392",
-      "id": "gtin:4333692994392",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0a/65/3d/1772609419/4333692994392_90241710_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i210e-lidar-21-6-v-22-cm-schnittbreite-1000-m2-inkl-garage-0687060387/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 995,
-      "mpn": "0687060387",
-      "name": "Segway Mähroboter Navimow i210E Lidar 21,6 V 22 cm Schnittbreite 1000 m² inkl. Garage",
-      "offerCount": 1,
-      "priority": 210,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Ecovacs",
       "candidateAttributes": {
         "brand": "Ecovacs",
@@ -5374,7 +5343,7 @@
         "name": "Ecovacs Mähroboter GOAT O1200 LiDAR Pro - 22 cm Schnittbreite 1200 m² inkl. Ladestation",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.994Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.055Z"
       },
       "gtin": "6970135038169",
       "id": "gtin:6970135038169",
@@ -5406,7 +5375,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1100,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.114Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.270Z"
       },
       "gtin": "8008984871939",
       "id": "gtin:8008984871939",
@@ -5438,7 +5407,7 @@
         "name": "Canopia Gerätehaus Rubicon Alu grau 304 x 185 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.861Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.021Z"
       },
       "gtin": "7290108611885",
       "id": "gtin:7290108611885",
@@ -5473,7 +5442,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 650,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.867Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.861Z"
       },
       "gtin": "6941504407046",
       "id": "gtin:6941504407046",
@@ -5504,7 +5473,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.742Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.900Z"
       },
       "gtin": "8008984852907",
       "id": "gtin:8008984852907",
@@ -5536,7 +5505,7 @@
         "name": "Einhell Mähroboter Freelexo Cam Plus 600",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.758Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.916Z"
       },
       "gtin": "4006825678413",
       "id": "gtin:4006825678413",
@@ -5569,7 +5538,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.011Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.091Z"
       },
       "gtin": "4046664215684",
       "id": "gtin:4046664215684",
@@ -5601,7 +5570,7 @@
         "name": "Hercutec 2 Takt Gemisch 200 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.119Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4260430020047",
       "id": "gtin:4260430020047",
@@ -5634,7 +5603,7 @@
         "name": "Hercutec 4 Takt Sonderkraftstoff 200 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.119Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4260430020092",
       "id": "gtin:4260430020092",
@@ -5670,7 +5639,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.383Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.559Z"
       },
       "gtin": "4333692994354",
       "id": "gtin:4333692994354",
@@ -5701,7 +5670,7 @@
         "name": "STIGA Benzin-Balkenmäher SILEX 87 G",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.080Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.245Z"
       },
       "gtin": "8008984813960",
       "id": "gtin:8008984813960",
@@ -5735,7 +5704,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.097Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.257Z"
       },
       "gtin": "8008984871922",
       "id": "gtin:8008984871922",
@@ -5767,7 +5736,7 @@
         "name": "Alko Mähroboter Robolinho 550 W 20 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.460Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.615Z"
       },
       "gtin": "4003718356694",
       "id": "gtin:4003718356694",
@@ -5803,7 +5772,7 @@
         "navigation": "camera",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.383Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.559Z"
       },
       "gtin": "4333692994231",
       "id": "gtin:4333692994231",
@@ -5835,7 +5804,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.543Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.605Z"
       },
       "gtin": "8008984868281",
       "id": "gtin:8008984868281",
@@ -5867,7 +5836,7 @@
         "name": "Alko Mähroboter Robolinho 350 W 20 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.456Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.613Z"
       },
       "gtin": "4003718356687",
       "id": "gtin:4003718356687",
@@ -5901,7 +5870,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.458Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.614Z"
       },
       "gtin": "4003718356663",
       "id": "gtin:4003718356663",
@@ -5934,7 +5903,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.886Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.045Z"
       },
       "gtin": "8008984852167",
       "id": "gtin:8008984852167",
@@ -5967,7 +5936,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.648Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.767Z"
       },
       "gtin": "8008984842113",
       "id": "gtin:8008984842113",
@@ -5999,7 +5968,7 @@
         "name": "Zipper Frontbalkenmäher ZI-BM870ECO 2,7 kW 87 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.397Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.779Z"
       },
       "gtin": "9120039239088",
       "id": "gtin:9120039239088",
@@ -6033,7 +6002,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 700,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.443Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.555Z"
       },
       "gtin": "4006825671650",
       "id": "gtin:4006825671650",
@@ -6068,7 +6037,7 @@
         "navigation": "camera",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.980Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.037Z"
       },
       "gtin": "6976114901042",
       "id": "gtin:6976114901042",
@@ -6101,7 +6070,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.867Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.860Z"
       },
       "gtin": "6941504405356",
       "id": "gtin:6941504405356",
@@ -6131,7 +6100,7 @@
         "name": "Primaster Akku-Rasenmäher PMARM 4051 VS 40 V 50 cm Schnittbreite inkl. Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.525Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.688Z"
       },
       "gtin": "4010951771733",
       "id": "gtin:4010951771733",
@@ -6164,7 +6133,7 @@
         "name": "Stiga Benzin Rasenmäher Combi 553 SE, 2,6 kW, 51 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.248Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.402Z"
       },
       "gtin": "8008984860582",
       "id": "gtin:8008984860582",
@@ -6198,7 +6167,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.097Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.257Z"
       },
       "gtin": "8008984871892",
       "id": "gtin:8008984871892",
@@ -6230,7 +6199,7 @@
         "name": "Primaster Akku Rasenmäher PARM 4051VS 40 V 51 cm Schnittbreite inkl. Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.812Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.356Z"
       },
       "gtin": "4010951772716",
       "id": "gtin:4010951772716",
@@ -6263,7 +6232,7 @@
         "name": "AL-KO Akku-Rasenmäher 46.2 Li SP Comfort 36 Volt 4 Ah mit Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.406Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.538Z"
       },
       "gtin": "4003718356229",
       "id": "gtin:4003718356229",
@@ -6296,7 +6265,7 @@
         "name": "Stiga Benzin Rasenmäher Combi 548 SE, 2,2 kW, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.248Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.403Z"
       },
       "gtin": "8008984860568",
       "id": "gtin:8008984860568",
@@ -6330,7 +6299,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.178Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.362Z"
       },
       "gtin": "8008984852150",
       "id": "gtin:8008984852150",
@@ -6363,7 +6332,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.177Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.361Z"
       },
       "gtin": "8008984852020",
       "id": "gtin:8008984852020",
@@ -6396,7 +6365,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.890Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.048Z"
       },
       "gtin": "8008984842090",
       "id": "gtin:8008984842090",
@@ -6428,7 +6397,7 @@
         "name": "Globel Metallgerätehaus Dream 86 245 x 185 cm anthrazit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.832Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.398Z"
       },
       "gtin": "9340976002174",
       "id": "gtin:9340976002174",
@@ -6461,7 +6430,7 @@
         "name": "Stiga Benzin Rasenmäher Combi 553 S, 2,6 kW, 51 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.255Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.410Z"
       },
       "gtin": "8008984860575",
       "id": "gtin:8008984860575",
@@ -6495,7 +6464,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.890Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.048Z"
       },
       "gtin": "8008984842106",
       "id": "gtin:8008984842106",
@@ -6527,7 +6496,7 @@
         "name": "Kann Rasenkante Mini 24 x 10 x 4,5 cm anthrazit 560 St. Palettenabnahme",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.318Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.472Z"
       },
       "gtin": "4399901023741",
       "id": "gtin:4399901023741",
@@ -6561,7 +6530,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.351Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.538Z"
       },
       "gtin": "4003718066951",
       "id": "gtin:4003718066951",
@@ -6594,7 +6563,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.177Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.361Z"
       },
       "gtin": "8008984851993",
       "id": "gtin:8008984851993",
@@ -6627,7 +6596,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.351Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.538Z"
       },
       "gtin": "4003718066944",
       "id": "gtin:4003718066944",
@@ -6663,7 +6632,7 @@
         "navigation": "camera",
         "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.993Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.053Z"
       },
       "gtin": "6976114900755",
       "id": "gtin:6976114900755",
@@ -6694,7 +6663,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.176Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.361Z"
       },
       "gtin": "8008984865112",
       "id": "gtin:8008984865112",
@@ -6726,7 +6695,7 @@
         "name": "Gardena Akku Rasenmäher PowerMax Duo 46/36V, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.071Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.241Z"
       },
       "gtin": "4066407504981",
       "id": "gtin:4066407504981",
@@ -6759,7 +6728,7 @@
         "name": "AL-KO Akku-Rasenmäher 42.2 Li Comfort 36 Volt 4 Ah inkl. Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.449Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.585Z"
       },
       "gtin": "4003718356212",
       "id": "gtin:4003718356212",
@@ -6792,7 +6761,7 @@
         "name": "Primaster Akku-Rasenmäher PMARM 4046S 40 V 46 cm Schnittbreite inkl. Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:19.076Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:38.361Z"
       },
       "gtin": "4010951771481",
       "id": "gtin:4010951771481",
@@ -6825,7 +6794,7 @@
         "name": "Primaster Akku-Rasenmäher PARM 4046VS 40V 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.809Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.964Z"
       },
       "gtin": "4010951772686",
       "id": "gtin:4010951772686",
@@ -6858,7 +6827,7 @@
         "name": "Kann Rasenkante Mini 24 x 10 x 4,5 cm grau 560 St. Palettenabnahme",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.316Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.471Z"
       },
       "gtin": "4399901023727",
       "id": "gtin:4399901023727",
@@ -6891,7 +6860,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 51 SHQ 2,75 kW, 51 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.750Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.909Z"
       },
       "gtin": "8008984841420",
       "id": "gtin:8008984841420",
@@ -6924,7 +6893,7 @@
         "name": "Stiga Benzin Rasemäher Combi 53 S 51 cm Schnittbreite inkl. Zubehör",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.588Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.711Z"
       },
       "gtin": "8008984864023",
       "id": "gtin:8008984864023",
@@ -6958,7 +6927,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 2200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.762Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.918Z"
       },
       "gtin": "4046664259435",
       "id": "gtin:4046664259435",
@@ -6994,7 +6963,7 @@
         "navigation": "camera",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.943Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.959Z"
       },
       "gtin": "6976114901011",
       "id": "gtin:6976114901011",
@@ -7024,7 +6993,7 @@
         "name": "Stiga Benzin-Rasenmäher Collector 48 S 1,9 kW 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.054Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.222Z"
       },
       "gtin": "8008984813908",
       "id": "gtin:8008984813908",
@@ -7057,7 +7026,7 @@
         "name": "Einhell Akku Rasenmäher GE-CM 36/550 42 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.440Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.553Z"
       },
       "gtin": "4006825675504",
       "id": "gtin:4006825675504",
@@ -7091,7 +7060,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.542Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.604Z"
       },
       "gtin": "8008984866942",
       "id": "gtin:8008984866942",
@@ -7124,7 +7093,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1100,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:19.056Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:38.342Z"
       },
       "gtin": "4003718355864",
       "id": "gtin:4003718355864",
@@ -7157,7 +7126,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.542Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.598Z"
       },
       "gtin": "8008984868250",
       "id": "gtin:8008984868250",
@@ -7189,7 +7158,7 @@
         "name": "Bosch Professional Akku-Rasenmäher GRA 18V2-46 Solo",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.534Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.587Z"
       },
       "gtin": "4059952654812",
       "id": "gtin:4059952654812",
@@ -7222,7 +7191,7 @@
         "name": "Yard Force Benzin-Rasenmäher GM H46 laufruhiger Honda-Motor",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.530Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.699Z"
       },
       "gtin": "4333692958264",
       "id": "gtin:4333692958264",
@@ -7255,7 +7224,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 46 SH 2,75 kW, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.732Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.892Z"
       },
       "gtin": "8008984841406",
       "id": "gtin:8008984841406",
@@ -7289,7 +7258,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:26.284Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.442Z"
       },
       "gtin": "4262443061499",
       "id": "gtin:4262443061499",
@@ -7322,7 +7291,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.759Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.917Z"
       },
       "gtin": "4046664259398",
       "id": "gtin:4046664259398",
@@ -7355,7 +7324,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.438Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.545Z"
       },
       "gtin": "4006825668605",
       "id": "gtin:4006825668605",
@@ -7387,7 +7356,7 @@
         "name": "Einhell Akku Rasenmäher GE-CM 36/400 36 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.439Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.553Z"
       },
       "gtin": "4006825675528",
       "id": "gtin:4006825675528",
@@ -7420,7 +7389,7 @@
         "name": "Stiga Akku Rasenmäher COMBI 344e 48 V, 42 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.752Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.910Z"
       },
       "gtin": "8008984852136",
       "id": "gtin:8008984852136",
@@ -7453,7 +7422,7 @@
         "name": "Stiga Benzin Rasemäher Combi 48 46 cm Schnittbreite inkl. Zubehör",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.587Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.711Z"
       },
       "gtin": "8008984864429",
       "id": "gtin:8008984864429",
@@ -7485,7 +7454,7 @@
         "name": "Batterie für Genie/ M Serie - 10000mAh(5000mAh*2) für Genie 3000",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.211Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.277Z"
       },
       "id": "mpn:anthbot:210010103",
       "issues": [
@@ -7516,7 +7485,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 650,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.351Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.538Z"
       },
       "gtin": "4003718066937",
       "id": "gtin:4003718066937",
@@ -7548,7 +7517,7 @@
         "name": "Bosch Akku-Rasenmäher-Set EasyMower 18 V inkl. Akku-Rasentrimmer EasyGrassCut 18 V + Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.184Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.116Z"
       },
       "gtin": "4059952634401",
       "id": "gtin:4059952634401",
@@ -7581,7 +7550,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 5.16 SP-D 2,6 kW 51 cm Schnittbreite Radantrieb & 4 in 1 Funktion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.349Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718067088",
       "id": "gtin:4003718067088",
@@ -7615,7 +7584,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.614Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.741Z"
       },
       "gtin": "4015671667052",
       "id": "gtin:4015671667052",
@@ -7648,7 +7617,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.762Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.918Z"
       },
       "gtin": "4046664259381",
       "id": "gtin:4046664259381",
@@ -7681,7 +7650,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.762Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.918Z"
       },
       "gtin": "4046664259411",
       "id": "gtin:4046664259411",
@@ -7714,7 +7683,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.050Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.192Z"
       },
       "gtin": "4003718061628",
       "id": "gtin:4003718061628",
@@ -7746,7 +7715,7 @@
         "name": "Stiga Benzin Rasemäher Combi 48 S 46 cm Schnittbreite inkl. Zubehör",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.588Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.711Z"
       },
       "gtin": "8008984864436",
       "id": "gtin:8008984864436",
@@ -7779,7 +7748,7 @@
         "name": "Stiga Kunststoff-Kombianhänger 122,9 x 84,3 x 74,7 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.184Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.368Z"
       },
       "gtin": "8008984865730",
       "id": "gtin:8008984865730",
@@ -7813,7 +7782,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 350,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.731Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.891Z"
       },
       "gtin": "8008984852105",
       "id": "gtin:8008984852105",
@@ -7845,7 +7814,7 @@
         "name": "Alko Akku Energy-Flex B 800 Li 36 Volt",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.460Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.615Z"
       },
       "gtin": "4003718063950",
       "id": "gtin:4003718063950",
@@ -7878,7 +7847,7 @@
         "name": "Hercutec 4 Takt Sonderkraftstoff 60 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.118Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4260430020085",
       "id": "gtin:4260430020085",
@@ -7911,7 +7880,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 46 SA 1,9 kW, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.730Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.890Z"
       },
       "gtin": "8008984851191",
       "id": "gtin:8008984851191",
@@ -7945,7 +7914,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.350Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718066920",
       "id": "gtin:4003718066920",
@@ -7977,7 +7946,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.66 SP-D 2,4 kW 46 cm Schnittbreite Radantrieb & 4 in 1 Funktion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.349Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718067071",
       "id": "gtin:4003718067071",
@@ -8010,7 +7979,7 @@
         "name": "Stiga Akku Rasenmäher COMBI 336e 48 V, 34 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.736Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.897Z"
       },
       "gtin": "8008984852112",
       "id": "gtin:8008984852112",
@@ -8043,7 +8012,7 @@
         "name": "Einhell Akku Rasenmäher GE-CM 36/300 34 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.440Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.553Z"
       },
       "gtin": "4006825675535",
       "id": "gtin:4006825675535",
@@ -8076,7 +8045,7 @@
         "name": "Primaster Akku-Rasenmäher PMARM 4043 40 V inkl. Akku 4,0 Ah & Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.525Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.688Z"
       },
       "gtin": "4010951771757",
       "id": "gtin:4010951771757",
@@ -8110,7 +8079,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.759Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.917Z"
       },
       "gtin": "4046664259374",
       "id": "gtin:4046664259374",
@@ -8142,7 +8111,7 @@
         "name": "Hercutec 2 Takt Gemisch 60 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.119Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.224Z"
       },
       "gtin": "4260430020030",
       "id": "gtin:4260430020030",
@@ -8175,7 +8144,7 @@
         "name": "Stiga Benzin-Rasenmäher Collector 43 1,9 kW 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.053Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.222Z"
       },
       "gtin": "8008984813823",
       "id": "gtin:8008984813823",
@@ -8208,7 +8177,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 46 1,9 kW, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.719Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.880Z"
       },
       "gtin": "8008984851184",
       "id": "gtin:8008984851184",
@@ -8241,7 +8210,7 @@
         "name": "AL-KO Rasentraktor-Anhänger Combi Trailer CT 400 für Traktoren",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.372Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.552Z"
       },
       "gtin": "4003718061895",
       "id": "gtin:4003718061895",
@@ -8275,7 +8244,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:19.160Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:38.451Z"
       },
       "gtin": "4010951771634",
       "id": "gtin:4010951771634",
@@ -8308,7 +8277,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 350,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.543Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.605Z"
       },
       "gtin": "8008984864818",
       "id": "gtin:8008984864818",
@@ -8340,7 +8309,7 @@
         "name": "Stiga Metall-Kombianhänger 122,9 X 84,3 X 74,7 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.183Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.368Z"
       },
       "gtin": "8008984873421",
       "id": "gtin:8008984873421",
@@ -8372,7 +8341,7 @@
         "name": "ANTHBOT Garage",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.207Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:34.273Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210020004",
@@ -8405,7 +8374,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.713Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.874Z"
       },
       "gtin": "8008984852099",
       "id": "gtin:8008984852099",
@@ -8438,7 +8407,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.351Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.539Z"
       },
       "gtin": "4003718066913",
       "id": "gtin:4003718066913",
@@ -8470,7 +8439,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.66 P-D 1,9 kW 46 cm Schnittbreite 4 in 1 Funktion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.347Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.536Z"
       },
       "gtin": "4003718067064",
       "id": "gtin:4003718067064",
@@ -8503,7 +8472,7 @@
         "name": "Duramax Kaminholzregal mit Aufbewahrungsschrank",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.254Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.418Z"
       },
       "gtin": "0638801536512",
       "id": "gtin:0638801536512",
@@ -8536,7 +8505,7 @@
         "name": "Litheli Akku-Rasenmäher U20 2 x 20V 37 cm Schnittbreite inkl. 2 Akkus",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.719Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.529Z"
       },
       "gtin": "4262443061413",
       "id": "gtin:4262443061413",
@@ -8569,7 +8538,7 @@
         "name": "Worx Akku-Rasenmäher WP733E 20 V 33 WG733E Schnittbreite inkl. 4 Ah Akku und Ladegerät",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.919Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:45.081Z"
       },
       "gtin": "6943475820282",
       "id": "gtin:6943475820282",
@@ -8601,7 +8570,7 @@
         "name": "AL-KO Auffahrrampe gebogen 2 m 2er-Set",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.372Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.552Z"
       },
       "gtin": "4003718062038",
       "id": "gtin:4003718062038",
@@ -8634,7 +8603,7 @@
         "name": "STIGA Mähroboter Garage A615v",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.092Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.256Z"
       },
       "gtin": "7313324012684",
       "id": "gtin:7313324012684",
@@ -8667,7 +8636,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.26 P-D 1,9 kW 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.350Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718067057",
       "id": "gtin:4003718067057",
@@ -8701,7 +8670,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.496Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.618Z"
       },
       "gtin": "4010951772440",
       "id": "gtin:4010951772440",
@@ -8733,7 +8702,7 @@
         "name": "AL-KO Benzin-Motorsense BC 400 B 1,25 kW, 41 / 25 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.048Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.191Z"
       },
       "gtin": "4003718060683",
       "id": "gtin:4003718060683",
@@ -8766,7 +8735,7 @@
         "name": "Worx Zusatzmodul ACS Anti-Kollisionssystem",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.221Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.327Z"
       },
       "gtin": "6925387170617",
       "id": "gtin:6925387170617",
@@ -8799,7 +8768,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 41 A, 1,9 kW, 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.246Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.401Z"
       },
       "gtin": "8008984860032",
       "id": "gtin:8008984860032",
@@ -8832,7 +8801,7 @@
         "name": "Stiga Akku E 450 48 V 5 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.544Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.605Z"
       },
       "gtin": "8008984866782",
       "id": "gtin:8008984866782",
@@ -8865,7 +8834,7 @@
         "name": "STIGA Akku E 475 48 Volt 7,5 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.094Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.256Z"
       },
       "gtin": "8008984866799",
       "id": "gtin:8008984866799",
@@ -8897,7 +8866,7 @@
         "name": "Ladestation Set für Genie-Serie - DE Standard / Genie 3000",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.213Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:34.279Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210010149",
@@ -8929,7 +8898,7 @@
         "name": "AL-KO Elektro-Schneefräse SnowLine 46 E 2.000 Watt, 46 cm Räumbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.046Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.190Z"
       },
       "gtin": "4003718045147",
       "id": "gtin:4003718045147",
@@ -8962,7 +8931,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.16 P-D 1,2 kW 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.350Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718067040",
       "id": "gtin:4003718067040",
@@ -8996,7 +8965,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.236Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.391Z"
       },
       "gtin": "4078500061957",
       "id": "gtin:4078500061957",
@@ -9029,7 +8998,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.542Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.604Z"
       },
       "gtin": "8008984864801",
       "id": "gtin:8008984864801",
@@ -9061,7 +9030,7 @@
         "name": "Gardena Mähroboter-Garage für SILENO pro/max/free",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.820Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.978Z"
       },
       "gtin": "4066407004979",
       "id": "gtin:4066407004979",
@@ -9094,7 +9063,7 @@
         "name": "AL-KO Benzin-Motorsense BC 330 B 0,9 kW, 41 /25 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.048Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.191Z"
       },
       "gtin": "4003718060669",
       "id": "gtin:4003718060669",
@@ -9126,7 +9095,7 @@
         "name": "Ladestation Set für Genie-Serie - DE Standard / Genie 1000",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.213Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:34.278Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210010148-new-mgv",
@@ -9157,7 +9126,7 @@
         "name": "Batterie für Genie/ M Serie - 5000mAh für Genie 1000",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.211Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.277Z"
       },
       "id": "mpn:anthbot:210010251",
       "issues": [
@@ -9187,7 +9156,7 @@
         "name": "Gardena Akku Rasenmäher PowerMax Duo 46/36V 2,5 Ah 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.954Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.173Z"
       },
       "gtin": "4066407504998",
       "id": "gtin:4066407504998",
@@ -9220,7 +9189,7 @@
         "name": "AL-KO Rasentraktor-Streuer 60 - Volumen 56 l",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.372Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.552Z"
       },
       "gtin": "4003718061932",
       "id": "gtin:4003718061932",
@@ -9253,7 +9222,7 @@
         "name": "Gardena Smart Irrigation Control Steuerung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.252Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.405Z"
       },
       "gtin": "4066407003842",
       "id": "gtin:4066407003842",
@@ -9286,7 +9255,7 @@
         "name": "Worx Scheinwerfer für Mähroboter Landroid Vision",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.223Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.328Z"
       },
       "gtin": "6925387186137",
       "id": "gtin:6925387186137",
@@ -9318,7 +9287,7 @@
         "name": "Stiga Ersatzakku E 440 48 V / 4 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.717Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.876Z"
       },
       "gtin": "8008984844223",
       "id": "gtin:8008984844223",
@@ -9351,7 +9320,7 @@
         "name": "ikra Benzin Freischneider IBF 38 1,0 kW 25,5 / 42 cm Schnittkreis",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.978Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.202Z"
       },
       "gtin": "4010951732253",
       "id": "gtin:4010951732253",
@@ -9383,7 +9352,7 @@
         "name": "Garage M",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.237Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.297Z"
       },
       "id": "mpn:anthbot-de:210010230",
       "issues": [
@@ -9412,7 +9381,7 @@
         "name": "Ladestation Set für Genie-Serie - DE Standard / Genie 600",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.212Z",
+        "sourceUpdatedAt": "2026-09-07T15:29:34.278Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210010147",
@@ -9444,7 +9413,7 @@
         "name": "Gardena Elektro Rasenmäher PowerMax 1800/37 G2 37 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.450Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.604Z"
       },
       "gtin": "4078500062039",
       "id": "gtin:4078500062039",
@@ -9478,7 +9447,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.776Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.942Z"
       },
       "gtin": "4010951772662",
       "id": "gtin:4010951772662",
@@ -9511,7 +9480,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.543Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.604Z"
       },
       "gtin": "8008984864795",
       "id": "gtin:8008984864795",
@@ -9543,7 +9512,7 @@
         "name": "AL-KO Benzin-Motorsense BC 223 B 0,7 kW, 41 / 25 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.047Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.191Z"
       },
       "gtin": "4003718059533",
       "id": "gtin:4003718059533",
@@ -9576,7 +9545,7 @@
         "name": "Litheli Akku-Rasenmäher U20 20V, 33cm Schnittbreite, inkl. Akku 4.0Ah und USB-C Ladekabel",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:25.440Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:44.319Z"
       },
       "gtin": "4262443060034",
       "id": "gtin:4262443060034",
@@ -9610,7 +9579,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.049Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.192Z"
       },
       "gtin": "4003718061574",
       "id": "gtin:4003718061574",
@@ -9643,7 +9612,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.350Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.537Z"
       },
       "gtin": "4003718066500",
       "id": "gtin:4003718066500",
@@ -9675,7 +9644,7 @@
         "name": "Einhell Mähroboter Garage mit klappbarem Deckel",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.796Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.921Z"
       },
       "gtin": "4006825654417",
       "id": "gtin:4006825654417",
@@ -9709,7 +9678,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.496Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.618Z"
       },
       "gtin": "4010951772457",
       "id": "gtin:4010951772457",
@@ -9741,7 +9710,7 @@
         "name": "Worx Diebstahlsicherung Find My Landroid für Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:29.043Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:48.269Z"
       },
       "gtin": "6941504411531",
       "id": "gtin:6941504411531",
@@ -9773,7 +9742,7 @@
         "name": "Garage für Mähroboter",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.231Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.291Z"
       },
       "id": "mpn:anthbot-de:210010101",
       "issues": [
@@ -9804,7 +9773,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.049Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.192Z"
       },
       "gtin": "4003718061550",
       "id": "gtin:4003718061550",
@@ -9837,7 +9806,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.441Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.554Z"
       },
       "gtin": "4006825646856",
       "id": "gtin:4006825646856",
@@ -9870,7 +9839,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.714Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.874Z"
       },
       "gtin": "8008984852082",
       "id": "gtin:8008984852082",
@@ -9902,7 +9871,7 @@
         "name": "Gardena Akku Einhandmäher HandyMower 22/18V P4A solo ohne Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:21.583Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:40.747Z"
       },
       "gtin": "4078500054164",
       "id": "gtin:4078500054164",
@@ -9935,7 +9904,7 @@
         "name": "Alpina Elektro-Rasenmäher AL1 38 E 1.400 Watt, 38 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.178Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.362Z"
       },
       "gtin": "8008984871694",
       "id": "gtin:8008984871694",
@@ -9969,7 +9938,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.049Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.192Z"
       },
       "gtin": "4003718061567",
       "id": "gtin:4003718061567",
@@ -10001,7 +9970,7 @@
         "name": "Stiga Prallblech RDR-72B für Rasentraktor Swift 372e",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.253Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.409Z"
       },
       "gtin": "8008984856387",
       "id": "gtin:8008984856387",
@@ -10034,7 +10003,7 @@
         "name": "Litheli Akku-Rasenmäher Mono 20 V 33 cm Schnittbreite ohne Akku",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.925Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.933Z"
       },
       "gtin": "4262443060386",
       "id": "gtin:4262443060386",
@@ -10067,7 +10036,7 @@
         "name": "Gardena Mähroboter-Garage für Sileno city, Sileno minimo und Sileno life",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:23.244Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:42.400Z"
       },
       "gtin": "4078500046107",
       "id": "gtin:4078500046107",
@@ -10101,7 +10070,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.922Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.931Z"
       },
       "gtin": "4262443060270",
       "id": "gtin:4262443060270",
@@ -10133,7 +10102,7 @@
         "name": "Worx Garage Vision Cloud",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:27.868Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:46.862Z"
       },
       "gtin": "6941504409149",
       "id": "gtin:6941504409149",
@@ -10165,7 +10134,7 @@
         "name": "Einhell Akku Spindelmäher GE-HM 18/38 Li-solo 38 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:24.443Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:43.555Z"
       },
       "gtin": "4006825641639",
       "id": "gtin:4006825641639",
@@ -10199,7 +10168,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.048Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.191Z"
       },
       "gtin": "4003718061543",
       "id": "gtin:4003718061543",
@@ -10231,7 +10200,7 @@
         "name": "Ikra Benzin-Freischneider IBF 25-1 / 43 cm Schnittkreis",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:18.513Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:37.881Z"
       },
       "gtin": "4010951731881",
       "id": "gtin:4010951731881",
@@ -10264,7 +10233,7 @@
         "name": "Alpina Elektro-Rasenmäher AL1 34 E 1.200 Watt, 34 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:28.178Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:47.362Z"
       },
       "gtin": "8008984871687",
       "id": "gtin:8008984871687",
@@ -10296,7 +10265,7 @@
         "name": "Begrenzungskabel für Pion 1000",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:14.202Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:34.268Z"
       },
       "id": "mpn:anthbot:draht",
       "issues": [
@@ -10328,7 +10297,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T11:47:22.051Z"
+        "sourceUpdatedAt": "2026-09-07T15:29:41.193Z"
       },
       "gtin": "4003718061833",
       "id": "gtin:4003718061833",
