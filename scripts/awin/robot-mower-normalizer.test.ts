@@ -32,6 +32,10 @@ describe("robot mower normalizer", () => {
     expect(isRobotMowerCandidate({ product_name: "Geschenkpaket GOAT A1600", merchant_category: "GOAT", description: "Rasenmäher" })).toBe(false);
   });
 
+  it("recognizes Husqvarna Automower feed titles without the generic product type", () => {
+    expect(isRobotMowerCandidate({ product_name: "Husqvarna Automower 305E NERA", brand_name: "Husqvarna" })).toBe(true);
+  });
+
   it("keeps German thousands separators in area values", () => {
     expect(parseRobotMowerAttributes("für 1.000 m² geeignet").ratedAreaM2).toBe(1000);
   });

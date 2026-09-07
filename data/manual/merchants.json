@@ -181,8 +181,8 @@
       "applicationPriority": 14,
       "applicationStatus": "active",
       "enabled": true,
-      "verticals": ["irrigation", "robot-mower"],
-      "plannerIds": ["irrigation", "robot-mower"],
+      "verticals": ["dehumidifier", "irrigation", "robot-mower"],
+      "plannerIds": ["dehumidifier", "irrigation", "robot-mower"],
       "country": "DE"
     }
   ]

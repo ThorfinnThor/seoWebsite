@@ -4,13 +4,13 @@ import { availability, delivery, isoDate, merchantDetails, parsePriceFromFields,
 import { priceIssue } from "./price-normalizer";
 import type { AffiliateCandidate, RawFeedRow } from "./types";
 
-const CANDIDATE_PATTERN = /m(?:ä|ae)hroboter|rasenroboter|mowing robot|robot mower|rasenm(?:ä|ae)her|\bgoat\b/i;
+const CANDIDATE_PATTERN = /m(?:ä|ae)hroboter|rasenroboter|mowing robot|robot mower|rasenm(?:ä|ae)her|\bgoat\b|\bautomower\b/i;
 const EXCLUDED_PATTERN = /winbot|deebot|fenster|saugroboter|geschenkpaket|bundle|paket/i;
 export type RobotMowerCandidate = AffiliateCandidate<RobotMowerProduct>;
 
 export function isRobotMowerCandidate(row: RawFeedRow): boolean {
   const text = [value(row, "product_name"), value(row, "description"), value(row, "merchant_category"), value(row, "category_name"), value(row, "product_type"), value(row, "merchant_product_category_path")].filter(Boolean).join(" ");
-  return CANDIDATE_PATTERN.test(text) && !EXCLUDED_PATTERN.test(text) && (/\bgoat\b/i.test(value(row, "merchant_category") ?? "") || /m(?:ä|ae)h|rasen|mowing|lawn/i.test(text));
+  return CANDIDATE_PATTERN.test(text) && !EXCLUDED_PATTERN.test(text) && (/\b(?:goat|automower)\b/i.test(text) || /m(?:ä|ae)h|rasen|mowing|lawn/i.test(text));
 }
 
 function decimal(raw?: string) {

@@ -120,6 +120,65 @@
       "minCutHeightCm": 2,
       "maxCutHeightCm": 6,
       "reviewNote": "Offizielle STIGA-Installationsanleitung und Awin-Feed geprüft am 2026-08-28: G 300, bis 45 % Steigung, mindestens 70 cm Korridorbreite und Begrenzungskabel-System."
+    },
+    {
+      "id": "gtin:7333377756892",
+      "name": "Husqvarna Automower 410VE NERA",
+      "brand": "Husqvarna",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 1500,
+      "maxSlopePercent": 30,
+      "navigation": "hybrid",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 5.5,
+      "waterProtection": "IPX5",
+      "obstacleDetection": true,
+      "reviewNote": "Offizielle Husqvarna-Produktseite und Awin-Feed geprüft am 2026-09-07: bis 1.500 m² bei systematischem Mähen, 30 % Steigung, virtuelle EPOS-Navigation kombiniert mit KI-Kamera, 20–55 mm Schnitthöhe, IPX5 und Objekterkennung. Eine belastbare Mindestpassage wird vom Hersteller nicht genannt und bleibt deshalb offen."
+    },
+    {
+      "id": "gtin:7333377093133",
+      "name": "Husqvarna Automower 410XE NERA B-Ware",
+      "brand": "Husqvarna",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 1000,
+      "maxSlopePercent": 30,
+      "minPassageCm": 60,
+      "navigation": "wire",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 5.5,
+      "waterProtection": "IPX5",
+      "obstacleDetection": true,
+      "reviewNote": "Offizielle Husqvarna-Supportseite, Bedienungsanleitung und Awin-Feed geprüft am 2026-09-07: 1.000 m² in der Ausführung mit Begrenzungskabel, 30 % Steigung, 60 cm engste Passage, 20–55 mm Schnitthöhe, IPX5 und Objekterkennung. Das Tink-Angebot ist ausdrücklich als B-Ware gekennzeichnet."
+    },
+    {
+      "id": "gtin:8008984872813",
+      "name": "STIGA A 6v",
+      "brand": "STIGA",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 600,
+      "maxSlopePercent": 45,
+      "navigation": "hybrid",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 6,
+      "obstacleDetection": true,
+      "reviewNote": "Offizielle STIGA-Produktseite und Awin-Feed geprüft am 2026-09-07: bis 600 m², 45 % Steigung, Quad-Band-GPS-RTK und integrierte KI-Kamera, 20–60 mm Schnitthöhe sowie Hindernissensoren. Eine belastbare Mindestpassage wird nicht veröffentlicht und bleibt offen."
+    },
+    {
+      "id": "gtin:194644319335",
+      "name": "eufy Mähroboter C15 mit Garage",
+      "brand": "eufy",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "ratedAreaM2": 500,
+      "maxSlopePercent": 32,
+      "navigation": "camera",
+      "minCutHeightCm": 2,
+      "maxCutHeightCm": 6,
+      "obstacleDetection": true,
+      "reviewNote": "Offizielle eufy-Produktinformationen und Awin-Feed geprüft am 2026-09-07: für Rasenflächen bis 500 m², visuelle KI-Navigation ohne Begrenzungskabel, 32 % Steigung, 20–60 mm Schnitthöhe und Hinderniserkennung. Eine belastbare Mindestpassage wird nicht veröffentlicht und bleibt offen."
     }
   ]
 }

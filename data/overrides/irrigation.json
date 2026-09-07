@@ -89,6 +89,32 @@
       "kind": "connector",
       "systemId": "GARDENA Original System",
       "reviewNote": "GARDENA product page checked 2026-08-28: product 2931-20, GTIN 4078500293105, hose-extension coupling for hose repair, frost protection and five-year manufacturer warranty verified."
+    },
+    {
+      "id": "gtin:4260195392229",
+      "name": "Eve Aqua Bewässerungssteuerung im 2er-Set",
+      "brand": "Eve",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "controller",
+      "systemId": "Eve Aqua Thread",
+      "maxZones": 2,
+      "smartCompatible": true,
+      "requiredAccessories": ["Thread Border Router für Fernzugriff und Automationen"],
+      "reviewNote": "Offizielle Eve-Aqua-Produktseite und Awin-Feed geprüft am 2026-09-07: zwei einzelne Bewässerungssteuerungen, Standardgewinde 26,5 mm (G 3/4 Zoll), Bluetooth und Thread sowie bis zu sieben Zeitpläne pro Gerät und Tag. Fernzugriff und Automationen benötigen eine passende Steuerzentrale."
+    },
+    {
+      "id": "gtin:8719323919983",
+      "name": "Hombli Smart Water Controller 2 im 2er-Set",
+      "brand": "Hombli",
+      "reviewed": true,
+      "dataQuality": "curated",
+      "kind": "controller",
+      "systemId": "Hombli Bluetooth",
+      "maxZones": 2,
+      "smartCompatible": true,
+      "requiredAccessories": ["Hombli Bluetooth Bridge für Fernzugriff und WLAN Funktionen"],
+      "reviewNote": "Offizielle Hombli-Produktseite und Awin-Feed geprüft am 2026-09-07: zwei einzelne Bewässerungssteuerungen, Anschlussgewinde 26,5 mm (3/4 Zoll) und 33,3 mm (1 Zoll), Bluetooth und App-Steuerung. Fernzugriff und WLAN-Funktionen benötigen die separat erhältliche Hombli Bluetooth Bridge."
     }
   ]
 }
