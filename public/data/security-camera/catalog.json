@@ -1,6 +1,57 @@
 {
-  "generatedAt": "2026-09-07T15:44:49.453Z",
+  "generatedAt": "2026-09-07T15:51:25.259Z",
   "offers": [
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44097349502&a=3037577&m=13686",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:13686:16849",
+      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel4_28.jpg",
+      "linkVerificationStatus": "verified",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
+      "merchantId": "13686",
+      "merchantName": "tink DE",
+      "merchantProductId": "16849",
+      "merchantUrl": "https://www.tink.de/p/eufy-eufycam-s220-4er-set",
+      "priceEur": 226.95,
+      "productId": "gtin:0194644126377",
+      "updatedAt": "2026-09-07T15:51:11.371Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=37136554639&a=3037577&m=13686",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:13686:18047",
+      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel1_3_85.jpg",
+      "linkVerificationStatus": "verified",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
+      "merchantId": "13686",
+      "merchantName": "tink DE",
+      "merchantProductId": "18047",
+      "merchantUrl": "https://www.tink.de/p/eufy-solocam-s340-2er-set",
+      "priceEur": 199.95,
+      "productId": "gtin:194644146160",
+      "updatedAt": "2026-09-07T15:51:11.375Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=45390959795&a=3037577&m=13686",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:13686:18052",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel3_41.jpg",
+      "linkVerificationStatus": "verified",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
+      "merchantId": "13686",
+      "merchantName": "tink DE",
+      "merchantProductId": "18052",
+      "merchantUrl": "https://www.tink.de/p/eufycam-s350-2er-set",
+      "priceEur": 152.95,
+      "productId": "gtin:194644126384",
+      "updatedAt": "2026-09-07T15:51:11.376Z"
+    },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45456056932&a=3037577&m=13686",
       "available": true,
@@ -9,14 +60,14 @@
       "id": "offer:13686:18933",
       "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel1_3_99.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "18933",
       "merchantUrl": "https://www.tink.de/p/eufy-indoor-cam-c220-2er-set",
       "priceEur": 47.95,
       "productId": "gtin:194644176136",
-      "updatedAt": "2026-09-07T15:44:35.000Z"
+      "updatedAt": "2026-09-07T15:51:11.476Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45390959812&a=3037577&m=13686",
@@ -26,14 +77,14 @@
       "id": "offer:13686:18934",
       "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel3_37.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "18934",
       "merchantUrl": "https://www.tink.de/p/eufy-indoor-cam-c220-3er-set",
       "priceEur": 75.95,
       "productId": "gtin:194644176136",
-      "updatedAt": "2026-09-07T15:44:35.000Z"
+      "updatedAt": "2026-09-07T15:51:11.476Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45844064005&a=3037577&m=13686",
@@ -43,14 +94,14 @@
       "id": "offer:13686:20647",
       "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel1_3_125.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "20647",
       "merchantUrl": "https://www.tink.de/p/eufy-indoor-cam-e30-4k-schwenk-neige-innenkamera?opt_92=30",
       "priceEur": 54.99,
       "productId": "gtin:0194644296896",
-      "updatedAt": "2026-09-07T15:44:35.110Z"
+      "updatedAt": "2026-09-07T15:51:11.482Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45859891550&a=3037577&m=13686",
@@ -60,14 +111,14 @@
       "id": "offer:13686:22007",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/p/3/p30_titelbild4er-set.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "22007",
       "merchantUrl": "https://www.tink.de/p/reolink-p330-4er-set",
       "priceEur": 288.95,
       "productId": "gtin:6975253983759",
-      "updatedAt": "2026-09-07T15:44:35.114Z"
+      "updatedAt": "2026-09-07T15:51:11.487Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45390959869&a=3037577&m=13686",
@@ -77,14 +128,14 @@
       "id": "offer:13686:22017",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/p/3/p34_titelbild2er-set.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "22017",
       "merchantUrl": "https://www.tink.de/p/reolink-p334-2er-set",
       "priceEur": 152,
       "productId": "gtin:6975253983766",
-      "updatedAt": "2026-09-07T15:44:35.114Z"
+      "updatedAt": "2026-09-07T15:51:11.487Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45390959880&a=3037577&m=13686",
@@ -94,14 +145,14 @@
       "id": "offer:13686:22428",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/p/7/p730_titelbild4er-set.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "22428",
       "merchantUrl": "https://www.tink.de/p/reolink-duo-series-p730-4er-set",
       "priceEur": 512.95,
       "productId": "gtin:6975253983384",
-      "updatedAt": "2026-09-07T15:44:35.116Z"
+      "updatedAt": "2026-09-07T15:51:11.488Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45462675128&a=3037577&m=13686",
@@ -111,14 +162,14 @@
       "id": "offer:13686:24343",
       "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/i/m/imou_cell_pt_lite_with_solar_panel_-_2k_wlan-akku-au_enkamera_mit_schwenk-neigefunktion_solarpanel_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "24343",
       "merchantUrl": "https://www.tink.de/p/imou-cell-pt-lite-with-solar-panel-2k-wlan-akku-aussenkamera-mit-schwenk-neigefunktion-solarpanel?opt_92=30",
       "priceEur": 62.9,
       "productId": "gtin:6976391038271",
-      "updatedAt": "2026-09-07T15:44:35.124Z"
+      "updatedAt": "2026-09-07T15:51:11.495Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45849163706&a=3037577&m=13686",
@@ -128,14 +179,14 @@
       "id": "offer:13686:24458",
       "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/i/m/imou_cell_titelbild.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "24458",
       "merchantUrl": "https://www.tink.de/p/imou-cell-go-full-color-2k-wlan-akku-aussenkamera-mit-solarpanel-farbiger-nachtsicht-2er-set",
       "priceEur": 88.95,
       "productId": "gtin:6976391039452",
-      "updatedAt": "2026-09-07T15:44:35.126Z"
+      "updatedAt": "2026-09-07T15:51:11.497Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45456056950&a=3037577&m=13686",
@@ -145,14 +196,14 @@
       "id": "offer:13686:24625",
       "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/i/m/imou_cell_pt_lite_with_solar_panel_-_2k_wlan-akku-au_enkamera_mit_schwenk-neigefunktion_solarpanel_2er.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "24625",
       "merchantUrl": "https://www.tink.de/p/imou-cell-pt-lite-with-solar-panel-2k-wlan-akku-aussenkamera-mit-schwenk-neigefunktion-2er-set",
       "priceEur": 111.95,
       "productId": "gtin:6976391038271",
-      "updatedAt": "2026-09-07T15:44:35.127Z"
+      "updatedAt": "2026-09-07T15:51:11.499Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44892272371&a=3037577&m=13686",
@@ -162,14 +213,14 @@
       "id": "offer:13686:25266",
       "imageUrl": "https://www.tink.de/cdn/681378/media/catalog/product/e/u/eufy_set_front.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "25266",
       "merchantUrl": "https://www.tink.de/p/eufy-solocam-e42-4k-wlan-aussenkamera-mit-solarpanel-2er-set",
       "priceEur": 191.95,
       "productId": "gtin:194644247546",
-      "updatedAt": "2026-09-07T15:44:35.132Z"
+      "updatedAt": "2026-09-07T15:51:11.595Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45721904332&a=3037577&m=13686",
@@ -179,14 +230,14 @@
       "id": "offer:13686:25587",
       "imageUrl": "https://www.tink.de/cdn/406753/media/catalog/product/2/_/2_slate_lionfish_battery_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "25587",
       "merchantUrl": "https://www.tink.de/p/ring-spotlight-cam-2-gen-battery-2k-wlan-aussenkamera-mit-licht?opt_92=5",
       "priceEur": 155.95,
       "productId": "gtin:840414621947",
-      "updatedAt": "2026-09-07T15:44:35.237Z"
+      "updatedAt": "2026-09-07T15:51:11.600Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45721904333&a=3037577&m=13686",
@@ -196,14 +247,14 @@
       "id": "offer:13686:25588",
       "imageUrl": "https://www.tink.de/cdn/406753/media/catalog/product/1/_/1_slate_lionfish_battery.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "25588",
       "merchantUrl": "https://www.tink.de/p/ring-spotlight-cam-2-gen-battery-2k-wlan-aussenkamera-mit-licht?opt_92=30",
       "priceEur": 155.95,
       "productId": "gtin:840414695269",
-      "updatedAt": "2026-09-07T15:44:35.237Z"
+      "updatedAt": "2026-09-07T15:51:11.600Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45577724616&a=3037577&m=13686",
@@ -213,14 +264,14 @@
       "id": "offer:13686:26080",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel1_5_3.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26080",
       "merchantUrl": "https://www.tink.de/p/ring-outdoor-cam-battery-2-gen-2k-wlan-aussenkamera?opt_92=5",
       "priceEur": 99.95,
       "productId": "gtin:840414618169",
-      "updatedAt": "2026-09-07T15:44:35.242Z"
+      "updatedAt": "2026-09-07T15:51:11.605Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45577724617&a=3037577&m=13686",
@@ -230,14 +281,14 @@
       "id": "offer:13686:26081",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel2_2_16.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26081",
       "merchantUrl": "https://www.tink.de/p/ring-outdoor-cam-battery-2-gen-2k-wlan-aussenkamera?opt_92=30",
       "priceEur": 99.95,
       "productId": "gtin:840414643512",
-      "updatedAt": "2026-09-07T15:44:35.242Z"
+      "updatedAt": "2026-09-07T15:51:11.605Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45802531236&a=3037577&m=13686",
@@ -247,14 +298,14 @@
       "id": "offer:13686:26105",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel_7_68.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26105",
       "merchantUrl": "https://www.tink.de/p/aosu-smart-security-solarcam-t2-pro-3k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
       "priceEur": 167.15,
       "productId": "gtin:6977118370841",
-      "updatedAt": "2026-09-07T15:44:35.242Z"
+      "updatedAt": "2026-09-07T15:51:11.605Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45802531237&a=3037577&m=13686",
@@ -264,14 +315,14 @@
       "id": "offer:13686:26107",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel_7_70.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26107",
       "merchantUrl": "https://www.tink.de/p/aosu-smart-security-solarcam-t2-ultra-4k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
       "priceEur": 158.8,
       "productId": "gtin:6977118370681",
-      "updatedAt": "2026-09-07T15:44:35.243Z"
+      "updatedAt": "2026-09-07T15:51:11.606Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45802531238&a=3037577&m=13686",
@@ -281,14 +332,14 @@
       "id": "offer:13686:26111",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel_8_5.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26111",
       "merchantUrl": "https://www.tink.de/p/aosu-smart-security-solarcam-d1-max-3k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
       "priceEur": 100.3,
       "productId": "gtin:6977118370193",
-      "updatedAt": "2026-09-07T15:44:35.243Z"
+      "updatedAt": "2026-09-07T15:51:11.606Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45886628969&a=3037577&m=13686",
@@ -298,14 +349,14 @@
       "id": "offer:13686:26240",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel_8_10.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26240",
       "merchantUrl": "https://www.tink.de/p/philips-hue-secure-mit-standfuss-2k-wlan-akku-aussenkamera?opt_92=5",
       "priceEur": 189.99,
       "productId": "gtin:8721103045089",
-      "updatedAt": "2026-09-07T15:44:35.245Z"
+      "updatedAt": "2026-09-07T15:51:11.607Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45886628970&a=3037577&m=13686",
@@ -315,17 +366,33 @@
       "id": "offer:13686:26241",
       "imageUrl": "https://www.tink.de/cdn/173434/media/catalog/product/t/i/titel_8_8.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-07T15:44:50.430Z",
+      "linkVerifiedAt": "2026-09-07T15:51:26.220Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "26241",
       "merchantUrl": "https://www.tink.de/p/philips-hue-secure-mit-standfuss-2k-wlan-akku-aussenkamera?opt_92=30",
       "priceEur": 189.99,
       "productId": "gtin:8721103045201",
-      "updatedAt": "2026-09-07T15:44:35.245Z"
+      "updatedAt": "2026-09-07T15:51:11.607Z"
     }
   ],
   "products": [
+    {
+      "brand": "eufy",
+      "cameraCount": 4,
+      "connection": "wifi",
+      "dataQuality": "curated",
+      "gtin": "0194644126377",
+      "id": "gtin:0194644126377",
+      "integratedLight": false,
+      "name": "eufy SoloCam S220 - 2K-Außenkamera - 4er-Set",
+      "panTilt": false,
+      "placement": "outdoor",
+      "power": "solar",
+      "resolution": "2k",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-09-07T15:51:11.371Z"
+    },
     {
       "brand": "eufy",
       "cameraCount": 1,
@@ -340,7 +407,39 @@
       "power": "mains",
       "resolution": "4k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.110Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.482Z"
+    },
+    {
+      "brand": "eufy",
+      "cameraCount": 2,
+      "connection": "wifi",
+      "dataQuality": "curated",
+      "gtin": "194644126384",
+      "id": "gtin:194644126384",
+      "integratedLight": false,
+      "name": "eufy Indoor Cam S350 - 360°-Schwenk-& Neige-Kamera - 2er-Set",
+      "panTilt": true,
+      "placement": "indoor",
+      "power": "mains",
+      "resolution": "4k",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-09-07T15:51:11.376Z"
+    },
+    {
+      "brand": "eufy",
+      "cameraCount": 2,
+      "connection": "wifi",
+      "dataQuality": "curated",
+      "gtin": "194644146160",
+      "id": "gtin:194644146160",
+      "integratedLight": false,
+      "name": "eufy SoloCam S340 - 3K Dual-Außenkamera mit Schwenk- & Neige-Funktion - 2er-Set",
+      "panTilt": true,
+      "placement": "outdoor",
+      "power": "solar",
+      "resolution": "3k",
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-09-07T15:51:11.375Z"
     },
     {
       "brand": "eufy",
@@ -356,7 +455,7 @@
       "power": "mains",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.000Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.476Z"
     },
     {
       "brand": "eufy",
@@ -372,7 +471,7 @@
       "power": "solar",
       "resolution": "4k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.132Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.595Z"
     },
     {
       "brand": "Reolink",
@@ -388,7 +487,7 @@
       "power": "poe",
       "resolution": "4k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.116Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.488Z"
     },
     {
       "brand": "Reolink",
@@ -404,7 +503,7 @@
       "power": "poe",
       "resolution": "4k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.114Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.487Z"
     },
     {
       "brand": "Reolink",
@@ -420,7 +519,7 @@
       "power": "poe",
       "resolution": "4k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.114Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.487Z"
     },
     {
       "brand": "IMOU",
@@ -436,7 +535,7 @@
       "power": "solar",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.127Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.499Z"
     },
     {
       "brand": "IMOU",
@@ -452,7 +551,7 @@
       "power": "solar",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.126Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.497Z"
     },
     {
       "brand": "aosu",
@@ -468,7 +567,7 @@
       "power": "solar",
       "resolution": "3k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.243Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.606Z"
     },
     {
       "brand": "aosu",
@@ -484,7 +583,7 @@
       "power": "solar",
       "resolution": "4k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.243Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.606Z"
     },
     {
       "brand": "aosu",
@@ -500,7 +599,7 @@
       "power": "solar",
       "resolution": "3k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.242Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.605Z"
     },
     {
       "brand": "Ring",
@@ -516,7 +615,7 @@
       "power": "battery",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.242Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.605Z"
     },
     {
       "brand": "Ring",
@@ -532,7 +631,7 @@
       "power": "battery",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.237Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.600Z"
     },
     {
       "brand": "Ring",
@@ -548,7 +647,7 @@
       "power": "battery",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.242Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.605Z"
     },
     {
       "brand": "Ring",
@@ -564,7 +663,7 @@
       "power": "battery",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.237Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.600Z"
     },
     {
       "brand": "Philips Hue",
@@ -580,7 +679,7 @@
       "power": "battery",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.245Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.607Z"
     },
     {
       "brand": "Philips Hue",
@@ -596,7 +695,7 @@
       "power": "battery",
       "resolution": "2k",
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-07T15:44:35.245Z"
+      "sourceUpdatedAt": "2026-09-07T15:51:11.607Z"
     }
   ],
   "schemaVersion": 1,

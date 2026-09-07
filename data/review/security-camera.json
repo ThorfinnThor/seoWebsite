@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T15:44:49.453Z",
+  "generatedAt": "2026-09-07T15:51:25.259Z",
   "products": [
     {
       "brand": "TP-Link",
@@ -14,7 +14,7 @@
         "name": "TP-Link Tapo C200 Sicherheits-WLAN-Kamera mit Schwenk- und Neigefunktion - Weiß",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.863Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.251Z"
       },
       "gtin": "6935364088095",
       "id": "gtin:6935364088095",
@@ -50,7 +50,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.121Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.493Z"
       },
       "gtin": "0194644239213",
       "id": "gtin:0194644239213",
@@ -83,7 +83,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.114Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.487Z"
       },
       "gtin": "6975253982189",
       "id": "gtin:6975253982189",
@@ -117,7 +117,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.000Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.381Z"
       },
       "gtin": "4062321357917",
       "id": "gtin:4062321357917",
@@ -153,7 +153,7 @@
         "power": "poe",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.111Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.483Z"
       },
       "gtin": "6975253983322",
       "id": "gtin:6975253983322",
@@ -185,7 +185,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.601Z"
       },
       "gtin": "6975253983339",
       "id": "gtin:6975253983339",
@@ -219,7 +219,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.110Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.483Z"
       },
       "gtin": "3700730505857",
       "id": "gtin:3700730505857",
@@ -254,7 +254,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.115Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.488Z"
       },
       "gtin": "4003318867781",
       "id": "gtin:4003318867781",
@@ -287,7 +287,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.988Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.372Z"
       },
       "gtin": "4003318981456",
       "id": "gtin:4003318981456",
@@ -321,7 +321,7 @@
         "name": "ABUS WLAN Licht Außen-Kamera - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.987Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.370Z"
       },
       "gtin": "4003318981449",
       "id": "gtin:4003318981449",
@@ -357,7 +357,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.236Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.599Z"
       },
       "gtin": "3700730507516",
       "id": "gtin:3700730507516",
@@ -390,7 +390,7 @@
         "placement": "outdoor",
         "resolution": "hd",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.996Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.378Z"
       },
       "gtin": "5052847126103",
       "id": "gtin:5052847126103",
@@ -426,7 +426,7 @@
         "placement": "outdoor",
         "resolution": "hd",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.981Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.360Z"
       },
       "gtin": "4260195392199",
       "id": "gtin:4260195392199",
@@ -459,7 +459,7 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.998Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.379Z"
       },
       "gtin": "194644177768",
       "id": "gtin:194644177768",
@@ -493,7 +493,7 @@
         "panTilt": false,
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.123Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.494Z"
       },
       "gtin": "06977118370407",
       "id": "gtin:06977118370407",
@@ -528,7 +528,7 @@
         "power": "solar",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.125Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.497Z"
       },
       "gtin": "193108149532",
       "id": "gtin:193108149532",
@@ -563,7 +563,7 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.003Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.479Z"
       },
       "gtin": "0194644293888",
       "id": "gtin:0194644293888",
@@ -595,7 +595,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.122Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.493Z"
       },
       "gtin": "4062321396084",
       "id": "gtin:4062321396084",
@@ -631,7 +631,7 @@
         "placement": "outdoor",
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.124Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.496Z"
       },
       "gtin": "6937479641769",
       "id": "gtin:6937479641769",
@@ -665,7 +665,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.237Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.599Z"
       },
       "gtin": "3700730507493",
       "id": "gtin:3700730507493",
@@ -697,7 +697,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.998Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.379Z"
       },
       "gtin": "4003318981463",
       "id": "gtin:4003318981463",
@@ -732,7 +732,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.004Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.479Z"
       },
       "gtin": "6975253982172",
       "id": "gtin:6975253982172",
@@ -765,7 +765,7 @@
         "name": "Homematic IP Außenlichtkamera - 4MP, WLAN mit Schwenkfunktion - Weiß",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.133Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.598Z"
       },
       "gtin": "4047976629473",
       "id": "gtin:4047976629473",
@@ -787,40 +787,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 4,
-        "dataQuality": "feed",
-        "gtin": "0194644126377",
-        "id": "gtin:0194644126377",
-        "integratedLight": false,
-        "name": "eufy SoloCam S220 - 2K-Außenkamera - 4er-Set",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.987Z"
-      },
-      "gtin": "0194644126377",
-      "id": "gtin:0194644126377",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel4_28.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-eufycam-s220-4er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 226.95,
-      "name": "eufy SoloCam S220 - 2K-Außenkamera - 4er-Set",
-      "offerCount": 1,
-      "priority": 133,
-      "riskTier": "normal"
-    },
-    {
       "brand": "omajin",
       "candidateAttributes": {
         "brand": "omajin",
@@ -832,7 +798,7 @@
         "name": "omajin Wireless Security Camera - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.003Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.478Z"
       },
       "gtin": "3700730532006",
       "id": "gtin:3700730532006",
@@ -855,40 +821,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "194644146160",
-        "id": "gtin:194644146160",
-        "integratedLight": false,
-        "name": "eufy SoloCam S340 - 3K Dual-Außenkamera mit Schwenk- & Neige-Funktion - 2er-Set",
-        "panTilt": true,
-        "placement": "outdoor",
-        "resolution": "3k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.990Z"
-      },
-      "gtin": "194644146160",
-      "id": "gtin:194644146160",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel1_3_85.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-solocam-s340-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 199.95,
-      "name": "eufy SoloCam S340 - 3K Dual-Außenkamera mit Schwenk- & Neige-Funktion - 2er-Set",
-      "offerCount": 1,
-      "priority": 130,
-      "riskTier": "normal"
-    },
-    {
       "brand": "TP-Link",
       "candidateAttributes": {
         "brand": "TP-Link",
@@ -903,7 +835,7 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.113Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.485Z"
       },
       "gtin": "8885020629521",
       "id": "gtin:8885020629521",
@@ -935,7 +867,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.989Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.374Z"
       },
       "gtin": "4260195392427",
       "id": "gtin:4260195392427",
@@ -969,7 +901,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.983Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.362Z"
       },
       "gtin": "194644107277",
       "id": "gtin:194644107277",
@@ -1004,7 +936,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.133Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.598Z"
       },
       "gtin": "4047976629411",
       "id": "gtin:4047976629411",
@@ -1037,7 +969,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.988Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.371Z"
       },
       "gtin": "4897098685426",
       "id": "gtin:4897098685426",
@@ -1071,7 +1003,7 @@
         "panTilt": false,
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.123Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.495Z"
       },
       "gtin": "06977118370414",
       "id": "gtin:06977118370414",
@@ -1106,7 +1038,7 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.984Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.365Z"
       },
       "gtin": "4897098685860",
       "id": "gtin:4897098685860",
@@ -1139,7 +1071,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.994Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.376Z"
       },
       "gtin": "4895252500899",
       "id": "gtin:4895252500899",
@@ -1174,7 +1106,7 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.133Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.598Z"
       },
       "gtin": "4047976629435",
       "id": "gtin:4047976629435",
@@ -1208,7 +1140,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.868Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.256Z"
       },
       "gtin": "4003318912368",
       "id": "gtin:4003318912368",
@@ -1243,7 +1175,7 @@
         "placement": "outdoor",
         "power": "poe",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.602Z"
       },
       "gtin": "6937479642773",
       "id": "gtin:6937479642773",
@@ -1263,40 +1195,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "194644126384",
-        "id": "gtin:194644126384",
-        "integratedLight": false,
-        "name": "eufy Indoor Cam S350 - 360°-Schwenk-& Neige-Kamera - 2er-Set",
-        "panTilt": true,
-        "placement": "indoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.994Z"
-      },
-      "gtin": "194644126384",
-      "id": "gtin:194644126384",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel3_41.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-s350-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 152.95,
-      "name": "eufy Indoor Cam S350 - 360°-Schwenk-& Neige-Kamera - 2er-Set",
-      "offerCount": 1,
-      "priority": 125,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Arlo",
       "candidateAttributes": {
         "brand": "Arlo",
@@ -1309,7 +1207,7 @@
         "panTilt": true,
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.124Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.496Z"
       },
       "gtin": "193108151771",
       "id": "gtin:193108151771",
@@ -1345,7 +1243,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.602Z"
       },
       "gtin": "6978285033331",
       "id": "gtin:6978285033331",
@@ -1378,7 +1276,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.002Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.477Z"
       },
       "gtin": "6976930224264",
       "id": "gtin:6976930224264",
@@ -1412,7 +1310,7 @@
         "panTilt": true,
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.126Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.497Z"
       },
       "gtin": "6971927238286",
       "id": "gtin:6971927238286",
@@ -1446,7 +1344,7 @@
         "power": "solar",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.124Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.496Z"
       },
       "gtin": "193108149617",
       "id": "gtin:193108149617",
@@ -1480,7 +1378,7 @@
         "panTilt": false,
         "power": "poe",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.117Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.489Z"
       },
       "gtin": "194644293215",
       "id": "gtin:194644293215",
@@ -1515,7 +1413,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.109Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.481Z"
       },
       "gtin": "4003318419157",
       "id": "gtin:4003318419157",
@@ -1549,7 +1447,7 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.131Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.594Z"
       },
       "gtin": "6937479644586",
       "id": "gtin:6937479644586",
@@ -1582,7 +1480,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.133Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.598Z"
       },
       "gtin": "4047976629428",
       "id": "gtin:4047976629428",
@@ -1617,7 +1515,7 @@
         "placement": "outdoor",
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.244Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.606Z"
       },
       "gtin": "6976930221430",
       "id": "gtin:6976930221430",
@@ -1649,7 +1547,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.982Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.362Z"
       },
       "gtin": "194644107420",
       "id": "gtin:194644107420",
@@ -1682,7 +1580,7 @@
         "name": "Imou PF1 4L - Futterautomat mit 360°-Kamera - Weiß",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.129Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.592Z"
       },
       "gtin": "6976391032576",
       "id": "gtin:6976391032576",
@@ -1719,7 +1617,7 @@
         "placement": "indoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.127Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.498Z"
       },
       "gtin": "6937479641790",
       "id": "gtin:6937479641790",
@@ -1751,7 +1649,7 @@
         "name": "TP-Link Tapo C225 - Schwenk & Neige AI Home Security Wlan Kamera 2er-Set",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.983Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.363Z"
       },
       "gtin": "4897098688090",
       "id": "gtin:4897098688090",
@@ -1786,7 +1684,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.601Z"
       },
       "gtin": "6978285034789",
       "id": "gtin:6978285034789",
@@ -1821,7 +1719,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.244Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.606Z"
       },
       "gtin": "1210002602747",
       "id": "gtin:1210002602747",
@@ -1855,7 +1753,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.602Z"
       },
       "gtin": "6976930229962",
       "id": "gtin:6976930229962",
@@ -1889,7 +1787,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.127Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.499Z"
       },
       "gtin": "6971927238194",
       "id": "gtin:6971927238194",
@@ -1921,7 +1819,7 @@
         "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.132Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.595Z"
       },
       "gtin": "6937479642957",
       "id": "gtin:6937479642957",
@@ -1955,7 +1853,7 @@
         "name": "TP-Link Tapo C212 WLAN-Sicherheitskamera - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.000Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.381Z"
       },
       "gtin": "4895252503647",
       "id": "gtin:4895252503647",
@@ -1989,7 +1887,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.001Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.477Z"
       },
       "gtin": "840268952372",
       "id": "gtin:840268952372",
@@ -2024,7 +1922,7 @@
         "placement": "indoor",
         "resolution": "hd",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.996Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.377Z"
       },
       "gtin": "5052847126080",
       "id": "gtin:5052847126080",
@@ -2059,7 +1957,7 @@
         "power": "poe",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.115Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.488Z"
       },
       "gtin": "6941545632261",
       "id": "gtin:6941545632261",
@@ -2093,7 +1991,7 @@
         "placement": "indoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.131Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.594Z"
       },
       "gtin": "6937479645354",
       "id": "gtin:6937479645354",
@@ -2126,7 +2024,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.124Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.496Z"
       },
       "gtin": "6937479640380",
       "id": "gtin:6937479640380",
@@ -2160,7 +2058,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.239Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.602Z"
       },
       "gtin": "6978285030293",
       "id": "gtin:6978285030293",
@@ -2194,7 +2092,7 @@
         "placement": "indoor",
         "resolution": "3k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:35.126Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.497Z"
       },
       "gtin": "6971927237555",
       "id": "gtin:6971927237555",
@@ -2227,7 +2125,7 @@
         "name": "TP-Link Tapo C100 Indoor Sicherheits-WLAN-Kamera 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-07T15:44:34.865Z"
+        "sourceUpdatedAt": "2026-09-07T15:51:11.253Z"
       },
       "gtin": "6935364053222",
       "id": "gtin:6935364053222",
