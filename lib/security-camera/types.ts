@@ -49,6 +49,7 @@ export const SecurityCameraCatalogSchema = z.object({
 export const SecurityCameraOverrideSchema = SecurityCameraProductSchema.partial().extend({
   id: z.string().min(1),
   reviewNote: z.string().min(1).optional(),
+  includedMerchantProductIds: z.array(z.string().min(1)).min(1).optional(),
 });
 
 export type SecurityCameraInput = z.infer<typeof SecurityCameraInputSchema>;

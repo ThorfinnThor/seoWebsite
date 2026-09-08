@@ -47,6 +47,7 @@
     },
     {
       "id": "gtin:3700730505857",
+      "name": "Netatmo Indoor Camera Advance 2er Set",
       "placement": "indoor",
       "connection": "wifi",
       "power": "mains",
@@ -54,12 +55,14 @@
       "cameraCount": 2,
       "panTilt": false,
       "integratedLight": false,
+      "includedMerchantProductIds": ["20663"],
       "reviewed": true,
       "dataQuality": "curated",
       "reviewNote": "Tink product page checked on 2026-09-08. Netatmo Indoor Camera Advance set with two indoor cameras, 2K resolution, WLAN and mains adapters."
     },
     {
       "id": "gtin:3700730507516",
+      "name": "Netatmo Außenkamera Original 2K WLAN Schwarz",
       "placement": "outdoor",
       "connection": "wifi",
       "power": "mains",
@@ -67,6 +70,7 @@
       "cameraCount": 1,
       "panTilt": false,
       "integratedLight": true,
+      "includedMerchantProductIds": ["25548"],
       "reviewed": true,
       "dataQuality": "curated",
       "reviewNote": "Tink product page checked on 2026-09-08. Netatmo Outdoor Camera Original with 2K HDR, WLAN, fixed wiring and an integrated 1000 lumen floodlight."
@@ -86,6 +90,7 @@
     },
     {
       "id": "gtin:194644177768",
+      "name": "eufy S330 4G LTE Außenkamera Weiß",
       "placement": "outdoor",
       "connection": "cellular",
       "power": "solar",
@@ -93,6 +98,7 @@
       "cameraCount": 1,
       "panTilt": true,
       "integratedLight": true,
+      "includedMerchantProductIds": ["18666"],
       "reviewed": true,
       "dataQuality": "curated",
       "reviewNote": "Tink product page checked on 2026-09-08. eufy S330 outdoor camera with 4G LTE and WLAN, 4K resolution, solar charging, pan and tilt and integrated light. Cellular is stored as its primary differentiator."
@@ -112,6 +118,7 @@
     },
     {
       "id": "gtin:4897098685860",
+      "name": "TP Link Tapo C500 Außenkamera 2er Set",
       "placement": "outdoor",
       "connection": "wifi",
       "power": "mains",
@@ -119,12 +126,14 @@
       "cameraCount": 2,
       "panTilt": true,
       "integratedLight": true,
+      "includedMerchantProductIds": ["15972"],
       "reviewed": true,
       "dataQuality": "curated",
       "reviewNote": "Tink product page and official TP Link specifications checked on 2026-09-08. Tapo C500 set with two outdoor WLAN cameras, 1080p, mains adapters, pan and tilt and a light alarm."
     },
     {
       "id": "gtin:4895252500899",
+      "name": "TP Link Tapo C425 kabellose Sicherheitskamera",
       "placement": "outdoor",
       "connection": "wifi",
       "power": "battery",
@@ -132,6 +141,7 @@
       "cameraCount": 1,
       "panTilt": false,
       "integratedLight": true,
+      "includedMerchantProductIds": ["18271"],
       "reviewed": true,
       "dataQuality": "curated",
       "reviewNote": "Tink product page checked on 2026-09-08. TP Link Tapo C425 with IP66 outdoor suitability, WLAN, built in battery, 2K QHD resolution and light and sound alarm."

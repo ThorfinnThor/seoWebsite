@@ -81,8 +81,13 @@ function applyRobotMowerOverride(product: RobotMowerProduct, override?: RobotMow
   return override ? RobotMowerProductSchema.parse({ ...product, ...publicOverride(override), id: product.id }) : product;
 }
 
+function securityCameraPublicOverride(override: SecurityCameraOverride) {
+  const { includedMerchantProductIds: _includedMerchantProductIds, ...productOverride } = override;
+  return publicOverride(productOverride);
+}
+
 function applySecurityCameraOverride(product: SecurityCameraProduct, override?: SecurityCameraOverride): SecurityCameraProduct {
-  return override ? SecurityCameraProductSchema.parse({ ...product, ...publicOverride(override), id: product.id }) : product;
+  return override ? SecurityCameraProductSchema.parse({ ...product, ...securityCameraPublicOverride(override), id: product.id }) : product;
 }
 
 function applyFlooringOverride(product: FlooringProduct, override?: FlooringOverride): FlooringProduct {
@@ -244,13 +249,14 @@ export function assembleSecurityCameraCatalog(candidates: SecurityCameraCandidat
     const completedProduct = candidate.product
       ? applySecurityCameraOverride(candidate.product, override)
       : override
-        ? SecurityCameraProductSchema.safeParse({ ...candidate.candidateAttributes, ...publicOverride(override), id: candidate.id }).data
+        ? SecurityCameraProductSchema.safeParse({ ...candidate.candidateAttributes, ...securityCameraPublicOverride(override), id: candidate.id }).data
         : undefined;
     if (!completedProduct) continue;
     const product = autoReviewCompleteFeedProduct(completedProduct, candidate, Boolean(override));
     const existing = productMap.get(product.id);
     if (!existing || product.sourceUpdatedAt && (!existing.sourceUpdatedAt || product.sourceUpdatedAt > existing.sourceUpdatedAt)) productMap.set(product.id, product);
-    if (candidate.offer) offerMap.set(candidate.offer.id, candidate.offer);
+    const includedOfferIds = override?.includedMerchantProductIds;
+    if (candidate.offer && (!includedOfferIds || includedOfferIds.includes(candidate.offer.merchantProductId))) offerMap.set(candidate.offer.id, candidate.offer);
   }
   const reviewedIds = new Set([...productMap.values()].filter((product) => product.reviewed && product.dataQuality !== "feed").map((product) => product.id));
   return SecurityCameraCatalogSchema.parse({ schemaVersion: 1, vertical: "security-camera", generatedAt, products: [...productMap.values()].filter((product) => reviewedIds.has(product.id)).sort((a, b) => a.id.localeCompare(b.id)), offers: [...offerMap.values()].filter((offer) => reviewedIds.has(offer.productId)).sort((a, b) => a.id.localeCompare(b.id)) });

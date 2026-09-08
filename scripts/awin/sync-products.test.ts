@@ -25,6 +25,13 @@ describe("feed pipeline assembly", () => {
     expect(catalog.products[0]).toMatchObject({ placement: "indoor", connection: "wifi", power: "mains", resolution: "2k" });
     expect(catalog.offers).toHaveLength(1);
   });
+  it("limits a curated camera product to the verified merchant variation", () => {
+    const base = { product_name: "eufy Indoor Cam C220 2K Innenkamera", merchant_id: "99", merchant_name: "tink", search_price: "79.99", currency: "EUR", in_stock: "true", aw_deep_link: "https://www.awin1.com/cread.php?x=1", ean: "194644176136" };
+    const candidates = [normalizeSecurityCamera({ ...base, merchant_product_id: "single" }), normalizeSecurityCamera({ ...base, product_name: "eufy Indoor Cam C220 2K Innenkamera 2er Set", merchant_product_id: "bundle" })];
+    const catalog = assembleSecurityCameraCatalog(candidates, [{ id: candidates[0].id, connection: "wifi", power: "mains", reviewed: true, dataQuality: "curated", includedMerchantProductIds: ["single"], reviewNote: "Verified single camera variation." }], "2026-08-09T00:00:00.000Z");
+    expect(catalog.offers).toHaveLength(1);
+    expect(catalog.offers[0].merchantProductId).toBe("single");
+  });
   it("ignores volatile timestamps when detecting no-change output", () => expect(substantiveEqual({ generatedAt: "a", products: [{ id: "1", updatedAt: "a" }] }, { generatedAt: "b", products: [{ id: "1", updatedAt: "b" }] })).toBe(true));
   it("keeps direct grouped configurations scoped to their requested verticals", () => {
     const jobs = parseFeedJobs(JSON.stringify({ "garden-house": [], dehumidifier: [], irrigation: [], "robot-mower": [], flooring: ["https://example.com/woodstore.csv"] }));
