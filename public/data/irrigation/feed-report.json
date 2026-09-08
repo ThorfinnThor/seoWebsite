@@ -1,12 +1,12 @@
 {
-  "candidateRows": 562,
-  "candidateToProductRate": 56.9,
+  "candidateRows": 564,
+  "candidateToProductRate": 56.7,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-08T07:17:16.555Z",
+  "generatedAt": "2026-09-08T11:39:02.898Z",
   "issues": {
-    "incomplete-product-data": 242,
-    "missing-product-kind": 242,
-    "unconfirmed-system-compatibility": 462
+    "incomplete-product-data": 244,
+    "missing-product-kind": 244,
+    "unconfirmed-system-compatibility": 464
   },
   "linkVerification": {
     "verified": 85
@@ -26,8 +26,8 @@
   "publishedProducts": 85,
   "quarantinedProducts": 0,
   "reviewedProducts": 85,
-  "reviewQueue": 477,
-  "rows": 174681,
+  "reviewQueue": 479,
+  "rows": 175641,
   "schemaVersion": 1,
   "sourceFeeds": 10,
   "successfulFeeds": 10

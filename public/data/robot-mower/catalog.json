@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T07:17:16.555Z",
+  "generatedAt": "2026-09-08T11:39:02.898Z",
   "offers": [
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44903221654&a=3037577&m=11830",
@@ -9,14 +9,14 @@
       "id": "offer:11830:gfm008ca31ae",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0a/9b/0f/1775542504/4053423706543_90242946_1920x980.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GFM008ca31ae",
       "merchantUrl": "https://www.globus-baumarkt.de/p/bosch-maehroboter-visimow-18v-100-16-cm-schnittbreite-0687060380/",
       "priceEur": 322,
       "productId": "gtin:4053423706543",
-      "updatedAt": "2026-09-08T07:16:10.491Z"
+      "updatedAt": "2026-09-08T11:38:49.019Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45668966749&a=3037577&m=11830",
@@ -26,14 +26,14 @@
       "id": "offer:11830:gfm342096ced",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/93/3f/4d/1772527572/4003718067392_90242075_1920x980.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GFM342096ced",
       "merchantUrl": "https://www.globus-baumarkt.de/p/al-ko-maehroboter-robolinho-1000-vision-21-cm-schnittbreite-1000-m2-18-36-v-0687060368/",
       "priceEur": 799.89,
       "productId": "gtin:4003718067392",
-      "updatedAt": "2026-09-08T07:16:10.254Z"
+      "updatedAt": "2026-09-08T11:38:48.779Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44030186876&a=3037577&m=11830",
@@ -43,14 +43,14 @@
       "id": "offer:11830:gfm4e647dc59",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/3a/02/91/1773068459/8008984872813_90244107_1280x1280.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GFM4e647dc59",
       "merchantUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-a-6v-kamera-rtk-0687060371/",
       "priceEur": 999,
       "productId": "gtin:8008984872813",
-      "updatedAt": "2026-09-08T07:16:10.017Z"
+      "updatedAt": "2026-09-08T11:38:48.533Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45668966748&a=3037577&m=11830",
@@ -60,14 +60,14 @@
       "id": "offer:11830:gfme4a5f3f92",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/36/27/10/1772527551/4003718067385_90242074_1280x1280.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GFMe4a5f3f92",
       "merchantUrl": "https://www.globus-baumarkt.de/p/al-ko-maehroboter-robolinho-500-vision-20-cm-schnittbreite-500-m2-18-36-v-0687060367/",
       "priceEur": 599.89,
       "productId": "gtin:4003718067385",
-      "updatedAt": "2026-09-08T07:16:10.254Z"
+      "updatedAt": "2026-09-08T11:38:48.779Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44729188382&a=3037577&m=11830",
@@ -77,14 +77,14 @@
       "id": "offer:11830:glo687060200",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/94/e7/40/1678723450/08008984855465_90006517_1280x1280.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO687060200",
       "merchantUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-g-600-25-2-v-18-cm-schnittbreite-0687060200/",
       "priceEur": 999,
       "productId": "gtin:8008984855465",
-      "updatedAt": "2026-09-08T07:16:05.073Z"
+      "updatedAt": "2026-09-08T11:38:43.235Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44729188381&a=3037577&m=11830",
@@ -94,14 +94,14 @@
       "id": "offer:11830:glo687060201",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a2/ac/a5/1678723503/08008984855472_90006521_1280x1280.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO687060201",
       "merchantUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-g-1200-25-2-v-18-cm-schnittbreite-0687060201/",
       "priceEur": 1199,
       "productId": "gtin:8008984855472",
-      "updatedAt": "2026-09-08T07:16:05.073Z"
+      "updatedAt": "2026-09-08T11:38:43.235Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=37375485011&a=3037577&m=11830",
@@ -111,14 +111,14 @@
       "id": "offer:11830:glo687060224",
       "imageUrl": "https://www.globus-baumarkt.de/thumbnail/99/00/43/1710145841/8008984852433_4415653_1280x1280.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "11830",
       "merchantName": "Globus Baumarkt DE",
       "merchantProductId": "GLO687060224",
       "merchantUrl": "https://www.globus-baumarkt.de/detail/b25160d82fdb438cb8942128733795ad",
       "priceEur": 679,
       "productId": "gtin:8008984852433",
-      "updatedAt": "2026-09-08T07:16:06.485Z"
+      "updatedAt": "2026-09-08T11:38:44.805Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45738908571&a=3037577&m=13686",
@@ -126,16 +126,16 @@
       "deliveryCostEur": 0,
       "deliveryCostStatus": "free",
       "id": "offer:13686:24421",
-      "imageUrl": "https://www.tink.de/cdn/126936/media/catalog/product/s/t/stiga-a-6v---autonomer-ma_hroboter-mit-rtk-fu_r-bis-zu-600-m_-0-1769525863968_1.jpg",
+      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/s/t/stiga-a-6v---autonomer-ma_hroboter-mit-rtk-fu_r-bis-zu-600-m_-0-1769525863968_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "24421",
       "merchantUrl": "https://www.tink.de/p/stiga-a-6v-autonomer-maehroboter-mit-rtk-fuer-bis-zu-600-m?opt_92=58",
       "priceEur": 899,
       "productId": "gtin:8008984872813",
-      "updatedAt": "2026-09-08T07:16:35.915Z"
+      "updatedAt": "2026-09-08T11:38:50.115Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44093968425&a=3037577&m=13686",
@@ -145,14 +145,14 @@
       "id": "offer:13686:24609",
       "imageUrl": "https://www.tink.de/cdn/406753/media/catalog/product/4/0/405ve_titelbild_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "24609",
       "merchantUrl": "https://www.tink.de/p/husqvarna-automower-410ve-nera-kabelloser-maehroboter-fuer-bis-zu-1-500-m-garage",
       "priceEur": 2499.95,
       "productId": "gtin:7333377756892",
-      "updatedAt": "2026-09-08T07:16:35.917Z"
+      "updatedAt": "2026-09-08T11:38:50.116Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=44271312114&a=3037577&m=13686",
@@ -160,16 +160,33 @@
       "deliveryCostEur": 0,
       "deliveryCostStatus": "free",
       "id": "offer:13686:24651",
-      "imageUrl": "https://www.tink.de/cdn/126936/media/catalog/product/s/t/stiga-a-6v_garage_titelbild_1.jpg",
+      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/s/t/stiga-a-6v_garage_titelbild_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "24651",
       "merchantUrl": "https://www.tink.de/p/stiga-rasenroboter-a-6v-autonomer-maehroboter-mit-rtk-fuer-bis-zu-600-m-garage",
       "priceEur": 899,
       "productId": "gtin:8008984872813",
-      "updatedAt": "2026-09-08T07:16:35.918Z"
+      "updatedAt": "2026-09-08T11:38:50.118Z"
+    },
+    {
+      "affiliateUrl": "https://www.awin1.com/pclick.php?p=45454430417&a=3037577&m=13686",
+      "available": true,
+      "deliveryCostEur": 0,
+      "deliveryCostStatus": "free",
+      "id": "offer:13686:25427",
+      "imageUrl": "https://www.tink.de/cdn/139312/media/catalog/product/j/f/jfvhv_dfaafmnd_1.jpg",
+      "linkVerificationStatus": "verified",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
+      "merchantId": "13686",
+      "merchantName": "tink DE",
+      "merchantProductId": "25427",
+      "merchantUrl": "https://www.tink.de/p/eufy-maehroboter-c15-standard-kabellos-bis-500-m-garage?opt_92=3",
+      "priceEur": 999,
+      "productId": "gtin:194644319335",
+      "updatedAt": "2026-09-08T11:38:50.177Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45476449664&a=3037577&m=13686",
@@ -179,14 +196,14 @@
       "id": "offer:13686:25469",
       "imageUrl": "https://www.tink.de/cdn/274450/media/catalog/product/h/w/hw-852301_2__3_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "25469",
       "merchantUrl": "https://www.tink.de/p/husqvarna-automower-410xe-nera-maehroboter-bw?opt_92=3",
       "priceEur": 1799.95,
       "productId": "gtin:7333377093133",
-      "updatedAt": "2026-09-08T07:16:35.925Z"
+      "updatedAt": "2026-09-08T11:38:50.178Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=45476449665&a=3037577&m=13686",
@@ -196,14 +213,14 @@
       "id": "offer:13686:25475",
       "imageUrl": "https://www.tink.de/cdn/681378/media/catalog/product/3/0/305_schr_gvorne_4_1.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "13686",
       "merchantName": "tink DE",
       "merchantProductId": "25475",
       "merchantUrl": "https://www.tink.de/p/husqvarna-automower-305e-nera-bw?opt_92=5",
       "priceEur": 999.95,
       "productId": "gtin:7333377093980",
-      "updatedAt": "2026-09-08T07:16:35.925Z"
+      "updatedAt": "2026-09-08T11:38:50.178Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=40339894290&a=3037577&m=30763",
@@ -213,14 +230,14 @@
       "id": "offer:30763:6970135034789",
       "imageUrl": "https://site-static.ecovacs.com/upload/de/image/product/2025/09/10/060731_4268$id-goat-o800-ptk-920x920.png",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "30763",
       "merchantName": "Ecovacs DE",
       "merchantProductId": "6970135034789",
       "merchantUrl": "https://www.ecovacs.com/de/shop/goat-robotic-lawn-mower/goat-o800-rtk",
       "priceEur": 649,
       "productId": "gtin:6970135034789",
-      "updatedAt": "2026-09-08T07:17:15.038Z"
+      "updatedAt": "2026-09-08T11:39:01.071Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=43951870927&a=3037577&m=30763",
@@ -230,14 +247,14 @@
       "id": "offer:30763:6970135038176",
       "imageUrl": "https://site-static.ecovacs.com/upload/de/image/product/2026/02/10/064700_3533$de-goat-a1600-920x920.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "30763",
       "merchantName": "Ecovacs DE",
       "merchantProductId": "6970135038176",
       "merchantUrl": "https://www.ecovacs.com/de/shop/goat-robotic-lawn-mower/goat-a1600-lidar-pro",
       "priceEur": 1099,
       "productId": "gtin:6970135038176",
-      "updatedAt": "2026-09-08T07:17:15.039Z"
+      "updatedAt": "2026-09-08T11:39:01.072Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/pclick.php?p=43951870928&a=3037577&m=30763",
@@ -247,14 +264,14 @@
       "id": "offer:30763:6970135038183",
       "imageUrl": "https://site-static.ecovacs.com/upload/de/image/product/2026/02/10/063849_7347$de-goat-a3000-920x920.jpg",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "30763",
       "merchantName": "Ecovacs DE",
       "merchantProductId": "6970135038183",
       "merchantUrl": "https://www.ecovacs.com/de/shop/goat-robotic-lawn-mower/goat-a3000-lidar-pro",
       "priceEur": 2299,
       "productId": "gtin:6970135038183",
-      "updatedAt": "2026-09-08T07:17:15.039Z"
+      "updatedAt": "2026-09-08T11:39:01.072Z"
     },
     {
       "affiliateUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fn8-robot-lawn-mower%3Fvariant%3D51475662700857",
@@ -262,16 +279,31 @@
       "deliveryCostStatus": "unknown",
       "id": "offer:anthbot:b97b47797681",
       "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-08T07:17:17.545Z",
+      "linkVerifiedAt": "2026-09-08T11:39:03.828Z",
       "merchantId": "anthbot",
       "merchantName": "ANTHBOT DE",
       "merchantProductId": "b97b47797681",
       "priceEur": 1599,
       "productId": "mpn:anthbot-de:105010095",
-      "updatedAt": "2026-09-08T07:15:21.686Z"
+      "updatedAt": "2026-09-08T11:38:34.017Z"
     }
   ],
   "products": [
+    {
+      "brand": "eufy",
+      "dataQuality": "curated",
+      "gtin": "194644319335",
+      "id": "gtin:194644319335",
+      "maxCutHeightCm": 6,
+      "maxSlopePercent": 32,
+      "minCutHeightCm": 2,
+      "name": "eufy Mähroboter C15 mit Garage",
+      "navigation": "camera",
+      "obstacleDetection": true,
+      "ratedAreaM2": 500,
+      "reviewed": true,
+      "sourceUpdatedAt": "2026-09-08T11:38:50.177Z"
+    },
     {
       "brand": "Al-Ko",
       "dataQuality": "mixed",
@@ -284,7 +316,7 @@
       "navigation": "camera",
       "ratedAreaM2": 500,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:10.254Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:48.779Z",
       "waterProtection": "IPX4"
     },
     {
@@ -299,7 +331,7 @@
       "navigation": "camera",
       "ratedAreaM2": 1000,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:10.254Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:48.779Z",
       "waterProtection": "IPX4"
     },
     {
@@ -317,7 +349,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 100,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:10.491Z"
+      "sourceUpdatedAt": "2026-09-08T11:38:49.019Z"
     },
     {
       "brand": "Ecovacs",
@@ -333,7 +365,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 800,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:17:15.038Z",
+      "sourceUpdatedAt": "2026-09-08T11:39:01.071Z",
       "waterProtection": "IPX6"
     },
     {
@@ -349,7 +381,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1600,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:17:15.039Z",
+      "sourceUpdatedAt": "2026-09-08T11:39:01.072Z",
       "waterProtection": "IPX6"
     },
     {
@@ -365,7 +397,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 3000,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:17:15.039Z",
+      "sourceUpdatedAt": "2026-09-08T11:39:01.072Z",
       "waterProtection": "IPX6"
     },
     {
@@ -382,7 +414,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1000,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:35.925Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:50.178Z",
       "waterProtection": "IPX5"
     },
     {
@@ -398,7 +430,7 @@
       "navigation": "wire",
       "ratedAreaM2": 600,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:35.925Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:50.178Z",
       "waterProtection": "IPX5"
     },
     {
@@ -414,7 +446,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1500,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:35.917Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:50.116Z",
       "waterProtection": "IPX5"
     },
     {
@@ -431,7 +463,7 @@
       "navigation": "wire",
       "ratedAreaM2": 300,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:06.485Z"
+      "sourceUpdatedAt": "2026-09-08T11:38:44.805Z"
     },
     {
       "brand": "STIGA",
@@ -447,7 +479,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 600,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:05.073Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:43.235Z",
       "waterProtection": "IPX5"
     },
     {
@@ -464,7 +496,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1200,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:05.073Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:43.235Z",
       "waterProtection": "IPX5"
     },
     {
@@ -480,7 +512,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 600,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:16:35.918Z"
+      "sourceUpdatedAt": "2026-09-08T11:38:50.118Z"
     },
     {
       "brand": "ANTHBOT",
@@ -495,7 +527,7 @@
       "obstacleDetection": true,
       "ratedAreaM2": 1500,
       "reviewed": true,
-      "sourceUpdatedAt": "2026-09-08T07:15:21.686Z",
+      "sourceUpdatedAt": "2026-09-08T11:38:34.017Z",
       "waterProtection": "IPX6"
     }
   ],
