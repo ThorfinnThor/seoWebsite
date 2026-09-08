@@ -132,8 +132,7 @@ export function recommendGardenHouses(catalog: GardenHouseCatalog, input: Garden
         reasons: buildReasons(product, offer, input, check.rotated),
       }];
     })
-    .sort((a, b) => b.score - a.score || a.product.id.localeCompare(b.product.id))
-    .slice(0, 3);
+    .sort((a, b) => b.score - a.score || a.product.id.localeCompare(b.product.id));
 }
 
 export function explainNoMatches(catalog: GardenHouseCatalog, input: GardenHouseInput): NoMatchExplanation[] {

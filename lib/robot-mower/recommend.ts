@@ -16,5 +16,5 @@ export function recommendRobotMowers(catalog: RobotMowerCatalog, input: RobotMow
     else if (input.boundarySystem === "wireless" && ["rtk", "lidar", "camera", "hybrid"].includes(product.navigation)) { reasons.push({ code: "navigation", label: "Kabellose Navigation möglich – Empfang vor Ort prüfen", strength: "positive" }); score += 2; }
     else if (input.boundarySystem === "undecided") reasons.push({ code: "navigation", label: "Navigationsprinzip im Projektvergleich prüfen", strength: "warning" });
     return [{ product, offer, score, reasons }];
-  }).sort((a, b) => b.score - a.score || a.offer.priceEur - b.offer.priceEur).slice(0, 8);
+  }).sort((a, b) => b.score - a.score || a.offer.priceEur - b.offer.priceEur);
 }

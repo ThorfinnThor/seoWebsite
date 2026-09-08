@@ -35,7 +35,7 @@ export function recommendSecurityCameras(catalog: SecurityCameraCatalog, input: 
     if (product.integratedLight) reasons.push({ code: "light", label: "Licht ist integriert", strength: "positive" });
     const score = resolutionRank[product.resolution] * 2 + product.cameraCount + (product.panTilt ? 1 : 0) + (product.integratedLight ? 1 : 0);
     return [{ product, offer, score, requiredSets, estimatedTotalEur, reasons }];
-  }).sort((left, right) => left.estimatedTotalEur - right.estimatedTotalEur || right.score - left.score).slice(0, 10);
+  }).sort((left, right) => left.estimatedTotalEur - right.estimatedTotalEur || right.score - left.score);
 }
 
 function connectionLabel(connection: "wifi" | "poe" | "cellular") {

@@ -7,6 +7,7 @@ import { usePlannerStepTransition } from "@/components/calculator/usePlannerStep
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { ResultSummary } from "@/components/calculator/ResultSummary";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ExpandableProductList } from "@/components/product/ExpandableProductList";
 import { ProductCard } from "@/components/product/ProductCard";
 import { loadGardenHouseCatalog } from "@/lib/catalog/load-client-catalog";
 import { calculateRequirements } from "@/lib/garden-house/rules";
@@ -152,7 +153,7 @@ export function GardenHousePlanner() {
           {status === "error" && <div className="result-state result-state--error"><h3>Produktdaten konnten gerade nicht geladen werden.</h3><p>Deine Eingaben bleiben erhalten. Bitte versuche es später erneut.</p><button className="button button--secondary" onClick={showResults}>Erneut versuchen</button></div>}
           {status === "ready" && requirements?.hasSufficientArea && catalog?.products.length === 0 && <div className="result-state"><span className="result-symbol" aria-hidden="true">◇</span><h3>Der geprüfte Produktkatalog wird gerade aufgebaut.</h3><p>Dein Planungsrahmen ist fertig. Produkte erscheinen hier erst, nachdem ihre Maße und Eigenschaften anhand realer Händlerdaten manuell geprüft wurden.</p><p className="state-note">Wir zeigen bewusst keine erfundenen oder ungeprüften Empfehlungen.</p></div>}
           {requirements?.hasSufficientArea && status === "ready" && catalog && catalog.products.length > 0 && results.length === 0 && <div className="result-state"><span className="result-symbol" aria-hidden="true">0</span><h3>Kein geprüftes Modell erfüllt alle Kriterien.</h3><p>Wir lockern keine Anforderungen im Hintergrund. Diese Änderungen könnten helfen:</p><ul className="suggestion-list">{explanations.map((item) => <li key={item.code}><strong>{item.label}</strong><span>{item.suggestion}</span></li>)}</ul><button className="button button--secondary" onClick={() => setStep(3)}>Präferenzen bearbeiten</button></div>}
-          {requirements?.hasSufficientArea && results.length > 0 && <><div className="result-heading"><div><p className="eyebrow">Bis zu drei geprüfte Treffer</p><h3>Diese Modelle erfüllen deine harten Kriterien.</h3></div><span>{results.length} {results.length === 1 ? "Treffer" : "Treffer"}</span></div><AffiliateDisclosure /><div className="product-list">{results.map((match, index) => <ProductCard key={match.product.id} match={match} position={index + 1} />)}</div></>}
+          {requirements?.hasSufficientArea && results.length > 0 && <><div className="result-heading"><div><p className="eyebrow">Geprüfte Produktauswahl</p><h3>Diese Modelle erfüllen deine harten Kriterien.</h3></div><span>{results.length} Treffer</span></div><AffiliateDisclosure /><ExpandableProductList items={results} renderItem={(match, index) => <ProductCard key={match.product.id} match={match} position={index + 1} />} /></>}
           <PrintResultAction />
         </div>}
         <div className="calculator-actions">

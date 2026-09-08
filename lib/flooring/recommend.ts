@@ -23,5 +23,5 @@ export function recommendFlooring(catalog: FlooringCatalog, input: FlooringInput
     if (product.packageCoverageM2) { reasons.push({ code: "coverage", label: `${product.packageCoverageM2.toLocaleString("de-DE")} m² je Paket`, strength: "positive" }); score += 1; }
     else reasons.push({ code: "coverage", label: "Paketinhalt redaktionell noch zu bestätigen", strength: "warning" });
     return [{ product, offer, score, reasons }];
-  }).sort((a, b) => b.score - a.score || a.offer.priceEur - b.offer.priceEur).slice(0, 8);
+  }).sort((a, b) => b.score - a.score || a.offer.priceEur - b.offer.priceEur);
 }

@@ -11,7 +11,7 @@ export function recommendProjectProducts({ catalog, requirements }: { catalog: P
     if (!offer) return [];
     const match = matchProduct(product, offer, requirements);
     return match ? [match] : [];
-  }).sort((a, b) => b.score - a.score || estimatedCost(a) - estimatedCost(b) || a.offer.priceEur - b.offer.priceEur).slice(0, 12);
+  }).sort((a, b) => b.score - a.score || estimatedCost(a) - estimatedCost(b) || a.offer.priceEur - b.offer.priceEur);
 }
 
 function bestAvailableOffers(offers: OfferBase[]): Map<string, OfferBase> {

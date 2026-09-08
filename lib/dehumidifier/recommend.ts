@@ -35,5 +35,5 @@ export function recommendDehumidifiers(catalog: DehumidifierCatalog, input: Dehu
     if (input.noisePriority === "high" && product.noiseDb !== undefined) reasons.push({ code: "noise", label: `Angegebener Geräuschpegel: ${product.noiseDb} dB.`, strength: product.noiseDb <= 42 ? "positive" : "warning" });
     if (budgetStatus(offer, input.budgetMaxEur) === "unknown") reasons.push({ code: "shipping", label: "Grundpreis im Budget; Versandkosten sind unbekannt.", strength: "warning" });
     return [{ product, offer, score: Math.round((capacityScore + tempScore + drainScore + laundryScore + noiseScore + priceScore + qualityScore) * 10) / 10, budgetStatus: budgetStatus(offer, input.budgetMaxEur) === "within" ? ("within" as const) : ("unknown" as const), reasons: reasons.slice(0, 4) }];
-  }).sort((a, b) => b.score - a.score || a.product.id.localeCompare(b.product.id)).slice(0, 3);
+  }).sort((a, b) => b.score - a.score || a.product.id.localeCompare(b.product.id));
 }

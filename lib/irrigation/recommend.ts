@@ -24,5 +24,5 @@ export function recommendIrrigation(catalog: IrrigationCatalog, input: Irrigatio
     if (product.systemId) { reasons.push({ code: "system", label: `System ${product.systemId}`, strength: "positive" }); score += 1; }
     if (offer.priceEur <= input.budgetMaxEur) { reasons.push({ code: "budget", label: "Innerhalb des eingegebenen Budgetrahmens", strength: "positive" }); score += 1; }
     return [{ product, offer, score: score + KIND_PRIORITY[product.kind] / 10, reasons }];
-  }).sort((a, b) => b.score - a.score || a.offer.priceEur - b.offer.priceEur).slice(0, 8);
+  }).sort((a, b) => b.score - a.score || a.offer.priceEur - b.offer.priceEur);
 }
