@@ -18,7 +18,7 @@ export type SitemapSegment = {
 const SITE_URL = SITE.url.replace(/\/$/, "");
 
 const CORE_PATHS = [
-  "", "/rechner", "/garten", "/ratgeber",
+  "", "/rechner", "/garten", "/ratgeber", "/ratgeber/sicherheitskameras",
   "/garten/gartenhaus-planer", "/garten/gartenhaus-groesse", "/garten/gartenhaus-fundament", "/garten/gartenhaus-kosten", "/garten/gartenhaus-fuer-fahrraeder", "/garten/gartenhaus-boden", "/garten/gartenhaus-zubehoer",
   "/garten/bewaesserungs-planer", "/garten/bewaesserung-durchfluss-messen", "/garten/tropfbewaesserung-hecke", "/garten/rasenbewaesserung-planen", "/garten/bewaesserungscomputer-zonen",
   "/garten/terrassen-dielen-rechner", "/garten/terrassendielen-verschnitt-fugen", "/garten/terrasse-unterkonstruktion", "/garten/terrasse-kosten",
@@ -64,6 +64,12 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
     label: "Redaktionelle Ratgeber",
     entries: [
       ...SEO_GUIDES.map((guide) => entry(`/ratgeber/${guide.slug}`, CONTENT_UPDATED_AT)),
+      ...[
+        "/ratgeber/sicherheitskameras/wlan-oder-poe",
+        "/ratgeber/sicherheitskameras/akku-solar-oder-netzstrom",
+        "/ratgeber/sicherheitskameras/wie-viele-kameras-einfamilienhaus",
+        "/ratgeber/sicherheitskameras/private-videoueberwachung-datenschutz",
+      ].map((path) => entry(path, "2026-09-08")),
       ...INDEXABLE_DECISION_GUIDES.map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, "2026-09-07")),
     ],
   },

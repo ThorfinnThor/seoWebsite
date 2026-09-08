@@ -9,6 +9,7 @@ interface PageMetadataInput {
   description: string;
   path: string;
   kind?: "website" | "article";
+  modifiedTime?: string;
   robots?: Metadata["robots"];
 }
 
@@ -23,6 +24,7 @@ export function createPageMetadata({
   description,
   path,
   kind = "website",
+  modifiedTime = CONTENT_UPDATED_AT,
   robots,
 }: PageMetadataInput): Metadata {
   const canonical = canonicalPath(path);
@@ -46,7 +48,7 @@ export function createPageMetadata({
       images: socialImages,
       ...(article
         ? {
-            modifiedTime: CONTENT_UPDATED_AT,
+            modifiedTime,
             authors: [absoluteUrl("/ueber-passendplanen/")],
           }
         : {}),
