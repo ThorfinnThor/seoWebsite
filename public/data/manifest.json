@@ -1,34 +1,34 @@
 {
-  "generatedAt": "2026-09-08T11:39:02.898Z",
+  "generatedAt": "2026-09-08T11:45:27.899Z",
   "schemaVersion": 1,
   "verticals": {
     "dehumidifier": {
       "catalog": "/data/dehumidifier/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     },
     "flooring": {
       "catalog": "/data/flooring/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     },
     "garden-house": {
       "catalog": "/data/garden-house/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     },
     "irrigation": {
       "catalog": "/data/irrigation/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     },
     "project-products": {
       "catalog": "/data/project-products/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     },
     "robot-mower": {
       "catalog": "/data/robot-mower/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     },
     "security-camera": {
       "catalog": "/data/security-camera/catalog.json",
-      "generatedAt": "2026-09-08T11:39:02.898Z"
+      "generatedAt": "2026-09-08T11:45:27.899Z"
     }
   }
 }
