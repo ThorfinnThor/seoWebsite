@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-08T11:45:27.899Z",
+  "generatedAt": "2026-09-09T07:24:07.990Z",
   "products": [
     {
       "brand": "TP-Link",
@@ -14,7 +14,7 @@
         "name": "TP-Link Tapo C200 Sicherheits-WLAN-Kamera mit Schwenk- und Neigefunktion - Weiß",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.609Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.414Z"
       },
       "gtin": "6935364088095",
       "id": "gtin:6935364088095",
@@ -51,11 +51,11 @@
         "power": "solar",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.810Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.476Z"
       },
       "gtin": "194644319335",
       "id": "gtin:194644319335",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/t/i/titel_5_43_23.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/t/i/titel_5_43_23.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection"
@@ -84,7 +84,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.747Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.459Z"
       },
       "gtin": "0194644239213",
       "id": "gtin:0194644239213",
@@ -117,7 +117,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.810Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.476Z"
       },
       "gtin": "6975253983339",
       "id": "gtin:6975253983339",
@@ -139,6 +139,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Reolink",
+      "candidateAttributes": {
+        "brand": "Reolink",
+        "cameraCount": 3,
+        "dataQuality": "feed",
+        "gtin": "6975253982189",
+        "id": "gtin:6975253982189",
+        "integratedLight": false,
+        "name": "Reolink TrackMix Series W760 - Dual Außenkamera mit Auto Zoom & Tracking - 3er Set",
+        "panTilt": false,
+        "placement": "outdoor",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-09T07:23:56.452Z"
+      },
+      "gtin": "6975253982189",
+      "id": "gtin:6975253982189",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/w/7/w760_004_3er-set.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/reolink-trackmix-series-w760-3er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 491.25,
+      "name": "Reolink TrackMix Series W760 - Dual Außenkamera mit Auto Zoom & Tracking - 3er Set",
+      "offerCount": 1,
+      "priority": 159,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Abus",
       "candidateAttributes": {
         "brand": "Abus",
@@ -152,7 +186,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.741Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.452Z"
       },
       "gtin": "4003318867781",
       "id": "gtin:4003318867781",
@@ -185,7 +219,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.674Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.429Z"
       },
       "gtin": "4003318981456",
       "id": "gtin:4003318981456",
@@ -219,7 +253,7 @@
         "name": "ABUS WLAN Licht Außen-Kamera - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.673Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.428Z"
       },
       "gtin": "4003318981449",
       "id": "gtin:4003318981449",
@@ -254,7 +288,7 @@
         "placement": "outdoor",
         "resolution": "hd",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.679Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.434Z"
       },
       "gtin": "5052847126103",
       "id": "gtin:5052847126103",
@@ -269,7 +303,7 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 127.9,
+      "minBasePriceEur": 127.89,
       "name": "Yale Smart Outdoor Camera - Smarte Full-HD Außenkamera - Weiß",
       "offerCount": 3,
       "priority": 143,
@@ -288,7 +322,7 @@
         "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.737Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.447Z"
       },
       "gtin": "6975833358113",
       "id": "gtin:6975833358113",
@@ -322,7 +356,7 @@
         "panTilt": false,
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.749Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.460Z"
       },
       "gtin": "06977118370407",
       "id": "gtin:06977118370407",
@@ -357,7 +391,7 @@
         "power": "solar",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.751Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.463Z"
       },
       "gtin": "193108149532",
       "id": "gtin:193108149532",
@@ -392,11 +426,11 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.686Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.441Z"
       },
       "gtin": "0194644293888",
       "id": "gtin:0194644293888",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel2_92.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/t/i/titel2_92.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection"
@@ -426,7 +460,7 @@
         "placement": "outdoor",
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.750Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.462Z"
       },
       "gtin": "6937479641769",
       "id": "gtin:6937479641769",
@@ -460,7 +494,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.808Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.474Z"
       },
       "gtin": "3700730507493",
       "id": "gtin:3700730507493",
@@ -492,7 +526,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.679Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.435Z"
       },
       "gtin": "4003318981463",
       "id": "gtin:4003318981463",
@@ -514,40 +548,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Ring",
-      "candidateAttributes": {
-        "brand": "Ring",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "840414644557",
-        "id": "gtin:840414644557",
-        "integratedLight": true,
-        "name": "Ring Floodlight Cam Pro (2. Gen.) - 4k-Außenkamera mit Flutlicht - Schwarz",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.753Z"
-      },
-      "gtin": "840414644557",
-      "id": "gtin:840414644557",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/3/6/360083_titel_schwarz.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-floodlight-cam-pro-2-gen-4k-aussenkamera-mit-flutlicht?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 243.35,
-      "name": "Ring Floodlight Cam Pro (2. Gen.) - 4k-Außenkamera mit Flutlicht - Schwarz",
-      "offerCount": 1,
-      "priority": 134,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Reolink",
       "candidateAttributes": {
         "brand": "Reolink",
@@ -561,7 +561,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.687Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.442Z"
       },
       "gtin": "6975253982172",
       "id": "gtin:6975253982172",
@@ -594,11 +594,11 @@
         "name": "Homematic IP Außenlichtkamera - 4MP, WLAN mit Schwenkfunktion - Weiß",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.806Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.472Z"
       },
       "gtin": "4047976629473",
       "id": "gtin:4047976629473",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/t/i/titel2_2_3.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/t/i/titel2_2_3.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-placement",
@@ -627,7 +627,7 @@
         "name": "TP-Link Tapo C720 - Smarte Flutlicht-Kamera - Weiß",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.687Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.441Z"
       },
       "gtin": "8885020625479",
       "id": "gtin:8885020625479",
@@ -661,7 +661,7 @@
         "name": "omajin Wireless Security Camera - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.685Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.440Z"
       },
       "gtin": "3700730532006",
       "id": "gtin:3700730532006",
@@ -696,7 +696,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.676Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.430Z"
       },
       "gtin": "4260195392427",
       "id": "gtin:4260195392427",
@@ -730,7 +730,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.669Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.423Z"
       },
       "gtin": "194644107277",
       "id": "gtin:194644107277",
@@ -765,11 +765,11 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.806Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.472Z"
       },
       "gtin": "4047976629411",
       "id": "gtin:4047976629411",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/i/n/innenkamerabasic_vorne.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/i/n/innenkamerabasic_vorne.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source",
@@ -798,7 +798,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.674Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.428Z"
       },
       "gtin": "4897098685426",
       "id": "gtin:4897098685426",
@@ -813,7 +813,7 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 77.5,
+      "minBasePriceEur": 79.9,
       "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
       "offerCount": 2,
       "priority": 128,
@@ -832,7 +832,7 @@
         "panTilt": false,
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.749Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.461Z"
       },
       "gtin": "06977118370414",
       "id": "gtin:06977118370414",
@@ -867,11 +867,11 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.806Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.472Z"
       },
       "gtin": "4047976629435",
       "id": "gtin:4047976629435",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/t/i/titel2_2_6.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/t/i/titel2_2_6.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source",
@@ -901,7 +901,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.616Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.421Z"
       },
       "gtin": "4003318912368",
       "id": "gtin:4003318912368",
@@ -934,7 +934,7 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.746Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.457Z"
       },
       "gtin": "8885021371429",
       "id": "gtin:8885021371429",
@@ -968,7 +968,7 @@
         "panTilt": true,
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.750Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.462Z"
       },
       "gtin": "193108151771",
       "id": "gtin:193108151771",
@@ -1003,7 +1003,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.685Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.440Z"
       },
       "gtin": "6976930224264",
       "id": "gtin:6976930224264",
@@ -1037,7 +1037,7 @@
         "panTilt": true,
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.752Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.463Z"
       },
       "gtin": "6971927238286",
       "id": "gtin:6971927238286",
@@ -1071,7 +1071,7 @@
         "power": "solar",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.751Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.462Z"
       },
       "gtin": "193108149617",
       "id": "gtin:193108149617",
@@ -1106,7 +1106,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.734Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.444Z"
       },
       "gtin": "4003318419157",
       "id": "gtin:4003318419157",
@@ -1140,7 +1140,7 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.803Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.470Z"
       },
       "gtin": "6937479644586",
       "id": "gtin:6937479644586",
@@ -1173,11 +1173,11 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.805Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.472Z"
       },
       "gtin": "4047976629428",
       "id": "gtin:4047976629428",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/i/n/innenkamera_vorne_hp1.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/i/n/innenkamera_vorne_hp1.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source",
@@ -1208,11 +1208,11 @@
         "placement": "outdoor",
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.814Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.482Z"
       },
       "gtin": "6976930221430",
       "id": "gtin:6976930221430",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/f/r/frontal_68.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/f/r/frontal_68.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-resolution"
@@ -1239,7 +1239,7 @@
         "name": "Imou PF1 4L - Futterautomat mit 360°-Kamera - Weiß",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.802Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.469Z"
       },
       "gtin": "6976391032576",
       "id": "gtin:6976391032576",
@@ -1275,11 +1275,11 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.810Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.476Z"
       },
       "gtin": "6978285034789",
       "id": "gtin:6978285034789",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/t/i/titel_5_57.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/t/i/titel_5_57.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source",
@@ -1310,11 +1310,11 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.814Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.482Z"
       },
       "gtin": "1210002602747",
       "id": "gtin:1210002602747",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/2/2/2210171.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/2/2/2210171.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source"
@@ -1344,7 +1344,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.810Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.477Z"
       },
       "gtin": "6976930229962",
       "id": "gtin:6976930229962",
@@ -1378,7 +1378,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.753Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.465Z"
       },
       "gtin": "6971927238194",
       "id": "gtin:6971927238194",
@@ -1398,40 +1398,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6937479642957",
-        "id": "gtin:6937479642957",
-        "integratedLight": false,
-        "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.804Z"
-      },
-      "gtin": "6937479642957",
-      "id": "gtin:6937479642957",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/tink_template_v3.1_2__2_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-vd1-5mp-wlan-tuerspion-kamera-mit-4-3-zoll-farbdisplay?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 69.99,
-      "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
-      "offerCount": 1,
-      "priority": 117,
-      "riskTier": "normal"
-    },
-    {
       "brand": "TP-Link",
       "candidateAttributes": {
         "brand": "TP-Link",
@@ -1446,11 +1412,11 @@
         "placement": "indoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.814Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.481Z"
       },
       "gtin": "1210002610780",
       "id": "gtin:1210002610780",
-      "imageUrl": "https://www.tink.de/cdn/606335/media/catalog/product/t/i/titelbild_56_3.jpg",
+      "imageUrl": "https://www.tink.de/cdn/529411/media/catalog/product/t/i/titelbild_56_3.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source"
@@ -1466,40 +1432,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4895252503647",
-        "id": "gtin:4895252503647",
-        "integratedLight": false,
-        "name": "TP-Link Tapo C212 WLAN-Sicherheitskamera - 2er-Set",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.681Z"
-      },
-      "gtin": "4895252503647",
-      "id": "gtin:4895252503647",
-      "imageUrl": "https://www.tink.de/cdn/967213/media/catalog/product/t/i/titel_2_53.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c212-wlan-sicherheitskamera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 62.95,
-      "name": "TP-Link Tapo C212 WLAN-Sicherheitskamera - 2er-Set",
-      "offerCount": 1,
-      "priority": 116,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Ring",
       "candidateAttributes": {
         "brand": "Ring",
@@ -1512,7 +1444,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.683Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.438Z"
       },
       "gtin": "840268952372",
       "id": "gtin:840268952372",
@@ -1547,7 +1479,7 @@
         "placement": "indoor",
         "resolution": "hd",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.679Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.434Z"
       },
       "gtin": "5052847126080",
       "id": "gtin:5052847126080",
@@ -1568,6 +1500,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "IMOU",
+      "candidateAttributes": {
+        "brand": "IMOU",
+        "cameraCount": 1,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "6937479642957",
+        "id": "gtin:6937479642957",
+        "integratedLight": false,
+        "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-09T07:23:56.470Z"
+      },
+      "gtin": "6937479642957",
+      "id": "gtin:6937479642957",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/tink_template_v3.1_2__2_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/imou-vd1-5mp-wlan-tuerspion-kamera-mit-4-3-zoll-farbdisplay?opt_92=5",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 59.99,
+      "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
+      "offerCount": 1,
+      "priority": 116,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Ezviz",
       "candidateAttributes": {
         "brand": "Ezviz",
@@ -1582,7 +1548,7 @@
         "power": "poe",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.742Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.452Z"
       },
       "gtin": "6941545632261",
       "id": "gtin:6941545632261",
@@ -1616,7 +1582,7 @@
         "placement": "indoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.803Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.470Z"
       },
       "gtin": "6937479645354",
       "id": "gtin:6937479645354",
@@ -1649,7 +1615,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.750Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.462Z"
       },
       "gtin": "6937479640380",
       "id": "gtin:6937479640380",
@@ -1683,7 +1649,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.810Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.477Z"
       },
       "gtin": "6978285030293",
       "id": "gtin:6978285030293",
@@ -1717,7 +1683,7 @@
         "placement": "indoor",
         "resolution": "3k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.752Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.464Z"
       },
       "gtin": "6971927237555",
       "id": "gtin:6971927237555",
@@ -1750,7 +1716,7 @@
         "name": "TP-Link Tapo C100 Indoor Sicherheits-WLAN-Kamera 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-08T11:45:16.612Z"
+        "sourceUpdatedAt": "2026-09-09T07:23:56.416Z"
       },
       "gtin": "6935364053222",
       "id": "gtin:6935364053222",
