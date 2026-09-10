@@ -1,12 +1,12 @@
 {
-  "candidateRows": 420,
+  "candidateRows": 421,
   "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-09T07:24:07.990Z",
+  "generatedAt": "2026-09-10T07:19:41.430Z",
   "issues": {
-    "missing-capacity": 363,
+    "missing-capacity": 364,
     "suspicious-price": 133,
-    "unconfirmed-drainage": 376
+    "unconfirmed-drainage": 377
   },
   "linkVerification": {
     "verified": 42
@@ -17,7 +17,7 @@
     "tink DE": 3,
     "Trotec DACH": 6
   },
-  "normalizedProducts": 420,
+  "normalizedProducts": 421,
   "offers": 42,
   "priceStatsEur": {
     "max": 529.99,
@@ -28,8 +28,8 @@
   "publishedProducts": 42,
   "quarantinedProducts": 133,
   "reviewedProducts": 42,
-  "reviewQueue": 378,
-  "rows": 175680,
+  "reviewQueue": 379,
+  "rows": 174917,
   "schemaVersion": 1,
   "sourceFeeds": 10,
   "successfulFeeds": 10
