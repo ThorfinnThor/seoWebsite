@@ -1,8 +1,8 @@
 {
-  "candidateRows": 3992,
+  "candidateRows": 3996,
   "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-10T07:19:41.430Z",
+  "generatedAt": "2026-09-11T07:17:43.514Z",
   "issues": {
     "incomplete-product-data": 1
   },
@@ -15,7 +15,7 @@
     "Globus Baumarkt DE": 161,
     "InterGard Heim und Garten DE": 95
   },
-  "normalizedProducts": 3991,
+  "normalizedProducts": 3995,
   "offers": 563,
   "priceStatsEur": {
     "max": 19998,
@@ -26,8 +26,8 @@
   "publishedProducts": 563,
   "quarantinedProducts": 0,
   "reviewedProducts": 563,
-  "reviewQueue": 3429,
-  "rows": 174917,
+  "reviewQueue": 3433,
+  "rows": 174997,
   "schemaVersion": 1,
   "sourceFeeds": 10,
   "successfulFeeds": 10
