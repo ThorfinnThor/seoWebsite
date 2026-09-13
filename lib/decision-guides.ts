@@ -2,6 +2,11 @@ import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
 import { applyEditorialDecisionGuide } from "@/lib/decision-guide-editorials";
 import { editorializeGuide, editorialVariant, scopedStatement } from "@/lib/editorial-style";
+import {
+  evaluateProgrammaticGuideIndexing,
+  type ProgrammaticIndexApproval,
+  type ProgrammaticIndexingGate,
+} from "@/lib/programmatic-indexing";
 import { getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 
 type Scores = readonly [number, number, number, number, number];
@@ -52,6 +57,8 @@ export type DecisionGuide = SeoGuide & {
   scoreB: number;
   qualitySignature: string;
   indexable?: boolean;
+  indexingApproval?: ProgrammaticIndexApproval;
+  indexingGate?: ProgrammaticIndexingGate;
 };
 
 export type DecisionGuideDirectory = {
@@ -779,10 +786,22 @@ export const DECISION_GUIDES: readonly DecisionGuide[] = BASE_DECISION_GUIDES.ma
         : `Dieselbe Paarung im abweichenden Einsatz „${candidate.contextLabel}“ gegenprüfen.`,
     }));
 
-  return editorializeGuide({
+  const finalGuide = editorializeGuide({
     ...editorialGuide,
     relatedLinks: [...(editorialGuide.relatedLinks ?? []), ...siblingLinks],
   });
+  const canonicalPath = `/ratgeber/vergleiche/${finalGuide.topicSlug}/${finalGuide.slug}/`;
+  const indexingGate = evaluateProgrammaticGuideIndexing(
+    finalGuide,
+    finalGuide.indexingApproval,
+    canonicalPath,
+  );
+
+  return {
+    ...finalGuide,
+    indexable: indexingGate.indexable,
+    indexingGate,
+  };
 });
 
 export const INDEXABLE_DECISION_GUIDES = DECISION_GUIDES.filter((guide) => guide.indexable);

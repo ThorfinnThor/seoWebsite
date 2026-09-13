@@ -76,7 +76,7 @@ export const SEO_GUIDE_DEPTH_WAVE2: Record<string, SeoGuideDepth> = {
       { question: "Kann LiDAR bei Regen mähen?", answer: "Die zulässigen Wetterbedingungen stehen in der Anleitung. Regen kann Sensorik, Traktion und Schnittbild beeinflussen, unabhängig davon, ob LiDAR grundsätzlich arbeitet. Prüfe Regensensor, Schutzart, Reinigung und die Frage, ob nasser Boden am Standort befahren werden sollte." },
     ],
     relatedLinks: [
-      { label: "Ohne Begrenzungskabel", href: "/ratgeber/maehroboter-ohne-begrenzungskabel/", description: "Alle Navigationsprinzipien gegenüberstellen." },
+      { label: "Kabel oder kabellose Navigation", href: "/garten/maehroboter-begrenzungskabel-kabellos/", description: "Alle Navigationsprinzipien gegenüberstellen." },
       { label: "Steigung und Engstellen", href: "/garten/maehroboter-steigung-engstellen/", description: "Schwierige Gartenbereiche vermessen." },
       { label: "Mähroboter-Rechner", href: "/garten/maehroboter-rechner/", description: "Navigation mit Fläche und Gelände verbinden." },
     ],

@@ -117,7 +117,7 @@ const GUIDE_DEPTH_EXISTING_INITIAL: Record<string, SeoGuideDepth> = {
       { question: "Kann ich später von Kabel auf kabellos wechseln?", answer: "Grundsätzlich kann ein anderes System installiert werden, doch Ladestation, Strom, Zonen und Grenzen müssen neu geplant werden. Ein vorhandenes Kabel kann je nach Garten im Boden verbleiben oder gezielt entfernt werden. Prüfe, ob gewünschte kabellose Modelle am Standort zuverlässig funktionieren." },
     ],
     relatedLinks: [
-      { label: "Mähroboter ohne Kabel", href: "/ratgeber/maehroboter-ohne-begrenzungskabel/", description: "RTK, Kamera und LiDAR genauer betrachten." },
+      { label: "Mähroboter sinnvoll vergleichen", href: "/ratgeber/maehroboter-vergleich-kaufkriterien/", description: "Fläche, Gelände, Navigation und Betrieb als gemeinsames Anforderungsprofil prüfen." },
       { label: "RTK oder LiDAR", href: "/ratgeber/maehroboter-rtk-oder-lidar/", description: "Kabellose Navigation direkt vergleichen." },
       { label: "Mähroboter-Rechner", href: "/garten/maehroboter-rechner/", description: "Standortanforderungen erfassen." },
     ],

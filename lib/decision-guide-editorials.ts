@@ -1,9 +1,10 @@
 import type { SeoGuide } from "@/lib/seo-guides";
+import type { ProgrammaticIndexApproval } from "@/lib/programmatic-indexing";
 
 type EditorialDecisionGuide = SeoGuide & {
   scoreA: number;
   scoreB: number;
-  indexable?: boolean;
+  indexingApproval?: ProgrammaticIndexApproval;
 };
 
 const FEATURED_MOWER_GUIDE = "maehroboter-begrenzungskabel-oder-rtk-500-qm";
@@ -20,7 +21,17 @@ export function applyEditorialDecisionGuide<T extends EditorialDecisionGuide>(gu
 
   return {
     ...guide,
-    indexable: true,
+    indexingApproval: {
+      reviewedAt: "2026-09-13",
+      canonicalPath: "/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-rtk-500-qm/",
+      primaryIntent: "Eine konkrete 500 Quadratmeter Rasenfläche zwischen Begrenzungskabel und RTK Navigation einordnen.",
+      distinctValue: "Die Seite verbindet die Flächengröße mit Empfang, Engstellen, getrennten Zonen, vollständigen Kosten und einer nachvollziehbaren Gewichtung beider Systeme.",
+      overlapReview: [
+        "/ratgeber/maehroboter-fuer-500-qm/",
+        "/garten/maehroboter-begrenzungskabel-kabellos/",
+        "/ratgeber/maehroboter-rtk-oder-lidar/",
+      ],
+    },
     title: "Mähroboter für 500 m² mit Kabel oder RTK",
     heading: "Mähroboter für 500 m² mit Kabel oder RTK",
     description: "Welche Navigation passt zu 500 m² Rasen. Begrenzungskabel und RTK nach Bäumen, Engstellen, Zonen, Aufwand und Folgekosten vergleichen.",

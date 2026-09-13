@@ -76,21 +76,6 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     ],
   },
   {
-    slug: "maehroboter-ohne-begrenzungskabel",
-    title: "Mähroboter ohne Begrenzungskabel oder mit Kabel?",
-    description: "Mähroboter ohne Begrenzungskabel vergleichen: RTK, Kamera, LiDAR und Begrenzungsdraht nach Gartenform, Empfang und Installationsaufwand bewerten.",
-    heading: "Mähroboter ohne Begrenzungskabel: Technik folgt dem Garten",
-    intro: "Kabellose Navigation kann die Installation vereinfachen, ist aber nicht für jede Grundstücksform automatisch die bessere Wahl.",
-    takeaway: "Vergleiche Kabel, RTK, Kamera und LiDAR anhand von Gartenform, Empfang, Bäumen, Passagen, Zonen und späteren Änderungen – nicht nur anhand der Werbeaussage kabellos.",
-    plannerHref: "/garten/maehroboter-rechner/",
-    plannerLabel: "Mähbereich prüfen",
-    sections: [
-      { title: "Begrenzungskabel: planbar und sichtbar dokumentierbar", paragraphs: ["Ein Kabel legt die Grenze physisch fest und kann bei verwinkelten Flächen, Bäumen oder schwierigen Empfangsbedingungen Vorteile haben. Verlegung, Reparatur und spätere Änderungen gehören aber zur Installationsplanung.", "Passagen brauchen ausreichend nutzbare Breite und eine passende Führung. Die Herstellerangaben gelten immer für das konkrete Modell und System."] },
-      { title: "RTK, Kamera und LiDAR", paragraphs: ["RTK benötigt stabile Satellitenbedingungen und korrekt platzierte Referenzen. Kameras und LiDAR beurteilen Umgebung und Hindernisse anders und können unter Bäumen, an Kanten oder bei wechselndem Licht unterschiedlich reagieren.", "Eine Technologiebezeichnung ersetzt deshalb keinen Standortcheck. Prüfe Empfang, Schatten, Hindernisse, Randabstände und getrennte Rasenflächen vor dem Kauf."] },
-      { title: "Wann kabellos besonders interessant ist", paragraphs: ["Kabellose Systeme sind spannend, wenn du eine bestehende Fläche ohne Grabearbeiten erschließen oder Grenzen häufiger verändern möchtest. Für einen komplexen Garten ist die Installationsqualität trotzdem wichtiger als das Fehlen des Kabels."] },
-    ],
-  },
-  {
     slug: "maehroboter-kleiner-garten",
     title: "Mähroboter für kleine Gärten: Worauf es wirklich ankommt",
     description: "Mähroboter für kleine Gärten auswählen: Flächenreserve, Lautstärke, Kanten, Passagen, Ladefläche und Installation verständlich prüfen.",

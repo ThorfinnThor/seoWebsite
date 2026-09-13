@@ -1,0 +1,10 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "redirects": [
+    {
+      "source": "/ratgeber/maehroboter-ohne-begrenzungskabel/",
+      "destination": "/garten/maehroboter-begrenzungskabel-kabellos/",
+      "statusCode": 301
+    }
+  ]
+}

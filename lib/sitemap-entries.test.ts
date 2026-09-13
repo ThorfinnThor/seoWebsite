@@ -3,7 +3,7 @@ import { ALL_SITEMAP_ENTRIES, SITEMAP_SEGMENTS } from "@/lib/sitemap-entries";
 
 describe("segmented sitemap inventory", () => {
   it("covers every indexable URL exactly once", () => {
-    expect(ALL_SITEMAP_ENTRIES).toHaveLength(169);
+    expect(ALL_SITEMAP_ENTRIES).toHaveLength(168);
     expect(new Set(ALL_SITEMAP_ENTRIES.map((entry) => entry.url)).size).toBe(ALL_SITEMAP_ENTRIES.length);
     expect(SITEMAP_SEGMENTS).toHaveLength(2);
   });
@@ -14,6 +14,13 @@ describe("segmented sitemap inventory", () => {
     expect(urls.filter((url) => /\/ratgeber\/vergleiche\/[^/]+\/[^/]+\/$/.test(url))).toEqual([
       "https://www.passendplanen.de/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-rtk-500-qm/",
     ]);
+  });
+
+  it("contains only the consolidated cable versus wireless guide", () => {
+    const urls = ALL_SITEMAP_ENTRIES.map((entry) => entry.url);
+
+    expect(urls).toContain("https://www.passendplanen.de/garten/maehroboter-begrenzungskabel-kabellos/");
+    expect(urls).not.toContain("https://www.passendplanen.de/ratgeber/maehroboter-ohne-begrenzungskabel/");
   });
 
   it("uses only absolute canonical URLs and real modification dates", () => {

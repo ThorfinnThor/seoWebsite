@@ -106,38 +106,6 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { label: "Fundament verstehen", href: "/garten/gartenhaus-fundament/", description: "Unterbau und Standort als eigenen Kostenblock früh klären." },
     ],
   },
-  "maehroboter-ohne-begrenzungskabel": {
-    comparison: {
-      caption: "Navigationsprinzipien im Standortvergleich",
-      columns: ["System", "Kann gut passen, wenn …", "Besonders prüfen"],
-      rows: [
-        ["Begrenzungskabel", "Grenzen dauerhaft feststehen und eine physische Installation akzeptabel ist.", "Kabelwege, Reparaturen, Passagen, Leitkabel und spätere Gartenänderungen."],
-        ["RTK/GNSS", "Himmelssicht und Funkverbindung am Grundstück stabil planbar sind.", "Bäume, Gebäude, Abschattung, Referenzstation und Verhalten bei Signalverlust."],
-        ["Kamera/Vision", "Grenzen visuell erkennbar sind und das Modell mit der konkreten Struktur umgehen kann.", "Lichtwechsel, flache Kanten, Laub, Tiere, Spielzeug und Datenschutzfunktionen."],
-        ["LiDAR", "Umgebungsgeometrie eine robuste Kartierung ermöglicht.", "Sehr offene Bereiche, Veränderungen, Sensorhöhe, Verschmutzung und Modellgrenzen."],
-        ["Hybridsystem", "Mehrere Sensorprinzipien sich am Standort sinnvoll ergänzen.", "Welche Funktion bei Störung übernimmt und welche Infrastruktur dennoch benötigt wird."],
-      ],
-    },
-    checklist: [
-      "Netto-Rasenfläche und alle getrennten Teilflächen auf einer Skizze markieren.",
-      "Engste Passage an mehreren Punkten messen und Randabstände berücksichtigen.",
-      "Bäume, hohe Hecken, Gebäude und überdachte Bereiche als mögliche Signalschatten dokumentieren.",
-      "Steilste tatsächlich zu mähende Stelle einschließlich Übergang und Bodenart messen.",
-      "Ladeplatz auf Strom, Zufahrt, Signal, Diebstahlschutz und Wasserablauf prüfen.",
-      "Für jedes Modell nachlesen, was bei Signalverlust oder Kamerastörung geschieht.",
-    ],
-    faqs: [
-      { question: "Ist ein Mähroboter ohne Kabel einfacher zu installieren?", answer: "Die körperliche Kabelverlegung entfällt, dafür entstehen digitale Kartierung, Signalprüfung, Zonenaufteilung und gegebenenfalls die Montage einer Referenzstation. Auf einer offenen, gut erreichbaren Fläche kann das einfacher sein. Bei Abschattung, komplexen Grenzen oder vielen Teilflächen kann die Einrichtung weiterhin anspruchsvoll werden." },
-      { question: "Funktioniert RTK unter Bäumen?", answer: "Das hängt von Baumdichte, Kronen, Gebäuden, Antennenposition, Korrekturdaten und dem konkreten Gerät ab. Eine pauschale Zusage ist nicht seriös. Prüfe Herstellerbedingungen, Rückgabemöglichkeit und den realen Empfang an allen kritischen Stellen, besonders an Grenzen, zwischen Gebäuden und unter dichtem Blätterdach." },
-      { question: "Erkennt eine Kamera Teiche und Beete sicher?", answer: "Eine Kamera kann sichtbare Strukturen erkennen, garantiert aber nicht unter allen Licht-, Wetter- und Vegetationsbedingungen eine sichere Grenze. Kritische Absturzstellen, öffentliche Wege und Wasserflächen benötigen die ausdrücklich vorgeschriebene Sicherung des jeweiligen Systems. Verlasse dich dort nicht ausschließlich auf eine allgemeine Werbeaussage zur Hinderniserkennung." },
-      { question: "Kann ein kabelloser Mähroboter mehrere Rasenflächen mähen?", answer: "Viele Systeme unterstützen Zonen, aber die Verbindung zwischen den Flächen entscheidet. Der Roboter muss den Weg selbstständig und sicher befahren können, oder er wird manuell umgesetzt. Prüfe Passagen, Tore, öffentliche Wege, Stufen und die Frage, ob jede Zone eine erreichbare Ladeverbindung besitzt." },
-    ],
-    relatedLinks: [
-      { label: "Kabel oder kabellos", href: "/garten/maehroboter-begrenzungskabel-kabellos/", description: "Installation, Änderungen und Standortbedingungen detailliert vergleichen." },
-      { label: "Steigung und Engstellen", href: "/garten/maehroboter-steigung-engstellen/", description: "Die härtesten Stellen des Gartens korrekt messen und dokumentieren." },
-      { label: "Mähroboter-Flächencheck", href: "/garten/maehroboter-rechner/", description: "Fläche, Gelände und Navigation in eine passende Geräteklasse übersetzen." },
-    ],
-  },
   "maehroboter-kleiner-garten": {
     comparison: {
       caption: "Kleine Rasenfläche nach Gartentyp bewerten",
@@ -198,7 +166,7 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { question: "Was gehört in die Gesamtkosten?", answer: "Neben dem Roboter zählen Installationsmaterial, Kabel oder Referenzstation, Garage, Ersatzmesser, mögliche Mobilfunkdienste, Strom, Winterlagerung und Service. Auch eigener Installationsaufwand oder beauftragte Einrichtung ist ein Kostenblock. Vergleiche Angebote mit identischem Funktions- und Zubehörumfang." },
     ],
     relatedLinks: [
-      { label: "Ohne Begrenzungskabel", href: "/ratgeber/maehroboter-ohne-begrenzungskabel/", description: "RTK, Kamera, LiDAR und Kabel am konkreten Standort vergleichen." },
+      { label: "Kabel oder kabellose Navigation", href: "/garten/maehroboter-begrenzungskabel-kabellos/", description: "RTK, Kamera, LiDAR und Kabel am konkreten Standort vergleichen." },
       { label: "Steigung und Engstellen", href: "/garten/maehroboter-steigung-engstellen/", description: "Harte Ausschlusskriterien korrekt messen und bewerten." },
       { label: "Mähroboter-Flächencheck", href: "/garten/maehroboter-rechner/", description: "Aus Gartenfläche und Komplexität eine belastbare Auswahlklasse ableiten." },
     ],

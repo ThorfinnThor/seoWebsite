@@ -11,6 +11,45 @@ import { getProjectExampleDirectory } from "@/lib/project-examples";
 import { getDecisionGuideDirectory } from "@/lib/decision-guides";
 import { editorializeText } from "@/lib/editorial-style";
 
+const FEATURED_MOWER_CASES = [
+  {
+    eyebrow: "Offene Fläche",
+    title: "Mähroboter für 250 m² offenen Rasen",
+    description: "Ein kompakter Rechenfall mit Flächenreserve, Gegenprobe und den Punkten, die am konkreten Modell offenbleiben.",
+    href: "/ratgeber/projekte/maehroboter/maehroboter-250-qm-offen/",
+  },
+  {
+    eyebrow: "Hindernisse",
+    title: "500 m² mit Bäumen und Einbauten",
+    description: "Wie Hindernisse den Arbeitsrahmen verändern und warum die reine Quadratmeterzahl nicht für die Auswahl reicht.",
+    href: "/ratgeber/projekte/maehroboter/maehroboter-500-qm-hindernisse/",
+  },
+  {
+    eyebrow: "Hang",
+    title: "1.000 m² Rasen mit Steigung",
+    description: "Flächenleistung und Steigungsgrenze werden getrennt bewertet und mit einer messbaren Gegenprobe verbunden.",
+    href: "/ratgeber/projekte/maehroboter/maehroboter-1000-qm-hang/",
+  },
+  {
+    eyebrow: "Redaktioneller Vergleich",
+    title: "500 m² mit Begrenzungskabel oder RTK",
+    description: "Ein vollständig geprüfter Direktvergleich für Empfang, Engstellen, Zonen, Installation und Folgekosten.",
+    href: "/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-rtk-500-qm/",
+  },
+  {
+    eyebrow: "Bäume",
+    title: "RTK oder LiDAR bei vielen Bäumen",
+    description: "Die Navigation wird an Baumkronen, Gebäuden, Kartenstabilität und dem Verhalten bei Störungen geprüft.",
+    href: "/ratgeber/vergleiche/maehroboter/maehroboter-rtk-oder-lidar-viele-baeume/",
+  },
+  {
+    eyebrow: "Engstellen",
+    title: "Begrenzungskabel oder Hybrid für enge Passagen",
+    description: "Ein Vergleich für schmale Verbindungen, sichere Grenzen und einen erreichbaren Weg zur Ladestation.",
+    href: "/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-hybrid-enge-passagen/",
+  },
+] as const;
+
 export function generateStaticParams() {
   return SEO_TOPICS.map((topic) => ({ slug: topic.slug }));
 }
@@ -65,6 +104,20 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     {comparisonDirectory && <section className="project-library-callout">
       <div><p className="eyebrow">Zwei Optionen, ein konkreter Kontext</p><h2>100 gewichtete Direktvergleiche</h2><p>{comparisonDirectory.description} Jede Seite zeigt dieselben fünf Kriterien für beide Optionen und eine nachvollziehbare Gegenprobe.</p></div>
       <Link className="button button--primary" href={`/ratgeber/vergleiche/${topic.slug}/`}>Direktvergleiche öffnen →</Link>
+    </section>}
+    {topic.slug === "maehroboter" && <section className="directory-section" aria-labelledby="featured-mower-cases">
+      <div className="section-heading">
+        <div><p className="eyebrow">Ausgewählte Rechenfälle</p><h2 id="featured-mower-cases">Häufige Gartensituationen direkt öffnen</h2></div>
+        <p>Diese Beispiele zeigen unterschiedliche Flächen, Hindernisse und Navigationsfragen. Sie sind als nachvollziehbare Gegenprobe gedacht und ersetzen keine Modellfreigabe.</p>
+      </div>
+      <div className="directory-grid">
+        {FEATURED_MOWER_CASES.map((item) => <article className="directory-card" key={item.href}>
+          <p className="eyebrow">{item.eyebrow}</p>
+          <h3>{item.title}</h3>
+          <p>{item.description}</p>
+          <Link className="text-link" href={item.href}>Beispiel ansehen →</Link>
+        </article>)}
+      </div>
     </section>}
     <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{editorializeText(topic.boundary)}</p></section>
   </>;
