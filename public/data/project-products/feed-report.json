@@ -1,33 +1,33 @@
 {
-  "candidateRows": 3991,
+  "candidateRows": 3984,
   "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-12T07:10:12.974Z",
+  "generatedAt": "2026-09-13T07:28:01.304Z",
   "issues": {
     "incomplete-product-data": 1
   },
   "linkVerification": {
     "blocked": 95,
-    "verified": 468
+    "verified": 470
   },
   "merchants": {
-    "Benz24 DE/AT": 307,
+    "Benz24 DE/AT": 309,
     "Globus Baumarkt DE": 161,
     "InterGard Heim und Garten DE": 95
   },
-  "normalizedProducts": 3990,
-  "offers": 563,
+  "normalizedProducts": 3983,
+  "offers": 565,
   "priceStatsEur": {
     "max": 19998,
-    "median": 139,
+    "median": 137.6,
     "min": 2.45
   },
   "productsWithoutOffers": 0,
-  "publishedProducts": 563,
+  "publishedProducts": 565,
   "quarantinedProducts": 0,
-  "reviewedProducts": 563,
-  "reviewQueue": 3428,
-  "rows": 174938,
+  "reviewedProducts": 565,
+  "reviewQueue": 3419,
+  "rows": 174846,
   "schemaVersion": 1,
   "sourceFeeds": 10,
   "successfulFeeds": 10
