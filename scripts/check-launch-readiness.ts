@@ -30,7 +30,7 @@ const [nextConfig, gardenHouse, dehumidifier, irrigation, robotMower, securityCa
 const siteUrl = (process.env.NEXT_PUBLIC_SITE_URL || "https://www.passendplanen.de").trim();
 const legalEmail = LEGAL.email;
 const emailReady = Boolean(legalEmail && !/^(you|test|example)@/i.test(legalEmail));
-const temporaryDomain = /vercel\.app|seo-website/i.test(siteUrl);
+const temporaryDomain = /vercel\.app|pages\.dev|seo-website/i.test(siteUrl);
 const catalogProducts = [gardenHouse, dehumidifier, irrigation, robotMower, securityCamera, flooring, projectProducts].reduce((sum, value) => sum + (value.products?.length ?? 0), 0);
 const catalogOffers = [gardenHouse, dehumidifier, irrigation, robotMower, securityCamera, flooring, projectProducts].reduce((sum, value) => sum + (value.offers?.length ?? 0), 0);
 

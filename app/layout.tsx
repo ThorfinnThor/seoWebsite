@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { Analytics } from "@vercel/analytics/react";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { SITE } from "@/lib/site";
 import { SOCIAL_IMAGE_SIZE } from "@/lib/social-images";
@@ -33,7 +32,6 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="de" data-scroll-behavior="smooth">
       <body>
-        <Analytics />
         <SiteJsonLd />
         <a className="skip-link" href="#main">Zum Inhalt springen</a>
         <header className="site-header">

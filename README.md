@@ -31,17 +31,17 @@ All public product catalogs start empty by design. Real Awin candidates are impo
 
 Run `npm run verify:merchant-links -- --write` to follow Affiliate redirects, compare the final merchant domain and product identity, and store the verification status. Missing or mismatched targets are removed from the public offer list; bot-blocked checks remain visible as `blocked` instead of being removed.
 
-Never place `AWIN_FEED_URLS_JSON` in a local committed file or in Vercel. Configure it as a GitHub Actions repository secret.
+Never place `AWIN_FEED_URLS_JSON` in a local committed file or in Cloudflare Pages. Configure it as a GitHub Actions repository secret.
 
 The exact signup, advertiser application and secure feed setup sequence is documented in [`docs/awin-onboarding.md`](docs/awin-onboarding.md).
 
 ## Deployment
 
-Connect the GitHub repository to Vercel, use `main` as the production branch and set `NEXT_PUBLIC_SITE_URL` to the canonical production origin. No Awin secret is required in Vercel.
+Connect the GitHub repository to Cloudflare Pages, use `main` as the production branch, `npm run build` as the build command and `out` as the output directory. Set `NEXT_PUBLIC_SITE_URL` to the canonical production origin. No Awin secret is required in Cloudflare.
 
 The public legal contact defaults to `info@passendplanen.de`. `NEXT_PUBLIC_LEGAL_EMAIL` can override it if the contact address changes later.
 
-Current Vercel values:
+Current production values:
 
 ```text
 NEXT_PUBLIC_SITE_URL=https://www.passendplanen.de

@@ -11,7 +11,7 @@ export const metadata = createPageMetadata({
 
 export default function DatenschutzPage() {
   return (
-    <LegalPage title="Datenschutzerklärung" intro="Diese Erklärung beschreibt den aktuellen, datensparsamen Stand der statischen Website. Stand: 15. August 2026.">
+    <LegalPage title="Datenschutzerklärung" intro="Diese Erklärung beschreibt den aktuellen, datensparsamen Stand der statischen Website. Stand: 15. September 2026.">
       <section>
         <h2>1. Verantwortlicher</h2>
         <address>{LEGAL.owner}<br />{LEGAL.street}<br />{LEGAL.postalCode} {LEGAL.city}<br />{LEGAL.country}</address>
@@ -19,10 +19,10 @@ export default function DatenschutzPage() {
       </section>
       <section>
         <h2>2. Bereitstellung und Hosting</h2>
-        <p>Die Website wird als statische Website über Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA, ausgeliefert. Beim Abruf können technisch erforderliche Verbindungs- und Protokolldaten verarbeitet werden, insbesondere IP-Adresse, Zeitpunkt, angeforderte Adresse, Referrer, Browser- und Geräteinformationen.</p>
+        <p>Die Website wird als statische Website über Cloudflare Pages und das weltweite Netzwerk der Cloudflare, Inc., 101 Townsend St, San Francisco, CA 94107, USA, ausgeliefert. Beim Abruf können technisch erforderliche Verbindungs- und Protokolldaten verarbeitet werden, insbesondere IP-Adresse, Zeitpunkt, angeforderte Adresse, Referrer, Browser- und Geräteinformationen.</p>
         <p>Die Verarbeitung dient der sicheren, stabilen und effizienten Bereitstellung des Angebots. Rechtsgrundlage ist unser berechtigtes Interesse nach Art. 6 Abs. 1 lit. f DSGVO. Eine Verarbeitung in den USA und anderen Drittländern kann nicht ausgeschlossen werden.</p>
-        <p>Empfänger der Daten können Vercel und die für Hosting, Auslieferung, Sicherheit und technischen Betrieb eingesetzten Unterauftragnehmer sein. Vercel beschreibt für internationale Übermittlungen geeignete Garantien, insbesondere Standardvertragsklauseln. Maßgeblich sind die für das eingesetzte Vertragsverhältnis geltenden Vercel-Bedingungen.</p>
-        <p><a href="https://vercel.com/legal/privacy-notice" rel="noreferrer">Datenschutzhinweise von Vercel</a> · <a href="https://vercel.com/legal/dpa" rel="noreferrer">Vercel Data Processing Addendum</a></p>
+        <p>Empfänger der Daten können Cloudflare und die für Hosting, Auslieferung, Sicherheit und technischen Betrieb eingesetzten Unterauftragnehmer sein. Cloudflare beschreibt die Verarbeitung und internationale Übermittlungen in seinen Datenschutzinformationen und im Data Processing Addendum.</p>
+        <p><a href="https://www.cloudflare.com/privacypolicy/" rel="noreferrer">Datenschutzhinweise von Cloudflare</a> · <a href="https://www.cloudflare.com/cloudflare-customer-dpa/" rel="noreferrer">Cloudflare Data Processing Addendum</a></p>
       </section>
       <section>
         <h2>3. Kontaktaufnahme per E-Mail</h2>
@@ -35,13 +35,16 @@ export default function DatenschutzPage() {
         <p>Über „Zurücksetzen“ lassen sich die gespeicherten Planerwerte auf die Standardangaben zurücksetzen. Produktkataloge werden als statische Dateien von derselben Website geladen.</p>
       </section>
       <section>
-        <h2>5. Cookies, Analyse und Kontaktformulare</h2>
-        <p>PassendPlanen setzt derzeit keine eigenen Analyse-, Marketing- oder Personalisierungsdienste ein, legt keine eigenen Cookies an und bietet kein Kontaktformular oder Nutzerkonto an. Falls sich das ändert, wird diese Erklärung vor Aktivierung angepasst.</p>
+        <h2>5. Reichweitenmessung und Ereignisse</h2>
+        <p>PassendPlanen verwendet Cloudflare Web Analytics, um Seitenaufrufe und die technische Leistung der Website in zusammengefasster Form auszuwerten. Nach Angaben von Cloudflare werden dabei keine Cookies gesetzt und keine personenbezogenen Daten von Besucherinnen und Besuchern erhoben oder verwendet.</p>
+        <p>Zusätzlich werden über Cloudflare Zaraz wenige, fest definierte Interaktionen erfasst. Dazu gehören der Start, Abschluss und das Zurücksetzen eines Planers, die Anzahl angezeigter Produkttreffer und Klicks auf gekennzeichnete Partnerlinks. Übermittelt werden nur technische Kategorien und Zählwerte wie Planertyp, Schrittzahl, Händler, gekürzte Produktreferenz und Anzahl der Treffer. Konkrete Maße, Antworten oder sonstige Eingaben aus den Planern werden nicht übertragen.</p>
+        <p>Die Auswertung hilft uns, Fehler, unverständliche Abläufe und nicht hilfreiche Produktergebnisse zu erkennen. Rechtsgrundlage ist unser berechtigtes Interesse an der bedarfsgerechten und technisch zuverlässigen Gestaltung nach Art. 6 Abs. 1 lit. f DSGVO. PassendPlanen setzt dafür keine eigenen Analyse- oder Marketingcookies ein und erstellt keine nutzerbezogenen Profile.</p>
+        <p><a href="https://www.cloudflare.com/privacypolicy/" rel="noreferrer">Datenschutzhinweise von Cloudflare</a> · <a href="https://developers.cloudflare.com/web-analytics/about/" rel="noreferrer">Informationen zu Cloudflare Web Analytics</a></p>
       </section>
       <section>
-        <h2>6. Externe und künftige Partnerlinks</h2>
+        <h2>6. Externe Links und Partnerlinks</h2>
         <p>Normale externe Links führen zu Angeboten Dritter. Erst mit dem Anklicken verlassen Nutzerinnen und Nutzer PassendPlanen; für die anschließende Verarbeitung ist der jeweilige Anbieter verantwortlich.</p>
-        <p>Affiliate-Links sind aktuell noch nicht aktiviert. Vor ihrer Aktivierung werden sie klar gekennzeichnet, die konkreten Empfänger und Datenflüsse dokumentiert und diese Datenschutzerklärung ergänzt.</p>
+        <p>Gekennzeichnete Partnerlinks können über ein Affiliate-Netzwerk oder direkt zum jeweiligen Händler führen. Beim Klick werden die Zieladresse sowie Zuordnungsparameter übertragen, damit der Händler oder das Netzwerk einen vermittelten Besuch und gegebenenfalls einen Kauf zuordnen kann. Dabei können der jeweilige Anbieter und das Affiliate-Netzwerk eigene Verbindungsdaten, Cookies oder ähnliche Technologien verarbeiten. Einzelheiten ergeben sich aus den Datenschutzhinweisen des aufgerufenen Anbieters.</p>
       </section>
       <section>
         <h2>7. Speicherdauer</h2>

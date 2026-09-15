@@ -3,14 +3,10 @@ import { describe, expect, it } from "vitest";
 
 describe("permanent SEO redirects", () => {
   it("consolidates the duplicate mower navigation guide", async () => {
-    const config = JSON.parse(await readFile(new URL("../vercel.json", import.meta.url), "utf8")) as {
-      redirects: Array<{ source: string; destination: string; statusCode: number }>;
-    };
+    const redirects = await readFile(new URL("../public/_redirects", import.meta.url), "utf8");
 
-    expect(config.redirects).toContainEqual({
-      source: "/ratgeber/maehroboter-ohne-begrenzungskabel/",
-      destination: "/garten/maehroboter-begrenzungskabel-kabellos/",
-      statusCode: 301,
-    });
+    expect(redirects).toContain(
+      "/ratgeber/maehroboter-ohne-begrenzungskabel/ /garten/maehroboter-begrenzungskabel-kabellos/ 301",
+    );
   });
 });

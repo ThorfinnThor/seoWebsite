@@ -1,13 +1,18 @@
 "use client";
 
 import { useEffect, useRef } from "react";
-import { track } from "@vercel/analytics";
 import type { PlannerId } from "@/lib/planners";
 
 type AnalyticsValue = string | number | boolean;
 type AnalyticsProperties = Record<string, AnalyticsValue>;
 
 declare global {
+  interface Window {
+    zaraz?: {
+      track: (name: string, properties?: AnalyticsProperties) => void | Promise<unknown>;
+    };
+  }
+
   interface WindowEventMap {
     "passendplanen:analytics": CustomEvent<{ name: string; properties: AnalyticsProperties }>;
   }
@@ -19,7 +24,7 @@ export function trackAnalyticsEvent(name: string, properties: AnalyticsPropertie
   window.dispatchEvent(new CustomEvent("passendplanen:analytics", { detail: { name, properties } }));
 
   try {
-    track(name, properties);
+    void window.zaraz?.track(name, properties);
   } catch {
     // Analytics must never interrupt a calculation or an outbound merchant link.
   }
