@@ -699,6 +699,81 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .button-icon { width: 20px; height: 20px; flex: 0 0 auto; }
 .calculator-error { margin: 18px 54px; }
 
+/* The dedicated embed route is deliberately stripped down so publishers receive only the tool. */
+body:has(.embed-route) .site-header,
+body:has(.embed-route) .site-footer,
+body:has(.embed-route) .skip-link,
+body:has(.embed-route) .planner-hero,
+body:has(.embed-route) .planner-notes,
+body:has(.embed-route) .planner-faq,
+body:has(.embed-route) .related-guides {
+  display: none !important;
+}
+
+body:has(.embed-route) #main {
+  min-height: 100vh;
+}
+
+.embed-route .planner-wrap {
+  max-width: none;
+  margin: 0;
+  padding: 0;
+}
+
+.embed-route .calculator-shell {
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.embed-route .calculator-body {
+  padding-top: 30px;
+}
+
+.embed-route .calculator-progress {
+  padding-top: 18px;
+}
+
+.embed-route__title {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.planner-rights-link {
+  grid-column: 1 / -1;
+  margin: 25px 0 0;
+  font-size: .88rem;
+}
+
+.planner-rights-link a {
+  color: var(--green);
+  font-weight: 750;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.planner-rights-page {
+  max-width: 860px;
+}
+
+.planner-rights-page h1 {
+  max-width: 800px;
+  margin-bottom: 22px;
+}
+
+.planner-rights-page > p:first-of-type {
+  max-width: 720px;
+  color: var(--muted);
+  font-size: 1.08rem;
+}
+
 @media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h3 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid, .planner-faq-list { grid-template-columns: repeat(2,1fr); } .planner-faq-list div:last-child { grid-column: 1 / -1; } }
 @media (max-width: 650px) { .reference-product-grid { grid-template-columns: 1fr; } .reference-product-card { grid-template-columns: 38px 1fr; padding: 16px; } .reference-product-icon { width: 36px; height: 36px; } }
 @media (max-width: 980px) { .real-product-grid { grid-template-columns: 1fr; } }
