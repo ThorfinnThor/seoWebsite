@@ -26,6 +26,33 @@ export const DATA_REPORTS = [
     path: "/ratgeber/daten/luftentfeuchter-leistung-lautstaerke/",
     updatedAt: "2026-09-16",
   },
+  {
+    slug: "maehroboter-navigation-flaechenleistung",
+    topic: "maehroboter",
+    eyebrow: "Mähroboter im Datencheck",
+    title: "Navigation, Flächenleistung und Engstellen bei 15 Mährobotern",
+    description: "Kabel, Kamera, LiDAR, RTK und hybride Navigation anhand der dokumentierten Flächenleistung, Steigung, Engstellen und Angebotspreise einordnen.",
+    path: "/ratgeber/daten/maehroboter-navigation-flaechenleistung/",
+    updatedAt: "2026-09-16",
+  },
+  {
+    slug: "sicherheitskameras-verbindung-strom-setgroesse",
+    topic: "sicherheitskameras",
+    eyebrow: "Sicherheitskameras im Datencheck",
+    title: "Verbindung, Stromversorgung und Setgröße bei 20 Kameras",
+    description: "WLAN, PoE und Mobilfunk gemeinsam mit der Stromversorgung betrachten und die Produktkosten für vier Überwachungszonen nachvollziehen.",
+    path: "/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/",
+    updatedAt: "2026-09-16",
+  },
+  {
+    slug: "bewaesserung-komponenten-systeme",
+    topic: "bewaesserung",
+    eyebrow: "Bewässerung im Datencheck",
+    title: "84 Bewässerungsprodukte zeigen, warum Einzelteile noch kein System ergeben",
+    description: "Rohre, Verbinder, Regner, Tropfleitungen und Steuerungen nach Sortimentsschwerpunkt und dokumentierter Planungstiefe untersuchen.",
+    path: "/ratgeber/daten/bewaesserung-komponenten-systeme/",
+    updatedAt: "2026-09-16",
+  },
 ] as const;
 
 export function getDataReportsForTopic(topic: string) {

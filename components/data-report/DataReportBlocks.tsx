@@ -28,7 +28,7 @@ export function ReportBarList({ items, maxValue, ariaLabel }: { items: readonly 
   return <ul className="data-bar-list" aria-label={ariaLabel}>
     {items.map((item) => <li key={item.label}>
       <div><strong>{item.label}</strong><span>{item.displayValue}</span></div>
-      <div className="data-bar-track" aria-hidden="true"><span style={{ width: `${Math.max(2, (item.value / scale) * 100)}%` }} /></div>
+      <div className="data-bar-track" aria-hidden="true"><span style={{ width: item.value === 0 ? "0%" : `${Math.max(2, (item.value / scale) * 100)}%` }} /></div>
       {item.detail ? <p>{item.detail}</p> : null}
     </li>)}
   </ul>;

@@ -1,14 +1,23 @@
 import dehumidifierCatalogJson from "@/public/data/dehumidifier/catalog.json";
 import flooringCatalogJson from "@/public/data/flooring/catalog.json";
 import gardenHouseCatalogJson from "@/public/data/garden-house/catalog.json";
+import irrigationCatalogJson from "@/public/data/irrigation/catalog.json";
+import robotMowerCatalogJson from "@/public/data/robot-mower/catalog.json";
+import securityCameraCatalogJson from "@/public/data/security-camera/catalog.json";
 import { DehumidifierCatalogSchema, type DehumidifierProduct } from "@/lib/dehumidifier/types";
 import { FlooringCatalogSchema, type FlooringProduct } from "@/lib/flooring/types";
 import { GardenHouseCatalogSchema, type GardenHouseProduct } from "@/lib/garden-house/types";
+import { IrrigationCatalogSchema, type IrrigationProduct } from "@/lib/irrigation/types";
+import { RobotMowerCatalogSchema, type RobotMowerProduct } from "@/lib/robot-mower/types";
+import { SecurityCameraCatalogSchema, type SecurityCameraProduct } from "@/lib/security-camera/types";
 import { bestAvailablePriceByProduct, countDistinct, formatReportDate, median, percent, quantile, rounded } from "./statistics";
 
 const gardenHouseCatalog = GardenHouseCatalogSchema.parse(gardenHouseCatalogJson);
 const flooringCatalog = FlooringCatalogSchema.parse(flooringCatalogJson);
 const dehumidifierCatalog = DehumidifierCatalogSchema.parse(dehumidifierCatalogJson);
+const irrigationCatalog = IrrigationCatalogSchema.parse(irrigationCatalogJson);
+const robotMowerCatalog = RobotMowerCatalogSchema.parse(robotMowerCatalogJson);
+const securityCameraCatalog = SecurityCameraCatalogSchema.parse(securityCameraCatalogJson);
 
 function reportProducts<T extends { reviewed: boolean }>(products: readonly T[]): T[] {
   return products.filter((product) => product.reviewed);
@@ -173,4 +182,153 @@ export const dehumidifierDataReport = {
     { label: "Tankgröße", count: dehumidifierProducts.filter((product) => product.tankLiters !== undefined).length },
   ].map((row) => ({ ...row, share: rounded(percent(row.count, dehumidifierProducts.length), 1) })),
   performanceBands: performanceBands.map(({ label, matches }) => ({ label, ...summarizeDehumidifiers(dehumidifierProducts.filter(matches), dehumidifierPrices) })),
+} as const;
+
+function summarizeRobotMowers(products: readonly RobotMowerProduct[], prices: ReadonlyMap<string, number>) {
+  return {
+    count: products.length,
+    medianAreaM2: rounded(median(values(products, (product) => product.ratedAreaM2))),
+    medianSlopePercent: rounded(median(values(products, (product) => product.maxSlopePercent))),
+    passageKnown: products.filter((product) => product.minPassageCm !== undefined).length,
+    medianPassageCm: rounded(median(values(products, (product) => product.minPassageCm))),
+    medianPriceEur: rounded(median(priceValues(products, prices))),
+  };
+}
+
+const robotMowerProducts = reportProducts(robotMowerCatalog.products);
+const robotMowerPrices = bestAvailablePriceByProduct(robotMowerCatalog);
+const robotMowerNavigation = [
+  { key: "wire", label: "Begrenzungskabel" },
+  { key: "camera", label: "Kamera" },
+  { key: "hybrid", label: "Hybrid" },
+  { key: "lidar", label: "LiDAR" },
+  { key: "rtk", label: "RTK" },
+] as const;
+
+export const robotMowerDataReport = {
+  generatedAt: robotMowerCatalog.generatedAt,
+  updatedLabel: formatReportDate(robotMowerCatalog.generatedAt),
+  total: robotMowerProducts.length,
+  available: robotMowerProducts.filter((product) => robotMowerPrices.has(product.id)).length,
+  brands: countDistinct(robotMowerProducts.map((product) => product.brand)),
+  summary: summarizeRobotMowers(robotMowerProducts, robotMowerPrices),
+  navigation: robotMowerNavigation.map(({ key, label }) => ({
+    key,
+    label,
+    ...summarizeRobotMowers(robotMowerProducts.filter((product) => product.navigation === key), robotMowerPrices),
+  })),
+  areaBands: [
+    { label: "Bis 500 m²", matches: (product: RobotMowerProduct) => product.ratedAreaM2 !== undefined && product.ratedAreaM2 <= 500 },
+    { label: "Über 500 bis 1.000 m²", matches: (product: RobotMowerProduct) => product.ratedAreaM2 !== undefined && product.ratedAreaM2 > 500 && product.ratedAreaM2 <= 1000 },
+    { label: "Über 1.000 m²", matches: (product: RobotMowerProduct) => product.ratedAreaM2 !== undefined && product.ratedAreaM2 > 1000 },
+  ].map(({ label, matches }) => ({ label, ...summarizeRobotMowers(robotMowerProducts.filter(matches), robotMowerPrices) })),
+  coverage: {
+    ratedArea: robotMowerProducts.filter((product) => product.ratedAreaM2 !== undefined).length,
+    slope: robotMowerProducts.filter((product) => product.maxSlopePercent !== undefined).length,
+    passage: robotMowerProducts.filter((product) => product.minPassageCm !== undefined).length,
+    obstacleDetection: robotMowerProducts.filter((product) => product.obstacleDetection !== undefined).length,
+  },
+} as const;
+
+function summarizeCameraSetSizes(products: readonly SecurityCameraProduct[], prices: ReadonlyMap<string, number>) {
+  const totals = products.flatMap((product) => {
+    const price = prices.get(product.id);
+    if (price === undefined) return [];
+    const requiredSets = Math.ceil(4 / product.cameraCount);
+    return [{ requiredSets, totalEur: requiredSets * price }];
+  });
+  return {
+    products: products.length,
+    requiredSets: rounded(median(totals.map((item) => item.requiredSets))),
+    medianTotalEur: rounded(median(totals.map((item) => item.totalEur)), 2),
+    lowerTotalEur: rounded(quantile(totals.map((item) => item.totalEur), 0.25), 2),
+    upperTotalEur: rounded(quantile(totals.map((item) => item.totalEur), 0.75), 2),
+  };
+}
+
+const securityCameraProducts = reportProducts(securityCameraCatalog.products);
+const securityCameraPrices = bestAvailablePriceByProduct(securityCameraCatalog);
+
+export const securityCameraDataReport = {
+  generatedAt: securityCameraCatalog.generatedAt,
+  updatedLabel: formatReportDate(securityCameraCatalog.generatedAt),
+  total: securityCameraProducts.length,
+  available: securityCameraProducts.filter((product) => securityCameraPrices.has(product.id)).length,
+  brands: countDistinct(securityCameraProducts.map((product) => product.brand)),
+  medianPriceEur: rounded(median(priceValues(securityCameraProducts, securityCameraPrices)), 2),
+  placement: [
+    { key: "outdoor", label: "Außenbereich" },
+    { key: "indoor", label: "Innenbereich" },
+  ].map(({ key, label }) => ({ key, label, count: securityCameraProducts.filter((product) => product.placement === key).length })),
+  connection: [
+    { key: "wifi", label: "WLAN" },
+    { key: "poe", label: "PoE" },
+    { key: "cellular", label: "Mobilfunk" },
+  ].map(({ key, label }) => ({ key, label, count: securityCameraProducts.filter((product) => product.connection === key).length })),
+  power: [
+    { key: "battery", label: "Akku" },
+    { key: "mains", label: "Netzstrom" },
+    { key: "solar", label: "Solar" },
+    { key: "poe", label: "PoE" },
+  ].map(({ key, label }) => ({ key, label, count: securityCameraProducts.filter((product) => product.power === key).length })),
+  combinations: [
+    { label: "WLAN mit Netzstrom", count: securityCameraProducts.filter((product) => product.connection === "wifi" && product.power === "mains").length },
+    { label: "WLAN mit Akku", count: securityCameraProducts.filter((product) => product.connection === "wifi" && product.power === "battery").length },
+    { label: "WLAN mit Solar", count: securityCameraProducts.filter((product) => product.connection === "wifi" && product.power === "solar").length },
+    { label: "PoE", count: securityCameraProducts.filter((product) => product.connection === "poe" && product.power === "poe").length },
+    { label: "Mobilfunk mit Solar", count: securityCameraProducts.filter((product) => product.connection === "cellular" && product.power === "solar").length },
+  ],
+  setSizes: [1, 2, 4].map((cameraCount) => ({
+    cameraCount,
+    ...summarizeCameraSetSizes(securityCameraProducts.filter((product) => product.cameraCount === cameraCount), securityCameraPrices),
+  })),
+  resolution: [
+    { key: "hd", label: "HD" },
+    { key: "2k", label: "2K" },
+    { key: "3k", label: "3K" },
+    { key: "4k", label: "4K" },
+  ].map(({ key, label }) => ({ key, label, count: securityCameraProducts.filter((product) => product.resolution === key).length })),
+} as const;
+
+function summarizeIrrigationProducts(products: readonly IrrigationProduct[], prices: ReadonlyMap<string, number>) {
+  return {
+    count: products.length,
+    share: rounded(percent(products.length, irrigationProducts.length), 1),
+    medianPriceEur: rounded(median(priceValues(products, prices)), 2),
+  };
+}
+
+const irrigationProducts = reportProducts(irrigationCatalog.products);
+const irrigationPrices = bestAvailablePriceByProduct(irrigationCatalog);
+const irrigationKinds = [
+  { key: "pipe", label: "Rohre und Leitungen" },
+  { key: "connector", label: "Verbinder" },
+  { key: "sprinkler", label: "Regner" },
+  { key: "dripline", label: "Tropfbewässerung" },
+  { key: "controller", label: "Steuerungen" },
+  { key: "valve", label: "Ventile" },
+  { key: "pressure-reducer", label: "Druckminderer" },
+  { key: "filter", label: "Filter" },
+] as const;
+
+export const irrigationDataReport = {
+  generatedAt: irrigationCatalog.generatedAt,
+  updatedLabel: formatReportDate(irrigationCatalog.generatedAt),
+  total: irrigationProducts.length,
+  available: irrigationProducts.filter((product) => irrigationPrices.has(product.id)).length,
+  brands: countDistinct(irrigationProducts.map((product) => product.brand)),
+  medianPriceEur: rounded(median(priceValues(irrigationProducts, irrigationPrices)), 2),
+  kinds: irrigationKinds.map(({ key, label }) => ({
+    key,
+    label,
+    ...summarizeIrrigationProducts(irrigationProducts.filter((product) => product.kind === key), irrigationPrices),
+  })),
+  brandConcentration: irrigationProducts.filter((product) => product.brand === "Gardena").length,
+  coverage: {
+    smartCompatibleYes: irrigationProducts.filter((product) => product.smartCompatible === true).length,
+    smartCompatibleKnown: irrigationProducts.filter((product) => product.smartCompatible !== undefined).length,
+    maxZones: irrigationProducts.filter((product) => product.maxZones !== undefined).length,
+    requiredAccessories: irrigationProducts.filter((product) => product.requiredAccessories !== undefined).length,
+    pipeDiameter: irrigationProducts.filter((product) => product.pipeDiameterMm !== undefined).length,
+  },
 } as const;

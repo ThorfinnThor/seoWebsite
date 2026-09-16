@@ -884,14 +884,69 @@ body:has(.embed-route) #main {
 .dehumidifier-use-grid strong { color: var(--green); font-size: .9rem; }
 .dehumidifier-no-ranking { max-width: 900px; text-align: center; }
 .dehumidifier-no-ranking p { margin-left: auto; margin-right: auto; }
+.data-report-hero--mower { background: radial-gradient(circle at 82% 18%,rgba(190,229,144,.6),transparent 25%),#f5f6ee; }
+.mower-navigation, .camera-combination-section, .camera-resolution-section, .irrigation-anatomy { display: grid; grid-template-columns: minmax(0,.82fr) minmax(380px,1.18fr); align-items: center; gap: clamp(54px,8vw,100px); }
+.mower-navigation > div > p:not(.eyebrow), .camera-combination-copy > p:not(.eyebrow), .camera-resolution-section > div > p:not(.eyebrow), .irrigation-anatomy > div > p:not(.eyebrow) { color: var(--muted); line-height: 1.75; }
+.mower-navigation h2, .camera-combination-section h2, .camera-resolution-section h2, .irrigation-anatomy h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.2vw,2.9rem); }
+.mower-area-bands { max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); background: #f3f6ec; }
+.mower-band-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.mower-band-grid article { padding: 30px; border: 1px solid var(--line); border-radius: 18px; background: #fff; }
+.mower-band-grid article > p { margin: 0 0 20px; color: var(--green-2); font-size: .77rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+.mower-band-grid article > strong, .mower-band-grid article > span { display: block; }
+.mower-band-grid article > strong { color: var(--green); font-size: 2rem; }
+.mower-band-grid article > span { color: var(--muted); font-size: .8rem; }
+.mower-band-grid dl { margin: 24px 0 0; }
+.mower-band-grid dl div { display: flex; padding: 12px 0; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); }
+.mower-band-grid dt { color: var(--muted); font-size: .82rem; }
+.mower-band-grid dd { margin: 0; font-weight: 800; }
+.data-report-hero--camera { background: radial-gradient(circle at 83% 18%,rgba(189,221,230,.65),transparent 25%),#f4f6f3; }
+.camera-four-zone { max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); background: #eef4f4; }
+.camera-four-zone-heading { max-width: 880px; }
+.camera-four-zone-heading h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.4vw,3rem); }
+.camera-four-zone-heading > p:last-child { color: var(--muted); line-height: 1.75; }
+.camera-set-grid { display: grid; margin-top: 42px; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.camera-set-grid article { padding: 30px; border: 1px solid #d5e1e0; border-radius: 18px; background: #fff; }
+.camera-set-grid article > span { color: var(--green-2); font-size: .76rem; font-weight: 850; letter-spacing: .06em; text-transform: uppercase; }
+.camera-set-grid article > strong { display: block; margin: 17px 0 4px; color: var(--green); font-size: 2rem; }
+.camera-set-grid article > p { margin: 0; color: var(--muted); font-size: .82rem; }
+.camera-set-grid dl { margin: 24px 0 0; }
+.camera-set-grid dl div { padding: 12px 0; border-top: 1px solid var(--line); }
+.camera-set-grid dt { color: var(--muted); font-size: .77rem; }
+.camera-set-grid dd { margin: 3px 0 0; font-weight: 800; }
+.camera-data-questions { max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); background: var(--cream); }
+.camera-data-questions > div:first-child { max-width: 760px; }
+.camera-data-questions h2 { margin: 8px 0 0; font-size: clamp(1.9rem,3.3vw,2.9rem); }
+.camera-question-grid { display: grid; margin-top: 42px; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+.camera-question-grid article { position: relative; padding: 30px 30px 30px 82px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.camera-question-grid span { position: absolute; top: 30px; left: 27px; color: var(--green-2); font-size: .76rem; font-weight: 850; }
+.camera-question-grid h3 { margin: 0 0 9px; }
+.camera-question-grid p { margin: 0; color: var(--muted); font-size: .9rem; }
+.data-report-hero--irrigation { background: radial-gradient(circle at 84% 18%,rgba(151,211,183,.55),transparent 26%),#f4f5ed; }
+.irrigation-planning-gap { display: grid; max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); grid-template-columns: minmax(0,.8fr) minmax(430px,1.2fr); gap: clamp(50px,8vw,96px); background: #edf4ef; }
+.irrigation-gap-copy h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.2vw,2.9rem); }
+.irrigation-gap-copy > p:last-child { color: var(--muted); line-height: 1.75; }
+.irrigation-coverage-list { display: grid; gap: 12px; }
+.irrigation-coverage-list article { display: grid; padding: 22px; grid-template-columns: 112px 1fr; gap: 22px; border: 1px solid #d4e2d8; border-radius: 15px; background: #fff; }
+.irrigation-coverage-list article > strong { color: var(--green-2); font-size: 1.3rem; }
+.irrigation-coverage-list h3 { margin: 0 0 7px; font-size: 1.05rem; }
+.irrigation-coverage-list p { margin: 0; color: var(--muted); font-size: .85rem; }
+.irrigation-project-path { display: grid; grid-template-columns: minmax(0,.75fr) minmax(420px,1.25fr); gap: clamp(54px,8vw,100px); }
+.irrigation-project-path h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.2vw,2.9rem); }
+.irrigation-project-path > div > p:last-child { color: var(--muted); line-height: 1.75; }
+.irrigation-project-path ol { margin: 0; padding: 0; list-style: none; counter-reset: irrigation-path; }
+.irrigation-project-path li { display: grid; position: relative; padding: 17px 0 17px 58px; grid-template-columns: 145px 1fr; gap: 18px; border-top: 1px solid var(--line); counter-increment: irrigation-path; }
+.irrigation-project-path li:last-child { border-bottom: 1px solid var(--line); }
+.irrigation-project-path li::before { position: absolute; top: 14px; left: 0; display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; color: var(--green); background: var(--lime); content: counter(irrigation-path); font-size: .78rem; font-weight: 850; }
+.irrigation-project-path li span { font-weight: 850; }
+.irrigation-project-path li p { margin: 0; color: var(--muted); font-size: .88rem; }
 
 @media (max-width: 900px) {
-  .data-report-hero-grid, .data-split-section, .data-split-section--reverse, .flooring-decision, .dehumidifier-coverage { grid-template-columns: 1fr; gap: 44px; }
+  .data-report-hero-grid, .data-split-section, .data-split-section--reverse, .flooring-decision, .dehumidifier-coverage, .mower-navigation, .camera-combination-section, .camera-resolution-section, .irrigation-anatomy, .irrigation-planning-gap, .irrigation-project-path { grid-template-columns: 1fr; gap: 44px; }
   .data-report-hero-grid { align-items: start; }
   .data-metric-grid { grid-template-columns: repeat(2,1fr); }
   .data-metric-grid > div:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .data-metric-grid > div:nth-child(4) { border-top: 1px solid var(--line); }
-  .data-gap-grid, .flooring-scenario-grid, .data-report-links { grid-template-columns: 1fr; }
+  .data-gap-grid, .flooring-scenario-grid, .data-report-links, .mower-band-grid, .camera-set-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 680px) {
@@ -900,7 +955,7 @@ body:has(.embed-route) #main {
   .data-report-hero-grid { margin-top: 45px; }
   .data-report-hero h1 { font-size: 2.55rem; }
   .data-report-section { padding: 68px 20px; }
-  .data-metric-grid, .flooring-approval-grid, .dehumidifier-use-grid { grid-template-columns: 1fr; }
+  .data-metric-grid, .flooring-approval-grid, .dehumidifier-use-grid, .camera-question-grid { grid-template-columns: 1fr; }
   .data-metric-grid > div + div { border-top: 1px solid var(--line); border-left: 0; }
   .flooring-approval-grid article { grid-template-columns: 65px 1fr; padding: 24px; }
   .flooring-approval-grid article > span { font-size: 2.7rem; }
@@ -908,6 +963,8 @@ body:has(.embed-route) #main {
   .data-next-step { align-items: flex-start; flex-direction: column; }
   .data-next-step .button { width: 100%; }
   .data-report-links { padding: 0 20px; }
+  .irrigation-coverage-list article { grid-template-columns: 1fr; gap: 8px; }
+  .irrigation-project-path li { grid-template-columns: 1fr; gap: 5px; }
 }
 
 @media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h3 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid, .planner-faq-list { grid-template-columns: repeat(2,1fr); } .planner-faq-list div:last-child { grid-column: 1 / -1; } }

@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { dehumidifierDataReport, flooringDataReport, gardenHouseDataReport } from "./catalog-insights";
+import { dehumidifierDataReport, flooringDataReport, gardenHouseDataReport, irrigationDataReport, robotMowerDataReport, securityCameraDataReport } from "./catalog-insights";
 
 describe("catalog data reports", () => {
   it("accounts for every garden house in exclusive groupings", () => {
@@ -23,5 +23,27 @@ describe("catalog data reports", () => {
     for (const field of dehumidifierDataReport.coverage) {
       expect(field.count).toBeLessThanOrEqual(dehumidifierDataReport.total);
     }
+  });
+
+  it("accounts for every mower in navigation and area groupings", () => {
+    expect(robotMowerDataReport.navigation.reduce((sum, row) => sum + row.count, 0)).toBe(robotMowerDataReport.total);
+    expect(robotMowerDataReport.areaBands.reduce((sum, row) => sum + row.count, 0)).toBe(robotMowerDataReport.coverage.ratedArea);
+    expect(robotMowerDataReport.coverage.passage).toBeLessThan(robotMowerDataReport.total);
+  });
+
+  it("calculates complete four-zone camera scenarios from actual pack sizes", () => {
+    expect(securityCameraDataReport.setSizes.reduce((sum, row) => sum + row.products, 0)).toBe(securityCameraDataReport.total);
+    for (const setSize of securityCameraDataReport.setSizes) {
+      expect(setSize.requiredSets * setSize.cameraCount).toBeGreaterThanOrEqual(4);
+      expect(setSize.medianTotalEur).toBeGreaterThan(0);
+    }
+    expect(securityCameraDataReport.combinations.reduce((sum, row) => sum + row.count, 0)).toBe(securityCameraDataReport.total);
+  });
+
+  it("keeps irrigation categories complete while exposing specification gaps", () => {
+    expect(irrigationDataReport.kinds.reduce((sum, row) => sum + row.count, 0)).toBe(irrigationDataReport.total);
+    expect(irrigationDataReport.coverage.maxZones).toBeLessThan(irrigationDataReport.total);
+    expect(irrigationDataReport.coverage.requiredAccessories).toBeLessThan(irrigationDataReport.total);
+    expect(irrigationDataReport.coverage.smartCompatibleKnown).toBe(irrigationDataReport.coverage.smartCompatibleYes);
   });
 });

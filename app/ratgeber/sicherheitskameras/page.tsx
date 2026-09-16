@@ -40,6 +40,12 @@ const guides = [
     title: "Speicherbedarf für Aufnahmen",
     text: "Kamerazahl, durchschnittliche Bitrate, aktive Aufnahmezeit und Aufbewahrung werden zu einem transparenten Planungswert verbunden.",
   },
+  {
+    href: "/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/",
+    eyebrow: "Produktdaten",
+    title: "20 Kameras im Datencheck",
+    text: "Verbindung, Stromversorgung und Setgröße werden gemeinsam ausgewertet, einschließlich einer transparenten Rechnung für vier Überwachungszonen.",
+  },
 ] as const;
 
 export default function Page() {
@@ -47,7 +53,7 @@ export default function Page() {
     <section className="page-hero camera-hub-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Sicherheitskameras" }]} />
       <p className="eyebrow">Sicherheitskameras sinnvoll planen</p>
-      <h1>Fünf Fragen, die vor dem Produktvergleich geklärt gehören.</h1>
+      <h1>Sechs Blickwinkel für eine belastbare Kameraplanung.</h1>
       <p>Eine Kamera kann technisch überzeugen und am vorgesehenen Ort trotzdem unpraktisch sein. Diese Ratgeber betrachten Installation, Betrieb und Speicher aus verschiedenen Richtungen und führen anschließend in den passenden Finder.</p>
     </section>
     <section className="directory-section camera-hub-directory">
