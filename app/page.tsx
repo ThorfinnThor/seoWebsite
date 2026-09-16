@@ -12,7 +12,7 @@ export default function HomePage() {
             <h1>Verstehe deinen Bedarf und <em>vergleiche</em> passende Produkte.</h1>
             <p className="hero-copy">PassendPlanen übersetzt dein Projekt in nachvollziehbare Anforderungen und filtert nur Produkte, die wirklich dazu passen.</p>
             <div className="hero-actions">
-              <Link className="button button--primary" href="/rechner/">Alle 11 Rechner ansehen <span aria-hidden="true">→</span></Link>
+              <Link className="button button--primary" href="/rechner/">Alle 12 Rechner ansehen <span aria-hidden="true">→</span></Link>
               <Link className="text-link" href="#rechner">Direkt auswählen</Link>
             </div>
           </div>

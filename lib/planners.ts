@@ -8,6 +8,7 @@ export type PlannerIconName =
   | "greenhouse"
   | "robot-mower"
   | "security-camera"
+  | "security-camera-storage"
   | "carport"
   | "drywall";
 
@@ -85,6 +86,24 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
       { question: "Wie viele Sicherheitskameras brauche ich?", answer: "Zähle getrennte Blickwinkel statt nur Quadratmeter. Hausecken, geschlossene Türen und verdeckte Zufahrten benötigen meist eigene Positionen. Der Finder rechnet die Setgröße auf deine Bereiche hoch." },
       { question: "Wann ist eine PoE Kamera sinnvoll?", answer: "PoE verbindet Netzwerk und Strom in einem geeigneten Kabel. Das kann stabiler als WLAN sein, setzt aber eine geplante Leitung, kompatible Netzwerkhardware und eine fachgerechte Montage voraus." },
       { question: "Darf eine private Kamera Straße oder Nachbargrundstück filmen?", answer: "Der zulässige Bildbereich hängt von der konkreten Situation und den geltenden Datenschutzregeln ab. Richte die Kamera so aus, dass fremde und öffentliche Bereiche nicht unnötig erfasst werden, und hole bei Unsicherheit rechtlichen Rat ein." },
+    ],
+  },
+  {
+    id: "security-camera-storage",
+    area: "house",
+    title: "Sicherheitskamera Speicherrechner",
+    category: "Haus · Sicherheit",
+    shortCategory: "Sicherheit",
+    description: "Bitrate, Aufnahmezeit, Aufbewahrung, Kamerazahl und Reserve zu einem nachvollziehbaren Speicherbedarf verbinden.",
+    homeDescription: "Speicherbedarf aus Bitrate, Aufnahmezeit, Aufbewahrung und Reserve berechnen.",
+    href: "/haus/sicherheit/sicherheitskamera-speicher-rechner/",
+    icon: "security-camera-storage",
+    cta: "Speicherbedarf berechnen",
+    outputs: ["Speicherbedarf je Kamera und Tag", "Planungswert mit frei wählbarer Reserve", "Gesamte Videodatenrate für alle Kameras"],
+    faqs: [
+      { question: "Welche Angabe bestimmt den Speicherbedarf am stärksten?", answer: "Die durchschnittliche Bitrate ist der wichtigste technische Ausgangswert. Aufnahmezeit, Aufbewahrung und Kamerazahl wirken direkt auf die Datenmenge. Auflösung allein reicht für eine belastbare Schätzung nicht aus." },
+      { question: "Wie werden Ereignisaufnahmen im Speicherrechner abgebildet?", answer: "Trage die durchschnittliche aktive Aufnahmezeit pro Tag ein. Bei Ereignisaufnahmen sollte dieser Wert über mehrere typische Tage beobachtet werden, damit Vorlauf, Nachlauf und bewegte Szenen nicht unterschätzt werden." },
+      { question: "Ist das Ergebnis eine konkrete Festplattenempfehlung?", answer: "Nein. Das Ergebnis ist ein Planungswert. Nutzbare Kapazität, Dateisystem, Recorderfreigabe, Redundanz und die tatsächliche Bitrate müssen vor dem Kauf mit dem konkreten System abgeglichen werden." },
     ],
   },
   {

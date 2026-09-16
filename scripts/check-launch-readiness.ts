@@ -46,9 +46,9 @@ const checks: Check[] = [
     detail: "Startseite und Rechnerübersicht müssen im Export vorhanden sein.",
   },
   {
-    status: PLANNERS.length === 11 ? "ready" : "blocked",
+    status: PLANNERS.length === 12 ? "ready" : "blocked",
     label: "Rechner",
-    detail: `${PLANNERS.length} von 11 geplanten Rechnern sind registriert.`,
+    detail: `${PLANNERS.length} von 12 geplanten Rechnern sind registriert.`,
   },
   {
     status: await exists(".github/workflows/ci.yml") ? "ready" : "blocked",

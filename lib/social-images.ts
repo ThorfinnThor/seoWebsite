@@ -3,6 +3,7 @@ import type { PlannerId } from "@/lib/planners";
 const TOPIC_RULES: readonly [RegExp, PlannerId][] = [
   [/gartenhaus/, "garden-house"],
   [/luftentfeuchter|raumklima|feuchte/, "dehumidifier"],
+  [/sicherheitskamera-speicher/, "security-camera-storage"],
   [/sicherheitskamera|ueberwachungskamera|kamera-finder/, "security-camera"],
   [/bewaesser|tropf|durchfluss/, "irrigation"],
   [/terrasse|dielen/, "terrace"],

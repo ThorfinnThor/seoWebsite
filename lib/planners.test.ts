@@ -2,15 +2,15 @@ import { describe, expect, it } from "vitest";
 import { getPlanner, PLANNERS } from "./planners";
 
 describe("planner directory", () => {
-  it("contains all eleven calculators exactly once", () => {
-    expect(PLANNERS).toHaveLength(11);
-    expect(new Set(PLANNERS.map((planner) => planner.id)).size).toBe(11);
-    expect(new Set(PLANNERS.map((planner) => planner.href)).size).toBe(11);
+  it("contains all twelve calculators exactly once", () => {
+    expect(PLANNERS).toHaveLength(12);
+    expect(new Set(PLANNERS.map((planner) => planner.id)).size).toBe(12);
+    expect(new Set(PLANNERS.map((planner) => planner.href)).size).toBe(12);
   });
 
-  it("groups the directory into seven garden and four house tools", () => {
+  it("groups the directory into seven garden and five house tools", () => {
     expect(PLANNERS.filter((planner) => planner.area === "garden")).toHaveLength(7);
-    expect(PLANNERS.filter((planner) => planner.area === "house")).toHaveLength(4);
+    expect(PLANNERS.filter((planner) => planner.area === "house")).toHaveLength(5);
   });
 
   it("gives every calculator three concrete result descriptions", () => {
