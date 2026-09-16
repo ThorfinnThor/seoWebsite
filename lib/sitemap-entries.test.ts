@@ -3,9 +3,15 @@ import { ALL_SITEMAP_ENTRIES, SITEMAP_SEGMENTS } from "@/lib/sitemap-entries";
 
 describe("segmented sitemap inventory", () => {
   it("covers every indexable URL exactly once", () => {
-    expect(ALL_SITEMAP_ENTRIES).toHaveLength(172);
+    expect(ALL_SITEMAP_ENTRIES).toHaveLength(176);
     expect(new Set(ALL_SITEMAP_ENTRIES.map((entry) => entry.url)).size).toBe(ALL_SITEMAP_ENTRIES.length);
     expect(SITEMAP_SEGMENTS).toHaveLength(2);
+  });
+
+  it("includes the curated data reports and their directory", () => {
+    const urls = ALL_SITEMAP_ENTRIES.map((entry) => entry.url);
+    expect(urls).toContain("https://www.passendplanen.de/ratgeber/daten/");
+    expect(urls.filter((url) => url.startsWith("https://www.passendplanen.de/ratgeber/daten/") && url !== "https://www.passendplanen.de/ratgeber/daten/")).toHaveLength(3);
   });
 
   it("keeps unedited programmatic detail pages out of the indexable inventory", () => {

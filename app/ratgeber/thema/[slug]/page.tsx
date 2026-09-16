@@ -10,6 +10,7 @@ import { getGuidesForTopic, getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 import { getProjectExampleDirectory } from "@/lib/project-examples";
 import { getDecisionGuideDirectory } from "@/lib/decision-guides";
 import { editorializeText } from "@/lib/editorial-style";
+import { getDataReportsForTopic } from "@/lib/data-report/registry";
 
 const FEATURED_MOWER_CASES = [
   {
@@ -65,6 +66,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const guides = getGuidesForTopic(SEO_GUIDES, topic);
   const projectDirectory = getProjectExampleDirectory(topic.slug);
   const comparisonDirectory = getDecisionGuideDirectory(topic.slug);
+  const dataReports = getDataReportsForTopic(topic.slug);
   const url = absoluteUrl(`/ratgeber/thema/${topic.slug}/`);
 
   return <>
@@ -93,6 +95,10 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Messen und passend vergleichen.</h2><p>{editorializeText(topic.method)}</p></div>
       <ol>{topic.questions.map((question, index) => <li key={question}><span>0{index + 1}</span><strong>{question}</strong></li>)}</ol>
     </section>
+    {dataReports.length > 0 && <section className="directory-section data-topic-reports" aria-labelledby="topic-data-reports">
+      <div className="section-heading"><div><p className="eyebrow">Aus geprüften Produktdaten</p><h2 id="topic-data-reports">Eigene Auswertungen für diesen Themenbereich</h2></div><p>Die Analysen zeigen Stichprobe, Berechnung und Datenlücken. Sie sind keine pauschalen Testsiegerlisten.</p></div>
+      <div className="directory-grid">{dataReports.map((report) => <article className="directory-card" key={report.slug}><p className="eyebrow">{report.eyebrow}</p><h3>{report.title}</h3><p>{report.description}</p><Link className="text-link" href={report.path}>Datenauswertung lesen →</Link></article>)}</div>
+    </section>}
     <section className="directory-section" id="ratgeber">
       <div className="section-heading"><div><p className="eyebrow">{topic.name}</p><h2>Alle Rechner, Szenarien und Vergleiche</h2></div><p>{editorializeText(topic.description)}</p></div>
       <div className="directory-grid">{guides.map((guide) => <article className="directory-card" key={guide.slug}><p className="eyebrow">Ratgeber & Entscheidungshilfe</p><h3>{guide.title}</h3><p>{guide.description}</p><Link className="text-link" href={`/ratgeber/${guide.slug}/`}>Ratgeber lesen →</Link></article>)}</div>

@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import { DECISION_GUIDE_DIRECTORIES, INDEXABLE_DECISION_GUIDES } from "@/lib/decision-guides";
+import { DATA_REPORTS } from "@/lib/data-report/registry";
 import { legalContactComplete } from "@/lib/legal";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
@@ -18,7 +19,7 @@ export type SitemapSegment = {
 const SITE_URL = SITE.url.replace(/\/$/, "");
 
 const CORE_PATHS = [
-  "", "/rechner", "/garten", "/ratgeber", "/ratgeber/sicherheitskameras",
+  "", "/rechner", "/garten", "/ratgeber", "/ratgeber/daten", "/ratgeber/sicherheitskameras",
   "/garten/gartenhaus-planer", "/garten/gartenhaus-groesse", "/garten/gartenhaus-fundament", "/garten/gartenhaus-kosten", "/garten/gartenhaus-fuer-fahrraeder", "/garten/gartenhaus-boden", "/garten/gartenhaus-zubehoer",
   "/garten/bewaesserungs-planer", "/garten/bewaesserung-durchfluss-messen", "/garten/tropfbewaesserung-hecke", "/garten/rasenbewaesserung-planen", "/garten/bewaesserungscomputer-zonen",
   "/garten/terrassen-dielen-rechner", "/garten/terrassendielen-verschnitt-fugen", "/garten/terrasse-unterkonstruktion", "/garten/terrasse-kosten",
@@ -64,6 +65,7 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
     label: "Redaktionelle Ratgeber",
     entries: [
       ...SEO_GUIDES.map((guide) => entry(`/ratgeber/${guide.slug}`, CONTENT_UPDATED_AT)),
+      ...DATA_REPORTS.map((report) => entry(report.path.replace(/\/$/, ""), report.updatedAt)),
       ...[
         "/ratgeber/sicherheitskameras/wlan-oder-poe",
         "/ratgeber/sicherheitskameras/akku-solar-oder-netzstrom",
