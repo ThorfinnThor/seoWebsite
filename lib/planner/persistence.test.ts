@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { readPlannerState, writePlannerState, type PlannerStorage } from "./persistence";
+import { getPlannerSessionStorage, readPlannerState, writePlannerState, type PlannerStorage } from "./persistence";
 
 function memoryStorage(initial: Record<string, string> = {}): PlannerStorage & { values: Map<string, string> } {
   const values = new Map(Object.entries(initial));
@@ -29,5 +29,15 @@ describe("planner session persistence", () => {
     const storage: PlannerStorage = { getItem: () => { throw new Error("blocked"); }, setItem: () => { throw new Error("blocked"); }, removeItem: () => { throw new Error("blocked"); } };
     expect(readPlannerState(storage, "planner", () => null)).toBeNull();
     expect(writePlannerState(storage, "planner", { value: 1 })).toBe(false);
+  });
+
+  it("falls back to in-memory state when the sandbox blocks sessionStorage access", () => {
+    const blockedScope = {
+      get sessionStorage(): PlannerStorage {
+        throw new DOMException("Blocked by sandbox", "SecurityError");
+      },
+    };
+
+    expect(getPlannerSessionStorage(blockedScope)).toBeNull();
   });
 });

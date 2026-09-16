@@ -4,6 +4,16 @@ export interface PlannerStorage {
   removeItem(key: string): void;
 }
 
+export function getPlannerSessionStorage(scope: {
+  readonly sessionStorage: PlannerStorage;
+}): PlannerStorage | null {
+  try {
+    return scope.sessionStorage;
+  } catch {
+    return null;
+  }
+}
+
 export function readPlannerState<T>(storage: PlannerStorage, key: string, parse: (value: unknown) => T | null): T | null {
   try {
     const raw = storage.getItem(key);
