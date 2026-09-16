@@ -6,10 +6,12 @@ import {
   type GuideSource,
 } from "@/lib/guide-enrichments";
 import { GUIDE_DEPTH_EXISTING } from "@/lib/guide-depth-existing";
+import type { GuideDataInsight } from "@/lib/guide-data-insights";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { absoluteUrl, SITE } from "@/lib/site";
 import { editorializeText } from "@/lib/editorial-style";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
+import { GuideDataInsightBlock } from "./GuideDataInsight";
 import { JsonLd } from "./JsonLd";
 
 export interface GuideSection {
@@ -54,6 +56,7 @@ interface GuidePageProps {
   checklist?: string[];
   faqs?: GuideFaq[];
   relatedLinks?: GuideRelatedLink[];
+  dataInsight?: GuideDataInsight;
 }
 
 export function GuidePage({
@@ -75,6 +78,7 @@ export function GuidePage({
   checklist = [],
   faqs = [],
   relatedLinks = [],
+  dataInsight,
 }: GuidePageProps) {
   const url = absoluteUrl(path);
   const siteRoot = SITE.url.replace(/\/$/, "");
@@ -152,6 +156,7 @@ export function GuidePage({
     ...displayFaqs.flatMap((faq) => [faq.question, faq.answer]),
     ...displayRelatedLinks.flatMap((link) => [link.label, link.description]),
     ...(displayExample ? [displayExample.title, displayExample.intro, ...displayExample.steps.flatMap((step) => [step.label, step.value]), displayExample.result, displayExample.note ?? ""] : []),
+    ...(dataInsight ? [dataInsight.title, dataInsight.intro, ...dataInsight.metrics.flatMap((metric) => [metric.value, metric.label, metric.note ?? ""]), ...dataInsight.rows.flatMap((row) => [row.label, ...row.values, row.note ?? ""]), dataInsight.conclusion, dataInsight.caveat] : []),
     displayLimitation,
   ].join(" ").trim().split(/\s+/).filter(Boolean).length;
 
@@ -237,6 +242,8 @@ export function GuidePage({
                 )}
               </section>
             ))}
+
+            {dataInsight ? <GuideDataInsightBlock insight={dataInsight} /> : null}
 
             {displayComparison && (
               <section className="guide-comparison" aria-labelledby="guide-comparison-title">

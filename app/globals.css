@@ -448,6 +448,51 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .guide-copy h2 { font-size: 2rem; }
 .guide-copy p, .guide-copy li { max-width: 820px; color: #4f5c55; }
 .guide-copy li { margin: 8px 0; }
+.guide-copy > .guide-data { margin: 12px 0 54px; padding: 38px; border: 1px solid #d8e2db; border-radius: 22px; background: #f6f8f3; }
+.guide-data-heading { display: grid; grid-template-columns: minmax(0,1fr) minmax(260px,.78fr); gap: 42px; align-items: end; }
+.guide-data-heading h2 { margin: 8px 0 0; font-size: clamp(1.65rem,2.4vw,2.25rem); line-height: 1.08; overflow-wrap: normal; hyphens: none; }
+.guide-data h3 { overflow-wrap: normal; hyphens: none; }
+.guide-data-heading > p { margin: 0; }
+.guide-data-metrics { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); margin: 32px 0; overflow: hidden; border: 1px solid var(--line); border-radius: 14px; background: #fff; }
+.guide-data-metrics > div { min-width: 0; padding: 22px; }
+.guide-data-metrics > div + div { border-left: 1px solid var(--line); }
+.guide-data-metrics dd { margin: 0 0 7px; color: var(--green); font-family: Georgia,serif; font-size: clamp(1.55rem,3vw,2.2rem); font-weight: 700; line-height: 1; }
+.guide-data-metrics dt { color: var(--ink); font-size: .78rem; font-weight: 800; line-height: 1.4; }
+.guide-data-metrics p { margin: 7px 0 0; font-size: .72rem; line-height: 1.45; }
+.guide-data-table table { width: 100%; min-width: 720px; border-collapse: collapse; background: #fff; }
+.guide-data-table th, .guide-data-table td { padding: 15px 16px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+.guide-data-table thead th { color: #fff; background: var(--green); font-size: .75rem; }
+.guide-data-table tbody th { width: 34%; color: var(--ink); background: #fbfaf6; }
+.guide-data-table tbody th strong, .guide-data-table tbody th span { display: block; }
+.guide-data-table tbody th span { margin-top: 6px; color: var(--muted); font-size: .72rem; font-weight: 500; line-height: 1.45; }
+.guide-data-duel { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 16px; }
+.guide-data-duel article { padding: 26px; border-radius: 16px; background: #fff; }
+.guide-data-duel article:nth-child(2) { background: #edf4ef; }
+.guide-data-duel h3 { margin: 0 0 18px; font-size: 1.35rem; }
+.guide-data-duel dl { margin: 0; }
+.guide-data-duel dl div { display: flex; justify-content: space-between; gap: 18px; padding: 10px 0; border-top: 1px solid var(--line); }
+.guide-data-duel dt { color: var(--muted); font-size: .78rem; }
+.guide-data-duel dd { margin: 0; color: var(--ink); font-weight: 850; text-align: right; }
+.guide-data-duel article > p { margin: 18px 0 0; font-size: .78rem; }
+.guide-data-bars { display: grid; gap: 13px; }
+.guide-data-bars article { padding: 18px 20px; border-radius: 13px; background: #fff; }
+.guide-data-bars article > div:first-child { display: flex; justify-content: space-between; gap: 18px; }
+.guide-data-bars article > div:first-child span { color: var(--muted); font-size: .76rem; text-align: right; }
+.guide-data-bars article > div:nth-child(2) { height: 7px; margin-top: 11px; overflow: hidden; border-radius: 99px; background: #e7ece8; }
+.guide-data-bars article > div:nth-child(2) span { display: block; height: 100%; border-radius: inherit; background: var(--green-2); }
+.guide-data-bars article > p { margin: 10px 0 0; font-size: .76rem; }
+.guide-data-reading { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; margin-top: 24px; overflow: hidden; border-radius: 13px; background: var(--line); }
+.guide-data-reading > div { padding: 22px; background: #fff; }
+.guide-data-reading > div:last-child { background: #fbf5e8; }
+.guide-data-reading p { margin: 7px 0 0; font-size: .84rem; line-height: 1.6; }
+.guide-data-source { margin: 18px 0 0; font-size: .76rem; }
+.guide-data-source a { color: var(--green-2); font-weight: 800; text-underline-offset: 3px; }
+.guide-data--bands { border-top: 7px solid #2e7153 !important; }
+.guide-data--matrix { border-top: 7px solid #476c81 !important; }
+.guide-data--duel { border-top: 7px solid #8c6c3f !important; }
+.guide-data--mix { border-top: 7px solid #4f7d72 !important; }
+.guide-data--scenario { border-top: 7px solid #857145 !important; }
+.guide-data--coverage { border-top: 7px solid #9a6949 !important; }
 .guide-copy > .guide-example { margin-bottom: 48px; padding: 34px 36px; border: 1px solid #dce6df; border-radius: 18px; background: #f7faf7; }
 .guide-example .eyebrow, .guide-sources .eyebrow { margin-bottom: 10px; }
 .guide-example h2, .guide-sources h2 { margin-top: 0; }
@@ -1082,6 +1127,7 @@ body:has(.embed-route) #main {
 @media (max-width: 620px) { .project-example-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .legal-page > header h1 { font-size: 2.2rem; } .guide-page header h1 { font-size: 2.45rem; } .tool-filters { display: grid; width: 100%; grid-template-columns: repeat(3,1fr); } .tool-filter { justify-content: center; padding-left: 8px; padding-right: 8px; } .tool-card { display: flex; padding: 28px 24px; } .tool-card-top { display: flex; } .tool-card-top .status-pill { display: inline-flex; } .tool-card h3 { margin-top: 28px; } .tool-card .button { width: 100%; } .related-guides .guide-grid { grid-template-columns: 1fr; } }
 @media (max-width: 650px) { .guide-layout aside { display: block; padding: 24px; } .guide-layout aside p { margin-bottom: 22px; } .guide-layout aside .button { width: 100%; max-width: none; } .guide-copy > .guide-example { padding: 26px 22px; } }
+@media (max-width: 760px) { .guide-copy > .guide-data { padding: 27px 22px; } .guide-data-heading, .guide-data-reading, .guide-data-duel { grid-template-columns: 1fr; gap: 22px; } .guide-data-metrics { grid-template-columns: 1fr; } .guide-data-metrics > div + div { border-top: 1px solid var(--line); border-left: 0; } .guide-data-bars article > div:first-child { align-items: flex-start; flex-direction: column; gap: 4px; } .guide-data-bars article > div:first-child span { text-align: left; } }
 @media (max-width: 650px) { .guide-related > div { grid-template-columns: 1fr; } }
 @media (max-width: 520px) { .guide-example dl div { grid-template-columns: 1fr; gap: 3px; } .guide-example dd { text-align: left; } }
 
