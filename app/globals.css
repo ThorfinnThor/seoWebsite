@@ -939,14 +939,115 @@ body:has(.embed-route) #main {
 .irrigation-project-path li::before { position: absolute; top: 14px; left: 0; display: grid; width: 34px; height: 34px; place-items: center; border-radius: 50%; color: var(--green); background: var(--lime); content: counter(irrigation-path); font-size: .78rem; font-weight: 850; }
 .irrigation-project-path li span { font-weight: 850; }
 .irrigation-project-path li p { margin: 0; color: var(--muted); font-size: .88rem; }
+.project-data-carport-hero { background: radial-gradient(circle at 84% 18%,rgba(205,215,224,.72),transparent 26%),#f6f5ef; }
+.project-data-greenhouse-hero { background: radial-gradient(circle at 84% 18%,rgba(174,220,175,.62),transparent 26%),#f3f6ee; }
+.project-data-privacy-hero { background: radial-gradient(circle at 84% 18%,rgba(225,207,177,.7),transparent 26%),#f7f3eb; }
+.project-data-terrace-hero { background: radial-gradient(circle at 84% 18%,rgba(217,190,151,.58),transparent 26%),#f6f2e9; }
+.project-data-drywall-hero { background: radial-gradient(circle at 84% 18%,rgba(205,210,221,.62),transparent 26%),#f5f5f2; }
+.project-data-card-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 16px; }
+.project-data-card-grid article { padding: 29px; border: 1px solid var(--line); border-radius: 17px; background: #fff; }
+.project-data-card-grid span { color: var(--green-2); font-size: .75rem; font-weight: 850; letter-spacing: .07em; text-transform: uppercase; }
+.project-data-card-grid strong { display: block; margin: 17px 0 12px; color: var(--green); font-size: 1.8rem; }
+.project-data-card-grid p { margin: 5px 0 0; color: var(--muted); font-size: .86rem; }
+.project-data-band-section, .project-price-corridor, .greenhouse-area-story, .drywall-board-types { max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); background: var(--cream); }
+.project-price-corridor { display: grid; grid-template-columns: minmax(0,.55fr) minmax(520px,1.45fr); gap: 70px; }
+.project-price-corridor h2, .project-data-note h2, .project-measure-route h2, .project-material-questions h2, .project-system-chain h2, .project-coverage-matrix h2, .project-system-proof h2 { margin: 8px 0 0; font-size: clamp(1.9rem,3.2vw,2.85rem); }
+.project-price-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; }
+.project-price-grid article { padding: 25px; border: 1px solid var(--line); border-radius: 15px; background: #fff; }
+.project-price-grid h3 { margin: 0 0 12px; font-size: 1.05rem; }
+.project-price-grid strong { color: var(--green-2); font-size: 1.45rem; }
+.project-price-grid p { margin: 10px 0 0; color: var(--muted); font-size: .82rem; }
+.project-data-note { display: grid; grid-template-columns: minmax(0,.65fr) minmax(420px,1.35fr); gap: 75px; }
+.project-data-note ol { margin: 0; padding: 0; list-style: none; counter-reset: project-note; }
+.project-data-note li { display: grid; position: relative; padding: 17px 0 17px 54px; border-top: 1px solid var(--line); counter-increment: project-note; }
+.project-data-note li:last-child { border-bottom: 1px solid var(--line); }
+.project-data-note li::before { position: absolute; top: 14px; left: 0; display: grid; width: 33px; height: 33px; place-items: center; border-radius: 50%; color: var(--green); background: var(--lime); content: counter(project-note); font-size: .78rem; font-weight: 850; }
+.project-data-note li span { margin-top: 4px; color: var(--muted); font-size: .88rem; }
+.project-coverage-hero { display: grid; grid-template-columns: minmax(0,1fr) minmax(300px,.7fr); align-items: center; gap: 80px; }
+.project-coverage-hero h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.4vw,3rem); }
+.project-coverage-hero > div:first-child > p:last-child { color: var(--muted); line-height: 1.75; }
+.project-coverage-number { display: grid; padding: 34px; grid-template-columns: 1fr 1fr; gap: 5px 18px; border: 1px solid var(--line); border-radius: 18px; background: #fff; box-shadow: var(--shadow); }
+.project-coverage-number strong { color: var(--green); font-size: 3rem; line-height: 1; }
+.project-coverage-number span { color: var(--muted); font-size: .8rem; }
+.project-coverage-number i { grid-column: 1/-1; margin: 16px 0; color: var(--green-2); font-size: .78rem; font-style: normal; font-weight: 850; letter-spacing: .08em; text-transform: uppercase; }
+.project-measure-route { display: grid; grid-template-columns: minmax(0,.7fr) minmax(450px,1.3fr); gap: 80px; }
+.project-measure-route ul { display: grid; margin: 0; padding: 0; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; list-style: none; }
+.project-measure-route li { padding: 24px; border: 1px solid var(--line); border-radius: 15px; }
+.project-measure-route li > span { color: var(--green-2); font-size: .72rem; font-weight: 850; }
+.project-measure-route li > strong { display: block; margin: 11px 0 7px; }
+.project-measure-route li p { margin: 0; color: var(--muted); font-size: .84rem; }
+.project-material-questions { display: grid; grid-template-columns: minmax(0,.65fr) minmax(470px,1.35fr); gap: 75px; }
+.project-material-questions ul { display: grid; margin: 0; padding: 0; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 12px; list-style: none; }
+.project-material-questions li { padding: 24px; border-top: 4px solid var(--green-2); background: var(--cream); }
+.project-material-questions li strong, .project-material-questions li span { display: block; }
+.project-material-questions li span { margin-top: 8px; color: var(--muted); font-size: .85rem; }
+.greenhouse-accessory-strip, .terrace-length-map { display: grid; grid-template-columns: minmax(0,.85fr) minmax(400px,1.15fr); gap: 80px; align-items: center; }
+.greenhouse-accessory-strip h2, .terrace-length-map h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.2vw,2.85rem); }
+.greenhouse-accessory-strip > div > p:last-child, .terrace-length-map > div > p:last-child { color: var(--muted); line-height: 1.75; }
+.privacy-dimension-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 70px; }
+.privacy-dimension-pair h2 { margin: 8px 0 30px; font-size: 1.65rem; }
+.privacy-cost-lead { display: grid; grid-template-columns: minmax(0,1.25fr) minmax(280px,.75fr); gap: 80px; align-items: center; }
+.privacy-cost-lead h2 { margin: 8px 0 18px; font-size: clamp(2rem,3.5vw,3.1rem); }
+.privacy-cost-lead > div > p:last-child { color: var(--muted); line-height: 1.75; }
+.privacy-cost-lead aside { padding: 34px; color: #fff; border-radius: 18px; background: var(--green); }
+.privacy-cost-lead aside span { display: block; color: var(--lime); font-size: 2.4rem; font-weight: 850; }
+.privacy-cost-lead aside strong { display: block; margin-top: 8px; }
+.privacy-cost-lead aside p { margin-bottom: 0; color: #d2e0d8; font-size: .85rem; }
+.privacy-cost-formula { display: grid; grid-template-columns: minmax(0,.7fr) minmax(450px,1.3fr); gap: 80px; background: #f3f6ee; }
+.privacy-cost-formula h2 { margin: 8px 0 0; font-size: clamp(1.9rem,3vw,2.75rem); }
+.privacy-cost-formula > div:last-child { display: grid; padding: 30px; grid-template-columns: 150px 1fr; gap: 18px 25px; border-radius: 17px; background: #fff; }
+.privacy-cost-formula span { color: var(--muted); font-size: .82rem; }
+.project-system-chain { display: grid; grid-template-columns: minmax(0,.6fr) minmax(500px,1.4fr); gap: 75px; }
+.project-system-chain-grid, .project-coverage-matrix > div:last-child { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 13px; }
+.project-system-chain-grid article, .project-coverage-matrix article { padding: 25px; border: 1px solid var(--line); border-radius: 15px; background: #fff; }
+.project-system-chain-grid strong, .project-coverage-matrix strong { display: block; color: var(--green-2); font-size: 1.7rem; }
+.project-system-chain-grid span, .project-coverage-matrix span { display: block; margin-top: 6px; font-weight: 850; }
+.project-system-chain-grid p, .project-coverage-matrix p { margin-bottom: 0; color: var(--muted); font-size: .83rem; }
+.terrace-material-duel { display: grid; grid-template-columns: 1fr .75fr 1fr; gap: 16px; align-items: stretch; }
+.terrace-material-duel article { padding: 30px; border: 1px solid var(--line); border-radius: 17px; }
+.terrace-material-duel article > strong { display: block; color: var(--green); font-size: 1.8rem; }
+.terrace-material-duel dl div { display: flex; padding: 11px 0; justify-content: space-between; gap: 15px; border-top: 1px solid var(--line); }
+.terrace-material-duel dd { margin: 0; font-weight: 850; }
+.terrace-material-duel > div { display: flex; padding: 28px; flex-direction: column; justify-content: center; color: #fff; border-radius: 17px; background: var(--green); }
+.terrace-material-duel > div p { color: #d2e0d8; }
+.terrace-material-duel > div span { margin-top: 9px; color: var(--lime); font-size: .77rem; font-weight: 850; }
+.terrace-cut-scenarios { max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); background: var(--cream); }
+.terrace-cut-scenarios h2 { margin: 8px 0 32px; font-size: clamp(1.9rem,3.2vw,2.85rem); }
+.terrace-cut-scenarios > div:last-child { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 14px; }
+.terrace-cut-scenarios article { padding: 28px; border: 1px solid var(--line); border-radius: 16px; background: #fff; }
+.terrace-cut-scenarios article span { color: var(--green-2); font-size: .72rem; font-weight: 850; }
+.terrace-cut-scenarios article p { color: var(--muted); font-size: .87rem; }
+.project-coverage-matrix { display: grid; max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); grid-template-columns: minmax(0,.6fr) minmax(500px,1.4fr); gap: 75px; background: var(--cream); }
+.terrace-basket { display: grid; grid-template-columns: minmax(0,.65fr) minmax(450px,1.35fr); gap: 75px; }
+.terrace-basket h2 { margin: 8px 0 0; font-size: clamp(1.9rem,3.2vw,2.85rem); }
+.terrace-basket dl { margin: 0; }
+.terrace-basket dl div { display: grid; padding: 18px 0; grid-template-columns: 160px 1fr; gap: 20px; border-top: 1px solid var(--line); }
+.terrace-basket dl div:last-child { border-bottom: 1px solid var(--line); }
+.terrace-basket dt { font-weight: 850; }
+.terrace-basket dd { margin: 0; color: var(--muted); }
+.drywall-profile-lines { max-width: none; padding-left: max(24px,calc((100vw - 1160px)/2)); padding-right: max(24px,calc((100vw - 1160px)/2)); background: #f2f3f1; }
+.drywall-profile-role { display: grid; grid-template-columns: minmax(0,.65fr) minmax(500px,1.35fr); gap: 75px; }
+.drywall-profile-role h2 { margin: 8px 0 0; font-size: clamp(1.9rem,3.2vw,2.85rem); }
+.drywall-profile-role > div:last-child { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 12px; }
+.drywall-profile-role article { padding: 25px; border-top: 4px solid var(--green-2); background: var(--cream); }
+.drywall-profile-role article > strong { font-size: 1.45rem; }
+.drywall-profile-role article p { color: var(--muted); font-size: .85rem; }
+.project-system-proof { display: grid; grid-template-columns: minmax(0,.7fr) minmax(450px,1.3fr); gap: 75px; }
+.project-system-proof > p { color: var(--muted); line-height: 1.75; }
+.project-system-proof > div:last-child { display: flex; grid-column: 1/-1; align-items: center; justify-content: space-between; gap: 10px; }
+.project-system-proof > div:last-child span, .project-system-proof > div:last-child strong { padding: 15px 18px; border-radius: 99px; text-align: center; }
+.project-system-proof > div:last-child span { border: 1px solid var(--line); background: #fff; }
+.project-system-proof > div:last-child strong { color: var(--green); background: var(--lime); }
 
 @media (max-width: 900px) {
-  .data-report-hero-grid, .data-split-section, .data-split-section--reverse, .flooring-decision, .dehumidifier-coverage, .mower-navigation, .camera-combination-section, .camera-resolution-section, .irrigation-anatomy, .irrigation-planning-gap, .irrigation-project-path { grid-template-columns: 1fr; gap: 44px; }
+  .data-report-hero-grid, .data-split-section, .data-split-section--reverse, .flooring-decision, .dehumidifier-coverage, .mower-navigation, .camera-combination-section, .camera-resolution-section, .irrigation-anatomy, .irrigation-planning-gap, .irrigation-project-path, .project-price-corridor, .project-data-note, .project-coverage-hero, .project-measure-route, .project-material-questions, .greenhouse-accessory-strip, .terrace-length-map, .privacy-cost-lead, .privacy-cost-formula, .project-system-chain, .project-coverage-matrix, .terrace-basket, .drywall-profile-role, .project-system-proof { grid-template-columns: 1fr; gap: 44px; }
   .data-report-hero-grid { align-items: start; }
   .data-metric-grid { grid-template-columns: repeat(2,1fr); }
   .data-metric-grid > div:nth-child(3) { border-left: 0; border-top: 1px solid var(--line); }
   .data-metric-grid > div:nth-child(4) { border-top: 1px solid var(--line); }
-  .data-gap-grid, .flooring-scenario-grid, .data-report-links, .mower-band-grid, .camera-set-grid { grid-template-columns: 1fr; }
+  .data-gap-grid, .flooring-scenario-grid, .data-report-links, .mower-band-grid, .camera-set-grid, .project-data-card-grid, .terrace-material-duel, .terrace-cut-scenarios > div:last-child { grid-template-columns: 1fr; }
+  .project-price-grid, .privacy-dimension-pair { grid-template-columns: 1fr; gap: 35px; }
+  .project-system-proof > div:last-child { align-items: stretch; flex-direction: column; }
 }
 
 @media (max-width: 680px) {
@@ -965,6 +1066,8 @@ body:has(.embed-route) #main {
   .data-report-links { padding: 0 20px; }
   .irrigation-coverage-list article { grid-template-columns: 1fr; gap: 8px; }
   .irrigation-project-path li { grid-template-columns: 1fr; gap: 5px; }
+  .project-measure-route ul, .project-material-questions ul, .project-system-chain-grid, .project-coverage-matrix > div:last-child, .drywall-profile-role > div:last-child { grid-template-columns: 1fr; }
+  .privacy-cost-formula > div:last-child, .terrace-basket dl div { grid-template-columns: 1fr; gap: 6px; }
 }
 
 @media (max-width: 980px) { .tool-directory-header { align-items: flex-start; flex-direction: column; gap: 24px; } .tool-grid { grid-template-columns: 1fr; } .tool-grid .tool-card:last-child:nth-child(3n + 1) { grid-column: auto; } .tool-card { display: grid; grid-template-columns: 90px 1fr; column-gap: 24px; } .tool-card-top { grid-row: 1/5; display: block; } .tool-card-top .status-pill { display: none; } .tool-card h3 { margin-top: 0; } .tool-card .button { width: fit-content; } .related-guides .guide-grid, .planner-faq-list { grid-template-columns: repeat(2,1fr); } .planner-faq-list div:last-child { grid-column: 1 / -1; } }
