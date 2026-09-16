@@ -12,6 +12,17 @@ export const EnergyCostInputSchema = z.object({
   electricityPriceCentsKwh: z.number().min(1).max(200),
 });
 
+export const TerraceCostInputSchema = z.object({
+  areaM2: z.number().min(1).max(1000),
+  wastePercent: z.number().min(0).max(30),
+  deckingPricePerM2: z.number().min(0).max(5000),
+  substructurePricePerM2: z.number().min(0).max(5000),
+  foundationPricePerM2: z.number().min(0).max(5000),
+  fasteningPricePerM2: z.number().min(0).max(5000),
+  laborPricePerM2: z.number().min(0).max(5000),
+  fixedCostsEur: z.number().min(0).max(1_000_000),
+});
+
 const round = (value: number, digits = 2) => {
   const factor = 10 ** digits;
   return Math.round((value + Number.EPSILON) * factor) / factor;
@@ -37,5 +48,27 @@ export function calculateEnergyCost(input: z.infer<typeof EnergyCostInputSchema>
     monthlyKwh: round(monthlyKwh, 1),
     monthlyCostEur: round(monthlyKwh * priceEurKwh, 2),
     annualCostEur: round(monthlyKwh * priceEurKwh * 12, 2),
+  };
+}
+
+export function calculateTerraceCost(input: z.infer<typeof TerraceCostInputSchema>) {
+  const purchaseAreaM2 = input.areaM2 * (1 + input.wastePercent / 100);
+  const deckingCostEur = purchaseAreaM2 * input.deckingPricePerM2;
+  const substructureCostEur = input.areaM2 * input.substructurePricePerM2;
+  const foundationCostEur = input.areaM2 * input.foundationPricePerM2;
+  const fasteningCostEur = input.areaM2 * input.fasteningPricePerM2;
+  const laborCostEur = input.areaM2 * input.laborPricePerM2;
+  const materialCostEur = deckingCostEur + substructureCostEur + foundationCostEur + fasteningCostEur;
+  const totalCostEur = materialCostEur + laborCostEur + input.fixedCostsEur;
+
+  return {
+    purchaseAreaM2: round(purchaseAreaM2, 1),
+    deckingCostEur: round(deckingCostEur),
+    materialCostEur: round(materialCostEur),
+    laborCostEur: round(laborCostEur),
+    fixedCostsEur: round(input.fixedCostsEur),
+    totalCostEur: round(totalCostEur),
+    totalCostPerM2Eur: round(totalCostEur / input.areaM2),
+    laborSharePercent: totalCostEur > 0 ? round(laborCostEur / totalCostEur * 100, 1) : 0,
   };
 }

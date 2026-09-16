@@ -7,8 +7,8 @@ import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { TerracePlanner } from "./TerracePlanner";
 
 export const metadata = createPageMetadata({
-  title: "Terrassendielen-Rechner",
-  description: "Dielenreihen, Laufmeter, Verschnitt, Lieferdielen und Unterkonstruktion für eine rechteckige Terrasse transparent abschätzen.",
+  title: "Terrassendielen mit Verschnitt berechnen",
+  description: "Dielen, Laufmeter, Verschnitt, Lieferlängen und Unterkonstruktion für eine rechteckige Terrasse nachvollziehbar berechnen.",
   path: "/garten/terrassen-dielen-rechner/",
 });
 

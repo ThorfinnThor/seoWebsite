@@ -2,11 +2,12 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { ResultInterpretation } from "@/components/calculator/ResultInterpretation";
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { buildIrrigationPlan } from "@/lib/irrigation/rules";
-import { IrrigationInputSchema, type IrrigationInput } from "@/lib/irrigation/types";
+import { IrrigationInputSchema, type IrrigationInput, type IrrigationPlan } from "@/lib/irrigation/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
 import { IrrigationCatalogRecommendations } from "@/components/product/IrrigationCatalogRecommendations";
@@ -109,6 +110,7 @@ export function IrrigationPlanner() {
     </div>}
     {step === 4 && plan && <div className="results">
       <div className="requirement-summary"><div><span>System</span><strong>{plan.style === "combined" ? "Kombiniert" : plan.style === "sprinkler" ? "Rasen" : "Tropf"}</strong></div><div><span>Nutzungsbereiche</span><strong>{plan.activeCategories}</strong></div><div><span>Steuerungszonen</span><strong>{plan.controllerZones || "manuell"}</strong></div><div><span>Budgetrahmen</span><strong>{input.budgetMaxEur.toLocaleString("de-DE")} €</strong></div></div>
+      <IrrigationInterpretation input={input} plan={plan} />
       <div className="component-plan"><div className="result-heading"><div><p className="eyebrow">Erste Materialstruktur</p><h3>Diese Kategorien solltest du einplanen.</h3></div></div>{plan.components.map((component) => <article key={`${component.kind}-${component.label}`}><span className="component-icon" aria-hidden="true">{component.kind === "dripline" ? "≈" : component.kind === "controller" ? "⌁" : "○"}</span><div><h4>{component.label}</h4><strong>{component.quantity}</strong><p>{component.note}</p></div></article>)}</div>
       <div className="warning-panel"><h3>Vor der Produktauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}</ul></div>
       <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.irrigation, { "irrigation-controller": input.automaticControl ? `${plan.controllerZones || 1} Zonen` : "manuell", "irrigation-valves": input.automaticControl ? `${plan.controllerZones || 1} Stück` : "optional", "irrigation-dripline": `${formatM(input.hedgeLengthM)} m Hecke + Beete nach Plan`, "irrigation-sprinklers": `${formatM(input.lawnAreaM2)} m² Rasenfläche`, "irrigation-filter": "1 Set", "irrigation-pipe": "nach Leitungsplan" })} />
@@ -140,4 +142,12 @@ function Check({ label, detail, checked, disabled = false, onChange }: { label: 
 
 function formatM(value: number) {
   return value.toLocaleString("de-DE", { maximumFractionDigits: 1 });
+}
+
+function IrrigationInterpretation({ input, plan }: { input: IrrigationInput; plan: IrrigationPlan }) {
+  const measurementsMissing = input.waterFlowLMin === undefined || input.waterPressureBar === undefined;
+  if (measurementsMissing) return <ResultInterpretation title="Die Materialstruktur steht, die Hydraulik noch nicht.">Für {plan.activeCategories} Nutzungsbereiche lassen sich Komponenten und Steuerung vorplanen. Regner, Leitungsdurchmesser und gleichzeitig nutzbare Zonen bleiben offen, bis Durchfluss und Fließdruck gemessen sind.</ResultInterpretation>;
+  if (plan.style === "combined") return <ResultInterpretation title={`${plan.activeCategories} Bereiche brauchen unterschiedliche Bewässerung.`}>Rasenregner und Tropfleitungen arbeiten meist mit anderen Laufzeiten und Anforderungen. {input.automaticControl ? `Der Plan hält deshalb ${plan.controllerZones} Steuerungszonen einschließlich einer Reserve frei.` : "Bei manueller Bedienung sollten die Bereiche trotzdem getrennt absperrbar bleiben."}</ResultInterpretation>;
+  if (plan.style === "sprinkler") return <ResultInterpretation title="Die Rasenfläche braucht noch ein echtes Regnerlayout.">Die Fläche allein bestimmt weder Anzahl noch Position der Regner. Reichweite, Überlappung, Geometrie und die gemessene Wassermenge entscheiden, wie viele Regner gleichzeitig betrieben werden können.</ResultInterpretation>;
+  return <ResultInterpretation title="Tropfrohr ist hier der zentrale Verbraucher.">Für Hecke und Beete ergeben sich zusammen ungefähr {(plan.hedgeDriplineM + plan.bedDriplineM).toLocaleString("de-DE")} Meter Tropfrohr. Druckminderung, Filter und zulässige Leitungslänge müssen aus demselben System stammen.</ResultInterpretation>;
 }

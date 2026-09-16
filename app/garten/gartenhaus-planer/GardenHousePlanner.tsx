@@ -6,13 +6,14 @@ import { CalculatorShell } from "@/components/calculator/CalculatorShell";
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { ResultSummary } from "@/components/calculator/ResultSummary";
+import { ResultInterpretation } from "@/components/calculator/ResultInterpretation";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { ExpandableProductList } from "@/components/product/ExpandableProductList";
 import { ProductCard } from "@/components/product/ProductCard";
 import { loadGardenHouseCatalog } from "@/lib/catalog/load-client-catalog";
 import { calculateRequirements } from "@/lib/garden-house/rules";
 import { explainNoMatches, recommendGardenHouses } from "@/lib/garden-house/recommend";
-import { GardenHouseInputSchema, type GardenHouseCatalog, type GardenHouseInput } from "@/lib/garden-house/types";
+import { GardenHouseInputSchema, type GardenHouseCatalog, type GardenHouseInput, type GardenHouseRequirements } from "@/lib/garden-house/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
 import { useProductResultTracking } from "@/lib/analytics";
 
@@ -143,11 +144,13 @@ export function GardenHousePlanner() {
           <NumberField id="budget" label="Maximales Gesamtbudget" value={input.budgetMaxEur} min={100} max={100000} unit="€" error={fieldErrors.budgetMaxEur} onChange={(value) => update("budgetMaxEur", value)} wide />
           {formError && <p className="field-error" role="alert">{formError}</p>}
           {validatedInput && requirements && <ResultSummary input={validatedInput} requirements={requirements} />}
+          {validatedInput && requirements && <GardenHouseInterpretation input={validatedInput} requirements={requirements} />}
           {requirements && !requirements.hasSufficientArea && <div className="warning-panel" role="alert"><h3>Die verfügbare Stellfläche reicht noch nicht aus.</h3><p>Für deine Nutzung werden mindestens {requirements.recommendedAreaM2.toLocaleString("de-DE")} m² empfohlen; verfügbar sind {requirements.availableAreaM2.toLocaleString("de-DE", { maximumFractionDigits: 2 })} m². Reduziere die Nutzung oder prüfe eine größere Stellfläche, bevor du Produkte vergleichst.</p></div>}
           <InfoBox>Bei Angeboten mit unbekannten Versandkosten kann PassendPlanen die Budgeteinhaltung nicht sicher bestätigen. Sie werden klar als „zzgl. Versand“ gekennzeichnet.</InfoBox>
         </div>}
         {step === 5 && <div className="results" aria-live="polite">
           {validatedInput && requirements && <ResultSummary input={validatedInput} requirements={requirements} />}
+          {validatedInput && requirements && <GardenHouseInterpretation input={validatedInput} requirements={requirements} />}
           {requirements && !requirements.hasSufficientArea && <div className="result-state result-state--error" role="alert"><span className="result-symbol" aria-hidden="true">!</span><h3>Die verfügbare Stellfläche ist zu klein.</h3><p>Dein Bedarf liegt bei mindestens {requirements.recommendedAreaM2.toLocaleString("de-DE")} m², verfügbar sind aber nur {requirements.availableAreaM2.toLocaleString("de-DE", { maximumFractionDigits: 2 })} m². Dieser Planungsrahmen ist noch nicht bereit für einen Produktvergleich.</p><button className="button button--secondary" type="button" onClick={() => setStep(1)}>Stellfläche ändern</button></div>}
           {status === "loading" && <div className="result-state"><span className="loader" aria-hidden="true" /><h3>Geprüfte Produktdaten werden geladen …</h3><p>Wir laden nur den Gartenhaus-Katalog, nicht Daten anderer Planer.</p></div>}
           {status === "error" && <div className="result-state result-state--error"><h3>Produktdaten konnten gerade nicht geladen werden.</h3><p>Deine Eingaben bleiben erhalten. Bitte versuche es später erneut.</p><button className="button button--secondary" onClick={showResults}>Erneut versuchen</button></div>}
@@ -177,4 +180,17 @@ function CheckCard({ label, detail, checked, onChange }: { label: string; detail
 
 function InfoBox({ children }: { children: React.ReactNode }) {
   return <div className="info-box"><span aria-hidden="true">i</span><p>{children}</p></div>;
+}
+
+function GardenHouseInterpretation({ input, requirements }: { input: GardenHouseInput; requirements: GardenHouseRequirements }) {
+  if (!requirements.hasSufficientArea) return null;
+  const reserveM2 = requirements.availableAreaM2 - requirements.recommendedAreaM2;
+  const tight = reserveM2 < 1.5;
+  const accessText = requirements.bulkyAccess
+    ? `Fahrräder oder Rasenmäher brauchen einen freien Weg durch eine Tür mit mindestens ${requirements.minDoorWidthCm} cm Breite.`
+    : `Für die gewählte Nutzung setzt die Auswahl eine Tür mit mindestens ${requirements.minDoorWidthCm} cm Breite an.`;
+  const useText = input.workbench
+    ? "Die Werkbank ist bereits im Flächenbedarf enthalten. Ihre Position sollte den Zugang zu Geräten und Regalen nicht blockieren."
+    : "Regale und Stellplätze sollten so angeordnet werden, dass Geräte nicht jedes Mal umgeräumt werden müssen.";
+  return <ResultInterpretation title={tight ? "Die Fläche passt, bietet aber wenig Spielraum." : `Es bleiben rechnerisch ${reserveM2.toLocaleString("de-DE", { maximumFractionDigits: 1 })} m² Reserve.`}>{accessText} {useText}</ResultInterpretation>;
 }

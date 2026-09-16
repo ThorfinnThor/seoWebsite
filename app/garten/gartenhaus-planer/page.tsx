@@ -6,8 +6,8 @@ import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { GardenHousePlanner } from "./GardenHousePlanner";
 
 export const metadata = createPageMetadata({
-  title: "Gartenhaus-Planer",
-  description: "Mindestfläche berechnen und geprüfte Gartenhäuser nach Stellfläche, Nutzung, Budget, Material, Dach und Boden filtern.",
+  title: "Gartenhaus planen und passende Größe berechnen",
+  description: "Gartenhausgröße, Stellfläche und Türbreite aus Fahrrädern, Geräten und Nutzung berechnen und passende geprüfte Modelle vergleichen.",
   path: "/garten/gartenhaus-planer/",
 });
 

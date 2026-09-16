@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { ResultInterpretation } from "@/components/calculator/ResultInterpretation";
 import { PlannerNumberField as NumberField } from "@/components/calculator/PlannerNumberField";
 import { usePlannerValidation } from "@/components/calculator/usePlannerValidation";
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculatePrivacyScreenPlan } from "@/lib/privacy-screen/rules";
-import { PrivacyScreenInputSchema, type PrivacyScreenInput } from "@/lib/privacy-screen/types";
+import { PrivacyScreenInputSchema, type PrivacyScreenInput, type PrivacyScreenPlan } from "@/lib/privacy-screen/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
 import { ProjectProductRecommendations } from "@/components/product/ProjectProductRecommendations";
 import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
@@ -96,6 +97,7 @@ export function PrivacyScreenPlanner() {
 
     {step === 4 && plan && <div className="results privacy-screen-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Standardfelder im Verlauf</span><strong>{plan.panelCount}</strong></div><div><span>Bestellmenge Felder</span><strong>{plan.orderPanelCount}</strong></div><div><span>Tor-Module</span><strong>{input.gateCount}</strong></div><div><span>Pfosten rechnerisch</span><strong>{plan.postCount}</strong></div></div>
+      <PrivacyScreenInterpretation input={input} plan={plan} />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">▥</span><div><p className="eyebrow">Felder</p><h3>{plan.panelCount} Standardfelder für den Verlauf</h3><p>Mit {format(input.systemFieldWidthCm)} cm Systemraster decken sie zusammen mit den Toren rechnerisch {format(plan.fullSystemLengthCm / 100)} m bei {format(input.fenceHeightCm)} cm gewünschter Höhe ab.</p><strong>Bestellrahmen: {plan.orderPanelCount} Felder{input.reservePanel ? " inklusive Reserve" : " ohne Reserve"}</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">┃</span><div><p className="eyebrow">Pfosten</p><h3>{plan.postCount} Pfosten beziehungsweise Verankerungspunkte</h3><p>Gezählt für {plan.bayCount} aufeinanderfolgende Module einer geraden Strecke. Eck-, End- und Torpfosten können unterschiedliche Artikel sein.</p><strong>Pfostentypen anhand des konkreten Systems aufteilen.</strong></div></article>
@@ -118,4 +120,10 @@ function Choice({ name, label, detail, checked, onChange }: { name: string; labe
 
 function format(value: number) {
   return value.toLocaleString("de-DE", { maximumFractionDigits: 1 });
+}
+
+function PrivacyScreenInterpretation({ input, plan }: { input: PrivacyScreenInput; plan: PrivacyScreenPlan }) {
+  if (input.windExposure === "exposed" || input.fenceHeightCm >= 200) return <ResultInterpretation title="Stückzahlen sind hier nicht das größte Risiko.">Mit {format(input.fenceHeightCm)} cm Höhe und {input.windExposure === "exposed" ? "windexponierter Lage" : "großer Windangriffsfläche"} müssen Pfosten, Verankerung und Fundament als freigegebenes Gesamtsystem geprüft werden. Die berechneten {plan.postCount} Pfosten sagen noch nichts über ihre erforderliche Dimension aus.</ResultInterpretation>;
+  if (plan.adjustmentRequired) return <ResultInterpretation title={`Das Standardraster ist ${format(plan.endAdjustmentCm)} cm länger als die Strecke.`}>Das letzte Feld müsste rechnerisch auf ungefähr {format(plan.lastFieldWidthCm)} cm Systembreite angepasst werden. Kläre vor der Bestellung, ob das Material kürzbar ist oder ein Sonderfeld benötigt wird.</ResultInterpretation>;
+  return <ResultInterpretation title="Das gewählte Raster geht rechnerisch ohne gekürztes Randfeld auf.">Trotzdem sollten Startpunkt, Pfostenachsen und Torposition direkt vor Ort markiert werden. Schon kleine Maßabweichungen können sich über {plan.bayCount} Module bis zum Endpfosten summieren.</ResultInterpretation>;
 }

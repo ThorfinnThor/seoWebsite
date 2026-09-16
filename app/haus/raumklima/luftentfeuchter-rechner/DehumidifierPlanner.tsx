@@ -4,6 +4,7 @@ import { useEffect, useRef, useState, type ReactNode } from "react";
 import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
 import { AffiliateLink } from "@/components/affiliate/AffiliateLink";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { ResultInterpretation } from "@/components/calculator/ResultInterpretation";
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
@@ -15,7 +16,7 @@ import { loadDehumidifierCatalog } from "@/lib/catalog/load-client-catalog";
 import { resolveOfferUrl } from "@/lib/catalog/offer-url";
 import { recommendDehumidifiers } from "@/lib/dehumidifier/recommend";
 import { calculateDehumidifierRequirements } from "@/lib/dehumidifier/rules";
-import { DehumidifierInputSchema, type DehumidifierCatalog, type DehumidifierInput } from "@/lib/dehumidifier/types";
+import { DehumidifierInputSchema, type DehumidifierCatalog, type DehumidifierInput, type DehumidifierRequirements } from "@/lib/dehumidifier/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
 import { useProductResultTracking } from "@/lib/analytics";
 
@@ -122,6 +123,7 @@ export function DehumidifierPlanner() {
     </div>}
     {step === 4 && validatedInput && <div className="results" aria-live="polite">
       <RequirementGrid input={validatedInput} />
+      {requirements && <DehumidifierInterpretation input={validatedInput} requirements={requirements} />}
       {status === "loading" && <State title="Geprüfte Produktdaten werden geladen." text="Wir laden nur den Luftentfeuchter-Katalog." />}
       {status === "error" && <State title="Produktdaten konnten nicht geladen werden." text="Deine Berechnung bleibt erhalten. Du kannst den Katalog erneut laden."><button type="button" className="button button--secondary" onClick={showResults}>Erneut versuchen</button></State>}
       {status === "ready" && catalog?.products.length === 0 && <State title="Der geprüfte Gerätekatalog wird noch aufgebaut." text="Dein Auswahlrahmen ist vollständig. Modelle erscheinen erst nach manueller Prüfung ihrer Herstellerangaben." />}
@@ -159,4 +161,11 @@ function RequirementGrid({ input }: { input: DehumidifierInput }) {
 
 function State({ title, text, children }: { title: string; text: string; children?: ReactNode }) {
   return <div className="result-state"><span className="result-symbol" aria-hidden="true">◇</span><h3>{title}</h3><p>{text}</p>{children}<p className="state-note">Keine Diagnose und keine ungeprüften Produktempfehlungen.</p></div>;
+}
+
+function DehumidifierInterpretation({ input, requirements }: { input: DehumidifierInput; requirements: DehumidifierRequirements }) {
+  if (input.roomType === "basement" && (input.approximateTemperatureC === undefined || input.approximateTemperatureC < 16)) return <ResultInterpretation title="Der kühle Keller erhöht den Auswahlrahmen.">Der Rechner sucht Geräte für mindestens {requirements.requiredAreaM2} m² beziehungsweise {requirements.requiredVolumeM3} m³. Prüfe zusätzlich die minimale Betriebstemperatur, weil die Nennleistung vieler Geräte unter anderen Prüfbedingungen angegeben wird.</ResultInterpretation>;
+  if (input.laundryDrying || input.roomType === "laundry") return <ResultInterpretation title="Wäschetrocknung erzeugt regelmäßige zusätzliche Feuchte.">Der Auswahlrahmen enthält deshalb einen höheren Puffer. Ein Wäschemodus, ein ausreichend großer Behälter oder der gewünschte kontinuierliche Ablauf sind hier wichtiger als ein reiner Vergleich der maximalen Literleistung.</ResultInterpretation>;
+  if (input.humiditySeverity === "high") return <ResultInterpretation title="Die hohe Belastung verlangt mehr als ein größeres Gerät.">Ein Modell für mindestens {requirements.requiredAreaM2} m² ist nur eine Auswahlhilfe. Anhaltende Feuchte, Schimmel oder Wassereintritt müssen unabhängig davon ursächlich geprüft werden.</ResultInterpretation>;
+  return <ResultInterpretation title="Der Gerätevergleich beginnt oberhalb der reinen Raumfläche.">Für {input.areaM2.toLocaleString("de-DE")} m² setzt der Rechner wegen Nutzung und Belastung mindestens {requirements.requiredAreaM2} m² Herstellerfreigabe an. Geräusch, Ablauf und Temperaturbereich bleiben gleichwertige Auswahlkriterien.</ResultInterpretation>;
 }

@@ -6,8 +6,8 @@ import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { DehumidifierPlanner } from "./DehumidifierPlanner";
 
 export const metadata = createPageMetadata({
-  title: "Luftentfeuchter-Rechner",
-  description: "Passende Gerätegröße nach Raumfläche, Volumen, Temperatur, Feuchtebelastung, Ablauf und Geräusch auswählen.",
+  title: "Luftentfeuchter nach Raumgröße berechnen",
+  description: "Passende Luftentfeuchter nach Raumfläche, Volumen, Temperatur, Feuchtebelastung, Ablauf und Geräusch auswählen.",
   path: "/haus/raumklima/luftentfeuchter-rechner/",
 });
 

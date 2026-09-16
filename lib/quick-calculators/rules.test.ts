@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateEnergyCost, calculateFlowRate, EnergyCostInputSchema, FlowRateInputSchema } from "./rules";
+import { calculateEnergyCost, calculateFlowRate, calculateTerraceCost, EnergyCostInputSchema, FlowRateInputSchema, TerraceCostInputSchema } from "./rules";
 
 describe("flow rate calculator", () => {
   it("calculates 10 liters in 30 seconds", () => {
@@ -25,4 +25,39 @@ describe("energy cost calculator", () => {
   it("calculates the operating-hour price", () => expect(calculateEnergyCost(input).costPerOperatingHourEur).toBe(0.105));
 
   it("rejects impossible daily runtime", () => expect(EnergyCostInputSchema.safeParse({ ...input, hoursPerDay: 25 }).success).toBe(false));
+});
+
+describe("terrace cost calculator", () => {
+  const input = {
+    areaM2: 20,
+    wastePercent: 10,
+    deckingPricePerM2: 60,
+    substructurePricePerM2: 25,
+    foundationPricePerM2: 15,
+    fasteningPricePerM2: 8,
+    laborPricePerM2: 70,
+    fixedCostsEur: 300,
+  };
+
+  it("applies the reserve only to the decking", () => {
+    const result = calculateTerraceCost(input);
+    expect(result.purchaseAreaM2).toBe(22);
+    expect(result.deckingCostEur).toBe(1320);
+    expect(result.materialCostEur).toBe(2280);
+  });
+
+  it("separates labor, fixed costs and the complete total", () => {
+    const result = calculateTerraceCost(input);
+    expect(result.laborCostEur).toBe(1400);
+    expect(result.totalCostEur).toBe(3980);
+    expect(result.totalCostPerM2Eur).toBe(199);
+  });
+
+  it("allows an empty offer without dividing incorrectly", () => {
+    const result = calculateTerraceCost({ ...input, deckingPricePerM2: 0, substructurePricePerM2: 0, foundationPricePerM2: 0, fasteningPricePerM2: 0, laborPricePerM2: 0, fixedCostsEur: 0 });
+    expect(result.totalCostEur).toBe(0);
+    expect(result.laborSharePercent).toBe(0);
+  });
+
+  it("rejects an excessive reserve", () => expect(TerraceCostInputSchema.safeParse({ ...input, wastePercent: 40 }).success).toBe(false));
 });

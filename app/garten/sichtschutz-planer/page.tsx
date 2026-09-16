@@ -7,8 +7,8 @@ import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { PrivacyScreenPlanner } from "./PrivacyScreenPlanner";
 
 export const metadata = createPageMetadata({
-  title: "Sichtschutz- und Zaunfeld-Planer",
-  description: "Sichtschutzfelder, Tor-Module, Pfosten und Rasteranpassung für eine gerade Strecke nachvollziehbar abschätzen.",
+  title: "Sichtschutz mit Feldern und Pfosten berechnen",
+  description: "Sichtschutzfelder, Tore, Pfosten und notwendige Rasteranpassungen für eine gerade Strecke nachvollziehbar berechnen.",
   path: "/garten/sichtschutz-planer/",
 });
 

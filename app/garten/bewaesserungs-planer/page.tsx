@@ -7,8 +7,8 @@ import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { IrrigationPlanner } from "./IrrigationPlanner";
 
 export const metadata = createPageMetadata({
-  title: "Bewässerungsplaner",
-  description: "Tropfrohr, Systemkategorien und Steuerungszonen für Rasen, Beete und Hecken transparent abschätzen.",
+  title: "Bewässerungsplaner für Zonen und Tropfrohr",
+  description: "Bewässerungszonen, Tropfrohr und benötigte Komponenten für Rasen, Beete und Hecken berechnen und fehlende Messwerte erkennen.",
   path: "/garten/bewaesserungs-planer/",
 });
 

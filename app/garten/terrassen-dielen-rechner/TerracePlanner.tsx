@@ -2,13 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { CalculatorShell } from "@/components/calculator/CalculatorShell";
+import { ResultInterpretation } from "@/components/calculator/ResultInterpretation";
 import { PlannerNumberField as NumberField } from "@/components/calculator/PlannerNumberField";
 import { usePlannerValidation } from "@/components/calculator/usePlannerValidation";
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
-import { TerraceInputSchema, type TerraceInput } from "@/lib/terrace/types";
+import { TerraceInputSchema, type TerraceInput, type TerracePlan } from "@/lib/terrace/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
 import { ProjectProductRecommendations } from "@/components/product/ProjectProductRecommendations";
 import { REFERENCE_PRODUCTS, setReferenceQuantities } from "@/lib/reference-products";
@@ -84,6 +85,7 @@ export function TerracePlanner() {
 
     {step === 4 && plan && <div className="results terrace-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Fläche</span><strong>{format(plan.areaM2)} m²</strong></div><div><span>Dielenreihen</span><strong>{plan.courseCount}</strong></div><div><span>Dielen inkl. Reserve</span><strong>{format(plan.deckingLinearMWithWaste)} lfm</strong></div><div><span>Volle Lieferdielen</span><strong>ca. {plan.fullBoardsToBuy}</strong></div></div>
+      <TerraceInterpretation input={input} plan={plan} />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">═</span><div><p className="eyebrow">Belag</p><h3>{plan.courseCount} Dielenreihen</h3><p>{format(plan.deckingLinearM)} laufende Meter ohne und {format(plan.deckingLinearMWithWaste)} laufende Meter mit {input.wastePercent} % Reserve.</p><strong>Bei {format(input.boardLengthM)} m Lieferlänge: ca. {plan.fullBoardsToBuy} volle Dielen</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">╫</span><div><p className="eyebrow">Unterkonstruktion</p><h3>{plan.supportRowCount} Auflagerlinien</h3><p>Geschätzt {format(plan.supportLinearMWithWaste)} laufende Meter inklusive Reserve bei maximal {format(input.maxSupportSpacingCm)} cm Abstand.</p><strong>{plan.fixingIntersections.toLocaleString("de-DE")} rechnerische Kreuzungspunkte</strong></div></article>
@@ -106,4 +108,10 @@ function DirectionChoice({ label, detail, checked, onChange }: { label: string; 
 
 function format(value: number, maximumFractionDigits = 1) {
   return value.toLocaleString("de-DE", { maximumFractionDigits });
+}
+
+function TerraceInterpretation({ input, plan }: { input: TerraceInput; plan: TerracePlan }) {
+  if (!plan.fullLengthPossible) return <ResultInterpretation title="Das Stoßbild entscheidet über die tatsächliche Bestellung.">Pro Reihe entsteht mindestens {plan.minimumJointsPerCourse} Längsstoß. Diese Stöße brauchen passende Auflager und sollten versetzt geplant werden. Die rechnerischen {plan.fullBoardsToBuy} Lieferdielen sind deshalb erst nach einem Zuschnittplan bestellreif.</ResultInterpretation>;
+  if (input.wastePercent === 15) return <ResultInterpretation title="Die Lieferlänge reicht, die hohe Reserve braucht aber einen Grund.">Jede Reihe kann ohne Längsstoß verlegt werden. Die gewählten 15 Prozent Reserve passen vor allem bei vielen Ausschnitten, schwieriger Sortierung oder wenn Ersatzdielen aus derselben Serie zurückgelegt werden sollen.</ResultInterpretation>;
+  return <ResultInterpretation title="Jede Dielenreihe kann ohne Längsstoß verlegt werden.">Das vereinfacht das Stoßbild, ersetzt aber keinen Zuschnittplan. Prüfe die Randanpassung von ungefähr {plan.edgeAdjustmentMm.toLocaleString("de-DE")} mm und ob geeignete Reststücke in anderen Reihen verwendet werden können.</ResultInterpretation>;
 }
