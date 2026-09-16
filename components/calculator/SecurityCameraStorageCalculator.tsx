@@ -1,7 +1,17 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { AffiliateDisclosure } from "@/components/affiliate/AffiliateDisclosure";
+import { AffiliateLink } from "@/components/affiliate/AffiliateLink";
+import { ExpandableProductList } from "@/components/product/ExpandableProductList";
+import { PriceDisplay } from "@/components/product/PriceDisplay";
+import { ProductImage } from "@/components/product/ProductImage";
+import { useProductResultTracking } from "@/lib/analytics";
+import { loadSecurityCameraCatalog } from "@/lib/catalog/load-client-catalog";
+import { resolveOfferUrl } from "@/lib/catalog/offer-url";
 import { calculateSecurityCameraStorage, SecurityCameraStorageInputSchema } from "@/lib/quick-calculators/rules";
+import { cameraOffersForCount } from "@/lib/security-camera/storage-offers";
+import type { SecurityCameraCatalog } from "@/lib/security-camera/types";
 
 interface StorageInput {
   cameraCount: number;
@@ -27,8 +37,26 @@ const EXAMPLES: Array<{ label: string; detail: string; values: StorageInput }> =
 
 export function SecurityCameraStorageCalculator() {
   const [input, setInput] = useState<StorageInput>(INITIAL_VALUES);
+  const [catalog, setCatalog] = useState<SecurityCameraCatalog | null>(null);
+  const [catalogStatus, setCatalogStatus] = useState<"loading" | "ready" | "error">("loading");
   const parsed = SecurityCameraStorageInputSchema.safeParse(input);
   const result = parsed.success ? calculateSecurityCameraStorage(parsed.data) : null;
+  const cameraOffers = catalog && parsed.success ? cameraOffersForCount(catalog, parsed.data.cameraCount) : [];
+  useProductResultTracking({ planner: "security-camera", ready: catalogStatus === "ready", matchCount: cameraOffers.length, technicalMatchCount: 0 });
+
+  useEffect(() => {
+    let active = true;
+    loadSecurityCameraCatalog()
+      .then((loadedCatalog) => {
+        if (!active) return;
+        setCatalog(loadedCatalog);
+        setCatalogStatus("ready");
+      })
+      .catch(() => {
+        if (active) setCatalogStatus("error");
+      });
+    return () => { active = false; };
+  }, []);
 
   function update(key: keyof StorageInput, value: number) {
     setInput((current) => ({ ...current, [key]: value }));
@@ -58,6 +86,34 @@ export function SecurityCameraStorageCalculator() {
         <Result label="Gesamte Videodatenrate" value={result ? `${format(result.aggregateBitrateMbps, 1)} Mbit/s` : "–"} />
       </div>
       <StorageInterpretation input={input} result={result} />
+      <section className="storage-product-recommendations" aria-labelledby="storage-product-title">
+        <p className="eyebrow">Geprüfte Tink Angebote</p>
+        <h3 id="storage-product-title">Kameraangebote für {parsed.success ? parsed.data.cameraCount : "deine"} geplante {parsed.success && parsed.data.cameraCount === 1 ? "Kamera" : "Kameras"}</h3>
+        <p>Die Reihenfolge berücksichtigt ausschließlich, wie genau die Setgröße zu deiner Kamerazahl passt. Einsatzort, Verbindung, Stromversorgung, Funktionen und Speicherkompatibilität sind hier nicht geprüft.</p>
+        {catalogStatus === "loading" && <div className="storage-offer-state" role="status"><span className="loader" aria-hidden="true" /><p>Geprüfte Kameraangebote werden geladen.</p></div>}
+        {catalogStatus === "error" && <div className="storage-offer-state"><strong>Die Kameraangebote konnten gerade nicht geladen werden.</strong><p>Der Speicherrechner funktioniert unabhängig davon. Im Kamera Finder kannst du die technischen Kriterien vollständig prüfen.</p></div>}
+        {catalogStatus === "ready" && cameraOffers.length === 0 && <div className="storage-offer-state"><strong>Aktuell ist kein geprüftes Tink Angebot verfügbar.</strong><p>Der Speicherrechner bleibt ohne Produktverknüpfung nutzbar.</p></div>}
+        {cameraOffers.length > 0 && <>
+          <AffiliateDisclosure />
+          <ExpandableProductList items={cameraOffers} ariaLabel="Tink Kameraangebote nach Setgröße" renderItem={({ product, offer, requiredSets, resultingCameraCount, estimatedTotalEur }, index) => <article className="product-card" key={product.id}>
+            <div className="rank-badge">#{index + 1}</div>
+            <ProductImage src={offer.imageUrl} alt={product.name} />
+            <div className="product-content">
+              <p className="product-brand">{product.brand ?? "Sicherheitskamera"}</p>
+              <h3>{product.name}</h3>
+              <dl className="product-facts">
+                <div><dt>Setgröße</dt><dd>{product.cameraCount}</dd></div>
+                <div><dt>Benötigte Angebote</dt><dd>{requiredSets}</dd></div>
+                <div><dt>Kameras zusammen</dt><dd>{resultingCameraCount}</dd></div>
+                <div><dt>Auflösung</dt><dd>{product.resolution.toUpperCase()}</dd></div>
+              </dl>
+              <p className="storage-offer-check">Vor dem Kauf bitte Einsatzort, Verbindung, Stromversorgung, Speicheroption und möglichen Basisstationsbedarf im Kamera Finder und beim Händler prüfen.</p>
+              <p className="state-note">Rechnerischer Produktwert für {requiredSets} {requiredSets === 1 ? "Angebot" : "Angebote"} {estimatedTotalEur.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}. Versandbedingungen bei mehreren Bestellungen gesondert prüfen.</p>
+              <div className="offer-row"><div><p className="merchant">Angebot von {offer.merchantName}</p><PriceDisplay offer={offer} /></div><AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id} pageSlug="sicherheitskamera-speicher-rechner" verticalRef="security-camera" merchantName={offer.merchantName}>Beim Händler ansehen <span aria-hidden="true">↗</span></AffiliateLink></div>
+            </div>
+          </article>} />
+        </>}
+      </section>
     </div>
     <p className="inline-calculator-note">Das Ergebnis ist eine Planungsschätzung. Prüfe die reale oder konfigurierte Durchschnittsbitrate, Vorlauf und Nachlauf bei Ereignissen, Tonspuren, Dateisystemreserve und die Angaben des konkreten Recorders. Es ist keine Zusage für eine bestimmte Aufbewahrungsdauer.</p>
   </section>;

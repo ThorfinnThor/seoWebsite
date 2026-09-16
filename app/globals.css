@@ -426,6 +426,15 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .cost-example-picker button span { margin-top: 3px; color: var(--muted); font-size: .68rem; }
 .cost-interpretation { margin-top: 22px; padding: 20px 22px; border-left: 4px solid var(--green-2); background: #eef5f0; }
 .cost-interpretation p { margin: 6px 0 0; color: #4f5c55; }
+.storage-product-recommendations { margin-top: 34px; padding-top: 30px; border-top: 1px solid var(--line); }
+.storage-product-recommendations > h3 { margin: 0; font-size: 1.45rem; }
+.storage-product-recommendations > p:not(.eyebrow, .affiliate-disclosure) { max-width: 850px; margin: 9px 0 20px; color: var(--muted); }
+.storage-product-recommendations .affiliate-disclosure { margin: 0 0 18px; }
+.storage-product-recommendations .product-card { grid-template-columns: 170px minmax(0,1fr); }
+.storage-product-recommendations .product-image { min-height: 270px; }
+.storage-offer-check { margin: 16px 0 0; color: var(--muted); font-size: .78rem; }
+.storage-offer-state { display: grid; justify-items: center; gap: 8px; padding: 28px; border: 1px solid var(--line); border-radius: 14px; background: #fff; text-align: center; }
+.storage-offer-state p { margin: 0; color: var(--muted); }
 .inline-calculator-note { margin: 0; padding: 16px 34px; color: #63553b; background: #fbf5e8; font-size: .8rem; }
 .guide-layout { display: grid; grid-template-columns: minmax(250px,280px) minmax(0,1fr); gap: clamp(48px,5vw,72px); align-items: start; }
 .guide-layout aside { position: sticky; top: 25px; min-width: 0; padding: 28px; border-radius: 16px; background: var(--cream); }
@@ -791,6 +800,7 @@ body:has(.embed-route) #main {
 
 @media (max-width: 900px) { .requirement-summary { grid-template-columns: repeat(2,1fr); } .footer-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 44px; } .inline-results--four { grid-template-columns: repeat(2,1fr); } }
 @media (max-width: 760px) { .guide-calculator { margin-top: -25px; } .inline-calculator-heading { grid-template-columns: 1fr; gap: 12px; padding: 26px 24px; } .inline-calculator-body { padding: 25px 20px; } .inline-inputs, .inline-inputs--four, .inline-inputs--cost { grid-template-columns: 1fr; } .inline-results, .inline-results--four, .inline-results--cost { grid-template-columns: repeat(2,1fr); } .cost-example-picker { grid-template-columns: 1fr; } .cost-example-picker > div:last-child { grid-template-columns: 1fr; } .inline-calculator-note { padding: 15px 20px; } }
+@media (max-width: 650px) { .storage-product-recommendations .product-card { grid-template-columns: 1fr; } .storage-product-recommendations .product-image { min-height: 220px; } }
 
 @media (max-width: 650px) { .detail-result-grid article, .area-card, .planner-faq-list { grid-template-columns: 1fr; } .planner-faq-list div:last-child { grid-column: auto; } .footer-grid { grid-template-columns: 1fr; } .room-editor { padding: 18px; } .room-editor-heading { align-items: stretch; flex-direction: column; } .calculator-error { margin: 14px 20px; } .print-action .button { width: 100%; } }
 
