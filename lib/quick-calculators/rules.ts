@@ -23,6 +23,14 @@ export const TerraceCostInputSchema = z.object({
   fixedCostsEur: z.number().min(0).max(1_000_000),
 });
 
+export const SecurityCameraStorageInputSchema = z.object({
+  cameraCount: z.number().int().min(1).max(64),
+  averageBitrateMbps: z.number().min(0.1).max(100),
+  recordingHoursPerDay: z.number().min(0.1).max(24),
+  retentionDays: z.number().int().min(1).max(365),
+  reservePercent: z.number().min(0).max(50),
+});
+
 const round = (value: number, digits = 2) => {
   const factor = 10 ** digits;
   return Math.round((value + Number.EPSILON) * factor) / factor;
@@ -70,5 +78,20 @@ export function calculateTerraceCost(input: z.infer<typeof TerraceCostInputSchem
     totalCostEur: round(totalCostEur),
     totalCostPerM2Eur: round(totalCostEur / input.areaM2),
     laborSharePercent: totalCostEur > 0 ? round(laborCostEur / totalCostEur * 100, 1) : 0,
+  };
+}
+
+export function calculateSecurityCameraStorage(input: z.infer<typeof SecurityCameraStorageInputSchema>) {
+  const gigabytesPerCameraHour = input.averageBitrateMbps * 0.45;
+  const gigabytesPerCameraDay = gigabytesPerCameraHour * input.recordingHoursPerDay;
+  const baseStorageGb = gigabytesPerCameraDay * input.retentionDays * input.cameraCount;
+  const recommendedStorageGb = baseStorageGb * (1 + input.reservePercent / 100);
+
+  return {
+    gigabytesPerCameraDay: round(gigabytesPerCameraDay, 1),
+    baseStorageGb: round(baseStorageGb, 1),
+    recommendedStorageGb: round(recommendedStorageGb, 1),
+    recommendedStorageTb: round(recommendedStorageGb / 1000, 2),
+    aggregateBitrateMbps: round(input.averageBitrateMbps * input.cameraCount, 1),
   };
 }

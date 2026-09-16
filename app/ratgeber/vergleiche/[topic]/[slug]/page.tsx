@@ -31,7 +31,7 @@ export default async function Page({ params }: { params: Promise<{ topic: string
     {...guide}
     path={`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`}
     updated={guide.indexable ? "September 2026" : "August 2026"}
-    updatedAt={guide.indexable ? "2026-09-07" : undefined}
+    updatedAt={guide.indexable ? guide.indexingApproval?.reviewedAt : undefined}
     breadcrumbs={[
       { label: "Start", href: "/" },
       { label: "Ratgeber", href: "/ratgeber/" },

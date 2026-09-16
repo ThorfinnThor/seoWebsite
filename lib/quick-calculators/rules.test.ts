@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { calculateEnergyCost, calculateFlowRate, calculateTerraceCost, EnergyCostInputSchema, FlowRateInputSchema, TerraceCostInputSchema } from "./rules";
+import { calculateEnergyCost, calculateFlowRate, calculateSecurityCameraStorage, calculateTerraceCost, EnergyCostInputSchema, FlowRateInputSchema, SecurityCameraStorageInputSchema, TerraceCostInputSchema } from "./rules";
 
 describe("flow rate calculator", () => {
   it("calculates 10 liters in 30 seconds", () => {
@@ -60,4 +60,24 @@ describe("terrace cost calculator", () => {
   });
 
   it("rejects an excessive reserve", () => expect(TerraceCostInputSchema.safeParse({ ...input, wastePercent: 40 }).success).toBe(false));
+});
+
+describe("security camera storage calculator", () => {
+  const input = { cameraCount: 2, averageBitrateMbps: 2, recordingHoursPerDay: 24, retentionDays: 14, reservePercent: 15 };
+
+  it("calculates storage from bitrate and active recording time", () => {
+    const result = calculateSecurityCameraStorage(input);
+    expect(result.gigabytesPerCameraDay).toBe(21.6);
+    expect(result.baseStorageGb).toBe(604.8);
+    expect(result.recommendedStorageGb).toBe(695.5);
+    expect(result.recommendedStorageTb).toBe(0.7);
+  });
+
+  it("adds the bitrates of all cameras for a recorder connection", () => {
+    expect(calculateSecurityCameraStorage(input).aggregateBitrateMbps).toBe(4);
+  });
+
+  it("rejects more than 24 recording hours per day", () => {
+    expect(SecurityCameraStorageInputSchema.safeParse({ ...input, recordingHoursPerDay: 25 }).success).toBe(false);
+  });
 });

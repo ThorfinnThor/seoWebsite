@@ -1,5 +1,6 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import type { ProgrammaticIndexApproval } from "@/lib/programmatic-indexing";
+import { applyExpandedEditorialDecisionGuide } from "@/lib/decision-guide-editorials-expanded";
 
 type EditorialDecisionGuide = SeoGuide & {
   scoreA: number;
@@ -17,6 +18,8 @@ function deScore(value: number) {
 }
 
 export function applyEditorialDecisionGuide<T extends EditorialDecisionGuide>(guide: T): T {
+  const expandedGuide = applyExpandedEditorialDecisionGuide(guide);
+  if (expandedGuide !== guide) return expandedGuide;
   if (guide.slug !== FEATURED_MOWER_GUIDE) return guide;
 
   return {

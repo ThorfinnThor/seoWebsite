@@ -28,6 +28,7 @@ const RELATED_GUIDES = [
   { href: "/ratgeber/sicherheitskameras/akku-solar-oder-netzstrom/", label: "Akku, Solar oder Netzstrom" },
   { href: "/ratgeber/sicherheitskameras/wie-viele-kameras-einfamilienhaus/", label: "Kamerazahl am Einfamilienhaus" },
   { href: "/ratgeber/sicherheitskameras/private-videoueberwachung-datenschutz/", label: "Private Videoüberwachung" },
+  { href: "/haus/sicherheit/sicherheitskamera-speicher-rechner/", label: "Speicherbedarf für Aufnahmen" },
 ] as const;
 
 export function SecurityCameraArticle({ title, intro, path, summary, wordCount, sources, children }: SecurityCameraArticleProps) {

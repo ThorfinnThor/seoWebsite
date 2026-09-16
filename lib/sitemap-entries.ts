@@ -27,7 +27,7 @@ const CORE_PATHS = [
   "/garten/maehroboter-rechner", "/garten/maehroboter-flaeche-berechnen", "/garten/maehroboter-steigung-engstellen", "/garten/maehroboter-begrenzungskabel-kabellos",
   "/garten/carport-planer", "/garten/carport-groesse", "/garten/carport-fundament", "/garten/carport-dachentwaesserung",
   "/haus", "/haus/boden", "/haus/boden/bodenbelag-rechner", "/haus/boden/laminat-verschnitt-berechnen", "/haus/boden/untergrund-trittschall", "/haus/boden/sockelleisten-berechnen",
-  "/haus/sicherheit/sicherheitskamera-finder",
+  "/haus/sicherheit/sicherheitskamera-finder", "/haus/sicherheit/sicherheitskamera-speicher-rechner",
   "/haus/innenausbau", "/haus/innenausbau/trockenbau-rechner", "/haus/innenausbau/trockenbau-platten-berechnen", "/haus/innenausbau/trockenbau-profile-staenderwerk", "/haus/innenausbau/trockenbau-tuer-oeffnungen",
   "/haus/raumklima", "/haus/raumklima/luftentfeuchter-rechner", "/haus/raumklima/luftentfeuchter-keller", "/haus/raumklima/luftentfeuchter-stromverbrauch", "/haus/raumklima/luftentfeuchter-waesche",
   "/methodik", "/ueber-passendplanen", "/affiliate-transparenz",
@@ -70,7 +70,7 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
         "/ratgeber/sicherheitskameras/wie-viele-kameras-einfamilienhaus",
         "/ratgeber/sicherheitskameras/private-videoueberwachung-datenschutz",
       ].map((path) => entry(path, "2026-09-08")),
-      ...INDEXABLE_DECISION_GUIDES.map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, "2026-09-07")),
+      ...INDEXABLE_DECISION_GUIDES.map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, guide.indexingApproval?.reviewedAt ?? "2026-09-07")),
     ],
   },
 ];

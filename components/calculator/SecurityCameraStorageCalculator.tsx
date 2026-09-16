@@ -1,0 +1,86 @@
+"use client";
+
+import { useState } from "react";
+import { calculateSecurityCameraStorage, SecurityCameraStorageInputSchema } from "@/lib/quick-calculators/rules";
+
+interface StorageInput {
+  cameraCount: number;
+  averageBitrateMbps: number;
+  recordingHoursPerDay: number;
+  retentionDays: number;
+  reservePercent: number;
+}
+
+const INITIAL_VALUES: StorageInput = {
+  cameraCount: 2,
+  averageBitrateMbps: 2,
+  recordingHoursPerDay: 24,
+  retentionDays: 14,
+  reservePercent: 15,
+};
+
+const EXAMPLES: Array<{ label: string; detail: string; values: StorageInput }> = [
+  { label: "Zwei Kameras rund um die Uhr", detail: "2 Mbit/s und 14 Tage", values: INITIAL_VALUES },
+  { label: "Vier Kameras mit Ereignissen", detail: "4 Mbit/s und 8 Stunden täglich", values: { cameraCount: 4, averageBitrateMbps: 4, recordingHoursPerDay: 8, retentionDays: 30, reservePercent: 15 } },
+  { label: "Sechs Kameras mit hoher Bitrate", detail: "8 Mbit/s und 30 Tage", values: { cameraCount: 6, averageBitrateMbps: 8, recordingHoursPerDay: 24, retentionDays: 30, reservePercent: 20 } },
+];
+
+export function SecurityCameraStorageCalculator() {
+  const [input, setInput] = useState<StorageInput>(INITIAL_VALUES);
+  const parsed = SecurityCameraStorageInputSchema.safeParse(input);
+  const result = parsed.success ? calculateSecurityCameraStorage(parsed.data) : null;
+
+  function update(key: keyof StorageInput, value: number) {
+    setInput((current) => ({ ...current, [key]: value }));
+  }
+
+  return <section className="inline-calculator security-storage-calculator" aria-labelledby="security-storage-title">
+    <div className="inline-calculator-heading">
+      <div><p className="eyebrow">Speicherbedarf berechnen</p><h2 id="security-storage-title">Wie viel Platz brauchen deine Aufnahmen?</h2></div>
+      <p>Die Rechnung verwendet die durchschnittliche Bitrate. Sie ist belastbarer als eine pauschale Annahme allein aus der Auflösung.</p>
+    </div>
+    <div className="inline-calculator-body">
+      <div className="cost-example-picker" aria-label="Rechenbeispiele für Kameraspeicher">
+        <div><strong>Beispiel laden</strong><span>Alle Werte bleiben frei veränderbar.</span></div>
+        <div>{EXAMPLES.map((example) => <button type="button" key={example.label} onClick={() => setInput(example.values)}><strong>{example.label}</strong><span>{example.detail}</span></button>)}</div>
+      </div>
+      <div className="inline-inputs inline-inputs--cost">
+        <StorageField id="storage-cameras" label="Anzahl der Kameras" value={input.cameraCount} unit="Kameras" min={1} max={64} step={1} onChange={(value) => update("cameraCount", value)} />
+        <StorageField id="storage-bitrate" label="Durchschnittliche Bitrate je Kamera" value={input.averageBitrateMbps} unit="Mbit/s" min={0.1} max={100} step={0.1} onChange={(value) => update("averageBitrateMbps", value)} />
+        <StorageField id="storage-hours" label="Aktive Aufnahme pro Tag" value={input.recordingHoursPerDay} unit="Stunden" min={0.1} max={24} step={0.1} onChange={(value) => update("recordingHoursPerDay", value)} />
+        <StorageField id="storage-days" label="Gewünschte Aufbewahrung" value={input.retentionDays} unit="Tage" min={1} max={365} step={1} onChange={(value) => update("retentionDays", value)} />
+        <StorageField id="storage-reserve" label="Reserve" value={input.reservePercent} unit="%" min={0} max={50} step={1} onChange={(value) => update("reservePercent", value)} />
+      </div>
+      <div className="inline-results inline-results--cost" aria-live="polite">
+        <Result label="Je Kamera und Tag" value={result ? `${format(result.gigabytesPerCameraDay, 1)} GB` : "–"} />
+        <Result label="Rechnerischer Bedarf" value={result ? formatCapacity(result.baseStorageGb) : "–"} />
+        <Result label="Mit Reserve" value={result ? formatCapacity(result.recommendedStorageGb) : "–"} prominent />
+        <Result label="Gesamte Videodatenrate" value={result ? `${format(result.aggregateBitrateMbps, 1)} Mbit/s` : "–"} />
+      </div>
+      <StorageInterpretation input={input} result={result} />
+    </div>
+    <p className="inline-calculator-note">Das Ergebnis ist eine Planungsschätzung. Prüfe die reale oder konfigurierte Durchschnittsbitrate, Vorlauf und Nachlauf bei Ereignissen, Tonspuren, Dateisystemreserve und die Angaben des konkreten Recorders. Es ist keine Zusage für eine bestimmte Aufbewahrungsdauer.</p>
+  </section>;
+}
+
+function StorageInterpretation({ input, result }: { input: StorageInput; result: ReturnType<typeof calculateSecurityCameraStorage> | null }) {
+  if (!result) return <div className="cost-interpretation"><strong>Eine Eingabe liegt außerhalb des gültigen Bereichs.</strong><p>Prüfe Kamerazahl, Bitrate, Aufnahmezeit, Tage und Reserve.</p></div>;
+  if (input.recordingHoursPerDay < 24) return <div className="cost-interpretation"><strong>Die angenommene Ereigniszeit entscheidet über das Ergebnis.</strong><p>Deine Rechnung geht von {format(input.recordingHoursPerDay, 1)} aktiven Stunden je Tag aus. Miss diesen Wert möglichst über mehrere typische Tage und berücksichtige Vorlauf und Nachlauf.</p></div>;
+  if (result.recommendedStorageTb >= 10) return <div className="cost-interpretation"><strong>Der Speicherbedarf ist für ein Heimsystem sehr groß.</strong><p>Prüfe Bitrate, Bildrate, Aufbewahrungszeit und die Möglichkeit unterschiedlicher Aufnahmeprofile. Eine niedrigere Bildqualität darf den gewünschten Erkennungszweck aber nicht zunichtemachen.</p></div>;
+  return <div className="cost-interpretation"><strong>Die Rechnung bildet eine durchgehende Aufnahme ab.</strong><p>Mit {format(input.reservePercent, 0)} Prozent Reserve ergeben sich rund {format(result.recommendedStorageTb, 2)} TB. Kaufe nicht nach dieser Zahl allein, sondern gleiche sie mit den unterstützten Laufwerken und der nutzbaren Kapazität des Recorders ab.</p></div>;
+}
+
+function StorageField({ id, label, value, unit, min, max, step, onChange }: { id: string; label: string; value: number; unit: string; min: number; max: number; step: number; onChange: (value: number) => void }) {
+  const invalid = !Number.isFinite(value) || value < min || value > max;
+  return <div className="field"><label htmlFor={id}>{label}</label><div className="input-with-unit"><input id={id} type="number" inputMode="decimal" value={Number.isFinite(value) ? value : ""} min={min} max={max} step={step} aria-invalid={invalid} aria-describedby={invalid ? `${id}-error` : undefined} onChange={(event) => onChange(event.target.valueAsNumber)} /><span>{unit}</span></div>{invalid && <small className="field-error" id={`${id}-error`}>Bitte einen Wert zwischen {min.toLocaleString("de-DE")} und {max.toLocaleString("de-DE")} eingeben.</small>}</div>;
+}
+
+function Result({ label, value, prominent = false }: { label: string; value: string; prominent?: boolean }) {
+  return <div className={prominent ? "inline-result--prominent" : undefined}><span>{label}</span><strong>{value}</strong></div>;
+}
+
+function formatCapacity(gigabytes: number) {
+  return gigabytes >= 1000 ? `${format(gigabytes / 1000, 2)} TB` : `${format(gigabytes, 1)} GB`;
+}
+
+const format = (value: number, digits = 2) => value.toLocaleString("de-DE", { minimumFractionDigits: digits, maximumFractionDigits: digits });

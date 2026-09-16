@@ -4,7 +4,7 @@ import { createPageMetadata } from "@/lib/metadata";
 
 export const metadata = createPageMetadata({
   title: "Sicherheitskameras für Haus und Grundstück planen",
-  description: "Vier fundierte Ratgeber zu Verbindung, Stromversorgung, Kamerazahl und Datenschutz bei privaten Sicherheitskameras.",
+  description: "Fundierte Ratgeber und ein Speicherrechner zu Verbindung, Stromversorgung, Kamerazahl, Datenschutz und Aufbewahrung bei Sicherheitskameras.",
   path: "/ratgeber/sicherheitskameras/",
   modifiedTime: "2026-09-08",
 });
@@ -34,6 +34,12 @@ const guides = [
     title: "Private Videoüberwachung und Datenschutz",
     text: "Bildbereich, Zweck, Information und Speicherdauer werden anhand offizieller deutscher Hinweise eingeordnet.",
   },
+  {
+    href: "/haus/sicherheit/sicherheitskamera-speicher-rechner/",
+    eyebrow: "Speicher",
+    title: "Speicherbedarf für Aufnahmen",
+    text: "Kamerazahl, durchschnittliche Bitrate, aktive Aufnahmezeit und Aufbewahrung werden zu einem transparenten Planungswert verbunden.",
+  },
 ] as const;
 
 export default function Page() {
@@ -41,8 +47,8 @@ export default function Page() {
     <section className="page-hero camera-hub-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Sicherheitskameras" }]} />
       <p className="eyebrow">Sicherheitskameras sinnvoll planen</p>
-      <h1>Vier Fragen, die vor dem Produktvergleich geklärt gehören.</h1>
-      <p>Eine Kamera kann technisch überzeugen und am vorgesehenen Ort trotzdem unpraktisch sein. Diese Ratgeber betrachten die Installation aus vier verschiedenen Richtungen und führen anschließend in den passenden Finder.</p>
+      <h1>Fünf Fragen, die vor dem Produktvergleich geklärt gehören.</h1>
+      <p>Eine Kamera kann technisch überzeugen und am vorgesehenen Ort trotzdem unpraktisch sein. Diese Ratgeber betrachten Installation, Betrieb und Speicher aus verschiedenen Richtungen und führen anschließend in den passenden Finder.</p>
     </section>
     <section className="directory-section camera-hub-directory">
       <div className="directory-grid camera-hub-grid">
