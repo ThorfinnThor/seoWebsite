@@ -1,11 +1,11 @@
 {
   "candidateRows": 562,
-  "candidateToProductRate": 56.9,
+  "candidateToProductRate": 57.1,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-14T07:54:48.686Z",
+  "generatedAt": "2026-09-16T07:42:22.603Z",
   "issues": {
-    "incomplete-product-data": 242,
-    "missing-product-kind": 242,
+    "incomplete-product-data": 241,
+    "missing-product-kind": 241,
     "unconfirmed-system-compatibility": 462
   },
   "linkVerification": {
@@ -15,7 +15,7 @@
     "Globus Baumarkt DE": 83,
     "tink DE": 1
   },
-  "normalizedProducts": 320,
+  "normalizedProducts": 321,
   "offers": 84,
   "priceStatsEur": {
     "max": 278,
@@ -27,7 +27,7 @@
   "quarantinedProducts": 0,
   "reviewedProducts": 84,
   "reviewQueue": 478,
-  "rows": 174823,
+  "rows": 174875,
   "schemaVersion": 1,
   "sourceFeeds": 10,
   "successfulFeeds": 10
