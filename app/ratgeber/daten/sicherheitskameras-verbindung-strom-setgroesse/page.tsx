@@ -3,8 +3,8 @@ import { DataReportLinks, ReportBarList, ReportMethod, ReportMetricGrid } from "
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { securityCameraDataReport as report } from "@/lib/data-report/catalog-insights";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/site";
 
 const PATH = "/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/";
 const title = "20 Sicherheitskameras im Datencheck. Verbindung, Strom und Setgröße";
@@ -19,10 +19,7 @@ export default function Page() {
   const wifi = report.connection.find((item) => item.key === "wifi")!;
 
   return <main className="data-report-page data-report-page--camera">
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(PATH) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: "PassendPlanen Auswertung geprüfter Sicherheitskameras", description: `Auswertung von ${report.total} geprüften Sicherheitskameras nach Verbindung, Stromversorgung, Kamerazahl, Auflösung und Angebotspreis.`, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: ["Einsatzort", "Verbindung", "Stromversorgung", "Auflösung", "Kamerazahl", "Angebotspreis"] },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Sicherheitskameras", datasetDescription: `Auswertung von ${report.total} geprüften Sicherheitskameras nach Verbindung, Stromversorgung, Kamerazahl, Auflösung und Angebotspreis.`, datasetSize: report.total, variables: ["Einsatzort", "Verbindung", "Stromversorgung", "Auflösung", "Kamerazahl", "Angebotspreis"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero data-report-hero--camera">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Sicherheitskameras" }]} />
       <div className="data-report-hero-grid">

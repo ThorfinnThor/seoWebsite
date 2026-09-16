@@ -27,7 +27,7 @@ export default function HomePage() {
       </section>
       <section className="trust-strip" aria-label="PassendPlanen Prinzipien"><div><strong>Keine Blackbox</strong><span>Jede Empfehlung wird begründet.</span></div><div><strong>Keine Provision im Score</strong><span>Dein Bedarf entscheidet.</span></div><div><strong>Keine falsche Präzision</strong><span>Grenzen werden klar benannt.</span></div></section>
       <section className="section projects-section" id="rechner">
-        <div className="section-heading"><p className="eyebrow">Elf Planungswerkzeuge</p><h2>Wähle direkt deinen Rechner.</h2><p>Berechne den Bedarf mit deinen eigenen Angaben. Produktangebote erscheinen nur dort, wo Daten und Kompatibilität geprüft sind.</p></div>
+        <div className="section-heading"><p className="eyebrow">Zwölf Planungswerkzeuge</p><h2>Wähle direkt deinen Rechner.</h2><p>Berechne den Bedarf mit deinen eigenen Angaben. Produktangebote erscheinen nur dort, wo Daten und Kompatibilität geprüft sind.</p></div>
         <div className="feature-grid">
           {PLANNERS.map((planner) => (
             <Link className="feature-card" href={planner.href} key={planner.id}>

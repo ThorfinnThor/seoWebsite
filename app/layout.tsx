@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
   return (
     <html lang="de" data-scroll-behavior="smooth">
+      <head><link rel="describedby" href="/llms.txt" type="text/markdown" /></head>
       <body>
         <SiteJsonLd />
         <a className="skip-link" href="#main">Zum Inhalt springen</a>

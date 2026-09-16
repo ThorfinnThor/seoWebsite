@@ -2,6 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { DATA_REPORTS } from "@/lib/data-report/registry";
+import { dataReportDatasetId } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
 
@@ -14,14 +15,32 @@ export const metadata = createPageMetadata({
 });
 
 export default function Page() {
+  const catalogId = `${absoluteUrl(PATH)}#catalog`;
+
   return <>
-    <JsonLd data={{
-      "@context": "https://schema.org",
-      "@type": "CollectionPage",
-      name: "PassendPlanen Datenauswertungen",
-      url: absoluteUrl(PATH),
-      hasPart: DATA_REPORTS.map((report) => ({ "@type": "Article", name: report.title, url: absoluteUrl(report.path) })),
-    }} />
+    <JsonLd data={[
+      {
+        "@context": "https://schema.org",
+        "@type": "CollectionPage",
+        "@id": absoluteUrl(PATH),
+        name: "PassendPlanen Datenauswertungen",
+        description: "Eigene Auswertungen geprüfter Produktdaten für Haus und Garten mit transparenter Methodik, Datenstand und sichtbaren Grenzen.",
+        url: absoluteUrl(PATH),
+        inLanguage: "de-DE",
+        mainEntity: { "@id": catalogId },
+        hasPart: DATA_REPORTS.map((report) => ({ "@type": "Article", name: report.title, url: absoluteUrl(report.path) })),
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "DataCatalog",
+        "@id": catalogId,
+        name: "PassendPlanen Datenauswertungen",
+        description: "Katalog eigener Auswertungen validierter Händlerdaten mit dokumentierten Stichproben und Datenlücken.",
+        url: absoluteUrl(PATH),
+        creator: { "@id": `${absoluteUrl("/")}#organization` },
+        dataset: DATA_REPORTS.map((report) => ({ "@type": "Dataset", "@id": dataReportDatasetId(report.path), name: report.title, url: absoluteUrl(report.path) })),
+      },
+    ]} />
     <section className="page-hero data-directory-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen" }]} />
       <p className="eyebrow">Eigene Auswertungen statt pauschaler Ranglisten</p>

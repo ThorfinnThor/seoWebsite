@@ -17,13 +17,19 @@ export function SiteJsonLd() {
             description: SITE.description,
             inLanguage: "de-DE",
             publisher: { "@id": `${siteRoot}/#organization` },
+            about: { "@id": `${siteRoot}/#organization` },
           },
           {
             "@type": "Person",
             "@id": `${siteRoot}/#author`,
             name: "Schayan Yousefian",
             url: absoluteUrl("/ueber-passendplanen/"),
-            founder: { "@id": `${siteRoot}/#organization` },
+            description: "Gründer und redaktionell Verantwortlicher von PassendPlanen.",
+            knowsAbout: [
+              "Bedarfsermittlung für Haus und Garten",
+              "Deterministische Planungsrechner",
+              "Datenbasierte Produktvergleiche",
+            ],
           },
           {
             "@type": "Organization",
@@ -34,6 +40,7 @@ export function SiteJsonLd() {
             logo: absoluteUrl("/brand/passendplanen-icon.png"),
             image: absoluteUrl("/brand/passendplanen-icon.png"),
             founder: { "@id": `${siteRoot}/#author` },
+            publishingPrinciples: absoluteUrl("/methodik/"),
             areaServed: { "@type": "Country", name: "Deutschland" },
             contactPoint: {
               "@type": "ContactPoint",

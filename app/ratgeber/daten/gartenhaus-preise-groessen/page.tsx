@@ -3,8 +3,8 @@ import { DataReportLinks, ReportBarList, ReportMethod, ReportMetricGrid } from "
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { gardenHouseDataReport as report } from "@/lib/data-report/catalog-insights";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/site";
 
 const PATH = "/ratgeber/daten/gartenhaus-preise-groessen/";
 const title = "Gartenhauspreise und Größen. 333 Modelle im Datencheck";
@@ -20,10 +20,7 @@ export default function Page() {
   const metal = report.materials.find((item) => item.key === "metal")!;
 
   return <main className="data-report-page data-report-page--garden-house">
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(PATH) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: "PassendPlanen Auswertung geprüfter Gartenhäuser", description: `Auswertung von ${report.total} geprüften Gartenhäusern nach Grundfläche, Material, Dachform und Angebotspreis.`, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: ["Grundfläche", "Material", "Dachform", "Angebotspreis", "Wandstärke"] },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Gartenhäuser", datasetDescription: `Auswertung von ${report.total} geprüften Gartenhäusern nach Grundfläche, Material, Dachform und Angebotspreis.`, datasetSize: report.total, variables: ["Grundfläche", "Material", "Dachform", "Angebotspreis", "Wandstärke"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Gartenhäuser" }]} />
       <div className="data-report-hero-grid">

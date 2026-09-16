@@ -7,7 +7,11 @@ const siteUrl = SITE.url.replace(/\/$/, "");
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: { userAgent: "*", allow: "/", disallow: ["/data/"] },
+    rules: [
+      { userAgent: "OAI-SearchBot", allow: "/", disallow: ["/data/"] },
+      { userAgent: "ChatGPT-User", allow: "/", disallow: ["/data/"] },
+      { userAgent: "*", allow: "/", disallow: ["/data/"] },
+    ],
     sitemap: [`${siteUrl}/sitemap.xml`, SITEMAP_INDEX_URL],
   };
 }

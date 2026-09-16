@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { ReportMethod } from "./DataReportBlocks";
-import { absoluteUrl } from "@/lib/site";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 
 type ProjectReportFrameProps = {
   path: string;
@@ -18,6 +18,7 @@ type ProjectReportFrameProps = {
   updated: string;
   datasetName: string;
   datasetDescription: string;
+  datasetSize: number;
   variables: readonly string[];
   method: React.ReactNode;
   nextTitle: string;
@@ -29,10 +30,7 @@ type ProjectReportFrameProps = {
 
 export function ProjectReportFrame(props: ProjectReportFrameProps) {
   return <main className={`data-report-page ${props.className}`}>
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: props.title, description: props.description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(props.path) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: props.datasetName, description: props.datasetDescription, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: props.variables },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: props.path, title: props.title, description: props.description, datasetName: props.datasetName, datasetDescription: props.datasetDescription, datasetSize: props.datasetSize, variables: props.variables, updatedAt: "2026-09-16" })} />
     <header className={`data-report-hero ${props.className}-hero`}>
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: props.topicLabel }]} />
       <div className="data-report-hero-grid">

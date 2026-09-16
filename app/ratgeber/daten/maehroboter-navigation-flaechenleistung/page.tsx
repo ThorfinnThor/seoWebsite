@@ -3,8 +3,8 @@ import { DataReportLinks, ReportBarList, ReportMethod, ReportMetricGrid } from "
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { robotMowerDataReport as report } from "@/lib/data-report/catalog-insights";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/site";
 
 const PATH = "/ratgeber/daten/maehroboter-navigation-flaechenleistung/";
 const title = "15 Mähroboter im Datencheck. Navigation, Fläche und Engstellen";
@@ -17,10 +17,7 @@ const number = (value: number) => value.toLocaleString("de-DE");
 
 export default function Page() {
   return <main className="data-report-page data-report-page--mower">
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(PATH) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: "PassendPlanen Auswertung geprüfter Mähroboter", description: `Auswertung von ${report.total} geprüften Mährobotern nach Navigation, Flächenleistung, Steigung, Engstellen und Angebotspreis.`, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: ["Navigationssystem", "Nennfläche", "maximale Steigung", "Mindestpassage", "Hinderniserkennung", "Angebotspreis"] },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Mähroboter", datasetDescription: `Auswertung von ${report.total} geprüften Mährobotern nach Navigation, Flächenleistung, Steigung, Engstellen und Angebotspreis.`, datasetSize: report.total, variables: ["Navigationssystem", "Nennfläche", "maximale Steigung", "Mindestpassage", "Hinderniserkennung", "Angebotspreis"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero data-report-hero--mower">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Mähroboter" }]} />
       <div className="data-report-hero-grid">

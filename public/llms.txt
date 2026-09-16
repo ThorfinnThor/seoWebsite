@@ -1,58 +1,72 @@
 # PassendPlanen
 
-> PassendPlanen ist eine deutschsprachige Plattform mit kostenlosen, deterministischen Rechnern und belegten Ratgebern für Haus- und Gartenprojekte. Ergebnisse werden aus sichtbaren Nutzereingaben und veröffentlichten Rechenregeln abgeleitet; Affiliate-Provisionen beeinflussen die Berechnung nicht.
+> PassendPlanen ist eine deutschsprachige Plattform mit kostenlosen, deterministischen Rechnern, fachlich begrenzten Planungshilfen und eigenen Datenauswertungen für Haus und Garten.
+
+Die Marke heißt PassendPlanen und ist unter passendplanen.de erreichbar. Ergebnisse entstehen aus sichtbaren Nutzereingaben und veröffentlichten Rechenregeln. Affiliate Provisionen verändern weder Berechnung noch fachliche Sortierung. Inhalte dienen der Information und Vorplanung. Aktuelle Herstellerangaben, örtliche Regeln und erforderliche Fachplanung haben Vorrang.
 
 ## Wichtigste Einstiege
 
-- [Alle Rechner](https://www.passendplanen.de/rechner/): Zehn Rechner für Bedarf, Maße und Materialrahmen.
-- [Methodik](https://www.passendplanen.de/methodik/): Rechenprinzipien, Grenzen und Umgang mit Quellen.
-- [Über PassendPlanen](https://www.passendplanen.de/ueber-passendplanen/): Autor, redaktioneller Anspruch und Projektstatus.
-- [Affiliate-Transparenz](https://www.passendplanen.de/affiliate-transparenz/): Trennung von Berechnung, Produktauswahl und Vergütung.
+- [Methodik](https://www.passendplanen.de/methodik/): Rechenprinzipien, Quellenstandard, Datenprüfung und fachliche Grenzen.
+- [Über PassendPlanen](https://www.passendplanen.de/ueber-passendplanen/): Autor, redaktioneller Anspruch, Aktualisierung und Korrekturweg.
+- [Datenauswertungen](https://www.passendplanen.de/ratgeber/daten/): 21 eigene Auswertungen geprüfter Produktdaten.
+- [Affiliate Transparenz](https://www.passendplanen.de/affiliate-transparenz/): Trennung von Rechenlogik, Produktauswahl und Vergütung.
+- [Nutzungshinweise](https://www.passendplanen.de/nutzungshinweise/): Grenzen der Planungshilfen und erforderliche Prüfung vor Entscheidungen.
+- [Ausführliche LLM Übersicht](https://www.passendplanen.de/llms-full.txt): Erweiterte Beschreibung der Inhalte, Datenbasis und Zitiergrenzen.
 
 ## Rechner
 
-- [Gartenhaus-Planer](https://www.passendplanen.de/garten/gartenhaus-planer/): Platz, Nutzung, Zugang und Budget einordnen.
-- [Bewässerungsplaner](https://www.passendplanen.de/garten/bewaesserungs-planer/): Flächen, Tropfrohr und Komponentenstruktur planen.
-- [Terrassendielen-Rechner](https://www.passendplanen.de/garten/terrassen-dielen-rechner/): Dielen, Reserve und Unterkonstruktion berechnen.
-- [Sichtschutz-Planer](https://www.passendplanen.de/garten/sichtschutz-planer/): Felder, Pfosten und Tor-Module einordnen.
-- [Gewächshaus-Planer](https://www.passendplanen.de/garten/gewaechshaus-planer/): Beet-, Wege-, Basis- und Lüftungsrahmen planen.
-- [Mähroboter-Flächencheck](https://www.passendplanen.de/garten/maehroboter-rechner/): Nettofläche, Kapazitätsreserve und Geländefaktoren bestimmen.
-- [Carport-Planer](https://www.passendplanen.de/garten/carport-planer/): lichte Maße, Fläche und Dachentwässerung vorbereiten.
-- [Bodenbelag-Rechner](https://www.passendplanen.de/haus/boden/bodenbelag-rechner/): Pakete, Unterlage und Sockelleisten berechnen.
-- [Trockenbau-Rechner](https://www.passendplanen.de/haus/innenausbau/trockenbau-rechner/): Platten-, Profil- und Dämmrahmen berechnen.
-- [Luftentfeuchter-Rechner](https://www.passendplanen.de/haus/raumklima/luftentfeuchter-rechner/): Raumvolumen und Auswahlrahmen einordnen.
+- [Gartenhaus-Planer](https://www.passendplanen.de/garten/gartenhaus-planer/): Gartenhaus-Größe, Material, Dach, Boden, Kosten und konkrete Nutzungen vom Fahrradlager bis zur Werkstatt nachvollziehbar planen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Mähroboter-Flächencheck](https://www.passendplanen.de/garten/maehroboter-rechner/): Mähroboter nach Nettofläche, Steigung, Engstellen, Zonen und Navigation auswählen – mit nachvollziehbarer Reserve statt pauschalem Testsieger. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Terrassendielen-Rechner](https://www.passendplanen.de/garten/terrassen-dielen-rechner/): Terrassendielen, Unterkonstruktion, Verlegerichtung, Verschnitt und Kosten als vollständigen Materialrahmen berechnen und vergleichen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Bewässerungsplaner](https://www.passendplanen.de/garten/bewaesserungs-planer/): Rasen-, Beet-, Hecken- und Hochbeetbewässerung aus realem Durchfluss, Druck und Pflanzenbedarf in belastbare Zonen aufteilen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Gewächshaus-Planer](https://www.passendplanen.de/garten/gewaechshaus-planer/): Gewächshaus-Größe, Beetaufteilung, Pflanzen, Material, Fundament, Lüftung und automatische Fensteröffner gemeinsam planen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Sichtschutz-Planer](https://www.passendplanen.de/garten/sichtschutz-planer/): Sichtschutz-Elemente, Pfosten, Restfelder, Gartentor, Gefälle und Fundamente aus der realen Strecke ableiten. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Carport-Planer](https://www.passendplanen.de/garten/carport-planer/): Carport-Breite, Länge, Höhe, Rangierraum, Abstellraum und Entwässerung aus Fahrzeug und Grundstück ableiten. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Bodenbelag-Rechner](https://www.passendplanen.de/haus/boden/bodenbelag-rechner/): Laminat und Vinyl nach Raum, Untergrund, Nutzung, Verlegung, Verschnitt, Paketen und Sockelleisten planen und vergleichen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Trockenbau-Rechner](https://www.passendplanen.de/haus/innenausbau/trockenbau-rechner/): Trockenbauwand, Plattenlagen, Ständerwerk, Türen, Verstärkungen und Schallschutz als vollständiges System planen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Luftentfeuchter-Rechner](https://www.passendplanen.de/haus/raumklima/luftentfeuchter-rechner/): Luftentfeuchter nach Raumvolumen, Temperatur, Feuchtelast, Technik, Geräusch, Ablauf und Stromverbrauch einordnen. Ergebnis und Grenzen werden direkt auf der Seite erklärt.
+- [Sicherheitskamera Finder](https://www.passendplanen.de/haus/sicherheit/sicherheitskamera-finder/): Kameras nach Einsatzort, Verbindung, Stromversorgung, Auflösung und Zonenzahl filtern.
+- [Sicherheitskamera Speicherrechner](https://www.passendplanen.de/haus/sicherheit/sicherheitskamera-speicher-rechner/): Speicherbedarf aus Bitrate, Kamerazahl, Aufnahmezeit, Aufbewahrung und Reserve berechnen.
 
-## Themen-Hubs
+## Eigene Datenauswertungen
 
-- [Gartenhaus](https://www.passendplanen.de/ratgeber/thema/gartenhaus/): Größe, Nutzung, Bauart, Boden und Kosten.
-- [Mähroboter](https://www.passendplanen.de/ratgeber/thema/maehroboter/): Nettofläche, Gelände, Zonen und Navigation.
-- [Terrasse](https://www.passendplanen.de/ratgeber/thema/terrasse/): Dielen, Unterkonstruktion, Verlegung und Mengen.
-- [Bewässerung](https://www.passendplanen.de/ratgeber/thema/bewaesserung/): Durchfluss, Druck, Pflanzen und Zonen.
-- [Gewächshaus](https://www.passendplanen.de/ratgeber/thema/gewaechshaus/): Beete, Klima, Lüftung und Konstruktion.
-- [Sichtschutz](https://www.passendplanen.de/ratgeber/thema/sichtschutz/): Raster, Pfosten, Tor, Wind und Fundament.
-- [Carport](https://www.passendplanen.de/ratgeber/thema/carport/): Fahrzeug, lichte Maße, Zufahrt und Dachwasser.
-- [Bodenbelag](https://www.passendplanen.de/ratgeber/thema/bodenbelag/): Untergrund, Fläche, Verschnitt und Pakete.
-- [Trockenbau](https://www.passendplanen.de/ratgeber/thema/trockenbau/): Platten, Profile, Öffnungen und Systemgrenzen.
-- [Luftentfeuchter](https://www.passendplanen.de/ratgeber/thema/luftentfeuchter/): Raumvolumen, Temperatur, Feuchte und Betrieb.
+- [Was Größe, Material und Preis im aktuellen Gartenhauskatalog zeigen](https://www.passendplanen.de/ratgeber/daten/gartenhaus-preise-groessen/): Eine datenbasierte Einordnung von Grundflächen, Materialien, Dachformen und Angebotspreisen mit offen ausgewiesenen Datenlücken.
+- [Fußbodenheizung, Feuchtraum und Paketmengen im Datenvergleich](https://www.passendplanen.de/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/): Laminat, Klickvinyl und Fertigparkett nach dokumentierten Freigaben, Paketgrößen und einer konkreten Materialrechnung vergleichen.
+- [Welche Leistungsdaten bei Luftentfeuchtern wirklich vergleichbar sind](https://www.passendplanen.de/ratgeber/daten/luftentfeuchter-leistung-lautstaerke/): Entfeuchtungsleistung, Geräusch, Stromaufnahme und Betriebstemperatur anhand der tatsächlich dokumentierten Produktdaten einordnen.
+- [Navigation, Flächenleistung und Engstellen bei 15 Mährobotern](https://www.passendplanen.de/ratgeber/daten/maehroboter-navigation-flaechenleistung/): Kabel, Kamera, LiDAR, RTK und hybride Navigation anhand der dokumentierten Flächenleistung, Steigung, Engstellen und Angebotspreise einordnen.
+- [Verbindung, Stromversorgung und Setgröße bei 20 Kameras](https://www.passendplanen.de/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/): WLAN, PoE und Mobilfunk gemeinsam mit der Stromversorgung betrachten und die Produktkosten für vier Überwachungszonen nachvollziehen.
+- [84 Bewässerungsprodukte zeigen, warum Einzelteile noch kein System ergeben](https://www.passendplanen.de/ratgeber/daten/bewaesserung-komponenten-systeme/): Rohre, Verbinder, Regner, Tropfleitungen und Steuerungen nach Sortimentsschwerpunkt und dokumentierter Planungstiefe untersuchen.
+- [Einzelcarport und Doppelcarport anhand von 69 Bausätzen vergleichen](https://www.passendplanen.de/ratgeber/daten/carport-groessen-stellplaetze/): Außenmaße, Grundfläche, Stellplatzzahl und Angebotspreise der dokumentierten Carport Bausätze datenbasiert einordnen.
+- [Warum günstige Carport Treffer häufig Zubehör und keine Bausätze sind](https://www.passendplanen.de/ratgeber/daten/carport-bausatz-zubehoer-preise/): Bausätze, Seitenwände, Fundamente, Entwässerung und Elektrik im aktuellen Katalog getrennt betrachten.
+- [Außenmaße sind häufig vorhanden, lichte Maße und Dachangaben kaum](https://www.passendplanen.de/ratgeber/daten/carport-datenluecken-lichte-masse-dach/): Welche Carportdaten für eine belastbare Fahrzeug und Standortprüfung fehlen und warum Außenmaße allein nicht reichen.
+- [114 Gewächshäuser nach Grundfläche und Angebotspreis ausgewertet](https://www.passendplanen.de/ratgeber/daten/gewaechshaus-flaeche-preise/): Kleine, mittlere und große Gewächshäuser anhand dokumentierter Außenmaße und verfügbarer Preise vergleichen.
+- [Glas und Hohlkammerplatten in der aktuellen Gewächshausstichprobe](https://www.passendplanen.de/ratgeber/daten/gewaechshaus-glas-hohlkammerplatten/): Verglasungsarten nach Häufigkeit, mittlerer Grundfläche und Preis einordnen, ohne daraus einen pauschalen Materialsieger abzuleiten.
+- [Höhe, Lüftung und Zubehör bleiben in Produktfeeds oft unvollständig](https://www.passendplanen.de/ratgeber/daten/gewaechshaus-hoehe-lueftung-zubehoer/): Dokumentierte Höhen, Lüftungsangaben und Zubehöranteile prüfen und ihre Bedeutung für Kulturplan und Klima erklären.
+- [80 Sichtschutzelemente und Matten nach Breite und Höhe ausgewertet](https://www.passendplanen.de/ratgeber/daten/sichtschutz-elementbreiten-hoehen/): Elementmaße in sinnvolle Breiten und Höhenklassen einordnen und ihre Wirkung auf Raster und Restfelder zeigen.
+- [Was zehn Meter Sichtschutz mit unterschiedlichen Elementbreiten rechnerisch kosten](https://www.passendplanen.de/ratgeber/daten/sichtschutz-kosten-zehn-meter/): Vollständige Elemente auf zehn Meter aufrunden und zeigen, warum Höhe, Restfeld und Systemteile den reinen Elementpreis verändern.
+- [Elemente, Pfosten, Tore und Halterungen bilden noch kein freigegebenes System](https://www.passendplanen.de/ratgeber/daten/sichtschutz-systemteile-datenluecken/): Das Sortiment nach Produktarten und dokumentierter Kompatibilität untersuchen und offene Planungsfragen sichtbar machen.
+- [Holz und WPC Dielen nach Länge, Breite und Stärke verglichen](https://www.passendplanen.de/ratgeber/daten/terrassendielen-holz-wpc-abmessungen/): 80 dokumentierte Terrassendielen nach Material und Abmessungen auswerten und die Folgen für Reihen und Zuschnitt einordnen.
+- [Welche Lieferlängen im Terrassenkatalog häufig sind und was das für Verschnitt bedeutet](https://www.passendplanen.de/ratgeber/daten/terrassendielen-laengen-verschnitt/): Dielen in drei Längenklassen untersuchen und zeigen, weshalb Verlegerichtung und Terrassenmaß gemeinsam gerechnet werden müssen.
+- [Dielen, Unterkonstruktion und Befestigung dürfen preislich nicht vermischt werden](https://www.passendplanen.de/ratgeber/daten/terrasse-systemteile-preisvergleich/): Produktarten und Datenabdeckung des Terrassenkatalogs prüfen und erklären, warum ein belastbarer Quadratmeterpreis noch nicht möglich ist.
+- [Standard, Feuchtraum, Brand und Gipsfaserplatten im Vergleich](https://www.passendplanen.de/ratgeber/daten/trockenbauplatten-typen-dicken/): 28 geprüfte Platten nach dokumentiertem Typ, Material, Dicke und Angebotspreis auswerten.
+- [Profilbreiten, Lieferlängen und Packungsgrößen richtig lesen](https://www.passendplanen.de/ratgeber/daten/trockenbauprofile-breiten-laengen/): 48 Profile nach Breite, Länge, Typ und Packungsumfang untersuchen und die Grenzen eines reinen Preisvergleichs zeigen.
+- [Feuchtraum und Brandschutz lassen sich nicht aus unvollständigen Produktfeeds freigeben](https://www.passendplanen.de/ratgeber/daten/trockenbau-feuchtraum-brandschutz-datenluecken/): Datenabdeckung für Maße, Feuchtraumfreigabe und Brandklasse offenlegen und die notwendige Systemprüfung erklären.
 
-## Konkrete Projektbeispiele
+## Themenbereiche
 
-Die Projektbibliothek enthält 850 deutschsprachige Rechenprofile. Jedes Profil nennt Eingabe, Rechenweg, Gegenprobe, Ergebnis, Grenzen und Quellen; die Profile sind keine Produkt- oder Testsieger-Rankings.
-
-- [Gartenhaus-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/gartenhaus/): 17 Größen in fünf Nutzungsprofilen.
-- [Mähroboter-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/maehroboter/): 17 Rasenflächen in fünf Gartentypen.
-- [Terrassen-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/terrasse/): 17 Flächen in fünf Material- und Verlegeprofilen.
-- [Bewässerungs-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/bewaesserung/): 17 Flächen in fünf Pflanzen- und Geländeprofilen.
-- [Gewächshaus-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/gewaechshaus/): 17 Größen in fünf Kulturprofilen.
-- [Sichtschutz-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/sichtschutz/): 17 Längen in fünf Raster- und Montageszenarien.
-- [Carport-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/carport/): 17 Fahrzeugmaße in fünf Nutzungsprofilen.
-- [Bodenbelag-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/bodenbelag/): 17 Raumflächen in fünf Material- und Verlegeszenarien.
-- [Trockenbau-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/trockenbau/): 17 Wandmaße in fünf Systemprofilen.
-- [Luftentfeuchter-Projektbeispiele](https://www.passendplanen.de/ratgeber/projekte/luftentfeuchter/): 17 Raumflächen in fünf Nutzungsprofilen.
+- [Gartenhaus planen](https://www.passendplanen.de/ratgeber/thema/gartenhaus/): Ein Gartenhaus passt, wenn Lagergut, Zugang, Bewegungsfläche und Standort gemeinsam funktionieren. Die Ratgeber in diesem Themenbereich gehen vom echten Nutzungsprofil aus und trennen Innenmaß, Sockelmaß, Außenmaß und rechtlich relevante Randbedingungen.
+- [Mähroboter auswählen](https://www.passendplanen.de/ratgeber/thema/maehroboter/): Die Quadratmeterzahl ist nur der Anfang einer Mähroboter-Auswahl. Bäume, Passagen, getrennte Flächen, Hang, Ladestation und erlaubte Betriebszeiten bestimmen, ob ein Modell im realen Garten funktionieren kann.
+- [Terrasse und Dielen planen](https://www.passendplanen.de/ratgeber/thema/terrasse/): Terrassenfläche ist nicht gleich Bestellfläche. Deckbreite, Fuge, Lieferlänge, Verlegerichtung, Stöße und Randdetails verändern Dielenmenge und Unterkonstruktion – oft stärker als ein pauschaler Verschnittsatz.
+- [Gartenbewässerung planen](https://www.passendplanen.de/ratgeber/thema/bewaesserung/): Ein Bewässerungssystem wird nicht nach Schlauchlänge allein geplant. Pflanzenbereiche, Abgabemenge, Fließdruck, Leitungslänge und gleichzeitig aktive Verbraucher bestimmen, welche Zonen zuverlässig funktionieren.
+- [Gewächshaus planen](https://www.passendplanen.de/ratgeber/thema/gewaechshaus/): Ein Gewächshaus sollte vom Kulturplan nach außen gedacht werden. Erreichbare Beete, Wege, Pflanzenhöhe und Luftführung bestimmen das Innenlayout; Konstruktion, Fundament und Standort sichern anschließend die Nutzung.
+- [Sichtschutz planen](https://www.passendplanen.de/ratgeber/thema/sichtschutz/): Sichtschutz wird aus einer gemessenen Flucht in ein Systemraster übersetzt. Pfosten, Fugen, Ecken und Tore gehören zur Länge; Wind, Boden und Höhe bestimmen, ob die gewählte Konstruktion am Standort tragfähig sein kann.
+- [Carport planen](https://www.passendplanen.de/ratgeber/thema/carport/): Ein Carport wird nicht nach Dachmaß ausgewählt, sondern nach dem kleinsten lichten Querschnitt. Fahrzeug, Spiegel, Türen, Dachaufbauten, Pfosten und Rangierlinie müssen gleichzeitig funktionieren.
+- [Bodenbelag planen](https://www.passendplanen.de/ratgeber/thema/bodenbelag/): Die richtige Bestellmenge entsteht erst nach der Systementscheidung. Untergrund, Feuchte, Heizung und Nutzung klären, ob ein Boden geeignet ist; Raumform, Dielenformat und Paketinhalt bestimmen danach die Menge.
+- [Trockenbau planen](https://www.passendplanen.de/ratgeber/thema/trockenbau/): Trockenbaumengen hängen nicht nur von Quadratmetern ab. Wandfunktion, Höhe, Öffnungen, Lasten, Plattenlagen und das freigegebene Profilraster bestimmen den Materialrahmen.
+- [Luftentfeuchter auswählen](https://www.passendplanen.de/ratgeber/thema/luftentfeuchter/): Liter pro Tag ist nur unter den zugehörigen Testbedingungen aussagekräftig. Raumvolumen, Temperatur, Feuchteverlauf und Ursache entscheiden, ob und wie ein Gerät sinnvoll eingesetzt werden kann.
 
 ## Nutzungshinweise
 
-- Ergebnisse sind Planungshilfen und ersetzen keine Statik, Genehmigungs-, Elektro-, Sanitär- oder Fachplanung.
-- Bei fachlichen Zahlen sind sichtbare Quellen, Rechenbeispiele und Grenzen auf der jeweiligen Ratgeberseite maßgeblich.
-- Produktkataloge werden erst nach Prüfung realer Händlerdaten veröffentlicht; leere Produktzustände sind beabsichtigt.
-- Die Marke heißt PassendPlanen und ist unter `passendplanen.de` erreichbar.
+Die Rechner und Datenauswertungen dienen der allgemeinen Information und Vorplanung. Ergebnisse müssen anhand aktueller Herstellerangaben, örtlicher Regeln und der konkreten Situation selbst geprüft werden. PassendPlanen übernimmt keine Fachplanung, Genehmigung oder Garantie für eine individuelle Entscheidung.
+
+- [Ausführliche Nutzungshinweise](https://www.passendplanen.de/nutzungshinweise/): Haftungsgrenzen und notwendige Gegenprüfungen vor einer Entscheidung.

@@ -3,8 +3,8 @@ import { DataReportLinks, ReportBarList, ReportMethod, ReportMetricGrid } from "
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { dehumidifierDataReport as report } from "@/lib/data-report/catalog-insights";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/site";
 
 const PATH = "/ratgeber/daten/luftentfeuchter-leistung-lautstaerke/";
 const title = "42 Luftentfeuchter geprüft. Leistung, Lautstärke und Datenlücken";
@@ -17,10 +17,7 @@ const number = (value: number, digits = 0) => value.toLocaleString("de-DE", { mi
 
 export default function Page() {
   return <main className="data-report-page data-report-page--dehumidifier">
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(PATH) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: "PassendPlanen Auswertung geprüfter Luftentfeuchter", description: `Auswertung von ${report.total} geprüften Luftentfeuchtern nach Leistung, Geräusch, Stromaufnahme, Betriebstemperatur und Ausstattung.`, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: ["Entfeuchtungsleistung", "Geräusch", "Leistungsaufnahme", "Betriebstemperatur", "Dauerablauf", "Wäschemodus"] },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Luftentfeuchter", datasetDescription: `Auswertung von ${report.total} geprüften Luftentfeuchtern nach Leistung, Geräusch, Stromaufnahme, Betriebstemperatur und Ausstattung.`, datasetSize: report.total, variables: ["Entfeuchtungsleistung", "Geräusch", "Leistungsaufnahme", "Betriebstemperatur", "Dauerablauf", "Wäschemodus"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero data-report-hero--dehumidifier">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Luftentfeuchter" }]} />
       <div className="data-report-hero-grid">

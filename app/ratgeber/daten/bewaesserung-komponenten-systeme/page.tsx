@@ -3,8 +3,8 @@ import { DataReportLinks, ReportBarList, ReportMethod, ReportMetricGrid } from "
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { irrigationDataReport as report } from "@/lib/data-report/catalog-insights";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/site";
 
 const PATH = "/ratgeber/daten/bewaesserung-komponenten-systeme/";
 const title = "84 Bewässerungsprodukte im Datencheck. Einzelteile und Systemplanung";
@@ -18,10 +18,7 @@ export default function Page() {
   const distributionCore = report.kinds.filter((item) => ["pipe", "connector", "sprinkler", "dripline"].includes(item.key)).reduce((sum, item) => sum + item.count, 0);
 
   return <main className="data-report-page data-report-page--irrigation">
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(PATH) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: "PassendPlanen Auswertung geprüfter Bewässerungsprodukte", description: `Auswertung von ${report.total} geprüften Bewässerungsprodukten nach Bauteilart, Angebotspreis und dokumentierter Planungstiefe.`, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: ["Bauteilart", "Marke", "Angebotspreis", "Rohrdurchmesser", "Zonenanzahl", "Smart Kompatibilität", "benötigtes Zubehör"] },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Bewässerungsprodukte", datasetDescription: `Auswertung von ${report.total} geprüften Bewässerungsprodukten nach Bauteilart, Angebotspreis und dokumentierter Planungstiefe.`, datasetSize: report.total, variables: ["Bauteilart", "Marke", "Angebotspreis", "Rohrdurchmesser", "Zonenanzahl", "Smart Kompatibilität", "benötigtes Zubehör"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero data-report-hero--irrigation">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Bewässerung" }]} />
       <div className="data-report-hero-grid">

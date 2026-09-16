@@ -3,8 +3,8 @@ import { DataReportLinks, ReportBarList, ReportMethod, ReportMetricGrid } from "
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { flooringDataReport as report } from "@/lib/data-report/catalog-insights";
+import { createDataReportStructuredData } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
-import { absoluteUrl } from "@/lib/site";
 
 const PATH = "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/";
 const title = "101 Bodenbeläge im Datenvergleich. Heizung, Feuchtraum und Paketmenge";
@@ -17,10 +17,7 @@ const number = (value: number, digits = 0) => value.toLocaleString("de-DE", { mi
 
 export default function Page() {
   return <main className="data-report-page data-report-page--flooring">
-    <JsonLd data={[
-      { "@context": "https://schema.org", "@type": "Article", headline: title, description, dateModified: "2026-09-16", datePublished: "2026-09-16", author: { "@type": "Person", name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") }, mainEntityOfPage: absoluteUrl(PATH) },
-      { "@context": "https://schema.org", "@type": "Dataset", name: "PassendPlanen Auswertung geprüfter Bodenbeläge", description: `Auswertung von ${report.total} geprüften Bodenbelägen nach Belagsart, Freigaben, Paketinhalt und Angebotspreis.`, dateModified: "2026-09-16", creator: { "@type": "Organization", name: "PassendPlanen", url: absoluteUrl("/") }, variableMeasured: ["Belagsart", "Paketinhalt", "Dicke", "Freigabe für Fußbodenheizung", "Feuchtraumeignung", "Angebotspreis"] },
-    ]} />
+    <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Bodenbeläge", datasetDescription: `Auswertung von ${report.total} geprüften Bodenbelägen nach Belagsart, Freigaben, Paketinhalt und Angebotspreis.`, datasetSize: report.total, variables: ["Belagsart", "Paketinhalt", "Dicke", "Freigabe für Fußbodenheizung", "Feuchtraumeignung", "Angebotspreis"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero data-report-hero--flooring">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Bodenbeläge" }]} />
       <div className="data-report-hero-grid">
