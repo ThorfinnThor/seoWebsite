@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T07:42:22.603Z",
+  "generatedAt": "2026-09-17T07:38:41.392Z",
   "products": [
     {
       "brand": "Gardena",
@@ -13,7 +13,7 @@
         "mpn": "0692152398",
         "name": "Gardena Bewässerungssystem Pipeline AquaPrecise für Rasen solarbetrieben",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.369Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.937Z"
       },
       "gtin": "4066407504110",
       "id": "gtin:4066407504110",
@@ -44,7 +44,7 @@
         "mpn": "0692152323",
         "name": "Gardena Akku-Wand-Schlauchbox PowerRoll XL solo mit 35 m Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.952Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.744Z"
       },
       "gtin": "4066407002302",
       "id": "gtin:4066407002302",
@@ -76,7 +76,7 @@
         "name": "Einhell Akku-Wand-Schlauchbox GE-HR 18/30-1 Li-Solo mit 30 m Schlauch",
         "pipeDiameterMm": 12.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.587Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.134Z"
       },
       "gtin": "4006825682786",
       "id": "gtin:4006825682786",
@@ -106,7 +106,7 @@
         "mpn": "SGKV40",
         "name": "Kessel-Sicherheitsgruppe 16 bar mit Druckminderer SGKV40",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.548Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.379Z"
       },
       "gtin": "4262376915487",
       "id": "gtin:4262376915487",
@@ -137,7 +137,7 @@
         "name": "Aqmos Rückspülfilter mit Druckminderer und Manometer 25,4 mm (1)",
         "pipeDiameterMm": 25.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.086Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.440Z"
       },
       "gtin": "4260699890016",
       "id": "gtin:4260699890016",
@@ -167,7 +167,7 @@
         "mpn": "0782147796",
         "name": "Aqmos Rückspülfilterautomatik für Rückspülfilter mit Druckminderer & Manometer",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.087Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.441Z"
       },
       "gtin": "4260699890009",
       "id": "gtin:4260699890009",
@@ -199,7 +199,7 @@
         "name": "Primaster Profi-Gartenschlauch 50 m Ø 19 mm, (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.292Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.193Z"
       },
       "gtin": "5907553509514",
       "id": "gtin:5907553509514",
@@ -231,7 +231,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 50 m Ø 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.159Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.921Z"
       },
       "gtin": "8011963793047",
       "id": "gtin:8011963793047",
@@ -262,7 +262,7 @@
         "name": "Gardena Bewässerungssteuerung smart Pipeline inkl. Hahn- & Schlauchverbinder",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.236Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.585Z"
       },
       "gtin": "4066407028265",
       "id": "gtin:4066407028265",
@@ -292,7 +292,7 @@
         "mpn": "SGKV30",
         "name": "Kessel-Sicherheitsgruppe 10 bar ohne Druckminderer SGKV30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.549Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.379Z"
       },
       "gtin": "4262376915470",
       "id": "gtin:4262376915470",
@@ -323,7 +323,7 @@
         "name": "Gardena Bewässerungsventil 9 V Bluetooth",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.594Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.870Z"
       },
       "gtin": "4078500052948",
       "id": "gtin:4078500052948",
@@ -355,7 +355,7 @@
         "name": "Primaster Wand-Schlauchbox inkl. 30 m Schlauch & 2 m Anschlussschlauch",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.343Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.587Z"
       },
       "gtin": "4333692105613",
       "id": "gtin:4333692105613",
@@ -385,7 +385,7 @@
         "mpn": "01874-20",
         "name": "Gardena Bewässerungscomputer MultiControl duo",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.224Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.540Z"
       },
       "gtin": "4078500187404",
       "id": "gtin:4078500187404",
@@ -416,7 +416,7 @@
         "name": "Rothenberger Druckminderer mit 2 Manometer",
         "pipeDiameterMm": 31.75,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.390Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.052Z"
       },
       "gtin": "4004625302170",
       "id": "gtin:4004625302170",
@@ -449,7 +449,7 @@
         "pipeDiameterMm": 13,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.048Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.404Z"
       },
       "gtin": "4078500032858",
       "id": "gtin:4078500032858",
@@ -482,7 +482,7 @@
         "pipeDiameterMm": 13,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.166Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.488Z"
       },
       "gtin": "4078500045032",
       "id": "gtin:4078500045032",
@@ -513,7 +513,7 @@
         "name": "Gardena Verlegerohr für Sprinkler Ø 25 mm x 50 m",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.435Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.094Z"
       },
       "gtin": "4078500270106",
       "id": "gtin:4078500270106",
@@ -545,7 +545,7 @@
         "name": "Primaster Wandschlauchbox mit 20 m Schlauch",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.467Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.022Z"
       },
       "gtin": "4333692082525",
       "id": "gtin:4333692082525",
@@ -575,7 +575,7 @@
         "mpn": "01892-20",
         "name": "Gardena Bewässerungssteuerung Master",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.167Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.489Z"
       },
       "gtin": "4078500045636",
       "id": "gtin:4078500045636",
@@ -606,7 +606,7 @@
         "name": "Aqmos Druckminderer für Hauswasserinstallation mit Manometer voreinstellbar 25,4 mm (1)",
         "pipeDiameterMm": 25.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.029Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.385Z"
       },
       "gtin": "7146372222084",
       "id": "gtin:7146372222084",
@@ -638,7 +638,7 @@
         "name": "Gartenschlauch Economic 50 m 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.291Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.193Z"
       },
       "gtin": "5901828850257",
       "id": "gtin:5901828850257",
@@ -669,7 +669,7 @@
         "mpn": "0692152347",
         "name": "Fitt Gartenschlauch Idro Yellow 3/4 50 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.704Z"
       },
       "gtin": "8011963770253",
       "id": "gtin:8011963770253",
@@ -700,7 +700,7 @@
         "name": "Gardena Gartenschlauch Set EcoLine, 20 m, Anschlussstücke",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.679Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.203Z"
       },
       "gtin": "4066407002517",
       "id": "gtin:4066407002517",
@@ -732,7 +732,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 50 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.161Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.923Z"
       },
       "gtin": "8011963793016",
       "id": "gtin:8011963793016",
@@ -763,7 +763,7 @@
         "name": "Ikra Bewässerungscomputer Wlan inkl. Wlan Gateway mit Steckdose",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.619Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.887Z"
       },
       "gtin": "4010951793001",
       "id": "gtin:4010951793001",
@@ -794,7 +794,7 @@
         "mpn": "01893-34",
         "name": "Gardena Bewässerungssteuerung Select & 2 Wege Verteiler",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.630Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.889Z"
       },
       "gtin": "4078500055420",
       "id": "gtin:4078500055420",
@@ -826,7 +826,7 @@
         "name": "Primaster Profi-Gartenschlauch 25 m Ø 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.291Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.193Z"
       },
       "gtin": "5907553509477",
       "id": "gtin:5907553509477",
@@ -858,7 +858,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 25 m Ø 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.160Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.922Z"
       },
       "gtin": "8011963793030",
       "id": "gtin:8011963793030",
@@ -889,7 +889,7 @@
         "name": "Aqmos Druckminderer für Hauswasserinstallation mit Manometer voreinstellbar 19,05 mm (3/4)",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.028Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.385Z"
       },
       "gtin": "7146372221926",
       "id": "gtin:7146372221926",
@@ -920,7 +920,7 @@
         "name": "Gardena Bewässerungssteuerung Bluetooth",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.592Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.868Z"
       },
       "gtin": "4078500052863",
       "id": "gtin:4078500052863",
@@ -951,7 +951,7 @@
         "name": "Gardena Ventilschacht V3 1 für bis zu 3 Bewässerungsventile ohne Ventil",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.306Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.984Z"
       },
       "gtin": "4078500125505",
       "id": "gtin:4078500125505",
@@ -983,7 +983,7 @@
         "name": "TrendLine Schlauchwagen für bis zu 100 m Schlauch",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.213Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.756Z"
       },
       "gtin": "4333692038287",
       "id": "gtin:4333692038287",
@@ -1015,7 +1015,7 @@
         "name": "Gardena Schlauch Superflex 20 m 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.990Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.602Z"
       },
       "gtin": "4078500001977",
       "id": "gtin:4078500001977",
@@ -1045,7 +1045,7 @@
         "mpn": "530218",
         "name": "Rothenberger Druckminderer mit 1 Manometer",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.391Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.053Z"
       },
       "gtin": "4004625302187",
       "id": "gtin:4004625302187",
@@ -1076,7 +1076,7 @@
         "mpn": "0692152493",
         "name": "Gardena Mobile Schlauchbox Move inkl. 10 m Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.188Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.537Z"
       },
       "gtin": "4066407029378",
       "id": "gtin:4066407029378",
@@ -1106,7 +1106,7 @@
         "mpn": "01891-20",
         "name": "Gardena Bewässerungssteuerung Select",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.167Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.489Z"
       },
       "gtin": "4078500045698",
       "id": "gtin:4078500045698",
@@ -1136,7 +1136,7 @@
         "mpn": "0692152092",
         "name": "Gardena Viereckregner Aquazoom L",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.355Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.651Z"
       },
       "gtin": "4078500048118",
       "id": "gtin:4078500048118",
@@ -1167,7 +1167,7 @@
         "mpn": "0692152452",
         "name": "Primaster Schlauchwagen-Set inkl. 20 m Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.456Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.011Z"
       },
       "gtin": "8011963796680",
       "id": "gtin:8011963796680",
@@ -1199,7 +1199,7 @@
         "name": "Ikra Gartenschlauch 10 > 30 m",
         "pipeDiameterMm": 15,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.612Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.882Z"
       },
       "gtin": "4010951791571",
       "id": "gtin:4010951791571",
@@ -1229,7 +1229,7 @@
         "mpn": "0691451866",
         "name": "Summer Waves Aufblasbares Zebra-Einhorn Sprinkler 1.57 m x 94 cm x 1.57 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.574Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.687Z"
       },
       "gtin": "4895215121086",
       "id": "gtin:4895215121086",
@@ -1261,7 +1261,7 @@
         "name": "Primaster Gartenschlauch-Set Comfort+ mit Multibrause 25 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.428Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.987Z"
       },
       "gtin": "8011963795553",
       "id": "gtin:8011963795553",
@@ -1291,7 +1291,7 @@
         "mpn": "01890-20",
         "name": "Gardena Bewässerungssteuerung Flex",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.171Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.496Z"
       },
       "gtin": "4078500045759",
       "id": "gtin:4078500045759",
@@ -1322,7 +1322,7 @@
         "name": "Gardena Verlegerohr für Sprinkler Ø 25 mm x 25 m",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.435Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.094Z"
       },
       "gtin": "4078500270007",
       "id": "gtin:4078500270007",
@@ -1353,7 +1353,7 @@
         "name": "Primaster Bewässerungscomputer WZ 1000",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.050Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.407Z"
       },
       "gtin": "4333692038317",
       "id": "gtin:4333692038317",
@@ -1385,7 +1385,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 30 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.161Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.922Z"
       },
       "gtin": "8011963793009",
       "id": "gtin:8011963793009",
@@ -1416,7 +1416,7 @@
         "mpn": "0692152451",
         "name": "Primaster Schlauchtrommel-Set inkl. 15 m Schlauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.455Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.011Z"
       },
       "gtin": "8011963796673",
       "id": "gtin:8011963796673",
@@ -1446,7 +1446,7 @@
         "mpn": "18712-20",
         "name": "Gardena Viereckregner AquaZoom M",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.355Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.651Z"
       },
       "gtin": "4078500048095",
       "id": "gtin:4078500048095",
@@ -1476,7 +1476,7 @@
         "mpn": "0692152322",
         "name": "Gardena Viereckregner AquaZoom M",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.967Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.758Z"
       },
       "gtin": "4078500049351",
       "id": "gtin:4078500049351",
@@ -1506,7 +1506,7 @@
         "mpn": "08223-20",
         "name": "Gardena Versenk Viereckregner OS 140",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.341Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.641Z"
       },
       "gtin": "4078500049528",
       "id": "gtin:4078500049528",
@@ -1538,7 +1538,7 @@
         "name": "Gartenschlauch Economic 50 m 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.290Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.192Z"
       },
       "gtin": "5901828850066",
       "id": "gtin:5901828850066",
@@ -1570,7 +1570,7 @@
         "name": "Gartenschlauch Economic 25 m 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.291Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.192Z"
       },
       "gtin": "5901828850233",
       "id": "gtin:5901828850233",
@@ -1601,7 +1601,7 @@
         "mpn": "0692152345",
         "name": "Fitt Gartenschlauch Idro Yellow 1/2 50 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.704Z"
       },
       "gtin": "8011963770147",
       "id": "gtin:8011963770147",
@@ -1632,7 +1632,7 @@
         "mpn": "0692152346",
         "name": "Fitt Gartenschlauch Idro Yellow 3/4 25 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.704Z"
       },
       "gtin": "8011963770239",
       "id": "gtin:8011963770239",
@@ -1663,7 +1663,7 @@
         "mpn": "13503-20",
         "name": "Gardena Tropfrohr, 1,6 l/h",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.445Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.471Z"
       },
       "gtin": "4066407003033",
       "id": "gtin:4066407003033",
@@ -1693,7 +1693,7 @@
         "mpn": "0692152090",
         "name": "Gardena Viereckregner Aquazoom S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.354Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.651Z"
       },
       "gtin": "4078500048071",
       "id": "gtin:4078500048071",
@@ -1723,7 +1723,7 @@
         "mpn": "0692152321",
         "name": "Gardena Viereckregner AquaZoom S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.967Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.758Z"
       },
       "gtin": "4078500049313",
       "id": "gtin:4078500049313",
@@ -1754,7 +1754,7 @@
         "name": "TrendLine Gießstab für Gartenschlauch teleskopierbar",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.351Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.858Z"
       },
       "gtin": "4333692888578",
       "id": "gtin:4333692888578",
@@ -1786,7 +1786,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 10 m Ø 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.160Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.922Z"
       },
       "gtin": "8011963793023",
       "id": "gtin:8011963793023",
@@ -1819,7 +1819,7 @@
         "pipeDiameterMm": 12.7,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.619Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.158Z"
       },
       "gtin": "8011963796697",
       "id": "gtin:8011963796697",
@@ -1849,7 +1849,7 @@
         "mpn": "18704-20",
         "name": "Gardena Viereckregner Aqua L",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.356Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.652Z"
       },
       "gtin": "4078500048033",
       "id": "gtin:4078500048033",
@@ -1881,7 +1881,7 @@
         "name": "Fitt Gartenschlauch Kiuma Lime 20 m Ø 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.328Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.901Z"
       },
       "gtin": "8011963794013",
       "id": "gtin:8011963794013",
@@ -1911,7 +1911,7 @@
         "mpn": "18335-20",
         "name": "Gardena Gießstab für Gartenschlauch Comfort Blumenampeln 90 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.353Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.860Z"
       },
       "gtin": "4078500017268",
       "id": "gtin:4078500017268",
@@ -1943,7 +1943,7 @@
         "name": "Primaster Profi-Gartenschlauch 20 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.178Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.501Z"
       },
       "gtin": "5907553509491",
       "id": "gtin:5907553509491",
@@ -1976,7 +1976,7 @@
         "pipeDiameterMm": 13,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.905Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.705Z"
       },
       "gtin": "8011963792408",
       "id": "gtin:8011963792408",
@@ -2008,7 +2008,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 20 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.161Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.923Z"
       },
       "gtin": "8011963792996",
       "id": "gtin:8011963792996",
@@ -2038,7 +2038,7 @@
         "mpn": "18708-20",
         "name": "Gardena Viereckregner Aqua Zoom Compact",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.355Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.652Z"
       },
       "gtin": "4078500048057",
       "id": "gtin:4078500048057",
@@ -2068,7 +2068,7 @@
         "mpn": "01969-20",
         "name": "Gardena Perl-Regner 15 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.332Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.006Z"
       },
       "gtin": "4078500196901",
       "id": "gtin:4078500196901",
@@ -2098,7 +2098,7 @@
         "mpn": "18708-32",
         "name": "Gardena Viereckregner AquaZoom compact",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.362Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.666Z"
       },
       "gtin": "4078500049177",
       "id": "gtin:4078500049177",
@@ -2131,7 +2131,7 @@
         "pipeDiameterMm": 12.7,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.700Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.326Z"
       },
       "gtin": "4333692038225",
       "id": "gtin:4333692038225",
@@ -2163,7 +2163,7 @@
         "name": "TrendLine Schlauchwagen für bis zu 60 m Gartenschlauch",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.247Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.830Z"
       },
       "gtin": "4333692923835",
       "id": "gtin:4333692923835",
@@ -2193,7 +2193,7 @@
         "mpn": "08200-20",
         "name": "Gardena Druckminderer",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.450Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.477Z"
       },
       "gtin": "4066407002227",
       "id": "gtin:4066407002227",
@@ -2223,7 +2223,7 @@
         "mpn": "18334-20",
         "name": "Gardena Gießstab für Gartenschlauch Comfort 90 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.431Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.926Z"
       },
       "gtin": "4078500017282",
       "id": "gtin:4078500017282",
@@ -2255,7 +2255,7 @@
         "name": "Gardena Schlauch Flex Comfort 20 m 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.990Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.602Z"
       },
       "gtin": "4078500001694",
       "id": "gtin:4078500001694",
@@ -2287,7 +2287,7 @@
         "name": "Fitt Gartenschlauch Kiuma Lime 15 m Ø 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.328Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.901Z"
       },
       "gtin": "8011963794006",
       "id": "gtin:8011963794006",
@@ -2319,7 +2319,7 @@
         "name": "Ikra Gartenschlauch Magic 5 > 15 m",
         "pipeDiameterMm": 15,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.696Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.817Z"
       },
       "gtin": "4010951791557",
       "id": "gtin:4010951791557",
@@ -2350,7 +2350,7 @@
         "name": "Gardena Turbinen Versenkregner T380",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.708Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.335Z"
       },
       "gtin": "4078500820592",
       "id": "gtin:4078500820592",
@@ -2380,7 +2380,7 @@
         "mpn": "08203-29",
         "name": "Gardena Turbinenversenkregner T200",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.707Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.334Z"
       },
       "gtin": "4078500820394",
       "id": "gtin:4078500820394",
@@ -2411,7 +2411,7 @@
         "name": "Cornat Schnellkupplung Saug und Hochdruck 32,9 mm (1 1/4)",
         "pipeDiameterMm": 32.9,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.198Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.657Z"
       },
       "gtin": "4004849923366",
       "id": "gtin:4004849923366",
@@ -2441,7 +2441,7 @@
         "mpn": "18700-20",
         "name": "Gardena Viereckregner Aqua S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.355Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.652Z"
       },
       "gtin": "4078500047999",
       "id": "gtin:4078500047999",
@@ -2471,7 +2471,7 @@
         "mpn": "0692152097",
         "name": "Gardena Viereckregner Aqua S",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.362Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.665Z"
       },
       "gtin": "4078500049252",
       "id": "gtin:4078500049252",
@@ -2501,7 +2501,7 @@
         "mpn": "692151578",
         "name": "TrendLine Viereckregner Vario",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.864Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.513Z"
       },
       "gtin": "4333692038256",
       "id": "gtin:4333692038256",
@@ -2532,7 +2532,7 @@
         "name": "Primaster Viereckregner mit 18 Düsen & Ständer",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.258Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.703Z"
       },
       "gtin": "4333692086608",
       "id": "gtin:4333692086608",
@@ -2563,7 +2563,7 @@
         "name": "Primaster Gießstab für Gartenschlauch mit 6 Funktionen Ø 16 mm",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.313Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.889Z"
       },
       "gtin": "4333692918473",
       "id": "gtin:4333692918473",
@@ -2595,7 +2595,7 @@
         "name": "Perlschlauch 20 m 12,5 mm (1/2)",
         "pipeDiameterMm": 12.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.596Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.611Z"
       },
       "gtin": "8011963748832",
       "id": "gtin:8011963748832",
@@ -2626,7 +2626,7 @@
         "mpn": "0692152344",
         "name": "Fitt Gartenschlauch Idro Yellow 1/2 30 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.705Z"
       },
       "gtin": "8011963770130",
       "id": "gtin:8011963770130",
@@ -2658,7 +2658,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 10 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.160Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.922Z"
       },
       "gtin": "8011963792989",
       "id": "gtin:8011963792989",
@@ -2690,7 +2690,7 @@
         "pipeDiameterMm": 70,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.915Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.895Z"
       },
       "gtin": "4011458308811",
       "id": "gtin:4011458308811",
@@ -2720,7 +2720,7 @@
         "mpn": "18330-32",
         "name": "Gardena Gießstab für Gartenschlauch Classic 60 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.263Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.792Z"
       },
       "gtin": "4078500012805",
       "id": "gtin:4078500012805",
@@ -2750,7 +2750,7 @@
         "mpn": "GAN-0164",
         "name": "Primaster Metall Viereckregner Beregnungsfläche bis max. 56 m²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.404Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.699Z"
       },
       "gtin": "4333692650854",
       "id": "gtin:4333692650854",
@@ -2781,7 +2781,7 @@
         "name": "Cornat Schnellkupplung Saug und Hochdruck 33,3 mm (1)",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.197Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.657Z"
       },
       "gtin": "4004849923342",
       "id": "gtin:4004849923342",
@@ -2811,7 +2811,7 @@
         "mpn": "08231-20",
         "name": "Gardena Versenkregner MD40",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.459Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.484Z"
       },
       "gtin": "4066407002265",
       "id": "gtin:4066407002265",
@@ -2842,7 +2842,7 @@
         "name": "Cornat Schnellkupplung Schlauchspritze 21 mm (1/2)",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.200Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.658Z"
       },
       "gtin": "4004849923281",
       "id": "gtin:4004849923281",
@@ -2873,7 +2873,7 @@
         "name": "Cornat Schlauchspritze Schnellkupplung",
         "pipeDiameterMm": 40,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.000Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.371Z"
       },
       "gtin": "4035300615544",
       "id": "gtin:4035300615544",
@@ -2903,7 +2903,7 @@
         "mpn": "0692152478",
         "name": "Primaster Gießstab für Gartenschlauch Multi 70 cm - 10 Funktionen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.462Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.721Z"
       },
       "gtin": "4333692459143",
       "id": "gtin:4333692459143",
@@ -2934,7 +2934,7 @@
         "mpn": "0692152343",
         "name": "Fitt Gartenschlauch Idro Yellow 1/2 20 m mit Armatur",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.704Z"
       },
       "gtin": "8011963770109",
       "id": "gtin:8011963770109",
@@ -2967,7 +2967,7 @@
         "pipeDiameterMm": 13,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.704Z"
       },
       "gtin": "8011963792392",
       "id": "gtin:8011963792392",
@@ -2998,7 +2998,7 @@
         "name": "Cornat Schnellkupplung Saug und Hochdruck 26,4 mm (3/4)",
         "pipeDiameterMm": 26.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.198Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.657Z"
       },
       "gtin": "4004849923328",
       "id": "gtin:4004849923328",
@@ -3029,7 +3029,7 @@
         "name": "Primaster Gießstab für Gartenschlauch Multi ausziehbar bis 100 cm - 10 Strahlarten",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.313Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.888Z"
       },
       "gtin": "4333692918350",
       "id": "gtin:4333692918350",
@@ -3060,7 +3060,7 @@
         "name": "Happy People Kinderspielzeug Wassersprinkler Schildkröte",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.960Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.450Z"
       },
       "gtin": "4008332752518",
       "id": "gtin:4008332752518",
@@ -3091,7 +3091,7 @@
         "name": "Primaster Gießstab für Gartenschlauch 4 Strahlarten",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.337Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.636Z"
       },
       "gtin": "5907512604120",
       "id": "gtin:5907512604120",
@@ -3122,7 +3122,7 @@
         "name": "Primaster Multibrause für Gartenschlauch mit 6 Funktionen",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.311Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.887Z"
       },
       "gtin": "4333692918299",
       "id": "gtin:4333692918299",
@@ -3154,7 +3154,7 @@
         "name": "Gartenschlauch Economic 20 m 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.290Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.192Z"
       },
       "gtin": "5901828850028",
       "id": "gtin:5901828850028",
@@ -3185,7 +3185,7 @@
         "mpn": "0692152342",
         "name": "Fitt Gartenschlauch Idro Yellow 1/2 20 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.905Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.705Z"
       },
       "gtin": "8011963770093",
       "id": "gtin:8011963770093",
@@ -3216,7 +3216,7 @@
         "name": "Primaster 2-Wege Verteiler für Gartenschlauch Ø 19 mm",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.315Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.889Z"
       },
       "gtin": "4333692918633",
       "id": "gtin:4333692918633",
@@ -3247,7 +3247,7 @@
         "name": "T.I.P. Anschlussstück P5 Schnell-Schlauchanschlussbogen",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.916Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.895Z"
       },
       "gtin": "4011458308859",
       "id": "gtin:4011458308859",
@@ -3277,7 +3277,7 @@
         "mpn": "0692152477",
         "name": "Primaster Gießstab für Gartenschlauch mit Feststellfunktion 70 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.462Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.721Z"
       },
       "gtin": "4333692459105",
       "id": "gtin:4333692459105",
@@ -3307,7 +3307,7 @@
         "mpn": "000182.5000",
         "name": "Gloria Thermoflamm Druckminderer für Unkrautbrenner",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.270Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.797Z"
       },
       "gtin": "4046436021475",
       "id": "gtin:4046436021475",
@@ -3338,7 +3338,7 @@
         "name": "Primaster Viereckregner mit 16 Düsen & Ständer",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.258Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.704Z"
       },
       "gtin": "4333692086684",
       "id": "gtin:4333692086684",
@@ -3369,7 +3369,7 @@
         "name": "T.I.P. Anschlussstück P6 Schnell-Schlauchanschlussstück",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.927Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.341Z"
       },
       "gtin": "4011458308866",
       "id": "gtin:4011458308866",
@@ -3400,7 +3400,7 @@
         "name": "Primaster Kreisregner Basic mit 18 Düsen & Ständer",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.259Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.704Z"
       },
       "gtin": "4333692086998",
       "id": "gtin:4333692086998",
@@ -3431,7 +3431,7 @@
         "name": "Primaster Pistolenbrause Plus für Gartenschlauch mit 2 Funktionen schwarz",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.313Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.889Z"
       },
       "gtin": "4333692917902",
       "id": "gtin:4333692917902",
@@ -3462,7 +3462,7 @@
         "name": "Primaster Gießstab für Gartenschlauch 70 cm",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.314Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.889Z"
       },
       "gtin": "4333692918329",
       "id": "gtin:4333692918329",
@@ -3492,7 +3492,7 @@
         "mpn": "18267-20",
         "name": "Gardena Regulierventil",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.433Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.460Z"
       },
       "gtin": "4078500066327",
       "id": "gtin:4078500066327",
@@ -3522,7 +3522,7 @@
         "mpn": "18266-20",
         "name": "Gardena Kupplung mit Regulierventil",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.447Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.472Z"
       },
       "gtin": "4078500066372",
       "id": "gtin:4078500066372",
@@ -3553,7 +3553,7 @@
         "name": "Primaster Multibrause für Gartenschlauch mit 10 Funktionen",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.312Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.887Z"
       },
       "gtin": "4333692918275",
       "id": "gtin:4333692918275",
@@ -3585,7 +3585,7 @@
         "name": "Primaster Gartenschlauch Comfort+ 5 m Ø 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.160Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.922Z"
       },
       "gtin": "8011963792972",
       "id": "gtin:8011963792972",
@@ -3615,7 +3615,7 @@
         "mpn": "18210-20",
         "name": "Gardena Hahnverbinder für Indoor Wasserhähne",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.355Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.652Z"
       },
       "gtin": "4078500048514",
       "id": "gtin:4078500048514",
@@ -3645,7 +3645,7 @@
         "mpn": "FLOR92530",
         "name": "Cornat Schlauch-Klemmschalen 1 1/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.005Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.372Z"
       },
       "gtin": "4035300226863",
       "id": "gtin:4035300226863",
@@ -3676,7 +3676,7 @@
         "name": "Cornat Schnellkupplung 47,8 mm (1 1/2) Schlauchtülle",
         "pipeDiameterMm": 47.8,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849640010",
       "id": "gtin:4004849640010",
@@ -3707,7 +3707,7 @@
         "name": "Gardena Entwässerungsventil für Sprinkler 25 mm (3/4)",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.435Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.094Z"
       },
       "gtin": "4078500276009",
       "id": "gtin:4078500276009",
@@ -3738,7 +3738,7 @@
         "name": "Primaster Kreisregner Basic mit 45 Düsen & Ständer",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.258Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.703Z"
       },
       "gtin": "4333692086653",
       "id": "gtin:4333692086653",
@@ -3769,7 +3769,7 @@
         "name": "Primaster Pistolenbrause für Gartenschlauch mit 2 Funktionen orange-grau",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.311Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.887Z"
       },
       "gtin": "4333692917735",
       "id": "gtin:4333692917735",
@@ -3800,7 +3800,7 @@
         "name": "Gardena Kupplung Satz für 13 mm (1/2)- und 15 mm (5/8)-Schläuche",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.246Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.780Z"
       },
       "gtin": "4078500010382",
       "id": "gtin:4078500010382",
@@ -3830,7 +3830,7 @@
         "mpn": "FLOR92525",
         "name": "Cornat Schlauch-Klemmschalen 1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.004Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.372Z"
       },
       "gtin": "4035300226856",
       "id": "gtin:4035300226856",
@@ -3860,7 +3860,7 @@
         "mpn": "01569-29",
         "name": "Gardena Versenkregner 1/2 Innengewinde",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.434Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.094Z"
       },
       "gtin": "4078500156998",
       "id": "gtin:4078500156998",
@@ -3890,7 +3890,7 @@
         "mpn": "53-415GB",
         "name": "Primaster Kreisregner bis max. 200 m² Flächenberegnung mit Erdspieß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.336Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.635Z"
       },
       "gtin": "5907512603987",
       "id": "gtin:5907512603987",
@@ -3920,7 +3920,7 @@
         "mpn": "FLOR89516",
         "name": "Meister Cornat Schlauchanschlussstück 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.024Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300615308",
       "id": "gtin:4035300615308",
@@ -3950,7 +3950,7 @@
         "mpn": "00969-20",
         "name": "Gardena Sprühregner Classic inkl. Schlauchstück",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.310Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.987Z"
       },
       "gtin": "4078500096904",
       "id": "gtin:4078500096904",
@@ -3981,7 +3981,7 @@
         "name": "Primaster Gartenbrause für Gartenschlauch mit Wasserstopfunktion",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.312Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.888Z"
       },
       "gtin": "4333692918114",
       "id": "gtin:4333692918114",
@@ -4011,7 +4011,7 @@
         "mpn": "01951-20",
         "name": "Gardena Sprühregner Fox mit Spike",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.332Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.006Z"
       },
       "gtin": "4078500195102",
       "id": "gtin:4078500195102",
@@ -4041,7 +4041,7 @@
         "mpn": "01554-20",
         "name": "Gardena Sprinklersystem Versenkregner S30",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.593Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.869Z"
       },
       "gtin": "4078500054843",
       "id": "gtin:4078500054843",
@@ -4072,7 +4072,7 @@
         "name": "Meister Schlauchanschluss mit Bund & O-Ring AG 1 1/4 für 1 Wasserschläuche",
         "pipeDiameterMm": 41.91,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.663Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.056Z"
       },
       "gtin": "4004849923557",
       "id": "gtin:4004849923557",
@@ -4103,7 +4103,7 @@
         "name": "Happy People Kinderspielzeug Wassersprinkler Ladybug",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.960Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.450Z"
       },
       "gtin": "4008332752105",
       "id": "gtin:4008332752105",
@@ -4134,7 +4134,7 @@
         "name": "Happy People Kinderspielzeug Wassersprinkler Laternenfisch",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.960Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.450Z"
       },
       "gtin": "4008332752532",
       "id": "gtin:4008332752532",
@@ -4164,7 +4164,7 @@
         "mpn": "FLOR89515",
         "name": "Meister Cornat Schlauchanschlussstück 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.010Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300615292",
       "id": "gtin:4035300615292",
@@ -4195,7 +4195,7 @@
         "name": "Cornat Schnellkupplung 47,8 mm (1 1/2)",
         "pipeDiameterMm": 47.8,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849640034",
       "id": "gtin:4004849640034",
@@ -4225,7 +4225,7 @@
         "mpn": "FLOR89531",
         "name": "Meister Cornat Schlauchverbinder 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.024Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300615377",
       "id": "gtin:4035300615377",
@@ -4256,7 +4256,7 @@
         "name": "Gardena Premium Schlauchverbinder 13 mm (1/2'') - 15 mm (5/8'')",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.031Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.392Z"
       },
       "gtin": "4078500031950",
       "id": "gtin:4078500031950",
@@ -4287,7 +4287,7 @@
         "name": "Gardena Premium Schlauchverbinder 19 mm (3/4'')",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.031Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.392Z"
       },
       "gtin": "4078500031998",
       "id": "gtin:4078500031998",
@@ -4317,7 +4317,7 @@
         "mpn": "13305-20",
         "name": "Gardena Endtropfer, 0-15 l/h regulierbar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.446Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.471Z"
       },
       "gtin": "4078500059268",
       "id": "gtin:4078500059268",
@@ -4348,7 +4348,7 @@
         "name": "Meister Schlauchanschluss mit Bund & O-Ring AG 1 1/4 für 1 1/4 Wasserschläuche",
         "pipeDiameterMm": 41.91,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.664Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.056Z"
       },
       "gtin": "4004849923533",
       "id": "gtin:4004849923533",
@@ -4378,7 +4378,7 @@
         "mpn": "13304-20",
         "name": "Gardena Endtropfer, 1-8 l/h regulierbar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.445Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.471Z"
       },
       "gtin": "4078500059336",
       "id": "gtin:4078500059336",
@@ -4409,7 +4409,7 @@
         "name": "Cornat Schnellkupplung 47,8 mm (1 1/2)",
         "pipeDiameterMm": 47.8,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849640003",
       "id": "gtin:4004849640003",
@@ -4440,7 +4440,7 @@
         "name": "Cornat Schnellkupplung 32,9 mm (1 1/4)",
         "pipeDiameterMm": 32.9,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849923144",
       "id": "gtin:4004849923144",
@@ -4471,7 +4471,7 @@
         "name": "Gardena Premium Hahnverbinder 33,3 mm (G 1'')",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.030Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.391Z"
       },
       "gtin": "4078500031790",
       "id": "gtin:4078500031790",
@@ -4501,7 +4501,7 @@
         "mpn": "FLOR92520",
         "name": "Cornat Schlauch-Klemmschalen 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.004Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.371Z"
       },
       "gtin": "4035300226849",
       "id": "gtin:4035300226849",
@@ -4532,7 +4532,7 @@
         "name": "Cornat Schnellkupplung 33,3 mm (1)",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.229Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923120",
       "id": "gtin:4004849923120",
@@ -4564,7 +4564,7 @@
         "pipeDiameterMm": 21,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.230Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923243",
       "id": "gtin:4004849923243",
@@ -4594,7 +4594,7 @@
         "mpn": "FLOR89508",
         "name": "Meister Cornat Hahnanschlussstück Kupplung IG 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.010Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300615254",
       "id": "gtin:4035300615254",
@@ -4625,7 +4625,7 @@
         "name": "Cornat Schnellkupplung 33,3 mm (1)",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.230Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923205",
       "id": "gtin:4004849923205",
@@ -4656,7 +4656,7 @@
         "name": "Gardena Premium Hahnverbinder 21 mm (G 1/2'')",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.031Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.392Z"
       },
       "gtin": "4078500031714",
       "id": "gtin:4078500031714",
@@ -4687,7 +4687,7 @@
         "name": "Cornat Schnellkupplung 41,9 mm (1 1/4) Schlauchtülle",
         "pipeDiameterMm": 41.9,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.229Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923069",
       "id": "gtin:4004849923069",
@@ -4718,7 +4718,7 @@
         "name": "Primaster Wasser-Kupplung Kunststoffschlauchverbinder mit Absperrventil 12,1 cm",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.463Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.722Z"
       },
       "gtin": "4333692459549",
       "id": "gtin:4333692459549",
@@ -4750,7 +4750,7 @@
         "pipeDiameterMm": 12.7,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.464Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.723Z"
       },
       "gtin": "4333692460125",
       "id": "gtin:4333692460125",
@@ -4781,7 +4781,7 @@
         "name": "Gardena Schlauchverbinder 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.304Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.820Z"
       },
       "gtin": "4078500011969",
       "id": "gtin:4078500011969",
@@ -4812,7 +4812,7 @@
         "name": "Gardena Schlauchverbinder 19 mm (3/4)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.245Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.779Z"
       },
       "gtin": "0000040785578",
       "id": "gtin:0000040785578",
@@ -4843,7 +4843,7 @@
         "name": "Cornat Schnellkupplung 41,9 mm (1 1/4)",
         "pipeDiameterMm": 41.9,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.200Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.658Z"
       },
       "gtin": "4004849923229",
       "id": "gtin:4004849923229",
@@ -4874,7 +4874,7 @@
         "name": "Meister Cornat T-Schlauchverbinder 8mm 5/16",
         "pipeDiameterMm": 8,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.022Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.378Z"
       },
       "gtin": "4035300270293",
       "id": "gtin:4035300270293",
@@ -4904,7 +4904,7 @@
         "mpn": "FLOR89530",
         "name": "Meister Cornat Schlauchverbinder 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.020Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.377Z"
       },
       "gtin": "4035300615360",
       "id": "gtin:4035300615360",
@@ -4935,7 +4935,7 @@
         "name": "Trendline Übergangsstück Schlauchverbinder 1/2 auf 3/4",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.323Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.490Z"
       },
       "gtin": "5907512604175",
       "id": "gtin:5907512604175",
@@ -4966,7 +4966,7 @@
         "name": "Cornat Schnellkupplung 33,3 mm (1) Schlauchtülle",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.229Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923045",
       "id": "gtin:4004849923045",
@@ -4997,7 +4997,7 @@
         "name": "Meister Cornat T-Schlauchverbinder 6 mm 1/4",
         "pipeDiameterMm": 6,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.012Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300270286",
       "id": "gtin:4035300270286",
@@ -5028,7 +5028,7 @@
         "name": "Gardena Verbinder Sprinklersystem für Ventilboxen V3",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.593Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.869Z"
       },
       "gtin": "4078500055291",
       "id": "gtin:4078500055291",
@@ -5059,7 +5059,7 @@
         "name": "Gardena Verbinder, 4,6 mm (3/16)",
         "pipeDiameterMm": 4.6,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.426Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.450Z"
       },
       "gtin": "4078500059022",
       "id": "gtin:4078500059022",
@@ -5090,7 +5090,7 @@
         "name": "Gardena L-Stück, 4,6 mm (3/16)",
         "pipeDiameterMm": 4.6,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.436Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.460Z"
       },
       "gtin": "4078500059060",
       "id": "gtin:4078500059060",
@@ -5121,7 +5121,7 @@
         "name": "Primaster Reinigungsspritze für Gartenschlauch mit 2 Funktionen",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.315Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.890Z"
       },
       "gtin": "4333692087100",
       "id": "gtin:4333692087100",
@@ -5152,7 +5152,7 @@
         "name": "Primaster Schlauchkupplung mit Regulierventil 13,8 cm",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.464Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.722Z"
       },
       "gtin": "4333692459693",
       "id": "gtin:4333692459693",
@@ -5182,7 +5182,7 @@
         "mpn": "FLOR89507",
         "name": "Meister Cornat Hahnanschlussstück IG 1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.016Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.376Z"
       },
       "gtin": "4035300615247",
       "id": "gtin:4035300615247",
@@ -5213,7 +5213,7 @@
         "name": "Gardena T-Stück für Sprinkler Quick Easy 25 mm",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.436Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.095Z"
       },
       "gtin": "4078500277105",
       "id": "gtin:4078500277105",
@@ -5243,7 +5243,7 @@
         "mpn": "FLOR92430",
         "name": "Meister Cornat Schlauch-Verschraubung 3/4x1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.995Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.369Z"
       },
       "gtin": "4035300226757",
       "id": "gtin:4035300226757",
@@ -5274,7 +5274,7 @@
         "name": "Cornat Schlauchverbinder Ø 26 mm",
         "pipeDiameterMm": 26,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.475Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.253Z"
       },
       "gtin": "4035300194780",
       "id": "gtin:4035300194780",
@@ -5305,7 +5305,7 @@
         "name": "Meister Cornat T-Schlauchverbinder 16 mm 5/8",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.023Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300270323",
       "id": "gtin:4035300270323",
@@ -5335,7 +5335,7 @@
         "mpn": "692151280",
         "name": "TrendLine Drei-Arm-Regner mit Erdspieß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.637Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.274Z"
       },
       "gtin": "4333692038201",
       "id": "gtin:4333692038201",
@@ -5365,7 +5365,7 @@
         "mpn": "52-300GB",
         "name": "Primaster Regner mit Erdspieß Beregnungsfläche bis max. 86 m²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.784Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.571Z"
       },
       "gtin": "5907512603895",
       "id": "gtin:5907512603895",
@@ -5396,7 +5396,7 @@
         "name": "Cornat Schnellkupplung 26,4 mm (3/4) Schlauchtülle",
         "pipeDiameterMm": 26.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.229Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923021",
       "id": "gtin:4004849923021",
@@ -5427,7 +5427,7 @@
         "name": "Cornat Schnellkupplung 21 mm (1/2)",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849923083",
       "id": "gtin:4004849923083",
@@ -5458,7 +5458,7 @@
         "name": "Cornat Schnellkupplung 26,4 mm (3/4)",
         "pipeDiameterMm": 26.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849923106",
       "id": "gtin:4004849923106",
@@ -5489,7 +5489,7 @@
         "name": "Cornat Schnellkupplung 21 mm (1/2)",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.200Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849923168",
       "id": "gtin:4004849923168",
@@ -5520,7 +5520,7 @@
         "name": "Cornat Schnellkupplung 26,4 mm (3/4)",
         "pipeDiameterMm": 26.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.230Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.681Z"
       },
       "gtin": "4004849923182",
       "id": "gtin:4004849923182",
@@ -5551,7 +5551,7 @@
         "name": "T.I.P Anschlussstück P8 Multidimensionsstück",
         "pipeDiameterMm": 32,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.926Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.341Z"
       },
       "gtin": "4011458308880",
       "id": "gtin:4011458308880",
@@ -5582,7 +5582,7 @@
         "name": "Meister Cornat Schlauchverbinder Ø 16 mm 5/8",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.996Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.369Z"
       },
       "gtin": "4035300270262",
       "id": "gtin:4035300270262",
@@ -5613,7 +5613,7 @@
         "name": "Gardena Rohrhalter 13 mm (1/2) 10 Stück",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.615Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.729Z"
       },
       "gtin": "4078500058483",
       "id": "gtin:4078500058483",
@@ -5644,7 +5644,7 @@
         "name": "Primaster Schlauchkupplung mit Regulierventil 13,3 cm",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.464Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.722Z"
       },
       "gtin": "4333692459662",
       "id": "gtin:4333692459662",
@@ -5674,7 +5674,7 @@
         "mpn": "0692152362",
         "name": "Primaster Schlauchhalter für Gartenschlauch grau",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.312Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.888Z"
       },
       "gtin": "4333692917674",
       "id": "gtin:4333692917674",
@@ -5705,7 +5705,7 @@
         "name": "Primaster Übergangsstück Schlauchverbinder für Gartenschlauch Ø 19 mm",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.315Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.890Z"
       },
       "gtin": "4333692919241",
       "id": "gtin:4333692919241",
@@ -5735,7 +5735,7 @@
         "mpn": "1027052",
         "name": "Fiskars Hahnverbinder Multi LB orange/schwarz",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.367Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.670Z"
       },
       "gtin": "6411501510778",
       "id": "gtin:6411501510778",
@@ -5766,7 +5766,7 @@
         "name": "Gardena Hahnanschlussstück mit Schraubklemme",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.433Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.093Z"
       },
       "gtin": "4078500151306",
       "id": "gtin:4078500151306",
@@ -5796,7 +5796,7 @@
         "mpn": "FLOR89506",
         "name": "Meister Cornat Hahnanschlussstück IG 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.993Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.368Z"
       },
       "gtin": "4035300615230",
       "id": "gtin:4035300615230",
@@ -5827,7 +5827,7 @@
         "name": "Meister Cornat Schlauchverbinder Ø 12 mm 1/2",
         "pipeDiameterMm": 12,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.010Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.373Z"
       },
       "gtin": "4035300270255",
       "id": "gtin:4035300270255",
@@ -5857,7 +5857,7 @@
         "mpn": "FLOR88612",
         "name": "Meister Cornat T-Schlauchverbinder 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.992Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.368Z"
       },
       "gtin": "4035300270316",
       "id": "gtin:4035300270316",
@@ -5888,7 +5888,7 @@
         "name": "Cornat Schlauchverbinder 32,9 mm (1 1/4) Schlauchtülle",
         "pipeDiameterMm": 32.9,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.214Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.669Z"
       },
       "gtin": "4004849922253",
       "id": "gtin:4004849922253",
@@ -5919,7 +5919,7 @@
         "name": "Cornat Schnellkupplung 21 mm (1/2) Schlauchtülle",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.229Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.680Z"
       },
       "gtin": "4004849923007",
       "id": "gtin:4004849923007",
@@ -5950,7 +5950,7 @@
         "name": "Meister Schlauchanschluss mit Bund & O-Ring AG 1 für 1 Wasserschläuche",
         "pipeDiameterMm": 33.25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.663Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.056Z"
       },
       "gtin": "4004849923496",
       "id": "gtin:4004849923496",
@@ -5980,7 +5980,7 @@
         "mpn": "FLOR92480",
         "name": "Cornat Schlauchverbinder 1 1/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.023Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.378Z"
       },
       "gtin": "4035300966943",
       "id": "gtin:4035300966943",
@@ -6011,7 +6011,7 @@
         "name": "Gardena Verbinder für Sprinkler 25 mm x 3/4 Innengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.435Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.094Z"
       },
       "gtin": "4078500276108",
       "id": "gtin:4078500276108",
@@ -6042,7 +6042,7 @@
         "name": "Gardena Verbinder für Sprinkler Quick Easy 25 mm",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.436Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.095Z"
       },
       "gtin": "4078500277501",
       "id": "gtin:4078500277501",
@@ -6073,7 +6073,7 @@
         "name": "Gardena T Stück für Sprinkler 25 mm x 1/2 Außengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.438Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.096Z"
       },
       "gtin": "4078500278607",
       "id": "gtin:4078500278607",
@@ -6104,7 +6104,7 @@
         "name": "Gardena T Stück für Sprinkler 25 mm x 3/4",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.438Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.096Z"
       },
       "gtin": "4078500278706",
       "id": "gtin:4078500278706",
@@ -6135,7 +6135,7 @@
         "name": "Gardena T Stück für Sprinkler 25 mm x 3/4 Innengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.438Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.096Z"
       },
       "gtin": "4078500279000",
       "id": "gtin:4078500279000",
@@ -6166,7 +6166,7 @@
         "name": "Primaster Schlauchverbinder für Gartenschlauch Ø 19 mm",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.315Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.890Z"
       },
       "gtin": "4333692919135",
       "id": "gtin:4333692919135",
@@ -6196,7 +6196,7 @@
         "mpn": "FLOR92475",
         "name": "Cornat Schlauchverbinder 1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.011Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300226801",
       "id": "gtin:4035300226801",
@@ -6227,7 +6227,7 @@
         "name": "Meister Cornat Schlauchverbinder Ø 10 mm 3/8",
         "pipeDiameterMm": 10,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.997Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.369Z"
       },
       "gtin": "4035300270248",
       "id": "gtin:4035300270248",
@@ -6258,7 +6258,7 @@
         "name": "Meister Cornat T-Schlauchverbinder 10 mm 3/8",
         "pipeDiameterMm": 10,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.016Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.376Z"
       },
       "gtin": "4035300270309",
       "id": "gtin:4035300270309",
@@ -6289,7 +6289,7 @@
         "name": "TrendLine Schlauchverbinder 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.492Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.194Z"
       },
       "gtin": "2076921517086",
       "id": "gtin:2076921517086",
@@ -6320,7 +6320,7 @@
         "name": "Meister Schlauchanschluss mit Bund & O-Ring AG 3/4 für 3/4 Wasserschläuche",
         "pipeDiameterMm": 26.44,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.663Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.056Z"
       },
       "gtin": "4004849923472",
       "id": "gtin:4004849923472",
@@ -6350,7 +6350,7 @@
         "mpn": "FLOR92470",
         "name": "Cornat Schlauchverbinder 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.019Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.377Z"
       },
       "gtin": "4035300226795",
       "id": "gtin:4035300226795",
@@ -6381,7 +6381,7 @@
         "name": "Meister Cornat Schlauchverbinder Ø 8 mm",
         "pipeDiameterMm": 8,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.996Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.369Z"
       },
       "gtin": "4035300270231",
       "id": "gtin:4035300270231",
@@ -6412,7 +6412,7 @@
         "name": "Gardena Absperrventil 4,6 mm (3/16'')",
         "pipeDiameterMm": 4.6,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.638Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.753Z"
       },
       "gtin": "4078500058568",
       "id": "gtin:4078500058568",
@@ -6443,7 +6443,7 @@
         "name": "Gardena L-Stück für Sprinkler Quick Easy 25 mm",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.436Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.095Z"
       },
       "gtin": "4078500277303",
       "id": "gtin:4078500277303",
@@ -6474,7 +6474,7 @@
         "name": "Primaster Übergangsstück Schlauchverbinder für Gartenschlauch mit Wasserstop Ø 12 mm",
         "pipeDiameterMm": 12,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.314Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.889Z"
       },
       "gtin": "4333692918985",
       "id": "gtin:4333692918985",
@@ -6505,7 +6505,7 @@
         "name": "Primaster Schlauchverbinder für Gartenschlauch schwarz Ø 19 mm",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.312Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.888Z"
       },
       "gtin": "4333692919272",
       "id": "gtin:4333692919272",
@@ -6536,7 +6536,7 @@
         "name": "Cornat Schlauchverbinder 33,3 mm (1) Schlauchtülle",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.199Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.657Z"
       },
       "gtin": "4004849922239",
       "id": "gtin:4004849922239",
@@ -6567,7 +6567,7 @@
         "name": "Cornat Schlauchverbinder 19,05 mm (3/4), inkl. 2 Klemmen",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.512Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.279Z"
       },
       "gtin": "4035300076642",
       "id": "gtin:4035300076642",
@@ -6598,7 +6598,7 @@
         "name": "Gardena L Stück für Sprinkler 25 mm x 3/4 Außengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.438Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.096Z"
       },
       "gtin": "4078500278102",
       "id": "gtin:4078500278102",
@@ -6629,7 +6629,7 @@
         "name": "Cornat Schlauchverbinder 9,53 mm (3/8) inkl. 2 Klemmen",
         "pipeDiameterMm": 9.53,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.474Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.252Z"
       },
       "gtin": "4035300194773",
       "id": "gtin:4035300194773",
@@ -6660,7 +6660,7 @@
         "name": "Meister Cornat Schlauchverbinder 6mm (1/4)",
         "pipeDiameterMm": 6,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.023Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300270224",
       "id": "gtin:4035300270224",
@@ -6690,7 +6690,7 @@
         "mpn": "FLOR92465",
         "name": "Cornat Schlauchverbinder 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.015Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.375Z"
       },
       "gtin": "4035300226788",
       "id": "gtin:4035300226788",
@@ -6721,7 +6721,7 @@
         "name": "Gardena Verbinder für Sprinkler 25 mm (1) Außengwinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.436Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.095Z"
       },
       "gtin": "4078500276306",
       "id": "gtin:4078500276306",
@@ -6752,7 +6752,7 @@
         "name": "Gardena L Stück für Sprinkler 25 mm x 1/2 Außengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.437Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.095Z"
       },
       "gtin": "4078500278003",
       "id": "gtin:4078500278003",
@@ -6783,7 +6783,7 @@
         "name": "Gardena Anbohrschelle Sprinklersystem 25 mm x 3/4-Innengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.593Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.869Z"
       },
       "gtin": "4078500272803",
       "id": "gtin:4078500272803",
@@ -6814,7 +6814,7 @@
         "name": "Primaster Übergangsstück Schlauchanschluss für Gartenschlauch",
         "pipeDiameterMm": 12,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.313Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.888Z"
       },
       "gtin": "4333692918909",
       "id": "gtin:4333692918909",
@@ -6845,7 +6845,7 @@
         "name": "Primaster Übergangsstück Schlauchverbinder für Gartenschlauch Ø 12 mm",
         "pipeDiameterMm": 12,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.316Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.890Z"
       },
       "gtin": "4333692919005",
       "id": "gtin:4333692919005",
@@ -6876,7 +6876,7 @@
         "name": "Cornat Schlauchverbinder 12,7 mm (1/2), inkl. 2 Klemmen",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.512Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.279Z"
       },
       "gtin": "4035300076635",
       "id": "gtin:4035300076635",
@@ -6907,7 +6907,7 @@
         "name": "Gardena Regner Anschlussstück für GARDENA Viereckregner",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.256Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.787Z"
       },
       "gtin": "4078500530408",
       "id": "gtin:4078500530408",
@@ -6938,7 +6938,7 @@
         "name": "Gardena Verbinder für Sprinkler 25 mm (1) Innengewinde",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.435Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.094Z"
       },
       "gtin": "4078500276207",
       "id": "gtin:4078500276207",
@@ -6969,7 +6969,7 @@
         "name": "TrendLine Schlauchverbinder 19,05 mm (3/4)",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.493Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.195Z"
       },
       "gtin": "2076921517109",
       "id": "gtin:2076921517109",
@@ -7000,7 +7000,7 @@
         "name": "Cornat Schlauchverbinder 26,4 mm (3/4) Schlauchtülle",
         "pipeDiameterMm": 26.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.198Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.657Z"
       },
       "gtin": "4004849922215",
       "id": "gtin:4004849922215",
@@ -7031,7 +7031,7 @@
         "name": "TrendLine Y-Kupplung",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.638Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.275Z"
       },
       "gtin": "4333692038058",
       "id": "gtin:4333692038058",
@@ -7062,7 +7062,7 @@
         "name": "Primaster Y-Kupplung für Gartenschlauch",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.316Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.890Z"
       },
       "gtin": "4333692917544",
       "id": "gtin:4333692917544",
@@ -7092,7 +7092,7 @@
         "mpn": "FLOR89505",
         "name": "Meister Cornat Hahnanschlussstück IG 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.010Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300615223",
       "id": "gtin:4035300615223",
@@ -7123,7 +7123,7 @@
         "name": "Gardena Kupplung Außengewinde: 26,5 mm (G 3/4)",
         "pipeDiameterMm": 26.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.310Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.987Z"
       },
       "gtin": "4078500093149",
       "id": "gtin:4078500093149",
@@ -7154,7 +7154,7 @@
         "name": "Cornat Schlauchverbinder 21 mm (1/2) Schlauchtülle",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.200Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.658Z"
       },
       "gtin": "4004849922192",
       "id": "gtin:4004849922192",
@@ -7185,7 +7185,7 @@
         "name": "TrendLine Schlauchverbinder 12,7 mm (1/2)",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.492Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.195Z"
       },
       "gtin": "4333692889742",
       "id": "gtin:4333692889742",
@@ -7216,7 +7216,7 @@
         "name": "Primaster Kupplung für Gartenschlauch Ø 16 mm",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.313Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.889Z"
       },
       "gtin": "4333692917520",
       "id": "gtin:4333692917520",
@@ -7247,7 +7247,7 @@
         "name": "TrendLine Kupplung",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.638Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.275Z"
       },
       "gtin": "4333692038065",
       "id": "gtin:4333692038065",
@@ -7278,7 +7278,7 @@
         "name": "Primaster Hahnstück für Gartenschlauch",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.313Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.888Z"
       },
       "gtin": "4333692917612",
       "id": "gtin:4333692917612",
@@ -7309,7 +7309,7 @@
         "name": "Primaster Hahnstück für Gartenschlauch",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.316Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.890Z"
       },
       "gtin": "4333692917599",
       "id": "gtin:4333692917599",
@@ -7338,7 +7338,7 @@
         "mpn": "NA320PZ",
         "name": "Deroma Bewässerungskegel Aquado Ø 23,5 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.291Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.336Z"
       },
       "gtin": "0191942070838",
       "id": "gtin:0191942070838",
@@ -7366,7 +7366,7 @@
         "mpn": "NA150PZ",
         "name": "Deroma Bewässerungskegel Aquado Ø 12 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.291Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.336Z"
       },
       "gtin": "0191942070852",
       "id": "gtin:0191942070852",
@@ -7394,7 +7394,7 @@
         "mpn": "0692100713",
         "name": "Automatische Pflanzenbewässerung Iriso Tropfsystem PG1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.176Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:27.932Z",
         "systemId": "befindet"
       },
       "gtin": "3414902799004",
@@ -7422,7 +7422,7 @@
         "mpn": "0692381888",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff anthrazit 100 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.063Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.554Z"
       },
       "gtin": "4000150024372",
       "id": "gtin:4000150024372",
@@ -7450,7 +7450,7 @@
         "mpn": "0692381879",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff terrakotta 40 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.066Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.556Z"
       },
       "gtin": "4000150024396",
       "id": "gtin:4000150024396",
@@ -7478,7 +7478,7 @@
         "mpn": "0692381880",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff anthrazit 40 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.066Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.556Z"
       },
       "gtin": "4000150024433",
       "id": "gtin:4000150024433",
@@ -7506,7 +7506,7 @@
         "mpn": "0692381895",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff terrakotta 60 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.063Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.554Z"
       },
       "gtin": "4000150024457",
       "id": "gtin:4000150024457",
@@ -7534,7 +7534,7 @@
         "mpn": "0692381882",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff anthrazit 60 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.065Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.555Z"
       },
       "gtin": "4000150024495",
       "id": "gtin:4000150024495",
@@ -7562,7 +7562,7 @@
         "mpn": "0692381884",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff terrakotta 80 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.064Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.555Z"
       },
       "gtin": "4000150024518",
       "id": "gtin:4000150024518",
@@ -7590,7 +7590,7 @@
         "mpn": "0692381885",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff anthrazit 80 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.064Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.555Z"
       },
       "gtin": "4000150024556",
       "id": "gtin:4000150024556",
@@ -7618,7 +7618,7 @@
         "mpn": "0692381887",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff terrakotta 100 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.063Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.554Z"
       },
       "gtin": "4000150024570",
       "id": "gtin:4000150024570",
@@ -7646,7 +7646,7 @@
         "mpn": "0692381890",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff weiß 40 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.065Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.555Z"
       },
       "gtin": "4000150025928",
       "id": "gtin:4000150025928",
@@ -7674,7 +7674,7 @@
         "mpn": "0692381881",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff betongrau 40 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.065Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.556Z"
       },
       "gtin": "4000150025942",
       "id": "gtin:4000150025942",
@@ -7702,7 +7702,7 @@
         "mpn": "0692381883",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff betongrau 60 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.064Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.555Z"
       },
       "gtin": "4000150025980",
       "id": "gtin:4000150025980",
@@ -7730,7 +7730,7 @@
         "mpn": "0692381886",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff betongrau 80 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.064Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.555Z"
       },
       "gtin": "4000150026024",
       "id": "gtin:4000150026024",
@@ -7758,7 +7758,7 @@
         "mpn": "0692381889",
         "name": "Geli Bewässerungsblumenkasten Viva Kunststoff betongrau 100 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.063Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.554Z"
       },
       "gtin": "4000150026062",
       "id": "gtin:4000150026062",
@@ -7786,7 +7786,7 @@
         "mpn": "82806006",
         "name": "Geli Bewässerungsblumenkasten Aqua Andalucia 60 cm terracotta",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.424Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.719Z"
       },
       "gtin": "4000150880619",
       "id": "gtin:4000150880619",
@@ -7814,7 +7814,7 @@
         "mpn": "82806008",
         "name": "Geli Bewässerungsblumenkasten Aqua Andalucia 60 cm braun",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.424Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.720Z"
       },
       "gtin": "4000150880626",
       "id": "gtin:4000150880626",
@@ -7842,7 +7842,7 @@
         "mpn": "82806038",
         "name": "Geli Bewässerungsblumenkasten Aqua Andalucia 60 cm anthrazit",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.425Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.720Z"
       },
       "gtin": "4000150880688",
       "id": "gtin:4000150880688",
@@ -7870,7 +7870,7 @@
         "mpn": "82808006",
         "name": "Geli Bewässerungsblumenkasten Aqua Andalucia 80 cm terracotta",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.425Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.720Z"
       },
       "gtin": "4000150880817",
       "id": "gtin:4000150880817",
@@ -7898,7 +7898,7 @@
         "mpn": "82810006",
         "name": "Geli Bewässerungsblumenkasten Aqua Andalucia 100 cm terracotta",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.426Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.720Z"
       },
       "gtin": "4000150881012",
       "id": "gtin:4000150881012",
@@ -7926,7 +7926,7 @@
         "mpn": "82810010",
         "name": "Geli Bewässerungsblumenkasten Aqua Andalucia 100 cm weiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.426Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.720Z"
       },
       "gtin": "4000150881036",
       "id": "gtin:4000150881036",
@@ -7954,7 +7954,7 @@
         "mpn": "49611",
         "name": "Kreul Schmucksteine Tropfen bunt 150 Stück",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.090Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:19.981Z"
       },
       "gtin": "4000798496111",
       "id": "gtin:4000798496111",
@@ -7982,7 +7982,7 @@
         "mpn": "28525",
         "name": "Paulmann Leuchtmittel Vintage Tropfen E 14 Tropfenform warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.994Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.277Z"
       },
       "gtin": "4000870285251",
       "id": "gtin:4000870285251",
@@ -8010,7 +8010,7 @@
         "mpn": "28739",
         "name": "Paulmann LED Leuchtmittel Filament Tropfen klar E14",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.964Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.716Z"
       },
       "gtin": "4000870287392",
       "id": "gtin:4000870287392",
@@ -8038,7 +8038,7 @@
         "mpn": "28761",
         "name": "Paulmann LED Leuchtmittel Filament Tropfen matt E14 dimmbar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.965Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.717Z"
       },
       "gtin": "4000870287613",
       "id": "gtin:4000870287613",
@@ -8066,7 +8066,7 @@
         "mpn": "28863",
         "name": "Paulmann LED Leuchtmittel Tropfen E14 4W rauch",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.834Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.800Z"
       },
       "gtin": "4000870288634",
       "id": "gtin:4000870288634",
@@ -8094,7 +8094,7 @@
         "mpn": "58863",
         "name": "Scheurich Bewässerungshilfe Copa Serie 112 grün 24 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.607Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:25.722Z",
         "systemId": "112"
       },
       "gtin": "4002477588636",
@@ -8122,7 +8122,7 @@
         "mpn": "0692100920",
         "name": "Scheurich Bewässerungshilfe Bördy grau 90 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.353Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.597Z"
       },
       "gtin": "4002477695013",
       "id": "gtin:4002477695013",
@@ -8150,7 +8150,7 @@
         "mpn": "0692100921",
         "name": "Scheurich Bewässerungshilfe Bördy grau 220 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.354Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.598Z"
       },
       "gtin": "4002477695020",
       "id": "gtin:4002477695020",
@@ -8179,7 +8179,7 @@
         "name": "Gutta Polystyrolglas Tropfen 100 x 100 cm 2,5 mm klar",
         "pipeDiameterMm": 2.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.579Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.211Z"
       },
       "gtin": "4003412016931",
       "id": "gtin:4003412016931",
@@ -8208,7 +8208,7 @@
         "name": "Gutta Polystyrolglas Tropfen 200 x 100 cm 2,5 mm klar",
         "pipeDiameterMm": 2.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.580Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.211Z"
       },
       "gtin": "4003412016986",
       "id": "gtin:4003412016986",
@@ -8237,7 +8237,7 @@
         "name": "Gutta Polystyrolglas Tropfen 50 x 100 cm 5 mm klar",
         "pipeDiameterMm": 5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.569Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.207Z"
       },
       "gtin": "4003412017037",
       "id": "gtin:4003412017037",
@@ -8266,7 +8266,7 @@
         "name": "Gutta Polystyrolglas Tropfen 100 x 100 cm 5 mm klar",
         "pipeDiameterMm": 5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.570Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.207Z"
       },
       "gtin": "4003412017082",
       "id": "gtin:4003412017082",
@@ -8295,7 +8295,7 @@
         "name": "Gutta Polystyrolglas Tropfen 200 x 100 cm 5 mm klar",
         "pipeDiameterMm": 5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.518Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.205Z"
       },
       "gtin": "4003412017136",
       "id": "gtin:4003412017136",
@@ -8324,7 +8324,7 @@
         "name": "Meister Zweiwege-Kugel-Auslaufventil 1/2 Messing Ø 14 mm",
         "pipeDiameterMm": 14,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.537Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.093Z"
       },
       "gtin": "4004849640195",
       "id": "gtin:4004849640195",
@@ -8353,7 +8353,7 @@
         "name": "Meister Zweiwege-Kugel-Auslaufventil 3/4 Messing Ø 19 mm",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.535Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.091Z"
       },
       "gtin": "4004849640201",
       "id": "gtin:4004849640201",
@@ -8382,7 +8382,7 @@
         "name": "Meister Kugel-Auslaufventil 1/2 12,7 mm",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.536Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.092Z"
       },
       "gtin": "4004849640270",
       "id": "gtin:4004849640270",
@@ -8411,7 +8411,7 @@
         "name": "Meister Kugel-Auslaufventil 3/4 19 mm",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.537Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.092Z"
       },
       "gtin": "4004849640287",
       "id": "gtin:4004849640287",
@@ -8440,7 +8440,7 @@
         "name": "Cornat Schlauchverschraubung 21 mm (1/2) x 26,4 mm (3/4) x 21 mm (1/2) - 3 tlg.",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.199Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.657Z"
       },
       "gtin": "4004849922086",
       "id": "gtin:4004849922086",
@@ -8469,7 +8469,7 @@
         "name": "Cornat Schlauchverschraubung 26,4 mm (3/4) x 33,3 mm (1) x 26,4 mm (3/4) - 3 tlg.",
         "pipeDiameterMm": 26.4,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.200Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.658Z"
       },
       "gtin": "4004849922109",
       "id": "gtin:4004849922109",
@@ -8498,7 +8498,7 @@
         "name": "Cornat Schlauchschellen 12-21 mm (1/2) - 2 Stück",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.659Z"
       },
       "gtin": "4004849922635",
       "id": "gtin:4004849922635",
@@ -8527,7 +8527,7 @@
         "name": "Cornat Schlauchschellen 25-40 mm (1) - 2 Stück",
         "pipeDiameterMm": 40,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.202Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.660Z"
       },
       "gtin": "4004849922673",
       "id": "gtin:4004849922673",
@@ -8556,7 +8556,7 @@
         "name": "Cornat Schlauchschellen 32-50 mm (1 1/4) - 2 Stück",
         "pipeDiameterMm": 50,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.201Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.660Z"
       },
       "gtin": "4004849922697",
       "id": "gtin:4004849922697",
@@ -8584,7 +8584,7 @@
         "mpn": "WU9926050",
         "name": "Meister Schlauchhalter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.619Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.887Z"
       },
       "gtin": "4004849926053",
       "id": "gtin:4004849926053",
@@ -8613,7 +8613,7 @@
         "name": "Meister Doppelter Pumpenstock mit Kugelhähnen & entlüftbarem Rückschlagventil",
         "pipeDiameterMm": 41.91,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.536Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.092Z"
       },
       "gtin": "4004849927937",
       "id": "gtin:4004849927937",
@@ -8642,7 +8642,7 @@
         "name": "Meister Zwischenventil mit Entleerung IG 1 1/4",
         "pipeDiameterMm": 31.75,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.535Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.092Z"
       },
       "gtin": "4004849928682",
       "id": "gtin:4004849928682",
@@ -8670,7 +8670,7 @@
         "mpn": "0642021862",
         "name": "SC Freiburg Rotwein Jubiläumstropfen Cuvee QbA 1 x 0,75 l",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.702Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.352Z"
       },
       "gtin": "4006317950126",
       "id": "gtin:4006317950126",
@@ -8698,7 +8698,7 @@
         "mpn": "0642011771",
         "name": "SC Freiburg Weisswein Jubiläumstropfen Grauer Burgunder QbA 1 x 0,75 l",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.703Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.353Z"
       },
       "gtin": "4006317950133",
       "id": "gtin:4006317950133",
@@ -8727,7 +8727,7 @@
         "name": "Einhell Akku-Wand-Schlauchbox GE-HR 18/30-1 WH Li-Solo",
         "pipeDiameterMm": 12.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.587Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.134Z"
       },
       "gtin": "4006825682793",
       "id": "gtin:4006825682793",
@@ -8755,7 +8755,7 @@
         "mpn": "F3460246",
         "name": "d-c-fix Selbstklebefolie Tropfen 45 cm x 2 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.643Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.278Z"
       },
       "gtin": "4007386112699",
       "id": "gtin:4007386112699",
@@ -8783,7 +8783,7 @@
         "mpn": "0692381821",
         "name": "Pflanzentopf Classico Premium Ø 22 x 22 cm weiß metallic mit Bewässerungssystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.955Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.747Z"
       },
       "gtin": "4008789149008",
       "id": "gtin:4008789149008",
@@ -8811,7 +8811,7 @@
         "mpn": "0692381818",
         "name": "Pflanzentopf Classico Premium Ø 22 x 22 cm anthrazit metallic mit Bewässerungssystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.953Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.745Z"
       },
       "gtin": "4008789149039",
       "id": "gtin:4008789149039",
@@ -8839,7 +8839,7 @@
         "mpn": "0692381819",
         "name": "Pflanzentopf Classico Color Ø 22 × 20 cm weiß mit Bewässerungssystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.955Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.747Z"
       },
       "gtin": "4008789160201",
       "id": "gtin:4008789160201",
@@ -8867,7 +8867,7 @@
         "mpn": "0692381820",
         "name": "Pflanzentopf Classico Color Ø 28 × 26 cm weiß mit Bewässerungssystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.955Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.747Z"
       },
       "gtin": "4008789160409",
       "id": "gtin:4008789160409",
@@ -8895,7 +8895,7 @@
         "mpn": "0692350326",
         "name": "Lechuza Hängeampel Bola Color Ø 32 x 25 cm weiß inkl. Bewässerungsset",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.966Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.232Z"
       },
       "gtin": "4008789168504",
       "id": "gtin:4008789168504",
@@ -8923,7 +8923,7 @@
         "mpn": "0692350327",
         "name": "Lechuza Hängeampel Bola Color Ø 32 x 25 cm schiefergrau inkl. Bewässerungsset",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.965Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.232Z"
       },
       "gtin": "4008789168641",
       "id": "gtin:4008789168641",
@@ -8951,7 +8951,7 @@
         "mpn": "2015577100",
         "name": "Wenko Abtropfmatte Kristall transparent, 41 x 0,4 x 35 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.677Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.308Z"
       },
       "gtin": "4008838819760",
       "id": "gtin:4008838819760",
@@ -8980,7 +8980,7 @@
         "name": "T.I.P. Solar-Bewässerungsset SBS 36",
         "pipeDiameterMm": 5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.517Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:25.638Z",
         "systemId": "nutzt"
       },
       "gtin": "4011458303380",
@@ -9008,7 +9008,7 @@
         "mpn": "30887",
         "name": "T.I.P. Anschlussbogen P7",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.560Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.034Z"
       },
       "gtin": "4011458308873",
       "id": "gtin:4011458308873",
@@ -9036,7 +9036,7 @@
         "mpn": "2013840",
         "name": "NOOR Bewässerungssack Frogbag 75 L grün günstig",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:19.882Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:39.111Z"
       },
       "gtin": "4013198008501",
       "id": "gtin:4013198008501",
@@ -9059,68 +9059,12 @@
       "candidateAttributes": {
         "brand": "NOOR V&V",
         "dataQuality": "feed",
-        "gtin": "4013198009317",
-        "id": "gtin:4013198009317",
-        "mpn": "2013841",
-        "name": "NOOR Bewässerungssack Frogbag PRO 100 L grün günstig",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:19.882Z"
-      },
-      "gtin": "4013198009317",
-      "id": "gtin:4013198009317",
-      "imageUrl": "https://benz24.de/media/catalog/product/cache/3c792fcb6e33b7e8ee67cdcefc2dcfe9/4/0/4013198009317_frogbag-pro-bew_sserungssack-100l-pvc-420-gm__1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-product-kind",
-        "unconfirmed-system-compatibility"
-      ],
-      "merchantProductUrl": "https://benz24.at/noor-bewaesserungssack-frogbag-pro-100.html?utm_campaign=BENZ24DE&utm_medium=affiliate&utm_source=awin&utm_content=productfeed",
-      "merchants": [],
-      "mpn": "2013841",
-      "name": "NOOR Bewässerungssack Frogbag PRO 100 L grün günstig",
-      "offerCount": 0,
-      "priority": 100,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "NOOR V&V",
-      "candidateAttributes": {
-        "brand": "NOOR V&V",
-        "dataQuality": "feed",
-        "gtin": "4013198009331",
-        "id": "gtin:4013198009331",
-        "mpn": "2013842",
-        "name": "NOOR Bewässerungssack Frogbag Donut rund 100 L günstig",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:19.882Z"
-      },
-      "gtin": "4013198009331",
-      "id": "gtin:4013198009331",
-      "imageUrl": "https://benz24.de/media/catalog/product/cache/3c792fcb6e33b7e8ee67cdcefc2dcfe9/4/0/4013198009331_frogbag-donut-bew_sserungssack-100l-pvc-520-gm__1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-product-kind",
-        "unconfirmed-system-compatibility"
-      ],
-      "merchantProductUrl": "https://benz24.at/noor-bewaesserungssack-frogbag-donut-rund.html?utm_campaign=BENZ24DE&utm_medium=affiliate&utm_source=awin&utm_content=productfeed",
-      "merchants": [],
-      "mpn": "2013842",
-      "name": "NOOR Bewässerungssack Frogbag Donut rund 100 L günstig",
-      "offerCount": 0,
-      "priority": 100,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "NOOR V&V",
-      "candidateAttributes": {
-        "brand": "NOOR V&V",
-        "dataQuality": "feed",
         "gtin": "4013198009355",
         "id": "gtin:4013198009355",
         "mpn": "2013843",
         "name": "NOOR Bewässerungsack Frogbag Fatty XXL 125 L günstig",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:19.882Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:39.112Z"
       },
       "gtin": "4013198009355",
       "id": "gtin:4013198009355",
@@ -9148,7 +9092,7 @@
         "mpn": "0761200470",
         "name": "Güde Automatikschlauchtrommel 10 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.493Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.189Z"
       },
       "gtin": "4015671322302",
       "id": "gtin:4015671322302",
@@ -9177,7 +9121,7 @@
         "name": "Güde Schlauchschelle Ø 8- 16 mm Ø",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:55.895Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:19.625Z"
       },
       "gtin": "4015671410702",
       "id": "gtin:4015671410702",
@@ -9205,7 +9149,7 @@
         "mpn": "400397",
         "name": "Müller Licht LED Leuchtmittel Tropfenform E27 4.5W Filament",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.735Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.536Z"
       },
       "gtin": "4018412344014",
       "id": "gtin:4018412344014",
@@ -9233,7 +9177,7 @@
         "mpn": "400402",
         "name": "Müller Licht LED Leuchtmittel Tropfenform E14 2.5W Filament",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.734Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.536Z"
       },
       "gtin": "4018412344168",
       "id": "gtin:4018412344168",
@@ -9261,7 +9205,7 @@
         "mpn": "400403",
         "name": "Müller Licht LED Leuchtmittel Tropfenform E27 2.5W Filament",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.734Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.536Z"
       },
       "gtin": "4018412344199",
       "id": "gtin:4018412344199",
@@ -9289,7 +9233,7 @@
         "mpn": "401015",
         "name": "Müller Licht LED Tropfenlampe E27-5,5W",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.155Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.367Z"
       },
       "gtin": "4018412675712",
       "id": "gtin:4018412675712",
@@ -9317,7 +9261,7 @@
         "mpn": "0689312704",
         "name": "ARDAP Spot On Floh- und Zeckenschutztropfen für Hunde unter 10 kg 3 x 1 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.470Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.026Z"
       },
       "gtin": "4019181773005",
       "id": "gtin:4019181773005",
@@ -9345,7 +9289,7 @@
         "mpn": "0689312701",
         "name": "ARDAP Spot On Floh- und Zeckenschutztropfen für Hunde von 10-25 kg 3 x 2,5 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.470Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.028Z"
       },
       "gtin": "4019181773104",
       "id": "gtin:4019181773104",
@@ -9373,7 +9317,7 @@
         "mpn": "0689312706",
         "name": "ARDAP Spot On Floh- und Zeckenschutztropfen für Hunde über 25 kg 3 x 4 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.471Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.028Z"
       },
       "gtin": "4019181773203",
       "id": "gtin:4019181773203",
@@ -9401,7 +9345,7 @@
         "mpn": "0689202919",
         "name": "ARDAP Spot On Floh- und Zeckenschutztropfen für Katzen unter 4 kg 3 x 0,4 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.472Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.028Z"
       },
       "gtin": "4019181773500",
       "id": "gtin:4019181773500",
@@ -9429,7 +9373,7 @@
         "mpn": "0689202920",
         "name": "ARDAP Spot On Floh- und Zeckenschutztropfen für Katzen über 4 kg 3 x 0,8 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.472Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.028Z"
       },
       "gtin": "4019181773609",
       "id": "gtin:4019181773609",
@@ -9457,7 +9401,7 @@
         "mpn": "220015",
         "name": "Garantia Universal-Schlauchset",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.713Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.339Z"
       },
       "gtin": "4023122157243",
       "id": "gtin:4023122157243",
@@ -9485,7 +9429,7 @@
         "mpn": "58861",
         "name": "Scheurich Bewässerungshilfe Bördy XXL 33/110 green pearl 1 L",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.202Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.389Z"
       },
       "gtin": "4033083588611",
       "id": "gtin:4033083588611",
@@ -9513,7 +9457,7 @@
         "mpn": "58869",
         "name": "Scheurich Bewässerungshilfe Copa Serie 112 green 32 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.203Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:25.389Z",
         "systemId": "112"
       },
       "gtin": "4033083588697",
@@ -9541,7 +9485,7 @@
         "mpn": "58870",
         "name": "Scheurich Bewässerungshilfe Copa transparent 23 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.203Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.389Z"
       },
       "gtin": "4033083588703",
       "id": "gtin:4033083588703",
@@ -9569,7 +9513,7 @@
         "mpn": "62344",
         "name": "Nobby Vollgummi Kühl-Tropfen 9 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.302Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.609Z"
       },
       "gtin": "4033766623448",
       "id": "gtin:4033766623448",
@@ -9597,7 +9541,7 @@
         "mpn": "62376",
         "name": "Nobby Vollgummi Kühl-Tropfen 17 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.303Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.610Z"
       },
       "gtin": "4033766623769",
       "id": "gtin:4033766623769",
@@ -9625,7 +9569,7 @@
         "mpn": "74886",
         "name": "Nobby Ohrenpflege Tropfen 50 ml",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.634Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.750Z"
       },
       "gtin": "4033766748868",
       "id": "gtin:4033766748868",
@@ -9653,7 +9597,7 @@
         "mpn": "TEC306502",
         "name": "Cornat Schlauchplatzsicherung Messing verchromt, 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.510Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.278Z"
       },
       "gtin": "4035300074990",
       "id": "gtin:4035300074990",
@@ -9682,7 +9626,7 @@
         "name": "Cornat Schlauchverschraubung 3/4 IG, Tülle Ø 14 mm",
         "pipeDiameterMm": 14,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.511Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.278Z"
       },
       "gtin": "4035300075119",
       "id": "gtin:4035300075119",
@@ -9711,7 +9655,7 @@
         "name": "Cornat Schlauchverschraubung M22 x 1 IG, Tülle 14 mm",
         "pipeDiameterMm": 14,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.511Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.278Z"
       },
       "gtin": "4035300075126",
       "id": "gtin:4035300075126",
@@ -9740,7 +9684,7 @@
         "name": "Cornat Schlauchverschraubung 3/4 IG, Tülle Ø 14 mm",
         "pipeDiameterMm": 14,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.512Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.278Z"
       },
       "gtin": "4035300076550",
       "id": "gtin:4035300076550",
@@ -9769,7 +9713,7 @@
         "name": "Cornat Schlauchverschraubung 1 IG, Tülle Ø 20 mm",
         "pipeDiameterMm": 20,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.512Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.278Z"
       },
       "gtin": "4035300076567",
       "id": "gtin:4035300076567",
@@ -9798,7 +9742,7 @@
         "name": "Cornat Schlauchverschraubung 1 IG, Tülle Ø 15 mm",
         "pipeDiameterMm": 15,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.512Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.278Z"
       },
       "gtin": "4035300076574",
       "id": "gtin:4035300076574",
@@ -9827,7 +9771,7 @@
         "name": "Cornat Schlauchtülle Vaterteil 3/4 AG, Tülle Ø 13 mm",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.473Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.252Z"
       },
       "gtin": "4035300076581",
       "id": "gtin:4035300076581",
@@ -9855,7 +9799,7 @@
         "mpn": "FLOR92375",
         "name": "Meister Cornat Schlauchverschraubung IG 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.018Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.377Z"
       },
       "gtin": "4035300226689",
       "id": "gtin:4035300226689",
@@ -9883,7 +9827,7 @@
         "mpn": "FLOR92380",
         "name": "Meister Cornat Schlauchverschraubung 3/4x1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.023Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300226696",
       "id": "gtin:4035300226696",
@@ -9911,7 +9855,7 @@
         "mpn": "FLOR92385",
         "name": "Meister Cornat Schlauchverschraubung 1/2x1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.021Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.378Z"
       },
       "gtin": "4035300226702",
       "id": "gtin:4035300226702",
@@ -9939,7 +9883,7 @@
         "mpn": "FLOR92415",
         "name": "Cornat Schlauchverschraubung 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.025Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300226733",
       "id": "gtin:4035300226733",
@@ -9967,7 +9911,7 @@
         "mpn": "FLOR92420",
         "name": "Cornat Schlauchverschraubung 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.014Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.375Z"
       },
       "gtin": "4035300226740",
       "id": "gtin:4035300226740",
@@ -9996,7 +9940,7 @@
         "name": "Cornat Schlauchschelle 12-20mm, 2 Stück",
         "pipeDiameterMm": 20,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.021Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.378Z"
       },
       "gtin": "4035300226818",
       "id": "gtin:4035300226818",
@@ -10025,7 +9969,7 @@
         "name": "Meister Cornat Schlauchschelle 16-25 mm, 2 Stück",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.021Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.378Z"
       },
       "gtin": "4035300226825",
       "id": "gtin:4035300226825",
@@ -10054,7 +9998,7 @@
         "name": "Cornat Schlauchschelle 25-40mm",
         "pipeDiameterMm": 40,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.019Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.377Z"
       },
       "gtin": "4035300226832",
       "id": "gtin:4035300226832",
@@ -10082,7 +10026,7 @@
         "mpn": "FLOR92570",
         "name": "Cornat Schlauchspritze Luxus 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.015Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.375Z"
       },
       "gtin": "4035300226894",
       "id": "gtin:4035300226894",
@@ -10110,7 +10054,7 @@
         "mpn": "FLOR92575",
         "name": "Cornat Schlauchspritze Luxus 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.016Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.376Z"
       },
       "gtin": "4035300226900",
       "id": "gtin:4035300226900",
@@ -10139,7 +10083,7 @@
         "name": "Cornat Schlauchschelle 10 - 16 mm (3/8)",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.420Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.227Z"
       },
       "gtin": "4035300284627",
       "id": "gtin:4035300284627",
@@ -10168,7 +10112,7 @@
         "name": "Cornat Meister Schlauchschelle 12-20 mm 1/2, 4 Stück",
         "pipeDiameterMm": 20,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.420Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.227Z"
       },
       "gtin": "4035300284634",
       "id": "gtin:4035300284634",
@@ -10197,7 +10141,7 @@
         "name": "Cornat Schlauchschelle 16 - 25 mm (3/4)",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.422Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.227Z"
       },
       "gtin": "4035300284641",
       "id": "gtin:4035300284641",
@@ -10226,7 +10170,7 @@
         "name": "Cornat Schlauchschelle 20 - 32 mm (1)",
         "pipeDiameterMm": 32,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.422Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.228Z"
       },
       "gtin": "4035300284658",
       "id": "gtin:4035300284658",
@@ -10255,7 +10199,7 @@
         "name": "Cornat Schlauchschelle 25 - 40 mm (1 1/4), 1 Stück",
         "pipeDiameterMm": 40,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.423Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.228Z"
       },
       "gtin": "4035300284665",
       "id": "gtin:4035300284665",
@@ -10284,7 +10228,7 @@
         "name": "Cornat Schlauchschelle 35 - 50 mm (1 1/2), 1 Stück",
         "pipeDiameterMm": 50,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.423Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.228Z"
       },
       "gtin": "4035300284672",
       "id": "gtin:4035300284672",
@@ -10313,7 +10257,7 @@
         "name": "Cornat Schlauchschelle 40 - 60 mm (2), 1 Stück",
         "pipeDiameterMm": 60,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.423Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.228Z"
       },
       "gtin": "4035300284689",
       "id": "gtin:4035300284689",
@@ -10342,7 +10286,7 @@
         "name": "Cornat Schlauchschelle 50 - 70 mm, 1 Stück",
         "pipeDiameterMm": 70,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.423Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.228Z"
       },
       "gtin": "4035300284696",
       "id": "gtin:4035300284696",
@@ -10371,7 +10315,7 @@
         "name": "Cornat Schlauchschelle 70 - 90 mm, 1 Stück",
         "pipeDiameterMm": 90,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.424Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.228Z"
       },
       "gtin": "4035300284702",
       "id": "gtin:4035300284702",
@@ -10399,7 +10343,7 @@
         "mpn": "FLOR92390",
         "name": "Meister Cornat Schlauchverschraubung IG 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.020Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.377Z"
       },
       "gtin": "4035300380008",
       "id": "gtin:4035300380008",
@@ -10427,7 +10371,7 @@
         "mpn": "FLOR92355",
         "name": "Meister Cornat Flachdichtung für Schlauchverschraubung",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.013Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300380060",
       "id": "gtin:4035300380060",
@@ -10456,7 +10400,7 @@
         "name": "Cornat Schlauchanschluß für Tauchrohr 3/4 Metall, verchromt",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.478Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.255Z"
       },
       "gtin": "4035300403325",
       "id": "gtin:4035300403325",
@@ -10484,7 +10428,7 @@
         "mpn": "FLOR92600",
         "name": "Cornat Auslaufventil Hahn 1/2",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.004Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.372Z"
       },
       "gtin": "4035300435739",
       "id": "gtin:4035300435739",
@@ -10513,7 +10457,7 @@
         "name": "Cornat Schlauchschelle 32-50mm",
         "pipeDiameterMm": 50,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.994Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.368Z"
       },
       "gtin": "4035300536825",
       "id": "gtin:4035300536825",
@@ -10541,7 +10485,7 @@
         "mpn": "DY2702482",
         "name": "Meister Cornat Spiralsaugschlauch-Garnitur 1x7m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.029Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.973Z"
       },
       "gtin": "4035300554997",
       "id": "gtin:4035300554997",
@@ -10569,7 +10513,7 @@
         "mpn": "FLOR92395",
         "name": "Meister Cornat Schlauchverschraubung 1x1 1/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.028Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.972Z"
       },
       "gtin": "4035300565603",
       "id": "gtin:4035300565603",
@@ -10597,7 +10541,7 @@
         "mpn": "FLOR92747",
         "name": "Meister Cornat Schlauchtülle Messing, AG 1 1/2 für 1 1/2 Wasserschläuche",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.085Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:20.572Z"
       },
       "gtin": "4035300713837",
       "id": "gtin:4035300713837",
@@ -10625,7 +10569,7 @@
         "mpn": "FLOR92379",
         "name": "Meister Cornat Schlauchverschraubung 1",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.021Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.378Z"
       },
       "gtin": "4035300916917",
       "id": "gtin:4035300916917",
@@ -10653,7 +10597,7 @@
         "mpn": "FLOR92738",
         "name": "Cornat Schlauchtülle Messing, AG 1 1/4 für 1 Wasserschläuche",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.027Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.380Z"
       },
       "gtin": "4035300966950",
       "id": "gtin:4035300966950",
@@ -10681,7 +10625,7 @@
         "mpn": "FLOR92370",
         "name": "Meister Cornat Schlauchverschraubung IG 3/4",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.995Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.368Z"
       },
       "gtin": "4035300967018",
       "id": "gtin:4035300967018",
@@ -10710,7 +10654,7 @@
         "name": "Meister Cornat Schlauchschelle mit Flügelmutter 12-20 mm",
         "pipeDiameterMm": 20,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.025Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.379Z"
       },
       "gtin": "4035300967087",
       "id": "gtin:4035300967087",
@@ -10739,7 +10683,7 @@
         "name": "Meister Cornat Schlauchschelle 16-25 mm",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.013Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300967094",
       "id": "gtin:4035300967094",
@@ -10768,7 +10712,7 @@
         "name": "Meister Cornat Schlauchschelle 8-16mm, 10 Stück",
         "pipeDiameterMm": 16,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.017Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.376Z"
       },
       "gtin": "4035300967100",
       "id": "gtin:4035300967100",
@@ -10797,7 +10741,7 @@
         "name": "Meister Cornat Schlauchschelle 16-25 mm, 10 Stück",
         "pipeDiameterMm": 25,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.013Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.375Z"
       },
       "gtin": "4035300967117",
       "id": "gtin:4035300967117",
@@ -10826,7 +10770,7 @@
         "name": "Meister Cornat Schlauchschelle 25-40mm",
         "pipeDiameterMm": 40,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.018Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.376Z"
       },
       "gtin": "4035300967124",
       "id": "gtin:4035300967124",
@@ -10855,7 +10799,7 @@
         "name": "Meister Cornat Schlauchschelle 50-70mm, 5 Stück",
         "pipeDiameterMm": 70,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.012Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.374Z"
       },
       "gtin": "4035300967131",
       "id": "gtin:4035300967131",
@@ -10885,7 +10829,7 @@
         "pipeDiameterMm": 16,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.961Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.715Z"
       },
       "gtin": "4035300975327",
       "id": "gtin:4035300975327",
@@ -10914,7 +10858,7 @@
         "name": "Cornat Tropfwassersiphon, 1,5 Zoll x 50 mm",
         "pipeDiameterMm": 50,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.735Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.722Z"
       },
       "gtin": "4035300994540",
       "id": "gtin:4035300994540",
@@ -10942,7 +10886,7 @@
         "mpn": "10883",
         "name": "Cartrend Geschirrabtropfer faltbar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.145Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.211Z"
       },
       "gtin": "4038373013729",
       "id": "gtin:4038373013729",
@@ -10970,7 +10914,7 @@
         "mpn": "0692505203",
         "name": "Floraworld Baumbewässerungsbeutel classic 75 L",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.617Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.931Z"
       },
       "gtin": "4047883010784",
       "id": "gtin:4047883010784",
@@ -10998,7 +10942,7 @@
         "mpn": "0692505204",
         "name": "Floraworld Baumbewässerungssack comfort 75 L",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.617Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.932Z"
       },
       "gtin": "4047883010791",
       "id": "gtin:4047883010791",
@@ -11026,7 +10970,7 @@
         "name": "Homematic IP Starter Set - mit Access Point 2 + Bewässerungsaktor",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.891Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.126Z"
       },
       "gtin": "4047976613144",
       "id": "gtin:4047976613144",
@@ -11053,7 +10997,7 @@
         "mpn": "7736504730",
         "name": "Bosch Untertischspeicher TR 3500 TRO 5 5 L mit Tropfstopp",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.155Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.870Z"
       },
       "gtin": "4057749719973",
       "id": "gtin:4057749719973",
@@ -11081,7 +11025,7 @@
         "mpn": "4058075090668",
         "name": "Osram LED Leuchtmittel 5er Pack Tropfenform P40, E14, 4W, warmweiß, klar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.190Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.109Z"
       },
       "gtin": "4058075090668",
       "id": "gtin:4058075090668",
@@ -11109,7 +11053,7 @@
         "mpn": "0773707247",
         "name": "Osram LED Tropfenlampe Classic E14 5,5 W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.514Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.356Z"
       },
       "gtin": "4058075592599",
       "id": "gtin:4058075592599",
@@ -11138,7 +11082,7 @@
         "name": "Gardena Tropfbewässerung Set Balkon 15 Topfpflanzen",
         "pipeDiameterMm": 4.6,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.450Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:26.478Z",
         "systemId": "ntropfer"
       },
       "gtin": "4066407002937",
@@ -11166,7 +11110,7 @@
         "mpn": "13455-20",
         "name": "Gardena Tropfbewässerung Set Hochbeet bis zu 35 Pflanzen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.442Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.468Z"
       },
       "gtin": "4066407002968",
       "id": "gtin:4066407002968",
@@ -11194,7 +11138,7 @@
         "mpn": "13400-20",
         "name": "Gardena Bewässerungsset Terrasse für 30 Topfpflanzen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.435Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:26.460Z",
         "systemId": "s."
       },
       "gtin": "4066407002982",
@@ -11222,7 +11166,7 @@
         "mpn": "13501-20",
         "name": "Gardena Tropfbewässerung Set Hecke/Sträucher 50 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.444Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.470Z"
       },
       "gtin": "4066407003002",
       "id": "gtin:4066407003002",
@@ -11250,7 +11194,7 @@
         "mpn": "13450-20",
         "name": "Gardena Bewässerungsset für Gemüse/Blumenbeet bis zu 60 m²",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.444Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:26.470Z",
         "systemId": "kombinierbare"
       },
       "gtin": "4066407003040",
@@ -11278,7 +11222,7 @@
         "mpn": "0692152411",
         "name": "Gardena Solar-Bewässerung AquaBloom L Set",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.418Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.979Z"
       },
       "gtin": "4066407021853",
       "id": "gtin:4066407021853",
@@ -11306,7 +11250,7 @@
         "mpn": "0692152467",
         "name": "Gardena Multifunktionsbrause für Reinigung & Bewässerung Classic",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.955Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.320Z"
       },
       "gtin": "4066407024854",
       "id": "gtin:4066407024854",
@@ -11334,7 +11278,7 @@
         "mpn": "0692152469",
         "name": "Gardena Multi-Brause für Reinigung & Bewässerung Classic",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:08.955Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:30.320Z"
       },
       "gtin": "4066407024878",
       "id": "gtin:4066407024878",
@@ -11362,7 +11306,7 @@
         "mpn": "0692152397",
         "name": "Gardena Bewässerungssystem AquaPrecise für Rasen solarbetrieben",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.369Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.933Z"
       },
       "gtin": "4066407504103",
       "id": "gtin:4066407504103",
@@ -11391,7 +11335,7 @@
         "name": "Gardena Anschlussgarnitur Flex 13 mm (1/2) 1,5 m",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.926Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:23.557Z",
         "systemId": "teile"
       },
       "gtin": "4078500002516",
@@ -11420,7 +11364,7 @@
         "name": "Gardena Schnellanschlusssatz",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.251Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.784Z"
       },
       "gtin": "4078500010269",
       "id": "gtin:4078500010269",
@@ -11449,7 +11393,7 @@
         "name": "Gardena Grundausstattung Gartenspritze mit Anschluss-Set für 13 mm (1/2)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.246Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:23.780Z",
         "systemId": "einsteiger."
       },
       "gtin": "4078500010344",
@@ -11478,7 +11422,7 @@
         "name": "Gardena Anschluss-Satz 26,5 mm (3/4)",
         "pipeDiameterMm": 26.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.252Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.784Z"
       },
       "gtin": "4078500010429",
       "id": "gtin:4078500010429",
@@ -11506,7 +11450,7 @@
         "mpn": "18310-50",
         "name": "Gardena Bewässerungsbrause",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.255Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.787Z"
       },
       "gtin": "4078500010597",
       "id": "gtin:4078500010597",
@@ -11534,7 +11478,7 @@
         "mpn": "18311-20",
         "name": "Gardena Classic Bewässerungsbrause",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.247Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.781Z"
       },
       "gtin": "4078500010795",
       "id": "gtin:4078500010795",
@@ -11564,7 +11508,7 @@
         "pipeDiameterMm": 11,
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.538Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:24.018Z",
         "systemId": "teilen"
       },
       "gtin": "4078500023276",
@@ -11593,7 +11537,7 @@
         "name": "Gardena Bewässerungsbrause Set für Schläuche 13 mm (1/2) - 15 mm (5/8)",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.076Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:24.426Z",
         "systemId": "einsteiger."
       },
       "gtin": "4078500033046",
@@ -11622,7 +11566,7 @@
         "name": "Gardena Schlauchwagen CleverRoll M Easy Metall Set",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.168Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.489Z"
       },
       "gtin": "4078500045070",
       "id": "gtin:4078500045070",
@@ -11651,7 +11595,7 @@
         "name": "Gardena smart Sensor Control Set",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.533Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:24.818Z",
         "systemId": "Ger"
       },
       "gtin": "4078500049023",
@@ -11680,7 +11624,7 @@
         "name": "Gardena Steuerteil 9 V Bluetooth",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.592Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.869Z"
       },
       "gtin": "4078500052993",
       "id": "gtin:4078500052993",
@@ -11708,7 +11652,7 @@
         "mpn": "18910-20",
         "name": "Gardena Bewässerungsbrause EcoLine",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.706Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.825Z"
       },
       "gtin": "4078500057561",
       "id": "gtin:4078500057561",
@@ -11736,7 +11680,7 @@
         "mpn": "02770-20",
         "name": "Gardena Entwässerungsventil Set",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.616Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:25.730Z",
         "systemId": "vor"
       },
       "gtin": "4078500057998",
@@ -11764,7 +11708,7 @@
         "mpn": "0692152505",
         "name": "Gardena Bewässerungsbrause AquaCount",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.102Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.364Z"
       },
       "gtin": "4078500058070",
       "id": "gtin:4078500058070",
@@ -11793,7 +11737,7 @@
         "name": "Gardena 2-Wege-Ventil für 1/2 Wasserhahn mit 3/4 Gewinde",
         "pipeDiameterMm": 26.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.310Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.987Z"
       },
       "gtin": "4078500093804",
       "id": "gtin:4078500093804",
@@ -11822,7 +11766,7 @@
         "name": "Gardena 2-Wege-Ventil 2-Wege-Ventil 33,3 mm (G 1)",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.310Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.987Z"
       },
       "gtin": "4078500094009",
       "id": "gtin:4078500094009",
@@ -11850,7 +11794,7 @@
         "mpn": "02068-20",
         "name": "Gardena 4-Flächenregner Twist",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.332Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.006Z"
       },
       "gtin": "4078500206808",
       "id": "gtin:4078500206808",
@@ -11878,7 +11822,7 @@
         "mpn": "02073-20",
         "name": "Gardena 6-Flächenregner Boogie",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.333Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.007Z"
       },
       "gtin": "4078500207300",
       "id": "gtin:4078500207300",
@@ -11907,7 +11851,7 @@
         "name": "Gardena Wandschlauchhalter Classic mit Schlauchführungsrolle",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.280Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.965Z"
       },
       "gtin": "4078500265003",
       "id": "gtin:4078500265003",
@@ -11936,7 +11880,7 @@
         "name": "Gardena Schlauchstück Profi-System für 19 mm (3/4)-Schläuche",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.283Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.966Z"
       },
       "gtin": "4078500281706",
       "id": "gtin:4078500281706",
@@ -11965,7 +11909,7 @@
         "name": "Gardena Übergangsschlauchstück 26,5 mm (G 3/4)",
         "pipeDiameterMm": 26.5,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.299Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.979Z"
       },
       "gtin": "4078500291705",
       "id": "gtin:4078500291705",
@@ -11993,7 +11937,7 @@
         "mpn": "04647-20",
         "name": "Gardena Spiralschlauch Set 10 m",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.416Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.078Z"
       },
       "gtin": "4078500464703",
       "id": "gtin:4078500464703",
@@ -12022,7 +11966,7 @@
         "name": "Gardena Schlauchtrommel Classic 50",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.794Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.408Z"
       },
       "gtin": "4078500800709",
       "id": "gtin:4078500800709",
@@ -12051,7 +11995,7 @@
         "name": "Gardena Schlauchtrommel Set Classic 10",
         "pipeDiameterMm": 13,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.794Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:23.409Z",
         "systemId": "teilen.Zus"
       },
       "gtin": "4078500801003",
@@ -12080,7 +12024,7 @@
         "name": "Gardena Impuls Kreis u Sektorenregner mit Spike",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.636Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.273Z"
       },
       "gtin": "4078500813600",
       "id": "gtin:4078500813600",
@@ -12108,7 +12052,7 @@
         "mpn": "08143-20",
         "name": "Gardena Turbinenregner mit Spike",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.636Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.274Z"
       },
       "gtin": "4078500814300",
       "id": "gtin:4078500814300",
@@ -12136,7 +12080,7 @@
         "mpn": "04099854066436",
         "name": "Osram LED Tropfenlampe Classic E14 2,5 W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.518Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.359Z"
       },
       "gtin": "4099854066436",
       "id": "gtin:4099854066436",
@@ -12164,7 +12108,7 @@
         "mpn": "48899",
         "name": "Glas-Magnetboard Writing Tropfen, 30 x 30 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.377Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.412Z"
       },
       "gtin": "4251050528563",
       "id": "gtin:4251050528563",
@@ -12193,7 +12137,7 @@
         "name": "Sarei Tropfkante 1000 x 250 mm natur",
         "pipeDiameterMm": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.043Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:19.748Z"
       },
       "gtin": "4260036892178",
       "id": "gtin:4260036892178",
@@ -12222,7 +12166,7 @@
         "name": "Sarei Tropfkante 2000 x 250 mm natur",
         "pipeDiameterMm": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:56.045Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:19.750Z"
       },
       "gtin": "4260036892185",
       "id": "gtin:4260036892185",
@@ -12251,7 +12195,7 @@
         "name": "TrendLine Schlauchanschluss-Stück mit Wasserstopp",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.638Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.275Z"
       },
       "gtin": "4333692038072",
       "id": "gtin:4333692038072",
@@ -12280,7 +12224,7 @@
         "name": "TrendLine Schlauchanschluss-Stück",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.639Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.275Z"
       },
       "gtin": "4333692038089",
       "id": "gtin:4333692038089",
@@ -12308,7 +12252,7 @@
         "mpn": "692150040",
         "name": "TrendLine Schlauchführung mit Bodenspieß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.639Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.275Z"
       },
       "gtin": "4333692038102",
       "id": "gtin:4333692038102",
@@ -12337,7 +12281,7 @@
         "name": "TrendLine Schlauchanschluss-Stück",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.640Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.276Z"
       },
       "gtin": "4333692038119",
       "id": "gtin:4333692038119",
@@ -12366,7 +12310,7 @@
         "name": "TrendLine Schlauchanschluss-Stück",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.640Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.276Z"
       },
       "gtin": "4333692038126",
       "id": "gtin:4333692038126",
@@ -12395,7 +12339,7 @@
         "name": "TrendLine 2-Wege-Ventil",
         "pipeDiameterMm": 19.05,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.640Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.276Z"
       },
       "gtin": "4333692038133",
       "id": "gtin:4333692038133",
@@ -12424,7 +12368,7 @@
         "name": "TrendLine Schlauchanschluss-Stück mit Absperrfunktion",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.864Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.513Z"
       },
       "gtin": "4333692038263",
       "id": "gtin:4333692038263",
@@ -12453,7 +12397,7 @@
         "name": "TrendLine Schlauchanschluss-Stück mit Gelenk",
         "pipeDiameterMm": 12.7,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.864Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.514Z"
       },
       "gtin": "4333692038270",
       "id": "gtin:4333692038270",
@@ -12481,7 +12425,7 @@
         "mpn": "692502863",
         "name": "TrendLine Schlauchhalter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.699Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.324Z"
       },
       "gtin": "4333692040440",
       "id": "gtin:4333692040440",
@@ -12509,7 +12453,7 @@
         "mpn": "228480",
         "name": "TrendLine Schuhabtropfschale schwarz, ca. 75,5 x 38 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.785Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.401Z"
       },
       "gtin": "4333692065221",
       "id": "gtin:4333692065221",
@@ -12537,7 +12481,7 @@
         "mpn": "0795851193",
         "name": "TrendLine Schuhabtropfschale schwarz, ca. 35 x 49 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:00.917Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:23.550Z"
       },
       "gtin": "4333692065238",
       "id": "gtin:4333692065238",
@@ -12565,7 +12509,7 @@
         "mpn": "0692504833",
         "name": "TrendLine Baumbewässerungssack 75 L",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:06.097Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.857Z"
       },
       "gtin": "4333692535366",
       "id": "gtin:4333692535366",
@@ -12593,7 +12537,7 @@
         "mpn": "0692152201",
         "name": "TrendLine Schlauchhalter",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.544Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.658Z"
       },
       "gtin": "4333692580168",
       "id": "gtin:4333692580168",
@@ -12621,7 +12565,7 @@
         "mpn": "0691404396",
         "name": "Primaster Alu-Tropfschale 32 x 21 cm 10 Stück",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.310Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.886Z"
       },
       "gtin": "4333692699662",
       "id": "gtin:4333692699662",
@@ -12649,7 +12593,7 @@
         "mpn": "0691404397",
         "name": "Primaster Alu-Tropfschale 22 x 16 cm 5 Stück",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.310Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.886Z"
       },
       "gtin": "4333692699785",
       "id": "gtin:4333692699785",
@@ -12677,7 +12621,7 @@
         "mpn": "0691404398",
         "name": "Primaster Alu-Tropfschale 34 x 23 cm 5 Stück",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.309Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.886Z"
       },
       "gtin": "4333692699945",
       "id": "gtin:4333692699945",
@@ -12705,7 +12649,7 @@
         "mpn": "0692381661",
         "name": "Bewässerungssystem für Hochbeete 37 x 27,5 x 18 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.953Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:27.745Z",
         "systemId": "ist"
       },
       "gtin": "4752196000826",
@@ -12733,7 +12677,7 @@
         "mpn": "0692152502",
         "name": "Biogreen Bewässerungssystem Pflanzen Hydro Classic Tonkegel für PET-Flaschen 4er Set",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.883Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.165Z"
       },
       "gtin": "5055320015970",
       "id": "gtin:5055320015970",
@@ -12761,7 +12705,7 @@
         "mpn": "0692372020",
         "name": "BioGreen Pflanzturm Maxitom Kunststoff 150 x 25 cm terrakotta-grün mit Bewässerung",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.978Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.242Z"
       },
       "gtin": "5055320016052",
       "id": "gtin:5055320016052",
@@ -12789,7 +12733,7 @@
         "mpn": "0692152495",
         "name": "Biogreen Bewässerungssystem Balkonkästen Hydro Classic Tonkegel für PET-Flaschen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.881Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.164Z"
       },
       "gtin": "5055320020226",
       "id": "gtin:5055320020226",
@@ -12817,7 +12761,7 @@
         "mpn": "0692152500",
         "name": "Biogreen Bewässerungssystem-Set Hochbeet Hydro Cup inkl. Tonkegel & Becheraufsätzen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.881Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.164Z"
       },
       "gtin": "5055320024187",
       "id": "gtin:5055320024187",
@@ -12845,7 +12789,7 @@
         "mpn": "0692152499",
         "name": "Biogreen Bewässerungssystem Pflanzen Hydro Cone Tonkegel 1,8 L sand",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.881Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:31.164Z",
         "systemId": "besteht"
       },
       "gtin": "5055320033059",
@@ -12873,7 +12817,7 @@
         "mpn": "0692152497",
         "name": "Biogreen Bewässerungssystem Pflanzen Hydro Cone Tonkegel 1,8 L beere",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.882Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:31.165Z",
         "systemId": "besteht"
       },
       "gtin": "5055320033066",
@@ -12901,7 +12845,7 @@
         "mpn": "0692152494",
         "name": "Biogreen Bewässerungssystem Pflanzen Hydro Cone Tonkegel 1,8 L salbei",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.882Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:31.165Z",
         "systemId": "besteht"
       },
       "gtin": "5055320033073",
@@ -12929,7 +12873,7 @@
         "mpn": "70821",
         "name": "Schuhabtropfschale schwarz, 38 x 75,5 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.034Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.977Z"
       },
       "gtin": "5400555100036",
       "id": "gtin:5400555100036",
@@ -12957,7 +12901,7 @@
         "mpn": "0692382603",
         "name": "Ecopots Bewässerungsblumenkasten Bruges Balcony 48 cm dunkelgrau zum Aufhängen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.123Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.395Z"
       },
       "gtin": "5407011526140",
       "id": "gtin:5407011526140",
@@ -12985,7 +12929,7 @@
         "mpn": "0692382604",
         "name": "Ecopots Bewässerungsblumenkasten Bruges Balcony 48 cm grau zum Aufhängen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.123Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.395Z"
       },
       "gtin": "5407011526157",
       "id": "gtin:5407011526157",
@@ -13013,7 +12957,7 @@
         "mpn": "0692382605",
         "name": "Ecopots Bewässerungsblumenkasten Bruges Balcony 48 cm taupe zum Aufhängen",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.123Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.395Z"
       },
       "gtin": "5407011526171",
       "id": "gtin:5407011526171",
@@ -13041,7 +12985,7 @@
         "mpn": "0692505260",
         "name": "Aquaterra Selbstbewässerungssystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.597Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.857Z"
       },
       "gtin": "5600837336034",
       "id": "gtin:5600837336034",
@@ -13069,7 +13013,7 @@
         "mpn": "0692505259",
         "name": "Aquaterra Selbstbewässerungssystem",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.598Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:31.858Z"
       },
       "gtin": "5600837336041",
       "id": "gtin:5600837336041",
@@ -13097,7 +13041,7 @@
         "mpn": "0795851966",
         "name": "TrendLine Schuhabtropfschale Fußabdrücke 75 x 38 x 2,5 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.532Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.647Z"
       },
       "gtin": "5903104909321",
       "id": "gtin:5903104909321",
@@ -13126,7 +13070,7 @@
         "name": "Primaster Bewässerungsuhr mit Zeitschaltung",
         "pipeDiameterMm": 33.3,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.783Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.571Z"
       },
       "gtin": "5907512603833",
       "id": "gtin:5907512603833",
@@ -13155,7 +13099,7 @@
         "name": "Primaster Multibrausen-Set Ø 1/2 Anschluss",
         "pipeDiameterMm": 21,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:59.784Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:22.572Z"
       },
       "gtin": "5907512604052",
       "id": "gtin:5907512604052",
@@ -13184,7 +13128,7 @@
         "name": "Fiskars Schlauchanschluss Ø 19 mm (3/4 Zoll) LB",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.368Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.670Z"
       },
       "gtin": "6411501511003",
       "id": "gtin:6411501511003",
@@ -13213,7 +13157,7 @@
         "name": "Fiskars Schlauchanschluss Stop Ø 19 mm (3/4 Zoll)",
         "pipeDiameterMm": 19,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:02.367Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.670Z"
       },
       "gtin": "6411501511072",
       "id": "gtin:6411501511072",
@@ -13241,7 +13185,7 @@
         "mpn": "40000319",
         "name": "Elgo Bewässerungssystem MGS48",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:01.558Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:24.033Z"
       },
       "gtin": "7290013857200",
       "id": "gtin:7290013857200",
@@ -13269,7 +13213,7 @@
         "mpn": "1703200096",
         "name": "Rotho Geschirrabtropfer Geometric inklusive Abtropfschale",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:55.935Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:19.715Z"
       },
       "gtin": "7610859059987",
       "id": "gtin:7610859059987",
@@ -13297,7 +13241,7 @@
         "mpn": "1703208812",
         "name": "Rotho Geschirrabtropfer Geometric inkl. Abtropfschale",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:57.914Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.336Z"
       },
       "gtin": "7610859151797",
       "id": "gtin:7610859151797",
@@ -13325,7 +13269,7 @@
         "mpn": "1016208812",
         "name": "Rotho Geschirrabtropfer Space Wonder faltbar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:41:58.250Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:21.464Z"
       },
       "gtin": "7610859185846",
       "id": "gtin:7610859185846",
@@ -13354,7 +13298,7 @@
         "name": "Sprühschlauch Sprizzy 15 m",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.817Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.788Z"
       },
       "gtin": "8011963709307",
       "id": "gtin:8011963709307",
@@ -13377,12 +13321,40 @@
       "candidateAttributes": {
         "brand": "Elho",
         "dataQuality": "feed",
+        "gtin": "8711904331573",
+        "id": "gtin:8711904331573",
+        "mpn": "8319921043300",
+        "name": "Elho Selbstbewässerungssystem Ø 21 x 20 cm schwarz",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:26.348Z",
+        "systemId": "nicht"
+      },
+      "gtin": "8711904331573",
+      "id": "gtin:8711904331573",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/7c/98/47/1701854111/8711904331573_90062151_1280x1280.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-product-kind"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/elho-selbstbewaesserungssystem-oe-21-x-20-cm-schwarz-0692100787/",
+      "merchants": [],
+      "mpn": "8319921043300",
+      "name": "Elho Selbstbewässerungssystem Ø 21 x 20 cm schwarz",
+      "offerCount": 0,
+      "priority": 100,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Elho",
+      "candidateAttributes": {
+        "brand": "Elho",
+        "dataQuality": "feed",
         "gtin": "8711904331580",
         "id": "gtin:8711904331580",
         "mpn": "8322624043300",
         "name": "Elho Selbstbewässerungssystem Ø 24 x 22 cm schwarz",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.306Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:26.348Z",
         "systemId": "nicht"
       },
       "gtin": "8711904331580",
@@ -13410,7 +13382,7 @@
         "mpn": "8326028043300",
         "name": "Elho Selbstbewässerungssystem schwarz Ø 28 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:04.311Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:26.352Z"
       },
       "gtin": "8711904331597",
       "id": "gtin:8711904331597",
@@ -13438,7 +13410,7 @@
         "mpn": "0692100790",
         "name": "Elho Planztopf mit Selbstbewässerungssystem Kunststoff schwarz Ø 33 cm",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:05.843Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:27.650Z"
       },
       "gtin": "8711904331603",
       "id": "gtin:8711904331603",
@@ -13466,7 +13438,7 @@
         "mpn": "0773707114",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 6,5W warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.036Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.657Z"
       },
       "gtin": "8718699762292",
       "id": "gtin:8718699762292",
@@ -13494,7 +13466,7 @@
         "mpn": "0773707152",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 6,5W warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.043Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.661Z"
       },
       "gtin": "8718699762315",
       "id": "gtin:8718699762315",
@@ -13522,7 +13494,7 @@
         "mpn": "0773707197",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 4,3W neutralweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.046Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.664Z"
       },
       "gtin": "8718699762797",
       "id": "gtin:8718699762797",
@@ -13550,7 +13522,7 @@
         "mpn": "0773707135",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 6,5W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.046Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.663Z"
       },
       "gtin": "8718699762834",
       "id": "gtin:8718699762834",
@@ -13578,7 +13550,7 @@
         "mpn": "0773707136",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 6,5W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.043Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.661Z"
       },
       "gtin": "8718699762858",
       "id": "gtin:8718699762858",
@@ -13606,7 +13578,7 @@
         "mpn": "0773707137",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 6,5W neutralweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.045Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.663Z"
       },
       "gtin": "8718699762872",
       "id": "gtin:8718699762872",
@@ -13634,7 +13606,7 @@
         "mpn": "0773707138",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 4,3W warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.046Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.664Z"
       },
       "gtin": "8718699763152",
       "id": "gtin:8718699763152",
@@ -13662,7 +13634,7 @@
         "mpn": "0773707168",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 4W warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.043Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.662Z"
       },
       "gtin": "8718699763176",
       "id": "gtin:8718699763176",
@@ -13690,7 +13662,7 @@
         "mpn": "0773707169",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 2W warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.044Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.662Z"
       },
       "gtin": "8718699763299",
       "id": "gtin:8718699763299",
@@ -13718,7 +13690,7 @@
         "mpn": "0773707199",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 4W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.046Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.663Z"
       },
       "gtin": "8718699763411",
       "id": "gtin:8718699763411",
@@ -13746,7 +13718,7 @@
         "mpn": "0773707116",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 4,3W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.046Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.664Z"
       },
       "gtin": "8718699763435",
       "id": "gtin:8718699763435",
@@ -13774,7 +13746,7 @@
         "mpn": "0773707178",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 2,2W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.045Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.663Z"
       },
       "gtin": "8718699763459",
       "id": "gtin:8718699763459",
@@ -13802,7 +13774,7 @@
         "mpn": "0773707155",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 4,3W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.044Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.662Z"
       },
       "gtin": "8718699763473",
       "id": "gtin:8718699763473",
@@ -13830,7 +13802,7 @@
         "mpn": "0773707679",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 4,3W warmweiß 2er Pack",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.044Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.662Z"
       },
       "gtin": "8718699763916",
       "id": "gtin:8718699763916",
@@ -13858,7 +13830,7 @@
         "mpn": "0773707676",
         "name": "Philips LED-Leuchtmittel Tropfenform T25 E14 0,9W warmweiß matt",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.047Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.664Z"
       },
       "gtin": "8718699771690",
       "id": "gtin:8718699771690",
@@ -13886,7 +13858,7 @@
         "mpn": "0773707131",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E14 2W warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.047Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.664Z"
       },
       "gtin": "8718699777555",
       "id": "gtin:8718699777555",
@@ -13915,7 +13887,7 @@
         "name": "Philips Hue LED-Leuchtmittel Tropfenform E14 5,1W warmweiß bis kaltweiß smart",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.053Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.668Z"
       },
       "gtin": "8719514491106",
       "id": "gtin:8719514491106",
@@ -13944,7 +13916,7 @@
         "name": "Philips Hue LED-Leuchtmittel Tropfenform E14 5,1W warmweiß bis kaltweiß smart RGB",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.053Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.669Z"
       },
       "gtin": "8719514491229",
       "id": "gtin:8719514491229",
@@ -13973,7 +13945,7 @@
         "name": "WIZ LED-Leuchtmittel Tropfenform P45 E14 5W warmweiß bis kaltweiß smart RGB",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.046Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.663Z"
       },
       "gtin": "8719514554658",
       "id": "gtin:8719514554658",
@@ -14002,7 +13974,7 @@
         "name": "WIZ LED-Leuchtmittel Tropfenform P45 E27 4,9W warmweiß bis kaltweiß smart RGB",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.044Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.662Z"
       },
       "gtin": "8719514554672",
       "id": "gtin:8719514554672",
@@ -14030,7 +14002,7 @@
         "mpn": "0773707650",
         "name": "Philips LED-Leuchtmittel Filament Tropfenform P45 E27 2,3W warmweiß klar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.044Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:28.662Z"
       },
       "gtin": "8720169188198",
       "id": "gtin:8720169188198",
@@ -14059,7 +14031,7 @@
         "name": "Philips LED Leuchtmittel Tropfenform Smart Wifi Dimmbar warmweiß-kühlweiß",
         "reviewed": false,
         "smartCompatible": true,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.514Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.071Z"
       },
       "gtin": "8720169302990",
       "id": "gtin:8720169302990",
@@ -14087,7 +14059,7 @@
         "mpn": "0773707755",
         "name": "Philips Led Leuchtmittel Tropfenform E27 warmweiß",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:07.515Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:29.072Z"
       },
       "gtin": "8720169310872",
       "id": "gtin:8720169310872",
@@ -14115,7 +14087,7 @@
         "mpn": "0692602307",
         "name": "Juwel Hochbeet Timber 130 x 60 cm inkl. Bewässerung & Saatmatte",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:09.142Z",
+        "sourceUpdatedAt": "2026-09-17T07:38:30.494Z",
         "systemId": "und"
       },
       "gtin": "9001567204680",
@@ -14143,7 +14115,7 @@
         "mpn": "110059",
         "name": "Eglo LED Leuchtmittel CF35 E14 Tropfenform 4 W warmweiß amber",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:03.855Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:25.953Z"
       },
       "gtin": "9008606227938",
       "id": "gtin:9008606227938",

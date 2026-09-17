@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-16T07:42:22.603Z",
+  "generatedAt": "2026-09-17T07:38:41.392Z",
   "products": [
     {
       "brand": "TP-Link",
@@ -14,7 +14,7 @@
         "name": "TP-Link Tapo C200 Sicherheits-WLAN-Kamera mit Schwenk- und Neigefunktion - Weiß",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.813Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.094Z"
       },
       "gtin": "6935364088095",
       "id": "gtin:6935364088095",
@@ -50,7 +50,7 @@
         "placement": "outdoor",
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.136Z"
       },
       "gtin": "194644319335",
       "id": "gtin:194644319335",
@@ -71,6 +71,108 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Gopro",
+      "candidateAttributes": {
+        "brand": "Gopro",
+        "cameraCount": 1,
+        "dataQuality": "feed",
+        "gtin": "810116385331",
+        "id": "gtin:810116385331",
+        "integratedLight": false,
+        "name": "GoPro MISSION 1 PRO Grip Edition - 8K-Actionkamera - Schwarz",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.146Z"
+      },
+      "gtin": "810116385331",
+      "id": "gtin:810116385331",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/g/r/gropro_mission_grip_titel_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/gopro-mission-1-pro-grip-edition-8k-actionkamera?opt_92=5",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 779.99,
+      "name": "GoPro MISSION 1 PRO Grip Edition - 8K-Actionkamera - Schwarz",
+      "offerCount": 1,
+      "priority": 188,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Gopro",
+      "candidateAttributes": {
+        "brand": "Gopro",
+        "cameraCount": 1,
+        "dataQuality": "feed",
+        "gtin": "810116385157",
+        "id": "gtin:810116385157",
+        "integratedLight": false,
+        "name": "GoPro MISSION 1 PRO - 8K-Actionkamera - Schwarz",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.146Z"
+      },
+      "gtin": "810116385157",
+      "id": "gtin:810116385157",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/f/r/frontal_pro.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/gopro-mission-1-pro-8k-actionkamera?opt_92=5",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 699.99,
+      "name": "GoPro MISSION 1 PRO - 8K-Actionkamera - Schwarz",
+      "offerCount": 1,
+      "priority": 180,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Gopro",
+      "candidateAttributes": {
+        "brand": "Gopro",
+        "cameraCount": 1,
+        "dataQuality": "feed",
+        "gtin": "810116385188",
+        "id": "gtin:810116385188",
+        "integratedLight": false,
+        "name": "GoPro MISSION 1 - 8K-Actionkamera - Schwarz",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.146Z"
+      },
+      "gtin": "810116385188",
+      "id": "gtin:810116385188",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/t/i/titelbild_61_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/gopro-mission-1-8k-actionkamera?opt_92=5",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 599.99,
+      "name": "GoPro MISSION 1 - 8K-Actionkamera - Schwarz",
+      "offerCount": 1,
+      "priority": 170,
+      "riskTier": "normal"
+    },
+    {
       "brand": "eufy",
       "candidateAttributes": {
         "brand": "eufy",
@@ -84,7 +186,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.889Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.125Z"
       },
       "gtin": "0194644239213",
       "id": "gtin:0194644239213",
@@ -119,7 +221,7 @@
         "power": "poe",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.881Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.118Z"
       },
       "gtin": "6975253983322",
       "id": "gtin:6975253983322",
@@ -151,7 +253,7 @@
         "panTilt": false,
         "power": "mains",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.874Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.115Z"
       },
       "gtin": "8720169192317",
       "id": "gtin:8720169192317",
@@ -173,6 +275,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Abus",
+      "candidateAttributes": {
+        "brand": "Abus",
+        "cameraCount": 2,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "4003318981449",
+        "id": "gtin:4003318981449",
+        "integratedLight": false,
+        "name": "ABUS WLAN Licht Außen-Kamera - 2er-Set",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.104Z"
+      },
+      "gtin": "4003318981449",
+      "id": "gtin:4003318981449",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/a/b/abus_wlan_licht_2er.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/abus-wlan-licht-aussenkamera-2er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 330.95,
+      "name": "ABUS WLAN Licht Außen-Kamera - 2er-Set",
+      "offerCount": 1,
+      "priority": 143,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Ring",
       "candidateAttributes": {
         "brand": "Ring",
@@ -187,7 +323,7 @@
         "power": "mains",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.896Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.130Z"
       },
       "gtin": "840414660984",
       "id": "gtin:840414660984",
@@ -207,6 +343,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "eufy",
+      "candidateAttributes": {
+        "brand": "eufy",
+        "cameraCount": 1,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "0194644336172",
+        "id": "gtin:0194644336172",
+        "integratedLight": false,
+        "name": "eufyCam C36 2+1 Kit - mit HomeBase Mini + 2 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
+        "panTilt": true,
+        "placement": "outdoor",
+        "resolution": "2k",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.146Z"
+      },
+      "gtin": "0194644336172",
+      "id": "gtin:0194644336172",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/2/_/2_1_kit_titelbild_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-power-source"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-c36-2-1-kit-mit-homebase-mini-2-2k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 299.99,
+      "name": "eufyCam C36 2+1 Kit - mit HomeBase Mini + 2 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
+      "offerCount": 1,
+      "priority": 140,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Aqara",
       "candidateAttributes": {
         "brand": "Aqara",
@@ -219,7 +389,7 @@
         "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.880Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.117Z"
       },
       "gtin": "6975833358113",
       "id": "gtin:6975833358113",
@@ -241,6 +411,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Netatmo",
+      "candidateAttributes": {
+        "brand": "Netatmo",
+        "cameraCount": 1,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "3700730507493",
+        "id": "gtin:3700730507493",
+        "integratedLight": false,
+        "name": "Netatmo Außenkamera Original - 2K, WLAN - Weiß",
+        "panTilt": false,
+        "placement": "outdoor",
+        "resolution": "2k",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.136Z"
+      },
+      "gtin": "3700730507493",
+      "id": "gtin:3700730507493",
+      "imageUrl": "https://www.tink.de/cdn/809251/media/catalog/product/w/h/white_1150_x_1150_wei_.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-power-source"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/netatmo-aussenkamera-original-2k-wlan?opt_92=30",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 286.95,
+      "name": "Netatmo Außenkamera Original - 2K, WLAN - Weiß",
+      "offerCount": 1,
+      "priority": 139,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Abus",
       "candidateAttributes": {
         "brand": "Abus",
@@ -253,7 +457,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.834Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.108Z"
       },
       "gtin": "4003318981456",
       "id": "gtin:4003318981456",
@@ -268,7 +472,7 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 289.95,
+      "minBasePriceEur": 285.95,
       "name": "ABUS Akku Kamera Pro mit Basisstation - 2er Set",
       "offerCount": 1,
       "priority": 139,
@@ -287,7 +491,7 @@
         "panTilt": false,
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.892Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.127Z"
       },
       "gtin": "06977118370407",
       "id": "gtin:06977118370407",
@@ -309,40 +513,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "0194644293888",
-        "id": "gtin:0194644293888",
-        "integratedLight": false,
-        "name": "eufyCam S3 Pro 4k Solar-Zusatzkamera - 2er-Set",
-        "panTilt": false,
-        "placement": "outdoor",
-        "power": "solar",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.843Z"
-      },
-      "gtin": "0194644293888",
-      "id": "gtin:0194644293888",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/t/i/titel2_92.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-s3-pro-4k-solar-zusatzkamera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 269.95,
-      "name": "eufyCam S3 Pro 4k Solar-Zusatzkamera - 2er-Set",
-      "offerCount": 1,
-      "priority": 137,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Bosch Smart Home",
       "candidateAttributes": {
         "brand": "Bosch Smart Home",
@@ -355,7 +525,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.890Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.125Z"
       },
       "gtin": "4062321396084",
       "id": "gtin:4062321396084",
@@ -370,7 +540,7 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 269.95,
+      "minBasePriceEur": 267.95,
       "name": "Bosch Smart Home Eyes Außenkamera II - Anthrazit",
       "offerCount": 1,
       "priority": 137,
@@ -391,7 +561,7 @@
         "placement": "outdoor",
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.893Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.128Z"
       },
       "gtin": "6937479641769",
       "id": "gtin:6937479641769",
@@ -423,7 +593,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.837Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.110Z"
       },
       "gtin": "4003318981463",
       "id": "gtin:4003318981463",
@@ -445,40 +615,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Netatmo",
-      "candidateAttributes": {
-        "brand": "Netatmo",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "3700730507493",
-        "id": "gtin:3700730507493",
-        "integratedLight": false,
-        "name": "Netatmo Außenkamera Original - 2K, WLAN - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.904Z"
-      },
-      "gtin": "3700730507493",
-      "id": "gtin:3700730507493",
-      "imageUrl": "https://www.tink.de/cdn/809251/media/catalog/product/w/h/white_1150_x_1150_wei_.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/netatmo-aussenkamera-original-2k-wlan?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 249.99,
-      "name": "Netatmo Außenkamera Original - 2K, WLAN - Weiß",
-      "offerCount": 1,
-      "priority": 135,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Yale",
       "candidateAttributes": {
         "brand": "Yale",
@@ -491,7 +627,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.835Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.110Z"
       },
       "gtin": "5052847126103",
       "id": "gtin:5052847126103",
@@ -526,7 +662,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.845Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.113Z"
       },
       "gtin": "6975253982172",
       "id": "gtin:6975253982172",
@@ -547,6 +683,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "omajin",
+      "candidateAttributes": {
+        "brand": "omajin",
+        "cameraCount": 2,
+        "dataQuality": "feed",
+        "gtin": "3700730532006",
+        "id": "gtin:3700730532006",
+        "integratedLight": false,
+        "name": "omajin Wireless Security Camera - 2er-Set",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.112Z"
+      },
+      "gtin": "3700730532006",
+      "id": "gtin:3700730532006",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/o/m/omajin_wireless_security_camera_-_kabellose_berwachungskamera_-_2er_set_neu.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/omajin-wireless-security-camera-2er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 207.95,
+      "name": "omajin Wireless Security Camera - 2er-Set",
+      "offerCount": 1,
+      "priority": 131,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Ring",
       "candidateAttributes": {
         "brand": "Ring",
@@ -560,7 +730,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.136Z"
       },
       "gtin": "840414621992",
       "id": "gtin:840414621992",
@@ -594,7 +764,7 @@
         "placement": "outdoor",
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.904Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.137Z"
       },
       "gtin": "840414661301",
       "id": "gtin:840414661301",
@@ -627,7 +797,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.821Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.100Z"
       },
       "gtin": "194644107277",
       "id": "gtin:194644107277",
@@ -661,7 +831,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.829Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.107Z"
       },
       "gtin": "4260195392427",
       "id": "gtin:4260195392427",
@@ -683,6 +853,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "TP-Link",
+      "candidateAttributes": {
+        "brand": "TP-Link",
+        "cameraCount": 1,
+        "dataQuality": "feed",
+        "gtin": "4897098685426",
+        "id": "gtin:4897098685426",
+        "integratedLight": false,
+        "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
+        "panTilt": false,
+        "placement": "outdoor",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.104Z"
+      },
+      "gtin": "4897098685426",
+      "id": "gtin:4897098685426",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/9/3/930067_titelbild_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c325wb?opt_92=30",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 79.9,
+      "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
+      "offerCount": 2,
+      "priority": 128,
+      "riskTier": "normal"
+    },
+    {
       "brand": "aosu",
       "candidateAttributes": {
         "brand": "aosu",
@@ -695,7 +899,7 @@
         "panTilt": false,
         "power": "solar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.893Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.127Z"
       },
       "gtin": "06977118370414",
       "id": "gtin:06977118370414",
@@ -717,35 +921,35 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Homematic IP",
+      "brand": "Reolink",
       "candidateAttributes": {
-        "brand": "Homematic IP",
+        "brand": "Reolink",
         "cameraCount": 1,
         "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "4047976629435",
-        "id": "gtin:4047976629435",
+        "gtin": "6978285033768",
+        "id": "gtin:6978285033768",
         "integratedLight": false,
-        "name": "Homematic IP Außenkamera - 5MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
+        "name": "Reolink Argus PT Ultra - 4K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
         "panTilt": true,
         "placement": "outdoor",
+        "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.903Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.146Z"
       },
-      "gtin": "4047976629435",
-      "id": "gtin:4047976629435",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/t/i/titel2_2_6.jpg",
+      "gtin": "6978285033768",
+      "id": "gtin:6978285033768",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/1/-/1-argus_pt_ultra_with_solar_panel2_1.jpg",
       "issues": [
         "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
+        "missing-power-source"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-aussenkamera-5mp-wlan-mit-schwenk-neigefunktion?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/reolink-argus-pt-ultra-4k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 169.95,
-      "name": "Homematic IP Außenkamera - 5MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
+      "minBasePriceEur": 169.99,
+      "name": "Reolink Argus PT Ultra - 4K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
       "offerCount": 1,
       "priority": 127,
       "riskTier": "normal"
@@ -764,7 +968,7 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.818Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.098Z"
       },
       "gtin": "4003318912368",
       "id": "gtin:4003318912368",
@@ -788,6 +992,40 @@
       "brand": "Homematic IP",
       "candidateAttributes": {
         "brand": "Homematic IP",
+        "cameraCount": 1,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "4047976629435",
+        "id": "gtin:4047976629435",
+        "integratedLight": false,
+        "name": "Homematic IP Außenkamera - 5MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
+        "panTilt": true,
+        "placement": "outdoor",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.135Z"
+      },
+      "gtin": "4047976629435",
+      "id": "gtin:4047976629435",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/t/i/titel2_2_6.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-aussenkamera-5mp-wlan-mit-schwenk-neigefunktion?opt_92=30",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 166.95,
+      "name": "Homematic IP Außenkamera - 5MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
+      "offerCount": 1,
+      "priority": 127,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Homematic IP",
+      "candidateAttributes": {
+        "brand": "Homematic IP",
         "cameraCount": 2,
         "connection": "wifi",
         "dataQuality": "feed",
@@ -798,11 +1036,11 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.903Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.135Z"
       },
       "gtin": "4047976629411",
       "id": "gtin:4047976629411",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/i/n/innenkamerabasic_vorne2er-set.jpg",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/i/n/innenkamerabasic_vorne2er-set.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source",
@@ -833,7 +1071,7 @@
         "placement": "outdoor",
         "power": "poe",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.909Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.139Z"
       },
       "gtin": "6937479642773",
       "id": "gtin:6937479642773",
@@ -866,7 +1104,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.841Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.111Z"
       },
       "gtin": "6976930224264",
       "id": "gtin:6976930224264",
@@ -899,7 +1137,7 @@
         "name": "TP-Link Tapo C212 - WLAN-Sicherheitskamera mit Schwenk- und Neigefunktion - Weiß",
         "panTilt": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.834Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.108Z"
       },
       "gtin": "4895252503647",
       "id": "gtin:4895252503647",
@@ -921,6 +1159,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Yale",
+      "candidateAttributes": {
+        "brand": "Yale",
+        "cameraCount": 1,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "5052847178355",
+        "id": "gtin:5052847178355",
+        "integratedLight": false,
+        "name": "Yale Smart Outdoor Camera - 1080p-WLAN-Außenkamera - Weiß",
+        "panTilt": false,
+        "placement": "outdoor",
+        "resolution": "hd",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.145Z"
+      },
+      "gtin": "5052847178355",
+      "id": "gtin:5052847178355",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/y/a/yale_kamera_au_en_frontal_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-power-source"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/yale-smart-outdoor-camera-1080p-full-hd-wlan-aussenkamera?opt_92=30",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 139.99,
+      "name": "Yale Smart Outdoor Camera - 1080p-WLAN-Außenkamera - Weiß",
+      "offerCount": 1,
+      "priority": 124,
+      "riskTier": "normal"
+    },
+    {
       "brand": "IMOU",
       "candidateAttributes": {
         "brand": "IMOU",
@@ -932,7 +1204,7 @@
         "name": "Imou PF1 4L - Futterautomat mit 360°-Kamera - Weiß",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.900Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.133Z"
       },
       "gtin": "6976391032576",
       "id": "gtin:6976391032576",
@@ -955,105 +1227,71 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Reolink",
+      "brand": "eufy",
       "candidateAttributes": {
-        "brand": "Reolink",
+        "brand": "eufy",
         "cameraCount": 1,
-        "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "6978285034789",
-        "id": "gtin:6978285034789",
-        "integratedLight": true,
-        "name": "Reolink Floodlight Series F310B - 4MP WLAN-Flutlichtaußenkamera - Weiß",
+        "gtin": "194644107420",
+        "id": "gtin:194644107420",
+        "integratedLight": false,
+        "name": "eufyCam 3 Zusatzkamera - Weiß",
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.908Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.100Z"
       },
-      "gtin": "6978285034789",
-      "id": "gtin:6978285034789",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/t/i/titel_5_57.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-floodlight-series-f310b-4mp-wlan-flutlichtaussen-kamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 84,
-      "name": "Reolink Floodlight Series F310B - 4MP WLAN-Flutlichtaußenkamera - Weiß",
-      "offerCount": 1,
-      "priority": 118,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "1210002602747",
-        "id": "gtin:1210002602747",
-        "integratedLight": false,
-        "name": "TP-Link Tapo C246D - 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.912Z"
-      },
-      "gtin": "1210002602747",
-      "id": "gtin:1210002602747",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/2/2/2210171.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c246d-2k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 81.9,
-      "name": "TP-Link Tapo C246D - 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-      "offerCount": 1,
-      "priority": 118,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "4897098685426",
-        "id": "gtin:4897098685426",
-        "integratedLight": false,
-        "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.827Z"
-      },
-      "gtin": "4897098685426",
-      "id": "gtin:4897098685426",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/9/3/930067_titelbild_1.jpg",
+      "gtin": "194644107420",
+      "id": "gtin:194644107420",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel1_3_103.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
         "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c325wb?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/eufy-cam-3?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 79.9,
-      "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
+      "minBasePriceEur": 105.95,
+      "name": "eufyCam 3 Zusatzkamera - Weiß",
       "offerCount": 1,
-      "priority": 118,
+      "priority": 121,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "eufy",
+      "candidateAttributes": {
+        "brand": "eufy",
+        "cameraCount": 1,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "0194644321703",
+        "id": "gtin:0194644321703",
+        "integratedLight": false,
+        "name": "eufyCam C36 - 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
+        "panTilt": true,
+        "placement": "outdoor",
+        "resolution": "2k",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-09-17T07:38:32.145Z"
+      },
+      "gtin": "0194644321703",
+      "id": "gtin:0194644321703",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/t/i/titelbild_60_3.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-power-source"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-c36-2k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 99.99,
+      "name": "eufyCam C36 - 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
+      "offerCount": 1,
+      "priority": 120,
       "riskTier": "normal"
     },
     {
@@ -1071,7 +1309,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.908Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.139Z"
       },
       "gtin": "6976930229962",
       "id": "gtin:6976930229962",
@@ -1104,7 +1342,7 @@
         "panTilt": true,
         "resolution": "2k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.898Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.132Z"
       },
       "gtin": "6971927238286",
       "id": "gtin:6971927238286",
@@ -1125,71 +1363,71 @@
       "riskTier": "normal"
     },
     {
-      "brand": "TP-Link",
+      "brand": "Yale",
       "candidateAttributes": {
-        "brand": "TP-Link",
+        "brand": "Yale",
         "cameraCount": 1,
         "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "1210002610780",
-        "id": "gtin:1210002610780",
+        "gtin": "5052847178331",
+        "id": "gtin:5052847178331",
         "integratedLight": false,
-        "name": "TP-Link Tapo C260 - 4K-WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
+        "name": "Yale Smart Indoor Camera - 1080p-WLAN-Innenkamera - Weiß",
+        "panTilt": false,
         "placement": "indoor",
-        "resolution": "4k",
+        "resolution": "hd",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.912Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.145Z"
       },
-      "gtin": "1210002610780",
-      "id": "gtin:1210002610780",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/t/i/titelbild_56_3.jpg",
+      "gtin": "5052847178331",
+      "id": "gtin:5052847178331",
+      "imageUrl": "https://www.tink.de/cdn/74473/media/catalog/product/t/i/titelbild_yale_kamera_1.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c260-4k-wlan-innenkamera-mit-schwenk-neigefunktion?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/yale-smart-indoor-camera-1080p-wlan-innenkamera?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 66,
-      "name": "TP-Link Tapo C260 - 4K-WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
+      "minBasePriceEur": 64.99,
+      "name": "Yale Smart Indoor Camera - 1080p-WLAN-Innenkamera - Weiß",
       "offerCount": 1,
-      "priority": 117,
+      "priority": 116,
       "riskTier": "normal"
     },
     {
-      "brand": "TP-Link",
+      "brand": "Reolink",
       "candidateAttributes": {
-        "brand": "TP-Link",
+        "brand": "Reolink",
         "cameraCount": 1,
         "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "1210002619141",
-        "id": "gtin:1210002619141",
+        "gtin": "6975253982196",
+        "id": "gtin:6975253982196",
         "integratedLight": false,
-        "name": "TP-Link Tapo C245D - 2K-WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "indoor",
-        "resolution": "2k",
+        "name": "Reolink W320 - 5MP WLAN-Außenkamera - Weiß",
+        "panTilt": false,
+        "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.912Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.141Z"
       },
-      "gtin": "1210002619141",
-      "id": "gtin:1210002619141",
-      "imageUrl": "https://www.tink.de/cdn/890503/media/catalog/product/t/a/tapo_c245d_un_1.0_overview_01_normal_20251126053836q_1.jpg",
+      "gtin": "6975253982196",
+      "id": "gtin:6975253982196",
+      "imageUrl": "https://www.tink.de/cdn/310909/media/catalog/product/1/-/1-w320_1_1.jpg",
       "issues": [
         "incomplete-product-data",
-        "missing-power-source"
+        "missing-power-source",
+        "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c245d-2k-wlan-innenkamera-mit-schwenk-neigefunktion?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/reolink-w320-5mp-wlan-aussenkamera?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 66,
-      "name": "TP-Link Tapo C245D - 2K-WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
+      "minBasePriceEur": 61.99,
+      "name": "Reolink W320 - 5MP WLAN-Außenkamera - Weiß",
       "offerCount": 1,
-      "priority": 117,
+      "priority": 116,
       "riskTier": "normal"
     },
     {
@@ -1205,7 +1443,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.838Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.111Z"
       },
       "gtin": "840268936976",
       "id": "gtin:840268936976",
@@ -1239,7 +1477,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.837Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.111Z"
       },
       "gtin": "840268952372",
       "id": "gtin:840268952372",
@@ -1273,7 +1511,7 @@
         "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.902Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.134Z"
       },
       "gtin": "6937479642957",
       "id": "gtin:6937479642957",
@@ -1309,7 +1547,7 @@
         "placement": "indoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.901Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.134Z"
       },
       "gtin": "6937479645354",
       "id": "gtin:6937479645354",
@@ -1342,7 +1580,7 @@
         "panTilt": true,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.893Z"
+        "sourceUpdatedAt": "2026-09-17T07:38:32.128Z"
       },
       "gtin": "6937479640380",
       "id": "gtin:6937479640380",
@@ -1360,40 +1598,6 @@
       "name": "Imou Ranger Dual Pro 6MP - Dual-Lens WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
       "offerCount": 1,
       "priority": 115,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6935364053222",
-        "id": "gtin:6935364053222",
-        "integratedLight": false,
-        "name": "TP-Link Tapo C100 Indoor Sicherheits-WLAN-Kamera 2er-Set",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-16T07:42:10.815Z"
-      },
-      "gtin": "6935364053222",
-      "id": "gtin:6935364053222",
-      "imageUrl": "https://www.tink.de/cdn/967213/media/catalog/product/t/i/titel2_31.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c100-indoor-sicherheits-wlan-kamera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 39.8,
-      "name": "TP-Link Tapo C100 Indoor Sicherheits-WLAN-Kamera 2er-Set",
-      "offerCount": 1,
-      "priority": 114,
       "riskTier": "normal"
     }
   ],
