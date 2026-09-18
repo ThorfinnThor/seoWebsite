@@ -1,37 +1,37 @@
 {
-  "candidateRows": 336,
-  "candidateToProductRate": 98.2,
+  "candidateRows": 320,
+  "candidateToProductRate": 97.8,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-17T07:38:41.392Z",
+  "generatedAt": "2026-09-18T07:24:48.576Z",
   "issues": {
-    "missing-or-ambiguous-slope": 317,
-    "missing-passage-width": 333,
-    "missing-rated-area": 225,
-    "suspicious-price": 116,
-    "unknown-navigation": 283
+    "missing-or-ambiguous-slope": 301,
+    "missing-passage-width": 317,
+    "missing-rated-area": 210,
+    "suspicious-price": 113,
+    "unknown-navigation": 267
   },
   "linkVerification": {
-    "verified": 16
+    "verified": 17
   },
   "merchants": {
     "ANTHBOT DE": 1,
     "Ecovacs DE": 3,
     "Globus Baumarkt DE": 7,
-    "tink DE": 5
+    "tink DE": 6
   },
-  "normalizedProducts": 330,
-  "offers": 16,
+  "normalizedProducts": 313,
+  "offers": 17,
   "priceStatsEur": {
-    "max": 2299,
-    "median": 949,
+    "max": 2499.95,
+    "median": 999,
     "min": 322
   },
   "productsWithoutOffers": 0,
-  "publishedProducts": 14,
-  "quarantinedProducts": 114,
-  "reviewedProducts": 14,
-  "reviewQueue": 316,
-  "rows": 174892,
+  "publishedProducts": 15,
+  "quarantinedProducts": 111,
+  "reviewedProducts": 15,
+  "reviewQueue": 298,
+  "rows": 175104,
   "schemaVersion": 1,
   "sourceFeeds": 10,
   "successfulFeeds": 10
