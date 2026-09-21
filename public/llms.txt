@@ -8,7 +8,7 @@ Die Marke heißt PassendPlanen und ist unter passendplanen.de erreichbar. Ergebn
 
 - [Methodik](https://www.passendplanen.de/methodik/): Rechenprinzipien, Quellenstandard, Datenprüfung und fachliche Grenzen.
 - [Über PassendPlanen](https://www.passendplanen.de/ueber-passendplanen/): Autor, redaktioneller Anspruch, Aktualisierung und Korrekturweg.
-- [Datenauswertungen](https://www.passendplanen.de/ratgeber/daten/): 21 eigene Auswertungen geprüfter Produktdaten.
+- [Datenauswertungen](https://www.passendplanen.de/ratgeber/daten/): 24 eigene Auswertungen geprüfter Produktdaten.
 - [Affiliate Transparenz](https://www.passendplanen.de/affiliate-transparenz/): Trennung von Rechenlogik, Produktauswahl und Vergütung.
 - [Nutzungshinweise](https://www.passendplanen.de/nutzungshinweise/): Grenzen der Planungshilfen und erforderliche Prüfung vor Entscheidungen.
 - [Ausführliche LLM Übersicht](https://www.passendplanen.de/llms-full.txt): Erweiterte Beschreibung der Inhalte, Datenbasis und Zitiergrenzen.
@@ -31,10 +31,13 @@ Die Marke heißt PassendPlanen und ist unter passendplanen.de erreichbar. Ergebn
 ## Eigene Datenauswertungen
 
 - [Was Größe, Material und Preis im aktuellen Gartenhauskatalog zeigen](https://www.passendplanen.de/ratgeber/daten/gartenhaus-preise-groessen/): Eine datenbasierte Einordnung von Grundflächen, Materialien, Dachformen und Angebotspreisen mit offen ausgewiesenen Datenlücken.
+- [Welche Grundstücksbreite Gartenhäuser wirklich beanspruchen](https://www.passendplanen.de/ratgeber/daten/gartenhaus-aussenmasse-grundstuecksbreite/): Kurze und lange Außenseite, Baukörperform und Grundfläche gemeinsam auswerten, damit die Vorauswahl nicht an einem unpassenden Außenmaß scheitert.
 - [Fußbodenheizung, Feuchtraum und Paketmengen im Datenvergleich](https://www.passendplanen.de/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/): Laminat, Klickvinyl und Fertigparkett nach dokumentierten Freigaben, Paketgrößen und einer konkreten Materialrechnung vergleichen.
+- [Wie Dielenformat und volle Pakete die Bestellmenge verändern](https://www.passendplanen.de/ratgeber/daten/bodenbelag-formate-paketrundung/): Dielenlänge, Breite und Paketinhalt gemeinsam auswerten und die zusätzliche Rundung bei drei Flächengrößen sichtbar machen.
 - [Welche Leistungsdaten bei Luftentfeuchtern wirklich vergleichbar sind](https://www.passendplanen.de/ratgeber/daten/luftentfeuchter-leistung-lautstaerke/): Entfeuchtungsleistung, Geräusch, Stromaufnahme und Betriebstemperatur anhand der tatsächlich dokumentierten Produktdaten einordnen.
 - [Navigation, Flächenleistung und Engstellen bei 15 Mährobotern](https://www.passendplanen.de/ratgeber/daten/maehroboter-navigation-flaechenleistung/): Kabel, Kamera, LiDAR, RTK und hybride Navigation anhand der dokumentierten Flächenleistung, Steigung, Engstellen und Angebotspreise einordnen.
 - [Verbindung, Stromversorgung und Setgröße bei 20 Kameras](https://www.passendplanen.de/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/): WLAN, PoE und Mobilfunk gemeinsam mit der Stromversorgung betrachten und die Produktkosten für vier Überwachungszonen nachvollziehen.
+- [Wie Schwenken, Licht und Auflösung die Kameraauswahl verkleinern](https://www.passendplanen.de/ratgeber/daten/sicherheitskameras-schwenken-licht-aufloesung/): Kameraprodukte nach Einsatzort, Schwenkfunktion, Licht und Auflösung auswerten und kombinierte Anforderungen sichtbar machen.
 - [84 Bewässerungsprodukte zeigen, warum Einzelteile noch kein System ergeben](https://www.passendplanen.de/ratgeber/daten/bewaesserung-komponenten-systeme/): Rohre, Verbinder, Regner, Tropfleitungen und Steuerungen nach Sortimentsschwerpunkt und dokumentierter Planungstiefe untersuchen.
 - [Einzelcarport und Doppelcarport anhand von 69 Bausätzen vergleichen](https://www.passendplanen.de/ratgeber/daten/carport-groessen-stellplaetze/): Außenmaße, Grundfläche, Stellplatzzahl und Angebotspreise der dokumentierten Carport Bausätze datenbasiert einordnen.
 - [Warum günstige Carport Treffer häufig Zubehör und keine Bausätze sind](https://www.passendplanen.de/ratgeber/daten/carport-bausatz-zubehoer-preise/): Bausätze, Seitenwände, Fundamente, Entwässerung und Elektrik im aktuellen Katalog getrennt betrachten.

@@ -1,9 +1,10 @@
 import { describe, expect, it } from "vitest";
 import { ALL_SITEMAP_ENTRIES, SITEMAP_SEGMENTS } from "@/lib/sitemap-entries";
+import { DATA_REPORTS } from "@/lib/data-report/registry";
 
 describe("segmented sitemap inventory", () => {
   it("covers every indexable URL exactly once", () => {
-    expect(ALL_SITEMAP_ENTRIES).toHaveLength(194);
+    expect(ALL_SITEMAP_ENTRIES).toHaveLength(173 + DATA_REPORTS.length);
     expect(new Set(ALL_SITEMAP_ENTRIES.map((entry) => entry.url)).size).toBe(ALL_SITEMAP_ENTRIES.length);
     expect(SITEMAP_SEGMENTS).toHaveLength(2);
   });
@@ -11,7 +12,7 @@ describe("segmented sitemap inventory", () => {
   it("includes the curated data reports and their directory", () => {
     const urls = ALL_SITEMAP_ENTRIES.map((entry) => entry.url);
     expect(urls).toContain("https://www.passendplanen.de/ratgeber/daten/");
-    expect(urls.filter((url) => url.startsWith("https://www.passendplanen.de/ratgeber/daten/") && url !== "https://www.passendplanen.de/ratgeber/daten/")).toHaveLength(21);
+    expect(urls.filter((url) => url.startsWith("https://www.passendplanen.de/ratgeber/daten/") && url !== "https://www.passendplanen.de/ratgeber/daten/")).toHaveLength(DATA_REPORTS.length);
   });
 
   it("keeps unedited programmatic detail pages out of the indexable inventory", () => {

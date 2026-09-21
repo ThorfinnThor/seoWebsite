@@ -10,7 +10,7 @@ const PATH = "/ratgeber/daten/";
 
 export const metadata = createPageMetadata({
   title: "PassendPlanen Datenauswertungen",
-  description: "21 eigene Auswertungen geprüfter Produktdaten für Haus und Garten mit transparenter Methodik, aktuellem Datenstand und sichtbaren Grenzen.",
+  description: `${DATA_REPORTS.length} eigene Auswertungen geprüfter Produktdaten für Haus und Garten mit transparenter Methodik, aktuellem Datenstand und sichtbaren Grenzen.`,
   path: PATH,
 });
 
@@ -48,7 +48,7 @@ export default function Page() {
       <p>PassendPlanen führt technische Angaben aus Händlerkatalogen zusammen, prüft sie und wertet sie für konkrete Entscheidungen aus. Jede Analyse nennt Stichprobe, Datenstand und fehlende Angaben.</p>
     </section>
     <section className="directory-section data-directory" aria-labelledby="data-report-list">
-      <div className="section-heading"><div><p className="eyebrow">21 aktuelle Analysen</p><h2 id="data-report-list">Jede Produktgruppe braucht eine eigene Fragestellung</h2></div><p>Die Berichte sind keine Produkttests. Sie zeigen, was sich aus den dokumentierten Eigenschaften und verfügbaren Angeboten belastbar ableiten lässt.</p></div>
+      <div className="section-heading"><div><p className="eyebrow">{DATA_REPORTS.length} aktuelle Analysen</p><h2 id="data-report-list">Jede Produktgruppe braucht eine eigene Fragestellung</h2></div><p>Die Berichte sind keine Produkttests. Sie zeigen, was sich aus den dokumentierten Eigenschaften und verfügbaren Angeboten belastbar ableiten lässt.</p></div>
       <div className="directory-grid">
         {DATA_REPORTS.map((report) => <article className="directory-card" key={report.slug}>
           <p className="eyebrow">{report.eyebrow}</p>

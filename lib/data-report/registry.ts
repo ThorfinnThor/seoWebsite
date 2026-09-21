@@ -9,6 +9,15 @@ export const DATA_REPORTS = [
     updatedAt: "2026-09-16",
   },
   {
+    slug: "gartenhaus-aussenmasse-grundstuecksbreite",
+    topic: "gartenhaus",
+    eyebrow: "Gartenhaus Außenmaße im Datencheck",
+    title: "Welche Grundstücksbreite Gartenhäuser wirklich beanspruchen",
+    description: "Kurze und lange Außenseite, Baukörperform und Grundfläche gemeinsam auswerten, damit die Vorauswahl nicht an einem unpassenden Außenmaß scheitert.",
+    path: "/ratgeber/daten/gartenhaus-aussenmasse-grundstuecksbreite/",
+    updatedAt: "2026-09-21",
+  },
+  {
     slug: "bodenbelaege-fussbodenheizung-feuchtraum",
     topic: "bodenbelag",
     eyebrow: "Bodenbeläge im Datencheck",
@@ -16,6 +25,15 @@ export const DATA_REPORTS = [
     description: "Laminat, Klickvinyl und Fertigparkett nach dokumentierten Freigaben, Paketgrößen und einer konkreten Materialrechnung vergleichen.",
     path: "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/",
     updatedAt: "2026-09-16",
+  },
+  {
+    slug: "bodenbelag-formate-paketrundung",
+    topic: "bodenbelag",
+    eyebrow: "Bodenformate im Datencheck",
+    title: "Wie Dielenformat und volle Pakete die Bestellmenge verändern",
+    description: "Dielenlänge, Breite und Paketinhalt gemeinsam auswerten und die zusätzliche Rundung bei drei Flächengrößen sichtbar machen.",
+    path: "/ratgeber/daten/bodenbelag-formate-paketrundung/",
+    updatedAt: "2026-09-21",
   },
   {
     slug: "luftentfeuchter-leistung-lautstaerke",
@@ -43,6 +61,15 @@ export const DATA_REPORTS = [
     description: "WLAN, PoE und Mobilfunk gemeinsam mit der Stromversorgung betrachten und die Produktkosten für vier Überwachungszonen nachvollziehen.",
     path: "/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/",
     updatedAt: "2026-09-16",
+  },
+  {
+    slug: "sicherheitskameras-schwenken-licht-aufloesung",
+    topic: "sicherheitskameras",
+    eyebrow: "Kamerafunktionen im Datencheck",
+    title: "Wie Schwenken, Licht und Auflösung die Kameraauswahl verkleinern",
+    description: "Kameraprodukte nach Einsatzort, Schwenkfunktion, Licht und Auflösung auswerten und kombinierte Anforderungen sichtbar machen.",
+    path: "/ratgeber/daten/sicherheitskameras-schwenken-licht-aufloesung/",
+    updatedAt: "2026-09-21",
   },
   {
     slug: "bewaesserung-komponenten-systeme",
