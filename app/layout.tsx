@@ -14,6 +14,17 @@ export const metadata: Metadata = {
   alternates: { canonical: "/" },
   authors: [{ name: "Schayan Yousefian", url: "/ueber-passendplanen/" }],
   applicationName: SITE.name,
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
   openGraph: {
     type: "website",
     locale: "de_DE",

@@ -1,6 +1,7 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
 import { absoluteUrl, SITE } from "@/lib/site";
+import { SOCIAL_IMAGE_SIZE, socialImageForPath } from "@/lib/social-images";
 import { Breadcrumbs } from "./Breadcrumbs";
 import { JsonLd } from "./JsonLd";
 
@@ -33,6 +34,7 @@ const RELATED_GUIDES = [
 
 export function SecurityCameraArticle({ title, intro, path, summary, wordCount, sources, children }: SecurityCameraArticleProps) {
   const url = absoluteUrl(path);
+  const articleImage = absoluteUrl(socialImageForPath(path));
   return <>
     <JsonLd data={{
       "@context": "https://schema.org",
@@ -43,6 +45,12 @@ export function SecurityCameraArticle({ title, intro, path, summary, wordCount, 
       description: intro,
       datePublished: UPDATED_AT,
       dateModified: UPDATED_AT,
+      image: {
+        "@type": "ImageObject",
+        url: articleImage,
+        width: SOCIAL_IMAGE_SIZE.width,
+        height: SOCIAL_IMAGE_SIZE.height,
+      },
       wordCount,
       inLanguage: "de-DE",
       citation: sources.map((source) => source.href),

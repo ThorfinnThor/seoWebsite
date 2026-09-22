@@ -9,6 +9,7 @@ interface PageMetadataInput {
   description: string;
   path: string;
   kind?: "website" | "article";
+  publishedTime?: string;
   modifiedTime?: string;
   robots?: Metadata["robots"];
 }
@@ -24,6 +25,7 @@ export function createPageMetadata({
   description,
   path,
   kind = "website",
+  publishedTime,
   modifiedTime = CONTENT_UPDATED_AT,
   robots,
 }: PageMetadataInput): Metadata {
@@ -48,6 +50,7 @@ export function createPageMetadata({
       images: socialImages,
       ...(article
         ? {
+            ...(publishedTime ? { publishedTime } : {}),
             modifiedTime,
             authors: [absoluteUrl("/ueber-passendplanen/")],
           }

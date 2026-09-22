@@ -15,7 +15,17 @@ describe("data report structured data", () => {
       updatedAt: "2026-09-16",
     });
 
-    expect(article.mainEntity).toEqual({ "@id": dataReportDatasetId(path) });
+    expect(article).toMatchObject({
+      mainEntity: { "@id": dataReportDatasetId(path) },
+      datePublished: "2026-09-16",
+      dateModified: "2026-09-16",
+      image: {
+        "@type": "ImageObject",
+        url: "https://www.passendplanen.de/social/passendplanen.png",
+        width: 1200,
+        height: 630,
+      },
+    });
     expect(dataset).toMatchObject({
       "@type": "Dataset",
       "@id": dataReportDatasetId(path),

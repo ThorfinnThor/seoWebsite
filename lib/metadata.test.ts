@@ -35,11 +35,12 @@ describe("createPageMetadata", () => {
       description: "Ein nachvollziehbarer Ratgeber.",
       path: "ratgeber",
       kind: "article",
+      publishedTime: "2026-08-20",
     });
 
     expect(metadata).toMatchObject({
       alternates: { canonical: "/ratgeber/" },
-      openGraph: { type: "article", modifiedTime: CONTENT_UPDATED_AT },
+      openGraph: { type: "article", publishedTime: "2026-08-20", modifiedTime: CONTENT_UPDATED_AT },
     });
   });
 

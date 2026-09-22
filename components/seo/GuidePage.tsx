@@ -9,6 +9,7 @@ import { GUIDE_DEPTH_EXISTING } from "@/lib/guide-depth-existing";
 import type { GuideDataInsight } from "@/lib/guide-data-insights";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { absoluteUrl, SITE } from "@/lib/site";
+import { SOCIAL_IMAGE_SIZE, socialImageForPath } from "@/lib/social-images";
 import { editorializeText } from "@/lib/editorial-style";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { GuideDataInsightBlock } from "./GuideDataInsight";
@@ -42,6 +43,7 @@ interface GuidePageProps {
   intro: string;
   path: string;
   updated: string;
+  publishedAt?: string;
   updatedAt?: string;
   sections: GuideSection[];
   takeaway: string;
@@ -64,6 +66,7 @@ export function GuidePage({
   intro,
   path,
   updated,
+  publishedAt,
   updatedAt = CONTENT_UPDATED_AT,
   sections,
   takeaway,
@@ -82,6 +85,7 @@ export function GuidePage({
 }: GuidePageProps) {
   const url = absoluteUrl(path);
   const siteRoot = SITE.url.replace(/\/$/, "");
+  const articleImage = absoluteUrl(socialImageForPath(path));
   const enrichment = GUIDE_ENRICHMENTS[path];
   const depth = GUIDE_DEPTH_EXISTING[path];
   const resolvedComparison = comparison ?? depth?.comparison;
@@ -172,7 +176,14 @@ export function GuidePage({
           description: displayIntro,
           abstract: displayTakeaway,
           articleSection: displaySections.map((section) => section.title),
+          datePublished: publishedAt ?? updatedAt,
           dateModified: updatedAt,
+          image: {
+            "@type": "ImageObject",
+            url: articleImage,
+            width: SOCIAL_IMAGE_SIZE.width,
+            height: SOCIAL_IMAGE_SIZE.height,
+          },
           wordCount: articleWordCount,
           inLanguage: "de-DE",
           author: {

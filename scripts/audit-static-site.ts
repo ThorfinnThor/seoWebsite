@@ -85,10 +85,27 @@ for (const page of pages) {
   if (!page.noindex && page.twitterTitle !== expectedSocialTitle) errors.push(`${page.route}: twitter:title fehlt oder weicht ab`);
   if (!page.noindex && page.twitterDescription !== page.description) errors.push(`${page.route}: twitter:description fehlt oder weicht ab`);
   if (!page.noindex && !page.html.includes('<meta name="author" content="Schayan Yousefian"')) errors.push(`${page.route}: Autoren-Metadatum fehlt`);
+  if (!page.noindex && !page.html.includes("max-image-preview:large")) errors.push(`${page.route}: große Google-Bildvorschau ist nicht freigegeben`);
   if (!page.html.includes('<html lang="de"')) errors.push(`${page.route}: deutsche Seitensprache fehlt`);
   const jsonLdBlocks = [...page.html.matchAll(/<script type="application\/ld\+json">([^<]+)<\/script>/g)].map((match) => match[1]);
+  const jsonLdNodes: Record<string, unknown>[] = [];
   for (const [index, json] of jsonLdBlocks.entries()) {
-    try { JSON.parse(json); } catch { errors.push(`${page.route}: ungültiges JSON-LD in Block ${index + 1}`); }
+    try {
+      const parsed = JSON.parse(json) as Record<string, unknown> | Record<string, unknown>[];
+      const blocks = Array.isArray(parsed) ? parsed : [parsed];
+      for (const block of blocks) {
+        const graph = Array.isArray(block["@graph"]) ? block["@graph"] as Record<string, unknown>[] : [block];
+        jsonLdNodes.push(...graph);
+      }
+    } catch { errors.push(`${page.route}: ungültiges JSON-LD in Block ${index + 1}`); }
+  }
+  for (const article of jsonLdNodes.filter((node) => node["@type"] === "Article")) {
+    if (!article.datePublished) errors.push(`${page.route}: Article JSON-LD ohne datePublished`);
+    if (!article.dateModified) errors.push(`${page.route}: Article JSON-LD ohne dateModified`);
+    if (!article.image) errors.push(`${page.route}: Article JSON-LD ohne repräsentatives Bild`);
+    if (!article.author) errors.push(`${page.route}: Article JSON-LD ohne Autor`);
+    if (!article.publisher) errors.push(`${page.route}: Article JSON-LD ohne Publisher`);
+    if (!article.mainEntityOfPage) errors.push(`${page.route}: Article JSON-LD ohne mainEntityOfPage`);
   }
   if (page.html.includes('class="guide-page"')) {
     if (!page.html.includes('"@type":"Article"')) errors.push(`${page.route}: Article JSON-LD fehlt`);
@@ -220,6 +237,8 @@ const robotsTxt = await readFile(path.join(OUT_DIR, "robots.txt"), "utf8");
 if (!robotsTxt.includes(`Sitemap: ${SITE_URL}/sitemap.xml`)) errors.push("robots.txt: Sitemap-Verweis fehlt oder ist falsch");
 if (!robotsTxt.includes(`Sitemap: ${SITEMAP_INDEX_URL}`)) errors.push("robots.txt: Sitemap-Index fehlt oder ist falsch");
 if (!robotsTxt.includes("User-Agent: *") || !robotsTxt.includes("Allow: /")) errors.push("robots.txt: öffentliche Crawler sind nicht allgemein zugelassen");
+if (!robotsTxt.includes("User-Agent: OAI-SearchBot")) errors.push("robots.txt: OAI-SearchBot ist nicht ausdrücklich freigegeben");
+if (!robotsTxt.includes("User-Agent: ChatGPT-User")) errors.push("robots.txt: ChatGPT-User ist nicht ausdrücklich freigegeben");
 if (!robotsTxt.includes("Disallow: /data/")) errors.push("robots.txt: Produktdaten-Verzeichnis ist nicht ausgeschlossen");
 
 const llmsTxt = await readFile(path.join(OUT_DIR, "llms.txt"), "utf8");

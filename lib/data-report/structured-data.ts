@@ -1,4 +1,5 @@
 import { absoluteUrl } from "@/lib/site";
+import { SOCIAL_IMAGE_SIZE, socialImageForPath } from "@/lib/social-images";
 
 type DataReportStructuredDataInput = {
   path: string;
@@ -30,6 +31,7 @@ export function createDataReportStructuredData({
   const pageUrl = absoluteUrl(path);
   const datasetId = dataReportDatasetId(path);
   const siteRoot = absoluteUrl("/");
+  const articleImage = absoluteUrl(socialImageForPath(path));
 
   return [
     {
@@ -40,6 +42,12 @@ export function createDataReportStructuredData({
       description,
       datePublished: publishedAt,
       dateModified: updatedAt,
+      image: {
+        "@type": "ImageObject",
+        url: articleImage,
+        width: SOCIAL_IMAGE_SIZE.width,
+        height: SOCIAL_IMAGE_SIZE.height,
+      },
       inLanguage: "de-DE",
       author: { "@type": "Person", "@id": `${siteRoot}#author`, name: "Schayan Yousefian", url: absoluteUrl("/ueber-passendplanen/") },
       publisher: { "@type": "Organization", "@id": `${siteRoot}#organization`, name: "PassendPlanen", url: siteRoot },
