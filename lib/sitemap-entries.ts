@@ -3,7 +3,7 @@ import { DECISION_GUIDE_DIRECTORIES, INDEXABLE_DECISION_GUIDES } from "@/lib/dec
 import { DATA_REPORTS } from "@/lib/data-report/registry";
 import { legalContactComplete } from "@/lib/legal";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
-import { PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
+import { INDEXABLE_PROJECT_EXAMPLES, PROJECT_EXAMPLE_DIRECTORIES } from "@/lib/project-examples";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 import { SEO_TOPICS } from "@/lib/seo-topics";
 import { SITE } from "@/lib/site";
@@ -73,6 +73,7 @@ export const SITEMAP_SEGMENTS: readonly SitemapSegment[] = [
         "/ratgeber/sicherheitskameras/private-videoueberwachung-datenschutz",
       ].map((path) => entry(path, "2026-09-08")),
       ...INDEXABLE_DECISION_GUIDES.map((guide) => entry(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}`, guide.indexingApproval?.reviewedAt ?? "2026-09-07")),
+      ...INDEXABLE_PROJECT_EXAMPLES.map((example) => entry(`/ratgeber/projekte/${example.topicSlug}/${example.slug}`, example.indexingApproval?.reviewedAt ?? CONTENT_UPDATED_AT)),
     ],
   },
 ];

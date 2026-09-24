@@ -4,7 +4,7 @@ import { DATA_REPORTS } from "@/lib/data-report/registry";
 
 describe("segmented sitemap inventory", () => {
   it("covers every indexable URL exactly once", () => {
-    expect(ALL_SITEMAP_ENTRIES).toHaveLength(173 + DATA_REPORTS.length);
+    expect(ALL_SITEMAP_ENTRIES).toHaveLength(181 + DATA_REPORTS.length);
     expect(new Set(ALL_SITEMAP_ENTRIES.map((entry) => entry.url)).size).toBe(ALL_SITEMAP_ENTRIES.length);
     expect(SITEMAP_SEGMENTS).toHaveLength(2);
   });
@@ -17,11 +17,20 @@ describe("segmented sitemap inventory", () => {
 
   it("keeps unedited programmatic detail pages out of the indexable inventory", () => {
     const urls = ALL_SITEMAP_ENTRIES.map((entry) => entry.url);
-    expect(urls.some((url) => url.includes("/ratgeber/projekte/") && /\/ratgeber\/projekte\/[^/]+\/[^/]+\/$/.test(url))).toBe(false);
+    expect(urls.filter((url) => /\/ratgeber\/projekte\/[^/]+\/[^/]+\/$/.test(url))).toEqual([
+      "https://www.passendplanen.de/ratgeber/projekte/gartenhaus/gartenhaus-3x3-meter-werkstatt/",
+      "https://www.passendplanen.de/ratgeber/projekte/gartenhaus/gartenhaus-5x5-meter-gartenmoebel/",
+    ]);
     expect(urls.filter((url) => /\/ratgeber\/vergleiche\/[^/]+\/[^/]+\/$/.test(url))).toEqual([
+      "https://www.passendplanen.de/ratgeber/vergleiche/gartenhaus/gartenhaus-metall-oder-wpc-kleines-budget/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/gartenhaus/gartenhaus-kunststoff-oder-wpc-kleiner-garten/",
       "https://www.passendplanen.de/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-rtk-500-qm/",
       "https://www.passendplanen.de/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-kamera-enge-passagen/",
       "https://www.passendplanen.de/ratgeber/vergleiche/sichtschutz/sichtschutz-wpc-oder-aluminium-windige-lage/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-kinderzimmer/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/bodenbelag/bodenbelag-fertigparkett-oder-linoleum-langfristige-nutzung/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-osb-gips-oder-zementbauplatte-badezimmer/",
       "https://www.passendplanen.de/ratgeber/vergleiche/luftentfeuchter/luftentfeuchter-kompressor-oder-adsorption-keller-10-grad/",
     ]);
   });

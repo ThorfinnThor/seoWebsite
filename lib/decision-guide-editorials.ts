@@ -1,6 +1,9 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import type { ProgrammaticIndexApproval } from "@/lib/programmatic-indexing";
 import { applyExpandedEditorialDecisionGuide } from "@/lib/decision-guide-editorials-expanded";
+import { applyTrockenbauEditorial } from "@/lib/decision-guide-editorials-trockenbau";
+import { applyGartenhausEditorial } from "@/lib/decision-guide-editorials-gartenhaus";
+import { applyBodenbelagEditorial } from "@/lib/decision-guide-editorials-bodenbelag";
 
 type EditorialDecisionGuide = SeoGuide & {
   scoreA: number;
@@ -18,7 +21,7 @@ function deScore(value: number) {
 }
 
 export function applyEditorialDecisionGuide<T extends EditorialDecisionGuide>(guide: T): T {
-  const expandedGuide = applyExpandedEditorialDecisionGuide(guide);
+  const expandedGuide = applyBodenbelagEditorial(applyGartenhausEditorial(applyTrockenbauEditorial(applyExpandedEditorialDecisionGuide(guide))));
   if (expandedGuide !== guide) return expandedGuide;
   if (guide.slug !== FEATURED_MOWER_GUIDE) return guide;
 

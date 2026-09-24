@@ -17,6 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ topic: st
     description: guide.description,
     path: `/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`,
     kind: "article",
+    modifiedTime: guide.indexingApproval?.reviewedAt,
     robots: guide.indexable ? undefined : { index: false, follow: true },
   }) : {};
 }

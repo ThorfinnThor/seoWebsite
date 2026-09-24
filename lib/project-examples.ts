@@ -2,6 +2,8 @@ import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
 import { editorializeGuide, editorializeText, sentenceEnd } from "@/lib/editorial-style";
 import { SEO_TOPICS } from "@/lib/seo-topics";
+import { applyEditorialProjectExample } from "@/lib/project-example-editorials";
+import { evaluateProgrammaticGuideIndexing, type ProgrammaticIndexApproval, type ProgrammaticIndexingGate } from "@/lib/programmatic-indexing";
 
 type Scale = {
   slug: string;
@@ -45,6 +47,9 @@ type ProjectCluster = {
 };
 
 export type ProjectExample = SeoGuide & {
+  indexable?: boolean;
+  indexingApproval?: ProgrammaticIndexApproval;
+  indexingGate?: ProgrammaticIndexingGate;
   topicSlug: string;
   variantSlug: string;
   variantLabel: string;
@@ -756,11 +761,20 @@ export const PROJECT_EXAMPLES: readonly ProjectExample[] = BASE_PROJECT_EXAMPLES
         : "Denselben Nutzungsschwerpunkt mit einer anderen Ausgangsgröße vergleichen.",
     }));
 
-  return editorializeGuide({
-    ...example,
-    relatedLinks: [...(example.relatedLinks ?? []), ...siblingLinks],
+  const approvedExample = applyEditorialProjectExample(example);
+  const finalExample = editorializeGuide({
+    ...approvedExample,
+    relatedLinks: [...(approvedExample.relatedLinks ?? []), ...siblingLinks],
   });
+  const indexingGate = evaluateProgrammaticGuideIndexing(
+    finalExample,
+    finalExample.indexingApproval,
+    `/ratgeber/projekte/${finalExample.topicSlug}/${finalExample.slug}/`,
+  );
+  return { ...finalExample, indexable: indexingGate.indexable, indexingGate };
 });
+
+export const INDEXABLE_PROJECT_EXAMPLES = PROJECT_EXAMPLES.filter((example) => example.indexable);
 
 export const PROJECT_EXAMPLE_DIRECTORIES: readonly ProjectExampleDirectory[] = clusters.map((cluster) => {
   const examples = PROJECT_EXAMPLES.filter((example) => example.topicSlug === cluster.topicSlug);

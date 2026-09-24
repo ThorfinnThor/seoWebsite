@@ -17,7 +17,8 @@ export async function generateMetadata({ params }: { params: Promise<{ topic: st
     description: example.description,
     path: `/ratgeber/projekte/${example.topicSlug}/${example.slug}/`,
     kind: "article",
-    robots: { index: false, follow: true },
+    modifiedTime: example.indexingApproval?.reviewedAt,
+    robots: example.indexable ? undefined : { index: false, follow: true },
   }) : {};
 }
 
@@ -30,7 +31,8 @@ export default async function Page({ params }: { params: Promise<{ topic: string
   return <GuidePage
     {...example}
     path={`/ratgeber/projekte/${example.topicSlug}/${example.slug}/`}
-    updated="August 2026"
+    updated={example.indexable ? "September 2026" : "August 2026"}
+    updatedAt={example.indexingApproval?.reviewedAt}
     breadcrumbs={[
       { label: "Start", href: "/" },
       { label: "Ratgeber", href: "/ratgeber/" },

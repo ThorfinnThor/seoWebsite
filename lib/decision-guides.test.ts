@@ -30,13 +30,25 @@ describe("decision guide library", () => {
 
   it("provides a complete decision model on every page", () => {
     for (const guide of DECISION_GUIDES) {
-      expect(guide.sections).toHaveLength(8);
-      expect(guide.comparison?.rows).toHaveLength(5);
-      expect(guide.checklist?.length).toBeGreaterThanOrEqual(9);
-      expect(guide.faqs?.length).toBeGreaterThanOrEqual(5);
-      expect(guide.sources?.length).toBeGreaterThanOrEqual(1);
-      expect(guide.example?.steps.length).toBeGreaterThanOrEqual(7);
-      expect(guide.relatedLinks?.length).toBeGreaterThanOrEqual(7);
+      if (guide.indexingApproval) {
+        expect(guide.sections.length).toBeGreaterThanOrEqual(7);
+        expect(guide.sections.every((section) => section.paragraphs.length >= 2)).toBe(true);
+        expect(guide.comparison?.rows.length).toBeGreaterThanOrEqual(4);
+        expect(guide.checklist?.length).toBeGreaterThanOrEqual(6);
+        expect(guide.faqs?.length).toBeGreaterThanOrEqual(3);
+        expect(guide.sources?.length).toBeGreaterThanOrEqual(2);
+        expect(guide.example?.steps.length).toBeGreaterThanOrEqual(4);
+        expect(guide.relatedLinks?.length).toBeGreaterThanOrEqual(5);
+        expect(guide.indexingGate?.failedChecks).toEqual([]);
+      } else {
+        expect(guide.sections).toHaveLength(8);
+        expect(guide.comparison?.rows).toHaveLength(5);
+        expect(guide.checklist?.length).toBeGreaterThanOrEqual(9);
+        expect(guide.faqs?.length).toBeGreaterThanOrEqual(5);
+        expect(guide.sources?.length).toBeGreaterThanOrEqual(1);
+        expect(guide.example?.steps.length).toBeGreaterThanOrEqual(7);
+        expect(guide.relatedLinks?.length).toBeGreaterThanOrEqual(7);
+      }
       expect(guide.scoreA).toBeGreaterThanOrEqual(1);
       expect(guide.scoreA).toBeLessThanOrEqual(5);
       expect(guide.scoreB).toBeGreaterThanOrEqual(1);

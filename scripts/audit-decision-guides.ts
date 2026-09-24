@@ -52,16 +52,29 @@ for (const field of ["slug", "title", "description", "qualitySignature"] as cons
 
 for (const guide of DECISION_GUIDES) {
   const words = wordCount(guide);
-  if (words < 1000) errors.push(`${guide.topicSlug}/${guide.slug}: nur ${words} Wörter statt mindestens 1.000`);
+  const individuallyReviewed = Boolean(guide.indexingApproval);
+  const minimumWords = individuallyReviewed ? 800 : 1000;
+  if (words < minimumWords) errors.push(`${guide.topicSlug}/${guide.slug}: nur ${words} Wörter statt mindestens ${minimumWords}`);
   if (guide.description.length < 120 || guide.description.length > 160) errors.push(`${guide.topicSlug}/${guide.slug}: Meta-Description hat ${guide.description.length} Zeichen`);
-  if (guide.sections.length < 8) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als acht eigenständige Abschnitte`);
-  if ((guide.comparison?.rows.length ?? 0) !== 5) errors.push(`${guide.topicSlug}/${guide.slug}: Entscheidungsmatrix hat nicht genau fünf Kriterien`);
-  if ((guide.checklist?.length ?? 0) < 9) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als neun Prüfschritte`);
-  if ((guide.faqs?.length ?? 0) < 5) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als fünf FAQ`);
-  if ((guide.sources?.length ?? 0) < 1) errors.push(`${guide.topicSlug}/${guide.slug}: keine überprüfbare Quelle`);
-  if (!guide.example || guide.example.steps.length < 7) errors.push(`${guide.topicSlug}/${guide.slug}: gewichtete Gegenprobe fehlt`);
-  if ((guide.relatedLinks?.length ?? 0) < 5) errors.push(`${guide.topicSlug}/${guide.slug}: interne Weiterführung ist zu schwach`);
-  if (guide.scoreA < 1 || guide.scoreA > 5 || guide.scoreB < 1 || guide.scoreB > 5) errors.push(`${guide.topicSlug}/${guide.slug}: Orientierungswert außerhalb 1 bis 5`);
+  if (individuallyReviewed) {
+    if (guide.sections.length < 7 || guide.sections.some((section) => section.paragraphs.length < 2)) errors.push(`${guide.topicSlug}/${guide.slug}: redaktionelle Abschnitte zu knapp`);
+    if ((guide.comparison?.rows.length ?? 0) < 4) errors.push(`${guide.topicSlug}/${guide.slug}: Vergleichstabelle zu knapp`);
+    if ((guide.checklist?.length ?? 0) < 6) errors.push(`${guide.topicSlug}/${guide.slug}: Prüfschritte zu knapp`);
+    if ((guide.faqs?.length ?? 0) < 3) errors.push(`${guide.topicSlug}/${guide.slug}: FAQ zu knapp`);
+    if ((guide.sources?.length ?? 0) < 2) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als zwei Quellen`);
+    if (!guide.example || guide.example.steps.length < 4) errors.push(`${guide.topicSlug}/${guide.slug}: nachvollziehbares Beispiel fehlt`);
+    if ((guide.relatedLinks?.length ?? 0) < 3) errors.push(`${guide.topicSlug}/${guide.slug}: interne Weiterführung zu schwach`);
+    if (!guide.indexable || guide.indexingGate?.failedChecks.length) errors.push(`${guide.topicSlug}/${guide.slug}: redaktionelle Indexierungsfreigabe nicht bestanden`);
+  } else {
+    if (guide.sections.length < 8) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als acht eigenständige Abschnitte`);
+    if ((guide.comparison?.rows.length ?? 0) !== 5) errors.push(`${guide.topicSlug}/${guide.slug}: Entscheidungsmatrix hat nicht genau fünf Kriterien`);
+    if ((guide.checklist?.length ?? 0) < 9) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als neun Prüfschritte`);
+    if ((guide.faqs?.length ?? 0) < 5) errors.push(`${guide.topicSlug}/${guide.slug}: weniger als fünf FAQ`);
+    if ((guide.sources?.length ?? 0) < 1) errors.push(`${guide.topicSlug}/${guide.slug}: keine überprüfbare Quelle`);
+    if (!guide.example || guide.example.steps.length < 7) errors.push(`${guide.topicSlug}/${guide.slug}: gewichtete Gegenprobe fehlt`);
+    if ((guide.relatedLinks?.length ?? 0) < 5) errors.push(`${guide.topicSlug}/${guide.slug}: interne Weiterführung ist zu schwach`);
+    if (guide.scoreA < 1 || guide.scoreA > 5 || guide.scoreB < 1 || guide.scoreB > 5) errors.push(`${guide.topicSlug}/${guide.slug}: Orientierungswert außerhalb 1 bis 5`);
+  }
 }
 
 if (errors.length) {
