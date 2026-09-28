@@ -35,7 +35,7 @@ jobs:
           node -e 'const value=JSON.parse(process.env.AWIN_FEED_URLS_JSON); if (!value || typeof value !== "object") throw new Error("AWIN_FEED_URLS_JSON muss eine JSON-Liste oder ein JSON-Objekt enthalten.")'
           echo "### Affiliate-Feed-Konfiguration geprüft" >> "$GITHUB_STEP_SUMMARY"
           echo "Secret vorhanden, JSON lesbar und Zeitplan freigegeben." >> "$GITHUB_STEP_SUMMARY"
-      - uses: actions/setup-node@v6
+      - uses: actions/setup-node@v7
         with:
           node-version: 24
           cache: npm
