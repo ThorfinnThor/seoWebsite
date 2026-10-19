@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { createPageMetadata } from "@/lib/metadata";
+import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
 
 export const metadata = createPageMetadata({
   title: "Sicherheitskameras für Haus und Grundstück planen",
@@ -56,6 +57,7 @@ export default function Page() {
       <h1>Sechs Blickwinkel für eine belastbare Kameraplanung.</h1>
       <p>Eine Kamera kann technisch überzeugen und am vorgesehenen Ort trotzdem unpraktisch sein. Diese Ratgeber betrachten Installation, Betrieb und Speicher aus verschiedenen Richtungen und führen anschließend in den passenden Finder.</p>
     </section>
+    <RatgeberSectionNav active="practice" />
     <section className="directory-section camera-hub-directory">
       <div className="directory-grid camera-hub-grid">
         {guides.map((guide, index) => <article className="directory-card" key={guide.href}>

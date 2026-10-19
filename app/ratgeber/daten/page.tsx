@@ -5,6 +5,7 @@ import { DATA_REPORTS } from "@/lib/data-report/registry";
 import { dataReportDatasetId } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
+import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
 
 const PATH = "/ratgeber/daten/";
 
@@ -47,6 +48,7 @@ export default function Page() {
       <h1>Was unsere geprüften Produktdaten <em>wirklich</em> zeigen.</h1>
       <p>PassendPlanen führt technische Angaben aus Händlerkatalogen zusammen, prüft sie und wertet sie für konkrete Entscheidungen aus. Jede Analyse nennt Stichprobe, Datenstand und fehlende Angaben.</p>
     </section>
+    <RatgeberSectionNav active="data" />
     <section className="directory-section data-directory" aria-labelledby="data-report-list">
       <div className="section-heading"><div><p className="eyebrow">{DATA_REPORTS.length} aktuelle Analysen</p><h2 id="data-report-list">Jede Produktgruppe braucht eine eigene Fragestellung</h2></div><p>Die Berichte sind keine Produkttests. Sie zeigen, was sich aus den dokumentierten Eigenschaften und verfügbaren Angeboten belastbar ableiten lässt.</p></div>
       <div className="directory-grid">

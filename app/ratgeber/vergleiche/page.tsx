@@ -6,6 +6,7 @@ import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
 import { getSeoTopic } from "@/lib/seo-topics";
 import { editorializeText } from "@/lib/editorial-style";
+import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
 
 export const metadata = createPageMetadata({
   title: "1.000 direkte Vergleiche für Haus und Garten",
@@ -41,6 +42,7 @@ export default function Page() {
       <h1>Direkt vergleichen und <em>konkret entscheiden.</em></h1>
       <p>Keine pauschalen Testsieger. Jede Seite vergleicht zwei Lösungswege für eine klar benannte Nutzung. Gewichtung, Gegenprobe, Quellen und Grenzen bleiben sichtbar.</p>
     </section>
+    <RatgeberSectionNav active="comparisons" />
     <section className="topic-method" aria-labelledby="comparison-method-title">
       <div><p className="eyebrow">Praxisnah entscheiden</p><h2 id="comparison-method-title">Ein Vergleich muss eine echte Entscheidung lösen.</h2><p>Die Bibliothek kombiniert keine Ortsnamen und tauscht keine Synonyme aus. Jede URL besitzt einen eigenen Entscheidungskontext, dessen Prioritäten den Rechenwert tatsächlich verändern.</p></div>
       <ol>

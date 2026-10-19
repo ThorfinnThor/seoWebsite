@@ -11,6 +11,7 @@ import { getProjectExampleDirectory } from "@/lib/project-examples";
 import { getDecisionGuideDirectory } from "@/lib/decision-guides";
 import { editorializeText } from "@/lib/editorial-style";
 import { getDataReportsForTopic } from "@/lib/data-report/registry";
+import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
 
 const FEATURED_MOWER_CASES = [
   {
@@ -91,6 +92,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <p>{editorializeText(topic.intro)}</p>
       <div className="hero-actions"><Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link><a className="text-link" href="#ratgeber">{guides.length} Ratgeber ansehen ↓</a></div>
     </section>
+    <RatgeberSectionNav active="topics" />
     <section className="topic-method" aria-labelledby="topic-method-title">
       <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Messen und passend vergleichen.</h2><p>{editorializeText(topic.method)}</p></div>
       <ol>{topic.questions.map((question, index) => <li key={question}><span>0{index + 1}</span><strong>{question}</strong></li>)}</ol>
