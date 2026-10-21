@@ -5,6 +5,7 @@ import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { IrrigationPlanner } from "./IrrigationPlanner";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export const metadata = createPageMetadata({
   title: "Bewässerungsplaner für Zonen und Tropfrohr",
@@ -20,5 +21,6 @@ export default function Page() {
     <section className="section planner-notes"><div><p className="eyebrow">Planungsgrenze</p><h2>Materialstruktur statt CAD und Hydraulik.</h2></div><div className="note-grid"><article><h3>✓ Das wird geschätzt</h3><p>Tropfrohrlängen, Nutzungskategorien, Mindestzahl der Steuerungszonen sowie benötigte Komponententypen.</p></article><article><h3>! Vor Kauf prüfen</h3><p>Fließdruck, Durchfluss, Rohrdurchmesser, Druckverlust, Regnerpositionen, tatsächliche Abdeckung und Herstellerkompatibilität.</p></article></div></section>
     <PlannerFaq planner="irrigation" />
     <section className="section related-guides"><div className="section-heading"><p className="eyebrow">Vor dem Einkauf vertiefen</p><h2>Vier Prüfaufgaben für einen belastbaren Plan.</h2><p>Die Ratgeber erklären genau die Punkte, die ein kurzer Komponentenrechner bewusst offenlassen muss.</p></div><div className="guide-grid"><Link className="guide-card" href="/garten/bewaesserung-durchfluss-messen/"><span className="guide-number">01 · Messen</span><h2>Durchfluss & Fließdruck</h2><p>Den Anschluss unter realistischen Bedingungen erfassen.</p><span className="card-link">Messung vorbereiten →</span></Link><Link className="guide-card" href="/garten/tropfbewaesserung-hecke/"><span className="guide-number">02 · Tropfen</span><h2>Hecken bewässern</h2><p>Tropfrohr, Filter, Druckminderung und Zonen zusammendenken.</p><span className="card-link">Tropfsystem planen →</span></Link><Link className="guide-card" href="/garten/rasenbewaesserung-planen/"><span className="guide-number">03 · Rasen</span><h2>Regner richtig einordnen</h2><p>Warum Geometrie und Überlappung wichtiger als Fläche allein sind.</p><span className="card-link">Rasenplanung lesen →</span></Link><Link className="guide-card" href="/garten/bewaesserungscomputer-zonen/"><span className="guide-number">04 · Steuern</span><h2>Zonen festlegen</h2><p>Controller, Ventile und Verbraucher kompatibel strukturieren.</p><span className="card-link">Steuerung planen →</span></Link></div></section>
+    <TopicLinks topicSlug="bewaesserung" currentPath="/garten/bewaesserungs-planer/" exclude={["/garten/bewaesserung-durchfluss-messen/", "/garten/bewaesserungscomputer-zonen/", "/garten/rasenbewaesserung-planen/", "/garten/tropfbewaesserung-hecke/"]} />
   </>;
 }

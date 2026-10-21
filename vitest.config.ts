@@ -1,3 +1,4 @@
+import { fileURLToPath } from "node:url";
 import { defineConfig } from "vitest/config";
 
 export default defineConfig({
@@ -6,6 +7,7 @@ export default defineConfig({
     include: ["**/*.test.ts"],
   },
   resolve: {
-    alias: { "@": new URL(".", import.meta.url).pathname },
+    // fileURLToPath decodes the URL, so paths containing spaces resolve correctly.
+    alias: { "@": fileURLToPath(new URL(".", import.meta.url)) },
   },
 });

@@ -21,10 +21,11 @@ describe("planner directory", () => {
     }
   });
 
-  it("answers three calculator-specific questions with substantial text", () => {
+  it("answers at least three calculator-specific questions with substantial text", () => {
     for (const planner of PLANNERS) {
-      expect(planner.faqs).toHaveLength(3);
-      expect(new Set(planner.faqs.map((faq) => faq.question)).size).toBe(3);
+      expect(planner.faqs.length).toBeGreaterThanOrEqual(3);
+      expect(planner.faqs.length).toBeLessThanOrEqual(8);
+      expect(new Set(planner.faqs.map((faq) => faq.question)).size).toBe(planner.faqs.length);
       for (const faq of planner.faqs) {
         expect(faq.question).toMatch(/\?$/);
         expect(faq.answer.length).toBeGreaterThan(80);

@@ -10,6 +10,7 @@ import {
   getDecisionGuideDirectory,
 } from "@/lib/decision-guides";
 import { getSeoTopic } from "@/lib/seo-topics";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 import { editorializeText } from "@/lib/editorial-style";
 
 const MOWER_PAIR_INTROS: Record<string, string> = {
@@ -141,6 +142,7 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         </section>;
       })}
     </div>
+    <TopicLinks topicSlug={topic.slug} currentPath={path} exclude={[topic.plannerHref]} />
     <section className="topic-boundary"><div><p className="eyebrow">Keine Scheingenauigkeit</p><h2>{isMowerDirectory ? "Ein Empfangsrisiko wiegt mehr als ein Punktvorsprung" : "Die Matrix sortiert und gibt nicht frei."}</h2></div><p>{topic.boundary} Ein höherer Orientierungswert darf kein nicht erfülltes Muss-Kriterium überstimmen.</p></section>
   </>;
 }

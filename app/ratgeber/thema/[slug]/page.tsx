@@ -12,6 +12,7 @@ import { getDecisionGuideDirectory } from "@/lib/decision-guides";
 import { editorializeText } from "@/lib/editorial-style";
 import { getDataReportsForTopic } from "@/lib/data-report/registry";
 import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 const FEATURED_MOWER_CASES = [
   {
@@ -127,6 +128,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </article>)}
       </div>
     </section>}
+    <TopicLinks topicSlug={topic.slug} currentPath={`/ratgeber/thema/${topic.slug}/`} exclude={[topic.plannerHref, ...guides.map((guide) => `/ratgeber/${guide.slug}/`), ...dataReports.map((report) => report.path)]} />
     <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{editorializeText(topic.boundary)}</p></section>
   </>;
 }

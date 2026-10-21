@@ -21,6 +21,7 @@
     "verify:merchant-links": "node --import tsx scripts/catalog/verify-merchant-links.ts",
     "verify:static": "node --import tsx scripts/verify-static-build.ts",
     "audit:site": "node --import tsx scripts/audit-static-site.ts",
+    "audit:links": "node --import tsx scripts/audit-internal-links.ts",
     "audit:content": "node --import tsx scripts/audit-content-depth.ts",
     "audit:content:strict": "node --import tsx scripts/audit-content-depth.ts --strict",
     "audit:projects": "node --import tsx scripts/audit-project-examples.ts",
@@ -30,7 +31,7 @@
     "readiness": "node --import tsx scripts/check-launch-readiness.ts",
     "readiness:public": "node --import tsx scripts/check-launch-readiness.ts --mode=public --strict",
     "readiness:affiliate": "node --import tsx scripts/check-launch-readiness.ts --mode=affiliate --strict",
-    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run audit:projects && npm run audit:decisions && npm run audit:seo:mower && npm run build && npm run verify:static && npm run audit:site"
+    "verify": "npm run validate:data && npm run test && npm run typecheck && npm run audit:projects && npm run audit:decisions && npm run audit:seo:mower && npm run build && npm run verify:static && npm run audit:site && npm run audit:links"
   },
   "dependencies": {
     "csv-parse": "^6.1.0",

@@ -4,6 +4,7 @@ import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { DehumidifierPlanner } from "./DehumidifierPlanner";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export const metadata = createPageMetadata({
   title: "Luftentfeuchter nach Raumgröße berechnen",
@@ -18,5 +19,6 @@ export default function Page() {
     <section className="planner-wrap"><DehumidifierPlanner /></section>
     <section className="section planner-notes"><div><p className="eyebrow">Grenzen des Rechners</p><h2>Geräteauswahl statt Diagnose.</h2></div><div className="note-grid"><article><h3>✓ Das wird geprüft</h3><p>Raumgröße, Herstellerfreigabe, Temperaturbereich, Ablauf, Wäschemodus, Geräusch, Verfügbarkeit und Budget.</p></article><article><h3>! Fachlich klären</h3><p>Ursachen von Feuchtigkeit, Schimmel, Wasserschäden, bauliche Mängel und gesundheitliche Beschwerden gehören in fachkundige Hände.</p></article></div></section>
     <PlannerFaq planner="dehumidifier" />
+    <TopicLinks topicSlug="luftentfeuchter" currentPath="/haus/raumklima/luftentfeuchter-rechner/" exclude={[]} />
   </>;
 }
