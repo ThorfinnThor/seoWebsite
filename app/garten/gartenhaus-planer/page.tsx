@@ -4,6 +4,7 @@ import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { GardenHousePlanner } from "./GardenHousePlanner";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export const metadata = createPageMetadata({
   title: "Gartenhaus planen und passende Größe berechnen",
@@ -18,5 +19,6 @@ export default function GardenHousePlannerPage() {
     <section className="planner-wrap"><GardenHousePlanner /></section>
     <section className="section planner-notes"><div><p className="eyebrow">Was der Planer leistet</p><h2>Planungshilfe, keine amtliche oder technische Freigabe.</h2></div><div className="note-grid"><article><h3>✓ Das wird geprüft</h3><p>Lagerflächenbedarf, bekannte Außenmaße, Türbreite, Bodenoption, Material, Dachform, Verfügbarkeit und Budgetstatus.</p></article><article><h3>! Das musst du prüfen</h3><p>Baugenehmigung, Abstände, Statik, Schnee- und Windlast, Fundament sowie die tatsächlich nutzbare Fläche vor Ort.</p></article></div><p className="planner-rights-link"><a href="/garten/gartenhaus-planer/nutzungsrechte/">Nutzungsrechte für Einbettung und Preview ansehen →</a></p></section>
     <PlannerFaq planner="garden-house" />
+    <TopicLinks topicSlug="gartenhaus" currentPath="/garten/gartenhaus-planer/" exclude={["/garten/gartenhaus-planer/nutzungsrechte/"]} />
   </>;
 }

@@ -26,10 +26,12 @@ export type PlannerDirectoryItem = {
   icon: PlannerIconName;
   cta: string;
   outputs: readonly [string, string, string];
+  /** At least three calculator-specific questions; rendered as FAQPage data. */
   faqs: readonly [
     { question: string; answer: string },
     { question: string; answer: string },
     { question: string; answer: string },
+    ...{ question: string; answer: string }[],
   ];
 };
 
@@ -140,6 +142,8 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
       { question: "Wie berechnet der Rechner die Dielenmenge?", answer: "Aus Terrassenmaß, Verlegerichtung, echter Dielenbreite, Fuge und Lieferlänge entstehen Reihen, Laufmeter und volle Lieferdielen inklusive gewählter Reserve." },
       { question: "Ist die Unterkonstruktion vollständig enthalten?", answer: "Der Rechner schätzt Auflagerreihen und Laufmeter anhand des eingegebenen Herstellerabstands. Fundamente, doppelte Auflager an Stößen, Verbinder und Randdetails bleiben Teil des Aufbauplans." },
       { question: "Kann ich mit dem Ergebnis direkt bestellen?", answer: "Erst nach Abgleich mit Verlegeplan, Lieferlängen, Herstellerfreigaben und tatsächlichem Untergrund. Verwende das Ergebnis als prüfbare Mengengrundlage, nicht als Bauanweisung." },
+      { question: "Wie viele Terrassendielen brauche ich pro m²?", answer: "Das hängt von Dielenbreite, Fuge und Lieferlänge ab. Bei 145 mm Breite und 5 mm Fuge ergibt ein Meter Terrassenbreite rund 6,7 Reihen, also etwa 6,7 Laufmeter Diele je Quadratmeter vor Verschnitt. Der Rechner rundet Reihen und Lieferdielen auf." },
+      { question: "Ist der Terrassendielen-Rechner kostenlos?", answer: "Ja. Der Rechner ist kostenlos, ohne Anmeldung und läuft vollständig im Browser. Die Eingaben bleiben nur im aktuellen Tab gespeichert, damit ein versehentliches Neuladen die Planung nicht löscht." },
     ],
   },
   {
@@ -230,6 +234,8 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
       { question: "Berechnet der Carport-Planer Außenmaße?", answer: "Nein. Er berechnet lichte Zielmaße aus Fahrzeug, Tür- und Bewegungsraum, Höhenreserve und optionalem Stauraum. Pfosten und Tragwerk kommen später hinzu." },
       { question: "Wie wird die Zufahrt berücksichtigt?", answer: "Die Eingabe unterscheidet gerade Zufahrt, Richtungswechsel und ungeklärte Situationen. Schleppkurve, Torbreite und Rangierraum bleiben eine konkrete Prüfung vor Ort." },
       { question: "Was sagt der Dachwasserwert aus?", answer: "Er zeigt das theoretische Wasser einer bestimmten Niederschlagshöhe auf der Planungsfläche. Rinne, Fallrohr, Speicher, Überlauf und zulässige Ableitung werden dadurch nicht dimensioniert." },
+      { question: "Wie groß muss ein Carport für ein Auto sein?", answer: "Das ergibt sich aus dem eigenen Fahrzeug. Für ein 4,80 m langes und 1,90 m breites Auto mit 60 cm Türraum je Seite sowie 60 cm Reserve vorn und 80 cm hinten rechnet der Planer 3,10 m lichte Breite und 6,20 m lichte Länge. Außenmaße eines Bausatzes fallen größer aus." },
+      { question: "Ist der Carport-Planer kostenlos?", answer: "Ja. Der Carport-Planer ist kostenlos, ohne Anmeldung und rechnet vollständig im Browser. Er liefert lichte Zielmaße, mit denen sich Bausätze und Angebote vergleichen lassen, bevor Fundament und Statik geplant werden." },
     ],
   },
   {
@@ -248,6 +254,10 @@ export const PLANNERS: readonly PlannerDirectoryItem[] = [
       { question: "Wie werden Türen und Öffnungen abgezogen?", answer: "Ihre Fläche wird von der Brutto-Wandfläche abgezogen, bevor Seiten und Plattenlagen multipliziert werden. Zusätzliche Profile rund um Öffnungen werden separat ausgewiesen." },
       { question: "Was bedeutet ungestörtes Grundraster?", answer: "Es ist die rechnerische Ausgangszahl regelmäßig gesetzter Ständer. Ränder, Türen, Installationen, Lasten sowie Brand- oder Schallschutz können zusätzliche oder andere Profile verlangen." },
       { question: "Ist das Ergebnis eine vollständige Materialliste?", answer: "Nein. Es umfasst Platten, Grundständer, Randprofile und optionale Dämmfläche. Befestiger, Spachtel, Anschlussdetails und das freigegebene Gesamtsystem müssen ergänzt werden." },
+      { question: "Ist der Trockenbau-Rechner kostenlos?", answer: "Ja. Der Trockenbau-Rechner ist eine kostenlose Kalkulationshilfe ohne Anmeldung und ohne Download. Die Berechnung läuft direkt im Browser, und die Eingaben werden nur im aktuellen Tab zwischengespeichert, damit ein versehentliches Neuladen die Planung nicht löscht." },
+      { question: "Wie viele CW- und UW-Profile brauche ich?", answer: "Die Zahl der CW-Ständer ergibt sich aus Wandlänge geteilt durch den Achsabstand plus einem Endständer. UW-Profile für Boden und Decke rechnet der Rechner mit doppelter Wandlänge und 10 Prozent Reserve auf volle Stäbe. Türständer und Sturzprofile kommen hinzu." },
+      { question: "Welche Platten eignen sich für Schallschutz im Trockenbau?", answer: "Schallschutz entsteht aus dem geprüften Gesamtsystem. Schallschutz- oder Brandschutzplatten, doppelte Beplankung, Dämmung im Hohlraum und dichte, elastische Anschlüsse wirken zusammen. Übernimm Plattentyp und Lagenzahl aus dem Systemnachweis und trag sie in den Rechner ein." },
+      { question: "Was kostet eine Trockenbauwand pro m²?", answer: "Das hängt von Plattentyp, Lagenzahl, Profilbreite, Dämmung und Händlerpreisen ab. Der Rechner liefert die Mengen. Multipliziert mit deinen Preisen und geteilt durch die Netto-Wandfläche ergibt sich dein Materialpreis pro m². Arbeitslohn ist darin nicht enthalten." },
     ],
   },
 ] as const;

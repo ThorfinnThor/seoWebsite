@@ -5,6 +5,7 @@ import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { FlooringPlanner } from "./FlooringPlanner";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export const metadata = createPageMetadata({
   title: "Bodenbelag-Rechner für Laminat, Vinyl und Parkett",
@@ -20,5 +21,6 @@ export default function Page() {
     <section className="section planner-notes"><div><p className="eyebrow">Was der Rechner leistet</p><h2>Bestellrahmen statt Verlegeanleitung.</h2></div><div className="note-grid"><article><h3>✓ Das wird berechnet</h3><p>Brutto- und Nettofläche, Verschnittreserve, volle Pakete, ungefähre Dielenzahl, Unterlagenrollen und Sockelleisten.</p></article><article><h3>! Das bleibt Planung</h3><p>Untergrundprüfung, Restfeuchte, Ebenheit, Dampfbremse, Dehnungsfugen, Übergänge, Fußbodenheizung und Feuchtraumfreigabe.</p></article></div></section>
     <PlannerFaq planner="flooring" />
     <section className="section related-guides"><div className="section-heading"><p className="eyebrow">Vor der Bestellung vertiefen</p><h2>Drei Details verändern Menge und Aufbau.</h2><p>Verschnitt, Untergrund und Raumumfang müssen mit dem konkreten Bodensystem zusammenpassen.</p></div><div className="guide-grid related-guides--three"><Link className="guide-card" href="/haus/boden/laminat-verschnitt-berechnen/"><span className="guide-number">01 · Fläche</span><h2>Verschnitt berechnen</h2><p>Raumgeometrie, Verlegerichtung und Paketreserve einordnen.</p><span className="card-link">Mengenplanung lesen →</span></Link><Link className="guide-card" href="/haus/boden/untergrund-trittschall/"><span className="guide-number">02 · Aufbau</span><h2>Untergrund & Unterlage</h2><p>Warum Quadratmeter allein keine Systementscheidung liefern.</p><span className="card-link">Aufbau verstehen →</span></Link><Link className="guide-card" href="/haus/boden/sockelleisten-berechnen/"><span className="guide-number">03 · Rand</span><h2>Sockelleisten berechnen</h2><p>Umfang, Türen, Innenkanten, Stöße und Reserve planen.</p><span className="card-link">Leistenbedarf lesen →</span></Link></div></section>
+    <TopicLinks topicSlug="bodenbelag" currentPath="/haus/boden/bodenbelag-rechner/" exclude={["/haus/boden/laminat-verschnitt-berechnen/", "/haus/boden/sockelleisten-berechnen/", "/haus/boden/untergrund-trittschall/"]} />
   </>;
 }

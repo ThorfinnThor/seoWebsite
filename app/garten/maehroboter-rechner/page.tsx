@@ -5,6 +5,7 @@ import { PlannerJsonLd } from "@/components/seo/PlannerJsonLd";
 import { PlannerHeroSummary } from "@/components/planner/PlannerHeroSummary";
 import { PlannerFaq } from "@/components/planner/PlannerFaq";
 import { RobotMowerPlanner } from "./RobotMowerPlanner";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export const metadata = createPageMetadata({
   title: "Mähroboter Rechner für Fläche, Steigung und Engstellen",
@@ -24,5 +25,6 @@ export default function Page() {
     <section className="section planner-notes"><div><p className="eyebrow">Was der Rechner leistet</p><h2>Auswahlrahmen statt Modellversprechen.</h2></div><div className="note-grid"><article><h3>✓ Das wird berechnet</h3><p>Netto-Rasenfläche, transparente Kapazitätsreserve, Passageklasse und ein grober rechteckiger Kantenrahmen.</p></article><article><h3>! Das bleibt Produktprüfung</h3><p>Zulässige Steigung, Mindestpassage, Navigation, Randabstände, Station, Sicherheit, Laufzeit und Schnittbild des konkreten Geräts.</p></article></div></section>
     <PlannerFaq planner="robot-mower" />
     <section className="section related-guides"><div className="section-heading"><p className="eyebrow">Wenn eine Eingabe unklar ist</p><h2>Diese Ratgeber helfen beim Messen und Einordnen</h2><p>Du musst nicht jede technische Antwort schon kennen. Wichtig ist, dass unsichere Stellen sichtbar bleiben und am konkreten Modell geprüft werden.</p></div><div className="guide-grid related-guides--three"><Link className="guide-card" href="/garten/maehroboter-flaeche-berechnen/"><span className="guide-number">Rasenfläche</span><h2>Was gehört zur Mähfläche?</h2><p>Teilflächen und feste Abzüge zu einer realistischen Nettofläche verbinden.</p><span className="card-link">Fläche erfassen →</span></Link><Link className="guide-card" href="/garten/maehroboter-steigung-engstellen/"><span className="guide-number">Schwierige Stellen</span><h2>Steigung und Engstellen messen</h2><p>Die Passage oder Neigung finden, an der eine Auswahl tatsächlich scheitern kann.</p><span className="card-link">Gelände prüfen →</span></Link><Link className="guide-card" href="/garten/maehroboter-begrenzungskabel-kabellos/"><span className="guide-number">Navigation</span><h2>Kabel oder kabellos wählen</h2><p>Empfang, Installationsaufwand und spätere Änderungen am eigenen Garten abwägen.</p><span className="card-link">Systeme vergleichen →</span></Link></div></section>
+    <TopicLinks topicSlug="maehroboter" currentPath="/garten/maehroboter-rechner/" exclude={["/garten/maehroboter-begrenzungskabel-kabellos/", "/garten/maehroboter-flaeche-berechnen/", "/garten/maehroboter-steigung-engstellen/", "/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-rtk-500-qm/"]} />
   </>;
 }

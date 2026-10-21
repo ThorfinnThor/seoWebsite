@@ -11,6 +11,7 @@ import {
 import { absoluteUrl } from "@/lib/site";
 import { getSeoTopic } from "@/lib/seo-topics";
 import { editorializeText } from "@/lib/editorial-style";
+import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export function generateStaticParams() {
   return PROJECT_EXAMPLE_DIRECTORIES.map((directory) => ({ topic: directory.topicSlug }));
@@ -104,6 +105,7 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         </section>;
       })}
     </div>
+    <TopicLinks topicSlug={topic.slug} currentPath={path} exclude={[topic.plannerHref]} />
     <section className="topic-boundary">
       <div><p className="eyebrow">Qualitätsgrenze</p><h2>Rechenreferenz statt Scheingenauigkeit</h2></div>
       <p>{topic.boundary} Die Beispiele nennen ihre Annahmen sichtbar und ersetzen weder Herstellerunterlagen noch eine notwendige Fachplanung.</p>

@@ -14,6 +14,8 @@ import { editorializeText } from "@/lib/editorial-style";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { GuideDataInsightBlock } from "./GuideDataInsight";
 import { JsonLd } from "./JsonLd";
+import { TopicLinks } from "./TopicLinks";
+import { resolveTopicForPage } from "@/lib/internal-links";
 
 export interface GuideSection {
   title: string;
@@ -97,6 +99,7 @@ export function GuidePage({
       allSources.findIndex((candidate) => candidate.href === source.href) === index,
   );
   const resolvedExample = example ?? enrichment?.example;
+  const topic = resolveTopicForPage(path, plannerHref);
   const displayTitle = editorializeText(title);
   const displayIntro = editorializeText(intro);
   const displayTakeaway = editorializeText(takeaway);
@@ -328,6 +331,8 @@ export function GuidePage({
                 <div>{displayRelatedLinks.map((link) => <Link key={link.href} href={link.href}><strong>{link.label}</strong><span>{link.description}</span></Link>)}</div>
               </section>
             )}
+
+            {topic && <TopicLinks layout="inline" topicSlug={topic.slug} currentPath={path} exclude={resolvedRelatedLinks.map((link) => link.href)} />}
 
             <div className="guide-method">
               <strong>Nachvollziehbarkeit</strong>

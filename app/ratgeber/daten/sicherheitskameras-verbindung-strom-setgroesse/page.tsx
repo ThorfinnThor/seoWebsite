@@ -83,6 +83,7 @@ export default function Page() {
       { href: "/ratgeber/sicherheitskameras/wlan-oder-poe/", label: "WLAN oder PoE", description: "Verkabelung, Funkstrecke und Wartung am Standort abwägen." },
       { href: "/ratgeber/sicherheitskameras/akku-solar-oder-netzstrom/", label: "Akku, Solar oder Netzstrom", description: "Versorgung und laufenden Aufwand realistisch einordnen." },
       { href: "/haus/sicherheit/sicherheitskamera-speicher-rechner/", label: "Speicherbedarf berechnen", description: "Bitrate, Aufnahmezeit und Aufbewahrung zusammenführen." },
+      { href: "/ratgeber/daten/sicherheitskameras-schwenken-licht-aufloesung/", label: "Schwenken, Licht und Auflösung", description: "Kombinierte Funktionsanforderungen im Datencheck auswerten." },
     ]} />
   </main>;
 }

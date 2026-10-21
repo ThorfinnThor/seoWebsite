@@ -32,7 +32,7 @@ export default function ImpressumPage() {
       </section>
       <section>
         <h2>Hinweis zum Angebot</h2>
-        <p>PassendPlanen stellt redaktionelle Informationen und deterministische Planungshilfen bereit. Ergebnisse ersetzen keine amtliche, technische, medizinische oder sonstige fachliche Prüfung. Einzelheiten zur eigenverantwortlichen Nutzung und zum gesetzlichen Haftungsrahmen stehen in den <Link href="/nutzungshinweise/">Nutzungshinweisen</Link>.</p>
+        <p>PassendPlanen stellt redaktionelle Informationen und deterministische Planungshilfen bereit. Ergebnisse ersetzen keine amtliche, technische, medizinische oder sonstige fachliche Prüfung. Einzelheiten zur eigenverantwortlichen Nutzung und zum gesetzlichen Haftungsrahmen stehen in den <Link href="/nutzungshinweise/">Nutzungshinweisen</Link>. Wie personenbezogene Daten verarbeitet werden, erklärt die <Link href="/datenschutz/">Datenschutzerklärung</Link>.</p>
       </section>
     </LegalPage>
   );

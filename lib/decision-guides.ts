@@ -764,18 +764,24 @@ const BASE_DECISION_GUIDES: readonly DecisionGuide[] = clusters.flatMap((cluster
   ),
 );
 
-export const DECISION_GUIDES: readonly DecisionGuide[] = BASE_DECISION_GUIDES.map((guide) => {
-  const editorialGuide = applyEditorialDecisionGuide(guide);
-  const alternateContext = BASE_DECISION_GUIDES.find((candidate) =>
+const EDITORIAL_DECISION_GUIDES: readonly DecisionGuide[] = BASE_DECISION_GUIDES.map(applyEditorialDecisionGuide);
+
+/** Prefer an editorially approved (indexable) sibling so related links reach indexable pages. */
+function preferApprovedSibling(candidates: readonly DecisionGuide[]) {
+  return candidates.find((candidate) => candidate.indexingApproval) ?? candidates[0];
+}
+
+export const DECISION_GUIDES: readonly DecisionGuide[] = EDITORIAL_DECISION_GUIDES.map((editorialGuide) => {
+  const alternateContext = preferApprovedSibling(EDITORIAL_DECISION_GUIDES.filter((candidate) =>
     candidate.topicSlug === editorialGuide.topicSlug
     && candidate.pairSlug === editorialGuide.pairSlug
     && candidate.contextSlug !== editorialGuide.contextSlug,
-  );
-  const alternatePair = BASE_DECISION_GUIDES.find((candidate) =>
+  ));
+  const alternatePair = preferApprovedSibling(EDITORIAL_DECISION_GUIDES.filter((candidate) =>
     candidate.topicSlug === editorialGuide.topicSlug
     && candidate.contextSlug === editorialGuide.contextSlug
     && candidate.pairSlug !== editorialGuide.pairSlug,
-  );
+  ));
   const siblingLinks = [alternateContext, alternatePair]
     .filter((candidate): candidate is DecisionGuide => Boolean(candidate))
     .map((candidate) => ({
@@ -788,7 +794,10 @@ export const DECISION_GUIDES: readonly DecisionGuide[] = BASE_DECISION_GUIDES.ma
 
   const finalGuide = editorializeGuide({
     ...editorialGuide,
-    relatedLinks: [...(editorialGuide.relatedLinks ?? []), ...siblingLinks],
+    relatedLinks: [
+      ...(editorialGuide.relatedLinks ?? []),
+      ...siblingLinks.filter((link) => !(editorialGuide.relatedLinks ?? []).some((existing) => existing.href === link.href)),
+    ],
   });
   const canonicalPath = `/ratgeber/vergleiche/${finalGuide.topicSlug}/${finalGuide.slug}/`;
   const indexingGate = evaluateProgrammaticGuideIndexing(
