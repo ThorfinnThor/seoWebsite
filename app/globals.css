@@ -94,8 +94,17 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .footer-grid h2 { margin-bottom: 18px; color: #fff; font-size: .82rem; letter-spacing: .1em; text-transform: uppercase; }
 .footer-grid a:not(.brand) { display: block; margin: 10px 0; }
 .footer-bottom { max-width: 1200px; margin: 55px auto 0; padding-top: 22px; display: flex; justify-content: space-between; border-top: 1px solid rgba(255,255,255,.12); color: #91a39a; font-size: .8rem; }
-.footer-legal { display: flex; gap: 22px; }
+.footer-legal { display: flex; flex-wrap: wrap; gap: 8px 22px; }
 .footer-legal a { text-decoration: underline; text-underline-offset: 3px; }
+.footer-cookie-settings { padding: 0; border: 0; color: inherit; background: none; font-size: inherit; text-decoration: underline; text-underline-offset: 3px; }
+.cookie-consent { position: fixed; right: 16px; bottom: 16px; left: 16px; z-index: 900; max-width: 560px; max-height: calc(100vh - 32px); margin-left: auto; padding: 24px; overflow-y: auto; border: 1px solid var(--line); border-radius: var(--radius); color: var(--ink); background: var(--paper); box-shadow: var(--shadow), 0 4px 18px rgba(23,35,29,.12); }
+.cookie-consent h2 { margin-bottom: 10px; font-size: 1.25rem; letter-spacing: -.02em; }
+.cookie-consent p { margin-bottom: 14px; color: #48544d; font-size: .9rem; }
+.cookie-consent p a { color: var(--green); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.cookie-consent__status { font-weight: 650; }
+.cookie-consent__actions { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.cookie-consent__choice { min-height: 46px; border-color: var(--green); color: #fff; background: var(--green); }
+.cookie-consent__choice:hover { background: #0f3e2e; }
 .page-hero, .planner-hero { padding: 42px max(24px,calc((100vw - 1152px)/2)) 75px; background: var(--cream); }
 .page-hero h1 { max-width: 800px; margin: 55px 0 22px; font-size: clamp(2.8rem,5vw,5rem); }
 .page-hero > p:last-child { max-width: 680px; color: var(--muted); font-size: 1.15rem; }
