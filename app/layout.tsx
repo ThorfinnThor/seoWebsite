@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { CookieConsent, CookieSettingsButton } from "@/components/consent/CookieConsent";
 import { SiteJsonLd } from "@/components/seo/SiteJsonLd";
 import { SITE } from "@/lib/site";
 import { SOCIAL_IMAGE_SIZE } from "@/lib/social-images";
@@ -65,8 +66,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
             <div><h2>Weitere Rechner</h2><Link href="/haus/boden/bodenbelag-rechner/">Bodenbelag</Link><Link href="/haus/innenausbau/trockenbau-rechner/">Trockenbau</Link><Link href="/haus/raumklima/luftentfeuchter-rechner/">Luftentfeuchter</Link><Link href="/garten/bewaesserungs-planer/">Bewässerung</Link><Link href="/garten/maehroboter-rechner/">Mähroboter</Link></div>
             <div><h2>Wissen</h2><Link href="/ratgeber/">Ratgeber</Link><Link href="/ratgeber/daten/">Eigene Datenauswertungen</Link><Link href="/ratgeber/vergleiche/">Direkte Vergleiche</Link><Link href="/ueber-passendplanen/">Über das Projekt</Link><Link href="/methodik/">Methodik</Link><Link href="/affiliate-transparenz/">Affiliate-Transparenz</Link></div>
           </div>
-          <div className="footer-bottom"><span>© {new Date().getFullYear()} PassendPlanen</span><span className="footer-legal"><Link href="/nutzungshinweise/">Nutzungshinweise</Link><Link href="/impressum/">Impressum</Link><Link href="/datenschutz/">Datenschutz</Link></span></div>
+          <div className="footer-bottom"><span>© {new Date().getFullYear()} PassendPlanen</span><span className="footer-legal"><Link href="/nutzungshinweise/">Nutzungshinweise</Link><Link href="/impressum/">Impressum</Link><Link href="/datenschutz/">Datenschutz</Link><CookieSettingsButton /></span></div>
         </footer>
+        <CookieConsent />
       </body>
     </html>
   );
