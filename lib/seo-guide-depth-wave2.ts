@@ -243,6 +243,7 @@ export const SEO_GUIDE_DEPTH_WAVE2: Record<string, SeoGuideDepth> = {
       { label: "Untergrund und Trittschall", href: "/haus/boden/untergrund-trittschall/", description: "Aufbau vor der Verlegung prüfen." },
       { label: "Laminat-Verschnitt", href: "/haus/boden/laminat-verschnitt-berechnen/", description: "Pakete und Reserve bestimmen." },
       { label: "Bodenbelag-Rechner", href: "/haus/boden/bodenbelag-rechner/", description: "Materialumfang vollständig berechnen." },
+      { label: "Laminat oder Klickvinyl auf Fußbodenheizung", href: "/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-fussbodenheizung/", description: "Wärmewiderstand, Freigabe und Unterlage beider Beläge direkt vergleichen." },
     ],
   },
 };

@@ -6,6 +6,8 @@ type EditorialGuide = SeoGuide & { indexingApproval?: ProgrammaticIndexApproval 
 export function applyGartenhausEditorial<T extends EditorialGuide>(guide: T): T {
   if (guide.slug === "gartenhaus-metall-oder-wpc-kleines-budget") return limitedBudget(guide);
   if (guide.slug === "gartenhaus-kunststoff-oder-wpc-kleiner-garten") return smallGarden(guide);
+  if (guide.slug === "gartenhaus-metall-oder-wpc-langfristige-nutzung") return longTermUse(guide);
+  if (guide.slug === "gartenhaus-metall-oder-kunststoff-wenig-pflege") return lowMaintenance(guide);
   return guide;
 }
 
@@ -180,6 +182,196 @@ function smallGarden<T extends EditorialGuide>(guide: T): T {
       { label: "Gartenhausgröße planen", href: "/garten/gartenhaus-groesse/", description: "Nutzung und Innenflächen mit eigenen Maßen prüfen." },
       { label: "Gartenhaus mit Boden", href: "/ratgeber/gartenhaus-mit-boden-worauf-achten/", description: "Boden und Fundamentmaß auseinanderhalten." },
       { label: "Gartenhaus für Fahrräder", href: "/garten/gartenhaus-fuer-fahrraeder/", description: "Tür und Rangierweg an einem konkreten Lagergut prüfen." },
+    ],
+  } as T;
+}
+
+function longTermUse<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-10-23",
+      canonicalPath: "/ratgeber/vergleiche/gartenhaus/gartenhaus-metall-oder-wpc-langfristige-nutzung/",
+      primaryIntent: "Metall- und WPC-Gartenhäuser für eine Nutzung über viele Jahre anhand von Alterung, Reparierbarkeit, Ersatzteilen und Garantiebedingungen vergleichen.",
+      distinctValue: "Die Seite zerlegt beide Bauweisen in ihre alternden Bauteile, liest Garantiebedingungen als Hinweis auf Schwachstellen und rechnet einen fiktiven Kontrollplan über 20 Jahre durch, statt Kaufpreis oder Stellfläche zu vergleichen.",
+      overlapReview: [
+        "/ratgeber/gartenhaus-holz-oder-metall/",
+        "/ratgeber/vergleiche/gartenhaus/gartenhaus-metall-oder-wpc-kleines-budget/",
+        "/garten/gartenhaus-fundament/",
+      ],
+    },
+    title: "Gartenhaus aus Metall oder WPC für viele Jahre Nutzung",
+    heading: "Gartenhaus aus Metall oder WPC für viele Jahre Nutzung",
+    description: "Metall oder WPC für ein Gartenhaus, das lange halten soll? Alternde Bauteile, Garantiebedingungen, Ersatzteile und Reparierbarkeit vor dem Kauf prüfen.",
+    intro: "Ob ein Gartenhaus nach zwanzig Jahren noch dicht schließt, hängt selten am Wandmaterial allein. Bei Metall und WPC altern Beschichtung, Profile, Befestiger, Tür und Dach unterschiedlich. Wer lange plant, vergleicht deshalb die Bauteile, die irgendwann Aufmerksamkeit brauchen.",
+    takeaway: "Für eine lange Nutzung zählt, welche Teile altern, ob du sie kontrollieren und ersetzen kannst und was die Garantiebedingungen ausschließen. Das konkrete System mit Ersatzteilversorgung schlägt das bessere Materialetikett.",
+    sections: [
+      { title: "Lange Nutzung heißt Instandhaltung planen", paragraphs: [
+        "Ein Gartenhaus, das viele Jahre genutzt wird, erlebt Frost, Hitze, Starkregen, Schnee und unzählige Türöffnungen. Kein Material steckt das ohne Folgen weg. Die sinnvolle Frage lautet daher, wo Alterung sichtbar wird, wie früh du sie bemerkst und ob sich der betroffene Teil ohne Abriss reparieren lässt.",
+        "Lege für die Entscheidung einen Zeitraum fest, etwa die Jahre bis zum geplanten Umbau des Gartens. Für diesen Zeitraum prüfst du beide Angebote. Ein Modell, das nach acht Jahren eine nicht mehr lieferbare Tür hat, ist für eine lange Nutzung schwächer als eines mit einfacher Wand und gut erhältlichen Ersatzteilen.",
+      ] },
+      { title: "Wie Metall altert", paragraphs: [
+        "Bei Metallhäusern sitzt der Schutz meist in einer Verzinkung und einer zusätzlichen Beschichtung. Biohort beschreibt für seine Häuser feuerverzinktes Stahlblech mit Einbrennlackierung. Der Zinkschutz wirkt an kleinen Kratzern weiter, die Dauer hängt aber von Schichtdicke und Umgebung ab. Angaben für massive, stückverzinkte Bauteile lassen sich nicht auf dünnes Wandblech übertragen.",
+        "Schwachstellen liegen typischerweise an Schnittkanten, Bohrungen, Schrauben, der Bodenschiene und dort, wo Wasser stehen bleibt. Notiere, welche Teile das Angebot als verzinkt, beschichtet oder aus Kunststoff beschreibt. Frage nach, ob Schrauben und Beschläge aus einem anderen Werkstoff bestehen, denn dort beginnen Schäden oft früher als an der Wandfläche.",
+      ] },
+      { title: "Wie WPC altert", paragraphs: [
+        "WPC verbindet Holzfasern mit Kunststoff. Ein klassischer Holzschutzanstrich entfällt, doch die Profile bewegen sich bei Temperaturwechseln und können sich verfärben. Wie stark das ausfällt, hängt von Rezeptur, Profilform und Farbe ab. Daraus folgt keine pauschale Lebensdauer, sondern eine Liste von Prüfpunkten für das konkrete System.",
+        "Achte auf Ausdehnungsfugen, die Art der Profilverbindung und die tragende Unterkonstruktion. Bei manchen Häusern trägt ein Rahmen aus Metall oder Holz, bei anderen tragen die Profile selbst. Wenn ein Profil beschädigt wird, muss es sich einzeln tauschen lassen, ohne die halbe Wand zu öffnen. Lass dir das anhand der Montageanleitung zeigen.",
+      ] },
+      { title: "Garantiebedingungen als Prüfliste lesen", paragraphs: [
+        "Eine lange Garantiezeit wirkt beruhigend, sagt aber nur zusammen mit ihren Bedingungen etwas aus. Biohort nennt für Metallhäuser 20 Jahre Garantie gegen Durchrostung und schließt unter anderem nicht ausgebesserte Lackschäden, vernachlässigte Wartung von Schloss und Scharnieren, ungeeignete Standorte, fehlende Verankerung und Standorte bis 5 Kilometer vom Meer aus.",
+        "Solche Ausschlüsse sind nützlich, weil sie zeigen, wo der Hersteller selbst Risiken sieht. Lies die Bedingungen beider Angebote vollständig und übertrage jede Pflicht in deinen Wartungsplan. Prüfe außerdem, ob die Garantie beim Abbau und Wiederaufbau erlischt. Bei Biohort ist das der Fall, was bei einem späteren Umzug wichtig sein kann.",
+      ] },
+      { title: "Ersatzteile und Reparierbarkeit", paragraphs: [
+        "Über viele Jahre gehen Türen, Scharniere, Schlösser, Dachdichtungen und einzelne Wandteile häufiger kaputt als das ganze Haus. Frage vor dem Kauf, ob Einzelteile nachbestellt werden können und wie sie bezeichnet werden. Bewahre Stückliste, Rechnung und Montageanleitung so auf, dass du sie in zehn Jahren noch findest.",
+        "Bei Metall lassen sich Lackschäden lokal ausbessern, wenn der passende Lack verfügbar ist. Bei WPC hängt die Reparatur davon ab, ob das Profil im gleichen Maß und Farbton noch geliefert wird. In beiden Fällen ist ein System mit Standardschrauben und zugänglichen Verbindungen langfristig leichter zu pflegen als eines mit verdeckten Spezialteilen.",
+      ] },
+      { title: "Standort und Fundament entscheiden mit", paragraphs: [
+        "Ein Haus, das dauerhaft in Spritzwasser oder auf durchfeuchtetem Untergrund steht, altert schneller, egal aus welchem Material. Plane das Fundament so, dass Wasser abläuft und die Bodenschiene nicht im Nassen liegt. Der Untergrund muss nach den Vorgaben des Herstellers eben sein, sonst verziehen sich Türen und Fugen.",
+        "Für eine lange Nutzung gehört auch die Verankerung dazu. Ein Haus, das sich bei Sturm bewegt, lockert Verbindungen und Dichtungen. Prüfe zusätzlich Laubfall, Schneelast und die Nähe zu Streusalz oder Dünger. Diese Einflüsse wirken auf Metall und WPC unterschiedlich, gehören aber bei beiden in die Standortprüfung.",
+      ] },
+      { title: "Wenn sich die Nutzung ändert", paragraphs: [
+        "Aus dem Geräteschuppen wird später eine kleine Werkstatt, ein Fahrradlager oder ein Platz für Gartenmöbel. Prüfe, ob du an den Wänden Regale befestigen darfst und welche Lasten die Anleitung erlaubt. Bei Metallhäusern bieten Hersteller dafür oft eigenes Zubehör an, bei WPC kann die Unterkonstruktion über die Belastbarkeit entscheiden.",
+        "Plane auch Strom, Licht und Lüftung mit, wenn sie in einigen Jahren dazukommen könnten. Eine Kabeldurchführung, die sich in einem Profil nachträglich nicht sauber abdichten lässt, wird zur Feuchtestelle. Was du heute schon vorsiehst, musst du später nicht mit Bohrungen in eine geschützte Oberfläche lösen.",
+      ] },
+      { title: "So fällt die Entscheidung", paragraphs: [
+        "Metall hat Vorteile, wenn du ein System mit dokumentiertem Korrosionsschutz, klaren Garantiebedingungen und nachbestellbaren Teilen findest und regelmäßige Kontrollen von Kanten und Beschlägen übernimmst. WPC kann passen, wenn dir eine holzähnliche Optik ohne Anstrich wichtig ist und Profile, Fugen und Ersatzteile des Herstellers nachvollziehbar beschrieben sind.",
+        "Fehlen bei einem Angebot Angaben zu Ersatzteilen, Wartung oder Garantiebedingungen, ist das für eine lange Nutzung ein echter Nachteil. Frag schriftlich nach und vergleiche die Antworten. Eine Variante ohne belastbare Auskunft sollte nicht deshalb gewinnen, weil ihr Material im Prospekt langlebiger klingt.",
+      ] },
+    ],
+    comparison: { caption: "Woran beide Bauweisen über viele Jahre gemessen werden", columns: ["Prüfpunkt", "Metallhaus", "WPC-Haus"], rows: [
+      ["Typische Alterung", "Beschichtung, Schnittkanten, Schrauben, Bodenschiene", "Verfärbung, Profilbewegung, Fugen, Unterkonstruktion"],
+      ["Garantie", "Laufzeit und Ausschlüsse zu Korrosion lesen", "Laufzeit und Ausschlüsse zu Profilen und Verfärbung lesen"],
+      ["Reparatur", "Lackausbesserung und Einzelbleche anfragen", "Einzelprofile in Maß und Farbe anfragen"],
+      ["Verschleißteile", "Schloss, Scharniere, Dichtungen nach Anleitung warten", "Schloss, Scharniere, Dichtungen nach Anleitung warten"],
+      ["Spätere Nutzung", "Zulässige Regallasten und Zubehör prüfen", "Tragende Unterkonstruktion und Befestigung prüfen"],
+    ] },
+    checklist: [
+      "Den geplanten Nutzungszeitraum festlegen.",
+      "Für beide Modelle Garantiebedingungen vollständig lesen.",
+      "Jede Wartungspflicht aus den Bedingungen in einen Plan übertragen.",
+      "Schriftlich fragen, welche Einzelteile nachbestellt werden können.",
+      "Werkstoff von Schrauben, Beschlägen und Bodenschiene notieren.",
+      "Fundament mit Wasserablauf und Verankerung nach Anleitung planen.",
+      "Zulässige Wandlasten für spätere Regale prüfen.",
+      "Rechnung, Stückliste und Anleitung dauerhaft aufbewahren.",
+    ],
+    faqs: [
+      { question: "Hält ein Metallgartenhaus länger als ein WPC-Haus?", answer: "Das lässt sich nicht pauschal sagen. Die Dauer hängt vom konkreten Korrosionsschutz, der WPC-Rezeptur, dem Standort und der Wartung ab. Vergleiche die dokumentierten Angaben beider Systeme und die Ersatzteilversorgung." },
+      { question: "Ist eine lange Garantie ein sicheres Zeichen für Langlebigkeit?", answer: "Sie ist ein Hinweis, mehr nicht. Entscheidend sind die Bedingungen. Ausschlüsse für Standort, Wartung oder Abbau können dazu führen, dass ein Schaden trotz langer Laufzeit nicht abgedeckt ist." },
+      { question: "Was sollte ich nach dem Aufbau aufbewahren?", answer: "Rechnung, Stückliste mit Teilenummern, Montageanleitung und die Garantiebedingungen. Ohne diese Unterlagen wird die Nachbestellung einzelner Teile nach Jahren deutlich schwieriger." },
+    ],
+    example: { title: "Ein fiktiver Kontrollplan über 20 Jahre", intro: "Alle Werte sind frei gewählte Annahmen und zeigen nur, wie sich ein Wartungsplan zusammensetzt.", steps: [
+      { label: "Geplanter Nutzungszeitraum", value: "20 Jahre" },
+      { label: "Kontrollrunden pro Jahr", value: "2 × 45 Minuten = 1,5 Stunden" },
+      { label: "Kontrollzeit gesamt", value: "20 × 1,5 Stunden = 30 Stunden" },
+      { label: "Angenommener Tausch von Verschleißteilen", value: "alle 8 Jahre, also in Jahr 8 und 16" },
+      { label: "Angenommene Garantielaufzeit im Angebot", value: "10 Jahre" },
+      { label: "Jahre ohne Herstellergarantie", value: "20 − 10 = 10 Jahre" },
+    ], result: "Im Beispiel liegt die Hälfte des Nutzungszeitraums außerhalb der Garantie. Dann tragen Ersatzteile und Reparierbarkeit die Nutzung.", note: "Garantielaufzeit, Wartungsintervalle und Kontrollzeit müssen aus den Unterlagen des konkreten Modells übernommen werden." },
+    limitation: "Die Seite nennt keine Lebensdauer für Metall- oder WPC-Gartenhäuser, weil diese vom konkreten Produkt, Standort und Wartung abhängt. Herstellerangaben und Garantiebedingungen gelten nur für das jeweilige Modell.",
+    sources: [
+      { label: "Garantiebedingungen für Metall-Gerätehäuser", href: "https://www.biohort.com/de-de/garantiebedingungen", publisher: "Biohort", note: "Herstellerbeispiel für Garantielaufzeit, Wartungspflichten und Ausschlüsse bei Standort, Montage und Abbau." },
+      { label: "Qualitätsangaben zu Stahlblech und Beschichtung", href: "https://www.biohort.com/de-de/qualitaet", publisher: "Biohort", note: "Herstellerangaben zu feuerverzinktem Stahlblech und Einbrennlackierung." },
+      { label: "Korrosionsschutz für Stahl", href: "https://www.feuerverzinken.com/das-verfahren/korrosionsschutz-fuer-stahl", publisher: "Institut Feuerverzinken", note: "Grundlagen zum Zinkschutz von Stahl. Angaben zu stückverzinkten Bauteilen gelten nicht direkt für dünnes Wandblech." },
+    ],
+    relatedLinks: [
+      { label: "Gartenhaus-Fundament planen", href: "/garten/gartenhaus-fundament/", description: "Einen Untergrund mit Wasserablauf und Verankerung vorbereiten." },
+      { label: "Gartenhaus aus Holz oder Metall", href: "/ratgeber/gartenhaus-holz-oder-metall/", description: "Metall mit einer weiteren Bauweise vergleichen." },
+      { label: "Gartenhaus-Zubehör", href: "/garten/gartenhaus-zubehoer/", description: "Regale und Ausstattung für eine spätere Nutzung einordnen." },
+    ],
+  } as T;
+}
+
+function lowMaintenance<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-10-23",
+      canonicalPath: "/ratgeber/vergleiche/gartenhaus/gartenhaus-metall-oder-kunststoff-wenig-pflege/",
+      primaryIntent: "Herausfinden, ob ein Gartenhaus aus Metall oder aus Kunststoff im Alltag weniger Pflege braucht und welche Arbeiten bei beiden bleiben.",
+      distinctValue: "Die Seite listet die verbleibenden Pflegearbeiten beider Bauweisen einzeln auf, verknüpft sie mit Herstellerangaben und Garantiepflichten und rechnet einen fiktiven Jahresaufwand in Minuten durch.",
+      overlapReview: [
+        "/ratgeber/gartenhaus-holz-oder-metall/",
+        "/ratgeber/vergleiche/gartenhaus/gartenhaus-kunststoff-oder-wpc-kleiner-garten/",
+        "/garten/gartenhaus-boden/",
+      ],
+    },
+    title: "Welches Gartenhaus ist pflegeleichter, Metall oder Kunststoff?",
+    heading: "Welches Gartenhaus ist pflegeleichter, Metall oder Kunststoff?",
+    description: "Pflegeleichtes Gartenhaus gesucht? Metall und Kunststoff im Vergleich. Welche Arbeiten bleiben, was nie gestrichen wird und wo Pflege versteckt ist.",
+    intro: "Weder ein Metall- noch ein Kunststoffhaus muss regelmäßig gestrichen werden. Pflegefrei sind beide trotzdem nicht. Der Unterschied liegt in den Arbeiten, die übrig bleiben, und darin, was passiert, wenn du sie auslässt.",
+    takeaway: "Beide Bauweisen sparen den Anstrich. Bei Metall bleiben Lackschäden, Beschläge und Kondenswasser im Blick, bei Kunststoff Verankerung, Dach und Verbindungen. Wähle das System, dessen Restarbeiten du sicher erledigst.",
+    sections: [
+      { title: "Was pflegeleicht konkret bedeutet", paragraphs: [
+        "Pflegeleicht heißt bei Gartenhäusern vor allem, dass kein jährlicher Holzschutzanstrich nötig ist. Keter schreibt für seine Kunststoffprodukte, dass sie nicht jährlich behandelt oder gestrichen werden müssen. Biohort nennt für seine Metallhäuser ausdrücklich, dass sie nicht gestrichen werden sollen. Dieser große Posten fällt bei beiden weg.",
+        "Übrig bleiben Reinigung, Kontrolle und gelegentliche Kleinreparaturen. Ihr Umfang ist kleiner als beim Holzhaus, aber nicht null. Für die Entscheidung zählt, welche dieser Restarbeiten zu deinem Alltag passen und welche Folgen ein vergessener Handgriff beim jeweiligen Material hat.",
+      ] },
+      { title: "Reinigung bei beiden Bauweisen", paragraphs: [
+        "Laut Keter reicht bei Kunststoff gelegentliches Abwaschen oder eine sanfte Hochdruckreinigung. Bei Metall gilt Ähnliches, wobei scharfe Reiniger und harte Bürsten die Beschichtung angreifen können. Prüfe in der Anleitung des konkreten Modells, welche Reinigungsmittel und welcher Wasserdruck erlaubt sind.",
+        "Wichtiger als die Wandfläche ist das Dach. Laub, Nadeln und Moos halten Feuchtigkeit fest und verstopfen Rinnen. Wenn du das Dach nicht gefahrlos erreichst, wird jede Reinigung aufwendig. Plane den Standort daher so, dass du Dach und Rinne von einer sicheren Leiterposition aus säubern kannst.",
+      ] },
+      { title: "Die versteckte Pflege beim Metallhaus", paragraphs: [
+        "Bei Metall ist die Beschichtung der wichtigste Schutz. Kratzer und Dellen sollten zeitnah ausgebessert werden. Biohort schließt in seinen Garantiebedingungen Lackschäden aus, die nicht rechtzeitig repariert wurden. Halte deshalb den passenden Ausbesserungslack bereit und kontrolliere besonders untere Kanten, Türbereich und Bodenschiene.",
+        "Dazu kommen Beschläge. Biohort nennt das Ölen oder Fetten von Schließzylinder und Scharnieren als übliche Wartung, deren Fehlen die Garantie berührt. Ein weiterer Punkt ist Kondenswasser. Bei Temperaturwechseln kann sich an der Innenseite dünner Bleche Feuchte bilden. Lüftung und ein trockener Boden helfen, empfindliches Lagergut zu schützen.",
+      ] },
+      { title: "Die versteckte Pflege beim Kunststoffhaus", paragraphs: [
+        "Kunststoff rostet nicht, und Kratzer müssen nicht lackiert werden. Dafür bestehen viele Kunststoffhäuser aus Paneelen, die über Steckverbindungen und Schrauben zusammengehalten werden. Kontrolliere nach Stürmen und Frostperioden, ob Verbindungen fest sitzen und die Tür noch sauber schließt.",
+        "Bei größeren Häusern empfiehlt Keter einen Sockel aus Holz oder Beton als Fundament. Ein leichtes Haus braucht eine sichere Verankerung, sonst arbeitet es bei Wind. Prüfe auch, was die Anleitung zu Schneelast und Dachlast sagt, und räume schweren Schnee rechtzeitig ab, wenn das Modell dafür nicht ausgelegt ist.",
+      ] },
+      { title: "Was passiert, wenn du Pflege auslässt", paragraphs: [
+        "Beim Metallhaus kann aus einem vergessenen Kratzer an einer feuchten Stelle mit der Zeit eine Korrosionsstelle werden. Das betrifft zunächst das Aussehen, später unter Umständen die Bauteile selbst und den Garantieanspruch. Je näher der Standort an Streusalz, Dünger oder salzhaltiger Luft liegt, desto wichtiger ist die regelmäßige Kontrolle.",
+        "Beim Kunststoffhaus zeigen sich ausgelassene Kontrollen eher an gelockerten Verbindungen, verzogenen Türen oder einem Dach, das bei Last nachgibt. Der Schaden entsteht seltener schleichend am Material als plötzlich an der Konstruktion. Beides lässt sich mit wenigen Kontrollterminen im Jahr gut abfangen.",
+      ] },
+      { title: "Untergrund und Standort sparen Arbeit", paragraphs: [
+        "Viele Pflegearbeiten entstehen am Boden. Steht ein Gartenhaus in einer Senke oder im Spritzwasserbereich, wird es schneller schmutzig und bleibt länger feucht. Ein ebener, entwässerter Untergrund und ein kleiner Abstand zu Beeten reduzieren Reinigungsaufwand bei beiden Materialien.",
+        "Auch Bäume beeinflussen die Pflege stark. Unter einem Laubbaum fällt Dachreinigung deutlich häufiger an als auf einer freien Fläche. Bei Kunststoff kann volle Sonne die Oberfläche stärker beanspruchen, bei Metall den Innenraum aufheizen. Prüfe, was der Hersteller zum Standort angibt, bevor du dich festlegst.",
+      ] },
+      { title: "So triffst du die Wahl", paragraphs: [
+        "Metall passt, wenn du bereit bist, Kratzer zeitnah auszubessern, Beschläge gelegentlich zu schmieren und für Lüftung zu sorgen. Dafür bekommst du eine stabile Hülle, bei der einige Hersteller lange Korrosionsgarantien nennen. Kunststoff passt, wenn du Lackarbeiten ganz vermeiden möchtest und Verankerung, Dach und Verbindungen regelmäßig kontrollierst.",
+        "Vergleiche zwei konkrete Modelle und schreibe die Pflegehinweise aus beiden Anleitungen nebeneinander. Die Version mit den Aufgaben, die du realistisch erledigst, ist für dich die pflegeleichtere. Ein Material, das theoretisch weniger Arbeit macht, hilft nicht, wenn gerade seine eine Pflicht regelmäßig liegen bleibt.",
+      ] },
+    ],
+    comparison: { caption: "Welche Pflegearbeiten bei Metall und Kunststoff bleiben", columns: ["Arbeit", "Metallhaus", "Kunststoffhaus"], rows: [
+      ["Anstrich", "Entfällt, Herstellerhinweis zum Streichen beachten", "Entfällt laut Herstellerangabe"],
+      ["Reinigung", "Wände und Dach mit erlaubten Mitteln", "Abwaschen oder sanfte Hochdruckreinigung"],
+      ["Oberflächenschäden", "Kratzer zeitnah mit passendem Lack ausbessern", "Kein Lack nötig, Risse und Brüche prüfen"],
+      ["Beschläge", "Schloss und Scharniere ölen oder fetten", "Schloss, Scharniere und Türlauf prüfen"],
+      ["Konstruktion", "Kondenswasser und Lüftung im Blick behalten", "Verankerung, Verbindungen und Dachlast prüfen"],
+    ] },
+    checklist: [
+      "Pflegehinweise beider Modelle aus der Anleitung nebeneinander schreiben.",
+      "Garantiebedingungen auf Wartungspflichten prüfen.",
+      "Erlaubte Reinigungsmittel und Wasserdruck notieren.",
+      "Bei Metall passenden Ausbesserungslack mitbestellen.",
+      "Bei Kunststoff Verankerung und zulässige Dachlast klären.",
+      "Sicheren Zugang zu Dach und Rinne einplanen.",
+      "Standort mit Blick auf Laubfall, Spritzwasser und Sonne wählen.",
+      "Zwei feste Kontrolltermine pro Jahr im Kalender eintragen.",
+    ],
+    faqs: [
+      { question: "Ist ein Kunststoffgartenhaus pflegeleichter als eines aus Metall?", answer: "Bei der Oberfläche oft ja, weil keine Lackschäden ausgebessert werden müssen. Dafür brauchen Verankerung, Verbindungen und Dach Aufmerksamkeit. Der Gesamtaufwand hängt vom konkreten Modell und Standort ab." },
+      { question: "Muss ich ein Metallgartenhaus streichen?", answer: "In der Regel nicht. Biohort rät für seine Häuser ausdrücklich davon ab. Kratzer und Schäden an der Beschichtung sollten aber zeitnah mit passendem Lack ausgebessert werden." },
+      { question: "Darf ich ein Kunststoffhaus mit dem Hochdruckreiniger säubern?", answer: "Keter nennt eine sanfte Hochdruckreinigung als möglich. Ob das für dein Modell gilt und welcher Abstand und Druck sinnvoll sind, steht in der Anleitung des Herstellers." },
+    ],
+    example: { title: "Ein fiktiver Pflegeaufwand pro Jahr", intro: "Die Minuten sind frei gewählte Annahmen und zeigen nur, wie du beide Pflegepläne vergleichbar machst.", steps: [
+      { label: "Metall, Reinigung von Wand und Dach", value: "2 × 30 Minuten = 60 Minuten" },
+      { label: "Metall, Beschläge schmieren und Lack ausbessern", value: "15 Minuten + 30 Minuten" },
+      { label: "Metall gesamt", value: "60 + 15 + 30 = 105 Minuten" },
+      { label: "Kunststoff, Reinigung von Wand und Dach", value: "2 × 30 Minuten = 60 Minuten" },
+      { label: "Kunststoff, Verbindungen und Dachlast prüfen", value: "20 Minuten + 15 Minuten" },
+      { label: "Kunststoff gesamt", value: "60 + 20 + 15 = 95 Minuten" },
+    ], result: "Im Beispiel liegen beide Pläne nur 10 Minuten pro Jahr auseinander. Den Ausschlag geben die Folgen einer ausgelassenen Aufgabe.", note: "Setze die Pflegehinweise und Intervalle aus den Anleitungen deiner konkreten Modelle ein." },
+    limitation: "Die Seite bewertet keine einzelnen Produkte. Pflegehinweise, zulässige Reinigungsmittel, Schneelasten und Garantiepflichten gelten nur für das jeweilige Modell und müssen dort nachgelesen werden.",
+    sources: [
+      { label: "Häufige Fragen zu Pflege und Garantie", href: "https://www.keter.com/de-de/faq/faqde.html", publisher: "Keter", note: "Herstellerangaben zu Reinigung, entfallendem Anstrich und Fundament bei Kunststoffprodukten." },
+      { label: "Garantiebedingungen für Metall-Gerätehäuser", href: "https://www.biohort.com/de-de/garantiebedingungen", publisher: "Biohort", note: "Herstellerbeispiel für Wartungspflichten an Schloss, Scharnieren und Lackschäden." },
+      { label: "Qualitätsangaben zu Stahlblech und Beschichtung", href: "https://www.biohort.com/de-de/qualitaet", publisher: "Biohort", note: "Herstellerangaben zu verzinktem Stahlblech, Einbrennlackierung und dem Hinweis, nicht zu streichen." },
+    ],
+    relatedLinks: [
+      { label: "Gartenhaus aus Holz oder Metall", href: "/ratgeber/gartenhaus-holz-oder-metall/", description: "Den Pflegeaufwand von Holz zum Vergleich einordnen." },
+      { label: "Gartenhaus-Boden", href: "/garten/gartenhaus-boden/", description: "Einen trockenen Boden gegen Feuchte und Kondenswasser planen." },
+      { label: "Gartenhaus-Fundament", href: "/garten/gartenhaus-fundament/", description: "Ebenen Untergrund und Verankerung vorbereiten." },
     ],
   } as T;
 }
