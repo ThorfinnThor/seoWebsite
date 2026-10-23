@@ -6,6 +6,8 @@ type EditorialGuide = SeoGuide & { indexingApproval?: ProgrammaticIndexApproval 
 export function applyTrockenbauEditorial<T extends EditorialGuide>(guide: T): T {
   if (guide.slug === "trockenbau-osb-gips-oder-zementbauplatte-badezimmer") return bathroomWall(guide);
   if (guide.slug === "trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke") return kitchenCabinets(guide);
+  if (guide.slug === "trockenbau-gipskarton-standard-oder-osb-gips-installationen") return installationWall(guide);
+  if (guide.slug === "trockenbau-gipsfaser-oder-zementbauplatte-schallschutz") return soundInsulationWall(guide);
   return guide;
 }
 
@@ -181,6 +183,188 @@ function kitchenCabinets<T extends EditorialGuide>(guide: T): T {
       { label: "Trockenbauprofile planen", href: "/haus/innenausbau/trockenbau-profile-staenderwerk/", description: "Raster und Unterkonstruktion der Wand einordnen." },
       { label: "Trockenbaumaterial berechnen", href: "/haus/innenausbau/trockenbau-rechner/", description: "Fläche und Materialbedarf getrennt von der Lastfreigabe berechnen." },
       { label: "Einfach oder doppelt beplankt", href: "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", description: "Plattenlagen als Bestandteil des gesamten Systems betrachten." },
+    ],
+  } as T;
+}
+
+function installationWall<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-10-23",
+      canonicalPath: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/",
+      primaryIntent: "Eine Installationswand oder Vorwand für Leitungen, Dosen und Anbauteile mit Standard-Gipskarton oder mit OSB unter einer Gipsplatte planen.",
+      distinctValue: "Die Seite beginnt beim Leitungs- und Anbauplan, trennt Hohlraumtiefe, Durchdringungen und punktuelle Lasten voneinander und zeigt, wann eine durchgehende OSB-Lage gegenüber gezielten Verstärkungen im Ständerwerk überhaupt einen Vorteil bringt.",
+      overlapReview: ["/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", "/haus/innenausbau/trockenbau-tuer-oeffnungen/", "/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke/"],
+    },
+    title: "Gipskarton oder OSB mit Gips für die Installationswand",
+    heading: "Gipskarton oder OSB mit Gips für die Installationswand",
+    description: "Installationswand oder Vorwand planen: Standard-Gipskarton und OSB mit Gipsplatte nach Leitungen, Dosen, Anbauteilen und Wandsystem vergleichen.",
+    intro: "Eine Installationswand nimmt Leitungen, Schalterdosen und oft auch Anbauteile auf. Bevor du zwischen reiner Gipskartonbeplankung und OSB unter Gips wählst, sollte feststehen, was genau in und an dieser Wand sitzen wird.",
+    takeaway: "Plane vor der Plattenwahl Leitungswege, Dosen und Anbaupunkte. Erst daraus ergibt sich, ob eine Gipskartonwand mit gezielten Verstärkungen reicht oder ob eine durchgehende Holzwerkstofflage im geprüften System sinnvoll ist. Die OSB-Lage ersetzt keinen Lastnachweis.",
+    sections: [
+      { title: "Was in die Wand kommt, entscheidet über die Platte", paragraphs: [
+        "Lege einen Plan mit allen Leitungen, Steckdosen, Schaltern, Wasser- oder Abwasseranschlüssen und geplanten Anbauteilen an. Eine Vorwand für einige Elektroleitungen stellt andere Anforderungen als eine Installationswand, hinter der Rohre verlaufen und an der später ein Waschtisch, ein Regal oder ein Fernseher hängt.",
+        "Notiere zu jedem Punkt die Höhe über dem fertigen Boden und den Abstand zur nächsten Ecke. Mit diesen Angaben lässt sich später das Ständerraster so legen, dass Dosen, Rohre und Verstärkungen nicht miteinander kollidieren. Ohne diesen Plan wird die Plattenfrage zu früh gestellt.",
+      ] },
+      { title: "Hohlraumtiefe vor Plattenwahl", paragraphs: [
+        "Die Tiefe der Unterkonstruktion bestimmt, welche Rohre, Leerrohre und Dosen im Hohlraum Platz finden. Knauf beschreibt für Installationsaufgaben eigene Wandsysteme, etwa mit verlaschtem Doppelständerwerk. Ob eine einfache Vorwandschale oder ein solches System nötig ist, hängt von Leitungsquerschnitten, Gefälle von Abwasserleitungen und Dämmung ab.",
+        "Eine zusätzliche OSB-Lage verändert die Hohlraumtiefe nicht, sie macht die Wand aber dicker und schwerer. Prüfe deshalb, ob Raumbreite, Türanschlüsse und Fußleisten den zusätzlichen Aufbau aufnehmen können, bevor du dich für die zweilagige Holzwerkstoffvariante entscheidest.",
+      ] },
+      { title: "Was Standard-Gipskarton leisten kann", paragraphs: [
+        "Eine Beplankung aus Gipsplatten auf Metallständern ist der übliche Aufbau für nichttragende Innenwände. Für Leitungen und Hohlwanddosen ist sie gut geeignet, wenn Dosen, Bohrungen und Schnitte innerhalb der Herstellerangaben bleiben. Anbauteile werden dabei in der Regel über passende Hohlraumdübel, Profile oder Verstärkungen befestigt.",
+        "Die Grenze liegt nicht im Plattennamen, sondern in der Befestigung. Welche Last an welcher Stelle zulässig ist, steht in den Unterlagen des Systems. Für schwerere Anbauteile planen Hersteller Traversen oder ähnliche Verstärkungen im Hohlraum ein, die vor dem Schließen der Wand gesetzt werden.",
+      ] },
+      { title: "Wann OSB unter Gips erwogen wird", paragraphs: [
+        "Eine durchgehende OSB-Lage unter der Gipsplatte wird oft geplant, damit später an beliebiger Stelle geschraubt werden kann. Das kann bei Werkstattwänden oder Wänden mit vielen wechselnden Anbauten praktisch sein. Für ein einzelnes schweres Bauteil an bekannter Stelle ist eine gezielte Verstärkung häufig die übersichtlichere Lösung.",
+        "Die Kombination muss als Ganzes zur Unterkonstruktion passen. Plattendicke, Schraubenabstände, Fugenversatz zwischen den Lagen und Brandschutzanforderungen gehören in die Planung. Lass dir zeigen, dass dieser Aufbau dokumentiert ist, statt die Tragfähigkeit der OSB-Platte allein als Begründung zu nehmen.",
+      ] },
+      { title: "Dosen und Durchdringungen zählen", paragraphs: [
+        "Jede Schalterdose und jede Rohrdurchführung ist eine Öffnung in der Beplankung. Bei einer zweilagigen Wand mit OSB müssen die Öffnungen durch beide Lagen sauber geschnitten werden. Hohlwanddosen müssen zur gesamten Beplankungsdicke passen, damit sie fest sitzen.",
+        "Liegt die Wand an einer Grenze mit Brand- oder Schallschutzanforderung, verändern Öffnungen das geprüfte Ergebnis. Kläre in diesem Fall, welche Dosen, Abschottungen oder Abstände das System vorsieht. Gegenüberliegende Dosen auf beiden Wandseiten sind ein häufiger Schwachpunkt.",
+      ] },
+      { title: "Feuchte an der Installationswand", paragraphs: [
+        "Verlaufen Wasserleitungen in der Wand oder hängt ein Waschtisch davor, kommt Feuchte als weitere Prüffrage hinzu. Standard-Gipskarton ist für trockene Innenräume vorgesehen. Für Spritzwasserbereiche gelten eigene Plattentypen und Abdichtungsanforderungen.",
+        "OSB hinter Gips verbessert den Feuchteschutz nicht. Im Gegenteil bringt sie einen feuchteempfindlichen Holzwerkstoff in die Wand. Für Bäder ist deshalb ein eigener Vergleich sinnvoll, der Wasserzonen und Abdichtung in den Mittelpunkt stellt.",
+      ] },
+      { title: "Mengen getrennt nach Material rechnen", paragraphs: [
+        "Bei Standard-Gipskarton werden eine oder zwei Lagen desselben Plattentyps gerechnet. Bei OSB unter Gips entstehen zwei verschiedene Materialpositionen mit eigenen Formaten, Schrauben und eigenem Verschnitt. Beide Varianten haben je Lage dieselbe geometrische Fläche, aber nicht dieselbe Stückliste.",
+        "Der Trockenbaurechner hilft, Wandfläche, Profile und Plattenmengen zu strukturieren. Ob die Wand für ein bestimmtes Anbauteil geeignet ist, lässt sich daraus nicht ablesen. Diese Frage beantworten Systemunterlagen und gegebenenfalls eine fachliche Bemessung.",
+      ] },
+      { title: "Angebote für beide Varianten vergleichbar machen", paragraphs: [
+        "Fordere für beide Wandaufbauten dieselben Angaben an: Profiltyp und Achsabstand, Zahl und Art der Plattenlagen, Verstärkungen, Dosen, Durchführungen und Spachtelstufe. Erst dann wird sichtbar, ob die OSB-Lage nur Material kostet oder auch Montagezeit und Zubehör verändert.",
+        "Bleibt bei einem Angebot offen, wie Anbauteile befestigt werden, ist der Preisvergleich unvollständig. Eine scheinbar günstigere Wand kann später zusätzliche Verstärkungen oder Umbauten erfordern, wenn die Lastpunkte nicht eingeplant waren.",
+      ] },
+    ],
+    comparison: { caption: "Installationswand: Fragen an beide Aufbauten", columns: ["Prüfpunkt", "Standard-Gipskarton", "OSB unter Gipsplatte"], rows: [
+      ["Leitungen im Hohlraum", "Hohlraumtiefe der Unterkonstruktion prüfen", "Hohlraumtiefe identisch, Wand insgesamt dicker"],
+      ["Anbauteile", "Verstärkung an bekannten Punkten einplanen", "Befestigung im dokumentierten Gesamtaufbau nachweisen"],
+      ["Dosen", "Hohlwanddosen passend zur Beplankung wählen", "Dosen und Schnitte durch beide Lagen planen"],
+      ["Feuchte", "Für trockene Bereiche vorgesehen", "Holzwerkstoff bringt zusätzliche Feuchteempfindlichkeit"],
+      ["Mengen", "Eine Materialposition je Lage", "Zwei Materialpositionen mit eigenen Formaten und Schrauben"],
+    ] },
+    checklist: [
+      "Alle Leitungen, Dosen und Anschlüsse mit Höhe und Abstand in einen Wandplan eintragen.",
+      "Anbauteile mit Position, Gewicht und Befestigungsart auflisten.",
+      "Hohlraumtiefe für Rohre, Leerrohre und Dämmung festlegen.",
+      "Verstärkungen oder Traversen vor dem Schließen der Wand positionieren.",
+      "Für die OSB-Variante den vollständigen, dokumentierten Wandaufbau anfordern.",
+      "Feuchte- und Spritzwasserbereiche gesondert prüfen.",
+      "Plattenmengen getrennt nach Material und Lage rechnen.",
+    ],
+    faqs: [
+      { question: "Brauche ich für eine Installationswand immer OSB hinter dem Gips?", answer: "Nein. Für Leitungen und Dosen reicht eine passende Gipskartonbeplankung meist aus. Anbauteile werden über geeignete Befestiger oder gezielte Verstärkungen befestigt, deren Lage vor dem Beplanken feststehen sollte." },
+      { question: "Darf ich an einer Wand mit OSB-Lage überall beliebig schwere Teile aufhängen?", answer: "Nicht pauschal. Die zulässige Last hängt vom gesamten Aufbau, den Befestigern und der Unterkonstruktion ab. Dafür sind die Unterlagen des Systems oder eine fachliche Bemessung maßgeblich." },
+      { question: "Ist OSB unter Gips im Bad eine gute Idee?", answer: "Das lässt sich nur mit Blick auf die Wasserzone und den nachgewiesenen Gesamtaufbau beantworten. Die OSB-Lage verbessert den Feuchteschutz nicht, Abdichtung und Plattenwahl müssen gesondert geplant werden." },
+    ],
+    example: { title: "Eine Vorwand mit acht Durchdringungen", intro: "Die Zahlen zeigen, wie sich die Stückliste zwischen den Varianten unterscheidet, obwohl die Fläche gleich bleibt.", steps: [
+      { label: "Wandfläche einseitig", value: "3,20 m × 2,60 m = 8,32 m²" },
+      { label: "Gipskarton zweilagig", value: "2 × 8,32 m² = 16,64 m² Gipsplatten" },
+      { label: "OSB plus Gips", value: "8,32 m² OSB + 8,32 m² Gipsplatten = 16,64 m² in zwei Positionen" },
+      { label: "Durchdringungen", value: "6 Elektrodosen + 2 Wasseranschlüsse = 8 Öffnungen je Lage" },
+      { label: "Noch offen", value: "Formate, Verschnitt, Verstärkungen, Befestiger und Systemnachweis" },
+    ], result: "16,64 m² Plattenfläche vor Verschnitt in beiden Varianten, aber unterschiedliche Materialpositionen und Öffnungen in jeder Lage.", note: "Die Mengen sagen nichts über zulässige Lasten oder die Eignung im Feuchtebereich aus." },
+    limitation: "Die Seite gibt keinen Wandaufbau und keine Befestigung frei. Lasten, Feuchtebereiche und Brand- oder Schallschutzanforderungen müssen anhand der aktuellen Systemunterlagen fachlich geprüft werden.",
+    sources: [
+      { label: "Metallständerwände und Installationswände", href: "https://knauf.com/de-DE/systeme/trockenbausysteme/w11-de-metallstaenderwaende", publisher: "Knauf", note: "Systemübersicht einschließlich Installationswand mit Doppelständerwerk und technischen Unterlagen." },
+      { label: "Rigips Traverse für Konsollasten", href: "https://www.rigips.de/produktneuheit/rigips-traverse", publisher: "Rigips", note: "Herstellerbeispiel für eine Verstärkung im Wandhohlraum für Anbauteile." },
+      { label: "Planungs- und Baukataloge", href: "https://www.rigips.de/planen-und-bauen-kataloge", publisher: "Rigips", note: "Technische Kataloge mit Wandsystemen und Ausführungsdetails." },
+    ],
+    relatedLinks: [
+      { label: "Trockenbaumaterial berechnen", href: "/haus/innenausbau/trockenbau-rechner/", description: "Wandfläche, Lagen und Materialrahmen der Vorwand mit eigenen Maßen bestimmen." },
+      { label: "Trockenbauprofile planen", href: "/haus/innenausbau/trockenbau-profile-staenderwerk/", description: "Ständerraster und Hohlraumtiefe passend zu Leitungen festlegen." },
+      { label: "Einfach oder doppelt beplankt", href: "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", description: "Die Zahl der Plattenlagen als Teil des Systems einordnen." },
+    ],
+  } as T;
+}
+
+function soundInsulationWall<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-10-23",
+      canonicalPath: "/ratgeber/vergleiche/trockenbau/trockenbau-gipsfaser-oder-zementbauplatte-schallschutz/",
+      primaryIntent: "Für eine Trockenbauwand mit besserem Schallschutz einordnen, ob Gipsfaser oder Zementbauplatte überhaupt die entscheidende Stellschraube ist.",
+      distinctValue: "Die Seite verschiebt die Frage vom Plattennamen zum geprüften Wandsystem, erklärt Flächenmasse, Lagen, Ständerwerk, Dämmung, Anschlüsse und Flanken als eigentliche Einflussgrößen und zeigt, warum eine Zementbauplatte vor allem für Feuchte und nicht für Schall ausgewählt wird.",
+      overlapReview: ["/ratgeber/trockenbau-schallschutzwand/", "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", "/ratgeber/vergleiche/trockenbau/trockenbau-osb-gips-oder-zementbauplatte-badezimmer/"],
+    },
+    title: "Gipsfaser oder Zementbauplatte für mehr Schallschutz",
+    heading: "Gipsfaser oder Zementbauplatte für mehr Schallschutz",
+    description: "Trockenbauwand mit Schallschutz planen: Gipsfaser und Zementbauplatte nach Wandsystem, Lagen, Dämmung, Anschlüssen und geprüften Rw-Werten einordnen.",
+    intro: "Wer eine leisere Trennwand möchte, sucht oft nach der besseren Platte. Beim Schallschutz entscheidet aber nicht das Plattenmaterial allein, sondern der geprüfte Aufbau der ganzen Wand und ihre Anschlüsse an den Bestand.",
+    takeaway: "Lege das Schutzziel fest und suche dazu ein geprüftes Wandsystem, das es erreicht. Ob Gipsfaser oder Zementbauplatte darin vorkommt, ist eine Folge dieser Auswahl. Ein Rw-Wert gilt nur für den beschriebenen Prüfaufbau.",
+    sections: [
+      { title: "Das Schutzziel vor dem Material", paragraphs: [
+        "Kläre vor jeder Plattenwahl, welcher Schall gestoppt werden soll. Sprache aus dem Nachbarzimmer, Musik, Haustechnik oder Geräusche zwischen Wohneinheiten stellen unterschiedliche Anforderungen. Bei Wänden zwischen Wohnungen oder in Gebäuden mit Vorgaben kann ein Mindestwert verbindlich sein, den eine fachkundige Planung bestätigen sollte.",
+        "Erst mit diesem Ziel lässt sich nach einem Wandsystem suchen. Hersteller geben für ihre Systeme bewertete Schalldämmmaße an, die unter festgelegten Prüfbedingungen ermittelt wurden. Diese Werte beziehen sich auf eine vollständige Konstruktion und nicht auf eine einzelne Platte.",
+      ] },
+      { title: "Warum der Plattenname wenig aussagt", paragraphs: [
+        "Schalldämmung einer leichten Wand entsteht aus dem Zusammenspiel von zwei Schalen, Hohlraum, Dämmung und Unterkonstruktion. Flächenmasse und Biegesteifigkeit der Beplankung spielen dabei eine Rolle, ebenso die Zahl der Lagen und wie die Schalen miteinander verbunden sind.",
+        "Eine Gipsfaserplatte und eine Zementbauplatte unterscheiden sich in diesen Eigenschaften. Daraus lässt sich aber kein pauschaler Sieger ableiten. Dieselbe Platte kann in einem Einfachständerwerk und in einem getrennten Doppelständerwerk zu deutlich unterschiedlichen Ergebnissen führen.",
+      ] },
+      { title: "Gipsfaser im Schallschutzsystem", paragraphs: [
+        "Für Gipsfaserplatten veröffentlichen Hersteller Wandsysteme mit Angaben zum Schallschutz. Fermacell nennt Schallschutz ausdrücklich als Einsatzzweck seiner Gipsfaserplatten im Trockenbau. Die Werte gelten jeweils für eine bestimmte Plattendicke, Lagenzahl, Ständerart und Dämmung.",
+        "Prüfe, ob das gewählte System zu deiner Wandhöhe, deinem Ständerwerk und den Anschlüssen passt. Übertrage keine Schallschutzangabe auf einen Aufbau mit anderen Profilen, anderer Dämmung oder weniger Lagen, nur weil dieselbe Platte verwendet wird.",
+      ] },
+      { title: "Wofür Zementbauplatten gedacht sind", paragraphs: [
+        "Zementgebundene Platten werden vor allem für Nassräume und stark beanspruchte Bereiche angeboten. Herstellerunterlagen stellen dort Feuchtebeständigkeit und Robustheit in den Vordergrund. Schallschutz ist meist nicht der Grund, eine Zementbauplatte zu wählen.",
+        "Soll eine Wand in einem feuchten Raum zugleich besser dämmen, gehören beide Anforderungen in die Systemauswahl. Kläre, ob für den Aufbau mit Zementbauplatte ein geprüfter Schallschutzwert vorliegt. Fehlt er, lässt sich das Ergebnis aus Werten anderer Plattensysteme nicht ableiten.",
+      ] },
+      { title: "Ständerwerk und Dämmung", paragraphs: [
+        "Getrennte Ständer, die die beiden Wandschalen nicht starr verbinden, können die Schallübertragung verringern. Auch Profilart, Achsabstand und Hohlraumtiefe gehen in die Prüfwerte ein. Diese Angaben stehen in den Systemunterlagen und müssen auf der Baustelle eingehalten werden.",
+        "Die Hohlraumdämmung muss der im System beschriebenen Art und Dicke entsprechen. Dämmstoff zu stopfen oder wegzulassen, verändert das Verhalten der Wand. Auch hier gilt: Der Prüfwert gehört zur beschriebenen Kombination.",
+      ] },
+      { title: "Anschlüsse und Flankenübertragung", paragraphs: [
+        "Schall läuft nicht nur durch die Wand, sondern auch über angrenzende Decken, Böden und Außenwände um sie herum. Diese Flankenübertragung kann eine sehr gute Trennwand im eingebauten Zustand deutlich schwächen. Ein durchlaufender Estrich oder eine leichte Decke sind typische Schwachstellen.",
+        "Randanschlüsse werden im System meist mit Dichtungsband und dicht verspachtelten Fugen ausgeführt. Offene Fugen, Steckdosen gegenüber auf beiden Seiten oder eine undichte Tür können den Unterschied zwischen zwei Plattenarten leicht überdecken.",
+      ] },
+      { title: "Prüfwert und Baustelle unterscheiden", paragraphs: [
+        "Ein bewertetes Schalldämmmaß aus dem Datenblatt beschreibt die Wand im Prüfstand. Im Gebäude kommen Flanken, Anschlüsse und Ausführungsqualität hinzu. Das tatsächliche Ergebnis kann deshalb vom Datenblattwert abweichen.",
+        "Wo ein bestimmter Schallschutz verbindlich nachgewiesen werden muss, gehört die Planung in fachkundige Hände. Diese Seite nennt bewusst keine dB-Werte für Gipsfaser oder Zementbauplatte, weil solche Zahlen ohne den vollständigen Aufbau irreführend wären.",
+      ] },
+      { title: "Mengen rechnen und Angebote vergleichen", paragraphs: [
+        "Bei Schallschutzwänden sind zwei Lagen je Seite häufig Teil des Systems. Damit vervielfacht sich die Plattenfläche gegenüber der Wandfläche. Dazu kommen Dämmung, Profile, Dichtungsband und Befestiger, die zum geprüften Aufbau passen müssen.",
+        "Lass dir für beide Plattenarten ein Angebot mit Systembezeichnung, Lagen, Ständerwerk, Dämmung und Anschlussdetails geben. Nur wenn beide Angebote dasselbe Schutzziel nachweisen, ist ein Preisvergleich aussagekräftig.",
+      ] },
+    ],
+    comparison: { caption: "Schallschutz hängt am System, nicht an der Platte", columns: ["Prüfpunkt", "Gipsfaserplatte", "Zementbauplatte"], rows: [
+      ["Hauptzweck der Platte", "Allgemeiner Innenausbau, auch Schallschutzsysteme", "Vor allem Feucht- und Nassbereiche"],
+      ["Geprüfter Schallwert", "Rw des konkreten Systems in den Unterlagen suchen", "Prüfen, ob für den Aufbau überhaupt ein Rw vorliegt"],
+      ["Ständerwerk und Dämmung", "Exakt nach Systembeschreibung ausführen", "Exakt nach Systembeschreibung ausführen"],
+      ["Anschlüsse und Flanken", "Randanschlüsse und angrenzende Bauteile prüfen", "Randanschlüsse und angrenzende Bauteile prüfen"],
+      ["Mengen", "Lagen je Seite vollständig rechnen", "Lagen, Gewicht und Systemzubehör rechnen"],
+    ] },
+    checklist: [
+      "Schutzziel und gegebenenfalls verbindliche Anforderung festhalten.",
+      "Ein geprüftes Wandsystem mit dokumentiertem Rw für das Ziel auswählen.",
+      "Ständerwerk, Lagen und Dämmung genau nach Systembeschreibung übernehmen.",
+      "Angrenzende Decke, Boden und Außenwand auf Flankenübertragung prüfen.",
+      "Randanschlüsse, Fugen und Dichtungsband im Angebot ausweisen lassen.",
+      "Steckdosen nicht gegenüberliegend planen und Durchdringungen klären.",
+      "Plattenfläche je Seite und Lage getrennt rechnen.",
+    ],
+    faqs: [
+      { question: "Dämmt Gipsfaser besser als eine Zementbauplatte?", answer: "Das lässt sich pauschal nicht sagen. Maßgeblich ist der geprüfte Wert des vollständigen Wandsystems mit Ständerwerk, Lagen, Dämmung und Anschlüssen. Vergleiche Systemwerte, nicht Plattennamen." },
+      { question: "Erreicht meine Wand den Rw-Wert aus dem Datenblatt?", answer: "Nicht automatisch. Der Wert gilt für den Prüfaufbau. Flankenübertragung, Anschlüsse, Dosen und Ausführung können das Ergebnis im Gebäude verschlechtern." },
+      { question: "Reicht eine zweite Plattenlage für deutlich mehr Schallschutz?", answer: "Eine weitere Lage kann helfen, wenn sie zu einem geprüften System gehört. Ohne passende Unterkonstruktion, Dämmung und dichte Anschlüsse bleibt die Wirkung unsicher." },
+    ],
+    example: { title: "Eine Trennwand mit zwei Lagen je Seite", intro: "Die Rechnung zeigt den Materialrahmen, nicht den erreichbaren Schallschutz.", steps: [
+      { label: "Wandfläche", value: "4,00 m × 2,60 m = 10,40 m² je Seite" },
+      { label: "Plattenfläche", value: "10,40 m² × 2 Seiten × 2 Lagen = 41,60 m²" },
+      { label: "Randanschluss", value: "2 × 4,00 m + 2 × 2,60 m = 13,20 m Anschlusslänge" },
+      { label: "Durchdringungen", value: "3 Steckdosen, versetzt zur Gegenseite planen" },
+      { label: "Noch offen", value: "System, Rw-Nachweis, Dämmung, Flanken und Verschnitt" },
+    ], result: "41,60 m² Plattenfläche und 13,20 m Randanschluss vor Verschnitt, unabhängig von der Plattenart.", note: "Aus Fläche und Lagenzahl lässt sich kein Schallschutzwert ableiten." },
+    limitation: "Die Seite nennt keine Schallschutzwerte und gibt keinen Wandaufbau frei. Verbindliche Anforderungen und das gewählte System müssen anhand der aktuellen Herstellerunterlagen fachlich geprüft werden.",
+    sources: [
+      { label: "Metallständerwände und Systemdaten", href: "https://knauf.com/de-DE/systeme/trockenbausysteme/w11-de-metallstaenderwaende", publisher: "Knauf", note: "Systemübersicht mit Schallschutzangaben für vollständige Wandaufbauten." },
+      { label: "Trockenbaulösungen mit Gipsfaser", href: "https://www.fermacell.com/de-de/loesungen/trockenbau", publisher: "fermacell", note: "Herstellerübersicht zu Gipsfaserplatten im Trockenbau einschließlich Schallschutz." },
+      { label: "Powerpanel H2O", href: "https://www.fermacell.com/de-de/produkte/zementplatten/powerpanel-h2o", publisher: "fermacell", note: "Produktangaben zu einer zementgebundenen Platte für Feucht- und Nassbereiche." },
+    ],
+    relatedLinks: [
+      { label: "Schallschutzwand planen", href: "/ratgeber/trockenbau-schallschutzwand/", description: "Profile, Dämmung, Lagen und Anschlüsse einer Schallschutzwand einordnen." },
+      { label: "Trockenbauplatten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Plattenfläche nach Seiten, Lagen und Format mit eigenen Maßen rechnen." },
+      { label: "Einfach oder doppelt beplankt", href: "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", description: "Die Zahl der Plattenlagen als Teil des Systems betrachten." },
     ],
   } as T;
 }

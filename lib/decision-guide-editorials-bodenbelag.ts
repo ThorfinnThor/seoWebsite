@@ -6,6 +6,7 @@ type EditorialGuide = SeoGuide & { indexingApproval?: ProgrammaticIndexApproval 
 export function applyBodenbelagEditorial<T extends EditorialGuide>(guide: T): T {
   if (guide.slug === "bodenbelag-laminat-oder-klickvinyl-kinderzimmer") return childrensRoom(guide);
   if (guide.slug === "bodenbelag-fertigparkett-oder-linoleum-langfristige-nutzung") return longTermFloor(guide);
+  if (guide.slug === "bodenbelag-laminat-oder-klickvinyl-fussbodenheizung") return floorHeating(guide);
   return guide;
 }
 
@@ -183,6 +184,103 @@ function longTermFloor<T extends EditorialGuide>(guide: T): T {
       { label: "Bodenbelag berechnen", href: "/haus/boden/bodenbelag-rechner/", description: "Fläche und Materialbedarf mit eigenen Maßen bestimmen." },
       { label: "Untergrund und Trittschall", href: "/haus/boden/untergrund-trittschall/", description: "Den Aufbau unter beiden Belägen prüfen." },
       { label: "Bodenbelag für Wohnräume", href: "/ratgeber/bodenbelag-laminat-oder-vinyl/", description: "Weitere Materialfragen für die Raumnutzung einordnen." },
+    ],
+  } as T;
+}
+
+function floorHeating<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-10-23",
+      canonicalPath: "/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-fussbodenheizung/",
+      primaryIntent: "Laminat und Klickvinyl auf einer Fußbodenheizung anhand von Wärmedurchlasswiderstand, Heizsystemfreigabe, Oberflächentemperatur, Unterlage und Estrichvorbereitung vergleichen.",
+      distinctValue: "Die Seite stellt beide Beläge mit derselben Prüfreihenfolge gegenüber, rechnet den Wärmedurchlasswiderstand aus Belag und Unterlage mit gekennzeichneten Beispielwerten nach und trennt Freigaben für Warmwasser- und elektrische Heizung, statt nur ein einzelnes Material zu beschreiben.",
+      overlapReview: ["/ratgeber/laminat-auf-fussbodenheizung/", "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/", "/ratgeber/bodenbelag-laminat-oder-vinyl/"],
+    },
+    title: "Laminat oder Klickvinyl auf Fußbodenheizung",
+    heading: "Laminat oder Klickvinyl auf Fußbodenheizung",
+    description: "Laminat oder Klickvinyl auf Fußbodenheizung? Wärmedurchlasswiderstand addieren, Heizsystemfreigabe, Oberflächentemperatur, Unterlage und Estrich prüfen.",
+    intro: "Auf einer Fußbodenheizung muss der Boden Wärme nach oben durchlassen und zugleich Temperaturwechsel vertragen. Ob Laminat oder Klickvinyl besser passt, entscheidet deshalb nicht die Materialgruppe, sondern der freigegebene Aufbau aus Belag, Unterlage und Estrich.",
+    takeaway: "Addiere die Wärmedurchlasswiderstände von Belag und Unterlage aus den Datenblättern und gleiche die Summe mit der Heizungsplanung ab. Prüfe außerdem, ob das Produkt für dein Heizsystem freigegeben ist, welche Oberflächentemperatur gilt und ob der Estrich belegreif ist. Erst dann lohnt sich der Vergleich von Optik und Preis.",
+    sections: [
+      { title: "Den Aufbau statt der Diele vergleichen", paragraphs: [
+        "Zwischen Heizrohr und Raumluft liegen Estrich, gegebenenfalls eine Folie, die Trittschallunterlage und der Belag. Jede Schicht bremst den Wärmestrom ein wenig. Eine Diele, die allein gut abschneidet, kann mit einer ungeeigneten Unterlage trotzdem einen zu trägen Aufbau ergeben.",
+        "Lege deshalb für Laminat und Klickvinyl je einen vollständigen Aufbau fest: genaue Produktbezeichnung, Unterlage, Folie und Verlegeart. Nur diese Kombinationen lassen sich sinnvoll vergleichen. Eine Aussage wie für Fußbodenheizung geeignet auf der Verpackung reicht als Grundlage nicht aus.",
+      ] },
+      { title: "Wärmedurchlasswiderstand: Belag und Unterlage addieren", paragraphs: [
+        "Der Wärmedurchlasswiderstand R wird in m²K/W angegeben. Je kleiner der Wert, desto leichter kommt die Wärme durch. Für den Bodenaufbau werden die R-Werte der übereinanderliegenden Schichten addiert, also mindestens Belag und Trittschallunterlage, bei Bedarf auch eine separate Dampfbremse.",
+        "Häufig wird für Bodenbelag einschließlich Unterlage eine Obergrenze von 0,15 m²K/W genannt. Dieser Wert geht auf die Auslegung von Warmwasser-Fußbodenheizungen nach DIN EN 1264 zurück. Welcher Wert für deine Anlage gilt, hängt von der Heizungsplanung ab. Maßgeblich sind die Herstellerdaten von Belag und Unterlage und die Auslegung deines Heizungsplaners.",
+      ] },
+      { title: "Was Laminat und Klickvinyl dabei unterscheidet", paragraphs: [
+        "Laminat hat einen Träger aus Holzwerkstoff und ist meist dicker als viele Klickvinylprodukte. Das führt oft zu einem etwas höheren R-Wert der Diele, ist aber keine feste Regel. Entscheidend sind die Werte im Datenblatt des konkreten Produkts, nicht die Materialbezeichnung.",
+        "Klickvinyl ist thermoplastisch und kann auf Wärme mit Längenänderung reagieren. Ausführungen mit mineralischem oder starrem Kern verhalten sich anders als flexible Varianten. Für beide Materialgruppen beschreiben die Hersteller, welche Temperaturen, Flächengrößen und Unterlagen zulässig sind.",
+      ] },
+      { title: "Warmwasser oder elektrisch: Die Freigabe unterscheidet", paragraphs: [
+        "Viele Verlegeanleitungen beziehen sich ausdrücklich auf Warmwasser-Fußbodenheizungen im Estrich. Für elektrische Heizsysteme, etwa dünne Heizmatten oder Heizfolien direkt unter dem Belag, gelten oft gesonderte Bedingungen oder es fehlt eine Freigabe. Elektrische Systeme können lokal höhere Temperaturen erzeugen.",
+        "Frage beim Hersteller nach, ob der Belag für dein konkretes Heizsystem freigegeben ist, und lass dir das schriftlich bestätigen. Das gilt auch für die Unterlage. Prüfe außerdem, ob die Anlage kühlen kann. Für Kühlung über den Boden machen manche Hersteller zusätzliche Vorgaben oder schließen sie aus.",
+      ] },
+      { title: "Maximale Oberflächentemperatur einhalten", paragraphs: [
+        "Hersteller nennen für ihre Beläge eine höchstzulässige Oberflächentemperatur. Häufig liegt der genannte Wert um 27 °C, er kann aber abweichen. Diese Temperatur gilt an der Oberseite des Bodens, nicht als Vorlauftemperatur der Heizung, und sollte auch unter Teppichen oder Möbeln nicht überschritten werden.",
+        "Wenn Laminat und Klickvinyl unterschiedliche Grenzwerte haben, gilt für deine Entscheidung der jeweils niedrigere als Planungsrahmen. Kläre mit dem Heizungsbauer, ob Vorlauftemperatur und Regelung diese Grenze sicher einhalten. Schnelle, große Temperatursprünge können bei beiden Belägen Fugen und Spannungen begünstigen.",
+      ] },
+      { title: "Die passende Unterlage wählen", paragraphs: [
+        "Die Unterlage soll Trittschall dämpfen und kleine Unebenheiten aufnehmen, darf die Wärme aber nicht stark bremsen. Dicke, weiche Dämmunterlagen haben oft einen höheren R-Wert. Für Fußbodenheizung bieten Hersteller eigene Unterlagen mit niedrigem Wärmedurchlasswiderstand an.",
+        "Bei Klickvinyl ist die Unterlage oft bereits auf der Diele kaschiert. Eine zusätzliche Schicht kann dann den Widerstand erhöhen und die Klickverbindung überlasten. Auf mineralischem Estrich verlangen viele Anleitungen eine Dampfbremse. Ob sie separat verlegt wird oder in der Unterlage enthalten ist, steht in der Herstellerangabe.",
+      ] },
+      { title: "Estrich: Aufheizprotokoll und CM-Messung", paragraphs: [
+        "Ein neuer Heizestrich muss vor dem Verlegen nach Plan aufgeheizt und wieder abgekühlt werden. Dieser Ablauf wird in einem Aufheizprotokoll festgehalten. Das Protokoll ersetzt keine Feuchtemessung, es dokumentiert nur, dass die Heizung den Estrich kontrolliert getrocknet hat.",
+        "Die Restfeuchte wird üblicherweise mit der CM-Methode an vorbereiteten Messstellen bestimmt, damit die Heizrohre nicht beschädigt werden. Für beheizten Zementestrich wird häufig 1,8 CM-% genannt, für Calciumsulfatestrich 0,3 CM-%. Welche Werte für dein Produkt gelten, regeln Hersteller und Fachleute für den konkreten Estrich.",
+      ] },
+      { title: "Dehnfugen, Randfugen und Heizkreise", paragraphs: [
+        "Beide Beläge brauchen eine Randfuge zu Wänden, Rohren und Türzargen, damit sie sich bei Temperaturwechsel bewegen können. Die nötige Breite und die maximale Fläche ohne Bewegungsfuge stehen in der Verlegeanleitung. Bei Klickvinyl können die Grenzen wegen der Wärmeausdehnung anders ausfallen als bei Laminat.",
+        "Bewegungsfugen im Estrich, etwa zwischen getrennten Heizkreisen oder an Türdurchgängen, sollten im Belag übernommen werden. Ein schwimmend verlegter Boden darf außerdem nicht durch schwere Einbauten wie eine Küchenzeile festgeklemmt werden. Plane Übergangsprofile deshalb schon bei der Materialbestellung mit.",
+      ] },
+      { title: "Die Entscheidung am Datenblatt festmachen", paragraphs: [
+        "Lege die Datenblätter beider Kandidaten nebeneinander und trage für jede Variante dieselben Punkte ein: R-Wert von Belag und Unterlage, Summe, Freigabe für dein Heizsystem, maximale Oberflächentemperatur, zulässige Feldgröße und Anforderungen an den Estrich.",
+        "Fehlt eine dieser Angaben, ist die Variante noch nicht entscheidungsreif. Erst wenn beide Aufbauten die technischen Bedingungen erfüllen, sind Optik, Oberfläche, Geräusch beim Begehen und Preis die passenden Unterscheidungsmerkmale.",
+      ] },
+    ],
+    comparison: { caption: "Was auf Fußbodenheizung für beide Beläge belegt sein sollte", columns: ["Prüffrage", "Laminat", "Klickvinyl"], rows: [
+      ["Wärmedurchlasswiderstand", "R-Wert von Diele und Unterlage addieren", "R-Wert von Diele und gegebenenfalls kaschierter Unterlage addieren"],
+      ["Heizsystem", "Freigabe für Warmwasser oder elektrisch prüfen", "Freigabe für Warmwasser oder elektrisch prüfen"],
+      ["Oberflächentemperatur", "Höchstwert laut Hersteller einhalten", "Höchstwert laut Hersteller einhalten, Wärmeausdehnung beachten"],
+      ["Unterlage", "Für Fußbodenheizung freigegebene Unterlage und Dampfbremse", "Zusätzliche Unterlage nur, wenn ausdrücklich erlaubt"],
+      ["Estrich", "Aufheizprotokoll und CM-Messung vorlegen lassen", "Aufheizprotokoll und CM-Messung vorlegen lassen"],
+      ["Fugen", "Randfuge und Feldgrößen nach Anleitung", "Randfuge und Feldgrößen nach Anleitung, oft temperaturabhängig"],
+    ] },
+    checklist: [
+      "Heizsystem bestimmen: Warmwasser im Estrich oder elektrische Heizung, mit oder ohne Kühlfunktion.",
+      "Für beide Kandidaten die R-Werte von Belag und Unterlage aus dem Datenblatt notieren und addieren.",
+      "Die Summe mit der Heizungsplanung und dem häufig genannten Rahmen von 0,15 m²K/W abgleichen.",
+      "Schriftliche Freigabe des Herstellers für das konkrete Heizsystem einholen.",
+      "Maximale Oberflächentemperatur mit Vorlauftemperatur und Regelung abstimmen.",
+      "Aufheizprotokoll und CM-Messung des Estrichs vor der Verlegung prüfen.",
+      "Bewegungsfugen des Estrichs, Randfugen und maximale Feldgrößen in den Verlegeplan übernehmen.",
+    ],
+    faqs: [
+      { question: "Ist Klickvinyl auf Fußbodenheizung immer besser als Laminat?", answer: "Nein. Klickvinyl ist oft dünner und hat dann einen niedrigeren R-Wert, reagiert aber stärker auf Temperatur. Laminat kann ebenso passen, wenn der gesamte Aufbau freigegeben ist und die Summe der Widerstände zur Heizungsplanung passt." },
+      { question: "Gilt der Grenzwert von 0,15 m²K/W nur für den Belag?", answer: "Der Wert wird üblicherweise für Bodenbelag einschließlich Unterlage genannt. Rechne deshalb beide Schichten zusammen und frage bei deiner Heizungsplanung nach, welcher Wert für deine Anlage angesetzt wurde." },
+      { question: "Darf ich Laminat oder Klickvinyl auf eine elektrische Fußbodenheizung legen?", answer: "Nur, wenn Hersteller von Belag und Heizsystem diese Kombination ausdrücklich freigeben. Viele Freigaben beziehen sich auf Warmwasser-Fußbodenheizungen im Estrich." },
+      { question: "Reicht das Aufheizprotokoll als Nachweis der Belegreife?", answer: "Nein. Es dokumentiert den Heizvorgang. Die Restfeuchte sollte zusätzlich gemessen werden, üblicherweise mit der CM-Methode an vorgesehenen Messstellen." },
+    ],
+    example: { title: "Wärmedurchlasswiderstand zweier Aufbauten addieren", intro: "Alle Zahlen sind Beispielwerte, Datenblatt prüfen. Sie zeigen nur den Rechenweg und gehören keinem bestimmten Produkt.", steps: [
+      { label: "Laminat, Beispielwert", value: "Diele 0,055 m²K/W + Unterlage 0,045 m²K/W = 0,100 m²K/W" },
+      { label: "Klickvinyl, Beispielwert", value: "Diele mit kaschierter Unterlage 0,035 m²K/W + Dampfbremse 0,005 m²K/W = 0,040 m²K/W" },
+      { label: "Abgleich mit häufig genanntem Rahmen", value: "0,100 und 0,040 liegen unter 0,15 m²K/W" },
+      { label: "Gegenprobe: zweite Unterlage beim Laminat", value: "0,100 m²K/W + 0,045 m²K/W = 0,145 m²K/W, kaum noch Reserve" },
+      { label: "Gegenprobe: dicke Dämmunterlage", value: "0,055 m²K/W + 0,100 m²K/W = 0,155 m²K/W, über 0,15 m²K/W" },
+    ], result: "Mit diesen Beispielwerten liegen beide Grundaufbauten im Rahmen, die Wahl der Unterlage kann den Laminataufbau aber über die Grenze schieben.", note: "Beispielwerte, Datenblatt prüfen. Der für deine Anlage zulässige Wert ergibt sich aus Heizungsplanung und Herstellerangaben." },
+    limitation: "Die Seite ersetzt keine Heizungsplanung, keine Freigabe durch den Hersteller und keine Prüfung des Estrichs durch Fachleute. Grenzwerte und Messverfahren für den konkreten Aufbau legen Hersteller und Fachbetrieb fest.",
+    sources: [
+      { label: "Informationen zu Laminat und Verlegung", href: "https://eplf.com/de/infomaterial-zu-laminat", publisher: "Verband der Europäischen Laminatbodenhersteller", note: "Technische Merkblätter zu Unterlagen, Untergrund und Laminat auf Fußbodenheizung." },
+      { label: "Standards für modulare Bodenbeläge", href: "https://mmfa.eu/en/products/installation/standards/", publisher: "MMFA", note: "Normen- und Merkblattübersicht für mehrschichtige modulare Bodenbeläge und Fußbodenheizung." },
+    ],
+    relatedLinks: [
+      { label: "Laminat auf Fußbodenheizung", href: "/ratgeber/laminat-auf-fussbodenheizung/", description: "Aufbau und Materialbedarf speziell für Laminat planen." },
+      { label: "Freigaben in Produktdaten", href: "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/", description: "Wie oft Bodenbeläge für Fußbodenheizung dokumentiert sind." },
+      { label: "Untergrund und Trittschall", href: "/haus/boden/untergrund-trittschall/", description: "Estrich, Feuchte und Unterlage vor der Verlegung prüfen." },
+      { label: "Bodenbelag berechnen", href: "/haus/boden/bodenbelag-rechner/", description: "Fläche, Verschnitt und Paketbedarf mit eigenen Werten bestimmen." },
     ],
   } as T;
 }

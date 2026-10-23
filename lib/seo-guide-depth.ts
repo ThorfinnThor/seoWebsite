@@ -40,6 +40,8 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { label: "Gartenhaus-Größe bestimmen", href: "/garten/gartenhaus-groesse/", description: "Lagergut, Bewegungsfläche und Türbreite in eine Mindestfläche übersetzen." },
       { label: "Gartenhaus-Boden planen", href: "/garten/gartenhaus-boden/", description: "Bodenoption, Unterlüftung und Feuchteschutz vor der Auswahl klären." },
       { label: "Gartenhaus-Planer", href: "/garten/gartenhaus-planer/", description: "Dein konkretes Projekt in nachvollziehbare Auswahlkriterien überführen." },
+      { label: "Metall oder WPC für viele Jahre", href: "/ratgeber/vergleiche/gartenhaus/gartenhaus-metall-oder-wpc-langfristige-nutzung/", description: "Korrosion, Kondensat, Fundament und Ersatzteile für eine lange Nutzungsdauer gegenüberstellen." },
+      { label: "Metall oder Kunststoff mit wenig Pflege", href: "/ratgeber/vergleiche/gartenhaus/gartenhaus-metall-oder-kunststoff-wenig-pflege/", description: "Prüfen, welcher Pflegeaufwand nach Standort, Wind und Belüftung tatsächlich bleibt." },
     ],
   },
   "gartenhaus-mit-boden-worauf-achten": {
@@ -202,6 +204,7 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { label: "Terrassendielen berechnen", href: "/garten/terrassen-dielen-rechner/", description: "Reihen, Laufmeter, Lieferdielen und Unterkonstruktion ermitteln." },
       { label: "Verschnitt und Fugen", href: "/garten/terrassendielen-verschnitt-fugen/", description: "Materialreserve aus Format, Lieferlänge und Verlegeplan ableiten." },
       { label: "Unterkonstruktion planen", href: "/garten/terrasse-unterkonstruktion/", description: "Auflager, Stöße, Randbereiche und Aufbauhöhe vor der Bestellung klären." },
+      { label: "Lärche oder WPC-Hohlkammer auf 20 m²", href: "/ratgeber/vergleiche/terrasse/terrasse-laerche-oder-wpc-hohlkammer-20-qm/", description: "Beide Beläge an einer konkreten 20-m²-Terrasse mit Dielenmenge und Unterbau durchrechnen." },
     ],
   },
   "terrasse-kosten-materialvergleich": {
@@ -299,6 +302,7 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { label: "Gewächshaus-Größe", href: "/garten/gewaechshaus-groesse/", description: "Beete, Wege und Arbeitsfläche in eine sinnvolle Grundfläche übersetzen." },
       { label: "Lüftung planen", href: "/garten/gewaechshaus-belueftung/", description: "Dachfenster, Tür und automatische Öffner als Gesamtsystem betrachten." },
       { label: "Gewächshaus-Planer", href: "/garten/gewaechshaus-planer/", description: "Innenaufteilung, Basisprofile und Regenwasserrahmen berechnen." },
+      { label: "Blankglas oder Sicherheitsglas im kleinen Garten", href: "/ratgeber/vergleiche/gewaechshaus/gewaechshaus-blankglas-oder-sicherheitsglas-kleiner-garten/", description: "Bruchverhalten, Kinder, Hagel und Fundament bei der Glaswahl abwägen." },
     ],
   },
   "carport-holz-oder-aluminium": {
@@ -428,6 +432,8 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { label: "Trockenbau-Rechner", href: "/haus/innenausbau/trockenbau-rechner/", description: "Platten, Lagen, Profile und Dämmfläche als Mengenrahmen berechnen." },
       { label: "Trockenbauplatten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Öffnungen, Plattenformat und Verschnitt nachvollziehbar berücksichtigen." },
       { label: "Profile und Ständerwerk", href: "/haus/innenausbau/trockenbau-profile-staenderwerk/", description: "Grundraster, Randprofile und zusätzliche Ständer getrennt planen." },
+      { label: "Installationswand: Gipskarton oder OSB mit Gips", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/", description: "Leitungen, Dosen und Anbauteile vor der Plattenwahl festlegen." },
+      { label: "Schallschutz: Gipsfaser oder Zementbauplatte", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipsfaser-oder-zementbauplatte-schallschutz/", description: "Warum das geprüfte Wandsystem mehr zählt als der Plattenname." },
     ],
   },
 };
