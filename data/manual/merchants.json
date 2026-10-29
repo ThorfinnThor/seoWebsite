@@ -48,8 +48,8 @@
       "awinAdvertiserId": 69012,
       "profileUrl": "https://ui.awin.com/merchant-profile/69012",
       "applicationPriority": 4,
-      "applicationStatus": "active",
-      "enabled": true,
+      "applicationStatus": "paused",
+      "enabled": false,
       "verticals": ["flooring"],
       "plannerIds": ["flooring"],
       "country": "DE"

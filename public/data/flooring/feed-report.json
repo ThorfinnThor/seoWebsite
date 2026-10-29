@@ -11,24 +11,23 @@
     "unknown-installation": 1719
   },
   "linkVerification": {
-    "verified": 100
+    "verified": 98
   },
   "merchants": {
     "Globus Baumarkt DE": 92,
-    "LaminatDEPOT DE": 2,
     "Woodstore24 DE/AT": 6
   },
   "normalizedProducts": 2195,
-  "offers": 100,
+  "offers": 98,
   "priceStatsEur": {
     "max": 297.06,
     "median": 65.26,
     "min": 19.74
   },
   "productsWithoutOffers": 0,
-  "publishedProducts": 100,
+  "publishedProducts": 98,
   "quarantinedProducts": 0,
-  "reviewedProducts": 100,
+  "reviewedProducts": 98,
   "reviewQueue": 2266,
   "rows": 175104,
   "schemaVersion": 1,

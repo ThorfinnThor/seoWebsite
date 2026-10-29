@@ -1660,40 +1660,6 @@
       "priceEur": 36.63,
       "productId": "gtin:4262445635933",
       "updatedAt": "2026-09-18T07:24:47.883Z"
-    },
-    {
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44988021368&a=3037577&m=69012",
-      "available": true,
-      "deliveryCostEur": 19.99,
-      "deliveryCostStatus": "known",
-      "id": "offer:69012:100032252",
-      "imageUrl": "https://laminatdepot.imgix.net/INTERSHOP/static/WFS/LaminatDEPOT-ConsumerDE-Site/-/LaminatDEPOT/de_DE//2025061612/100032252_30KN04_LaminatDEPOT_1.jpg?auto=format&w=1300&h=1300&fit=crop",
-      "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-18T07:24:49.317Z",
-      "merchantId": "69012",
-      "merchantName": "LaminatDEPOT DE",
-      "merchantProductId": "100032252",
-      "merchantUrl": "https://laminatdepot.de/30kn04-100032252",
-      "priceEur": 32.96,
-      "productId": "gtin:4032271222467",
-      "updatedAt": "2026-09-18T07:24:48.346Z"
-    },
-    {
-      "affiliateUrl": "https://www.awin1.com/pclick.php?p=44988021388&a=3037577&m=69012",
-      "available": true,
-      "deliveryCostEur": 19.99,
-      "deliveryCostStatus": "known",
-      "id": "offer:69012:100032900",
-      "imageUrl": "https://laminatdepot.imgix.net/INTERSHOP/static/WFS/LaminatDEPOT-ConsumerDE-Site/-/LaminatDEPOT/de_DE//2026043007/100032900_Atlas Natur_LaminatDEPOT_1.jpg?auto=format&w=1300&h=1300&fit=crop",
-      "linkVerificationStatus": "verified",
-      "linkVerifiedAt": "2026-09-18T07:24:49.317Z",
-      "merchantId": "69012",
-      "merchantName": "LaminatDEPOT DE",
-      "merchantProductId": "100032900",
-      "merchantUrl": "https://laminatdepot.de/atlas-natur-100032900",
-      "priceEur": 73.24,
-      "productId": "gtin:4262525144379",
-      "updatedAt": "2026-09-18T07:24:48.420Z"
     }
   ],
   "products": [
@@ -2687,23 +2653,6 @@
       "wetRoomApproved": true
     },
     {
-      "brand": "kiwi now",
-      "dataQuality": "curated",
-      "floorHeatingApproved": true,
-      "flooringType": "laminate",
-      "gtin": "4032271222467",
-      "id": "gtin:4032271222467",
-      "installation": "click",
-      "name": "Laminat kiwi now 30KN04",
-      "packageCoverageM2": 2.397,
-      "plankLengthMm": 1380,
-      "plankWidthMm": 193,
-      "reviewed": true,
-      "sourceUpdatedAt": "2026-09-18T07:24:48.346Z",
-      "thicknessMm": 5.5,
-      "wetRoomApproved": true
-    },
-    {
       "brand": "Krono Original",
       "dataQuality": "curated",
       "floorHeatingApproved": true,
@@ -3148,24 +3097,6 @@
       "reviewed": true,
       "sourceUpdatedAt": "2026-09-18T07:24:47.883Z",
       "thicknessMm": 12
-    },
-    {
-      "brand": "BoDomo",
-      "dataQuality": "curated",
-      "floorHeatingApproved": true,
-      "flooringType": "vinyl-click",
-      "gtin": "4262525144379",
-      "id": "gtin:4262525144379",
-      "installation": "click",
-      "name": "Klick-Vinyl Atlas Natur",
-      "packageCoverageM2": 2.22,
-      "plankLengthMm": 1218,
-      "plankWidthMm": 228,
-      "reviewed": true,
-      "sourceUpdatedAt": "2026-09-18T07:24:48.420Z",
-      "thicknessMm": 5,
-      "wearLayerMm": 0.4,
-      "wetRoomApproved": true
     },
     {
       "brand": "Decoflooring",
