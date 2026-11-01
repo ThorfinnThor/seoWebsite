@@ -4,7 +4,7 @@ import { DATA_REPORTS } from "@/lib/data-report/registry";
 
 describe("segmented sitemap inventory", () => {
   it("covers every indexable URL exactly once", () => {
-    expect(ALL_SITEMAP_ENTRIES).toHaveLength(188 + DATA_REPORTS.length);
+    expect(ALL_SITEMAP_ENTRIES).toHaveLength(192 + DATA_REPORTS.length);
     expect(new Set(ALL_SITEMAP_ENTRIES.map((entry) => entry.url)).size).toBe(ALL_SITEMAP_ENTRIES.length);
     expect(SITEMAP_SEGMENTS).toHaveLength(2);
   });
@@ -31,11 +31,15 @@ describe("segmented sitemap inventory", () => {
       "https://www.passendplanen.de/ratgeber/vergleiche/terrasse/terrasse-laerche-oder-wpc-hohlkammer-20-qm/",
       "https://www.passendplanen.de/ratgeber/vergleiche/gewaechshaus/gewaechshaus-blankglas-oder-sicherheitsglas-kleiner-garten/",
       "https://www.passendplanen.de/ratgeber/vergleiche/sichtschutz/sichtschutz-wpc-oder-aluminium-windige-lage/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-kueche/",
       "https://www.passendplanen.de/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-fussbodenheizung/",
       "https://www.passendplanen.de/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-kinderzimmer/",
       "https://www.passendplanen.de/ratgeber/vergleiche/bodenbelag/bodenbelag-fertigparkett-oder-linoleum-langfristige-nutzung/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-gipsfaser-badezimmer/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-schallschutz/",
       "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/",
       "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke/",
+      "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-zementbauplatte-badezimmer/",
       "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-gipsfaser-oder-zementbauplatte-schallschutz/",
       "https://www.passendplanen.de/ratgeber/vergleiche/trockenbau/trockenbau-osb-gips-oder-zementbauplatte-badezimmer/",
       "https://www.passendplanen.de/ratgeber/vergleiche/luftentfeuchter/luftentfeuchter-kompressor-oder-adsorption-keller-10-grad/",

@@ -7,6 +7,7 @@ export function applyBodenbelagEditorial<T extends EditorialGuide>(guide: T): T 
   if (guide.slug === "bodenbelag-laminat-oder-klickvinyl-kinderzimmer") return childrensRoom(guide);
   if (guide.slug === "bodenbelag-fertigparkett-oder-linoleum-langfristige-nutzung") return longTermFloor(guide);
   if (guide.slug === "bodenbelag-laminat-oder-klickvinyl-fussbodenheizung") return floorHeating(guide);
+  if (guide.slug === "bodenbelag-laminat-oder-klickvinyl-kueche") return kitchenFloor(guide);
   return guide;
 }
 
@@ -198,9 +199,9 @@ function floorHeating<T extends EditorialGuide>(guide: T): T {
       distinctValue: "Die Seite stellt beide Beläge mit derselben Prüfreihenfolge gegenüber, rechnet den Wärmedurchlasswiderstand aus Belag und Unterlage mit gekennzeichneten Beispielwerten nach und trennt Freigaben für Warmwasser- und elektrische Heizung, statt nur ein einzelnes Material zu beschreiben.",
       overlapReview: ["/ratgeber/laminat-auf-fussbodenheizung/", "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/", "/ratgeber/bodenbelag-laminat-oder-vinyl/"],
     },
-    title: "Laminat oder Klickvinyl auf Fußbodenheizung",
+    title: "Laminat oder Vinyl auf Fußbodenheizung? Eignung prüfen",
     heading: "Laminat oder Klickvinyl auf Fußbodenheizung",
-    description: "Laminat oder Klickvinyl auf Fußbodenheizung? Wärmedurchlasswiderstand addieren, Heizsystemfreigabe, Oberflächentemperatur, Unterlage und Estrich prüfen.",
+    description: "Ist Laminat oder Klickvinyl für Fußbodenheizung geeignet? Wärmewiderstand von Belag und Unterlage addieren, Freigabe, Oberflächentemperatur und Estrich prüfen.",
     intro: "Auf einer Fußbodenheizung muss der Boden Wärme nach oben durchlassen und zugleich Temperaturwechsel vertragen. Ob Laminat oder Klickvinyl besser passt, entscheidet deshalb nicht die Materialgruppe, sondern der freigegebene Aufbau aus Belag, Unterlage und Estrich.",
     takeaway: "Addiere die Wärmedurchlasswiderstände von Belag und Unterlage aus den Datenblättern und gleiche die Summe mit der Heizungsplanung ab. Prüfe außerdem, ob das Produkt für dein Heizsystem freigegeben ist, welche Oberflächentemperatur gilt und ob der Estrich belegreif ist. Erst dann lohnt sich der Vergleich von Optik und Preis.",
     sections: [
@@ -281,6 +282,106 @@ function floorHeating<T extends EditorialGuide>(guide: T): T {
       { label: "Freigaben in Produktdaten", href: "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/", description: "Wie oft Bodenbeläge für Fußbodenheizung dokumentiert sind." },
       { label: "Untergrund und Trittschall", href: "/haus/boden/untergrund-trittschall/", description: "Estrich, Feuchte und Unterlage vor der Verlegung prüfen." },
       { label: "Bodenbelag berechnen", href: "/haus/boden/bodenbelag-rechner/", description: "Fläche, Verschnitt und Paketbedarf mit eigenen Werten bestimmen." },
+    ],
+  } as T;
+}
+
+function kitchenFloor<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-11-01",
+      canonicalPath: "/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-kueche/",
+      primaryIntent: "Laminat und Klickvinyl für die Küche anhand von Wasser an Fugen und Kanten, Herstellerangaben zu Feuchte und Nutzungsklasse, Küchenzeile, Belastung, Reinigung und Übergängen vergleichen.",
+      distinctValue: "Die Seite legt beide Beläge an dieselben Küchenstellen wie Spüle, Spülmaschine und Sockelblende, trennt Datenblattangaben von Werbeaussagen und rechnet die Bestellmenge mit und ohne Fläche unter der Küchenzeile mit gekennzeichneten Beispielwerten nach.",
+      overlapReview: ["/ratgeber/bodenbelag-fuer-kueche/", "/ratgeber/bodenbelag-laminat-oder-vinyl/", "/ratgeber/vinyl-klick-oder-kleben/"],
+    },
+    title: "Laminat oder Vinyl in der Küche?",
+    heading: "Laminat oder Klickvinyl in der Küche",
+    description: "Laminat oder Vinyl in der Küche? Wasser an Fugen, Datenblatt, Küchenzeile, Stuhlrollen, Reinigung und Übergänge prüfen und Pakete richtig berechnen.",
+    intro: "In der Küche wird der Boden nass gewischt, bekommt Spritzer an der Spüle ab und muss fallende Töpfe, Stühle und eine schwere Küchenzeile aushalten. Ob Laminat oder Klickvinyl besser passt, hängt deshalb weniger von der Materialgruppe ab als vom konkreten Produkt und davon, wie es verlegt wird.",
+    takeaway: "Vergleiche zwei konkrete Produkte mit ihren Datenblättern. Entscheidend sind die Angaben zu Feuchte an Fugen und Kanten, die Nutzungsklasse, die Freigabe für die Küche und die Frage, ob die Küchenzeile auf oder vor dem Boden steht. Optik und Preis sind sinnvolle Unterscheidungsmerkmale, sobald beide Aufbauten diese Punkte erfüllen.",
+    sections: [
+      { title: "Wo in der Küche Wasser tatsächlich hinkommt", paragraphs: [
+        "Kritisch ist selten der kurze Spritzer, der sofort aufgewischt wird. Problematischer sind Stellen, an denen Wasser länger steht oder unbemerkt bleibt, etwa vor der Spüle, unter dem Geschirrspüler, am Kühlschrank mit Wasseranschluss oder hinter der Sockelblende. Notiere diese Zonen in einer einfachen Skizze, bevor du Produkte vergleichst.",
+        "Bei beiden Belägen sind Fugen, Schnittkanten und Randbereiche die empfindlichen Stellen. Wasser, das durch eine Klickverbindung nach unten läuft, erreicht Unterlage und Untergrund und kann dort länger bleiben als auf der Oberfläche. Ein Leck am Spülmaschinenanschluss ist deshalb ein eigener Planungsfall und kein normaler Reinigungsfall.",
+      ] },
+      { title: "Herstellerangaben zu Feuchte laut Datenblatt prüfen", paragraphs: [
+        "Laminat besteht meist aus einer Trägerplatte aus Holzwerkstoff, die auf Feuchte empfindlich reagieren kann. Es gibt Produkte, für die Hersteller eine erhöhte Feuchtebeständigkeit oder eine Eignung für Küchen angeben. Klickvinyl ist an der Oberfläche meist wasserunempfindlicher, doch auch hier unterscheiden sich Kernmaterial und Klickverbindung zwischen den Produkten.",
+        "Manche Hersteller werben mit einer Wasserresistenz oder einer zeitlich begrenzten Garantie gegen stehendes Wasser. Lies laut Datenblatt und Garantiebedingungen nach, was genau abgedeckt ist, wie lange Wasser stehen darf und ob die Zusage nur bei einer bestimmten Verlegung oder Fugenabdichtung gilt. Eine Aussage auf der Verpackung ersetzt diese Bedingungen nicht.",
+      ] },
+      { title: "Nutzungsklasse und Oberfläche für den Küchenalltag", paragraphs: [
+        "Die Nutzungsklasse beschreibt, für welche Beanspruchung ein Belag laut Hersteller vorgesehen ist. Eine Küche im Wohnbereich wird oft stärker begangen als ein Schlafzimmer, weil viele Wege an Herd, Spüle und Kühlschrank vorbeiführen. Vergleiche deshalb die angegebene Klasse beider Produkte für denselben Raum und nicht nur den Preis pro Quadratmeter.",
+        "Fallende Gegenstände wie ein Topf oder ein Messer belasten die Oberfläche punktuell. Wie empfindlich ein Produkt auf Stöße, Kratzer oder Druckstellen reagiert, steht nur teilweise im Datenblatt. Ein Musterstück, das du in der Küche ausprobierst, zeigt Glanzgrad, Rutschgefühl und Kratzbild deutlich besser als ein Foto.",
+      ] },
+      { title: "Küchenzeile auf oder vor dem Boden verlegen", paragraphs: [
+        "Laminat und viele Klickvinylprodukte werden schwimmend verlegt. Ein schwimmender Boden muss sich bewegen können und darf deshalb nicht durch schwere Einbauten festgeklemmt werden. Eine Küchenzeile mit Arbeitsplatte, Geräten und gefüllten Schränken wirkt wie eine Last, die genau diese Bewegung verhindern kann.",
+        "Viele Verlegeanleitungen sehen deshalb vor, die Küchenzeile auf den Rohboden zu stellen und den Belag bis vor die Schränke zu verlegen. Die Sockelblende deckt den Übergang ab, während dahinter eine Dehnfuge bleibt. Ob eine Verlegung unter der Küche erlaubt ist, hängt vom konkreten Produkt ab und sollte vor der Küchenmontage geklärt sein.",
+      ] },
+      { title: "Dehnfugen, Sockelblenden und spätere Reparatur", paragraphs: [
+        "Die Randfuge zu Wänden, Rohren und Küchensockel ist für beide Beläge nötig. Wie breit sie sein muss und ob sie an der Küche mit einer Profilleiste oder einer elastischen Fuge geschlossen wird, steht in der Verlegeanleitung. Eine starr verfüllte Fuge kann den Boden genauso einspannen wie ein aufgesetzter Schrank.",
+        "Denk auch an den Schadensfall. Steht die Küche auf dem Belag, muss sie für den Austausch einzelner Dielen oft teilweise abgebaut werden. Liegt der Boden nur bis vor die Sockelblende, bleibt der Austausch meist einfacher. Bewahre deshalb einige Ersatzdielen mit Produktbezeichnung und Chargennummer auf.",
+      ] },
+      { title: "Stuhlrollen, Barhocker und schwere Geräte", paragraphs: [
+        "Am Esstisch und an einer Kücheninsel werden Stühle und Barhocker täglich bewegt. Filzgleiter oder für harte Böden geeignete Rollen schützen beide Beläge. Bei Klickvinyl können punktuelle Lasten Eindrücke hinterlassen, bei Laminat eher Kratzer an der Oberfläche. Wie stark das ausfällt, hängt vom Produkt und nicht allein vom Material ab.",
+        "Kühlschrank, freistehender Herd oder ein Vorratsschrank stellen eine hohe Punktlast dar. Prüfe in den Herstellerangaben, ob es Hinweise zu Lasten auf schwimmend verlegten Böden gibt. Unterlegscheiben oder Möbelgleiter mit größerer Auflagefläche verteilen das Gewicht, ersetzen aber nicht die Freigabe für die geplante Nutzung.",
+      ] },
+      { title: "Reinigung ohne stehendes Wischwasser", paragraphs: [
+        "Für die Küche ist die tägliche Reinigung ein wichtiger Teil des Vergleichs. Beide Beläge werden meist nebelfeucht gewischt. Ein sehr nasser Wischmopp kann Wasser in die Fugen drücken, auch wenn die Oberfläche selbst unempfindlich ist. Lies in der Pflegeanleitung nach, welche Reinigungsmittel und welche Wassermenge zulässig sind.",
+        "Fett, Rotwein oder Kurkuma sollten schnell entfernt werden. Wie gut ein Fleck wieder herausgeht, hängt von der Oberflächenbeschichtung ab. Dampfreiniger sind bei vielen Produkten ausgeschlossen. Eine einfache Reinigung mit dem Musterstück, etwa mit einem typischen Küchenfleck, gibt dir einen ersten Eindruck vor dem Kauf.",
+      ] },
+      { title: "Übergänge zu Flur, Wohnraum und Fliesen", paragraphs: [
+        "In offenen Grundrissen geht die Küche oft ohne Tür in den Wohnraum über. Für beide Beläge gibt es eine maximale Feldgröße, ab der eine Bewegungsfuge nötig wird. Diese Fuge sollte an einer sinnvollen Stelle liegen, etwa im Türdurchgang oder an der Grenze zwischen Küche und Essbereich, und nicht mitten im Laufweg.",
+        "Grenzt die Küche an einen Fliesenboden, unterscheiden sich häufig die Aufbauhöhen. Ein Übergangsprofil gleicht Höhe und Bewegung aus. Miss deshalb die Gesamthöhe aus Unterlage und Belag beider Produkte und plane das passende Profil mit. Liegt in der Küche eine Fußbodenheizung, gelten zusätzliche Bedingungen, die ein eigener Vergleich ausführlicher behandelt.",
+      ] },
+      { title: "Fläche mit und ohne Küchenzeile rechnen", paragraphs: [
+        "Ob die Küchenzeile auf dem Boden steht, verändert die Bestellmenge. Steht sie auf dem Rohboden, wird ihre Grundfläche von der Raumfläche abgezogen. Wird unter der Küche verlegt, gilt die volle Fläche. Rechne beide Varianten mit demselben Verschnitt und denselben Paketgrößen, damit die Angebote vergleichbar bleiben.",
+        "Runde am Ende immer auf ganze Pakete auf. Der Verschnitt hängt von Raumform, Verlegerichtung und Dielenformat ab. Der Wert im Beispiel unten ist nur eine Annahme. Für eine Küche mit vielen Ecken, Rohren und Inseln kann mehr Verschnitt nötig sein als für einen rechteckigen Raum.",
+      ] },
+    ],
+    comparison: { caption: "Was in der Küche für beide Beläge belegt sein sollte", columns: ["Prüffrage", "Laminat", "Klickvinyl"], rows: [
+      ["Wasser an Fugen", "Feuchteangaben und Garantiebedingungen laut Datenblatt prüfen", "Wasserresistenz und Klickverbindung laut Datenblatt prüfen"],
+      ["Freigabe Küche", "Eignung für Küchen schriftlich bestätigen lassen", "Eignung für Küchen schriftlich bestätigen lassen"],
+      ["Küchenzeile", "Meist vor der Küche verlegen, Anleitung prüfen", "Meist vor der Küche verlegen, Anleitung prüfen"],
+      ["Belastung", "Kratzer und Stöße am Musterstück prüfen", "Eindrücke durch Punktlasten am Musterstück prüfen"],
+      ["Reinigung", "Nebelfeucht wischen, Pflegeanleitung beachten", "Nebelfeucht wischen, Pflegeanleitung beachten"],
+      ["Übergänge", "Feldgröße, Bewegungsfuge und Profilhöhe planen", "Feldgröße, Bewegungsfuge und Profilhöhe planen"],
+    ] },
+    checklist: [
+      "Spüle, Spülmaschine, Kühlschrank und andere Wasserzonen in einer Skizze markieren.",
+      "Für beide Produkte Feuchteangaben, Nutzungsklasse und Küchenfreigabe laut Datenblatt notieren.",
+      "Garantiebedingungen zu stehendem Wasser vollständig lesen.",
+      "Mit der Küchenplanung klären, ob die Küchenzeile auf dem Rohboden oder auf dem Belag steht.",
+      "Randfugen, Sockelblende und Bewegungsfugen in den Verlegeplan aufnehmen.",
+      "Übergangsprofile zu Fliesen und Nachbarräumen nach Aufbauhöhe auswählen.",
+      "Musterstück auf Kratzer, Flecken und Rutschgefühl in der Küche testen.",
+      "Fläche, Verschnitt und ganze Pakete für beide Verlegevarianten berechnen.",
+    ],
+    faqs: [
+      { question: "Ist Vinyl in der Küche immer besser als Laminat?", answer: "Nein. Klickvinyl ist an der Oberfläche oft wasserunempfindlicher, doch Fugen, Untergrund und Verlegung bleiben wichtig. Auch Laminat kann passen, wenn das konkrete Produkt laut Hersteller für Küchen geeignet ist." },
+      { question: "Darf ich die Küchenzeile auf Laminat oder Klickvinyl stellen?", answer: "Das hängt von der Verlegeanleitung des Produkts ab. Viele Hersteller empfehlen bei schwimmender Verlegung, die Küche auf den Rohboden zu stellen und den Belag bis vor die Sockelblende zu verlegen." },
+      { question: "Was bedeutet eine Garantie gegen stehendes Wasser?", answer: "Sie gilt nur unter den Bedingungen, die der Hersteller nennt, etwa für eine bestimmte Dauer und eine fachgerechte Verlegung. Lies die Garantiebedingungen vollständig, bevor du dich darauf verlässt." },
+      { question: "Brauche ich für die Küche eine andere Unterlage?", answer: "Die Unterlage muss für Belag und Untergrund freigegeben sein. Auf mineralischem Estrich verlangen viele Anleitungen eine Dampfbremse. Bei Klickvinyl mit kaschierter Unterlage ist eine zusätzliche Schicht oft nicht erlaubt." },
+    ],
+    example: { title: "Bestellmenge für eine Beispielküche", intro: "Alle Zahlen sind Beispielwerte. Raummaß, Küchenzeile, Verschnitt und Paketinhalt müssen durch eigene Maße und echte Produktdaten ersetzt werden.", steps: [
+      { label: "Küche, Beispielmaß", value: "4,20 m × 3,10 m = 13,02 m²" },
+      { label: "Küchenzeile auf Rohboden, Beispielmaß", value: "3,00 m × 0,60 m = 1,80 m²" },
+      { label: "Verlegefläche vor der Küche", value: "13,02 m² − 1,80 m² = 11,22 m²" },
+      { label: "Beispielhafter Verschnitt 10 Prozent", value: "11,22 m² × 1,10 = 12,34 m²" },
+      { label: "Beispielpaket 2,13 m²", value: "12,34 ÷ 2,13 = 5,79, aufgerundet 6 Pakete mit 12,78 m²" },
+      { label: "Gegenprobe mit Verlegung unter der Küche", value: "13,02 m² × 1,10 = 14,32 m², 14,32 ÷ 2,13 = 6,72, aufgerundet 7 Pakete mit 14,91 m²" },
+    ], result: "Mit diesen Beispielwerten spart die Verlegung vor der Küchenzeile ein Paket. Die Rechnung gilt für Laminat und Klickvinyl gleichermaßen.", note: "Ob unter der Küche verlegt werden darf, entscheidet die Verlegeanleitung des Produkts, nicht die Bestellmenge." },
+    limitation: "Die Seite ersetzt keine Prüfung des konkreten Produkts, keine Verlegeanleitung und keine Begutachtung des Untergrunds. Feuchtebeständigkeit, Garantien und Freigaben gelten nur so, wie sie der Hersteller für sein Produkt angibt.",
+    sources: [
+      { label: "Informationen zu Laminat und Verlegung", href: "https://eplf.com/de/infomaterial-zu-laminat", publisher: "Verband der Europäischen Laminatbodenhersteller", note: "Technische Merkblätter zu Untergrund, Unterlagen, Verlegung und Pflege von Laminat." },
+      { label: "Standards für modulare Bodenbeläge", href: "https://mmfa.eu/en/products/installation/standards/", publisher: "MMFA", note: "Normen- und Merkblattübersicht zu Verlegung und Anforderungen mehrschichtiger modularer Bodenbeläge." },
+    ],
+    relatedLinks: [
+      { label: "Bodenbelag berechnen", href: "/haus/boden/bodenbelag-rechner/", description: "Küchenfläche, Verschnitt und Paketbedarf mit eigenen Werten bestimmen." },
+      { label: "Bodenbelag für die Küche", href: "/ratgeber/bodenbelag-fuer-kueche/", description: "Weitere Belagsarten und den Küchenboden im Überblick planen." },
+      { label: "Laminat oder Klickvinyl auf Fußbodenheizung", href: "/ratgeber/vergleiche/bodenbelag/bodenbelag-laminat-oder-klickvinyl-fussbodenheizung/", description: "Wärmedurchlasswiderstand und Freigaben für beheizte Küchenböden prüfen." },
+      { label: "Untergrund und Trittschall", href: "/haus/boden/untergrund-trittschall/", description: "Estrich, Feuchte, Dampfbremse und Unterlage vor der Verlegung prüfen." },
+      { label: "Sockelleisten berechnen", href: "/haus/boden/sockelleisten-berechnen/", description: "Leisten und Abschlüsse für Wände und Küchensockel planen." },
     ],
   } as T;
 }
