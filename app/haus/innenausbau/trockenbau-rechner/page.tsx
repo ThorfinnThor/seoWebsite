@@ -9,8 +9,8 @@ import { TopicLinks } from "@/components/seo/TopicLinks";
 import { DrywallPlanner } from "./DrywallPlanner";
 
 export const metadata = createPageMetadata({
-  title: "Trockenbau-Rechner: kostenlose Kalkulation",
-  description: "Kostenlose Kalkulationshilfe für Trockenbau: Gipsplatten, CW- und UW-Profile, Dämmung und Verschnitt einer Trockenbauwand online berechnen. Mit Rechenweg.",
+  title: "Trockenbau-Rechner & Wandplaner: kostenlose Kalkulation",
+  description: "Trockenbauwand planen und kalkulieren: Gipsplatten, CW- und UW-Profile, Dämmung und Verschnitt kostenlos online berechnen. Ohne Anmeldung, mit Rechenweg.",
   path: "/haus/innenausbau/trockenbau-rechner/",
 });
 

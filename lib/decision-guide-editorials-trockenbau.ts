@@ -8,6 +8,9 @@ export function applyTrockenbauEditorial<T extends EditorialGuide>(guide: T): T 
   if (guide.slug === "trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke") return kitchenCabinets(guide);
   if (guide.slug === "trockenbau-gipskarton-standard-oder-osb-gips-installationen") return installationWall(guide);
   if (guide.slug === "trockenbau-gipsfaser-oder-zementbauplatte-schallschutz") return soundInsulationWall(guide);
+  if (guide.slug === "trockenbau-gipskarton-standard-oder-gipsfaser-badezimmer") return gypsumBathroomBoard(guide);
+  if (guide.slug === "trockenbau-feuchtraumplatte-oder-zementbauplatte-badezimmer") return showerBoard(guide);
+  if (guide.slug === "trockenbau-gipskarton-standard-oder-osb-gips-schallschutz") return osbSoundLayer(guide);
   return guide;
 }
 
@@ -197,9 +200,9 @@ function installationWall<T extends EditorialGuide>(guide: T): T {
       distinctValue: "Die Seite beginnt beim Leitungs- und Anbauplan, trennt Hohlraumtiefe, Durchdringungen und punktuelle Lasten voneinander und zeigt, wann eine durchgehende OSB-Lage gegenüber gezielten Verstärkungen im Ständerwerk überhaupt einen Vorteil bringt.",
       overlapReview: ["/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", "/haus/innenausbau/trockenbau-tuer-oeffnungen/", "/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke/"],
     },
-    title: "Gipskarton oder OSB mit Gips für die Installationswand",
+    title: "Rigips oder OSB unter Rigips? Installationswand planen",
     heading: "Gipskarton oder OSB mit Gips für die Installationswand",
-    description: "Installationswand oder Vorwand planen: Standard-Gipskarton und OSB mit Gipsplatte nach Leitungen, Dosen, Anbauteilen und Wandsystem vergleichen.",
+    description: "Rigips allein oder OSB unter Rigips? Installationswand und Vorwand nach Leitungen, Dosen, Wandverstärkung für Anbauteile und Wandsystem richtig planen.",
     intro: "Eine Installationswand nimmt Leitungen, Schalterdosen und oft auch Anbauteile auf. Bevor du zwischen reiner Gipskartonbeplankung und OSB unter Gips wählst, sollte feststehen, was genau in und an dieser Wand sitzen wird.",
     takeaway: "Plane vor der Plattenwahl Leitungswege, Dosen und Anbaupunkte. Erst daraus ergibt sich, ob eine Gipskartonwand mit gezielten Verstärkungen reicht oder ob eine durchgehende Holzwerkstofflage im geprüften System sinnvoll ist. Die OSB-Lage ersetzt keinen Lastnachweis.",
     sections: [
@@ -365,6 +368,300 @@ function soundInsulationWall<T extends EditorialGuide>(guide: T): T {
       { label: "Schallschutzwand planen", href: "/ratgeber/trockenbau-schallschutzwand/", description: "Profile, Dämmung, Lagen und Anschlüsse einer Schallschutzwand einordnen." },
       { label: "Trockenbauplatten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Plattenfläche nach Seiten, Lagen und Format mit eigenen Maßen rechnen." },
       { label: "Einfach oder doppelt beplankt", href: "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", description: "Die Zahl der Plattenlagen als Teil des Systems betrachten." },
+    ],
+  } as T;
+}
+
+function gypsumBathroomBoard<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-11-01",
+      canonicalPath: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-gipsfaser-badezimmer/",
+      primaryIntent: "Für Badwände entscheiden, ob normale Gipskartonplatten, imprägnierte Gipsplatten oder Gipsfaserplatten passen und wo eine Abdichtung auf der Platte nötig wird.",
+      distinctValue: "Die Seite bleibt bei gipsgebundenen Platten, erklärt den Unterschied zwischen Standardplatte, GKBI beziehungsweise H2 und Gipsfaser, ordnet die Herstellerfreigabe für häusliche Bäder ein und rechnet die abzudichtende Fläche einer Duschecke statt der Plattenmenge.",
+      overlapReview: [
+        "/ratgeber/vergleiche/trockenbau/trockenbau-osb-gips-oder-zementbauplatte-badezimmer/",
+        "/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke/",
+        "/ratgeber/daten/trockenbauplatten-typen-dicken/",
+      ],
+    },
+    title: "Gipskarton oder Gipsfaser im Bad?",
+    heading: "Gipskarton oder Gipsfaser im Bad richtig einordnen",
+    description: "Gipskarton oder Gipsfaser im Bad? Standardplatte, imprägnierte GKBI-Platte und Gipsfaser nach Wandbereich, Spritzwasser und Abdichtung einordnen.",
+    intro: "Im Bad wird selten jede Wand gleich beansprucht. Neben dem Spiegel, hinter dem WC und in der Duschecke trifft Wasser ganz unterschiedlich auf die Beplankung. Ob eine normale Gipskartonplatte, eine imprägnierte Variante oder Gipsfaser passt, hängt genau an dieser Verteilung.",
+    takeaway: "Eine Standard-Gipskartonplatte ohne Imprägnierung ist für trockene Innenräume gedacht. Für Badwände kommen imprägnierte Gipsplatten oder Gipsfaserplatten infrage, soweit der Hersteller sie für den jeweiligen Bereich vorsieht. Hinter Dusche und Wanne bleibt bei beiden eine Abdichtung auf der Platte Pflicht.",
+    sections: [
+      { title: "Was „Standard“ auf der Gipskartonplatte bedeutet", paragraphs: [
+        "Mit Standard-Gipskarton ist meist die einfache Bauplatte gemeint, im Handel oft als GKB bezeichnet. Sie ist für trockene Innenräume vorgesehen und hat keine Ausrüstung gegen Wasseraufnahme. Im Wohnzimmer ist das unproblematisch, an einer Badwand ist es die Stelle, an der die Planung genauer werden muss.",
+        "Imprägnierte Gipsplatten tragen häufig die Bezeichnung GKBI oder den Normtyp H2 und sind oft an grünlichem Karton erkennbar. Die Imprägnierung verringert die Wasseraufnahme der Platte, sie macht die Wand aber nicht dicht. Prüfe im Datenblatt, für welche Feuchtebeanspruchung die konkrete Platte freigegeben ist, statt dich auf die Farbe zu verlassen.",
+      ] },
+      { title: "Drei Badbereiche mit unterschiedlicher Wasserlast", paragraphs: [
+        "Teile die Badwände gedanklich in drei Gruppen. Flächen fern von Waschtisch, Wanne und Dusche erleben vor allem erhöhte Luftfeuchte. Wände am Waschtisch oder hinter dem WC bekommen gelegentlich Spritzer ab. Wände hinter und über Wanne oder Dusche werden regelmäßig direkt mit Wasser belastet.",
+        "Hersteller ordnen solche Bereiche Wassereinwirkungsklassen zu und nennen für jede Klasse geeignete Platten und Abdichtungen. Die genaue Zuordnung hängt von Nutzung und Duschart ab. Für diesen Vergleich reicht die Einsicht, dass dieselbe Platte an einer Wand ohne Weiteres passen und an der nächsten nur mit zusätzlicher Abdichtung zulässig sein kann.",
+      ] },
+      { title: "Gipsfaser im häuslichen Bad laut fermacell", paragraphs: [
+        "fermacell beschreibt seine Gipsfaserplatten als geeignet für Wand- und Bodenflächen mit haushaltsüblicher Nutzung, die nur kurzzeitig und geringfügig bis mäßig mit Spritzwasser belastet werden. Das deckt viele Wände in einem privaten Bad ab. Eine pauschale Freigabe für jede Stelle im Raum ist das nicht.",
+        "Für die direkt beanspruchten Bereiche im häuslichen Bad, also die Wände hinter und über Wanne und Dusche sowie die Bodenfläche, verlangt der Hersteller eine Abdichtung auf der Plattenoberfläche. Er nennt dafür ein abgestimmtes System aus Grundierung, Flüssigabdichtung und Fliesenkleber. Wer Gipsfaser wählt, übernimmt also auch diese Systemlogik.",
+      ] },
+      { title: "Imprägnierter Gipskarton als naheliegende Alternative", paragraphs: [
+        "Eine imprägnierte Gipskartonplatte ist im Bad die häufigste Alternative zur Gipsfaser. Sie lässt sich ähnlich wie eine Standardplatte schneiden und montieren und wird von Herstellern für häusliche Bäder angeboten. Auch hier gilt die Freigabe nur für die im Datenblatt genannten Bereiche und zusammen mit der vorgesehenen Abdichtung.",
+        "Der Unterschied zur Gipsfaser liegt weniger in einer pauschalen Wasserfestigkeit als im Plattenaufbau. Gipskarton hat einen Gipskern mit Kartonummantelung, Gipsfaser ist eine homogene Platte aus Gips und Papierfasern. Das beeinflusst Kanten, Verspachtelung und Befestigung, ersetzt aber in keinem Fall die Abdichtung in der Duschecke.",
+      ] },
+      { title: "Wo die unbehandelte Platte im Bad ausscheidet", paragraphs: [
+        "An Wänden mit regelmäßigem Spritzwasser solltest du eine Standard-Gipskartonplatte ohne Imprägnierung nicht einplanen, solange kein Hersteller sie für genau diesen Bereich freigibt. Fliesen ändern daran wenig, denn Fliesenfugen sind auf Dauer nicht wasserdicht und lassen Feuchte bis zum Untergrund durch.",
+        "In Bereichen fern von Wasserquellen kann die Lage anders aussehen. Wer dort eine andere Platte als in der Duschecke verwenden möchte, braucht klare Übergänge, saubere Plattenstöße und die Zusage, dass diese Kombination im System zulässig ist. Einfacher bleibt oft ein durchgehender, für Bäder vorgesehener Plattentyp an allen Badwänden.",
+      ] },
+      { title: "Die Abdichtung wiegt schwerer als die Plattenwahl", paragraphs: [
+        "Ob Gipskarton oder Gipsfaser, an Wanne und Dusche schützt die Abdichtung die Platte und nicht umgekehrt. Dazu gehören Dichtbänder in Innenecken und am Bodenanschluss, Manschetten an Rohrdurchführungen und eine flächige Abdichtung in der Schichtdicke, die das gewählte Produkt vorschreibt.",
+        "Wähle Grundierung, Abdichtung und Fliesenkleber aus einem System, das für den gewählten Plattentyp vorgesehen ist. Produkte verschiedener Hersteller frei zu mischen, kann Haftung und Gewährleistung infrage stellen. Lass dir die Systemzugehörigkeit im Angebot schriftlich ausweisen.",
+      ] },
+      { title: "Gewicht, Zuschnitt und Lasten am Waschtisch", paragraphs: [
+        "Gipsfaserplatten sind schwerer als Gipskartonplatten gleicher Dicke und werden je nach System mit eigenen Schrauben und Fugentechniken verarbeitet. Gipskarton lässt sich leichter tragen und anpassen. Bei der Montage in einem engen Bad kann das ein spürbarer Unterschied sein, für die Eignung im Feuchtbereich ist es keiner.",
+        "Wer einen schweren Spiegelschrank oder einen wandhängenden Waschtisch plant, prüft die Befestigung gesondert. Die Plattenart beeinflusst die zulässigen Dübellasten, die eigentliche Lastfrage gehört aber in einen eigenen Nachweis mit Traverse oder Verstärkung im Ständerwerk.",
+      ] },
+      { title: "Unbekannte Platte hinter alten Badfliesen", paragraphs: [
+        "Bei einer vorhandenen Badwand ist oft nicht erkennbar, ob hinter den Fliesen Standard-Gipskarton, eine imprägnierte Platte oder Gipsfaser sitzt. Eine Steckdosenöffnung oder eine Revisionsöffnung erlaubt manchmal einen Blick auf Plattenkante und Kartonfarbe, über die Abdichtung sagt das aber nichts.",
+        "Steht eine Badsanierung an und ist der Aufbau unklar, lohnt eine fachkundige Bestandsaufnahme an den nassen Wänden. Zeigen sich verfärbte oder weiche Stellen, gehört die Ursache geklärt, bevor neue Platten oder eine neue Abdichtung aufgebracht werden.",
+      ] },
+    ],
+    comparison: { caption: "Gipsbasierte Platten im Bad nach Wandbereich", columns: ["Prüfpunkt", "Gipskarton", "Gipsfaser"], rows: [
+      ["Wand fern von Wasser", "Imprägnierte Platte üblich, Standardplatte nur mit Freigabe", "Bei haushaltsüblicher Nutzung laut Hersteller vorgesehen"],
+      ["Waschtisch und WC", "Imprägnierte Platte nach Datenblatt einsetzen", "Bei mäßigem Spritzwasser laut Hersteller vorgesehen"],
+      ["Hinter Wanne und Dusche", "Imprägnierte Platte nur mit Abdichtung im System", "Abdichtung auf der Plattenoberfläche gefordert"],
+      ["Plattenaufbau", "Gipskern mit Kartonummantelung", "Homogene Platte aus Gips und Papierfasern"],
+      ["Verarbeitung", "Leichter, vertraute Spachteltechnik", "Schwerer, systemeigene Schrauben und Fugen"],
+    ] },
+    checklist: [
+      "Jede Badwand als trocken, gelegentlich bespritzt oder direkt beansprucht markieren.",
+      "Im Datenblatt prüfen, ob die Platte imprägniert ist und für welche Bereiche sie gilt.",
+      "Für Gipsfaser die Herstellerangaben zum häuslichen Bad heranziehen.",
+      "Abdichtungsflächen hinter Wanne und Dusche einschließlich Ecken festlegen.",
+      "Grundierung, Abdichtung und Fliesenkleber aus einem passenden System wählen.",
+      "Lasten von Waschtisch und Spiegelschrank gesondert nachweisen lassen.",
+      "Bei Bestandswänden den vorhandenen Plattentyp und die Abdichtung klären.",
+    ],
+    faqs: [
+      { question: "Darf ich normale Gipskartonplatten im Bad verwenden?", answer: "An Wänden mit Spritzwasser solltest du eine Standardplatte ohne Imprägnierung nicht einplanen. Für Badwände sind imprägnierte Gipsplatten oder Gipsfaserplatten üblich, jeweils im Rahmen der Herstellerfreigabe und mit Abdichtung an Wanne und Dusche." },
+      { question: "Ist Gipsfaser im Bad besser als grüner Gipskarton?", answer: "Nicht pauschal. Beide Plattenarten werden für häusliche Bäder angeboten. Entscheidend sind die Freigabe für den jeweiligen Wandbereich, die passende Abdichtung und die Verarbeitung nach Systemangaben." },
+      { question: "Brauche ich bei Gipsfaser im Bad noch eine Abdichtung?", answer: "Ja, in den direkt beanspruchten Bereichen. fermacell verlangt für Wände hinter und über Wanne und Dusche sowie für die Bodenfläche im häuslichen Bad eine Abdichtung auf der Plattenoberfläche." },
+    ],
+    example: { title: "Abdichtungsmenge für eine Duschecke", intro: "Die Rechnung zeigt, welche Fläche und welche Fugenlänge in der Duschecke abgedichtet werden, unabhängig von der Plattenart.", steps: [
+      { label: "Duschwand lang", value: "1,20 m × 2,00 m = 2,40 m²" },
+      { label: "Duschwand kurz", value: "0,90 m × 2,00 m = 1,80 m²" },
+      { label: "Abdichtungsfläche", value: "2,40 m² + 1,80 m² = 4,20 m²" },
+      { label: "Dichtband in der Innenecke", value: "2,00 m senkrecht" },
+      { label: "Dichtband am Bodenanschluss", value: "1,20 m + 0,90 m = 2,10 m" },
+      { label: "Dichtband gesamt", value: "2,00 m + 2,10 m = 4,10 m" },
+    ], result: "4,20 m² Abdichtungsfläche und 4,10 m Dichtband in der Duschecke vor Überlappungen und Rohrmanschetten.", note: "Die Höhe der abzudichtenden Fläche und weitere Details legen die Systemunterlagen fest. Die Beispielwerte sind keine Vorgabe." },
+    limitation: "Die Seite gibt weder eine Platte noch eine Abdichtung frei. Wandbereiche, Plattentyp und Abdichtung müssen anhand der aktuellen Herstellerunterlagen und der geltenden Anforderungen fachlich geprüft werden.",
+    sources: [
+      { label: "Fragen und Antworten zu Gipsfaser im Feuchtraum", href: "https://www.fermacell.com/de-de/service/fragen-antworten", publisher: "fermacell", note: "Herstellerangaben zum Einsatz von Gipsfaserplatten in häuslichen Bädern und zur geforderten Abdichtung." },
+      { label: "fermacell Gipsfaserplatten", href: "https://www.fermacell.com/de-de/produkte/wand/gipsfaserplatten", publisher: "fermacell", note: "Produktangaben zu Aufbau, Eigenschaften und Verarbeitung der Gipsfaserplatte." },
+      { label: "Trockenbau in Feucht- und Nassräumen", href: "https://knauf.com/de-DE/kompetenzen/feuchteschutz/feucht-und-nassraeume", publisher: "Knauf", note: "Herstellerübersicht zu Wassereinwirkungsklassen und Plattensystemen für Badbereiche." },
+    ],
+    relatedLinks: [
+      { label: "Feuchtraumplatte oder Zementplatte in der Dusche", href: "/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-zementbauplatte-badezimmer/", description: "Grüne Gipsplatte und Zementbauplatte nach Duschart und Wasserlast vergleichen." },
+      { label: "Trockenbauplatten nach Typ und Dicke", href: "/ratgeber/daten/trockenbauplatten-typen-dicken/", description: "Plattentypen und übliche Dicken in einer Datenübersicht nachschlagen." },
+      { label: "Trockenbauplatten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Plattenfläche für die Badwände mit eigenen Maßen rechnen." },
+      { label: "Trockenbaumaterial berechnen", href: "/haus/innenausbau/trockenbau-rechner/", description: "Wandfläche, Profile und Materialrahmen für das Bad mit eigenen Maßen bestimmen." },
+    ],
+  } as T;
+}
+
+function showerBoard<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-11-01",
+      canonicalPath: "/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-zementbauplatte-badezimmer/",
+      primaryIntent: "Klären, ob eine grüne Feuchtraumplatte in Dusche und Bad ausreicht oder ob eine Zementbauplatte für die stark belasteten Flächen die passende Grundlage ist.",
+      distinctValue: "Die Seite macht die Duschart zur Grenze zwischen imprägnierter Gipsplatte und Zementbauplatte, erklärt die Abdichtung von Fugen und Befestigungspunkten bei Zementplatten und rechnet den Materialwechsel zwischen Duschecke und übrigem Bad mit Übergangsfugen durch.",
+      overlapReview: [
+        "/ratgeber/vergleiche/trockenbau/trockenbau-osb-gips-oder-zementbauplatte-badezimmer/",
+        "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-gipsfaser-badezimmer/",
+        "/ratgeber/daten/trockenbau-feuchtraum-brandschutz-datenluecken/",
+      ],
+    },
+    title: "Grüne Feuchtraumplatte oder Zementplatte in der Dusche?",
+    heading: "Feuchtraumplatte oder Zementbauplatte für Dusche und Bad",
+    description: "Grüne Feuchtraumplatte oder Zementplatte in der Dusche? Duschart, Wasserlast, Plattenwechsel an der Wand und Abdichtung für dein Bad sauber einordnen.",
+    intro: "Die grüne Feuchtraumplatte ist im Baumarkt die naheliegende Wahl fürs Bad. Spätestens bei der Dusche stellt sich die Frage, ob sie dort noch reicht oder ob eine zementgebundene Platte die sicherere Grundlage ist. Die Antwort hängt stärker an der Duschart als am Plattenpreis.",
+    takeaway: "Eine imprägnierte Gipsplatte nimmt weniger Wasser auf als eine Standardplatte, wasserfest ist sie nicht. Über Wanne oder Duschtasse kann sie mit geprüfter Abdichtung zulässig sein. Für stark belastete Flächen wie bodengleiche Duschen werden Zementbauplatten gezielt angeboten, deren Fugen und Befestigungspunkte ebenfalls abgedichtet werden.",
+    sections: [
+      { title: "Was die grüne Farbe tatsächlich verspricht", paragraphs: [
+        "Grün eingefärbter Karton kennzeichnet bei vielen Herstellern eine imprägnierte Gipsplatte, im Handel oft GKBI oder Typ H2 genannt. Die Imprägnierung verringert die Wasseraufnahme. Der Kern bleibt Gips, und Gips verliert bei dauerhafter Durchfeuchtung an Festigkeit.",
+        "Damit ist die Platte für feuchte Raumluft und begrenzt beanspruchte Badflächen gedacht. Für Flächen, die bei jedem Duschen nass werden, ist sie nur zusammen mit einer Abdichtung vorgesehen, deren Eignung für genau diese Platte und diesen Bereich in den Systemunterlagen steht.",
+      ] },
+      { title: "Wanne, Duschtasse oder bodengleiche Dusche", paragraphs: [
+        "Bei einer Badewanne oder einer Duschtasse trifft das Wasser vor allem die Wand oberhalb des Randes. Der Boden unter der Wanne bleibt geschützt. Bei einer bodengleichen Dusche läuft das Wasser über den Fußboden zum Ablauf und belastet zusätzlich den Wandfuß und die Anschlussfuge zum Boden.",
+        "Für die Einstufung in Wassereinwirkungsklassen, wie Knauf sie für Badbereiche beschreibt, spielt die Duschart deshalb eine Rolle. Lege fest, welche Dusche kommt, bevor du Platten bestellst, denn sie verschiebt die Grenze zwischen beiden Plattentypen. Die Einstufung selbst sollte ein Fachbetrieb anhand der Systemunterlagen bestätigen.",
+      ] },
+      { title: "Wo die Zementbauplatte ihre Stärken hat", paragraphs: [
+        "Zementgebundene Platten wie fermacell Powerpanel H2O oder Knauf Aquapanel Cement Board Indoor werden für häusliche Feuchträume einschließlich Duschen angeboten. fermacell nennt für seine Platte zusätzlich öffentliche und gewerbliche Nassbereiche. Der zementgebundene Kern ist auf Feuchte ausgelegt und nicht auf eine Imprägnierung angewiesen.",
+        "Dafür ist die Platte schwerer und wird mit systemeigenen Schrauben und eigenem Fugenmaterial verarbeitet. Prüfe im Datenblatt die zulässigen Profilabstände und die Befestigungsabstände, denn sie können von einer gewohnten Gipskartonwand abweichen.",
+      ] },
+      { title: "Auch Zementplatten brauchen abgedichtete Fugen", paragraphs: [
+        "Eine zementgebundene Platte ist kein Freibrief, auf Abdichtung zu verzichten. fermacell beschreibt für Powerpanel H2O im häuslichen Bereich, dass Fugen und Befestigungspunkte zusätzlich abzudichten sind und die flächige Abdichtung der Plattenoberfläche dort entfallen kann. Diese Aussage gilt für das beschriebene System und nicht automatisch für jede andere Zementplatte.",
+        "Innenecken, Bodenanschluss, Armaturen und Ablauf bleiben kritische Stellen. Hier entscheiden Dichtband, Manschetten und eine sorgfältige Ausführung darüber, ob Wasser hinter die Fliesen gelangt. Lass dir für die gewählte Platte schriftlich bestätigen, welche Flächen und Details abgedichtet werden.",
+      ] },
+      { title: "Zwei Plattenarten an einer Badwand", paragraphs: [
+        "Häufig wird nur die Duschecke mit Zementplatten beplankt und der Rest des Bades mit imprägnierten Gipsplatten. Das spart Gewicht und Aufwand, schafft aber einen Materialübergang, an dem zwei Plattenarten mit unterschiedlichem Verhalten aufeinandertreffen.",
+        "Ob und wie ein solcher Wechsel zulässig ist, regeln die Systemunterlagen. fermacell erlaubt für seine Gipsfaser- und Zementplatten einen Materialwechsel pro Wandfläche und verweist auf eigene Planungshinweise. Für andere Kombinationen prüfst du die Angaben des jeweiligen Herstellers und lässt die Übergangsfuge möglichst außerhalb der direkt beregneten Fläche planen.",
+      ] },
+      { title: "Unterkonstruktion hinter der Duschwand", paragraphs: [
+        "Gelangt Feuchte hinter die Beplankung, sind auch Metallprofile und Hohlraumdämmung betroffen. fermacell weist für öffentliche Bereiche auf besondere Anforderungen an Unterkonstruktion und Korrosionsschutz hin. Für ein privates Bad gelten die Angaben des gewählten Systems, die du mit dem Angebot abgleichen solltest.",
+        "Liegt die Dusche an einer Außenwand oder an einer Wand zu einem unbeheizten Raum, kommt die Frage nach einer Dampfbremse oder einer anderen Feuchteschutzschicht hinzu. Sie stellt sich unabhängig davon, ob du grüne Gipsplatten oder Zementplatten verwendest.",
+      ] },
+      { title: "Lüftung entlastet die Wände außerhalb der Dusche", paragraphs: [
+        "Wie stark die Badwände außerhalb der Dusche beansprucht werden, hängt auch davon ab, wie schnell die Feuchte nach dem Duschen abzieht. Ein Fenster oder ein Lüfter ersetzt keine Abdichtung, verkürzt aber die Zeit, in der Wände und Fugen feucht bleiben.",
+        "In einem innenliegenden Bad ohne Fenster gehört die Lüftung deshalb in dieselbe Planung wie die Plattenwahl. Eine robustere Platte in der Duschecke löst kein Feuchteproblem im übrigen Raum.",
+      ] },
+      { title: "Duschecke und übrige Wände getrennt anbieten lassen", paragraphs: [
+        "Vergleiche nicht nur den Plattenpreis. Zementplatten benötigen eigene Schrauben und eigenes Fugenmaterial, imprägnierte Gipsplatten in der Dusche eine flächige Abdichtung im System. Beide Positionen gehören vollständig ins Angebot.",
+        "Lass dir Duschbereich, übrige Badwände und die Länge der Materialübergänge getrennt ausweisen. So erkennst du, ob ein Angebot die Zementplatte auf die Duschecke beschränkt oder ganze Wände damit beplankt, und kannst beide Varianten fair vergleichen.",
+      ] },
+    ],
+    comparison: { caption: "Grüne Gipsplatte und Zementbauplatte an Dusche und Bad", columns: ["Prüfpunkt", "Imprägnierte Gipsplatte", "Zementbauplatte"], rows: [
+      ["Kernmaterial", "Gips mit verringerter Wasseraufnahme", "Zementgebunden und auf Feuchte ausgelegt"],
+      ["Wand über Wanne oder Duschtasse", "Mit Abdichtung im System nach Datenblatt", "Nach Systemangaben, Fugen und Befestigung abdichten"],
+      ["Bodengleiche Dusche", "Eignung für die Einstufung gesondert prüfen", "Gezielt für stark belastete Flächen angeboten"],
+      ["Verarbeitung", "Leicht, gewohnte Gipskartontechnik", "Schwerer, systemeigene Schrauben und Fugenmaterial"],
+      ["Materialübergang", "Wechsel zur Zementplatte nach Systemangaben planen", "Übergang zur Gipsplatte nach Systemangaben planen"],
+    ] },
+    checklist: [
+      "Duschart festlegen, also Wanne, Duschtasse oder bodengleiche Dusche.",
+      "Wassereinwirkung jeder Wandfläche anhand der Systemunterlagen einstufen lassen.",
+      "Für die grüne Platte die zugehörige Abdichtung im Duschbereich festlegen.",
+      "Für die Zementplatte Fugen, Befestigungspunkte und Anschlüsse abdichten.",
+      "Profil- und Schraubenabstände der Zementplatte im Datenblatt prüfen.",
+      "Materialübergänge zwischen beiden Plattenarten auf Zulässigkeit prüfen.",
+      "Duschbereich, übrige Wände und Übergänge im Angebot getrennt ausweisen.",
+    ],
+    faqs: [
+      { question: "Reicht eine grüne Gipsplatte in der Dusche?", answer: "Nur zusammen mit einer passenden Abdichtung und in dem Bereich, für den der Hersteller die Platte vorsieht. Die Imprägnierung verringert die Wasseraufnahme, sie macht die Platte nicht wasserfest." },
+      { question: "Muss eine Zementbauplatte in der Dusche abgedichtet werden?", answer: "Ja, zumindest an Fugen, Befestigungspunkten und Anschlüssen. Ob die flächige Abdichtung entfallen kann, regeln die Unterlagen des jeweiligen Systems. fermacell beschreibt das für Powerpanel H2O im häuslichen Bereich." },
+      { question: "Kann ich nur die Duschecke mit Zementplatten beplanken?", answer: "Das ist üblich, setzt aber voraus, dass der Wechsel zwischen den Plattenarten im System zulässig ist. Die Übergangsfugen sollten geplant und nicht auf der Baustelle improvisiert werden." },
+    ],
+    example: { title: "Duschecke mit Zementplatte, übriges Bad mit grüner Platte", intro: "Die Rechnung trennt die Flächen beider Plattenarten und zeigt die Länge der Übergänge, die geplant werden müssen.", steps: [
+      { label: "Badwände gesamt", value: "18,00 m² nach Abzug von Tür und Fenster" },
+      { label: "Duschecke", value: "(1,00 m + 1,20 m) × 2,10 m = 4,62 m² Zementbauplatte" },
+      { label: "Übrige Wände", value: "18,00 m² − 4,62 m² = 13,38 m² imprägnierte Gipsplatte" },
+      { label: "Senkrechte Übergänge", value: "2 × 2,10 m = 4,20 m" },
+      { label: "Waagerechter Übergang", value: "1,00 m + 1,20 m = 2,20 m" },
+      { label: "Übergänge gesamt", value: "4,20 m + 2,20 m = 6,40 m" },
+    ], result: "4,62 m² Zementbauplatte, 13,38 m² imprägnierte Gipsplatte und 6,40 m Materialübergang vor Verschnitt.", note: "Ob die Zementplatte bis 2,10 m Höhe genügt und wo die Übergänge liegen dürfen, legen Systemunterlagen und Fachplanung fest." },
+    limitation: "Die Seite gibt keine Platte und keine Abdichtung für eine Dusche frei. Wassereinwirkung, Plattensystem, Materialwechsel und Abdichtung müssen anhand der aktuellen Herstellerunterlagen fachlich geprüft werden.",
+    sources: [
+      { label: "Trockenbau in Feucht- und Nassräumen", href: "https://knauf.com/de-DE/kompetenzen/feuchteschutz/feucht-und-nassraeume", publisher: "Knauf", note: "Herstellerübersicht zu Wassereinwirkungsklassen und den dafür vorgesehenen Plattensystemen." },
+      { label: "AQUAPANEL Cement Board Indoor", href: "https://knauf.com/de-DE/p/produkt/aquapanel-r-cement-board-indoor-12-5-lef-14749_0010", publisher: "Knauf", note: "Originalangaben zur zementgebundenen Platte für Innenräume und ihrer Verarbeitung." },
+      { label: "Powerpanel H2O", href: "https://www.fermacell.com/de-de/produkte/zementplatten/powerpanel-h2o", publisher: "fermacell", note: "Produktangaben zu einer zementgebundenen Platte für Feucht- und Nassbereiche." },
+      { label: "Fragen und Antworten zu Feuchträumen", href: "https://www.fermacell.com/de-de/service/fragen-antworten", publisher: "fermacell", note: "Herstellerangaben zur Abdichtung von Fugen und Befestigungspunkten und zum Materialwechsel an der Wand." },
+    ],
+    relatedLinks: [
+      { label: "Gipskarton oder Gipsfaser im Bad", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-gipsfaser-badezimmer/", description: "Gipsgebundene Platten für die übrigen Badwände nach Wandbereich einordnen." },
+      { label: "Datenlücken bei Feuchtraum und Brandschutz", href: "/ratgeber/daten/trockenbau-feuchtraum-brandschutz-datenluecken/", description: "Welche Angaben zu Feuchtraumplatten in Datenblättern häufig fehlen." },
+      { label: "Trockenbaumaterial berechnen", href: "/haus/innenausbau/trockenbau-rechner/", description: "Wandflächen und Materialrahmen für das Bad mit eigenen Maßen bestimmen." },
+      { label: "Trockenbauprofile planen", href: "/haus/innenausbau/trockenbau-profile-staenderwerk/", description: "Profilabstände und Ständerwerk passend zur gewählten Duschplatte festlegen." },
+    ],
+  } as T;
+}
+
+function osbSoundLayer<T extends EditorialGuide>(guide: T): T {
+  return {
+    ...guide,
+    indexingApproval: {
+      reviewedAt: "2026-11-01",
+      canonicalPath: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-schallschutz/",
+      primaryIntent: "Prüfen, ob eine OSB-Lage unter der Gipsplatte den Schallschutz einer Trockenbauwand gegenüber einer doppelt beplankten Gipskartonwand verbessert.",
+      distinctValue: "Die Seite trennt Befestigungswunsch und Schallziel, vergleicht die OSB-Lage direkt mit einer zweiten Gipsplattenlage nach Masse, Steifigkeit und Prüfwert und behandelt das Aufdoppeln einer bestehenden Wand mit Raumverlust als eigenen Fall.",
+      overlapReview: [
+        "/ratgeber/vergleiche/trockenbau/trockenbau-gipsfaser-oder-zementbauplatte-schallschutz/",
+        "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/",
+        "/ratgeber/trockenbau-schallschutzwand/",
+        "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/",
+      ],
+    },
+    title: "Bringt OSB unter Gipskarton mehr Schallschutz?",
+    heading: "Gipskarton oder OSB mit Gips für mehr Schallschutz",
+    description: "Bringt OSB unter Gipskarton mehr Schallschutz? Doppelte Gipsbeplankung und OSB mit Gips nach Masse, Steifigkeit, Prüfwert und Bestand vergleichen.",
+    intro: "Eine OSB-Lage unter der Gipsplatte fühlt sich massiver an und klingt beim Klopfen satter. Daraus wird oft geschlossen, dass die Wand auch besser gegen Lärm schützt. Für die Schalldämmung zählen jedoch andere Eigenschaften als der Klopftest.",
+    takeaway: "Eine OSB-Lage ist vor allem eine Befestigungslösung. Ob sie gegenüber einer zweiten Gipsplattenlage den Schallschutz verbessert, lässt sich nur mit einem geprüften Wandaufbau beantworten. Liegt für deine Kombination kein Prüfwert vor, ist eine doppelt beplankte Gipswand aus einem dokumentierten System die belastbarere Wahl.",
+    sections: [
+      { title: "Woher die Erwartung an die OSB-Lage kommt", paragraphs: [
+        "Wer eine Wand mit OSB und Gips aufbaut, will meist an beliebigen Stellen Regale, Fernseher oder Hängeschränke befestigen. Der Schallschutz kommt als erhoffter Nebeneffekt hinzu, weil die Wand dicker und fester wirkt.",
+        "Diese Seite trennt beide Ziele. Sie fragt, ob die Holzwerkstofflage gegenüber einer Wand mit zwei Gipsplattenlagen akustisch etwas bringt. Die Befestigungsfrage behandelt der Vergleich zur Installationswand, die Wahl zwischen Gipsfaser und Zementplatte für Schallschutz ein eigener Vergleich.",
+      ] },
+      { title: "Was eine leichte Wand akustisch ausmacht", paragraphs: [
+        "Rigips nennt als Einflussgrößen für die Schalldämmung einer Montagewand die flächenbezogene Masse, den Abstand und die Biegesteifigkeit der Beplankung, die Art der Hohlraumdämmung und das eingesetzte Profil. Die Beplankung ist also nur ein Teil der Rechnung.",
+        "Masse und Steifigkeit wirken dabei nicht zwingend in dieselbe Richtung. Mehr Masse hilft in der Regel, eine sehr biegesteife Beplankung kann in bestimmten Frequenzbereichen dagegen ungünstiger sein. Aus dem Eindruck, eine Wand sei besonders stabil, folgt deshalb kein besserer Schallschutz.",
+      ] },
+      { title: "OSB gegen eine zweite Gipsplattenlage", paragraphs: [
+        "Der eigentliche Vergleich lautet meist nicht OSB oder nichts, sondern OSB unter Gips oder zwei Lagen Gipsplatten. Holzwerkstoffplatten haben meist keine höhere Rohdichte als Gipsplatten. Eine OSB-Lage bringt deshalb nicht automatisch mehr Masse in die Wand als eine zusätzliche Gipsplatte.",
+        "Dazu kommt, wie die Lagen verbunden sind und wie ihre Stöße liegen. Werden OSB und Gips vollflächig verschraubt, wirken sie gemeinsam als eine Schale. Ob diese Schale akustisch günstiger ist als zwei Gipsplatten, zeigt nur eine Prüfung des kompletten Aufbaus.",
+      ] },
+      { title: "Prüfwerte für Gipswände und für Eigenkombinationen", paragraphs: [
+        "Für doppelt beplankte Gipsplattenwände veröffentlichen Hersteller wie Knauf und Rigips Systeme mit dokumentierten Schallschutzangaben. Profile, Dämmung, Plattentyp und Lagenzahl sind darin festgelegt. Für eine Wand mit OSB unter Gips ist zu prüfen, ob ein Hersteller diesen Aufbau überhaupt mit Prüfwert führt.",
+        "Fehlt ein Prüfwert, lässt sich der Schallschutz einer Eigenkombination nicht aus den Werten der Gipswand ableiten. Das gilt in beide Richtungen. Die OSB-Variante muss nicht schlechter sein, du kannst ihren Wert aber weder zusagen noch einfordern.",
+      ] },
+      { title: "Befestigung und Schallziel in einem System", paragraphs: [
+        "Brauchst du die OSB-Lage wegen vieler Befestigungspunkte, kläre mit dem Fachbetrieb, welcher dokumentierte Aufbau deinem Wunsch am nächsten kommt. Manchmal genügt die Holzwerkstofflage auf einer Wandseite oder nur in einem Wandabschnitt, während der Rest dem geprüften System folgt.",
+        "Je nach Hersteller gibt es zudem Gipsplatten mit erhöhter Dichte oder mit Eigenschaften für Lastbefestigung, die in Schallschutzsystemen geführt werden. Damit lassen sich beide Ziele oft innerhalb eines Systems verfolgen, statt eine unbewertete Kombination zu bauen.",
+      ] },
+      { title: "Vorhandene Wand aufdoppeln oder Vorsatzschale", paragraphs: [
+        "Bei einer bestehenden Wand wird oft überlegt, OSB und Gips direkt auf die alte Beplankung zu schrauben. Die neue Schicht hängt dann starr an der alten Beplankung und an deren Ständern. Hohlraum und Dämmung bleiben unverändert, und jede Lage kostet Raumtiefe.",
+        "Eine freistehende Vorsatzschale mit eigenem Ständerwerk und Dämmung verändert dagegen das System der Wand. Welche Maßnahme bei deiner Wand mehr bewirkt und ob sie den Raumverlust rechtfertigt, sollte eine fachkundige Planung anhand der Systemunterlagen klären.",
+      ] },
+      { title: "Schalllecks, die jede Beplankung überdecken", paragraphs: [
+        "Offene Anschlussfugen an Decke und Boden, gegenüberliegende Steckdosen oder eine leichte Tür lassen Schall an der Beplankung vorbei. Bei einer Wand mit OSB kommen zusätzliche Bohrungen und Schnitte durch zwei unterschiedliche Lagen hinzu, die sauber geschlossen werden müssen.",
+        "Prüfe deshalb vor der Plattenfrage, ob der Schall wirklich durch die Wandfläche kommt. Ist es an der Tür oder an einer Steckdose am lautesten, gleicht eine andere Beplankung den Unterschied kaum aus.",
+      ] },
+      { title: "Angebote auf den Schallnachweis festlegen", paragraphs: [
+        "Lass dir für beide Varianten ein Angebot mit Systembezeichnung, Lagen, Profilen, Dämmung und Anschlussdetails geben. Bei der OSB-Variante gehört die Angabe dazu, ob für genau diesen Aufbau ein Schallschutznachweis vorliegt.",
+        "Liegt nur für die Gipsvariante ein Nachweis vor, vergleichst du ungleiche Leistungen. Die Variante ohne Nachweis trägt das Risiko, das gewünschte Ergebnis nicht zu erreichen, und dieses Risiko gehört offen in die Entscheidung.",
+      ] },
+    ],
+    comparison: { caption: "Zweite Gipslage oder OSB unter Gips beim Schallschutz", columns: ["Prüfpunkt", "Gipskarton doppelt beplankt", "OSB unter Gipsplatte"], rows: [
+      ["Hauptzweck", "Schall- und Brandschutz nach Systemangaben", "Befestigung an beliebigen Stellen"],
+      ["Masse der Beplankung", "Zwei Gipsplattenlagen je Seite nach System", "Holzwerkstoff meist ohne höhere Rohdichte als Gips"],
+      ["Prüfwert", "Für viele Systeme in Herstellerunterlagen dokumentiert", "Für den konkreten Aufbau gesondert erfragen"],
+      ["Lagen und Stöße", "Fugenversatz und Verschraubung nach System", "Lagenfolge und Fugenversatz klären"],
+      ["Bestandswand", "Zusätzliche Lage nur mit Systembezug planen", "Starre Aufdopplung lässt Hohlraum unverändert"],
+    ] },
+    checklist: [
+      "Festhalten, ob Befestigung, Schallschutz oder beides das Ziel ist.",
+      "Für die Gipsvariante ein geprüftes System mit dokumentiertem Schallwert wählen.",
+      "Für die OSB-Variante einen Prüfwert des genauen Aufbaus anfragen.",
+      "Lagenfolge, Fugenversatz und Verschraubung beider Varianten vergleichen.",
+      "Bei Bestandswänden Aufdopplung und Vorsatzschale gegenüberstellen.",
+      "Raumverlust durch zusätzliche Lagen in den Grundriss eintragen.",
+      "Anschlüsse, Steckdosen und Tür vor der Plattenfrage prüfen.",
+    ],
+    faqs: [
+      { question: "Ist eine Wand mit OSB und Gips leiser als eine doppelt beplankte Gipswand?", answer: "Das lässt sich ohne Prüfung des konkreten Aufbaus nicht sagen. OSB bringt nicht automatisch mehr Masse als eine zweite Gipsplatte. Für doppelt beplankte Gipswände liegen in Herstellersystemen dagegen dokumentierte Werte vor." },
+      { question: "Hilft es, OSB nachträglich auf eine Wand zu schrauben?", answer: "Die Wirkung ist unsicher, weil die neue Lage starr an der alten Wand hängt und Hohlraum sowie Dämmung gleich bleiben. Eine Vorsatzschale mit eigenem Ständerwerk verändert das System stärker, kostet aber mehr Raumtiefe." },
+      { question: "Gibt es Platten, die Befestigung und Schallschutz verbinden?", answer: "Je nach Hersteller gibt es Gipsplatten mit erhöhter Dichte oder für Lastbefestigung, die in Schallschutzsystemen geführt werden. Welche Lasten und Schallwerte gelten, steht in den jeweiligen Systemunterlagen." },
+    ],
+    example: { title: "Eine vorhandene Wand auf der lauten Seite aufdoppeln", intro: "Die Rechnung vergleicht Material und Raumverlust beider Aufdopplungen mit angenommenen Plattendicken, nicht den Schallschutz.", steps: [
+      { label: "Wandfläche", value: "3,60 m × 2,50 m = 9,00 m²" },
+      { label: "Zusätzliche Gipsplatte", value: "1 Lage × 9,00 m² = 9,00 m², angenommen 12,5 mm dick" },
+      { label: "OSB und Gips", value: "9,00 m² OSB + 9,00 m² Gipsplatte = 18,00 m², angenommen 15 mm + 12,5 mm = 27,5 mm" },
+      { label: "Raumverlust Gipsplatte", value: "3,60 m × 0,0125 m = 0,045 m² Grundfläche" },
+      { label: "Raumverlust OSB und Gips", value: "3,60 m × 0,0275 m = 0,099 m² Grundfläche" },
+      { label: "Noch offen", value: "Prüfwert, Befestigung durch die Bestandsbeplankung, Anschlüsse und Verschnitt" },
+    ], result: "9,00 m² gegenüber 18,00 m² Plattenfläche und rund 0,05 m² gegenüber 0,10 m² Raumverlust, ohne Aussage zum Schallschutz.", note: "Die Plattendicken sind Annahmen für die Rechnung. Ein Schallschutzwert folgt aus keiner dieser Zahlen." },
+    limitation: "Die Seite nennt keine Schallschutzwerte und gibt keinen Wandaufbau frei. Schallziel, Wandsystem und Anschlüsse müssen anhand der aktuellen Herstellerunterlagen fachlich geprüft werden.",
+    sources: [
+      { label: "Schallschutz im Trockenbau", href: "https://www.rigips.de/schallschutz", publisher: "Rigips", note: "Herstellerübersicht zu den Einflussgrößen der Schalldämmung von Montagewänden." },
+      { label: "Metallständerwände und Systemdaten", href: "https://knauf.com/de-DE/systeme/trockenbausysteme/w11-de-metallstaenderwaende", publisher: "Knauf", note: "Systemübersicht mit Schallschutzangaben für vollständige Wandaufbauten." },
+      { label: "Planungs- und Baukataloge", href: "https://www.rigips.de/planen-und-bauen-kataloge", publisher: "Rigips", note: "Technische Kataloge mit geprüften Wandsystemen und Ausführungsdetails." },
+    ],
+    relatedLinks: [
+      { label: "Gipsfaser oder Zementbauplatte für Schallschutz", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipsfaser-oder-zementbauplatte-schallschutz/", description: "Warum beim Schallschutz das geprüfte System mehr zählt als der Plattenname." },
+      { label: "Schallschutzwand planen", href: "/ratgeber/trockenbau-schallschutzwand/", description: "Profile, Dämmung, Lagen und Anschlüsse einer Schallschutzwand einordnen." },
+      { label: "Einfach oder doppelt beplankt", href: "/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", description: "Die zweite Plattenlage als Teil des Wandsystems betrachten." },
+      { label: "Gipskarton oder OSB für die Installationswand", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/", description: "Die OSB-Lage als Befestigungslösung für Leitungen und Anbauteile planen." },
+      { label: "Trockenbauplatten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Plattenfläche nach Seiten und Lagen für beide Varianten rechnen." },
     ],
   } as T;
 }
