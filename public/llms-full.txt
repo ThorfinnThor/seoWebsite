@@ -10,7 +10,7 @@ Die redaktionelle Methode bevorzugt amtliche Quellen, Herstellerunterlagen und F
 
 - [Methodik](https://www.passendplanen.de/methodik/): Rechenprinzipien, Quellenstandard, Datenprüfung und fachliche Grenzen.
 - [Über PassendPlanen](https://www.passendplanen.de/ueber-passendplanen/): Autor, redaktioneller Anspruch, Aktualisierung und Korrekturweg.
-- [Datenauswertungen](https://www.passendplanen.de/ratgeber/daten/): 24 eigene Auswertungen geprüfter Produktdaten.
+- [Datenauswertungen](https://www.passendplanen.de/ratgeber/daten/): 26 eigene Auswertungen geprüfter Produktdaten.
 - [Affiliate Transparenz](https://www.passendplanen.de/affiliate-transparenz/): Trennung von Rechenlogik, Produktauswahl und Vergütung.
 - [Nutzungshinweise](https://www.passendplanen.de/nutzungshinweise/): Grenzen der Planungshilfen und erforderliche Prüfung vor Entscheidungen.
 
@@ -51,12 +51,14 @@ Die redaktionelle Methode bevorzugt amtliche Quellen, Herstellerunterlagen und F
 
 ## Datenauswertungen
 
-Die 24 Datenseiten fassen geprüfte Händlerdaten zusammen. Sie zeigen Stichprobengröße, Datenstand, Medianwerte und fehlende Angaben. Die Stichproben sind keine vollständige Erhebung des deutschen Marktes. Preise können sich ändern und unbekannte Lieferkosten fehlen.
+Die 26 Datenseiten fassen geprüfte Händlerdaten zusammen. Sie zeigen Stichprobengröße, Datenstand, Medianwerte und fehlende Angaben. Die Stichproben sind keine vollständige Erhebung des deutschen Marktes. Preise können sich ändern und unbekannte Lieferkosten fehlen.
 
 - [Was Größe, Material und Preis im aktuellen Gartenhauskatalog zeigen](https://www.passendplanen.de/ratgeber/daten/gartenhaus-preise-groessen/): Eine datenbasierte Einordnung von Grundflächen, Materialien, Dachformen und Angebotspreisen mit offen ausgewiesenen Datenlücken. Datenstand 2026-09-16.
 - [Welche Grundstücksbreite Gartenhäuser wirklich beanspruchen](https://www.passendplanen.de/ratgeber/daten/gartenhaus-aussenmasse-grundstuecksbreite/): Kurze und lange Außenseite, Baukörperform und Grundfläche gemeinsam auswerten, damit die Vorauswahl nicht an einem unpassenden Außenmaß scheitert. Datenstand 2026-09-21.
+- [Welche Dachformen im Gartenhauskatalog vorkommen und was dahintersteckt](https://www.passendplanen.de/ratgeber/daten/gartenhaus-dachformen-groessen-material/): Sattel, Flach und Pultdächer nach Häufigkeit, Grundfläche und Material auswerten, ohne die Sortimentsverteilung mit einer allgemeinen Marktempfehlung zu verwechseln. Datenstand 2026-11-01.
 - [Fußbodenheizung, Feuchtraum und Paketmengen im Datenvergleich](https://www.passendplanen.de/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/): Laminat, Klickvinyl und Fertigparkett nach dokumentierten Freigaben, Paketgrößen und einer konkreten Materialrechnung vergleichen. Datenstand 2026-09-16.
 - [Wie Dielenformat und volle Pakete die Bestellmenge verändern](https://www.passendplanen.de/ratgeber/daten/bodenbelag-formate-paketrundung/): Dielenlänge, Breite und Paketinhalt gemeinsam auswerten und die zusätzliche Rundung bei drei Flächengrößen sichtbar machen. Datenstand 2026-09-21.
+- [Wie stark Laminat, Klickvinyl und Fertigparkett tatsächlich aufbauen](https://www.passendplanen.de/ratgeber/daten/bodenbelag-aufbauhoehe-renovierung/): 98 Klickböden nach Produktstärke auswerten und zeigen, weshalb Türblatt, Übergang und Unterlage vor der Materialentscheidung gemeinsam gemessen werden müssen. Datenstand 2026-11-01.
 - [Welche Leistungsdaten bei Luftentfeuchtern wirklich vergleichbar sind](https://www.passendplanen.de/ratgeber/daten/luftentfeuchter-leistung-lautstaerke/): Entfeuchtungsleistung, Geräusch, Stromaufnahme und Betriebstemperatur anhand der tatsächlich dokumentierten Produktdaten einordnen. Datenstand 2026-09-16.
 - [Navigation, Flächenleistung und Engstellen bei 15 Mährobotern](https://www.passendplanen.de/ratgeber/daten/maehroboter-navigation-flaechenleistung/): Kabel, Kamera, LiDAR, RTK und hybride Navigation anhand der dokumentierten Flächenleistung, Steigung, Engstellen und Angebotspreise einordnen. Datenstand 2026-09-16.
 - [Verbindung, Stromversorgung und Setgröße bei 20 Kameras](https://www.passendplanen.de/ratgeber/daten/sicherheitskameras-verbindung-strom-setgroesse/): WLAN, PoE und Mobilfunk gemeinsam mit der Stromversorgung betrachten und die Produktkosten für vier Überwachungszonen nachvollziehen. Datenstand 2026-09-16.

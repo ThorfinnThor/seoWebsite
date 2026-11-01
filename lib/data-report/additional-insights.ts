@@ -64,6 +64,60 @@ export const gardenHouseDimensionReport = {
   ].map(({ key, label, detail, matches }) => ({ key, label, detail, ...summarizeGardenHouseDimensions(gardenHouses.filter(matches)) })),
 } as const;
 
+type GardenHouseWithRoof = GardenHouseProduct & { roofType: NonNullable<GardenHouseProduct["roofType"]> };
+
+function hasRoofType(product: GardenHouseProduct): product is GardenHouseWithRoof {
+  return product.roofType !== undefined;
+}
+
+const gardenHousesWithRoof = gardenHouses.filter(hasRoofType);
+
+function summarizeGardenHouseRoof(products: readonly GardenHouseWithRoof[]) {
+  const prices = products.flatMap((product) => {
+    const price = gardenHousePrices.get(product.id);
+    return price === undefined ? [] : [price];
+  });
+  return {
+    count: products.length,
+    share: rounded(percent(products.length, gardenHousesWithRoof.length), 1),
+    medianAreaM2: rounded(median(products.map((product) => product.footprintM2)), 1),
+    medianWidthCm: rounded(median(products.map((product) => product.widthCm))),
+    medianDepthCm: rounded(median(products.map((product) => product.depthCm))),
+    medianPriceEur: rounded(median(prices)),
+    woodCount: products.filter((product) => product.material === "wood").length,
+    metalCount: products.filter((product) => product.material === "metal").length,
+  };
+}
+
+export const gardenHouseRoofReport = {
+  generatedAt: gardenHouseCatalog.generatedAt,
+  updatedLabel: formatReportDate(gardenHouseCatalog.generatedAt),
+  total: gardenHouses.length,
+  classified: gardenHousesWithRoof.length,
+  missing: gardenHouses.length - gardenHousesWithRoof.length,
+  coverageShare: rounded(percent(gardenHousesWithRoof.length, gardenHouses.length), 1),
+  heightKnown: gardenHouses.filter((product) => product.heightCm !== undefined).length,
+  types: [
+    { key: "gable", label: "Satteldach" },
+    { key: "flat", label: "Flachdach" },
+    { key: "pent", label: "Pultdach" },
+  ].map(({ key, label }) => ({ key, label, ...summarizeGardenHouseRoof(gardenHousesWithRoof.filter((product) => product.roofType === key)) })),
+  sizeBands: [
+    { label: "Bis 6 m²", matches: (product: GardenHouseWithRoof) => product.footprintM2 <= 6 },
+    { label: "Über 6 bis 12 m²", matches: (product: GardenHouseWithRoof) => product.footprintM2 > 6 && product.footprintM2 <= 12 },
+    { label: "Über 12 m²", matches: (product: GardenHouseWithRoof) => product.footprintM2 > 12 },
+  ].map(({ label, matches }) => {
+    const products = gardenHousesWithRoof.filter(matches);
+    return {
+      label,
+      total: products.length,
+      gable: products.filter((product) => product.roofType === "gable").length,
+      flat: products.filter((product) => product.roofType === "flat").length,
+      pent: products.filter((product) => product.roofType === "pent").length,
+    };
+  }),
+} as const;
+
 type CompleteFlooringFormat = FlooringProduct & {
   packageCoverageM2: number;
   plankLengthMm: number;
@@ -119,6 +173,53 @@ export const flooringFormatReport = {
       medianPackageSurplusM2: rounded(median(orders.map((order) => order.packageSurplusM2)), 2),
       productsWithMoreThanOneM2Surplus: orders.filter((order) => order.packageSurplusM2 > 1).length,
     };
+  }),
+} as const;
+
+type FlooringWithThickness = FlooringProduct & { thicknessMm: number };
+
+function hasFlooringThickness(product: FlooringProduct): product is FlooringWithThickness {
+  return product.reviewed && product.thicknessMm !== undefined;
+}
+
+const flooringWithThickness = flooringCatalog.products.filter(hasFlooringThickness);
+
+function summarizeFlooringThickness(products: readonly FlooringWithThickness[]) {
+  const thicknesses = products.map((product) => product.thicknessMm);
+  return {
+    count: products.length,
+    share: rounded(percent(products.length, flooringWithThickness.length), 1),
+    minThicknessMm: rounded(Math.min(...thicknesses), 1),
+    medianThicknessMm: rounded(median(thicknesses), 1),
+    maxThicknessMm: rounded(Math.max(...thicknesses), 1),
+    floorHeatingApproved: products.filter((product) => product.floorHeatingApproved === true).length,
+    floorHeatingKnown: products.filter((product) => product.floorHeatingApproved !== undefined).length,
+  };
+}
+
+export const flooringThicknessReport = {
+  generatedAt: flooringCatalog.generatedAt,
+  updatedLabel: formatReportDate(flooringCatalog.generatedAt),
+  total: flooringWithThickness.length,
+  summary: summarizeFlooringThickness(flooringWithThickness),
+  allClick: flooringWithThickness.filter((product) => product.installation === "click").length,
+  types: [
+    { key: "laminate", label: "Laminat" },
+    { key: "vinyl-click", label: "Klickvinyl" },
+    { key: "parquet-floating", label: "Fertigparkett" },
+  ].map(({ key, label }) => ({ key, label, ...summarizeFlooringThickness(flooringWithThickness.filter((product) => product.flooringType === key)) })),
+  bands: [
+    { label: "Bis 5 mm", matches: (product: FlooringWithThickness) => product.thicknessMm <= 5 },
+    { label: "Über 5 bis 8 mm", matches: (product: FlooringWithThickness) => product.thicknessMm > 5 && product.thicknessMm <= 8 },
+    { label: "Über 8 bis 10 mm", matches: (product: FlooringWithThickness) => product.thicknessMm > 8 && product.thicknessMm <= 10 },
+    { label: "Über 10 mm", matches: (product: FlooringWithThickness) => product.thicknessMm > 10 },
+  ].map(({ label, matches }) => {
+    const products = flooringWithThickness.filter(matches);
+    return { label, count: products.length, share: rounded(percent(products.length, flooringWithThickness.length), 1) };
+  }),
+  thresholds: [5, 8, 10].map((maximumMm) => {
+    const count = flooringWithThickness.filter((product) => product.thicknessMm <= maximumMm).length;
+    return { maximumMm, count, share: rounded(percent(count, flooringWithThickness.length), 1) };
   }),
 } as const;
 

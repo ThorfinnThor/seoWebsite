@@ -1109,6 +1109,7 @@ body:has(.embed-route) #main {
 
 /* Three data stories with deliberately different visual structures. */
 .dimension-report-hero { background: radial-gradient(circle at 82% 18%,rgba(200,225,157,.58),transparent 26%),#f5f6ee; }
+.roof-report-hero { background: radial-gradient(circle at 83% 18%,rgba(205,226,178,.66),transparent 25%),linear-gradient(135deg,#f5f6ee,#f1eee5); }
 .dimension-threshold-section { display: grid; grid-template-columns: minmax(0,.72fr) minmax(480px,1.28fr); gap: 76px; align-items: start; }
 .dimension-threshold-section h2, .dimension-shape-section h2, .dimension-check h2 { margin: 8px 0 18px; font-size: clamp(1.9rem,3.2vw,2.9rem); }
 .dimension-threshold-section > div:first-child > p:last-child, .dimension-shape-section > div:first-child > p:last-child { color: var(--muted); line-height: 1.75; }
@@ -1138,6 +1139,7 @@ body:has(.embed-route) #main {
 .dimension-check li span { color: var(--muted); font-size: .86rem; line-height: 1.6; }
 
 .flooring-format-hero { background: linear-gradient(135deg,#f6f3eb 0%,#f6f3eb 66%,#e9efe0 66%,#e9efe0 100%); }
+.flooring-thickness-page .data-evidence-gap .data-table-wrap { margin-top: 40px; }
 .flooring-format-hero-layout { display: grid; max-width: 1160px; margin: 68px auto 0; grid-template-columns: minmax(0,1.3fr) minmax(260px,.7fr); gap: 80px; align-items: end; }
 .flooring-format-hero-layout h1 { margin: 12px 0 24px; }
 .flooring-format-hero-layout > div:first-child > p:last-child { max-width: 780px; color: var(--muted); line-height: 1.75; }

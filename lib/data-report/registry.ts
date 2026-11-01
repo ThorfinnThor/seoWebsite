@@ -18,6 +18,15 @@ export const DATA_REPORTS = [
     updatedAt: "2026-09-21",
   },
   {
+    slug: "gartenhaus-dachformen-groessen-material",
+    topic: "gartenhaus",
+    eyebrow: "Gartenhaus Dächer im Datencheck",
+    title: "Welche Dachformen im Gartenhauskatalog vorkommen und was dahintersteckt",
+    description: "Sattel, Flach und Pultdächer nach Häufigkeit, Grundfläche und Material auswerten, ohne die Sortimentsverteilung mit einer allgemeinen Marktempfehlung zu verwechseln.",
+    path: "/ratgeber/daten/gartenhaus-dachformen-groessen-material/",
+    updatedAt: "2026-11-01",
+  },
+  {
     slug: "bodenbelaege-fussbodenheizung-feuchtraum",
     topic: "bodenbelag",
     eyebrow: "Bodenbeläge im Datencheck",
@@ -34,6 +43,15 @@ export const DATA_REPORTS = [
     description: "Dielenlänge, Breite und Paketinhalt gemeinsam auswerten und die zusätzliche Rundung bei drei Flächengrößen sichtbar machen.",
     path: "/ratgeber/daten/bodenbelag-formate-paketrundung/",
     updatedAt: "2026-09-21",
+  },
+  {
+    slug: "bodenbelag-aufbauhoehe-renovierung",
+    topic: "bodenbelag",
+    eyebrow: "Aufbauhöhe im Datencheck",
+    title: "Wie stark Laminat, Klickvinyl und Fertigparkett tatsächlich aufbauen",
+    description: "98 Klickböden nach Produktstärke auswerten und zeigen, weshalb Türblatt, Übergang und Unterlage vor der Materialentscheidung gemeinsam gemessen werden müssen.",
+    path: "/ratgeber/daten/bodenbelag-aufbauhoehe-renovierung/",
+    updatedAt: "2026-11-01",
   },
   {
     slug: "luftentfeuchter-leistung-lautstaerke",
