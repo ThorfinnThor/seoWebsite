@@ -200,10 +200,10 @@ function installationWall<T extends EditorialGuide>(guide: T): T {
       distinctValue: "Die Seite beginnt beim Leitungs- und Anbauplan, trennt Hohlraumtiefe, Durchdringungen und punktuelle Lasten voneinander und zeigt, wann eine durchgehende OSB-Lage gegenüber gezielten Verstärkungen im Ständerwerk überhaupt einen Vorteil bringt.",
       overlapReview: ["/ratgeber/trockenbauwand-einfach-oder-doppelt-beplankt/", "/haus/innenausbau/trockenbau-tuer-oeffnungen/", "/ratgeber/vergleiche/trockenbau/trockenbau-feuchtraumplatte-oder-gipsfaser-kuechenschraenke/"],
     },
-    title: "Rigips oder OSB unter Rigips? Installationswand planen",
-    heading: "Gipskarton oder OSB mit Gips für die Installationswand",
-    description: "Rigips allein oder OSB unter Rigips? Installationswand und Vorwand nach Leitungen, Dosen, Wandverstärkung für Anbauteile und Wandsystem richtig planen.",
-    intro: "Eine Installationswand nimmt Leitungen, Schalterdosen und oft auch Anbauteile auf. Bevor du zwischen reiner Gipskartonbeplankung und OSB unter Gips wählst, sollte feststehen, was genau in und an dieser Wand sitzen wird.",
+    title: "OSB unter Rigips oder doppelt Rigips? So entscheidest du",
+    heading: "OSB unter Rigips oder doppelt Gipskarton an der Installationswand",
+    description: "Für Leitungen und Dosen reicht meist doppelt Rigips. OSB unter Rigips lohnt bei vielen Anbauteilen. So entscheidest du für Vorwand, Bad und Dachausbau.",
+    intro: "Die kurze Antwort lautet so. Für Leitungen, Steckdosen und Schalter reicht eine ein- oder doppellagige Gipskartonbeplankung meist aus. OSB unter Rigips lohnt sich vor allem, wenn an vielen, noch nicht festgelegten Stellen Regale, Schränke oder Geräte hängen sollen. Rigips steht hier wie im Alltag für Gipskartonplatten allgemein. Welche Variante zu deiner Wand passt, hängt davon ab, was genau in und an dieser Wand sitzen wird.",
     takeaway: "Plane vor der Plattenwahl Leitungswege, Dosen und Anbaupunkte. Erst daraus ergibt sich, ob eine Gipskartonwand mit gezielten Verstärkungen reicht oder ob eine durchgehende Holzwerkstofflage im geprüften System sinnvoll ist. Die OSB-Lage ersetzt keinen Lastnachweis.",
     sections: [
       { title: "Was in die Wand kommt, entscheidet über die Platte", paragraphs: [
@@ -259,6 +259,8 @@ function installationWall<T extends EditorialGuide>(guide: T): T {
       { question: "Brauche ich für eine Installationswand immer OSB hinter dem Gips?", answer: "Nein. Für Leitungen und Dosen reicht eine passende Gipskartonbeplankung meist aus. Anbauteile werden über geeignete Befestiger oder gezielte Verstärkungen befestigt, deren Lage vor dem Beplanken feststehen sollte." },
       { question: "Darf ich an einer Wand mit OSB-Lage überall beliebig schwere Teile aufhängen?", answer: "Nicht pauschal. Die zulässige Last hängt vom gesamten Aufbau, den Befestigern und der Unterkonstruktion ab. Dafür sind die Unterlagen des Systems oder eine fachliche Bemessung maßgeblich." },
       { question: "Ist OSB unter Gips im Bad eine gute Idee?", answer: "Das lässt sich nur mit Blick auf die Wasserzone und den nachgewiesenen Gesamtaufbau beantworten. Die OSB-Lage verbessert den Feuchteschutz nicht, Abdichtung und Plattenwahl müssen gesondert geplant werden." },
+      { question: "Ist OSB und Rigips besser als doppelt Rigips?", answer: "Das hängt vom Ziel ab. Eine zweite Gipskartonlage bringt mehr Masse und ist im geprüften Wandsystem oft für Schall- oder Brandschutz vorgesehen. OSB unter Rigips erleichtert das Befestigen von Anbauteilen an frei gewählten Stellen. Für eine reine Leitungswand ohne schwere Anbauteile ist doppelt Rigips meist die einfachere und günstigere Wahl." },
+      { question: "OSB oder Rigips beim Dachausbau?", answer: "Im Dachausbau kommen Luftdichtheit, Dampfbremse, Dämmung und Brandschutz hinzu. Ob eine OSB-Lage dort eine Aufgabe in der Luftdichtheitsschicht übernehmen darf, regelt das Gesamtsystem mit seinen Anschlüssen und nicht die Platte allein. Plane die Schichtenfolge deshalb mit den Herstellerunterlagen oder fachlicher Unterstützung, bevor du dich für OSB, Gipskarton oder beides entscheidest." },
     ],
     example: { title: "Eine Vorwand mit acht Durchdringungen", intro: "Die Zahlen zeigen, wie sich die Stückliste zwischen den Varianten unterscheidet, obwohl die Fläche gleich bleibt.", steps: [
       { label: "Wandfläche einseitig", value: "3,20 m × 2,60 m = 8,32 m²" },
