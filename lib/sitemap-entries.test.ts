@@ -4,7 +4,7 @@ import { DATA_REPORTS } from "@/lib/data-report/registry";
 
 describe("segmented sitemap inventory", () => {
   it("covers every indexable URL exactly once", () => {
-    expect(ALL_SITEMAP_ENTRIES).toHaveLength(192 + DATA_REPORTS.length);
+    expect(ALL_SITEMAP_ENTRIES).toHaveLength(190 + DATA_REPORTS.length);
     expect(new Set(ALL_SITEMAP_ENTRIES.map((entry) => entry.url)).size).toBe(ALL_SITEMAP_ENTRIES.length);
     expect(SITEMAP_SEGMENTS).toHaveLength(2);
   });

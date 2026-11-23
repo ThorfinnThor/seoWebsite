@@ -56,6 +56,17 @@ const rows: AuditRow[] = [
     reason: "Suchintention und Kernaussage waren nahezu identisch. Die stärkere Zielseite enthält nun auch RTK, Kamera, LiDAR und komplexe Gartensituationen.",
   },
   {
+    url: url("/ratgeber/maehroboter-fuer-800-qm/"),
+    pageType: "Ratgeber, alte URL",
+    intent: "Mähroboter Klasse für 800 m² bestimmen",
+    keyword: "Mähroboter für 800 m²",
+    uniqueValue: "Kein eigener Nutzen gegenüber der Seite für 1.000 m², die beide Flächen in einer Tabelle zeigt",
+    similarPages: "/ratgeber/maehroboter-fuer-1000-qm/",
+    overlap: "hoch",
+    recommendation: "Zusammengeführt und 301 weitergeleitet",
+    reason: "Rechnung und Geräteklassen liegen unmittelbar nebeneinander. Die Zielseite enthält die Werte für 800 m².",
+  },
+  {
     url: url("/ratgeber/thema/maehroboter/"),
     pageType: "Themenhub",
     intent: "Alle Mähroboter Rechner, Ratgeber, Beispiele und Vergleiche überblicken",
@@ -187,10 +198,10 @@ const activeRows = rows.filter((row) => !row.pageType.includes("alte URL"));
 const highOverlapRows = rows.filter((row) => row.overlap === "hoch");
 const noindexRows = rows.filter((row) => row.recommendation.includes("noindex"));
 
-if (mowerGuides.length !== 12) throw new Error(`Erwartet 12 Mähroboter Ratgeber, gefunden ${mowerGuides.length}.`);
+if (mowerGuides.length !== 11) throw new Error(`Erwartet 11 Mähroboter Ratgeber, gefunden ${mowerGuides.length}.`);
 if (mowerProjects.length !== 85) throw new Error(`Erwartet 85 Mähroboter Projektbeispiele, gefunden ${mowerProjects.length}.`);
 if (mowerComparisons.length !== 100) throw new Error(`Erwartet 100 Mähroboter Direktvergleiche, gefunden ${mowerComparisons.length}.`);
-if (activeRows.length !== 204) throw new Error(`Erwartet 204 aktive Cluster URLs, gefunden ${activeRows.length}.`);
+if (activeRows.length !== 203) throw new Error(`Erwartet 203 aktive Cluster URLs, gefunden ${activeRows.length}.`);
 if (new Set(rows.map((row) => row.url)).size !== rows.length) throw new Error("Doppelte URL im Mähroboter Audit.");
 
 const tableRows = rows.map((row) => `| ${clean(row.url)} | ${clean(row.pageType)} | ${clean(row.intent)} | ${clean(row.keyword)} | ${clean(row.uniqueValue)} | ${clean(row.similarPages)} | ${row.overlap} | ${clean(row.recommendation)} | ${clean(row.reason)} |`).join("\n");
@@ -201,7 +212,7 @@ Stand 13. September 2026
 
 ## Ergebnis
 
-Der vollständige Cluster umfasst nach der Konsolidierung ${activeRows.length} aktive Inhalts URLs. Hinzu kommt eine alte URL, die dauerhaft auf die stärkere Zielseite weitergeleitet wird. Jede aktive Detail URL wurde nach Seitentyp, Suchintention, eigenständigem Nutzen und Überschneidungsrisiko eingeordnet.
+Der vollständige Cluster umfasst nach der Konsolidierung ${activeRows.length} aktive Inhalts URLs. Hinzu kommen zwei alte URLs, die dauerhaft auf die stärkere Zielseite weitergeleitet werden. Jede aktive Detail URL wurde nach Seitentyp, Suchintention, eigenständigem Nutzen und Überschneidungsrisiko eingeordnet.
 
 * ${mowerGuides.length} redaktionelle Ratgeber
 * ${mowerProjects.length} Projektbeispiele
@@ -211,7 +222,7 @@ Der vollständige Cluster umfasst nach der Konsolidierung ${activeRows.length} a
 
 ## Hohe Überschneidung
 
-${highOverlapRows.map((row) => `* ${row.url} wurde mit ${siteRoot}/garten/maehroboter-begrenzungskabel-kabellos/ zusammengeführt. Der eigenständige Inhalt zu RTK, Kamera, LiDAR und komplexen Gartensituationen befindet sich nun auf der Zielseite. Die alte URL liefert nach dem Deployment eine permanente 301 Weiterleitung.`).join("\n")}
+${highOverlapRows.map((row) => `* ${row.url} wurde mit ${siteRoot}${row.similarPages} zusammengeführt. ${row.reason} Die alte URL liefert nach dem Deployment eine permanente 301 Weiterleitung.`).join("\n")}
 
 Weitere aktive URLs mit hoher Überschneidung wurden nicht bestätigt. Flächenratgeber, Messanleitungen, konkrete Rechenfälle und kontextbezogene Paarvergleiche berühren sich sprachlich, erfüllen aber unterschiedliche Aufgaben.
 

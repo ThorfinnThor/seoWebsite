@@ -38,7 +38,6 @@ const SCENARIO_SECTION_HEADINGS: Record<string, readonly [string, string, string
   "gartenhaus-3x3-meter": ["Neun Quadratmeter sinnvoll zonieren", "Regale und freie Mitte berechnen", "Lagerhaus oder kleine Werkstatt", "Fenster, Tür und Bodenlast"],
   "gartenhaus-3x4-meter": ["Die lange Wand sinnvoll nutzen", "Arbeitszone und Lagerfläche", "Großes Lager oder kombinierte Werkstatt", "Freier Zugang zu langen Geräten"],
   "maehroboter-fuer-250-qm": ["Nettofläche im kleinen Garten", "Reserve für 250 Quadratmeter", "Kompakte oder größere Flächenklasse", "Passagen bleiben ein eigenes Kriterium"],
-  "maehroboter-fuer-800-qm": ["Achthundert Quadratmeter richtig erfassen", "Kapazität bei mittlerer Komplexität", "Flächenklasse und tägliche Laufzeit", "Steigung und getrennte Zonen"],
   "maehroboter-fuer-1000-qm": ["Tausend Quadratmeter als Nettofläche", "Kapazität mit sichtbarer Reserve", "Leistungsklasse und Zeitfenster", "Engstellen dürfen nicht untergehen"],
   "maehroboter-fuer-1500-qm": ["Große Rasenflächen sauber aufteilen", "Planungsleistung für 1.500 Quadratmeter", "Kapazität oder längere Betriebszeit", "Navigation und Steigung nachweisen"],
   "maehroboter-fuer-verwinkelten-garten": ["Zonen und Sackgassen kartieren", "Fahrwege erhöhen den Kapazitätsbedarf", "Korridore oder kartengestützte Navigation", "Die engste Verbindung entscheidet"],
@@ -47,7 +46,6 @@ const SCENARIO_SECTION_HEADINGS: Record<string, readonly [string, string, string
   "terrasse-10-qm-material": ["Die kleine Terrasse genau vermessen", "Bestellfläche und Laufmeter", "Durchgehende Dielen oder geplante Stöße", "Randdetails kosten auf kleiner Fläche viel"],
   "terrasse-20-qm-material": ["Zwanzig Quadratmeter in Verlegefelder teilen", "Dielenmenge mit Zuschnitt", "Lange Lieferlängen oder Stoßplan", "Unterkonstruktion und Befestiger"],
   "terrasse-30-qm-material": ["Große Teilflächen getrennt erfassen", "Laufmeter für dreißig Quadratmeter", "Durchgehende Reihen oder Materialmix", "Lieferung und Lagerung mitplanen"],
-  "terrasse-40-qm-material": ["Vierzig Quadratmeter ohne Pauschalaufschlag", "Bestellrahmen aus Deckbreite und Fuge", "Lange Dielen oder kontrollierte Stöße", "Tragwerk und Wasserführung"],
   "terrassendielen-laengs-oder-quer": ["Blickrichtung und Wasserlauf", "Reihen, Längen und Schnittreste", "Längsverlegung oder Querverlegung", "Die Unterkonstruktion folgt der Richtung"],
   "terrasse-mit-pool-planen": ["Poolrand und Wartungszugang", "Zuschnitt entlang der Rundung", "Feste Umrandung oder demontierbare Felder", "Spritzwasser und sichere Oberflächen"],
   "bewaesserung-kleiner-garten": ["Verbraucher im kleinen Garten trennen", "Durchfluss für kurze Leitungswege", "Eine Zone oder mehrere Kreise", "Druck und Pflanzenbedarf prüfen"],
@@ -323,7 +321,7 @@ const gardenHouseGuides = guides(clusters.gartenhaus, [
 ]);
 
 const mowerGuides = guides(clusters.mower, [
-  ...[250, 800, 1000, 1500].map((area): ScenarioSeed => ({
+  ...[250, 1000, 1500].map((area): ScenarioSeed => ({
     slug: `maehroboter-fuer-${area}-qm`, title: `Mähroboter für ${area} m²: Fläche und Reserve bestimmen`, description: `Mähroboter für ${area} Quadratmeter auswählen: Nettofläche, Reserve, Laufzeit, Steigung, Engstellen und Navigation nachvollziehbar prüfen.`, heading: `Mähroboter für ${area} m²: Nennfläche richtig einordnen`, intro: `Bei einer Rasenfläche um ${area} m² entscheidet nicht nur die Herstellerklasse. Form, Hindernisse, Zonen und verfügbare Mähzeit verändern die notwendige Kapazität.`, takeaway: `Miss die Nettofläche und dokumentiere Komplexität separat. Eine Geräteklasse oberhalb von ${area} m² ist nur dann sinnvoll, wenn die zusätzliche Reserve einen konkreten Grund hat.`, scenario: `eine Rasenfläche von ungefähr ${area} m²`, measurement: `Teile die Fläche in Rechtecke, ziehe Nicht-Rasen ab und erfasse Bäume, Inseln, Passagen sowie maximale Steigung.`, calculation: `${area} m² Nettofläche × 1,${area >= 1000 ? "25" : "20"} Komplexitätsfaktor ergeben rechnerisch ${Math.round(area * (area >= 1000 ? 1.25 : 1.2))} m² Planungsleistung.`, result: `eine sinnvolle Vergleichsklasse ab etwa ${Math.round(area * (area >= 1000 ? 1.25 : 1.2))} m² unter den dokumentierten Bedingungen.`, optionA: `${area}-m²-Klasse`, optionB: `${Math.round(area * (area >= 1000 ? 1.5 : 1.4))}-m²-Klasse`, advice: ["Ein offener, ebener Garten braucht weniger Reserve als viele kleine Zonen.", "Kurze erlaubte Mähzeiten erhöhen die nötige Tagesleistung.", "Steigung und Mindestpassage bleiben unabhängig von der Fläche Ausschlusskriterien."], caution: "Die Nennfläche verschiedener Hersteller ist nur vergleichbar, wenn Betriebszeit und Testbedingungen mitgelesen werden.",
   })),
   {
@@ -338,7 +336,7 @@ const mowerGuides = guides(clusters.mower, [
 ]);
 
 const terraceGuides = guides(clusters.terrace, [
-  ...[10, 20, 30, 40].map((area): ScenarioSeed => ({
+  ...[10, 20, 30].map((area): ScenarioSeed => ({
     slug: `terrasse-${area}-qm-material`, title: `Terrasse mit ${area} m²: Material und Dielen berechnen`, description: `Material für eine ${area}-m²-Terrasse berechnen: Dielenreihen, Laufmeter, Verschnitt, Unterkonstruktion und Befestigung transparent planen.`, heading: `${area} m² Terrasse: vom Flächenmaß zur Bestellmenge`, intro: `Für eine Terrasse mit ${area} m² reicht die Multiplikation aus Länge und Breite nicht. Dielenbreite, Fuge, Richtung und Lieferlänge bestimmen die tatsächliche Bestellung.`, takeaway: `Berechne zuerst Reihen und Laufmeter, dann Zuschnitt und Verschnitt. Unterkonstruktion, Stöße und Randdetails bleiben separate Materialgruppen.`, scenario: `eine Terrasse mit ${area} m²`, measurement: "Lege eine plausible Rechteckgeometrie fest und prüfe sie gegen reale Kanten, Türen, Fallrohre und Ausschnitte.", calculation: `${area} m² ÷ 0,15 m Deckbreite ergeben rund ${Math.ceil(area / 0.15)} Dielen-Laufmeter; mit 10 Prozent Verschnitt etwa ${Math.ceil(area / 0.15 * 1.1)} Laufmeter.`, result: `rund ${Math.ceil(area / 0.15 * 1.1)} laufende Meter Dielen im Beispiel, auf ganze Lieferlängen aufzurunden.`, optionA: "Dielen in Terrassenlänge", optionB: "Kürzere Lieferlängen mit geplanten Stößen", advice: ["Stöße benötigen meist doppelte oder zusätzliche Auflager.", "Rand- und Abschlussprofile werden nicht aus der Fläche abgeleitet.", "Verschnitt hängt von Geometrie und Lieferlänge ab, nicht nur von der Quadratmeterzahl."], caution: "Die angenommene Deckbreite von 15 cm ist ein Rechenbeispiel und muss durch das reale Produktmaß ersetzt werden.",
   })),
   {
