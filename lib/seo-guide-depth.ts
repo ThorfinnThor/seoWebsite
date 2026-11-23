@@ -432,7 +432,7 @@ const SEO_GUIDE_DEPTH_INITIAL: Record<string, SeoGuideDepth> = {
       { label: "Trockenbau-Rechner", href: "/haus/innenausbau/trockenbau-rechner/", description: "Platten, Lagen, Profile und Dämmfläche als Mengenrahmen berechnen." },
       { label: "Trockenbauplatten berechnen", href: "/haus/innenausbau/trockenbau-platten-berechnen/", description: "Öffnungen, Plattenformat und Verschnitt nachvollziehbar berücksichtigen." },
       { label: "Profile und Ständerwerk", href: "/haus/innenausbau/trockenbau-profile-staenderwerk/", description: "Grundraster, Randprofile und zusätzliche Ständer getrennt planen." },
-      { label: "Installationswand: Gipskarton oder OSB mit Gips", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/", description: "Leitungen, Dosen und Anbauteile vor der Plattenwahl festlegen." },
+      { label: "OSB unter Rigips oder doppelt Rigips", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipskarton-standard-oder-osb-gips-installationen/", description: "Wann eine OSB-Lage statt der zweiten Gipslage hilft, etwa für Anbauteile an der Installationswand." },
       { label: "Schallschutz: Gipsfaser oder Zementbauplatte", href: "/ratgeber/vergleiche/trockenbau/trockenbau-gipsfaser-oder-zementbauplatte-schallschutz/", description: "Warum das geprüfte Wandsystem mehr zählt als der Plattenname." },
     ],
   },

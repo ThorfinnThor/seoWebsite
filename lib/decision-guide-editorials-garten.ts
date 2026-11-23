@@ -116,7 +116,7 @@ function greenhouseSmallGarden<T extends EditorialGuide>(guide: T): T {
   return {
     ...guide,
     indexingApproval: {
-      reviewedAt: "2026-10-23",
+      reviewedAt: "2026-11-23",
       canonicalPath: "/ratgeber/vergleiche/gewaechshaus/gewaechshaus-blankglas-oder-sicherheitsglas-kleiner-garten/",
       primaryIntent: "Für ein Gewächshaus in einem kleinen Garten zwischen Blankglas und Einscheibensicherheitsglas entscheiden, wenn Wege, Spielfläche und Terrasse nah am Haus liegen.",
       distinctValue: "Die Seite verbindet Bruchverhalten, Kinder und Haustiere, Hagel, Lichtdurchlässigkeit und Kosten mit einer nachvollziehbaren Gewichtsrechnung für die Verglasung und zeigt, warum der geringe Abstand im kleinen Garten die Sicherheitsfrage verschärft.",
@@ -126,10 +126,10 @@ function greenhouseSmallGarden<T extends EditorialGuide>(guide: T): T {
         "/garten/gewaechshaus-fundament/",
       ],
     },
-    title: "Gewächshaus im kleinen Garten: Blankglas oder ESG",
-    heading: "Gewächshaus im kleinen Garten: Blankglas oder Sicherheitsglas",
-    description: "Blankglas oder ESG fürs Gewächshaus im kleinen Garten: Bruchverhalten, Kinder, Hagel, Gewicht, Fundament, Licht und Kosten sachlich abwägen.",
-    intro: "In einem kleinen Garten steht das Gewächshaus selten weit weg vom Alltag. Der Weg zur Mülltonne, die Terrasse oder der Rasen zum Spielen liegen oft nur ein bis zwei Meter entfernt. Ob Blankglas oder Einscheibensicherheitsglas (ESG) besser passt, hängt deshalb stark davon ab, was bei einem Glasbruch passiert und wer sich in der Nähe aufhält.",
+    title: "Blankglas oder Sicherheitsglas (ESG) im Gewächshaus?",
+    heading: "Blankglas oder Sicherheitsglas für das Gewächshaus im kleinen Garten",
+    description: "Blankglas ist beidseitig glattes, klares Glas wie beim Fenster. ESG bricht in kleine Krümel. Wann welches Glas zum Gewächshaus im kleinen Garten passt.",
+    intro: "Blankglas ist normales Flachglas mit zwei glatten Oberflächen, vollkommen durchsichtig wie Fensterglas. Einscheibensicherheitsglas (ESG) ist vorgespannt und zerfällt bei einem Bruch in kleine, eher stumpfe Krümel. In einem kleinen Garten steht das Gewächshaus selten weit weg vom Alltag. Der Weg zur Mülltonne, die Terrasse oder der Rasen zum Spielen liegen oft nur ein bis zwei Meter entfernt. Welches Glas besser passt, hängt deshalb stark davon ab, was bei einem Glasbruch passiert und wer sich in der Nähe aufhält.",
     takeaway: "Spielen Kinder in der Nähe, laufen Haustiere am Gewächshaus entlang oder liegt es direkt an einem Weg, spricht viel für ESG. Blankglas kann passen, wenn das Haus abseits steht, niemand dagegen stoßen kann und du die klare Sicht bei einem geringeren Preis bevorzugst. Glasstärke und Rahmenfreigabe musst du beim konkreten Modell prüfen.",
     sections: [
       { title: "Warum der kleine Garten die Frage verschärft", paragraphs: [
@@ -185,6 +185,8 @@ function greenhouseSmallGarden<T extends EditorialGuide>(guide: T): T {
       "Scheibenmaße und Artikelnummern für den Ersatz notieren.",
     ],
     faqs: [
+      { question: "Was ist Blankglas?", answer: "Blankglas ist klares Flachglas, dessen beide Oberflächen glatt sind, so wie beim Fensterglas. Im Gewächshaus werden meist Scheiben von etwa 4 mm verwendet. Es ist vollkommen durchsichtig und lässt viel Licht durch, deshalb brauchen Pflanzen dahinter Schatten und Lüftung." },
+      { question: "Was ist der Unterschied zwischen Blankglas und Klarglas?", answer: "Beim Gewächshaus meint Klarglas eine Scheibe mit einer glatten und einer genörpelten Seite. Die Unebenheiten brechen das Licht, es fällt diffuser ein. Blankglas ist auf beiden Seiten glatt und deshalb vollkommen durchsichtig. Beim Einglasen gehört die glatte Seite von Klarglas nach außen." },
       { question: "Ist ESG im Gewächshaus Pflicht, wenn Kinder im Garten sind?", answer: "Eine allgemeine Pflicht für private Gewächshäuser lässt sich daraus nicht ableiten. ESG verringert aber das Verletzungsrisiko bei einem Bruch deutlich. Wenn Kinder in der Nähe spielen, ist es die vorsichtigere Wahl." },
       { question: "Ist ESG schwerer als Blankglas?", answer: "Nein. Bei gleicher Stärke wiegen beide gleich viel, etwa 2,5 kg je Quadratmeter und Millimeter. Ein Unterschied entsteht nur, wenn die Modelle unterschiedlich starke Scheiben verwenden." },
       { question: "Hält ESG Hagel aus?", answer: "ESG ist stoßfester als Blankglas, aber nicht hagelsicher. Große Hagelkörner oder Äste können auch Sicherheitsglas zerstören. Für Regionen mit häufigem Hagel kann Polycarbonat eine Alternative sein, die du im Vergleich Glas oder Polycarbonat findest." },

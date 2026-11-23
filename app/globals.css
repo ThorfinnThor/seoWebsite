@@ -593,6 +593,8 @@ em { color: var(--green-2); font-family: Georgia, serif; font-weight: 400; }
 .project-example-card__facts p { margin: 0; color: var(--muted); font-size: .9rem; }
 .project-example-card__facts span { display: block; margin-bottom: 4px; color: var(--accent); font-size: .7rem; font-weight: 800; letter-spacing: .1em; text-transform: uppercase; }
 .project-example-card .text-link { margin-top: auto; }
+.comparison-matrix summary { width: fit-content; padding: 6px 0; color: var(--green); font-weight: 750; cursor: pointer; }
+.comparison-matrix[open] summary { margin-bottom: 18px; }
 .guide-cta { display: flex; padding: 65px max(24px,calc((100vw - 1272px)/2)); align-items: center; justify-content: space-between; gap: 40px; color: #fff; background: var(--green); }
 .guide-cta h2 { max-width: 720px; margin-bottom: 10px; font-size: clamp(2rem,4vw,3.4rem); }
 .guide-cta p:last-child { margin: 0; color: #c8d8d0; }

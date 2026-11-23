@@ -224,10 +224,10 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
   },
   {
     slug: "trockenbauwand-einfach-oder-doppelt-beplankt",
-    title: "Trockenbau einfach oder doppelt beplanken?",
-    description: "Trockenbauwand einfach oder doppelt beplanken: Stabilität, Schallschutz, Brandschutz, Gewicht, Öffnungen und Systemfreigaben vergleichen.",
+    title: "Einfach oder doppelt beplankt? Wann eine Lage reicht",
+    description: "Eine Lage reicht für leichte Trennwände im freigegebenen System. Wann Schallschutz, Brandschutz oder Lasten die doppelte Beplankung nötig machen.",
     heading: "Einfach oder doppelt beplankt: Die Wandaufgabe entscheidet",
-    intro: "Mehr Plattenlagen können Eigenschaften verbessern, ersetzen aber kein abgestimmtes Trockenbausystem und keine fachgerechte Ausführung.",
+    intro: "Für eine leichte Trennwand ohne besondere Anforderungen reicht eine Lage je Seite, wenn das gewählte System sie für deine Wandhöhe freigibt. Zwei Lagen sind gefragt, wenn ein geprüfter Wandaufbau sie für Schallschutz, Brandschutz oder Steifigkeit vorsieht. Hier geht es um die Zahl der Gipskartonlagen. Ob statt der zweiten Gipslage OSB sinnvoll ist, klärt der verlinkte Vergleich zur Installationswand.",
     takeaway: "Wähle die Beplankung nicht nach Quadratmeterpreis, sondern nach Wandhöhe, Lasten, Schall- und Brandschutzanforderung sowie dem freigegebenen System.",
     plannerHref: "/haus/innenausbau/trockenbau-rechner/",
     plannerLabel: "Trockenbau berechnen",
