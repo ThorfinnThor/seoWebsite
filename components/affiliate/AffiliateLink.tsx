@@ -35,7 +35,6 @@ export function AffiliateLink({ href, productId, pageSlug, verticalRef = "garden
         planner: verticalRef,
         merchant: merchantName ?? "unknown",
         product_ref: shortProductRef(productId),
-        placement,
         network: isAwinUrl ? "awin" : "direct",
       });
       onClick?.(event);

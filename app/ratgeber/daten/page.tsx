@@ -45,7 +45,7 @@ export default function Page() {
     <section className="page-hero data-directory-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen" }]} />
       <p className="eyebrow">Eigene Auswertungen statt pauschaler Ranglisten</p>
-      <h1>Was unsere geprüften Produktdaten <em>wirklich</em> zeigen.</h1>
+      <h1>Auswertungen unseres Produktkatalogs</h1>
       <p>PassendPlanen führt technische Angaben aus Händlerkatalogen zusammen, prüft sie und wertet sie für konkrete Entscheidungen aus. Jede Analyse nennt Stichprobe, Datenstand und fehlende Angaben.</p>
     </section>
     <RatgeberSectionNav active="data" />

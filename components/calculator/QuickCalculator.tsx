@@ -53,7 +53,7 @@ const PROJECTS: readonly QuickProject[] = [
     buildInput: terraceInput,
     results: (a, b) => {
       const plan = calculateTerracePlan(terraceInput(a, b));
-      return [{ value: `${plan.fullBoardsToBuy}`, label: "Dielen à 4 m" }, { value: `${de(plan.supportLinearMWithWaste, 0)} m`, label: "Unterkonstruktion" }, { value: `${de(plan.areaM2)} m²`, label: "Fläche" }];
+      return [{ value: `${plan.fullBoardsToBuy}`, label: "Dielen à 4 m" }, { value: `${de(plan.supportLinearMWithWaste, 0)} m`, label: "Träger" }, { value: `${de(plan.areaM2)} m²`, label: "Fläche" }];
     },
   },
   {

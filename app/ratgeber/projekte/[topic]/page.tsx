@@ -65,7 +65,7 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         { label: "Projektbeispiele" },
       ]} />
       <p className="eyebrow">85 nachvollziehbare Rechenprofile</p>
-      <h1>{capitalizeSentences(directory.title)} <em>konkret gerechnet.</em></h1>
+      <h1>{capitalizeSentences(directory.title)}</h1>
       <p>{capitalizeSentences(directory.intro)}</p>
       <div className="hero-actions">
         <Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link>

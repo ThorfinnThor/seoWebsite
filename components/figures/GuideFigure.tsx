@@ -41,19 +41,18 @@ function DimY({ x, y1, y2, label }: { x: number; y1: number; y2: number; label: 
 const range = (count: number) => Array.from({ length: count }, (_, index) => index);
 
 function BikeShedFigure() {
-  // 1 m = 110 px
-  const m = 110;
+  const m = 106;
   const left = 80;
   const top = 46;
-  const width = 3.0 * m;
+  const width = 3.15 * m;
   const depth = 2.85 * m;
   return (
-    <Figure title="Grundriss mit sechs Fahrrädern in einer Reihe" width={620} height={440} caption="Grundriss 3,00 × 2,85 m innen: sechs Räder mit 50 cm Abstand, jedes zweite Vorderrad angehoben. Der 1 m breite Gang bleibt frei.">
+    <Figure title="Grundriss mit sechs Fahrrädern in einer Reihe" width={620} height={440} caption="Grundriss 3,15 × 2,85 m innen: sechs Räder mit 50 cm Abstand, jedes zweite Vorderrad angehoben. Der 1 m breite Gang bleibt frei.">
       <rect className="wall" x={left} y={top} width={width} height={depth} />
       <rect className="zone" x={left} y={top + 1.85 * m} width={width} height={1.0 * m} />
       <text className="label" x={left + width / 2} y={top + 2.35 * m + 5} textAnchor="middle">Gang</text>
       {range(6).map((index) => {
-        const centre = left + (0.25 + index * 0.5) * m;
+        const centre = left + (0.325 + index * 0.5) * m;
         const raised = index % 2 === 1;
         return (
           <g key={index} className={raised ? "part part--soft" : "part"}>
@@ -63,9 +62,9 @@ function BikeShedFigure() {
           </g>
         );
       })}
-      <path className="opening" d={`M${left + 0.6 * m} ${top + depth}h${1.8 * m}`} />
+      <path className="opening" d={`M${left + 0.68 * m} ${top + depth}h${1.8 * m}`} />
       <text className="label" x={left + width / 2} y={top + depth + 24} textAnchor="middle">Doppeltür</text>
-      <DimX x1={left} x2={left + width} y={26} label="3,00 m" />
+      <DimX x1={left} x2={left + width} y={26} label="3,15 m" />
       <DimY x={56} y1={top} y2={top + 1.85 * m} label="1,85 m" />
       <DimY x={56} y1={top + 1.85 * m} y2={top + depth} label="1,00 m" />
       <g className="legend">
@@ -237,7 +236,7 @@ function GreenhouseFigure() {
       <rect className="wall" x={left} y={top} width={3 * m} height={2 * m} />
       <rect className="bed" x={left} y={top} width={3 * m} height={0.65 * m} />
       <rect className="bed" x={left} y={top + 1.35 * m} width={3 * m} height={0.65 * m} />
-      {range(6).flatMap((index) => [0.325, 1.675].map((y) => <circle key={`${index}-${y}`} className="plant" cx={left + (0.25 + index * 0.5) * m} cy={top + y * m} r={15} />))}
+      {range(6).flatMap((index) => [0.325, 1.675].map((y) => <circle key={`${index}-${y}`} className="plant" cx={left + (0.325 + index * 0.5) * m} cy={top + y * m} r={15} />))}
       <text className="label" x={left + 1.5 * m} y={top + m + 5} textAnchor="middle">Weg 70 cm</text>
       <path className="opening" d={`M${left + 3 * m} ${top + 0.65 * m}v${0.7 * m}`} />
       <text className="label" x={left + 3 * m + 14} y={top + m + 5}>Tür</text>

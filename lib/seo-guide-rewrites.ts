@@ -13,11 +13,11 @@ export const SEO_GUIDE_REWRITES_UPDATED = { iso: "2026-11-23", label: "23. Novem
 
 export const SEO_GUIDE_REWRITES: Record<string, SeoGuideRewrite> = {
   "gartenhaus-fuer-sechs-fahrraeder": {
-    intro: "Für sechs Fahrräder brauchst du innen etwa 8,5 bis 11 m². Mit höhenversetzten Haltern reichen drei Meter Wand, ohne Versatz sind es knapp vier. Dazu kommt ein Meter Gang, sonst musst du für jedes hintere Rad drei andere herausräumen.",
-    takeaway: "Plane mindestens 3,0 × 2,9 m Innenmaß, eine Doppeltür und feste Plätze für die Räder, die täglich gebraucht werden. Bei Lastenrad oder Anhänger rechne eine eigene Stellfläche dazu.",
+    intro: "Für sechs Fahrräder brauchst du innen etwa 9 bis 11 m². Mit höhenversetzten Haltern reichen 3,15 m Wand, ohne Versatz sind es 3,90 m. Dazu kommt ein Meter Gang, damit du jedes Rad einzeln herausbekommst.",
+    takeaway: "Plane mindestens 3,2 × 2,9 m Innenmaß, eine Doppeltür und feste Plätze für die Räder, die täglich gebraucht werden. Bei Lastenrad oder Anhänger rechne eine eigene Stellfläche dazu.",
     sections: [
       { title: "Drei Anordnungen, drei Größen", paragraphs: [
-        "Ein Erwachsenenrad ist rund 1,85 m lang, der Lenker 60 bis 75 cm breit. Stehen die Räder auf gleicher Höhe nebeneinander, brauchst du pro Rad etwa 65 cm. Hebst du jedes zweite Vorderrad um 25 bis 30 cm an, greifen die Lenker übereinander und 50 cm genügen.",
+        "Ein Erwachsenenrad ist rund 1,85 m lang, der Lenker 60 bis 75 cm breit. Stehen die Räder auf gleicher Höhe nebeneinander, brauchst du pro Rad etwa 65 cm. Hebst du jedes zweite Vorderrad um 25 bis 30 cm an, greifen die Lenker übereinander und 50 cm genügen. Nur zu den Seitenwänden bleibt die halbe Lenkerbreite, also gut 30 cm.",
         "Die Tabelle rechnet alle drei Varianten mit einem Meter Gang. Miss deine Räder trotzdem nach: Ein breiter Mountainbike-Lenker oder ein Kindersitz kostet schnell zehn Zentimeter.",
       ] },
       { title: "Warum der Gartenhaus-Planer weniger ausgibt", paragraphs: [
@@ -36,14 +36,14 @@ export const SEO_GUIDE_REWRITES: Record<string, SeoGuideRewrite> = {
       caption: "Platzbedarf für sechs Räder mit 1,0 m Gang",
       columns: ["Anordnung", "Innenmaß", "Fläche"],
       rows: [
-        ["Eine Reihe, höhenversetzt (50 cm je Rad)", "3,00 × 2,85 m", "8,6 m²"],
+        ["Eine Reihe, höhenversetzt (50 cm je Rad)", "3,15 × 2,85 m", "9,0 m²"],
         ["Zwei Reihen mit je drei Rädern (65 cm je Rad)", "1,95 × 4,70 m", "9,2 m²"],
         ["Eine Reihe ohne Versatz (65 cm je Rad)", "3,90 × 2,85 m", "11,1 m²"],
       ],
     },
     checklist: [],
     faqs: [
-      { question: "Reicht ein Gartenhaus mit 3 × 3 Metern für sechs Fahrräder?", answer: "Als Innenmaß ja, wenn du die Vorderräder höhenversetzt stellst. Viele Angebote nennen aber das Außen- oder Dachmaß. Innen fehlen dann je nach Wandstärke und Dachüberstand 10 bis 60 cm." },
+      { question: "Reicht ein Gartenhaus mit 3 × 3 Metern für sechs Fahrräder?", answer: "Nur knapp. Auf 3,00 m Wand stehen die Räder 47 cm auseinander, das klappt mit Höhenversatz und schmalen Lenkern. Viele Angebote nennen aber das Außen- oder Dachmaß. Innen fehlen dann je nach Wandstärke und Dachüberstand 10 bis 60 cm." },
       { question: "Wie breit muss die Tür sein?", answer: "Ein Rad passt durch 80 cm. Bequem wird es ab 90 cm lichter Breite, mit Anhänger oder Lastenrad ab 120 cm." },
     ],
   },

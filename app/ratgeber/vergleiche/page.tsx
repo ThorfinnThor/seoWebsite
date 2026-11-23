@@ -39,7 +39,7 @@ export default function Page() {
     <section className="page-hero project-directory-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Direkte Vergleiche" }]} />
       <p className="eyebrow">{DECISION_GUIDE_COUNT.toLocaleString("de-DE")} konkrete Entscheidungssituationen</p>
-      <h1>Direkt vergleichen und <em>konkret entscheiden.</em></h1>
+      <h1>Zwei Lösungen im Vergleich</h1>
       <p>Keine pauschalen Testsieger. Jede Seite vergleicht zwei Lösungswege für eine klar benannte Nutzung. Gewichtung, Gegenprobe, Quellen und Grenzen bleiben sichtbar.</p>
     </section>
     <RatgeberSectionNav active="comparisons" />

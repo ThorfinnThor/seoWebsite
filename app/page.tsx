@@ -11,7 +11,7 @@ const AREAS = [
 const GUIDES = [
   { href: "/ratgeber/trockenbauwand-3-meter/", title: "Material für eine 3 m lange Trockenbauwand", text: "Sechs Platten, sechs Ständer und warum fünf Platten knapp werden." },
   { href: "/ratgeber/terrassendielen-laengs-oder-quer/", title: "Terrassendielen längs oder quer?", text: "Auf 6 × 4 m entscheidet die Dielenlänge über null oder 27 Stöße." },
-  { href: "/ratgeber/gartenhaus-fuer-sechs-fahrraeder/", title: "Gartenhaus für sechs Fahrräder", text: "Drei Anordnungen mit Grundriss, von 8,6 bis 11,1 m²." },
+  { href: "/ratgeber/gartenhaus-fuer-sechs-fahrraeder/", title: "Gartenhaus für sechs Fahrräder", text: "Drei Anordnungen mit Grundriss, von 9,0 bis 11,1 m²." },
   { href: "/ratgeber/luftentfeuchter-fuer-50-qm/", title: "Luftentfeuchter für 50 m²", text: "Warum „20 Liter am Tag“ im Keller selten stimmt." },
   { href: "/ratgeber/carport-fuer-suv/", title: "Carport für einen SUV", text: "3,55 m zwischen den Pfosten und wie die Zahl entsteht." },
   { href: "/ratgeber/sichtschutz-10-meter-berechnen/", title: "10 Meter Sichtschutz aufteilen", text: "Drei saubere Lösungen für die fehlenden 46 cm." },

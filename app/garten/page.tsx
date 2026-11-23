@@ -60,7 +60,7 @@ function GuideGrid({ items, label }: { items: readonly (readonly [string, string
 
 export default function GardenPage() {
   return <>
-    <section className="page-hero"><Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Garten" }]} /><p className="eyebrow">Projektbereich Garten</p><h1>Mehr Klarheit zwischen Idee und Aufbau.</h1><p>Werkzeuge und Ratgeber, die Platzbedarf, technische Grenzen und Gesamtkosten zusammenbringen.</p></section>
+    <section className="page-hero"><Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Garten" }]} /><h1>Rechner und Ratgeber für den Garten</h1><p>Werkzeuge und Ratgeber, die Platzbedarf, technische Grenzen und Gesamtkosten zusammenbringen.</p></section>
     <section className="section">
       <Link className="planner-banner" href="/garten/gartenhaus-planer/"><div><span className="status-pill">Planer</span><h2>Welches Gartenhaus passt zu deinem Projekt?</h2><p>In wenigen Schritten zu Mindestfläche, Türbreite und kompatiblen Modellen.</p></div><span className="button button--light">Jetzt berechnen →</span></Link>
       <Link className="planner-banner planner-banner--secondary" href="/garten/bewaesserungs-planer/"><div><span className="status-pill">Planer</span><h2>Bewässerung als kompatibles System planen.</h2><p>Materialstruktur für Rasen, Beete und Hecken – ohne falschen Hydraulikanspruch.</p></div><span className="button button--light">System planen →</span></Link>

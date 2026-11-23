@@ -81,7 +81,7 @@ const FLOORING: Record<string, string> = { laminate: "Laminat", "vinyl-click": "
 const BOARD: Record<string, string> = { standard: "Standardplatte", "gypsum-fiber": "Gipsfaser", "fire-acoustic": "Brand- und Schallschutz", moisture: "Feuchtraum" };
 
 function gardenHouseRange(path: string): { min: number; max: number; label: string } {
-  if (/sechs-fahrraeder/.test(path)) return { min: 8.5, max: 13, label: "8,5 bis 13 m²" };
+  if (/sechs-fahrraeder/.test(path)) return { min: 9, max: 13, label: "9 bis 13 m²" };
   if (/vier-fahrraeder/.test(path)) return { min: 6, max: 9, label: "6 bis 9 m²" };
   if (/zwei-fahrraeder|2x2|rasenmaeher|kleine/.test(path)) return { min: 3.5, max: 6, label: "3,5 bis 6 m²" };
   if (/3x4|werkstatt/.test(path)) return { min: 9, max: 14, label: "9 bis 14 m²" };
@@ -103,7 +103,7 @@ const TOPICS: Record<string, TopicConfig> = {
     ],
     pick: (path) => {
       const range = gardenHouseRange(path);
-      const inRange = (p: CatalogProduct) => !/carport|anbau/i.test(p.name) && within(num(p, "footprintM2"), range.min, range.max);
+      const inRange = (p: CatalogProduct) => !/carport|anbau|offen|lounge/i.test(p.name) && within(num(p, "footprintM2"), range.min, range.max);
       const target = (range.min + range.max) / 2;
       const rank = closest("footprintM2", target);
       const wood = { match: (p: CatalogProduct) => inRange(p) && p.material === "wood", rank };
@@ -177,7 +177,7 @@ const TOPICS: Record<string, TopicConfig> = {
     pick: (path) => {
       const kit = (p: CatalogProduct) => p.kind === "kit" && (num(p, "externalLengthM") ?? 0) >= 4.8;
       if (/doppelcarport|doppel/.test(path)) return { basis: "Ausgewählt nach Außenbreite für zwei Fahrzeuge.", slots: times(3, { match: (p) => kit(p) && num(p, "vehicleCount") === 2, rank: closest("externalWidthM", 6) }) };
-      if (/suv/.test(path)) return { basis: "Ausgewählt nach Außenbreite ab 3,50 m. Das lichte Maß zwischen den Pfosten ist kleiner, bitte beim Händler prüfen.", slots: times(3, { match: (p) => kit(p) && num(p, "vehicleCount") === 1 && within(num(p, "externalWidthM"), 3.5, 4.6), rank: closest("externalWidthM", 3.9) }) };
+      if (/suv/.test(path)) return { basis: "Ausgewählt nach Außenbreite ab 3,50 m. Das reicht meist für den Ausstieg auf einer Seite. Für beide Seiten brauchst du außen mindestens 3,80 m.", slots: times(3, { match: (p) => kit(p) && num(p, "vehicleCount") === 1 && within(num(p, "externalWidthM"), 3.5, 4.6), rank: closest("externalWidthM", 3.9) }) };
       return { basis: "Ausgewählt nach Außenbreite von 3,00 bis 4,00 m für ein Fahrzeug.", slots: times(3, { match: (p) => kit(p) && num(p, "vehicleCount") === 1 && within(num(p, "externalWidthM"), 3, 4), rank: closest("externalWidthM", 3.5) }) };
     },
   },
