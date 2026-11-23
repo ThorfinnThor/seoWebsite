@@ -7,6 +7,7 @@ import { usePlannerValidation } from "@/components/calculator/usePlannerValidati
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ResultProductJump } from "@/components/product/ResultProductJump";
 import { calculateRobotMowerPlan } from "@/lib/robot-mower/rules";
 import { RobotMowerInputSchema, type LawnArea, type RobotMowerInput } from "@/lib/robot-mower/types";
 import { nextNumberedLabel } from "@/lib/planner/dynamic-label";
@@ -117,6 +118,7 @@ export function RobotMowerPlanner() {
 
     {step === 4 && plan && <div className="results robot-mower-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Netto-Rasenfläche</span><strong>{format(plan.netAreaM2)} m²</strong></div><div><span>Flächenklasse ab</span><strong>{plan.requiredRatedAreaM2} m²</strong></div><div><span>Engste Passage</span><strong>{format(input.narrowestPassageCm)} cm</strong></div><div><span>Maximale Steigung</span><strong>{format(input.maximumSlopePercent)} %</strong></div></div>
+      <ResultProductJump label="Mähroboter für deine Fläche" />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">◉</span><div><p className="eyebrow">Kapazitätsrahmen</p><h3>Modelle ab {plan.requiredRatedAreaM2} m² Nennfläche prüfen</h3><p>{format(plan.netAreaM2)} m² Nettofläche werden mit dem Faktor {format(plan.capacityFactor)} für Geometrie, Zonen, Wachstum und Trennung eingeordnet.</p><strong>Herstellerbedingungen und reale Mähzeit bleiben ausschlaggebend.</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">↗</span><div><p className="eyebrow">Gelände</p><h3>{passageLabel(plan.passageClass)} · {format(input.maximumSlopePercent)} % Steigung</h3><p>{input.obstacleCount} feste Hindernisse und {input.mowingZones} geplante Zone{input.mowingZones === 1 ? "" : "n"} gehören in den konkreten Gartenplan.</p><strong>Durchfahrt, Randgefälle und Wendefläche produktbezogen bestätigen.</strong></div></article>
@@ -124,7 +126,7 @@ export function RobotMowerPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor der Geräteauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}{plan.setupTasks.map((task) => <li key={task}>{task}</li>)}<li>Randgestaltung, Stufen, Wasserflächen, öffentliche Wege, Kinder- und Tierbereiche sowie Aufbewahrung nach Anleitung und örtlicher Situation planen.</li></ul></div>
       <PrintResultAction />
-      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Mähroboter</h3><p>Nur redaktionell freigegebene Produkte erscheinen hier. Feed-Daten mit fehlenden Flächen- oder Passagenwerten bleiben bis zur Prüfung ausgeschlossen.</p><AffiliateDisclosure /><CatalogMatchList planner="robot-mower" matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Mähroboter. Die Ecovacs-Feeddaten sind erfasst und warten auf die manuelle Bestätigung der technischen Werte." /></section>
+      <section className="recommendation-section" id="angebote"><h3>Passende Mähroboter</h3><p>Fehlen Angaben zu Fläche oder Passage, zeigen wir ein Modell nicht an.</p><AffiliateDisclosure /><CatalogMatchList planner="robot-mower" matches={matches} emptyLabel="Für diese Angaben haben wir gerade kein passendes Modell." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}

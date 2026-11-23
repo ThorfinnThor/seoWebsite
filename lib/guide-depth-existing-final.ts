@@ -12,13 +12,7 @@ function depth(input: Input): SeoGuideDepth {
   return {
     comparison: { caption: input.caption, columns: ["Planungspunkt", "Bedeutung", "Konkrete Prüfung"], rows: input.rows },
     checklist: input.checklist,
-    faqs: [
-      ...input.faqs.map(([question, answer]) => ({ question, answer })),
-      {
-        question: `Wie nutze ich „${input.caption}“ für eine konkrete Entscheidung?`,
-        answer: "Übertrage alle Messwerte und Bedingungen deines Projekts in eine einfache Skizze oder Tabelle. Markiere bestätigte Herstellerdaten, eigene Messungen und noch offene Annahmen getrennt. Vergleiche nur Lösungen, die alle harten Anforderungen erfüllen. Preis und Komfort gehören in den Vergleich, sobald die technischen Grenzen geklärt sind. Ein sicherheits-, bau- oder systemrelevanter offener Punkt muss vor der Bestellung fachlich oder anhand der verbindlichen Produktunterlagen geklärt werden.",
-      },
-    ],
+    faqs: input.faqs.map(([question, answer]) => ({ question, answer })),
     relatedLinks: input.links.map(([label, href, description]) => ({ label, href, description })),
   };
 }

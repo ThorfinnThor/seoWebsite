@@ -10,7 +10,7 @@ import {
 } from "@/lib/project-examples";
 import { absoluteUrl } from "@/lib/site";
 import { getSeoTopic } from "@/lib/seo-topics";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 import { TopicLinks } from "@/components/seo/TopicLinks";
 
 export function generateStaticParams() {
@@ -65,8 +65,8 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         { label: "Projektbeispiele" },
       ]} />
       <p className="eyebrow">85 nachvollziehbare Rechenprofile</p>
-      <h1>{editorializeText(directory.title)} <em>konkret gerechnet.</em></h1>
-      <p>{editorializeText(directory.intro)}</p>
+      <h1>{capitalizeSentences(directory.title)}</h1>
+      <p>{capitalizeSentences(directory.intro)}</p>
       <div className="hero-actions">
         <Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link>
         <a className="text-link" href="#beispiele">Alle Beispiele ansehen ↓</a>

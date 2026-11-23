@@ -10,9 +10,11 @@ interface AffiliateLinkProps extends PropsWithChildren, Omit<AnchorHTMLAttribute
   pageSlug?: string;
   verticalRef?: string;
   merchantName?: string;
+  /** Where the link sits, so clicks from guides and planner results can be compared. */
+  placement?: "planner-result" | "guide" | "topic";
 }
 
-export function AffiliateLink({ href, productId, pageSlug, verticalRef = "garden-house", merchantName, children, onClick, ...props }: AffiliateLinkProps) {
+export function AffiliateLink({ href, productId, pageSlug, verticalRef = "garden-house", merchantName, placement = "planner-result", children, onClick, ...props }: AffiliateLinkProps) {
   const isAwinUrl = (() => {
     try {
       const hostname = new URL(href).hostname.toLowerCase();
@@ -23,7 +25,7 @@ export function AffiliateLink({ href, productId, pageSlug, verticalRef = "garden
   })();
   const trackedUrl = isAwinUrl ? addAwinClickRefs(href, {
     clickref: verticalRef,
-    clickref2: "planner-result",
+    clickref2: placement,
     clickref3: shortProductRef(productId),
     clickref4: pageSlug,
   }) : href;

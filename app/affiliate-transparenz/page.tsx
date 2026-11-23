@@ -13,7 +13,7 @@ export default function AffiliateTransparenzPage() {
     <LegalPage title="Affiliate-Transparenz" intro="Wie Empfehlungen entstehen, wie Partnerlinks gekennzeichnet werden und was eine mögliche Provision nicht beeinflusst." requiresContact={false}>
       <section>
         <h2>Aktueller Stand</h2>
-        <p>PassendPlanen verwendet bei freigegebenen Händlerprogrammen gekennzeichnete Affiliate-Links. Ein neues Programm wie Trotec DACH erscheint erst in Vergleichen, nachdem die zugehörigen Produktdaten zusätzlich redaktionell geprüft wurden.</p>
+        <p>Partnerlinks stehen in den Ergebnissen der Planer, in Ratgebern und auf Themenseiten. Jeder Block trägt die Kennzeichnung „Anzeige“. Produkte eines Händlers erscheinen erst, wenn seine Produktdaten geprüft wurden.</p>
       </section>
       <section>
         <h2>Bedarf vor Provision</h2>
@@ -21,7 +21,7 @@ export default function AffiliateTransparenzPage() {
       </section>
       <section>
         <h2>So werden Partnerlinks erkennbar</h2>
-        <p>Sobald Partnerlinks freigeschaltet werden, stehen direkt am Vergleich ein Hinweis und an jedem ausgehenden Kauf-Link eine eindeutige Kennzeichnung. Bei einem Kauf nach dem Klick kann PassendPlanen eine Provision erhalten; für dich soll sich der Preis dadurch nicht erhöhen.</p>
+        <p>Über jeder Produktliste steht „Anzeige“, die Schaltflächen nennen den Händler, zu dem sie führen. Kaufst du nach dem Klick ein, kann PassendPlanen eine Provision erhalten. Dein Preis ändert sich dadurch nicht.</p>
       </section>
       <section>
         <h2>Datenqualität und Grenzen</h2>
@@ -29,7 +29,7 @@ export default function AffiliateTransparenzPage() {
       </section>
       <section>
         <h2>Mehr zur Methode</h2>
-        <p><Link href="/methodik/">Unsere Methodik</Link> beschreibt harte Filter, nachvollziehbare Berechnungen und die Grenzen der elf Planer.</p>
+        <p><Link href="/methodik/">Unsere Methodik</Link> beschreibt harte Filter, nachvollziehbare Berechnungen und die Grenzen der Planer.</p>
       </section>
     </LegalPage>
   );

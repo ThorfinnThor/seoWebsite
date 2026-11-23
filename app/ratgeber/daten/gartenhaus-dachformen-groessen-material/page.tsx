@@ -30,7 +30,7 @@ export default function Page() {
     </header>
 
     <section className="data-report-section data-split-section" aria-labelledby="roof-share-title">
-      <div><p className="eyebrow">Verteilung der dokumentierten Dachformen</p><h2 id="roof-share-title">Fast acht von zehn Treffern tragen ein Flachdach.</h2><p>Von {report.total} geprüften Häusern nennen {report.classified} eine auswertbare Dachform. Die Prozentwerte beziehen sich ausschließlich auf diese klassifizierte Teilmenge. Bei {report.missing} Modellen bleibt die Dachform im Feed offen.</p><p className="data-report-reading">Die Verteilung eignet sich zur Beschreibung des Katalogs. Für die konkrete Wahl zählen zusätzlich Bauhöhe, Entwässerungsrichtung, Schneelast, Dachdeckung und die örtliche Situation.</p></div>
+      <div><p className="eyebrow">Verteilung der dokumentierten Dachformen</p><h2 id="roof-share-title">Fast acht von zehn Treffern tragen ein Flachdach.</h2><p>Von {report.total} geprüften Häusern nennen {report.classified} eine auswertbare Dachform. Die Prozentwerte beziehen sich ausschließlich auf diese klassifizierte Teilmenge. Bei {report.missing} Modellen fehlt die Angabe zur Dachform.</p><p className="data-report-reading">Die Verteilung eignet sich zur Beschreibung des Katalogs. Für die konkrete Wahl zählen zusätzlich Bauhöhe, Entwässerungsrichtung, Schneelast, Dachdeckung und die örtliche Situation.</p></div>
       <ReportBarList ariaLabel="Anteile der Gartenhaus Dachformen" items={report.types.map((type) => ({ label: type.label, value: type.count, displayValue: `${type.count} Modelle`, detail: `${number(type.share, 1)} Prozent der Häuser mit dokumentierter Dachform` }))} />
     </section>
 
@@ -52,7 +52,7 @@ export default function Page() {
     </section>
 
     <section className="data-report-section data-evidence-gap" aria-labelledby="roof-limit-title">
-      <div><p className="eyebrow">Was der Feed nicht entscheiden kann</p><h2 id="roof-limit-title">Für die Standortprüfung fehlen ausgerechnet die entscheidenden Höhen.</h2><p>Nur {report.heightKnown} von {report.total} geprüften Häusern enthalten eine auswertbare Gesamthöhe. Traufhöhe, Firsthöhe, Dachneigung und Entwässerungsseite liegen nicht konsistent vor. Eine rechtliche oder konstruktive Freigabe wäre auf dieser Grundlage unseriös.</p></div>
+      <div><p className="eyebrow">Was die Händlerdaten nicht beantworten</p><h2 id="roof-limit-title">Für die Standortprüfung fehlen ausgerechnet die entscheidenden Höhen.</h2><p>Nur {report.heightKnown} von {report.total} geprüften Häusern enthalten eine auswertbare Gesamthöhe. Traufhöhe, Firsthöhe, Dachneigung und Entwässerungsseite liegen nicht konsistent vor. Eine rechtliche oder konstruktive Freigabe wäre auf dieser Grundlage unseriös.</p></div>
       <div className="data-gap-grid">
         <article><strong>01</strong><h3>Höhen am Produkt prüfen</h3><p>Gesamthöhe, Traufe und First gehören in den Lageplan. Die Bezeichnung der Dachform ersetzt diese Maße nicht.</p></article>
         <article><strong>02</strong><h3>Wasserführung einzeichnen</h3><p>Gefälle, Rinne und Fallrohr bestimmen, wohin Niederschlag gelangt. Das ist besonders nahe an Grenzen und Wegen relevant.</p></article>

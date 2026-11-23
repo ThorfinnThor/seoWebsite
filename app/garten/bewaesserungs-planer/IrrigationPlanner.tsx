@@ -6,6 +6,7 @@ import { ResultInterpretation } from "@/components/calculator/ResultInterpretati
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ResultProductJump } from "@/components/product/ResultProductJump";
 import { buildIrrigationPlan } from "@/lib/irrigation/rules";
 import { IrrigationInputSchema, type IrrigationInput, type IrrigationPlan } from "@/lib/irrigation/types";
 import { findInvalidPlannerStep, focusFirstInvalidField, issuesToFieldErrors, type PlannerFieldErrors } from "@/lib/planner-validation";
@@ -111,10 +112,11 @@ export function IrrigationPlanner() {
     {step === 4 && plan && <div className="results">
       <div className="requirement-summary"><div><span>System</span><strong>{plan.style === "combined" ? "Kombiniert" : plan.style === "sprinkler" ? "Rasen" : "Tropf"}</strong></div><div><span>Nutzungsbereiche</span><strong>{plan.activeCategories}</strong></div><div><span>Steuerungszonen</span><strong>{plan.controllerZones || "manuell"}</strong></div><div><span>Budgetrahmen</span><strong>{input.budgetMaxEur.toLocaleString("de-DE")} €</strong></div></div>
       <IrrigationInterpretation input={input} plan={plan} />
+      <ResultProductJump label="Bauteile für deine Zonen" />
       <div className="component-plan"><div className="result-heading"><div><p className="eyebrow">Erste Materialstruktur</p><h3>Diese Kategorien solltest du einplanen.</h3></div></div>{plan.components.map((component) => <article key={`${component.kind}-${component.label}`}><span className="component-icon" aria-hidden="true">{component.kind === "dripline" ? "≈" : component.kind === "controller" ? "⌁" : "○"}</span><div><h4>{component.label}</h4><strong>{component.quantity}</strong><p>{component.note}</p></div></article>)}</div>
       <div className="warning-panel"><h3>Vor der Produktauswahl prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}</ul></div>
-      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.irrigation, { "irrigation-controller": input.automaticControl ? `${plan.controllerZones || 1} Zonen` : "manuell", "irrigation-valves": input.automaticControl ? `${plan.controllerZones || 1} Stück` : "optional", "irrigation-dripline": `${formatM(input.hedgeLengthM)} m Hecke + Beete nach Plan`, "irrigation-sprinklers": `${formatM(input.lawnAreaM2)} m² Rasenfläche`, "irrigation-filter": "1 Set", "irrigation-pipe": "nach Leitungsplan" })} />
       <IrrigationCatalogRecommendations input={input} plan={plan} />
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.irrigation, { "irrigation-controller": input.automaticControl ? `${plan.controllerZones || 1} Zonen` : "manuell", "irrigation-valves": input.automaticControl ? `${plan.controllerZones || 1} Stück` : "optional", "irrigation-dripline": `${formatM(input.hedgeLengthM)} m Hecke + Beete nach Plan`, "irrigation-sprinklers": `${formatM(input.lawnAreaM2)} m² Rasenfläche`, "irrigation-filter": "1 Set", "irrigation-pipe": "nach Leitungsplan" })} />
       <PrintResultAction />
     </div>}
     <div className="calculator-actions">

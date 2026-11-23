@@ -115,7 +115,9 @@ for (const page of pages) {
   }
   if (scenarioRoutes.has(page.route)) {
     if (!page.html.includes('class="guide-sources"') || !page.html.includes('"citation":[')) errors.push(`${page.route}: Szenario-Ratgeber ohne sichtbare Quellen und Citation`);
-    if (!page.html.includes('class="guide-example"')) errors.push(`${page.route}: Szenario-Ratgeber ohne sichtbares Rechenbeispiel`);
+    const copy = page.html.match(/<div class="guide-copy">([\s\S]*?)<section class="topic-links/)?.[1] ?? "";
+    const paragraphs = [...copy.matchAll(/<(?:p|dd|td)[^>]*>([^<]{60,})<\/(?:p|dd|td)>/g)].map((match) => match[1].trim());
+    if (new Set(paragraphs).size !== paragraphs.length) errors.push(`${page.route}: Szenario-Ratgeber wiederholt ganze Absätze`);
   }
   if (projectExampleRoutes.has(page.route)) {
     if (!page.html.includes('class="guide-sources"') || !page.html.includes('"citation":[')) errors.push(`${page.route}: Projektbeispiel ohne sichtbare Quellen und Citation`);

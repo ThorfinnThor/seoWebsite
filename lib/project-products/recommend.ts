@@ -47,7 +47,7 @@ function terraceMatch(product: ProjectProduct, offer: OfferBase, requirements: E
   const confidence: MatchConfidence = hasDimensions && materialMatches && widthDelta <= 2 && lengthDelta <= 10 ? "exact" : hasDimensions && materialMatches && widthDelta <= 10 ? "compatible" : "category";
   const reasons: MatchReason[] = hasDimensions
     ? [{ code: "board-format", label: `${format(product.boardLengthMm!)} × ${format(product.boardWidthMm!)} mm berücksichtigt`, strength: confidence === "exact" ? "positive" : "warning" }]
-    : [{ code: "missing-format", label: "Dielenformat im Feed nicht vollständig bestätigt", strength: "warning" }];
+    : [{ code: "missing-format", label: "Dielenformat vom Händler nicht vollständig angegeben", strength: "warning" }];
   const adjustedLinearM = product.boardWidthMm ? requirements.requiredLinearM * requirements.boardWidthMm / product.boardWidthMm : requirements.requiredLinearM;
   const requiredBoards = product.boardLengthMm ? Math.ceil(adjustedLinearM / (product.boardLengthMm / 1000)) : requirements.requiredBoardCount;
   return baseMatch(product, offer, confidence, reasons, orderEstimate(requiredBoards, product.piecesPerPack ?? 1, "Dielen", offer));

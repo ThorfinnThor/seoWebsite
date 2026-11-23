@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTopicLinkGroups } from "@/lib/internal-links";
 import { getSeoTopic } from "@/lib/seo-topics";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 
 type TopicLinksProps = {
   topicSlug: string;
@@ -23,17 +23,15 @@ export function TopicLinks({ topicSlug, currentPath, exclude = [], layout = "sec
 
   const body = <>
     <div className="section-heading">
-      <p className="eyebrow">Mehr zum Thema</p>
-      <h2 id={titleId}>{topic.name}. Alle passenden Inhalte</h2>
-      <p>Rechner, Grundlagen, Szenarien und geprüfte Vergleiche zum selben Projekt. So lassen sich Annahmen gegenprüfen, bevor bestellt oder beauftragt wird.</p>
+      <h2 id={titleId}>Mehr zu {topic.name.replace(/ (planen|auswählen|berechnen)$/, "")}</h2>
     </div>
     <div className="topic-links-groups">
       {groups.map((group) => <div className="topic-links-group" key={group.id}>
         <h3>{group.title}</h3>
         <ul>
           {group.links.map((link) => <li key={link.href}>
-            <Link href={link.href}>{editorializeText(link.label)}</Link>
-            {link.description && <span>{editorializeText(link.description)}</span>}
+            <Link href={link.href}>{capitalizeSentences(link.label)}</Link>
+            {link.description && <span>{capitalizeSentences(link.description)}</span>}
           </li>)}
         </ul>
       </div>)}

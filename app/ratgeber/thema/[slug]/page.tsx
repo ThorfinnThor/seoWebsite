@@ -9,9 +9,10 @@ import { SEO_GUIDES } from "@/lib/seo-guides";
 import { getGuidesForTopic, getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 import { getProjectExampleDirectory } from "@/lib/project-examples";
 import { getDecisionGuideDirectory } from "@/lib/decision-guides";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 import { getDataReportsForTopic } from "@/lib/data-report/registry";
 import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
+import { GuideProducts } from "@/components/product/GuideProducts";
 import { TopicLinks } from "@/components/seo/TopicLinks";
 
 const FEATURED_MOWER_CASES = [
@@ -89,35 +90,34 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
     <section className="page-hero topic-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: topic.name }]} />
       <p className="eyebrow">{topic.eyebrow}</p>
-      <h1>{topic.name} <em>klarer entscheiden.</em></h1>
-      <p>{editorializeText(topic.intro)}</p>
+      <h1>{topic.name}</h1>
+      <p>{capitalizeSentences(topic.intro)}</p>
       <div className="hero-actions"><Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link><a className="text-link" href="#ratgeber">{guides.length} Ratgeber ansehen ↓</a></div>
     </section>
     <RatgeberSectionNav active="topics" />
     <section className="topic-method" aria-labelledby="topic-method-title">
-      <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Messen und passend vergleichen.</h2><p>{editorializeText(topic.method)}</p></div>
+      <div><h2 id="topic-method-title">So gehst du vor</h2><p>{capitalizeSentences(topic.method)}</p></div>
       <ol>{topic.questions.map((question, index) => <li key={question}><span>0{index + 1}</span><strong>{question}</strong></li>)}</ol>
     </section>
     {dataReports.length > 0 && <section className="directory-section data-topic-reports" aria-labelledby="topic-data-reports">
-      <div className="section-heading"><div><p className="eyebrow">Aus geprüften Produktdaten</p><h2 id="topic-data-reports">Eigene Auswertungen für diesen Themenbereich</h2></div><p>Die Analysen zeigen Stichprobe, Berechnung und Datenlücken. Sie sind keine pauschalen Testsiegerlisten.</p></div>
+      <div className="section-heading"><div><h2 id="topic-data-reports">Auswertungen unseres Produktkatalogs</h2></div></div>
       <div className="directory-grid">{dataReports.map((report) => <article className="directory-card" key={report.slug}><p className="eyebrow">{report.eyebrow}</p><h3>{report.title}</h3><p>{report.description}</p><Link className="text-link" href={report.path}>Datenauswertung lesen →</Link></article>)}</div>
     </section>}
     <section className="directory-section" id="ratgeber">
-      <div className="section-heading"><div><p className="eyebrow">{topic.name}</p><h2>Alle Rechner, Szenarien und Vergleiche</h2></div><p>{editorializeText(topic.description)}</p></div>
-      <div className="directory-grid">{guides.map((guide) => <article className="directory-card" key={guide.slug}><p className="eyebrow">Ratgeber & Entscheidungshilfe</p><h3>{guide.title}</h3><p>{guide.description}</p><Link className="text-link" href={`/ratgeber/${guide.slug}/`}>Ratgeber lesen →</Link></article>)}</div>
+      <div className="section-heading"><div><h2>Ratgeber</h2></div></div>
+      <div className="directory-grid">{guides.map((guide) => <article className="directory-card" key={guide.slug}><h3>{guide.title}</h3><p>{guide.description}</p><Link className="text-link" href={`/ratgeber/${guide.slug}/`}>Ratgeber lesen →</Link></article>)}</div>
     </section>
     {projectDirectory && <section className="project-library-callout">
-      <div><p className="eyebrow">Konkrete Größen und Nutzungen</p><h2>85 nachvollziehbare Projektbeispiele</h2><p>{projectDirectory.description} Jede Seite enthält eine vollständige Rechenkette, eine Gegenprobe, Prüfgrenzen und Quellen.</p></div>
-      <Link className="button button--primary" href={`/ratgeber/projekte/${topic.slug}/`}>Projektbeispiele öffnen →</Link>
+      <div><h2>Rechenbeispiele nach Größe</h2><p>{projectDirectory.description}</p></div>
+      <Link className="button button--primary" href={`/ratgeber/projekte/${topic.slug}/`}>Rechenbeispiele ansehen →</Link>
     </section>}
     {comparisonDirectory && <section className="project-library-callout">
-      <div><p className="eyebrow">Zwei Optionen, ein konkreter Kontext</p><h2>100 gewichtete Direktvergleiche</h2><p>{comparisonDirectory.description} Jede Seite zeigt dieselben fünf Kriterien für beide Optionen und eine nachvollziehbare Gegenprobe.</p></div>
-      <Link className="button button--primary" href={`/ratgeber/vergleiche/${topic.slug}/`}>Direktvergleiche öffnen →</Link>
+      <div><h2>Zwei Lösungen im Vergleich</h2><p>{comparisonDirectory.description}</p></div>
+      <Link className="button button--primary" href={`/ratgeber/vergleiche/${topic.slug}/`}>Vergleiche ansehen →</Link>
     </section>}
     {topic.slug === "maehroboter" && <section className="directory-section" aria-labelledby="featured-mower-cases">
       <div className="section-heading">
-        <div><p className="eyebrow">Ausgewählte Rechenfälle</p><h2 id="featured-mower-cases">Häufige Gartensituationen direkt öffnen</h2></div>
-        <p>Diese Beispiele zeigen unterschiedliche Flächen, Hindernisse und Navigationsfragen. Sie sind als nachvollziehbare Gegenprobe gedacht und ersetzen keine Modellfreigabe.</p>
+        <div><h2 id="featured-mower-cases">Häufige Gartensituationen</h2></div>
       </div>
       <div className="directory-grid">
         {FEATURED_MOWER_CASES.map((item) => <article className="directory-card" key={item.href}>
@@ -128,7 +128,8 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
         </article>)}
       </div>
     </section>}
+    <section className="directory-section topic-products"><GuideProducts topicSlug={topic.slug} path={`/ratgeber/thema/${topic.slug}/`} plannerHref={topic.plannerHref} placement="topic" /></section>
     <TopicLinks topicSlug={topic.slug} currentPath={`/ratgeber/thema/${topic.slug}/`} exclude={[topic.plannerHref, ...guides.map((guide) => `/ratgeber/${guide.slug}/`), ...dataReports.map((report) => report.path)]} />
-    <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{editorializeText(topic.boundary)}</p></section>
+    <section className="topic-boundary"><h2>Gut zu wissen</h2><p>{capitalizeSentences(topic.boundary)}</p></section>
   </>;
 }

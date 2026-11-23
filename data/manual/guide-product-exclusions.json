@@ -1,0 +1,55 @@
+{
+  "note": "Nicht in Ratgebern zeigen. Händlerseite am angegebenen Tag nicht erreichbar oder ausverkauft.",
+  "products": [
+    {
+      "id": "gtin:4743142032855",
+      "reason": "404",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:4743142032510",
+      "reason": "404",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:4743142032466",
+      "reason": "404",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "project:carport:11830:gfm86fa1c5c2",
+      "reason": "ausverkauft",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:5703393167583",
+      "reason": "ausverkauft",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:4005717250133",
+      "reason": "ausverkauft",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "project:carport:11830:gfm34a13727a",
+      "reason": "ausverkauft",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:4743142032558",
+      "reason": "404",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:5703393735997",
+      "reason": "ausverkauft",
+      "checkedAt": "2026-11-23"
+    },
+    {
+      "id": "gtin:5703393736000",
+      "reason": "ausverkauft",
+      "checkedAt": "2026-11-23"
+    }
+  ]
+}

@@ -8,6 +8,7 @@ import { PriceDisplay } from "@/components/product/PriceDisplay";
 import { ProductImage } from "@/components/product/ProductImage";
 import { useProductResultTracking } from "@/lib/analytics";
 import { loadSecurityCameraCatalog } from "@/lib/catalog/load-client-catalog";
+import { merchantLabel } from "@/lib/catalog/merchant-label";
 import { resolveOfferUrl } from "@/lib/catalog/offer-url";
 import { calculateSecurityCameraStorage, SecurityCameraStorageInputSchema } from "@/lib/quick-calculators/rules";
 import { cameraOffersForCount } from "@/lib/security-camera/storage-offers";
@@ -109,7 +110,7 @@ export function SecurityCameraStorageCalculator() {
               </dl>
               <p className="storage-offer-check">Vor dem Kauf bitte Einsatzort, Verbindung, Stromversorgung, Speicheroption und möglichen Basisstationsbedarf im Kamera Finder und beim Händler prüfen.</p>
               <p className="state-note">Rechnerischer Produktwert für {requiredSets} {requiredSets === 1 ? "Angebot" : "Angebote"} {estimatedTotalEur.toLocaleString("de-DE", { style: "currency", currency: "EUR" })}. Versandbedingungen bei mehreren Bestellungen gesondert prüfen.</p>
-              <div className="offer-row"><div><p className="merchant">Angebot von {offer.merchantName}</p><PriceDisplay offer={offer} /></div><AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id} pageSlug="sicherheitskamera-speicher-rechner" verticalRef="security-camera" merchantName={offer.merchantName}>Beim Händler ansehen <span aria-hidden="true">↗</span></AffiliateLink></div>
+              <div className="offer-row"><div><p className="merchant">{merchantLabel(offer.merchantName)}</p><PriceDisplay offer={offer} /></div><AffiliateLink className="button button--offer" href={resolveOfferUrl(offer)} productId={product.id} pageSlug="sicherheitskamera-speicher-rechner" verticalRef="security-camera" merchantName={offer.merchantName}>Zum Angebot bei {merchantLabel(offer.merchantName)} <span aria-hidden="true">↗</span></AffiliateLink></div>
             </div>
           </article>} />
         </>}

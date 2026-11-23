@@ -9,7 +9,7 @@ export function PlannerHeroSummary({ planner: plannerId }: { planner: PlannerId 
     <aside className="planner-outcomes" aria-label={`Ergebnisse des ${planner.title}`}>
       <div className="planner-outcomes-heading">
         <span className="planner-outcomes-icon"><PlannerIcon name={planner.icon} /></span>
-        <div><span>Der Rechner liefert</span><strong>Deinen konkreten Planungsrahmen</strong></div>
+        <div><strong>Das bekommst du</strong></div>
       </div>
       <PlannerDiagram planner={plannerId} />
       <ul>

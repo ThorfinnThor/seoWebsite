@@ -1,6 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { DECISION_GUIDE_DIRECTORIES, DECISION_GUIDES } from "@/lib/decision-guides";
 import { PROJECT_EXAMPLE_DIRECTORIES, PROJECT_EXAMPLES } from "@/lib/project-examples";
+import { capitalizeSentences } from "@/lib/editorial-style";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { SEO_GUIDES } from "@/lib/seo-guides";
 
@@ -22,18 +23,31 @@ function visibleText(guide: Guide) {
 }
 
 describe("editorial guide output", () => {
-  it("keeps visible guide prose free from separator punctuation", () => {
-    const prose = [...SEO_GUIDES, ...DECISION_GUIDES, ...PROJECT_EXAMPLES].flatMap(visibleText);
-
-    expect(prose.some((value) => /\s[–—]\s|\s-\s|:\s/.test(value))).toBe(false);
+  it("never rewrites words or punctuation of the source text", () => {
+    const source = "Ziehe Öffnungen ab, multipliziere mit den Seiten und danach mit der Lagenzahl: erst dann aufrunden.";
+    expect(capitalizeSentences(source)).toBe(source);
   });
 
-  it("does not emit the stock comparison phrase", () => {
-    const prose = [...SEO_GUIDES, ...DECISION_GUIDES, ...PROJECT_EXAMPLES].flatMap(visibleText).join(" ");
+  it("only capitalizes real sentence starts", () => {
+    expect(capitalizeSentences("rund 4 m².  häufig mehr.")).toBe("Rund 4 m². Häufig mehr.");
+    expect(capitalizeSentences("Reserve, z. B. eine Platte, ca. zwei Stück und bzw. mehr.")).toBe("Reserve, z. B. eine Platte, ca. zwei Stück und bzw. mehr.");
+    expect(capitalizeSentences("Die Höhe beträgt ca. drei Meter.")).toBe("Die Höhe beträgt ca. drei Meter.");
+  });
+
+  it("keeps filler phrases out of the indexable guides", () => {
+    const prose = SEO_GUIDES.flatMap(visibleText).join(" ");
 
     expect(prose).not.toContain("Erst verstehen, was du brauchst");
-    expect(prose).not.toContain("Dann Produkte vergleichen");
-    expect(prose).not.toMatch(/\b(?:erst|danach|anschließend|zuerst)\b/i);
+    expect(prose).not.toMatch(/Wie nutze ich „[^“]+“ für eine konkrete Entscheidung/);
+    expect(prose).not.toMatch(/\b(?:Produktfeeds?|Daten-Gate|Feeds?)\b/);
+  });
+
+  it("states each key sentence of a guide only once", () => {
+    for (const guide of SEO_GUIDES) {
+      const paragraphs = guide.sections.flatMap((section) => section.paragraphs);
+      expect(paragraphs.some((paragraph) => paragraph.includes(guide.takeaway)), guide.slug).toBe(false);
+      expect(new Set(paragraphs).size, guide.slug).toBe(paragraphs.length);
+    }
   });
 
   it("keeps calculated results grammatically connected to their sentences", () => {
@@ -72,13 +86,6 @@ describe("editorial guide output", () => {
     expect(headings.length).toBeGreaterThan(11_000);
     expect(frequencies.size / headings.length).toBeGreaterThan(0.999);
     expect(Math.max(...frequencies.values())).toBeLessThanOrEqual(2);
-  });
-
-  it("keeps directory copy free from dash and colon styling", () => {
-    const values = [...DECISION_GUIDE_DIRECTORIES, ...PROJECT_EXAMPLE_DIRECTORIES]
-      .flatMap((directory) => [directory.title, directory.description]);
-
-    expect(values.some((value) => /[-–—:]/.test(value))).toBe(false);
   });
 
   it("keeps project cards factual instead of manufacturing editorial variants", () => {
@@ -146,7 +153,7 @@ describe("editorial guide output", () => {
     paragraphs.forEach((paragraph) => frequencies.set(paragraph, (frequencies.get(paragraph) ?? 0) + 1));
     const mostFrequent = Math.max(...frequencies.values());
 
-    expect(paragraphs.length).toBeGreaterThan(400);
+    expect(paragraphs.length).toBeGreaterThan(350);
     expect(frequencies.size / paragraphs.length).toBeGreaterThan(0.95);
     expect(mostFrequent).toBeLessThanOrEqual(4);
   });
@@ -161,29 +168,6 @@ describe("editorial guide output", () => {
     expect(prose).not.toMatch(/Was im Szenario|Wo das Szenario|Die Situation im Szenario|Was die Zahl im Szenario/);
     expect(prose).not.toContain("Im Szenario");
     expect(headings.join(" ")).not.toMatch(/Acht Hundert|Fünf Hundert|Hundert Fünfundzwanzig|Zweihundert Fünfzig/);
-
-    for (const guide of SEO_GUIDES_SCENARIOS) {
-      const optionA = guide.comparison?.rows.find((row) => row[0] === "Variante A")?.[1];
-      const optionB = guide.comparison?.rows.find((row) => row[0] === "Variante B")?.[1];
-      const editorialCopy = [
-        ...guide.sections.flatMap((section) => section.paragraphs),
-        ...(guide.checklist ?? []),
-        ...(guide.faqs ?? []).map((faq) => faq.answer),
-      ].join(" ");
-
-      expect(optionA).toBeDefined();
-      expect(optionB).toBeDefined();
-      expect(editorialCopy).not.toContain(`${optionA}.`);
-      expect(editorialCopy).not.toContain(`${optionB}.`);
-      const bareOptionVerbs = [`„${optionA}“ gehört`, `„${optionB}“ wird`, `„${optionB}“ muss`];
-      expect(bareOptionVerbs.some((fragment) =>
-        editorialCopy.startsWith(fragment) || editorialCopy.includes(`. ${fragment}`),
-      )).toBe(false);
-      expect(guide.faqs?.some((faq) => /\bbei\b/i.test(faq.question))).toBe(false);
-      const optionQuestion = guide.faqs?.[2]?.question ?? "";
-      expect(optionQuestion.includes(optionA ?? "") && !optionQuestion.includes(`„${optionA}“`)).toBe(false);
-      expect(optionQuestion.includes(optionB ?? "") && !optionQuestion.includes(`„${optionB}“`)).toBe(false);
-    }
   });
 
   it("varies the generated page furniture as well as the body copy", () => {

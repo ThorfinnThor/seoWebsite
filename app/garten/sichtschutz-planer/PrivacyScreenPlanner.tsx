@@ -8,6 +8,7 @@ import { usePlannerValidation } from "@/components/calculator/usePlannerValidati
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ResultProductJump } from "@/components/product/ResultProductJump";
 import { calculatePrivacyScreenPlan } from "@/lib/privacy-screen/rules";
 import { PrivacyScreenInputSchema, type PrivacyScreenInput, type PrivacyScreenPlan } from "@/lib/privacy-screen/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
@@ -98,13 +99,14 @@ export function PrivacyScreenPlanner() {
     {step === 4 && plan && <div className="results privacy-screen-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Standardfelder im Verlauf</span><strong>{plan.panelCount}</strong></div><div><span>Bestellmenge Felder</span><strong>{plan.orderPanelCount}</strong></div><div><span>Tor-Module</span><strong>{input.gateCount}</strong></div><div><span>Pfosten rechnerisch</span><strong>{plan.postCount}</strong></div></div>
       <PrivacyScreenInterpretation input={input} plan={plan} />
+      <ResultProductJump label="Sichtschutzfelder zu deinem Raster" />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">▥</span><div><p className="eyebrow">Felder</p><h3>{plan.panelCount} Standardfelder für den Verlauf</h3><p>Mit {format(input.systemFieldWidthCm)} cm Systemraster decken sie zusammen mit den Toren rechnerisch {format(plan.fullSystemLengthCm / 100)} m bei {format(input.fenceHeightCm)} cm gewünschter Höhe ab.</p><strong>Bestellrahmen: {plan.orderPanelCount} Felder{input.reservePanel ? " inklusive Reserve" : " ohne Reserve"}</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">┃</span><div><p className="eyebrow">Pfosten</p><h3>{plan.postCount} Pfosten beziehungsweise Verankerungspunkte</h3><p>Gezählt für {plan.bayCount} aufeinanderfolgende Module einer geraden Strecke. Eck-, End- und Torpfosten können unterschiedliche Artikel sein.</p><strong>Pfostentypen anhand des konkreten Systems aufteilen.</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">↔</span><div><p className="eyebrow">Rasterabschluss</p><h3>{plan.adjustmentRequired ? `${format(plan.endAdjustmentCm)} cm Anpassung` : "Das Raster geht rechnerisch auf"}</h3><p>{plan.adjustmentRequired ? `Das letzte Feld müsste ungefähr ${format(plan.lastFieldWidthCm)} cm Systembreite erhalten.` : "Standardfelder und Tor-Module entsprechen zusammen der eingegebenen Streckenlänge."}</p><strong>{plan.adjustmentRequired ? "Nur kürzen, wenn das gewählte System es ausdrücklich erlaubt." : "Aufmaß und Montagetoleranzen trotzdem vor Bestellung prüfen."}</strong></div></article>
       </div>
-      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.privacy, { "privacy-panels": `${plan.orderPanelCount} Felder`, "privacy-posts": `${plan.postCount} Stück`, "privacy-anchors": `${plan.anchoringPointCount} Punkte`, "privacy-gate": `${input.gateCount} Tor-Module`, "privacy-caps": "nach Pfostentyp", "privacy-brackets": plan.adjustmentRequired ? "für Rasterausgleich" : "für Eck- und Enddetails" })} />
       <ProjectProductRecommendations requirements={{ vertical: "privacy-screen", requiredKinds: ["panel", "post", "gate", "foundation", "bracket", "cap"], fenceHeightCm: input.fenceHeightCm, fieldWidthCm: input.systemFieldWidthCm, panelCount: plan.panelCount, orderPanelCount: plan.orderPanelCount, postCount: plan.postCount, gateCount: input.gateCount, mountingType: input.mountingType }} />
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.privacy, { "privacy-panels": `${plan.orderPanelCount} Felder`, "privacy-posts": `${plan.postCount} Stück`, "privacy-anchors": `${plan.anchoringPointCount} Punkte`, "privacy-gate": `${input.gateCount} Tor-Module`, "privacy-caps": "nach Pfostentyp", "privacy-brackets": plan.adjustmentRequired ? "für Rasterausgleich" : "für Eck- und Enddetails" })} />
       <div className="warning-panel"><h3>Vor Bestellung und Montage prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Leitungen im Boden, Grundstücksgrenze, örtliche Vorgaben und Nachbarrecht gehören in die Standortprüfung.</li></ul></div>
       <PrintResultAction />
     </div>}

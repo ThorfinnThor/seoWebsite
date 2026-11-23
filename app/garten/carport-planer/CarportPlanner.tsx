@@ -7,6 +7,7 @@ import { usePlannerValidation } from "@/components/calculator/usePlannerValidati
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ResultProductJump } from "@/components/product/ResultProductJump";
 import { calculateCarportPlan } from "@/lib/carport/rules";
 import { CarportInputSchema, type CarportInput } from "@/lib/carport/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
@@ -94,13 +95,14 @@ export function CarportPlanner() {
 
     {step === 4 && plan && <div className="results carport-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Lichte Breite</span><strong>{format(plan.clearWidthM)} m</strong></div><div><span>Lichte Länge</span><strong>{format(plan.clearLengthM)} m</strong></div><div><span>Lichte Höhe</span><strong>{format(plan.clearHeightM)} m</strong></div><div><span>Planungsfläche</span><strong>{format(plan.coveredPlanningAreaM2)} m²</strong></div></div>
+      <ResultProductJump label="Carports zu deinen Maßen" />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">▱</span><div><p className="eyebrow">Lichter Stellbereich</p><h3>{format(plan.clearWidthM)} × {format(plan.clearLengthM)} m</h3><p>{format(plan.vehicleParkingAreaM2)} m² reine Fahrzeugfläche plus {format(plan.freeMovementAreaM2)} m² rechnerischer Freiraum{plan.storageAreaM2 > 0 ? ` und ${format(plan.storageAreaM2)} m² Stauraumzone` : ""}.</p><strong>Pfostenpositionen und reale Türöffnungen im konkreten Grundriss prüfen.</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">↥</span><div><p className="eyebrow">Höhe & Zufahrt</p><h3>{format(plan.clearHeightM)} m lichte Zielhöhe</h3><p>{input.approach === "straight" ? "Gerade Zufahrt eingetragen." : input.approach === "turn" ? "Richtungswechsel und Rangieren sind vorgesehen." : "Zufahrtsgeometrie ist noch offen."}</p><strong>Heckklappe, Dachlast, Anbauten und künftige Fahrzeuge separat vermessen.</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">◒</span><div><p className="eyebrow">Dachwasser</p><h3>Theoretisch {plan.theoreticalRainwaterPer10MmL} Liter je 10 mm Regen</h3><p>Geometrischer Wert aus der lichten Planungsfläche, noch ohne Dachüberstand, tatsächliche Projektion und reale Verluste.</p><strong>Rinne, Fallrohr, Ablaufziel und sicherer Überlauf bleiben konkrete Planung.</strong></div></article>
       </div>
-      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.carport, { "carport-kit": `${format(plan.clearWidthM)} × ${format(plan.clearLengthM)} m lichte Maße`, "carport-posts": "nach System und Statik", "carport-anchors": "nach Pfostenanzahl", "carport-roof": `${format(plan.coveredPlanningAreaM2)} m² Planungsfläche`, "carport-drainage": `${plan.theoreticalRainwaterPer10MmL} l je 10 mm Regen`, "carport-electric": input.electricityPlanned || input.evCharging ? "vorgesehen" : "optional" })} />
       <ProjectProductRecommendations requirements={{ vertical: "carport", requiredKinds: ["kit", "roof", "post", "foundation", "drainage"], clearWidthM: plan.clearWidthM, clearLengthM: plan.clearLengthM, clearHeightM: plan.clearHeightM, vehicleCount: input.vehicleCount, installation: input.installation, roofType: input.roofType }} />
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.carport, { "carport-kit": `${format(plan.clearWidthM)} × ${format(plan.clearLengthM)} m lichte Maße`, "carport-posts": "nach System und Statik", "carport-anchors": "nach Pfostenanzahl", "carport-roof": `${format(plan.coveredPlanningAreaM2)} m² Planungsfläche`, "carport-drainage": `${plan.theoreticalRainwaterPer10MmL} l je 10 mm Regen`, "carport-electric": input.electricityPlanned || input.evCharging ? "vorgesehen" : "optional" })} />
       <div className="warning-panel"><h3>Vor Produktauswahl und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Fahrzeugmaße, Grundstücksgrenzen, Leitungen im Boden, Bäume, Tor, Beleuchtung und Wartungszugang in ein genaues Bestandsaufmaß übernehmen.</li></ul></div>
       <PrintResultAction />
     </div>}

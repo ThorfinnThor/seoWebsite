@@ -21,14 +21,14 @@ export default function RechnerPage() {
     }} />
     <section className="page-hero tool-hub-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Rechner & Planer" }]} />
-      <p className="eyebrow">12 Rechner · kostenlos · ohne Anmeldung</p>
-      <h1>Welches Projekt möchtest du als Nächstes klären?</h1>
-      <p>Jeder Planer übersetzt wenige Angaben in nachvollziehbare Anforderungen. Die Karten zeigen dir jetzt direkt, welche konkreten Ergebnisse du erhältst.</p>
+      <p className="eyebrow">12 Rechner, kostenlos und ohne Anmeldung</p>
+      <h1>Alle Rechner und Planer</h1>
+      <p>Wähle dein Projekt und gib deine Maße ein. Am Ende stehen Mengen, Größen und passende Produkte.</p>
     </section>
     <PlannerDirectory />
     <section className="section planner-notes tool-principles">
-      <div><p className="eyebrow">Ein gemeinsames Prinzip</p><h2>Harte Kriterien geben dem Vergleich die Richtung.</h2></div>
-      <div className="note-grid"><article><h3>Gleiche Eingabe, gleiches Ergebnis</h3><p>Die Berechnungen sind deterministisch und laufen direkt im Browser. Es gibt kein KI-Raten und kein verstecktes Nutzerprofil.</p></article><article><h3>Grenzen bleiben sichtbar</h3><p>Wo Messwerte, Fachplanung oder örtliche Vorgaben fehlen, zeigt PassendPlanen eine offene Prüfaufgabe statt einer erfundenen Sicherheit.</p></article></div>
+      <div><h2>Wie die Rechner arbeiten</h2></div>
+      <div className="note-grid"><article><h3>Gleiche Eingabe, gleiches Ergebnis</h3><p>Die Berechnung läuft direkt in deinem Browser. Deine Eingaben verlassen das Gerät nicht.</p></article><article><h3>Was offen bleibt, steht dabei</h3><p>Wo Messwerte, Fachplanung oder örtliche Vorgaben fehlen, sagen wir das und rechnen nichts schön.</p></article></div>
     </section>
   </>;
 }

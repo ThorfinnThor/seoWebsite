@@ -1,7 +1,7 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
 import { applyEditorialDecisionGuide } from "@/lib/decision-guide-editorials";
-import { editorializeGuide, editorialVariant, scopedStatement } from "@/lib/editorial-style";
+import { capitalizeGuide, editorialVariant, scopedStatement } from "@/lib/editorial-style";
 import {
   evaluateProgrammaticGuideIndexing,
   type ProgrammaticIndexApproval,
@@ -792,7 +792,7 @@ export const DECISION_GUIDES: readonly DecisionGuide[] = EDITORIAL_DECISION_GUID
         : `Dieselbe Paarung im abweichenden Einsatz „${candidate.contextLabel}“ gegenprüfen.`,
     }));
 
-  const finalGuide = editorializeGuide({
+  const finalGuide = capitalizeGuide({
     ...editorialGuide,
     relatedLinks: [
       ...(editorialGuide.relatedLinks ?? []),
