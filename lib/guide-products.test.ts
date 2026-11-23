@@ -60,7 +60,7 @@ describe("guide products", () => {
 describe("rewritten guides", () => {
   it("only exist for real guides", () => {
     const slugs = new Set(SEO_GUIDES.map((guide) => guide.slug));
-    expect(Object.keys(SEO_GUIDE_REWRITES)).toHaveLength(15);
+    expect(Object.keys(SEO_GUIDE_REWRITES)).toHaveLength(49);
     for (const slug of Object.keys(SEO_GUIDE_REWRITES)) expect(slugs.has(slug), slug).toBe(true);
     for (const path of GUIDE_FIGURE_PATHS) expect(slugs.has(path.split("/")[2]), path).toBe(true);
   });
