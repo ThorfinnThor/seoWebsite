@@ -5,8 +5,9 @@ import type {
   GuideSection,
 } from "@/components/seo/GuidePage";
 import type { GuideExample, GuideSource } from "@/lib/guide-enrichments";
-import { editorializeGuide } from "@/lib/editorial-style";
+import { capitalizeGuide } from "@/lib/editorial-style";
 import { SEO_GUIDE_DEPTH } from "@/lib/seo-guide-depth";
+import { SEO_GUIDE_REWRITES } from "@/lib/seo-guide-rewrites";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { SEO_GUIDES_WAVE2 } from "@/lib/seo-guides-wave2";
 
@@ -102,7 +103,7 @@ const SEO_GUIDES_INITIAL: readonly SeoGuide[] = [
     sections: [
       { title: "Warum pauschale Top-10-Rankings begrenzt sind", paragraphs: ["Ein Modell kann auf einer offenen Testfläche sehr gut abschneiden und im Garten mit Hang, Bäumen oder mehreren Zonen trotzdem ungeeignet sein. Rankings ändern sich außerdem mit Firmware, Lieferumfang und Preis.", "PassendPlanen veröffentlicht daher keinen erfundenen Testsieger. Die Auswahl sollte aus dokumentierten Anforderungen und überprüfbaren Herstellerdaten entstehen."] },
       { title: "Der Vergleich mit den Standortdaten", paragraphs: ["Fläche, Steigung, engste Passage, Randabstände, Hindernisse und getrennte Zonen bilden die Standortbasis. Gegen diese Angaben werden Navigation, zulässige Bedingungen, Laufzeit, Diebstahlschutz, Geräusch und Service gehalten."] , bullets: ["Fläche inklusive realistischer Reserve", "Steigung und Boden bei feuchten Bedingungen", "Kabel, RTK, Kamera oder LiDAR", "Kanten, Passagen und Nebenflächen", "Wartung, Ersatzmesser und Winterlagerung"] },
-      { title: "Produktdaten erst nach dem Standortcheck", paragraphs: ["Wenn geprüfte Produktfeeds verfügbar sind, kann ein Katalog diese Kriterien filtern. Bis dahin bleibt eine transparente Anforderungsliste ehrlicher als eine Top-10-Tabelle ohne belastbare, aktuelle Daten."] },
+      { title: "Produktdaten erst nach dem Standortcheck", paragraphs: ["Mit Fläche, Steigung, schmalster Passage und Navigationsart lässt sich jede Produktliste in wenigen Minuten kürzen. Der Mähroboter-Rechner macht genau das mit den Modellen aus unserem Katalog."] },
     ],
   },
   {
@@ -248,9 +249,9 @@ const RAW_SEO_GUIDES: readonly SeoGuide[] = [
   ...SEO_GUIDES_SCENARIOS,
 ];
 
-export const SEO_GUIDES: readonly SeoGuide[] = RAW_SEO_GUIDES.map(editorializeGuide);
+export const SEO_GUIDES: readonly SeoGuide[] = RAW_SEO_GUIDES.map((guide) => capitalizeGuide({ ...guide, ...SEO_GUIDE_REWRITES[guide.slug] }));
 
 export function getSeoGuide(slug: string) {
   const guide = SEO_GUIDES.find((candidate) => candidate.slug === slug);
-  return guide ? editorializeGuide({ ...guide, ...SEO_GUIDE_DEPTH[slug] }) : undefined;
+  return guide ? capitalizeGuide({ ...guide, ...SEO_GUIDE_DEPTH[slug], ...SEO_GUIDE_REWRITES[slug] }) : undefined;
 }

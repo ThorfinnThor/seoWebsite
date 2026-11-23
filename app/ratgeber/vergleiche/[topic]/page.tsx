@@ -11,7 +11,7 @@ import {
 } from "@/lib/decision-guides";
 import { getSeoTopic } from "@/lib/seo-topics";
 import { TopicLinks } from "@/components/seo/TopicLinks";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 
 const MOWER_PAIR_INTROS: Record<string, string> = {
   "begrenzungskabel-oder-rtk": "Hier entscheidet vor allem, ob virtuelle Grenzen am gesamten Grundstück stabil arbeiten und wie häufig sich die Rasenaufteilung verändert.",
@@ -108,8 +108,8 @@ export default async function Page({ params }: { params: Promise<{ topic: string
       <p className="eyebrow">{isMowerDirectory ? "Navigation nach Gartenform" : "10 Paare, 10 Nutzungssituationen, 100 Seiten"}</p>
       {isMowerDirectory
         ? <h1>Welche Navigation passt zu <em>deinem Garten?</em></h1>
-        : <h1>{editorializeText(directory.title)} <em>konkret gewichtet.</em></h1>}
-      <p>{editorializeText(directory.description)} {isMowerDirectory ? "Beginne bei der Stelle, an der der Roboter am ehesten scheitern könnte. Das ist häufig eine schmale Verbindung, dichter Baumbestand oder ein Bereich nah am Haus." : "Jede Seite verwendet dieselben fünf Kriterien für beide Optionen und zeigt, wie der Nutzungskontext die Gewichtung verändert."}</p>
+        : <h1>{capitalizeSentences(directory.title)} <em>konkret gewichtet.</em></h1>}
+      <p>{capitalizeSentences(directory.description)} {isMowerDirectory ? "Beginne bei der Stelle, an der der Roboter am ehesten scheitern könnte. Das ist häufig eine schmale Verbindung, dichter Baumbestand oder ein Bereich nah am Haus." : "Jede Seite verwendet dieselben fünf Kriterien für beide Optionen und zeigt, wie der Nutzungskontext die Gewichtung verändert."}</p>
       <div className="hero-actions"><Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link><a className="text-link" href="#vergleiche">{isMowerDirectory ? "Passenden Vergleich finden" : "Alle Vergleiche ansehen"} ↓</a></div>
     </section>
     {isMowerDirectory && <section className="section related-guides">

@@ -28,7 +28,7 @@ export default function RechnerPage() {
     <PlannerDirectory />
     <section className="section planner-notes tool-principles">
       <div><p className="eyebrow">Ein gemeinsames Prinzip</p><h2>Harte Kriterien geben dem Vergleich die Richtung.</h2></div>
-      <div className="note-grid"><article><h3>Gleiche Eingabe, gleiches Ergebnis</h3><p>Die Berechnungen sind deterministisch und laufen direkt im Browser. Es gibt kein KI-Raten und kein verstecktes Nutzerprofil.</p></article><article><h3>Grenzen bleiben sichtbar</h3><p>Wo Messwerte, Fachplanung oder örtliche Vorgaben fehlen, zeigt PassendPlanen eine offene Prüfaufgabe statt einer erfundenen Sicherheit.</p></article></div>
+      <div className="note-grid"><article><h3>Gleiche Eingabe, gleiches Ergebnis</h3><p>Die Berechnung läuft direkt in deinem Browser. Deine Eingaben verlassen das Gerät nicht.</p></article><article><h3>Grenzen bleiben sichtbar</h3><p>Wo Messwerte, Fachplanung oder örtliche Vorgaben fehlen, zeigt PassendPlanen eine offene Prüfaufgabe statt einer erfundenen Sicherheit.</p></article></div>
     </section>
   </>;
 }

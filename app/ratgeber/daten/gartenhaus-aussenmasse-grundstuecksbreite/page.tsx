@@ -74,7 +74,7 @@ export default function Page() {
     </section>
 
     <ReportMethod updated={report.updatedLabel}>
-      <p>Ausgewertet wurden {report.total} geprüfte Gartenhäuser mit vollständig dokumentierter Außenbreite und Außentiefe. Die kürzere und längere Seite wurden unabhängig von der im Feed verwendeten Bezeichnung bestimmt. Dadurch wird eine mögliche Drehung sichtbar.</p>
+      <p>Ausgewertet wurden {report.total} geprüfte Gartenhäuser mit vollständig dokumentierter Außenbreite und Außentiefe. Die kürzere und längere Seite wurden unabhängig von der Bezeichnung beim Händler bestimmt. Dadurch wird eine mögliche Drehung sichtbar.</p>
       <p>Die Auswertung umfasst die aktuell geprüften Händlerangebote von PassendPlanen und ist keine Vollerhebung des Marktes. Außenmaße enthalten nicht automatisch Dachüberstand, Fundament, Arbeitsraum oder vorgeschriebene Abstände. Solche Werte müssen am konkreten Produkt und Standort ergänzt werden.</p>
     </ReportMethod>
 

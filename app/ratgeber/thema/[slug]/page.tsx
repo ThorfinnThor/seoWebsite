@@ -9,7 +9,7 @@ import { SEO_GUIDES } from "@/lib/seo-guides";
 import { getGuidesForTopic, getSeoTopic, SEO_TOPICS } from "@/lib/seo-topics";
 import { getProjectExampleDirectory } from "@/lib/project-examples";
 import { getDecisionGuideDirectory } from "@/lib/decision-guides";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 import { getDataReportsForTopic } from "@/lib/data-report/registry";
 import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
 import { TopicLinks } from "@/components/seo/TopicLinks";
@@ -90,12 +90,12 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: topic.name }]} />
       <p className="eyebrow">{topic.eyebrow}</p>
       <h1>{topic.name} <em>klarer entscheiden.</em></h1>
-      <p>{editorializeText(topic.intro)}</p>
+      <p>{capitalizeSentences(topic.intro)}</p>
       <div className="hero-actions"><Link className="button button--primary" href={topic.plannerHref}>{topic.plannerLabel} →</Link><a className="text-link" href="#ratgeber">{guides.length} Ratgeber ansehen ↓</a></div>
     </section>
     <RatgeberSectionNav active="topics" />
     <section className="topic-method" aria-labelledby="topic-method-title">
-      <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Messen und passend vergleichen.</h2><p>{editorializeText(topic.method)}</p></div>
+      <div><p className="eyebrow">Planungslogik</p><h2 id="topic-method-title">Messen und passend vergleichen.</h2><p>{capitalizeSentences(topic.method)}</p></div>
       <ol>{topic.questions.map((question, index) => <li key={question}><span>0{index + 1}</span><strong>{question}</strong></li>)}</ol>
     </section>
     {dataReports.length > 0 && <section className="directory-section data-topic-reports" aria-labelledby="topic-data-reports">
@@ -103,7 +103,7 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       <div className="directory-grid">{dataReports.map((report) => <article className="directory-card" key={report.slug}><p className="eyebrow">{report.eyebrow}</p><h3>{report.title}</h3><p>{report.description}</p><Link className="text-link" href={report.path}>Datenauswertung lesen →</Link></article>)}</div>
     </section>}
     <section className="directory-section" id="ratgeber">
-      <div className="section-heading"><div><p className="eyebrow">{topic.name}</p><h2>Alle Rechner, Szenarien und Vergleiche</h2></div><p>{editorializeText(topic.description)}</p></div>
+      <div className="section-heading"><div><p className="eyebrow">{topic.name}</p><h2>Alle Rechner, Szenarien und Vergleiche</h2></div><p>{capitalizeSentences(topic.description)}</p></div>
       <div className="directory-grid">{guides.map((guide) => <article className="directory-card" key={guide.slug}><p className="eyebrow">Ratgeber & Entscheidungshilfe</p><h3>{guide.title}</h3><p>{guide.description}</p><Link className="text-link" href={`/ratgeber/${guide.slug}/`}>Ratgeber lesen →</Link></article>)}</div>
     </section>
     {projectDirectory && <section className="project-library-callout">
@@ -129,6 +129,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
       </div>
     </section>}
     <TopicLinks topicSlug={topic.slug} currentPath={`/ratgeber/thema/${topic.slug}/`} exclude={[topic.plannerHref, ...guides.map((guide) => `/ratgeber/${guide.slug}/`), ...dataReports.map((report) => report.path)]} />
-    <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{editorializeText(topic.boundary)}</p></section>
+    <section className="topic-boundary"><div><p className="eyebrow">Bewusst begrenzt</p><h2>Was der Themenbereich nicht verspricht</h2></div><p>{capitalizeSentences(topic.boundary)}</p></section>
   </>;
 }

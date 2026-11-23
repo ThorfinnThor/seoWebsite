@@ -5,7 +5,7 @@ import { DECISION_GUIDE_COUNT, DECISION_GUIDE_DIRECTORIES } from "@/lib/decision
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
 import { getSeoTopic } from "@/lib/seo-topics";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
 
 export const metadata = createPageMetadata({
@@ -59,8 +59,8 @@ export default function Page() {
           if (!topic) return null;
           return <article className="directory-card topic-card" key={directory.topicSlug}>
             <p className="eyebrow">100 Direktvergleiche</p>
-            <h2>{editorializeText(directory.title)}</h2>
-            <p>{editorializeText(directory.description)}</p>
+            <h2>{capitalizeSentences(directory.title)}</h2>
+            <p>{capitalizeSentences(directory.description)}</p>
             <Link className="text-link" href={`/ratgeber/vergleiche/${directory.topicSlug}/`}>Vergleiche öffnen →</Link>
           </article>;
         })}

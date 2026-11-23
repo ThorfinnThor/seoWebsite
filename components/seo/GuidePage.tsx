@@ -10,7 +10,7 @@ import type { GuideDataInsight } from "@/lib/guide-data-insights";
 import { CONTENT_UPDATED_AT } from "@/lib/metadata";
 import { absoluteUrl, SITE } from "@/lib/site";
 import { SOCIAL_IMAGE_SIZE, socialImageForPath } from "@/lib/social-images";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { GuideDataInsightBlock } from "./GuideDataInsight";
 import { JsonLd } from "./JsonLd";
@@ -100,59 +100,59 @@ export function GuidePage({
   );
   const resolvedExample = example ?? enrichment?.example;
   const topic = resolveTopicForPage(path, plannerHref);
-  const displayTitle = editorializeText(title);
-  const displayIntro = editorializeText(intro);
-  const displayTakeaway = editorializeText(takeaway);
-  const displayPlannerLabel = editorializeText(plannerLabel);
-  const displayLimitation = editorializeText(limitation);
+  const displayTitle = capitalizeSentences(title);
+  const displayIntro = capitalizeSentences(intro);
+  const displayTakeaway = capitalizeSentences(takeaway);
+  const displayPlannerLabel = capitalizeSentences(plannerLabel);
+  const displayLimitation = capitalizeSentences(limitation);
   const displaySections = sections.map((section) => ({
     ...section,
-    title: editorializeText(section.title),
-    paragraphs: section.paragraphs.map(editorializeText),
-    bullets: section.bullets?.map(editorializeText),
+    title: capitalizeSentences(section.title),
+    paragraphs: section.paragraphs.map(capitalizeSentences),
+    bullets: section.bullets?.map(capitalizeSentences),
   }));
   const displayComparison = resolvedComparison
     ? {
         ...resolvedComparison,
-        caption: editorializeText(resolvedComparison.caption),
-        columns: resolvedComparison.columns.map(editorializeText),
-        rows: resolvedComparison.rows.map((row) => row.map(editorializeText)),
+        caption: capitalizeSentences(resolvedComparison.caption),
+        columns: resolvedComparison.columns.map(capitalizeSentences),
+        rows: resolvedComparison.rows.map((row) => row.map(capitalizeSentences)),
       }
     : undefined;
-  const displayChecklist = resolvedChecklist.map(editorializeText);
+  const displayChecklist = resolvedChecklist.map(capitalizeSentences);
   const displayFaqs = resolvedFaqs.map((faq) => ({
-    question: editorializeText(faq.question),
-    answer: editorializeText(faq.answer),
+    question: capitalizeSentences(faq.question),
+    answer: capitalizeSentences(faq.answer),
   }));
   const displayRelatedLinks = resolvedRelatedLinks.map((link) => ({
     ...link,
-    label: editorializeText(link.label),
-    description: editorializeText(link.description),
+    label: capitalizeSentences(link.label),
+    description: capitalizeSentences(link.description),
   }));
   const displaySources = resolvedSources.map((source) => ({
     ...source,
-    label: editorializeText(source.label),
-    publisher: editorializeText(source.publisher),
-    note: editorializeText(source.note),
+    label: capitalizeSentences(source.label),
+    publisher: capitalizeSentences(source.publisher),
+    note: capitalizeSentences(source.note),
   }));
   const displayExample = resolvedExample
     ? {
         ...resolvedExample,
-        title: editorializeText(resolvedExample.title),
-        intro: editorializeText(resolvedExample.intro),
+        title: capitalizeSentences(resolvedExample.title),
+        intro: capitalizeSentences(resolvedExample.intro),
         steps: resolvedExample.steps.map((step) => ({
-          label: editorializeText(step.label),
-          value: editorializeText(step.value),
+          label: capitalizeSentences(step.label),
+          value: capitalizeSentences(step.value),
         })),
-        result: editorializeText(resolvedExample.result),
-        note: resolvedExample.note ? editorializeText(resolvedExample.note) : undefined,
+        result: capitalizeSentences(resolvedExample.result),
+        note: resolvedExample.note ? capitalizeSentences(resolvedExample.note) : undefined,
       }
     : undefined;
   const displayBreadcrumbs = (breadcrumbs ?? [
     { label: "Start", href: "/" },
     { label: "Garten", href: "/garten/" },
     { label: displayTitle },
-  ]).map((item) => ({ ...item, label: editorializeText(item.label) }));
+  ]).map((item) => ({ ...item, label: capitalizeSentences(item.label) }));
   const articleWordCount = [
     displayTitle,
     displayIntro,

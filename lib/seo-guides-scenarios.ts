@@ -1,14 +1,12 @@
 import type { GuideRelatedLink } from "@/components/seo/GuidePage";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
-import { editorialVariant, lowercaseInitial, sentenceEnd } from "@/lib/editorial-style";
+import { lowercaseInitial, sentenceEnd } from "@/lib/editorial-style";
 import type { SeoGuide } from "@/lib/seo-guides";
 
 type Cluster = {
   label: string;
   plannerHref: string;
   plannerLabel: string;
-  measurementMethod: string;
-  decisionMethod: string;
   boundary: string;
   relatedLinks: [GuideRelatedLink, GuideRelatedLink, GuideRelatedLink];
   sources: readonly GuideSource[];
@@ -150,8 +148,6 @@ const clusters = {
     label: "Gartenhaus",
     plannerHref: "/garten/gartenhaus-planer/",
     plannerLabel: "Gartenhaus dimensionieren",
-    measurementMethod: "Miss jedes Lagergut an seiner breitesten und längsten Stelle einschließlich Lenker, Griffe, Körbe oder Anbauteile. Zeichne anschließend Türöffnung, Bewegungsfläche, Regaltiefe und nicht zustellbare Wandbereiche maßstäblich ein. Außenmaß, Sockelmaß und nutzbares Innenmaß sind dabei getrennte Werte.",
-    decisionMethod: "Eine belastbare Größenentscheidung entsteht aus dem Stellplan: häufig genutzte Dinge liegen am Zugang, schwere Geräte bleiben am Boden und lange Gegenstände erhalten eine eigene Wandzone. Auf dieser Grundlage lassen sich Bauart, Material und konkrete Modelle sinnvoll vergleichen.",
     boundary: "Fundament, Bodenlast, Wind- und Schneelast, Grenzabstände sowie eine mögliche Genehmigung sind standort- und systemabhängig. Die Flächenrechnung ersetzt diese Prüfung nicht.",
     relatedLinks: [
       { label: "Gartenhaus-Größe berechnen", href: "/garten/gartenhaus-groesse/", description: "Lagergut und Bewegungsfläche strukturiert erfassen." },
@@ -164,8 +160,6 @@ const clusters = {
     label: "Mähroboter",
     plannerHref: "/garten/maehroboter-rechner/",
     plannerLabel: "Mähbereich berechnen",
-    measurementMethod: "Ermittle die reine Rasenfläche ohne Haus, Terrasse, Wege, Beete und Wasserflächen. Miss zusätzlich die steilste Stelle, die engste nutzbare Passage und jede getrennte Zone. Diese harten Randbedingungen können ein Gerät ausschließen, auch wenn seine Nennfläche ausreichend klingt.",
-    decisionMethod: "Die Kapazität sollte zur Nettofläche, zur Komplexität und zum erlaubten Mähzeitfenster passen. Navigation, Ladestation, Kanten und Service werden anschließend mit identischen Standortannahmen verglichen. Eine größere Flächenklasse ist Reserve, aber kein Ersatz für passende Traktion oder sichere Grenzen.",
     boundary: "Flächen- und Steigungsangaben gelten unter den Bedingungen des jeweiligen Herstellers. Empfang, Bodenfeuchte, Software und reale Hindernisse müssen am Standort geprüft werden.",
     relatedLinks: [
       { label: "Mähroboter-Rechner", href: "/garten/maehroboter-rechner/", description: "Nettofläche, Komplexität und Reserve zusammenführen." },
@@ -178,8 +172,6 @@ const clusters = {
     label: "Terrasse",
     plannerHref: "/garten/terrassen-dielen-rechner/",
     plannerLabel: "Terrassenmaterial berechnen",
-    measurementMethod: "Miss Länge und Breite an mehreren Stellen und lege die Verlegerichtung fest. Dielenbreite, Fuge und lieferbare Länge bestimmen Reihen, Stöße und Verschnitt. Ausschnitte werden nicht pauschal abgezogen, solange ihre Einfassung zusätzlichen Materialbedarf erzeugt.",
-    decisionMethod: "Berechne Dielen, Unterkonstruktion, Befestiger und Randdetails getrennt. Vergleiche Varianten anschließend mit derselben Fläche, demselben Verschnitt und einem vollständigen Systemaufbau. So wird aus einem Quadratmeterpreis eine nachvollziehbare Projektmenge.",
     boundary: "Auflagerabstände, Befestigung, Hinterlüftung und Ausdehnungsfugen richten sich nach Material, Produkt und Untergrund. Die Beispielrechnung ist keine statische oder handwerkliche Freigabe.",
     relatedLinks: [
       { label: "Terrassendielen-Rechner", href: "/garten/terrassen-dielen-rechner/", description: "Reihen, Laufmeter und Verschnitt berechnen." },
@@ -192,8 +184,6 @@ const clusters = {
     label: "Bewässerung",
     plannerHref: "/garten/bewaesserungs-planer/",
     plannerLabel: "Bewässerungszonen planen",
-    measurementMethod: "Teile Rasen, Beete, Hecken und Hochbeete nach Pflanzenbedarf und Bewässerungsart. Miss am späteren Anschluss den realen Durchfluss mit einem Eimer-Test und prüfe den Fließdruck. Höhenunterschiede, Filter, Schlauchlängen und parallele Verbraucher werden separat notiert.",
-    decisionMethod: "Addiere nicht einfach alle Verbraucher. Bilde Zonen, deren gemeinsamer Bedarf unter dem zuverlässig verfügbaren Durchfluss liegt, und plane eine Reserve. Tropfrohr und Regner erhalten wegen unterschiedlicher Laufzeiten in der Regel getrennte Kreise.",
     boundary: "Die tatsächliche Auslegung hängt von Herstellerkennlinien, Druckverlust, Wasserqualität und lokalen Regeln zur Wassernutzung ab. Vor der Installation sind die realen Anschlusswerte maßgeblich.",
     relatedLinks: [
       { label: "Bewässerungsplaner", href: "/garten/bewaesserungs-planer/", description: "Flächen, Verbraucher und Zonen strukturiert erfassen." },
@@ -206,8 +196,6 @@ const clusters = {
     label: "Gewächshaus",
     plannerHref: "/garten/gewaechshaus-planer/",
     plannerLabel: "Gewächshaus planen",
-    measurementMethod: "Nutzbare Beetbreiten, Wege, Tür und Arbeitshöhe geben die Planung vor. Pflanzenabstände werden nicht bis an Wand und Tür gerechnet; hohe Kulturen brauchen zusätzlich Luftvolumen, Rankhilfe und Abstand zu Lüftungsöffnungen. Außenmaß und reale Anbaufläche bleiben getrennt.",
-    decisionMethod: "Die Größe folgt Kulturplan und Arbeitsweg, die Ausstattung folgt dem Temperatur- und Feuchteprofil. Lüftungsfläche, Beschattung, Bewässerung und Fundament werden deshalb vor einem Produktvergleich als eigene Anforderungen dokumentiert.",
     boundary: "Wind- und Schneelast, Verankerung, Sicherheitsabstände sowie bau- oder nachbarrechtliche Fragen sind standortabhängig. Kulturhinweise müssen an Sorte, Klima und Saison angepasst werden.",
     relatedLinks: [
       { label: "Gewächshaus-Planer", href: "/garten/gewaechshaus-planer/", description: "Beete, Wege und Ausstattung dimensionieren." },
@@ -220,8 +208,6 @@ const clusters = {
     label: "Sichtschutz",
     plannerHref: "/garten/sichtschutz-planer/",
     plannerLabel: "Sichtschutz berechnen",
-    measurementMethod: "Miss die Strecke entlang der tatsächlichen Flucht und markiere Ecken, Gefälle, Tor, Enden und Anschlüsse. Elementbreite, Pfostenbreite und notwendige Fugen werden separat gerechnet. Bei Gefälle ist zusätzlich festzulegen, ob die Oberkante waagerecht oder gestuft verlaufen soll.",
-    decisionMethod: "Die Teilung der Strecke bestimmt Element- und Pfostenzahl. Material, Höhe, Winddurchlässigkeit, Fundament und Befestigung werden als zusammengehöriges System bewertet. Ein passendes Restfeld ist meist besser als ein erzwungenes Standardraster.",
     boundary: "Windlast, Pfosten, Fundamente, Grenzverlauf und zulässige Höhe müssen für Standort und System geprüft werden. Die Mengenplanung ersetzt weder Statik noch lokales Baurecht.",
     relatedLinks: [
       { label: "Sichtschutz-Planer", href: "/garten/sichtschutz-planer/", description: "Strecke, Teilung und Pfosten nachvollziehbar berechnen." },
@@ -234,8 +220,6 @@ const clusters = {
     label: "Carport",
     plannerHref: "/garten/carport-planer/",
     plannerLabel: "Carport dimensionieren",
-    measurementMethod: "Miss Fahrzeug einschließlich Spiegeln, Dachaufbauten und geöffneter Türen. Ergänze Rangierweg, Pfostenpositionen, Dachüberstand und lichte Durchfahrtshöhe. Nicht die Dachfläche, sondern der kleinste nutzbare Querschnitt entscheidet über die Alltagstauglichkeit.",
-    decisionMethod: "Die Abmessungen werden aus Fahrzeug, Ein- und Ausstieg, Zufahrt und Zusatznutzung abgeleitet. Tragwerk, Dachwasser, Fundament und Material müssen zu diesem Platzrahmen passen. Ein größeres Dach hilft wenig, wenn Pfosten oder Rinne den Fahrweg einschränken.",
     boundary: "Statik, Wind- und Schneelast, Fundamente, Entwässerung, Brandschutz und Genehmigung sind standortabhängig und müssen fachlich beziehungsweise behördlich geprüft werden.",
     relatedLinks: [
       { label: "Carport-Planer", href: "/garten/carport-planer/", description: "Fahrzeug, Bewegungsraum und Zusatzfläche erfassen." },
@@ -248,8 +232,6 @@ const clusters = {
     label: "Bodenbelag",
     plannerHref: "/haus/boden/bodenbelag-rechner/",
     plannerLabel: "Bodenmenge berechnen",
-    measurementMethod: "Zerlege den Raum in Rechtecke, addiere deren Flächen und behandle Nischen sowie Türlaibungen bewusst. Verlegerichtung, Paketinhalt, Dielenformat und ein begründeter Verschnitt schließen an diese Flächenrechnung an. Bestellt wird in ganzen Paketen, nicht in rechnerischen Quadratmeterbruchteilen.",
-    decisionMethod: "Untergrund, Feuchte, Nutzung und Herstellerfreigabe entscheiden über das geeignete System. Die Materialmenge wird aus dieser Entscheidung abgeleitet. Für einen fairen Preisvergleich zählen Boden, Unterlage, Profile, Sockelleisten und mögliche Untergrundarbeiten zusammen.",
     boundary: "Restfeuchte, Ebenheit, Fußbodenheizung, Feuchteschutz und Verlegung richten sich nach Untergrund und freigegebenem Produktsystem. Die Mengenrechnung ersetzt keine technische Prüfung.",
     relatedLinks: [
       { label: "Bodenbelag-Rechner", href: "/haus/boden/bodenbelag-rechner/", description: "Raumfläche, Verschnitt und Pakete berechnen." },
@@ -262,8 +244,6 @@ const clusters = {
     label: "Trockenbau",
     plannerHref: "/haus/innenausbau/trockenbau-rechner/",
     plannerLabel: "Trockenbau berechnen",
-    measurementMethod: "Miss Wandlänge und -höhe an mehreren Stellen und erfasse jede Öffnung mit Position und Abmessung. Platten werden je Wandseite und Lage gerechnet; Profile folgen dem freigegebenen Raster. Türständer, Randanschlüsse und zusätzliche Tragprofile werden separat ergänzt.",
-    decisionMethod: "Wandfunktion, Höhe, Lasten, Schall- und Brandschutz bestimmen das System. Aus dem freigegebenen Aufbau lassen sich Platten, Profile, Dämmung und Befestiger sinnvoll ermitteln. Eine reine Quadratmeterrechnung bleibt ein erster Mengenrahmen.",
     boundary: "Profilabstände, Plattenlagen, Befestigung, Anschlüsse sowie Schall- und Brandschutz müssen dem freigegebenen System entsprechen. Tragende oder sicherheitsrelevante Details brauchen Fachplanung.",
     relatedLinks: [
       { label: "Trockenbau-Rechner", href: "/haus/innenausbau/trockenbau-rechner/", description: "Wandflächen, Lagen und Materialrahmen erfassen." },
@@ -276,8 +256,6 @@ const clusters = {
     label: "Luftentfeuchter",
     plannerHref: "/haus/raumklima/luftentfeuchter-rechner/",
     plannerLabel: "Entfeuchterbedarf berechnen",
-    measurementMethod: "Berechne das Raumvolumen aus Länge, Breite und mittlerer Höhe. Dokumentiere Temperatur und relative Feuchte über mehrere Tage sowie Nutzung, Lüftung und erkennbare Feuchtequellen. Quadratmeter allein reichen nicht, weil Geräteleistung stark von Temperatur und Feuchtelast abhängt.",
-    decisionMethod: "Die Ursache und der betriebliche Bedarf gehören in dieselbe Prüfung. Verglichen werden Entfeuchtungsleistung unter passenden Testbedingungen, Hygrostat, Geräusch, Ablauf, Leistungsaufnahme und erwartete Laufzeit. Ein größeres Gerät ist nicht automatisch leiser oder sparsamer.",
     boundary: "Ein Entfeuchter behandelt Raumluft, aber keine Leckage, Wärmebrücke oder andere bauliche Ursache. Bei anhaltender Feuchte, Schimmel oder unklarer Ursache ist eine fachliche Prüfung erforderlich.",
     relatedLinks: [
       { label: "Luftentfeuchter-Rechner", href: "/haus/raumklima/luftentfeuchter-rechner/", description: "Raumvolumen, Feuchtelast und Nutzung einordnen." },
@@ -293,78 +271,6 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
   const headings = SCENARIO_SECTION_HEADINGS[seed.slug];
   if (!headings) throw new Error(`Fehlende redaktionelle Überschriften für ${seed.slug}`);
 
-  const layout = editorialVariant(`${cluster.label}/${seed.slug}`, 4);
-  const optionLeads = [
-    [
-      `Die Variante „${seed.optionA}“ wird an den gemessenen Anforderungen beurteilt.`,
-      `Für „${seed.optionB}“ zählt, ob der zusätzliche Spielraum tatsächlich gebraucht wird.`,
-    ],
-    [
-      `Bei der Option „${seed.optionA}“ stehen die Bedingungen am Einsatzort im Mittelpunkt.`,
-      `Die Option „${seed.optionB}“ wird mit denselben Anforderungen gegengeprüft.`,
-    ],
-    [
-      `Für „${seed.optionA}“ ist die praktische Nutzung entscheidend.`,
-      `Die Eignung von „${seed.optionB}“ hängt von den dokumentierten Rahmenbedingungen ab.`,
-    ],
-    [
-      `Die Option „${seed.optionA}“ gehört nur in die Auswahl, wenn die Voraussetzungen erfüllt sind.`,
-      `Auch die Option „${seed.optionB}“ muss sich am konkreten Projekt messen lassen.`,
-    ],
-  ][layout];
-  const optionAStatement = `${optionLeads[0]} ${seed.advice[0]}`;
-  const optionBStatement = `${optionLeads[1]} ${seed.advice[1]}`;
-  const sectionParagraphs = [
-    [
-      seed.intro,
-      `${seed.measurement} ${seed.takeaway}`,
-    ],
-    [
-      sentenceEnd(seed.calculation),
-      `${resultSentence} ${cluster.measurementMethod}`,
-    ],
-    [
-      `${optionAStatement} ${resultSentence}`,
-      `${optionBStatement} ${seed.takeaway}`,
-    ],
-    [
-      `${seed.advice[2]} ${seed.caution}`,
-      `Für ${seed.scenario} sind auch die folgenden Punkte wichtig. ${cluster.decisionMethod} ${cluster.boundary}`,
-    ],
-  ];
-
-  if (layout === 0) sectionParagraphs[0] = [sectionParagraphs[0].join(" ")];
-  if (layout === 1) sectionParagraphs[1] = [sectionParagraphs[1].join(" ")];
-  if (layout === 2) sectionParagraphs[2] = [sectionParagraphs[2].join(" ")];
-  sectionParagraphs[3] = [sectionParagraphs[3].join(" ")];
-
-  const faqVariants = [
-    [
-      `Welche Maße brauche ich für ${seed.scenario}?`,
-      `Was lässt sich aus der Rechnung für ${seed.scenario} ableiten?`,
-      `Wann ist die Option „${seed.optionB}“ passender als „${seed.optionA}“?`,
-      `Wo liegt die fachliche Grenze für ${seed.scenario}?`,
-    ],
-    [
-      `Wie messe ich ${seed.scenario} sinnvoll aus?`,
-      `Welcher Planungswert ergibt sich für ${seed.scenario}?`,
-      `Worin unterscheiden sich die Optionen „${seed.optionA}“ und „${seed.optionB}“?`,
-      `Was muss vor der Auswahl für ${seed.scenario} geklärt sein?`,
-    ],
-    [
-      `Welche Ausgangsdaten sind für ${seed.scenario} wichtig?`,
-      `Wie belastbar ist die Beispielrechnung für ${seed.scenario}?`,
-      `Welche Variante passt zur beschriebenen Nutzung?`,
-      `Was kann die Rechnung für ${seed.scenario} nicht prüfen?`,
-    ],
-    [
-      `Was sollte ich für ${seed.scenario} vor Ort aufnehmen?`,
-      `Wie kommt der Rechenwert für ${seed.scenario} zustande?`,
-      `Was spricht für die Option „${seed.optionA}“ und was für „${seed.optionB}“?`,
-      `Welche Kontrolle ist für ${seed.scenario} notwendig?`,
-    ],
-  ][layout];
-
   return {
     slug: seed.slug,
     title: seed.title,
@@ -374,49 +280,20 @@ function makeGuide(cluster: Cluster, seed: ScenarioSeed): SeoGuide {
     takeaway: seed.takeaway,
     plannerHref: cluster.plannerHref,
     plannerLabel: cluster.plannerLabel,
-    sections: headings.map((title, index) => ({ title, paragraphs: sectionParagraphs[index] })),
-    comparison: {
-      caption: `${headings[1]} und passende Varianten`,
-      columns: ["Prüfpunkt", "Wert oder Bedingung", "Einordnung"],
-      rows: [
-        ["Projekt", seed.measurement, cluster.measurementMethod],
-        ["Rechnung", seed.calculation, resultSentence],
-        ["Variante A", seed.optionA, seed.advice[0]],
-        ["Variante B", seed.optionB, seed.advice[1]],
-        ["Grenze", seed.caution, cluster.boundary],
-      ],
-    },
-    checklist: [
-      seed.measurement,
-      sentenceEnd(seed.calculation),
-      resultSentence,
-      optionAStatement,
-      optionBStatement,
-      seed.advice[2],
-      seed.caution,
-    ],
-    faqs: [
-      { question: faqVariants[0], answer: `${seed.measurement} ${cluster.measurementMethod}` },
-      { question: faqVariants[1], answer: `${sentenceEnd(seed.calculation)} ${resultSentence}` },
-      { question: faqVariants[2], answer: `${optionAStatement} ${optionBStatement}` },
-      { question: faqVariants[3], answer: `${seed.caution} ${cluster.boundary}` },
+    // Every fact appears exactly once. Checklist, FAQ, example and table used
+    // to repeat these sentences and made the page read like a template.
+    sections: [
+      { title: headings[0], paragraphs: [seed.measurement] },
+      { title: headings[1], paragraphs: [`${sentenceEnd(seed.calculation)} ${resultSentence}`] },
+      { title: headings[2], paragraphs: [`${seed.advice.map(sentenceEnd).join(" ")} Zwei Wege kommen meist in Frage:`], bullets: [seed.optionA, seed.optionB] },
+      { title: headings[3], paragraphs: [seed.caution] },
     ],
     relatedLinks: cluster.relatedLinks,
     sources: [...cluster.sources],
-    example: {
-      title: headings[1],
-      intro: `${seed.measurement} ${sentenceEnd(seed.calculation)}`,
-      steps: [
-        { label: "Ausgangslage", value: seed.measurement },
-        { label: "Rechnung", value: seed.calculation },
-        { label: "Planungswert", value: seed.result },
-      ],
-      result: seed.result,
-      note: seed.caution,
-    },
     limitation: cluster.boundary,
   };
 }
+
 function guides(cluster: Cluster, seeds: ScenarioSeed[]) {
   return seeds.map((seed) => makeGuide(cluster, seed));
 }

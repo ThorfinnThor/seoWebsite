@@ -1,6 +1,6 @@
 import type { SeoGuide } from "@/lib/seo-guides";
 import { GUIDE_SOURCE_LIBRARY, type GuideSource } from "@/lib/guide-enrichments";
-import { editorializeGuide, editorializeText, sentenceEnd } from "@/lib/editorial-style";
+import { capitalizeGuide, capitalizeSentences, sentenceEnd } from "@/lib/editorial-style";
 import { SEO_TOPICS } from "@/lib/seo-topics";
 import { applyEditorialProjectExample } from "@/lib/project-example-editorials";
 import { evaluateProgrammaticGuideIndexing, type ProgrammaticIndexApproval, type ProgrammaticIndexingGate } from "@/lib/programmatic-indexing";
@@ -689,10 +689,10 @@ function makeExample(
     scaleSlug: scale.slug,
     qualitySignature: `${cluster.topicSlug}|${scale.values.join("x")}|${variant.slug}|${calculation.result}`,
     directoryCard: {
-      title: editorializeText(cluster.titleSubject?.(scale, variant) ?? defaultSubject),
-      result: editorializeText(calculation.result),
-      alternative: editorializeText(calculation.countercheck),
-      check: editorializeText(variant.check),
+      title: capitalizeSentences(cluster.titleSubject?.(scale, variant) ?? defaultSubject),
+      result: capitalizeSentences(calculation.result),
+      alternative: capitalizeSentences(calculation.countercheck),
+      check: capitalizeSentences(variant.check),
       linkLabel: "Rechnung ansehen",
     },
     slug,
@@ -762,7 +762,7 @@ export const PROJECT_EXAMPLES: readonly ProjectExample[] = BASE_PROJECT_EXAMPLES
     }));
 
   const approvedExample = applyEditorialProjectExample(example);
-  const finalExample = editorializeGuide({
+  const finalExample = capitalizeGuide({
     ...approvedExample,
     relatedLinks: [...(approvedExample.relatedLinks ?? []), ...siblingLinks],
   });

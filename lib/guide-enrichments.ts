@@ -142,7 +142,7 @@ export const GUIDE_ENRICHMENTS: Record<string, GuideEnrichment> = {
     sources: [source.modelBuildingCode, source.berlinBuildingCode, source.allotmentLaw],
     example: {
       title: "Zwei Fahrräder, Geräte und Rasenmäher",
-      intro: "Die PassendPlanen-Heuristik addiert Nutzungsflächen und rundet erst nach der Bewegungsreserve auf.",
+      intro: "Der Rechner addiert die Nutzungsflächen und rundet erst nach der Bewegungsreserve auf.",
       steps: [
         { label: "Grundbewegungsfläche", value: "0,8 m²" },
         { label: "2 Fahrräder", value: "1,3 m²" },

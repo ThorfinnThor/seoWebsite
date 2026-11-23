@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { getTopicLinkGroups } from "@/lib/internal-links";
 import { getSeoTopic } from "@/lib/seo-topics";
-import { editorializeText } from "@/lib/editorial-style";
+import { capitalizeSentences } from "@/lib/editorial-style";
 
 type TopicLinksProps = {
   topicSlug: string;
@@ -32,8 +32,8 @@ export function TopicLinks({ topicSlug, currentPath, exclude = [], layout = "sec
         <h3>{group.title}</h3>
         <ul>
           {group.links.map((link) => <li key={link.href}>
-            <Link href={link.href}>{editorializeText(link.label)}</Link>
-            {link.description && <span>{editorializeText(link.description)}</span>}
+            <Link href={link.href}>{capitalizeSentences(link.label)}</Link>
+            {link.description && <span>{capitalizeSentences(link.description)}</span>}
           </li>)}
         </ul>
       </div>)}
