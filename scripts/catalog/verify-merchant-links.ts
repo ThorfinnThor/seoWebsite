@@ -6,8 +6,35 @@ import { writeFilesAtomically } from "./write-atomic";
 const CATALOG_FILES = ["garden-house", "dehumidifier", "irrigation", "robot-mower", "security-camera", "flooring", "project-products"].map((vertical) => `public/data/${vertical}/catalog.json`);
 type Fetcher = (input: string | URL | Request, init?: RequestInit) => Promise<Response>;
 
+const TRACKING_HOST = /(^|\.)(awin1\.(com|net)|awin\.com)$/i;
+
+function usableTarget(value: string | null | undefined): string | undefined {
+  if (!value) return undefined;
+  try {
+    const url = new URL(value);
+    return /^https?:$/.test(url.protocol) && !TRACKING_HOST.test(url.hostname) ? url.toString() : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
+/**
+ * The shop page behind an offer. Awin counts every request to an affiliate link as a
+ * click, so this check must never open one. Without a shop address there is no check.
+ */
+export function merchantTarget(offer: Pick<OfferBase, "merchantUrl" | "affiliateUrl">): string | undefined {
+  const direct = usableTarget(offer.merchantUrl);
+  if (direct) return direct;
+  try {
+    return usableTarget(new URL(offer.affiliateUrl).searchParams.get("ued"));
+  } catch {
+    return undefined;
+  }
+}
+
 export async function verifyOfferLink(offer: OfferBase, product: ProductBase, fetcher: Fetcher = fetch): Promise<LinkVerificationStatus> {
-  const target = offer.affiliateUrl;
+  const target = merchantTarget(offer);
+  if (!target) return "unknown";
   try {
     const response = await fetcher(target, { method: "GET", redirect: "follow", headers: { "user-agent": "PassendPlanen-Linkcheck/1.0 (+https://www.passendplanen.de/)" }, signal: AbortSignal.timeout(12_000) });
     if (response.status === 404 || response.status === 410) return "not-found";
