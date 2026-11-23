@@ -141,8 +141,8 @@ export function getTopicLinkGroups(topicSlug: string, currentPath: string): read
   const notCurrent = (link: TopicLink) => normalizePath(link.href) !== current;
 
   const basics: TopicLink[] = [
-    { href: topic.plannerHref, label: topic.plannerLabel, description: "Kostenloser Rechner mit nachvollziehbarem Rechenweg." },
-    { href: `/ratgeber/thema/${topic.slug}/`, label: `Themenübersicht ${topic.name}`, description: "Alle Rechner, Ratgeber, Vergleiche und Datenauswertungen." },
+    { href: topic.plannerHref, label: topic.plannerLabel, description: "Kostenloser Rechner." },
+    { href: `/ratgeber/thema/${topic.slug}/`, label: `Themenübersicht ${topic.name}`, description: "Alles zum Thema auf einer Seite." },
     ...(cluster?.pages ?? []),
     { href: "/rechner/", label: "Alle kostenlosen Rechner und Planer" },
   ];
@@ -165,13 +165,13 @@ export function getTopicLinkGroups(topicSlug: string, currentPath: string): read
       href: report.path,
       label: report.title,
     })),
-    { href: `/ratgeber/vergleiche/${topic.slug}/`, label: `Alle Direktvergleiche: ${topic.name}` },
-    { href: `/ratgeber/projekte/${topic.slug}/`, label: `Alle Projektbeispiele: ${topic.name}` },
+    { href: `/ratgeber/vergleiche/${topic.slug}/`, label: "Alle Vergleiche" },
+    { href: `/ratgeber/projekte/${topic.slug}/`, label: "Alle Rechenbeispiele" },
   ];
 
   return ([
     { id: "basics", title: "Rechner und Grundlagen", links: basics.filter(notCurrent) },
-    { id: "guides", title: "Ratgeber und Szenarien", links: guides.filter(notCurrent) },
-    { id: "evidence", title: "Vergleiche, Rechenbeispiele und Daten", links: evidence.filter(notCurrent) },
+    { id: "guides", title: "Ratgeber", links: guides.filter(notCurrent) },
+    { id: "evidence", title: "Vergleiche und Daten", links: evidence.filter(notCurrent) },
   ] satisfies TopicLinkGroup[]).filter((group) => group.links.length > 0);
 }

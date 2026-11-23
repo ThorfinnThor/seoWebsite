@@ -23,9 +23,7 @@ export function TopicLinks({ topicSlug, currentPath, exclude = [], layout = "sec
 
   const body = <>
     <div className="section-heading">
-      <p className="eyebrow">Mehr zum Thema</p>
-      <h2 id={titleId}>{topic.name}. Alle passenden Inhalte</h2>
-      <p>Rechner, Grundlagen, Szenarien und geprüfte Vergleiche zum selben Projekt. So lassen sich Annahmen gegenprüfen, bevor bestellt oder beauftragt wird.</p>
+      <h2 id={titleId}>Mehr zu {topic.name.replace(/ (planen|auswählen|berechnen)$/, "")}</h2>
     </div>
     <div className="topic-links-groups">
       {groups.map((group) => <div className="topic-links-group" key={group.id}>

@@ -7,6 +7,7 @@ import { usePlannerValidation } from "@/components/calculator/usePlannerValidati
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ResultProductJump } from "@/components/product/ResultProductJump";
 import { calculateFlooringPlan } from "@/lib/flooring/rules";
 import { FlooringInputSchema, type FlooringInput, type FlooringRoom } from "@/lib/flooring/types";
 import { nextNumberedLabel } from "@/lib/planner/dynamic-label";
@@ -122,6 +123,7 @@ export function FlooringPlanner() {
 
     {step === 4 && plan && <div className="results flooring-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Nettofläche</span><strong>{format(plan.netAreaM2)} m²</strong></div><div><span>Mit {input.wastePercent} % Reserve</span><strong>{format(plan.purchaseAreaM2)} m²</strong></div><div><span>Volle Pakete</span><strong>{plan.packageCount}</strong></div><div><span>Bestellte Fläche</span><strong>{format(plan.orderedAreaM2)} m²</strong></div></div>
+      <ResultProductJump label="Böden für deinen Raum" />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">▤</span><div><p className="eyebrow">Bodenbelag</p><h3>{plan.packageCount} volle Pakete</h3><p>Rechnerisch etwa {plan.estimatedPlankCount} Dielen aus {format(input.plankLengthMm)} × {format(input.plankWidthMm)} mm. Das Paketmaß ist für die Bestellung maßgeblich.</p><strong>{format(plan.areaSurplusM2)} m² Differenz zwischen bestellter Fläche und Nettofläche</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">≋</span><div><p className="eyebrow">Unterlage</p><h3>{input.includeUnderlay ? `${plan.underlayRollCount} Rollen` : "Keine separate Unterlage eingerechnet"}</h3><p>{input.includeUnderlay ? `${format(plan.underlayAreaWithReserveM2)} m² inklusive 5 % Reserve bei ${format(input.underlayRollCoverageM2)} m² je Rolle.` : "Prüfe, ob eine Unterlage integriert ist oder für das gewählte System ergänzt werden muss."}</p><strong>Unterlage niemals nur nach Quadratmetern auswählen.</strong></div></article>
@@ -129,7 +131,7 @@ export function FlooringPlanner() {
       </div>
       <div className="warning-panel"><h3>Vor Bestellung und Verlegung prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Chargengleichheit, Sockelleistenprofile, Übergänge, Abschlussprofile und eine mögliche Paketreserve für spätere Reparaturen separat entscheiden.</li></ul></div>
       <PrintResultAction />
-      <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bodenbeläge</h3><p>Die Auswahl berücksichtigt Bodenart und – wenn redaktionell bestätigt – Fußbodenheizung und Feuchtraumfreigabe.</p><AffiliateDisclosure /><CatalogMatchList planner="flooring" matches={matches} emptyLabel="Noch keine redaktionell freigegebenen Bodenbeläge. Die LaminatDEPOT-Feeddaten sind erfasst; Paketinhalt und Maße werden vor Veröffentlichung geprüft." /></section>
+      <section className="recommendation-section" id="angebote"><h3>Passende Bodenbeläge</h3><p>Gefiltert nach Bodenart und, wo der Händler sie nennt, nach Freigabe für Fußbodenheizung und Feuchtraum.</p><AffiliateDisclosure /><CatalogMatchList planner="flooring" matches={matches} emptyLabel="Für diese Angaben haben wir gerade kein passendes Angebot." /></section>
     </div>}
 
     {formError && <p className="field-error calculator-error" role="alert">{formError}</p>}

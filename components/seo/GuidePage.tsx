@@ -14,6 +14,9 @@ import { capitalizeSentences } from "@/lib/editorial-style";
 import { Breadcrumbs, type Crumb } from "./Breadcrumbs";
 import { GuideDataInsightBlock } from "./GuideDataInsight";
 import { JsonLd } from "./JsonLd";
+import { GuideProducts } from "@/components/product/GuideProducts";
+import { getGuideProducts } from "@/lib/guide-products";
+import { guideFigureFor } from "@/components/figures/GuideFigure";
 import { TopicLinks } from "./TopicLinks";
 import { resolveTopicForPage } from "@/lib/internal-links";
 
@@ -75,7 +78,7 @@ export function GuidePage({
   breadcrumbs,
   plannerHref = "/garten/gartenhaus-planer/",
   plannerLabel = "Gartenhaus planen",
-  limitation = "Diese Einordnung ersetzt keine Prüfung von Baurecht, Abständen, Statik, Fundament oder Herstellerangaben für deinen konkreten Standort.",
+  limitation,
   calculator,
   sources = [],
   example,
@@ -104,7 +107,9 @@ export function GuidePage({
   const displayIntro = capitalizeSentences(intro);
   const displayTakeaway = capitalizeSentences(takeaway);
   const displayPlannerLabel = capitalizeSentences(plannerLabel);
-  const displayLimitation = capitalizeSentences(limitation);
+  const displayLimitation = capitalizeSentences(limitation ?? topic?.boundary ?? "Maßgeblich sind die Unterlagen des Herstellers und die Bedingungen bei dir vor Ort.");
+  const figure = guideFigureFor(path);
+  const hasProducts = Boolean(getGuideProducts(topic?.slug, path));
   const displaySections = sections.map((section) => ({
     ...section,
     title: capitalizeSentences(section.title),
@@ -221,11 +226,9 @@ export function GuidePage({
           items={displayBreadcrumbs}
         />
         <header>
-          <p className="eyebrow">PassendPlanen Ratgeber</p>
           <p className="guide-meta">
             Von <Link href="/ueber-passendplanen/" rel="author">Schayan Yousefian</Link>
-            {" Zuletzt geprüft "}
-            <time dateTime={updatedAt}>{updated}</time>
+            <span>Aktualisiert <time dateTime={updatedAt}>{updated}</time></span>
           </p>
           <h1>{displayTitle}</h1>
           <p>{displayIntro}</p>
@@ -240,9 +243,12 @@ export function GuidePage({
             <Link className="button button--primary" href={plannerHref}>
               {displayPlannerLabel} →
             </Link>
+            {hasProducts && <a className="guide-aside-link" href="#produkte">Passende Produkte ansehen ↓</a>}
           </aside>
 
           <div className="guide-copy">
+            {figure}
+
             {displaySections.map((section) => (
               <section key={section.title}>
                 <h2>{section.title}</h2>
@@ -261,7 +267,6 @@ export function GuidePage({
 
             {displayComparison && (
               <section className="guide-comparison" aria-labelledby="guide-comparison-title">
-                <p className="eyebrow">Direkter Vergleich</p>
                 <h2 id="guide-comparison-title">{displayComparison.caption}</h2>
                 <div className="guide-table-wrap">
                   <table>
@@ -274,15 +279,13 @@ export function GuidePage({
 
             {displayChecklist.length > 0 && (
               <section className="guide-checklist" aria-labelledby="guide-checklist-title">
-                <p className="eyebrow">Vor dem Kauf prüfen</p>
-                <h2 id="guide-checklist-title">Deine Projekt-Checkliste</h2>
+                <h2 id="guide-checklist-title">Checkliste vor dem Kauf</h2>
                 <ol>{displayChecklist.map((item) => <li key={item}>{item}</li>)}</ol>
               </section>
             )}
 
             {displayExample && (
               <section className="guide-example" aria-labelledby="guide-example-title">
-                <p className="eyebrow">Nachvollziehbares Rechenbeispiel</p>
                 <h2 id="guide-example-title">{displayExample.title}</h2>
                 <p>{displayExample.intro}</p>
                 <dl>
@@ -298,10 +301,18 @@ export function GuidePage({
               </section>
             )}
 
+            <GuideProducts topicSlug={topic?.slug} path={path} plannerHref={plannerHref} placement="guide" />
+
+            {displayFaqs.length > 0 && (
+              <section className="guide-faq" aria-labelledby="guide-faq-title">
+                <h2 id="guide-faq-title">Häufige Fragen</h2>
+                <div>{displayFaqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
+              </section>
+            )}
+
             {displaySources.length > 0 && (
               <section className="guide-sources">
-                <p className="eyebrow">Geprüfte Ausgangspunkte</p>
-                <h2>Quellen und weiterführende Hinweise</h2>
+                <h2>Quellen</h2>
                 <ul>
                   {displaySources.map((source) => (
                     <li key={source.href}>
@@ -316,34 +327,19 @@ export function GuidePage({
               </section>
             )}
 
-            {displayFaqs.length > 0 && (
-              <section className="guide-faq" aria-labelledby="guide-faq-title">
-                <p className="eyebrow">Häufige Fragen</p>
-                <h2 id="guide-faq-title">Kurz und konkret beantwortet</h2>
-                <div>{displayFaqs.map((faq) => <details key={faq.question}><summary>{faq.question}</summary><p>{faq.answer}</p></details>)}</div>
-              </section>
-            )}
-
             {displayRelatedLinks.length > 0 && (
               <section className="guide-related" aria-labelledby="guide-related-title">
-                <p className="eyebrow">Passend weiterplanen</p>
-                <h2 id="guide-related-title">Verwandte Rechner und Ratgeber</h2>
+                <h2 id="guide-related-title">Weiterlesen</h2>
                 <div>{displayRelatedLinks.map((link) => <Link key={link.href} href={link.href}><strong>{link.label}</strong><span>{link.description}</span></Link>)}</div>
               </section>
             )}
 
             {topic && <TopicLinks layout="inline" topicSlug={topic.slug} currentPath={path} exclude={resolvedRelatedLinks.map((link) => link.href)} />}
 
-            <div className="guide-method">
-              <strong>Nachvollziehbarkeit</strong>
-              <p>
-                Wie PassendPlanen rechnet, Annahmen kennzeichnet und Grenzen behandelt,
-                erklären wir in der <Link href="/methodik/">Methodik</Link>.
-              </p>
-            </div>
             <div className="guide-limit">
-              <strong>Wichtige Grenze</strong>
-              <p>{displayLimitation}</p>
+              <p>
+                <strong>Gut zu wissen:</strong> {displayLimitation} Wie wir rechnen, steht in der <Link href="/methodik/">Methodik</Link>.
+              </p>
             </div>
           </div>
         </div>
@@ -351,12 +347,11 @@ export function GuidePage({
 
       <section className="guide-cta">
         <div>
-          <p className="eyebrow">Vom Wissen zur Auswahl</p>
-          <h2>Berechne jetzt deinen Planungsrahmen.</h2>
-          <p>Der Rechner übersetzt deinen Bedarf in transparente Auswahlkriterien.</p>
+          <h2>Mit deinen eigenen Maßen rechnen</h2>
+          <p>Kostenlos, ohne Anmeldung. Deine Eingaben bleiben im Browser.</p>
         </div>
         <Link className="button button--light" href={plannerHref}>
-          Planer kostenlos starten →
+          {displayPlannerLabel} →
         </Link>
       </section>
     </>

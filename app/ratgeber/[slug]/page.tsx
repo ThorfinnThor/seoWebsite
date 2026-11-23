@@ -4,6 +4,7 @@ import { GuidePage } from "@/components/seo/GuidePage";
 import { createPageMetadata } from "@/lib/metadata";
 import { getGuideDataInsight } from "@/lib/guide-data-insights";
 import { getSeoGuide, SEO_GUIDES } from "@/lib/seo-guides";
+import { SEO_GUIDE_REWRITES, SEO_GUIDE_REWRITES_UPDATED } from "@/lib/seo-guide-rewrites";
 import { getSeoTopicForGuide } from "@/lib/seo-topics";
 
 export function generateStaticParams() {
@@ -23,5 +24,6 @@ export default async function Page({ params }: { params: Promise<{ slug: string 
   const topic = getSeoTopicForGuide(guide);
   const path = `/ratgeber/${guide.slug}/`;
   const dataInsight = getGuideDataInsight(path);
-  return <GuidePage {...guide} path={path} updated={dataInsight?.updatedLabel ?? "August 2026"} updatedAt={dataInsight?.updatedAt} dataInsight={dataInsight} breadcrumbs={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, ...(topic ? [{ label: topic.name, href: `/ratgeber/thema/${topic.slug}/` }] : []), { label: guide.heading }]} />;
+  const rewrite = SEO_GUIDE_REWRITES[guide.slug] ? SEO_GUIDE_REWRITES_UPDATED : undefined;
+  return <GuidePage {...guide} path={path} updated={rewrite?.label ?? dataInsight?.updatedLabel ?? "August 2026"} updatedAt={rewrite?.iso ?? dataInsight?.updatedAt} dataInsight={dataInsight} breadcrumbs={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, ...(topic ? [{ label: topic.name, href: `/ratgeber/thema/${topic.slug}/` }] : []), { label: guide.title }]} />;
 }

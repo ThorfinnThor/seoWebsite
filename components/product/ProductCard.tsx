@@ -3,6 +3,7 @@ import { ProductImage } from "./ProductImage";
 import { ProductReasons } from "./ProductReasons";
 import { PriceDisplay } from "./PriceDisplay";
 import type { GardenHouseMatch } from "@/lib/garden-house/types";
+import { merchantLabel } from "@/lib/catalog/merchant-label";
 import { resolveOfferUrl } from "@/lib/catalog/offer-url";
 
 const MATERIAL = { wood: "Holz", metal: "Metall", plastic: "Kunststoff" } as const;
@@ -16,7 +17,7 @@ export function ProductCard({ match, position }: { match: GardenHouseMatch; posi
       <div className="product-content">
         <div className="product-heading">
           <div><p className="product-brand">{product.brand ?? "Gartenhaus"}</p><h3>{product.name}</h3></div>
-          <span className={`quality quality--${product.dataQuality}`}>{product.dataQuality === "curated" ? "Produktdaten geprüft" : "Teilweise geprüft"}</span>
+          <span className={`quality quality--${product.dataQuality}`}>{product.dataQuality === "curated" ? "Maße geprüft" : "Teilweise geprüft"}</span>
         </div>
         <dl className="product-facts">
           <div><dt>Maße</dt><dd>{product.widthCm} × {product.depthCm} cm{match.rotated ? " (gedreht)" : ""}</dd></div>
@@ -26,8 +27,8 @@ export function ProductCard({ match, position }: { match: GardenHouseMatch; posi
         </dl>
         <ProductReasons reasons={match.reasons} />
         <div className="offer-row">
-          <div><p className="merchant">Angebot von {offer.merchantName}</p><PriceDisplay offer={offer} /></div>
-          <AffiliateLink className="button button--primary" href={resolveOfferUrl(offer)} productId={product.id} verticalRef="garden-house" merchantName={offer.merchantName}>Beim Händler ansehen <span aria-hidden="true">↗</span></AffiliateLink>
+          <div><p className="merchant">{merchantLabel(offer.merchantName)}</p><PriceDisplay offer={offer} /></div>
+          <AffiliateLink className="button button--offer" href={resolveOfferUrl(offer)} productId={product.id} verticalRef="garden-house" merchantName={offer.merchantName}>Zum Angebot bei {merchantLabel(offer.merchantName)} <span aria-hidden="true">↗</span></AffiliateLink>
         </div>
         <p className="freshness">Preis und Verfügbarkeit: Stand {new Intl.DateTimeFormat("de-DE", { dateStyle: "medium" }).format(new Date(offer.updatedAt))}. Bitte beim Händler prüfen.</p>
       </div>

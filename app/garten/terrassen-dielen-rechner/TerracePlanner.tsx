@@ -8,6 +8,7 @@ import { usePlannerValidation } from "@/components/calculator/usePlannerValidati
 import { usePlannerStepTransition } from "@/components/calculator/usePlannerStepTransition";
 import { usePlannerSessionState } from "@/components/calculator/usePlannerSessionState";
 import { PrintResultAction } from "@/components/planner/PrintResultAction";
+import { ResultProductJump } from "@/components/product/ResultProductJump";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
 import { TerraceInputSchema, type TerraceInput, type TerracePlan } from "@/lib/terrace/types";
 import { ReferenceProductList } from "@/components/product/ReferenceProductList";
@@ -86,13 +87,14 @@ export function TerracePlanner() {
     {step === 4 && plan && <div className="results terrace-results" aria-live="polite">
       <div className="requirement-summary"><div><span>Fläche</span><strong>{format(plan.areaM2)} m²</strong></div><div><span>Dielenreihen</span><strong>{plan.courseCount}</strong></div><div><span>Dielen inkl. Reserve</span><strong>{format(plan.deckingLinearMWithWaste)} lfm</strong></div><div><span>Volle Lieferdielen</span><strong>ca. {plan.fullBoardsToBuy}</strong></div></div>
       <TerraceInterpretation input={input} plan={plan} />
+      <ResultProductJump label="Dielen und Unterbau zu deinen Maßen" />
       <div className="detail-result-grid">
         <article><span className="component-icon" aria-hidden="true">═</span><div><p className="eyebrow">Belag</p><h3>{plan.courseCount} Dielenreihen</h3><p>{format(plan.deckingLinearM)} laufende Meter ohne und {format(plan.deckingLinearMWithWaste)} laufende Meter mit {input.wastePercent} % Reserve.</p><strong>Bei {format(input.boardLengthM)} m Lieferlänge: ca. {plan.fullBoardsToBuy} volle Dielen</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">╫</span><div><p className="eyebrow">Unterkonstruktion</p><h3>{plan.supportRowCount} Auflagerlinien</h3><p>Geschätzt {format(plan.supportLinearMWithWaste)} laufende Meter inklusive Reserve bei maximal {format(input.maxSupportSpacingCm)} cm Abstand.</p><strong>{plan.fixingIntersections.toLocaleString("de-DE")} rechnerische Kreuzungspunkte</strong></div></article>
         <article><span className="component-icon" aria-hidden="true">↔</span><div><p className="eyebrow">Zuschnitt & Fugen</p><h3>{plan.fullLengthPossible ? "Verlegung ohne Längsstoß möglich" : `Mindestens ${plan.minimumJointsPerCourse} Stoß je Reihe`}</h3><p>Die Reihenbreite liegt rechnerisch bei {format(plan.coveredWidthM, 3)} m. Am Rand sind ungefähr {plan.edgeAdjustmentMm} mm anzupassen.</p><strong>Stoßbild und symmetrische Randreihen vor Bestellung zeichnen.</strong></div></article>
       </div>
-      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.terrace, { "terrace-decking": `${format(plan.deckingLinearMWithWaste)} lfm`, "terrace-substructure": `${format(plan.supportLinearMWithWaste)} lfm`, "terrace-screws": "nach Auflagerpunkten", "terrace-spacers": `${plan.courseCount} Reihen`, "terrace-foundation": `${plan.supportRowCount} Auflagerlinien`, "terrace-edge": "nach Randlängen" })} />
       <ProjectProductRecommendations requirements={{ vertical: "terrace", requiredKinds: ["decking", "substructure", "fastening", "foundation", "bracket"], areaM2: plan.areaM2, requiredLinearM: plan.deckingLinearMWithWaste, boardLengthMm: input.boardLengthM * 1000, boardWidthMm: input.boardWidthMm, requiredBoardCount: plan.fullBoardsToBuy, supportLinearM: plan.supportLinearMWithWaste }} />
+      <ReferenceProductList items={setReferenceQuantities(REFERENCE_PRODUCTS.terrace, { "terrace-decking": `${format(plan.deckingLinearMWithWaste)} lfm`, "terrace-substructure": `${format(plan.supportLinearMWithWaste)} lfm`, "terrace-screws": "nach Auflagerpunkten", "terrace-spacers": `${plan.courseCount} Reihen`, "terrace-foundation": `${plan.supportRowCount} Auflagerlinien`, "terrace-edge": "nach Randlängen" })} />
       <div className="warning-panel"><h3>Vor Bestellung und Aufbau prüfen</h3><ul>{plan.warnings.map((warning) => <li key={warning}>{warning}</li>)}<li>Untergrund, Entwässerung, Aufbauhöhe, Gefälle und konstruktiver Holzschutz gehören in die konkrete Ausführungsplanung.</li></ul></div>
       <PrintResultAction />
     </div>}

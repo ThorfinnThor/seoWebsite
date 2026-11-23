@@ -17,5 +17,5 @@ export function IrrigationCatalogRecommendations({ input, plan }: { input: Irrig
   }, []);
   const matches = catalog ? recommendIrrigation(catalog, input, plan) : [];
   useProductResultTracking({ planner: "irrigation", ready: catalog !== null, matchCount: matches.length });
-  return <section className="recommendation-section"><p className="eyebrow">Geprüfte Angebote</p><h3>Passende Bewässerungskomponenten</h3><p>Die Auswahl ordnet verfügbare Komponenten deinem Bewässerungsplan zu. Systemkompatibilität und Hydraulik bleiben vor dem Kauf zu prüfen.</p><AffiliateDisclosure /><CatalogMatchList planner="irrigation" matches={matches} emptyLabel="Geprüfte Bewässerungsangebote werden geladen oder sind für diesen Plan noch nicht verfügbar." /></section>;
+  return <section className="recommendation-section" id="angebote"><h3>Bauteile für deine Bewässerung</h3><p>Prüfe vor dem Kauf, ob die Teile aus demselben System stammen und zu deinem Wasserdruck passen.</p><AffiliateDisclosure /><CatalogMatchList planner="irrigation" matches={matches} emptyLabel="Für diesen Plan haben wir gerade kein passendes Angebot." /></section>;
 }
