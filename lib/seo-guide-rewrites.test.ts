@@ -11,8 +11,6 @@ import { SEO_GUIDE_REWRITES } from "@/lib/seo-guide-rewrites";
 import { SEO_GUIDES_SCENARIOS } from "@/lib/seo-guides-scenarios";
 import { calculateTerracePlan } from "@/lib/terrace/rules";
 
-/** Everything a reader sees in one rewrite, as a single string. */
-const text = (slug: string) => JSON.stringify(SEO_GUIDE_REWRITES[slug]);
 const de = (value: number, digits = 0) => value.toLocaleString("de-DE", { minimumFractionDigits: digits, maximumFractionDigits: digits });
 const rows = (slug: string) => SEO_GUIDE_REWRITES[slug].comparison!.rows;
 
@@ -39,7 +37,8 @@ describe("numbers in the rewritten guides follow the planner rules", () => {
       calculateRobotMowerPlan({ areas: [{ lengthM: areaM2 / 10, widthM: 10, excludedAreaM2: 0 }], complexity, growth, mowingZones, separatedAreas, obstacleCount: 0, narrowestPassageCm: 100, maximumSlopePercent: 0, boundarySystem: "wire", powerAtStation: true, rainShelteredStation: true, reliableReception: true } as unknown as Parameters<typeof calculateRobotMowerPlan>[0]).requiredRatedAreaM2;
     const label = (value: number) => `${de(value)} m²`;
     const ladder = (areaM2: number) => [rated(areaM2, "simple"), rated(areaM2, "moderate"), rated(areaM2, "moderate", 2), rated(areaM2, "complex"), rated(areaM2, "moderate", 2, true)].map(label);
-    expect(rows("maehroboter-fuer-1000-qm").map((row) => row[1])).toEqual(ladder(800));
+    expect(rows("maehroboter-fuer-800-qm").map((row) => row[2])).toEqual([rated(800, "simple"), rated(800, "simple", 2), rated(800, "moderate", 2), rated(800, "simple", 2, true), rated(800, "moderate", 2, true)].map(label));
+    expect(rated(700, "simple")).toBe(850);
     expect(rows("maehroboter-fuer-1000-qm").map((row) => row[2])).toEqual(ladder(1000));
     expect(rows("maehroboter-fuer-1500-qm").map((row) => row[2])).toEqual(ladder(1500));
     expect(rows("maehroboter-fuer-250-qm").map((row) => row[2])).toEqual(ladder(250).filter((_, index) => index !== 2));
@@ -60,6 +59,8 @@ describe("numbers in the rewritten guides follow the planner rules", () => {
     const large = plan(8, 5, "width", 5, 5);
     expect([medium.courseCount, medium.fullBoardsToBuy, medium.supportRowCount, medium.fixingIntersections]).toEqual([41, 44, 11, 451]);
     expect([large.courseCount, large.fullBoardsToBuy, large.supportRowCount, large.fixingIntersections, large.edgeAdjustmentMm]).toEqual([54, 57, 11, 594, 95]);
+    const along = plan(8, 5, "length", 4, 5);
+    expect([along.courseCount, along.fullBoardsToBuy, along.supportRowCount, along.fixingIntersections * 2]).toEqual([34, 72, 17, 1156]);
     expect([plan(6, 5, "width", 4, 10).fullBoardsToBuy, plan(8, 5, "width", 4, 10).fullBoardsToBuy]).toEqual([57, 75]);
     const poolLong = plan(8, 1, "length", 4, 5);
     const poolShort = plan(3, 1, "length", 4, 5);
@@ -102,10 +103,5 @@ describe("numbers in the rewritten guides follow the planner rules", () => {
       expect(rows(`luftentfeuchter-fuer-${areaM2}-qm`).map((row) => row[2])).toEqual([need("mild"), need("moderate"), need("mild", "basement", 12), need("high")]);
       expect(need("mild", "living", 20, true)).toBe(need("high"));
     }
-  });
-
-  it("keeps the merged sizes on the remaining pages", () => {
-    expect(text("maehroboter-fuer-1000-qm")).toContain("800 m² Rasen");
-    expect(text("terrasse-30-qm-material")).toContain("40 m² (8 × 5 m)");
   });
 });

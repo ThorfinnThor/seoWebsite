@@ -162,8 +162,8 @@ describe("editorial guide output", () => {
     const headings = SEO_GUIDES_SCENARIOS.flatMap((guide) => guide.sections.map((section) => section.title));
     const prose = SEO_GUIDES_SCENARIOS.flatMap(visibleText).join(" ");
 
-    expect(SEO_GUIDES_SCENARIOS).toHaveLength(45);
-    expect(headings).toHaveLength(180);
+    expect(SEO_GUIDES_SCENARIOS).toHaveLength(47);
+    expect(headings).toHaveLength(188);
     expect(new Set(headings).size).toBe(headings.length);
     expect(prose).not.toMatch(/Was im Szenario|Wo das Szenario|Die Situation im Szenario|Was die Zahl im Szenario/);
     expect(prose).not.toContain("Im Szenario");

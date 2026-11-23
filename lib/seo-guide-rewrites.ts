@@ -830,41 +830,79 @@ export const SEO_GUIDE_REWRITES: Record<string, SeoGuideRewrite> = {
     ],
   },
 
+  "maehroboter-fuer-800-qm": {
+    intro: "Für 800 m² Rasen suchst du ein Modell mit 1.000 bis 1.200 m² Nennfläche. Ein voller Durchgang dauert rechnerisch knapp sechs Stunden samt Laden. Bei drei Durchgängen pro Woche genügen dreieinhalb Stunden an fünf Tagen.",
+    takeaway: "Offener Rasen: ab 1.000 m². Vorgarten und Garten mit Verbindung: ebenfalls 1.000 m², bei vielen Beeten 1.100 m². Ohne befahrbare Verbindung ab 1.150 m².",
+    sections: [
+      { title: "Meist sind es Vorgarten und Garten", paragraphs: [
+        "800 m² am Stück sind selten. Häufiger liegen 200 m² vor und 600 m² hinter dem Haus. Kommt der Roboter selbst von einem zum anderen, rechnet der Planer mit zwei Zonen und dem Faktor 1,25, das sind genau 1.000 m². Muss ihn jemand tragen, gilt 1,40 und damit 1.150 m² nach dem Aufrunden.",
+        "Stell die Station nach hinten. Dort liegt der größere Teil, und vorne ist ein Gerät leichter zu stehlen. Der Vorgarten bekommt 25 Prozent der Mähzeit.",
+      ] },
+      { title: "Der Streifen neben dem Haus", paragraphs: [
+        "Ein 1,20 m breiter und 10 m langer Durchgang hat nur 12 m², entscheidet aber über das Modell. Verlangt die Anleitung 30 cm Abstand zwischen Begrenzungskabel und Wand, bleiben 60 cm zum Fahren. Kabellose Geräte müssen sich hier zwischen Hauswand und Zaun orten können.",
+        "Fahrräder und Mülltonnen stehen genau dort gern im Weg. Ein fester Platz für sie erspart dir die meisten Fehlermeldungen.",
+      ] },
+      { title: "Fünf Tage mit dreieinhalb Stunden", paragraphs: [
+        "Mit 22 cm Schnittbreite, 0,5 m pro Sekunde und 30 Prozent Abzug für Wenden schafft ein Gerät 277 m² je Stunde. 800 m² brauchen 2,9 Stunden Fahrt, mit gleich langer Ladezeit 5,8. Drei Durchgänge sind 17,3 Stunden in der Woche.",
+        "Damit bleiben zwei Tage ganz frei, zum Beispiel das Wochenende. Nimmst du einen Regentag dazu, sind es vier Tage mit gut vier Stunden.",
+      ] },
+      { title: "Vom Grundstück zum Rasen", paragraphs: [
+        "Ein Grundstück mit 1.250 m² verliert 160 m² an das Haus, 110 an Einfahrt und Stellplatz, 60 an die Terrasse und 120 an Beete. Übrig bleiben 800 m² Rasen. Wer 1.250 m² in den Filter eingibt, landet bei viel zu großen Geräten.",
+        "Eine Ecke mit 100 m² Blumenwiese senkt den Bedarf noch einmal: 700 m² offener Rasen brauchen 850 m² Nennfläche.",
+      ] },
+    ],
+    comparison: {
+      caption: "Nennfläche für 800 m² Rasen",
+      columns: ["Garten", "Faktor", "Modelle ab"],
+      rows: [
+        ["Offen, eine Fläche", "1,20", "1.000 m²"],
+        ["Zwei Zonen, verbunden", "1,25", "1.000 m²"],
+        ["Zwei Zonen, verbunden, viele Beete", "1,35", "1.100 m²"],
+        ["Zwei Zonen, getrennt", "1,40", "1.150 m²"],
+        ["Getrennt, viele Beete", "1,50", "1.200 m²"],
+      ],
+    },
+    checklist: [],
+    faqs: [
+      { question: "Reicht für 800 m² ein Mähroboter mit 800 m² Nennfläche?", answer: "Nur ohne Ruhetage und Hindernisse. Mit dem kleinsten Zuschlag von 20 Prozent landest du schon bei 960 m², also in der 1.000er-Klasse." },
+      { question: "Wie schütze ich das Gerät im Vorgarten?", answer: "Mit PIN, Alarm und einer Station hinter dem Haus. Manche Modelle melden sich per App, wenn sie den Garten verlassen." },
+    ],
+  },
+
   "maehroboter-fuer-1000-qm": {
-    intro: "Für 1.000 m² Rasen brauchst du ein Modell mit 1.200 bis 1.500 m² Nennfläche, für 800 m² eines mit 1.000 bis 1.200 m². Auf dieser Größe wird die Laufzeit zum Engpass: Ein voller Durchgang füllt rechnerisch fast einen achtstündigen Tag.",
+    intro: "Für 1.000 m² Rasen brauchst du ein Modell mit 1.200 bis 1.500 m² Nennfläche. Auf dieser Größe wird die Laufzeit zum Engpass: Ein voller Durchgang dauert mit Laden rechnerisch 7,2 Stunden und füllt damit fast einen achtstündigen Tag.",
     takeaway: "Rechne 1.000 m² mal 1,2 bei offenem Rasen, mal 1,3 bei Beeten und Bäumen, mal 1,4 bei vielen Engstellen. Danach prüfst du, ob die erlaubte Mähzeit reicht.",
     sections: [
       { title: "Wie lange ein Durchgang dauert", paragraphs: [
         "Angenommen, das Gerät schneidet 22 cm breit und fährt 0,5 m pro Sekunde. Das sind 396 m² in der Stunde. Für Wenden und Überlappung ziehen wir 30 Prozent ab, es bleiben 277 m². 1.000 m² brauchen damit 3,6 Stunden Fahrzeit.",
         "Lädt der Akku genauso lange, wie er mäht, stehen nach einem Durchgang 7,2 Stunden auf der Uhr. Setz die Werte deines Modells ein. Geräte, die chaotisch statt in Bahnen fahren, brauchen länger.",
       ] },
-      { title: "800 oder 1.000 Quadratmeter", paragraphs: [
-        "Zwischen beiden liegt meist nur eine Geräteklasse. Bei 800 m² offenem Rasen genügt ein Modell mit 1.000 m², bei 1.000 m² sollte es 1.200 m² schaffen. Wer zwischen den Werten liegt, misst nach: Auf großen Grundstücken verschwinden Einfahrt, Spielfläche und Beete leicht in der Schätzung.",
-        "Zieh auch Flächen ab, die du ohnehin selten mähst. Eine Blumenwiese von 150 m² macht aus 1.000 wieder 850 m².",
-      ] },
       { title: "Schnittbreite schlägt Akku", paragraphs: [
-        "Ein größerer Akku verlängert die Fahrt, verkürzt aber den Durchgang kaum, weil er auch länger lädt. Doppelte Schnittbreite halbiert die Fahrzeit. Ab 1.000 m² lohnt deshalb ein Blick auf diesen Wert, den viele Datenblätter weiter unten verstecken.",
+        "Ein größerer Akku verlängert die Fahrt, verkürzt aber den Durchgang kaum, weil er auch länger lädt. Doppelte Schnittbreite halbiert die Fahrzeit. Mit 32 cm statt 22 cm schafft dasselbe Gerät 403 m² je Stunde und ist nach knapp 5 Stunden samt Laden fertig.",
         "Die Kehrseite: Breite Geräte sind schwerer, hinterlassen eher Spuren und passen schlechter durch Passagen unter einem Meter.",
       ] },
       { title: "Wann der Rasen dem Roboter davonwächst", paragraphs: [
-        "Im Mai wächst er schneller als im August. Für starkes Wachstum, etwa nach Düngung oder mit Bewässerung, rechnet der Planer 10 Prozent mehr. Aus 1.200 werden 1.300 m².",
+        "Im Mai wächst er schneller als im August. Für starkes Wachstum, etwa nach Düngung oder mit Bewässerung, rechnet der Planer 10 Prozentpunkte mehr. Aus 1.200 werden 1.300 m².",
         "Läuft das Gerät nur werktags von acht bis sechzehn Uhr, ist auch ein gut gewähltes Modell im Frühjahr ausgelastet. Dann hilft eine längere Zeit am Abend mehr als ein weiterer Klassensprung.",
+      ] },
+      { title: "Strom für eine Saison", paragraphs: [
+        "Nimmt das Gerät beim Laden 60 W auf und lädt je Durchgang 3,6 Stunden, sind das 0,22 kWh. Drei Durchgänge in 30 Wochen ergeben rund 19 kWh, bei 35 Cent knapp 7 Euro. Die Bereitschaft der Station kommt dazu: 5 W über 30 Wochen sind 25 kWh, also mehr als das Mähen selbst.",
+        "Zieh im Winter den Stecker. Messer und Akku kosten im Lauf der Jahre deutlich mehr als der Strom.",
       ] },
     ],
     comparison: {
-      caption: "Nennfläche nach Gartentyp",
-      columns: ["Garten", "800 m² Rasen", "1.000 m² Rasen"],
+      caption: "Nennfläche für 1.000 m² Rasen",
+      columns: ["Garten", "Faktor", "Modelle ab"],
       rows: [
-        ["Offen, wenige Kanten (1,20)", "1.000 m²", "1.200 m²"],
-        ["Gegliedert (1,30)", "1.050 m²", "1.300 m²"],
-        ["Gegliedert mit mehreren Zonen (1,35)", "1.100 m²", "1.350 m²"],
-        ["Viele Engstellen (1,40)", "1.150 m²", "1.400 m²"],
-        ["Getrennte Flächen, gegliedert (1,50)", "1.200 m²", "1.500 m²"],
+        ["Offen, wenige Kanten", "1,20", "1.200 m²"],
+        ["Gegliedert", "1,30", "1.300 m²"],
+        ["Gegliedert mit mehreren Zonen", "1,35", "1.350 m²"],
+        ["Viele Engstellen", "1,40", "1.400 m²"],
+        ["Getrennte Flächen, gegliedert", "1,50", "1.500 m²"],
       ],
     },
     checklist: [],
     faqs: [
-      { question: "Reicht für 800 m² ein Mähroboter mit 800 m² Nennfläche?", answer: "Nur ohne Ruhetage und Hindernisse. Mit dem kleinsten Zuschlag von 20 Prozent landest du schon bei 960 m², also in der 1.000er-Klasse." },
       { question: "Muss er jeden Tag mähen?", answer: "Nein. Zwei bis drei volle Durchgänge pro Woche halten den Rasen kurz genug, dass der Schnitt liegen bleiben kann." },
     ],
   },
@@ -1058,41 +1096,80 @@ export const SEO_GUIDE_REWRITES: Record<string, SeoGuideRewrite> = {
   },
 
   "terrasse-30-qm-material": {
-    intro: "Für 30 m² mit 6 × 5 m brauchst du 44 Dielen à 5 m, 66 m Unterkonstruktion und rund 900 Schrauben. Bei 40 m² mit 8 × 5 m sind es 57 Dielen, 88 m und knapp 1.200 Schrauben. Beides gilt für 5-m-Dielen ohne Stoß.",
+    intro: "Für 30 m² mit 6 × 5 m brauchst du 44 Dielen à 5 m, 66 m Unterkonstruktion und rund 900 Schrauben. Mit 4-m-Dielen werden es 57 Stück und 41 Stöße. Frag deshalb zuerst nach der Lieferlänge.",
     takeaway: "Mit 5-m-Dielen läuft jede Reihe ohne Stoß. Bekommst du nur 4 m, brauchst du je Reihe einen Stoß und an den Stoßlinien doppelte Träger.",
     sections: [
       { title: "Fünf Millimeter, die eine Reihe kosten", paragraphs: [
         "6 m geteilt durch 150 mm ergeben genau 40 Reihen. 40 Dielen mit 39 Fugen decken aber nur 5,995 m. Unser Planer rundet deshalb auf 41 und kommt mit 5 Prozent Reserve auf 44 Dielen.",
-        "Auf der Baustelle verteilst du die 5 mm auf die Fugen oder baust die Terrasse 5 mm schmaler. Dann genügen 40 Reihen, und die 44 bestellten Dielen enthalten vier als Reserve. Bei 8 m sind es 54 Reihen, die letzte wird 95 mm schmaler gesägt.",
+        "Auf der Baustelle verteilst du die 5 mm auf die Fugen oder baust die Terrasse 5 mm schmaler. Dann genügen 40 Reihen, und die 44 bestellten Dielen enthalten vier als Reserve.",
       ] },
       { title: "Wenn es nur 4-m-Dielen gibt", paragraphs: [
-        "Jede Reihe besteht dann aus zwei Stücken. Versetzt du die Stöße auf zwei Linien, kommen dort je ein zusätzlicher Träger dazu: 12 m bei 30 m², 16 m bei 40 m². Mit 10 Prozent Verschnitt nennt der Planer 57 und 75 Dielen.",
-        "Rechne die Arbeit mit: 41 beziehungsweise 54 Stöße sind ebenso viele Schnitte, die sichtbar bleiben.",
+        "Jede Reihe besteht dann aus zwei Stücken. Versetzt du die Stöße auf zwei Linien, kommt dort je ein zusätzlicher Träger mit 6 m dazu, zusammen 12 m. Mit 10 Prozent Verschnitt nennt der Planer 57 Dielen, und jeder Stoß braucht zwei Schrauben mehr.",
+        "41 Stöße sind 41 sichtbare Schnitte. Wenn der Händler 5 m gegen Aufpreis liefert, rechne gegen: In Metern sind es 220 statt 228, dazu entfallen 12 m Träger und 82 Schrauben.",
       ] },
-      { title: "Große Flächen arbeiten mehr", paragraphs: [
-        "Über fünf Meter Länge dehnen sich WPC-Dielen im Sommer um einige Millimeter. Halte Abstand zur Hauswand und lies nach, wie lang ein Feld ohne Dehnfuge sein darf. Bei acht Metern verlangen manche Hersteller auch in der Unterkonstruktion eine Unterbrechung.",
-        "Das Gefälle beträgt bei 1 bis 2 Prozent auf fünf Meter schon 5 bis 10 cm. Prüf, ob die Höhe unter der Terrassentür dafür reicht, bevor du den Schotter bestellst.",
+      { title: "Essplatz und Lounge auf sechs Metern", paragraphs: [
+        "Ein Tisch für sechs Personen mit Stühlen braucht etwa 2,5 × 3,0 m, eine Sitzecke 2,5 × 2,5 m. Nebeneinander sind das 5 m von 6 m Breite, und ein Meter bleibt als Weg zur Gartentreppe. In der Tiefe hast du mit 5 m noch 2 m Luft vor dem Haus.",
+        "Schwere Dinge wie ein gemauerter Grill oder ein großer Pflanzkübel stehen besser auf eigenem Fundament als auf den Dielen. Spar die Stelle im Verlegeplan aus.",
       ] },
-      { title: "Lieferung und Lagerplatz", paragraphs: [
-        "220 m Dielen wiegen bei 2,8 kg je Meter rund 620 kg, 285 m rund 800 kg. Die Spedition liefert bis zur Bordsteinkante. Plane zwei Helfer und einen ebenen Lagerplatz von sechs Metern Länge, auf dem die Dielen nicht durchhängen.",
-        "Kaufe alles auf einmal. Zwischen zwei Chargen kann der Farbton sichtbar abweichen, auf 30 oder 40 m² fällt das stärker auf als auf einem kleinen Sitzplatz.",
+      { title: "620 Kilo am Bordstein", paragraphs: [
+        "220 m Dielen wiegen bei 2,8 kg je Meter rund 620 kg. Die Spedition liefert bis zur Bordsteinkante. Plane zwei Helfer und einen ebenen Lagerplatz von sechs Metern Länge, auf dem die Dielen nicht durchhängen.",
+        "Unter die Träger kommen bei 50 cm Stützweite 143 Auflager. Zähl sie mit, bevor du die Lieferung bestellst, denn Platten und Stelzlager passen selten noch in den Kombi.",
       ] },
     ],
     comparison: {
-      caption: "Material mit 5-m-Dielen (145 mm, Fuge 5 mm, Träger alle 50 cm)",
-      columns: ["Position", "30 m² (6 × 5 m)", "40 m² (8 × 5 m)"],
+      caption: "6 × 5 m mit 145-mm-Dielen, Fuge 5 mm, Träger alle 50 cm",
+      columns: ["Position", "5-m-Dielen", "4-m-Dielen"],
       rows: [
-        ["Reihen laut Planer", "41", "54"],
-        ["Dielen mit 5 % Reserve", "44", "57"],
-        ["Träger", "11 × 6 m = 66 m", "11 × 8 m = 88 m"],
-        ["Schrauben", "902", "1.188"],
-        ["Blende, Haus an der langen Seite", "16 m", "18 m"],
+        ["Reihen laut Planer", "41", "41"],
+        ["Bestellung", "44 mit 5 % Reserve", "57 mit 10 % Reserve"],
+        ["Stöße", "keine", "41"],
+        ["Träger", "66 m", "66 + 12 = 78 m"],
+        ["Schrauben", "902", "984"],
       ],
     },
     checklist: [],
     faqs: [
-      { question: "Wie viele Pakete Schrauben sind das?", answer: "Bei 200 Stück je Paket fünf für 30 m² und sechs für 40 m². Mit Clips zählst du die Kreuzungen von Diele und Träger, also 451 und 594, und ergänzt Start- und Endclips." },
-      { question: "Sind zwei kleinere Terrassen günstiger?", answer: "Nein, die zweite Fläche bringt eigene Ränder und Anschlüsse mit. Optisch kann eine Teilung mit einem Fries trotzdem sinnvoll sein." },
+      { question: "Wie viele Pakete Schrauben sind das?", answer: "Bei 200 Stück je Paket fünf. Mit Clips zählst du die 451 Kreuzungen von Diele und Träger und ergänzt Start- und Endclips." },
+      { question: "Wie viel Blende brauche ich?", answer: "Liegt das Haus an der 6-m-Seite, bleiben drei offene Kanten mit 6 + 5 + 5 = 16 m." },
+    ],
+  },
+
+  "terrasse-40-qm-material": {
+    intro: "Für 40 m² mit 8 × 5 m brauchst du 57 Dielen à 5 m, 88 m Unterkonstruktion und knapp 1.200 Schrauben. Lässt du die Dielen acht Meter längs laufen, sind es 72 Dielen à 4 m und 34 Stöße. Auf dieser Größe entscheidet der Unterbau über die Kosten.",
+    takeaway: "Dielen in der kurzen Richtung verlegen, vom Haus weg. Für Aushub und Schotter plane 10 m³ und 6 m³ ein, dazu eine Entwässerung für 400 Liter bei einem kräftigen Regen.",
+    sections: [
+      { title: "Längs oder vom Haus weg", paragraphs: [
+        "Laufen die Dielen fünf Meter vom Haus weg, sind es 54 Reihen ohne Stoß. Die letzte wird 95 mm schmaler gesägt. Laufen sie acht Meter am Haus entlang, genügen 34 Reihen, aber jede besteht aus zwei 4-m-Dielen.",
+        "Alle 34 Stöße liegen dann auf der Mittellinie. Das sieht geplant aus, wenn du dort eine Diele quer legst. Die beiden Felder sind damit je gut 3,9 m lang, und der Zuschnitt passt ohne großen Rest.",
+      ] },
+      { title: "Zehn Kubikmeter Erde", paragraphs: [
+        "Bei 25 cm Aufbau fallen auf 40 m² 10 m³ Aushub an. Das sind je nach Boden 16 bis 18 Tonnen, also mehrere Container oder ein Bagger mit Abfuhr. Eine 15 cm starke Schotterschicht braucht 6 m³.",
+        "Bei 50 cm Stützweite liegen elf Träger auf je 17 Punkten. Das sind 187 Auflager, die alle auf einer Ebene sitzen müssen. Mit einem Baulaser bist du damit deutlich schneller als mit der Wasserwaage.",
+      ] },
+      { title: "Wohin 400 Liter laufen", paragraphs: [
+        "10 mm Regen auf 40 m² sind 400 Liter. Ein Teil läuft durch die Fugen, der Rest an die tiefe Kante. Bei 2 Prozent Gefälle liegt sie auf fünf Meter 10 cm tiefer als die Hauskante. Diese Höhe muss unter der Türschwelle vorhanden sein.",
+        "Unter der Terrasse darf kein Wasser stehen. Auf lehmigem Boden gehört eine Drainage ins Schotterbett, sonst verrottet Holz von unten und WPC setzt Algen an.",
+      ] },
+      { title: "In zwei Abschnitten bauen", paragraphs: [
+        "Zwei Felder mit 4 × 5 m lassen sich nacheinander bauen. Das zweite bekommt einen eigenen Randträger, und zwischen beiden bleibt eine Dehnfuge. Bei langen Aluminium- oder WPC-Trägern verlangen Hersteller so eine Trennung ohnehin.",
+        "Bestell die Dielen für beide Abschnitte zusammen. 285 m wiegen bei 2,8 kg je Meter rund 800 kg. Trocken und flach gelagert warten sie auf den zweiten Teil, und der Farbton stimmt.",
+      ] },
+    ],
+    comparison: {
+      caption: "8 × 5 m mit 145-mm-Dielen, Fuge 5 mm, Träger alle 50 cm",
+      columns: ["Position", "Dielen laufen 5 m", "Dielen laufen 8 m"],
+      rows: [
+        ["Reihen", "54", "34"],
+        ["Dielen mit 5 % Reserve", "57 × 5 m", "72 × 4 m"],
+        ["Stöße", "keine", "34"],
+        ["Träger", "11 × 8 m = 88 m", "17 × 5 m = 85 m, plus 5 m am Stoß"],
+        ["Schrauben an den Kreuzungen", "1.188", "1.156"],
+      ],
+    },
+    checklist: [],
+    faqs: [
+      { question: "Wie viel Blende brauche ich?", answer: "Mit dem Haus an der langen Seite 8 + 5 + 5 = 18 m. Steht die Terrasse frei, sind es 26 m." },
+      { question: "Lohnt sich ein Fachbetrieb für den Unterbau?", answer: "Bei 10 m³ Aushub oft ja. Die Dielen kannst du danach selbst verlegen, dafür braucht es kaum Maschinen." },
     ],
   },
 
