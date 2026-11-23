@@ -39,7 +39,8 @@ export const FlooringInputSchema = z.object({
 export type FlooringRoom = z.infer<typeof FlooringRoomSchema>;
 export type FlooringInput = z.infer<typeof FlooringInputSchema>;
 
-export const FlooringProductTypeSchema = z.enum(["laminate", "vinyl-click", "parquet-floating"]);
+/** "design" (Designboden without a vinyl label) and "cork" are catalogued; planner and data reports cover the first three. */
+export const FlooringProductTypeSchema = z.enum(["laminate", "vinyl-click", "parquet-floating", "design", "cork"]);
 export const FlooringInstallationSchema = z.enum(["click", "glue", "unknown"]);
 export const FlooringProductSchema = ProductBaseSchema.extend({
   flooringType: FlooringProductTypeSchema,

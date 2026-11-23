@@ -1,8 +1,13 @@
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
+import { RobotMowerCatalogSchema, type RobotMowerCatalog } from "@/lib/robot-mower/types";
+import type { RobotMowerCandidate } from "./types";
 import { createReadStream } from "node:fs";
+import { mkdir, mkdtemp, rm, writeFile } from "node:fs/promises";
+import { tmpdir } from "node:os";
+import path from "node:path";
 import { normalizeGardenHouse } from "./garden-house-normalizer";
 import { normalizeSecurityCamera } from "./security-camera-normalizer";
-import { assembleGardenHouseCatalog, assembleSecurityCameraCatalog, parseFeedJobs, reviewPriority, substantiveEqual } from "./sync-products";
+import { assembleGardenHouseCatalog, assembleSecurityCameraCatalog, parseFeedJobs, reviewPriority, substantiveEqual, summarizeOffers, syncVertical } from "./sync-products";
 import { parseFeedStream } from "./source";
 
 const row = { product_name: "Holz Gartenhaus 300 x 400 cm", merchant_id: "12", merchant_name: "Garten Markt", merchant_product_id: "abc", description: "Holzhaus Satteldach inklusive Boden", search_price: "2499", currency: "EUR", delivery_cost: "kostenlos", in_stock: "true", aw_deep_link: "https://www.awin1.com/cread.php?x=1", ean: "4012345678901", last_updated: "2026-08-08T10:00:00Z" };
@@ -37,5 +42,55 @@ describe("feed pipeline assembly", () => {
     const jobs = parseFeedJobs(JSON.stringify({ "garden-house": [], dehumidifier: [], irrigation: [], "robot-mower": [], flooring: ["https://example.com/woodstore.csv"] }));
     expect(jobs).toHaveLength(1);
     expect([...jobs[0].verticals]).toEqual(["flooring"]);
+  });
+});
+
+describe("syncing one catalog", () => {
+  let root = "";
+  afterEach(async () => { vi.restoreAllMocks(); if (root) await rm(root, { recursive: true, force: true }); });
+
+  const mowers = (count: number, priceEur = 800): RobotMowerCatalog => RobotMowerCatalogSchema.parse({
+    schemaVersion: 1, vertical: "robot-mower", generatedAt: "2026-09-18T07:24:48.576Z",
+    products: Array.from({ length: count }, (_, index) => ({ id: `p${index}`, name: `Mähroboter ${index}`, reviewed: true, dataQuality: "curated", navigation: "rtk" })),
+    offers: Array.from({ length: count }, (_, index) => ({ id: `o${index}`, productId: `p${index}`, merchantId: "13686", merchantName: "tink DE", merchantProductId: `m${index}`, priceEur, deliveryCostStatus: "unknown", available: true, affiliateUrl: `https://www.awin1.com/pclick.php?p=${index}`, updatedAt: "2026-09-18T00:00:00.000Z", linkVerificationStatus: "verified" })),
+  });
+
+  async function sync(assemble: () => RobotMowerCatalog, previous = mowers(15)) {
+    root = await mkdtemp(path.join(tmpdir(), "sync-"));
+    vi.spyOn(process, "cwd").mockReturnValue(root);
+    const files = { "public/data/robot-mower/catalog.json": previous, "public/data/robot-mower/feed-report.json": {}, "data/review/robot-mower.json": {} };
+    for (const [file, content] of Object.entries(files)) {
+      await mkdir(path.dirname(path.join(root, file)), { recursive: true });
+      await writeFile(path.join(root, file), JSON.stringify(content));
+    }
+    const candidates: RobotMowerCandidate[] = [{ id: "p0", name: "Mähroboter 0", candidateAttributes: {}, issues: [] }];
+    return syncVertical({ vertical: "robot-mower", schema: RobotMowerCatalogSchema, candidates, loadOverrides: async () => [], assemble, applyOverride: (product) => product }, {
+      generatedAt: "2026-11-24T04:17:00.000Z", today: "2026-11-24", secretUrls: ["https://secret.example/feed.csv"],
+      metrics: { sourceFeeds: 1, successfulFeeds: 1, failedFeeds: 0, rows: 126 }, state: { schemaVersion: 1, verticals: {} },
+      evidence: { rowsByMerchant: new Map([["13686", 126]]), failedMerchants: new Set(), seenOfferKeys: new Set(), disabledMerchants: new Set() },
+    });
+  }
+
+  it("publishes fresh prices although the catalog declined from 15 to 10", async () => {
+    const outcome = await sync(() => mowers(10, 700));
+    const catalog = outcome.files["public/data/robot-mower/catalog.json"] as RobotMowerCatalog;
+    expect(outcome.error).toBeUndefined();
+    expect(outcome.regression).toMatch(/from 15 to 10/);
+    expect(catalog.products).toHaveLength(15);
+    expect(catalog.offers.find((offer) => offer.id === "o3")?.priceEur).toBe(700);
+    expect(catalog.offers.find((offer) => offer.id === "o12")?.priceEur).toBe(800);
+  });
+
+  it("leaves an unsafe catalog untouched and reports it instead of aborting the run", async () => {
+    const leaking = mowers(15);
+    leaking.offers[0].affiliateUrl = "https://secret.example/feed.csv";
+    const outcome = await sync(() => leaking);
+    expect(outcome).toMatchObject({ vertical: "robot-mower", files: {}, critical: true });
+    expect(outcome.error).toMatch(/configured feed URL/);
+    expect(outcome.error).not.toContain("secret.example");
+  });
+
+  it("names merchant, reason and products in the run log", () => {
+    expect(summarizeOffers([{ offerId: "o1", productName: "eufy C15", merchantName: "tink DE", reason: "absent", days: 2 }])).toEqual(["tink DE, absent: 1 (eufy C15, Tag 2)"]);
   });
 });

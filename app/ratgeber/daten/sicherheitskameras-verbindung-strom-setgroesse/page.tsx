@@ -45,7 +45,7 @@ export default function Page() {
 
     <section className="data-report-section camera-four-zone" aria-labelledby="camera-four-zone-title">
       <div className="camera-four-zone-heading"><p className="eyebrow">Beispiel mit vier Überwachungszonen</p><h2 id="camera-four-zone-title">Die Packungsgröße verändert den rechnerischen Produktpreis stärker als ein einzelnes Preisschild vermuten lässt.</h2><p>Für jedes Produkt wird die Packungsgröße auf mindestens vier Kameras aufgerundet. Ein Einzelmodell wird viermal benötigt, ein Zweierset zweimal und ein Viererset einmal. Montage, Speicher, Abonnement, Verkabelung und Netzwerkgeräte bleiben außen vor.</p></div>
-      <div className="camera-set-grid">{report.setSizes.map((item) => <article key={item.cameraCount}>
+      <div className="camera-set-grid">{report.setSizes.filter((item) => item.requiredSets > 0).map((item) => <article key={item.cameraCount}>
         <span>{item.cameraCount === 1 ? "Einzelkamera" : `${item.cameraCount} Kameras im Produkt`}</span>
         <strong>{euro(item.medianTotalEur)}</strong>
         <p>mittlerer Produktwert für vier Zonen</p>

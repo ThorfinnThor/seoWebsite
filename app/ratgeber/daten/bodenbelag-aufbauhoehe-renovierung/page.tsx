@@ -31,7 +31,7 @@ export default function Page() {
     </header>
 
     <section className="data-report-section" aria-labelledby="thickness-overview-title">
-      <div className="data-report-heading"><p className="eyebrow">Stärken im aktuellen Sortiment</p><h2 id="thickness-overview-title">Acht Millimeter bilden die Mitte, nicht die Obergrenze.</h2><p>Alle ausgewerteten Produkte sind Klickböden. Dadurch vergleichen wir keine dünne Klebevariante mit schwimmend verlegten Systemen. Selbst innerhalb dieser einheitlichen Verlegeart reicht die Produktstärke von {number(report.summary.minThicknessMm, 1)} bis {number(report.summary.maxThicknessMm, 1)} Millimeter.</p></div>
+      <div className="data-report-heading"><p className="eyebrow">Stärken im aktuellen Sortiment</p><h2 id="thickness-overview-title">{number(report.summary.medianThicknessMm, 1)} Millimeter bilden die Mitte, nicht die Obergrenze.</h2><p>Alle ausgewerteten Produkte sind Klickböden. Dadurch vergleichen wir keine dünne Klebevariante mit schwimmend verlegten Systemen. Selbst innerhalb dieser einheitlichen Verlegeart reicht die Produktstärke von {number(report.summary.minThicknessMm, 1)} bis {number(report.summary.maxThicknessMm, 1)} Millimeter.</p></div>
       <ReportMetricGrid ariaLabel="Kennzahlen zur Stärke geprüfter Bodenbeläge" items={[
         { value: `${report.total}`, label: "vollständig erfasste Produkte", note: "Laminat, Klickvinyl und Fertigparkett" },
         { value: `${number(report.summary.medianThicknessMm, 1)} mm`, label: "mittlere Produktstärke", note: "Median der gesamten Stichprobe" },

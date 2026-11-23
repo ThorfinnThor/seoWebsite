@@ -8,6 +8,7 @@ import { SecurityCameraCatalogSchema, SecurityCameraOverrideSchema } from "@/lib
 import { FlooringCatalogSchema, FlooringOverrideSchema } from "@/lib/flooring/types";
 import { ProjectCatalogSchema, ProjectOverrideSchema } from "@/lib/project-products/types";
 import { PLANNERS } from "@/lib/planners";
+import { AbsenceStateSchema } from "./catalog/retention";
 import { assertCatalogPayloadSafe, assertCatalogSafe } from "./catalog/safeguards";
 
 const ManifestEntrySchema = z.object({ catalog: z.string().startsWith("/data/"), generatedAt: z.iso.datetime() });
@@ -91,6 +92,7 @@ async function main() {
   FlooringOverridesSchema.parse(await json("data/overrides/flooring.json"));
   ProjectOverridesSchema.parse(await json("data/overrides/project-products.json"));
   const merchants = MerchantsSchema.parse(await json("data/manual/merchants.json"));
+  AbsenceStateSchema.parse(await json("data/review/catalog-absences.json"));
   ReviewSchema.parse(await json("data/review/garden-house.json"));
   ReviewSchema.parse(await json("data/review/dehumidifier.json"));
   ReviewSchema.parse(await json("data/review/irrigation.json"));

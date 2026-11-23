@@ -7,8 +7,8 @@ import { createDataReportStructuredData } from "@/lib/data-report/structured-dat
 import { createPageMetadata } from "@/lib/metadata";
 
 const PATH = "/ratgeber/daten/bodenbelaege-fussbodenheizung-feuchtraum/";
-const title = "101 Bodenbeläge im Datenvergleich. Heizung, Feuchtraum und Paketmenge";
-const description = "101 geprüfte Bodenbeläge nach Materialart, Fußbodenheizungsfreigabe, Feuchtraumeignung, Paketinhalt und Materialbedarf für 20 Quadratmeter ausgewertet.";
+const title = `${report.total} Bodenbeläge im Datenvergleich. Heizung, Feuchtraum und Paketmenge`;
+const description = `${report.total} geprüfte Bodenbeläge nach Materialart, Fußbodenheizungsfreigabe, Feuchtraumeignung, Paketinhalt und Materialbedarf für 20 Quadratmeter ausgewertet.`;
 
 export const metadata = createPageMetadata({ title, description, path: PATH, kind: "article", modifiedTime: "2026-09-16" });
 
@@ -16,12 +16,13 @@ const euro = (value: number) => value.toLocaleString("de-DE", { style: "currency
 const number = (value: number, digits = 0) => value.toLocaleString("de-DE", { minimumFractionDigits: digits, maximumFractionDigits: digits });
 
 export default function Page() {
+  const parquet = report.types.find((item) => item.key === "parquet-floating")!;
   return <main className="data-report-page data-report-page--flooring">
     <JsonLd data={createDataReportStructuredData({ path: PATH, title, description, datasetName: "PassendPlanen Auswertung geprüfter Bodenbeläge", datasetDescription: `Auswertung von ${report.total} geprüften Bodenbelägen nach Belagsart, Freigaben, Paketinhalt und Angebotspreis.`, datasetSize: report.total, variables: ["Belagsart", "Paketinhalt", "Dicke", "Freigabe für Fußbodenheizung", "Feuchtraumeignung", "Angebotspreis"], updatedAt: "2026-09-16" })} />
     <header className="data-report-hero data-report-hero--flooring">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Datenauswertungen", href: "/ratgeber/daten/" }, { label: "Bodenbeläge" }]} />
       <div className="data-report-hero-grid">
-        <div><p className="eyebrow">101 dokumentierte Bodenbeläge</p><h1>Fußbodenheizung ist häufig freigegeben. Beim <em>Feuchtraum</em> bleibt mehr offen.</h1><p>Wir haben Laminat, Klickvinyl und schwimmend verlegtes Fertigparkett nicht nach Werbeaussagen sortiert, sondern nach dokumentierten Eigenschaften. Das Ergebnis zeigt, wo eine Vorauswahl möglich ist und wo das konkrete Datenblatt entscheidet.</p></div>
+        <div><p className="eyebrow">{report.total} dokumentierte Bodenbeläge</p><h1>Fußbodenheizung ist häufig freigegeben. Beim <em>Feuchtraum</em> bleibt mehr offen.</h1><p>Wir haben Laminat, Klickvinyl und schwimmend verlegtes Fertigparkett nicht nach Werbeaussagen sortiert, sondern nach dokumentierten Eigenschaften. Das Ergebnis zeigt, wo eine Vorauswahl möglich ist und wo das konkrete Datenblatt entscheidet.</p></div>
         <aside><strong>Eine fehlende Freigabe ist kein Nein</strong><p>Wenn der Händler eine Eigenschaft nicht nennt, bleibt sie in dieser Auswertung unbekannt. Für den Einbau zählt ausschließlich die Freigabe des konkreten Produkts und des vollständigen Bodenaufbaus.</p></aside>
       </div>
     </header>
@@ -30,12 +31,12 @@ export default function Page() {
       <div className="data-report-heading"><p className="eyebrow">Die erste Gegenprobe</p><h2 id="flooring-opening-title">Zwei Freigaben, zwei sehr unterschiedliche Datenlagen.</h2></div>
       <div className="flooring-approval-grid">
         <article><span>{report.floorHeatingApproved}</span><div><h3>Für Fußbodenheizung dokumentiert</h3><p>Bei {report.floorHeatingUnknown} Produkten fehlt eine eindeutige Angabe. Die Freigabe allein sagt noch nichts über Unterlage, Wärmedurchlasswiderstand oder zulässige Oberflächentemperatur.</p></div></article>
-        <article><span>{report.wetRoomApproved}</span><div><h3>Für Feuchträume dokumentiert</h3><p>{report.wetRoomUnknown} Produkte bleiben unbekannt und ein Produkt ist ausdrücklich nicht freigegeben. Küche und Badezimmer benötigen trotzdem unterschiedliche Prüfungen.</p></div></article>
+        <article><span>{report.wetRoomApproved}</span><div><h3>Für Feuchträume dokumentiert</h3><p>{report.wetRoomUnknown} Produkte bleiben unbekannt, ausdrücklich nicht freigegeben sind {report.wetRoomRejected}. Küche und Badezimmer benötigen trotzdem unterschiedliche Prüfungen.</p></div></article>
       </div>
     </section>
 
     <section className="data-report-section data-split-section" aria-labelledby="flooring-types">
-      <div><p className="eyebrow">Drei Belagsgruppen</p><h2 id="flooring-types">Klickvinyl stellt fast die Hälfte der Stichprobe.</h2><p>Die aktuelle Auswahl enthält {report.types.find((item) => item.key === "vinyl-click")?.count} Klickvinylprodukte, {report.types.find((item) => item.key === "laminate")?.count} Laminatprodukte und {report.types.find((item) => item.key === "parquet-floating")?.count} Fertigparkettprodukte. Alle erfassten Modelle werden geklickt. Klebevinyl ist deshalb nicht Bestandteil dieser Analyse.</p><p>Das ist eine wichtige Grenze. Die Ergebnisse dürfen nicht auf jede Verlegeart übertragen werden.</p></div>
+      <div><p className="eyebrow">Drei Belagsgruppen</p><h2 id="flooring-types">Klickvinyl stellt die größte Gruppe der Stichprobe.</h2><p>Die aktuelle Auswahl enthält {report.types.find((item) => item.key === "vinyl-click")?.count} Klickvinylprodukte, {report.types.find((item) => item.key === "laminate")?.count} Laminatprodukte und {report.types.find((item) => item.key === "parquet-floating")?.count} Fertigparkettprodukte. Alle erfassten Modelle werden geklickt. Klebevinyl ist deshalb nicht Bestandteil dieser Analyse.</p><p>Das ist eine wichtige Grenze. Die Ergebnisse dürfen nicht auf jede Verlegeart übertragen werden.</p></div>
       <ReportBarList ariaLabel="Verteilung der Bodenbelagsarten" maxValue={report.total} items={report.types.map((item) => ({ label: item.label, value: item.count, displayValue: `${item.count} Produkte`, detail: `${number(item.share, 1)} Prozent der Stichprobe` }))} />
     </section>
 
@@ -46,7 +47,7 @@ export default function Page() {
         <thead><tr><th scope="col">Belagsart</th><th scope="col">Produkte</th><th scope="col">Mittlere Dicke</th><th scope="col">Paketinhalt</th><th scope="col">Heizung freigegeben</th><th scope="col">Feuchtraum freigegeben</th></tr></thead>
         <tbody>{report.types.map((item) => <tr key={item.key}><th scope="row">{item.label}</th><td>{item.count}</td><td>{number(item.medianThicknessMm, 1)} mm</td><td>{number(item.medianPackageCoverageM2, 2)} m²</td><td>{item.floorHeatingApproved} von {item.count}</td><td>{item.wetRoomApproved} von {item.count}</td></tr>)}</tbody>
       </table></div>
-      <p className="data-report-reading">Bei Fertigparkett sind alle 19 Produkte als für Fußbodenheizung geeignet dokumentiert. Beim Feuchtraum besitzt dagegen nur ein Produkt eine eindeutige Freigabe und bei 18 fehlt die Angabe. Daraus folgt keine pauschale Ablehnung von Parkett. Es zeigt lediglich, dass diese Stichprobe für eine Feuchtraumentscheidung kaum belastbar ist.</p>
+      <p className="data-report-reading">Bei Fertigparkett sind {parquet.floorHeatingApproved} von {parquet.count} Produkten als für Fußbodenheizung geeignet dokumentiert. Eine eindeutige Freigabe für den Feuchtraum haben {parquet.wetRoomApproved} von {parquet.count}. Daraus folgt keine pauschale Ablehnung von Parkett. Es zeigt lediglich, dass diese Stichprobe für eine Feuchtraumentscheidung kaum belastbar ist.</p>
     </section>
 
     <section className="data-report-section flooring-scenario" aria-labelledby="flooring-scenario-title">

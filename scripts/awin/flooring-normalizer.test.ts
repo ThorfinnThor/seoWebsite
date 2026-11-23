@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { isFlooringCandidate, normalizeFlooring, parseFlooringAttributes } from "./flooring-normalizer";
+import { isFlooringCandidate, normalizeFlooring, parseFlooringAttributes, parseFlooringType } from "./flooring-normalizer";
 
 describe("flooring normalizer", () => {
   it("classifies click and glue products from the product lead", () => {
@@ -45,6 +45,25 @@ describe("flooring normalizer", () => {
     const result = normalizeFlooring({ product_name: "VI.REP.REAFCL002", description: "#html-body [data-pb-style=WM6IKDO]{justify-content:flex-start;background-position:left top} Informationen auf einen Blick Art: SPC Vinyl", merchant_id: "48707", merchant_name: "Woodstore24 DE/AT", merchant_product_id: "1", search_price: "41.30", currency: "EUR", aw_deep_link: "https://www.awin1.com/pclick.php?p=1", in_stock: "1" });
     expect(result.name).toBe("VI.REP.REAFCL002");
     expect(result.issues).toContain("unhelpful-product-name");
+  });
+
+  it.each([
+    ["Krono Original Laminat Greenland Oak", "", "laminate"],
+    ["Parador Designboden Modular ONE Hydron Eiche Spirit Natur Landhausdiele", "Designboden, robuster als Laminat", "design"],
+    ["Classen Designboden mit Trittschalldämmung Mondeiche", "", "design"],
+    ["Corklife Korkboden Studiostyle Beja", "Für Parkett- und Laminatfreunde", "cork"],
+    ["Amorim Corklife Vinylboden mit Trittschalldämmung Hardy Oak", "Träger aus Kork", "vinyl-click"],
+    ["Classen Vinyl Designboden Ceramin Floors Tera Egmont Oak", "", "vinyl-click"],
+    ["Parador Vinylboden Modular ONE mit Trittschalldämmung Eiche Balance Natur", "leiser als Laminat", "vinyl-click"],
+    ["Parador Parkett Basic Eiche rustikal", "mit Vinylschutz", "parquet-floating"],
+    ["Woodo9033104.2", "Dreischicht-Parkett Eiche", "parquet-floating"],
+    ["DOLLE Bodentreppe kompakt", "Bodenbelag", undefined],
+  ])("classifies %s", (name, description, expected) => expect(parseFlooringType(name, description)).toBe(expected));
+
+  it("keeps an unrecognised floor in review instead of calling it laminate", () => {
+    const result = normalizeFlooring({ product_name: "Linoleumboden Natur 900 x 300 mm", description: "Bodenbelag, Klick, Paketinhalt 2,1 m²", merchant_id: "11830", merchant_name: "Globus Baumarkt DE", merchant_product_id: "1", search_price: "41.30", currency: "EUR", aw_deep_link: "https://www.awin1.com/pclick.php?p=1", in_stock: "1" });
+    expect(result.product).toBeUndefined();
+    expect(result.issues).toContain("unknown-flooring-type");
   });
 
   it("requires an explicit wet-room claim instead of generic water resistance", () => {
