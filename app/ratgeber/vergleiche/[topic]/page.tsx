@@ -41,9 +41,9 @@ const MOWER_ENTRY_POINTS = [
   },
   {
     label: "Enge Passagen",
-    title: "Kabel und Hybrid in schmalen Wegen",
+    title: "Kabel und Kamera in schmalen Wegen",
     description: "Nutzbare Breite, Korridorführung und sichere Rückkehr zur Station vergleichen.",
-    href: "/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-hybrid-enge-passagen/",
+    href: "/ratgeber/vergleiche/maehroboter/maehroboter-begrenzungskabel-oder-kamera-enge-passagen/",
   },
   {
     label: "Häufige Änderungen",
@@ -79,6 +79,7 @@ export default async function Page({ params }: { params: Promise<{ topic: string
   const path = `/ratgeber/vergleiche/${directory.topicSlug}/`;
   const pairs = [...new Map(directory.guides.map((guide) => [guide.pairSlug, guide.pairLabel])).entries()];
   const isMowerDirectory = directory.topicSlug === "maehroboter";
+  const featuredGuides = directory.guides.filter((guide) => guide.indexable);
 
   return <>
     <JsonLd data={{
@@ -89,16 +90,18 @@ export default async function Page({ params }: { params: Promise<{ topic: string
       name: directory.title,
       description: directory.description,
       inLanguage: "de-DE",
-      mainEntity: {
-        "@type": "ItemList",
-        numberOfItems: directory.guides.length,
-        itemListElement: directory.guides.map((guide, index) => ({
-          "@type": "ListItem",
-          position: index + 1,
-          name: guide.title,
-          url: absoluteUrl(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`),
-        })),
-      },
+      ...(featuredGuides.length > 0 ? {
+        mainEntity: {
+          "@type": "ItemList",
+          numberOfItems: featuredGuides.length,
+          itemListElement: featuredGuides.map((guide, index) => ({
+            "@type": "ListItem",
+            position: index + 1,
+            name: guide.title,
+            url: absoluteUrl(`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`),
+          })),
+        },
+      } : {}),
     }} />
     <section className="page-hero project-directory-hero">
       <Breadcrumbs items={[{ label: "Start", href: "/" }, { label: "Ratgeber", href: "/ratgeber/" }, { label: "Direkte Vergleiche", href: "/ratgeber/vergleiche/" }, { label: topic.name }]} />
@@ -124,21 +127,40 @@ export default async function Page({ params }: { params: Promise<{ topic: string
         </Link>)}
       </div>
     </section>}
+    {!isMowerDirectory && featuredGuides.length > 0 && <section className="section related-guides">
+      <div className="section-heading">
+        <p className="eyebrow">Ausführlich ausgearbeitet</p>
+        <h2>Vergleiche mit eigenem Rechenbeispiel</h2>
+        <p>Diese Seiten gehen über die Matrix hinaus und klären die Entscheidung mit Beispiel, Quellen und Grenzen. Alle weiteren Kombinationen stehen darunter.</p>
+      </div>
+      <div className="guide-grid">
+        {featuredGuides.map((guide) => <Link className="guide-card" href={`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`} key={guide.slug}>
+          <span className="guide-number">{guide.contextLabel}</span>
+          <h2>{guide.title}</h2>
+          <p>{guide.description}</p>
+          <span className="card-link">Vergleich lesen →</span>
+        </Link>)}
+      </div>
+    </section>}
     <div id="vergleiche">
       {pairs.map(([pairSlug, pairLabel]) => {
         const guides = directory.guides.filter((guide) => guide.pairSlug === pairSlug);
         return <section className="directory-section directory-section--cluster project-example-group" key={pairSlug}>
           <div className="section-heading"><div><p className="eyebrow">Direkter Vergleich</p><h2>{pairLabel}</h2></div><p>{isMowerDirectory ? MOWER_PAIR_INTROS[pairSlug] : "Zehn konkrete Nutzungen mit eigener Gewichtung, Gegenprobe, Checkliste und Quellen."}</p></div>
-          <div className="project-example-grid">
-            {guides.map((guide) => <article className="project-example-card" key={guide.slug}>
-              <h3>{guide.contextLabel}</h3>
-              <div className="project-example-card__facts">
-                <p><span>{guide.optionA}</span>{score(guide.scoreA)} von 5</p>
-                <p><span>{guide.optionB}</span>{score(guide.scoreB)} von 5</p>
-              </div>
-              <Link className="text-link" href={`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`}>Vergleich öffnen →</Link>
-            </article>)}
-          </div>
+          <details className="comparison-matrix">
+            <summary>Alle zehn Nutzungen anzeigen</summary>
+            <div className="project-example-grid">
+              {guides.map((guide) => <article className="project-example-card" key={guide.slug}>
+                <h3>{guide.contextLabel}</h3>
+                <div className="project-example-card__facts">
+                  <p><span>{guide.optionA}</span>{score(guide.scoreA)} von 5</p>
+                  <p><span>{guide.optionB}</span>{score(guide.scoreB)} von 5</p>
+                </div>
+                {/* Noindex comparisons stay reachable for readers but should not draw crawling away from sitemap pages. */}
+                <Link className="text-link" href={`/ratgeber/vergleiche/${guide.topicSlug}/${guide.slug}/`} prefetch={false} rel={guide.indexable ? undefined : "nofollow"}>Vergleich öffnen →</Link>
+              </article>)}
+            </div>
+          </details>
         </section>;
       })}
     </div>
