@@ -5,6 +5,7 @@ import irrigationCatalogJson from "@/public/data/irrigation/catalog.json";
 import robotMowerCatalogJson from "@/public/data/robot-mower/catalog.json";
 import securityCameraCatalogJson from "@/public/data/security-camera/catalog.json";
 import { DehumidifierCatalogSchema, type DehumidifierProduct } from "@/lib/dehumidifier/types";
+import { isReportedFlooring, REPORTED_FLOORING_TYPES } from "./flooring-types";
 import { FlooringCatalogSchema, type FlooringProduct } from "@/lib/flooring/types";
 import { GardenHouseCatalogSchema, type GardenHouseProduct } from "@/lib/garden-house/types";
 import { IrrigationCatalogSchema, type IrrigationProduct } from "@/lib/irrigation/types";
@@ -106,13 +107,8 @@ function flooringScenario(products: readonly FlooringProduct[], prices: Readonly
   };
 }
 
-const flooringProducts = reportProducts(flooringCatalog.products);
+const flooringProducts = reportProducts(flooringCatalog.products).filter(isReportedFlooring);
 const flooringPrices = bestAvailablePriceByProduct(flooringCatalog);
-const flooringTypes = [
-  { key: "laminate", label: "Laminat" },
-  { key: "vinyl-click", label: "Klickvinyl" },
-  { key: "parquet-floating", label: "Fertigparkett" },
-] as const;
 
 export const flooringDataReport = {
   generatedAt: flooringCatalog.generatedAt,
@@ -125,7 +121,7 @@ export const flooringDataReport = {
   wetRoomApproved: flooringProducts.filter((product) => product.wetRoomApproved === true).length,
   wetRoomRejected: flooringProducts.filter((product) => product.wetRoomApproved === false).length,
   wetRoomUnknown: flooringProducts.filter((product) => product.wetRoomApproved === undefined).length,
-  types: flooringTypes.map(({ key, label }) => {
+  types: REPORTED_FLOORING_TYPES.map(({ key, label }) => {
     const products = flooringProducts.filter((product) => product.flooringType === key);
     return {
       key,
@@ -246,6 +242,12 @@ function summarizeCameraSetSizes(products: readonly SecurityCameraProduct[], pri
   };
 }
 
+/** Adds a row for products outside the named groups, so the rows always add up to the total. */
+function withRemainder(label: string, total: number, rows: Array<{ label: string; count: number }>) {
+  const remainder = total - rows.reduce((sum, row) => sum + row.count, 0);
+  return remainder > 0 ? [...rows, { label, count: remainder }] : rows;
+}
+
 const securityCameraProducts = reportProducts(securityCameraCatalog.products);
 const securityCameraPrices = bestAvailablePriceByProduct(securityCameraCatalog);
 
@@ -271,14 +273,14 @@ export const securityCameraDataReport = {
     { key: "solar", label: "Solar" },
     { key: "poe", label: "PoE" },
   ].map(({ key, label }) => ({ key, label, count: securityCameraProducts.filter((product) => product.power === key).length })),
-  combinations: [
+  combinations: withRemainder("Weitere Kombinationen", securityCameraProducts.length, [
     { label: "WLAN mit Netzstrom", count: securityCameraProducts.filter((product) => product.connection === "wifi" && product.power === "mains").length },
     { label: "WLAN mit Akku", count: securityCameraProducts.filter((product) => product.connection === "wifi" && product.power === "battery").length },
     { label: "WLAN mit Solar", count: securityCameraProducts.filter((product) => product.connection === "wifi" && product.power === "solar").length },
     { label: "PoE", count: securityCameraProducts.filter((product) => product.connection === "poe" && product.power === "poe").length },
     { label: "Mobilfunk mit Solar", count: securityCameraProducts.filter((product) => product.connection === "cellular" && product.power === "solar").length },
-  ],
-  setSizes: [1, 2, 4].map((cameraCount) => ({
+  ]),
+  setSizes: [...new Set([1, 2, 4, ...securityCameraProducts.map((product) => product.cameraCount)])].toSorted((a, b) => a - b).map((cameraCount) => ({
     cameraCount,
     ...summarizeCameraSetSizes(securityCameraProducts.filter((product) => product.cameraCount === cameraCount), securityCameraPrices),
   })),

@@ -1,4 +1,4 @@
-import { readFile } from "node:fs/promises";
+import { appendFile, readFile } from "node:fs/promises";
 import path from "node:path";
 import { z } from "zod";
 import type { OfferBase, ProductBase, StaticCatalog } from "@/lib/catalog/types";
@@ -9,11 +9,12 @@ import { FlooringCatalogSchema, FlooringOverrideSchema, FlooringProductSchema, t
 import { ProjectCatalogSchema, ProjectOverrideSchema, ProjectProductSchema, type ProjectCatalog, type ProjectOverride, type ProjectProduct } from "@/lib/project-products/types";
 import { RobotMowerCatalogSchema, RobotMowerOverrideSchema, RobotMowerProductSchema, type RobotMowerCatalog, type RobotMowerOverride, type RobotMowerProduct } from "@/lib/robot-mower/types";
 import { SecurityCameraCatalogSchema, SecurityCameraOverrideSchema, SecurityCameraProductSchema, type SecurityCameraCatalog, type SecurityCameraOverride, type SecurityCameraProduct } from "@/lib/security-camera/types";
-import { assertCatalogPayloadSafe, assertCatalogSafe } from "@/scripts/catalog/safeguards";
+import { AbsenceStateSchema, offerKey, retainMissingOffers, type AbsenceState, type FeedEvidence, type RetainedOffer } from "@/scripts/catalog/retention";
+import { assertCatalogPayloadSafe } from "@/scripts/catalog/safeguards";
 import { quarantineSuspiciousCatalogOffers } from "@/scripts/catalog/price-safeguards";
 import { stableJson, writeFilesAtomically } from "@/scripts/catalog/write-atomic";
 import { isDehumidifierCandidate, normalizeDehumidifier } from "./dehumidifier-normalizer";
-import { isGardenHouseCandidate, normalizeGardenHouse } from "./garden-house-normalizer";
+import { isGardenHouseCandidate, merchantDetails, normalizeGardenHouse, value } from "./garden-house-normalizer";
 import { isIrrigationCandidate, normalizeIrrigation } from "./irrigation-normalizer";
 import { isFlooringCandidate, normalizeFlooring } from "./flooring-normalizer";
 import { isRobotMowerCandidate, normalizeRobotMower } from "./robot-mower-normalizer";
@@ -43,6 +44,7 @@ const SecurityCameraOverrideFileSchema = z.object({ schemaVersion: z.literal(1),
 const FlooringOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(FlooringOverrideSchema) });
 const ProjectOverrideFileSchema = z.object({ schemaVersion: z.literal(1), overrides: z.array(ProjectOverrideSchema) });
 const FeedMerchantRegistrySchema = z.object({ merchants: z.array(z.object({ awinAdvertiserId: z.number().int().positive(), enabled: z.boolean(), verticals: z.array(SupportedVerticalSchema).min(1) })) });
+const MerchantSwitchSchema = z.object({ merchants: z.array(z.object({ merchantId: z.string(), awinAdvertiserId: z.number().int(), enabled: z.boolean() })) });
 
 type Vertical = "garden-house" | "dehumidifier" | "irrigation" | "robot-mower" | "security-camera" | "flooring" | "project-products";
 interface FeedMetrics { sourceFeeds: number; successfulFeeds: number; failedFeeds: number; rows: number; }
@@ -361,13 +363,116 @@ async function resolveFeedJobs(raw: string): Promise<FeedJob[]> {
   const feedEntries = parseFeedListRows(rows);
   const merchantRegistry = FeedMerchantRegistrySchema.parse(await readJson("data/manual/merchants.json"));
   const allowedAdvertiserIds = new Set(merchantRegistry.merchants.filter((merchant) => merchant.enabled).map((merchant) => String(merchant.awinAdvertiserId)));
-  const entries = selectPreferredFeedEntries(filterFeedListEntries(feedEntries, allowedAdvertiserIds));
+  const eligible = filterFeedListEntries(feedEntries, allowedAdvertiserIds);
+  const entries = selectPreferredFeedEntries(eligible);
+  // Only the most recently updated feed of a merchant is read. Log the alternatives, so a suddenly
+  // small catalog can be traced to a switched feed.
+  for (const entry of entries) {
+    const alternatives = eligible.filter((other) => other.advertiserId === entry.advertiserId);
+    if (alternatives.length > 1) console.log(`merchant ${entry.advertiserId}: ${alternatives.length} feeds, reading ${entry.feedId ?? "?"} (${alternatives.map((other) => `${other.feedId ?? "?"}: ${other.productCount ?? "?"} products, ${other.lastUpdated ?? "no date"}`).join("; ")}).`);
+  }
   if (!entries.length) throw new Error("Awin feed list contains no joined German product feeds");
   const verticalsByAdvertiser = new Map(merchantRegistry.merchants.map((merchant) => [String(merchant.awinAdvertiserId), merchant.verticals]));
   return entries.flatMap((entry) => {
     const verticals = entry.advertiserId ? verticalsByAdvertiser.get(entry.advertiserId) : undefined;
     return verticals?.length ? [{ url: entry.url, verticals: new Set<Vertical>(verticals) }] : [];
   });
+}
+
+const ABSENCE_FILE = "data/review/catalog-absences.json";
+const VERTICALS = SupportedVerticalSchema.options;
+interface CatalogManifest { schemaVersion: 1; generatedAt: string; verticals: Record<string, { catalog: string; generatedAt: string }> }
+interface SyncContext { generatedAt: string; today: string; secretUrls: string[]; metrics: FeedMetrics; state: AbsenceState; evidence: FeedEvidence }
+interface VerticalSync<TProduct extends ProductBase, TCatalog extends StaticCatalog<TProduct, OfferBase>, TOverride> {
+  vertical: Vertical;
+  schema: z.ZodType<TCatalog>;
+  candidates: AffiliateCandidate<TProduct>[];
+  loadOverrides: () => Promise<TOverride[]>;
+  assemble: (candidates: AffiliateCandidate<TProduct>[], overrides: TOverride[], generatedAt: string) => TCatalog;
+  applyOverride: (product: TProduct, override?: TOverride) => TProduct;
+}
+export interface VerticalOutcome {
+  vertical: Vertical;
+  files: Record<string, unknown>;
+  catalogGeneratedAt?: string;
+  absences?: AbsenceState["verticals"][string];
+  regression?: string;
+  retained: RetainedOffer[];
+  dropped: RetainedOffer[];
+  critical: boolean;
+  /** Set if the catalog was left untouched. */
+  error?: string;
+}
+
+async function readPublishedOfferKeys(): Promise<Set<string>> {
+  const keys = new Set<string>();
+  for (const vertical of VERTICALS) {
+    const catalog = await readJson<{ offers: Array<{ merchantId: string; merchantProductId: string }> }>(`public/data/${vertical}/catalog.json`);
+    for (const offer of catalog.offers) keys.add(offerKey(offer.merchantId, offer.merchantProductId));
+  }
+  return keys;
+}
+
+export async function syncVertical<TProduct extends ProductBase, TCatalog extends StaticCatalog<TProduct, OfferBase>, TOverride extends { id: string; reviewed?: boolean; dataQuality?: string }>(config: VerticalSync<TProduct, TCatalog, TOverride>, context: SyncContext): Promise<VerticalOutcome> {
+  const { vertical, candidates } = config;
+  try {
+    const previous = config.schema.parse(await readJson(`public/data/${vertical}/catalog.json`));
+    if (!candidates.length && !previous.products.length) return { vertical, files: {}, retained: [], dropped: [], critical: false };
+    const overrides = await config.loadOverrides();
+    const overrideMap = new Map(overrides.map((override) => [override.id, override]));
+    const fresh = quarantineSuspiciousCatalogOffers(config.assemble(candidates, overrides, context.generatedAt));
+    const retention = retainMissingOffers<TProduct, TCatalog>({
+      next: fresh, previous, candidates, evidence: context.evidence, today: context.today,
+      absences: context.state.verticals[vertical] ?? {},
+      withheldProductIds: new Set(overrides.filter((override) => override.reviewed === false || override.dataQuality === "feed").map((override) => override.id)),
+      refresh: (product) => config.applyOverride(product, overrideMap.get(product.id)),
+    });
+    let catalog = assertCatalogPayloadSafe(config.schema.parse(quarantineSuspiciousCatalogOffers(retention.catalog)), undefined, context.secretUrls);
+    let review = buildReviewQueue(candidates, catalog, context.generatedAt);
+    let report = buildReport(candidates, context.metrics, catalog, review.products.length, context.generatedAt);
+    if (substantiveEqual(catalog, previous)) catalog = previous;
+    const oldReview = await readJson<unknown>(`data/review/${vertical}.json`); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
+    const oldReport = await readJson<unknown>(`public/data/${vertical}/feed-report.json`); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
+    return {
+      vertical,
+      // Without candidates there is nothing to review; keep the last review queue and report.
+      files: { [`public/data/${vertical}/catalog.json`]: catalog, ...(candidates.length ? { [`data/review/${vertical}.json`]: review, [`public/data/${vertical}/feed-report.json`]: report } : {}) },
+      catalogGeneratedAt: catalog.generatedAt,
+      absences: retention.absences, regression: retention.regression, retained: retention.retained, dropped: retention.dropped, critical: retention.critical,
+    };
+  } catch (error) {
+    return { vertical, files: {}, retained: [], dropped: [], critical: true, error: error instanceof Error ? error.message : "unknown error" };
+  }
+}
+
+/** One line per reason and merchant, so the cause is visible in the run log. */
+export function summarizeOffers(offers: RetainedOffer[]): string[] {
+  const groups = new Map<string, RetainedOffer[]>();
+  for (const offer of offers) {
+    const key = `${offer.merchantName}, ${offer.reason}`;
+    groups.set(key, [...(groups.get(key) ?? []), offer]);
+  }
+  return [...groups.entries()].map(([key, entries]) => `${key}: ${entries.length} (${entries.slice(0, 5).map((entry) => `${entry.productName}, Tag ${entry.days}`).join("; ")}${entries.length > 5 ? "; …" : ""})`);
+}
+
+/** Never pass feed URLs in here: this ends up in public run logs. */
+async function reportOutcomes(outcomes: VerticalOutcome[], metrics: FeedMetrics): Promise<void> {
+  const lines: string[] = [];
+  const annotate = (level: "error" | "warning", message: string) => console.log(`::${level}::${message.replace(/%/g, "%25").replace(/\r?\n/g, " ").slice(0, 1500)}`);
+  for (const outcome of outcomes) {
+    if (outcome.error) {
+      annotate("error", `${outcome.vertical}: Katalog unverändert gelassen. ${outcome.error}`);
+      lines.push(`- **${outcome.vertical}**: unverändert gelassen. ${outcome.error}`);
+    } else if (outcome.regression) {
+      const details = [...summarizeOffers(outcome.retained).map((line) => `behalten: ${line}`), ...summarizeOffers(outcome.dropped).map((line) => `entfernt: ${line}`)];
+      annotate(outcome.critical ? "error" : "warning", `${outcome.vertical}: ${outcome.regression}. ${details.join(" | ")}`);
+      lines.push(`- **${outcome.vertical}**: ${outcome.regression}`, ...details.map((line) => `  - ${line}`));
+    }
+  }
+  if (metrics.failedFeeds) annotate("warning", `${metrics.failedFeeds} von ${metrics.sourceFeeds} Feeds konnten nicht gelesen werden.`);
+  const critical = outcomes.filter((outcome) => outcome.critical).map((outcome) => outcome.vertical);
+  if (process.env.GITHUB_OUTPUT) await appendFile(process.env.GITHUB_OUTPUT, `critical_catalogs=${critical.join(",")}\n`);
+  if (process.env.GITHUB_STEP_SUMMARY && lines.length) await appendFile(process.env.GITHUB_STEP_SUMMARY, `### Kataloge mit Rückgang\n${lines.join("\n")}\n`);
 }
 
 async function run(): Promise<void> {
@@ -387,11 +492,21 @@ async function run(): Promise<void> {
   const securityCameraCandidates: SecurityCameraCandidate[] = [];
   const flooringCandidates: FlooringCandidate[] = [];
   const projectCandidates: ProjectProductCandidate[] = [];
+  const publishedOfferKeys = await readPublishedOfferKeys();
+  const rowsByMerchant = new Map<string, number>();
+  const failedMerchants = new Set<string>();
+  const seenOfferKeys = new Set<string>();
   for (const [index, job] of jobs.entries()) {
     let rows = 0;
+    const jobMerchants = new Set<string>();
     try {
       for await (const row of streamFeedRows(job.url)) {
         rows += 1;
+        const { merchantId } = merchantDetails(row);
+        jobMerchants.add(merchantId);
+        rowsByMerchant.set(merchantId, (rowsByMerchant.get(merchantId) ?? 0) + 1);
+        const key = offerKey(merchantId, value(row, "merchant_product_id", "aw_product_id") ?? "");
+        if (publishedOfferKeys.has(key)) seenOfferKeys.add(key);
         if (job.verticals.has("garden-house") && isGardenHouseCandidate(row)) gardenHouseCandidates.push(normalizeGardenHouse(row));
         if (job.verticals.has("dehumidifier") && isDehumidifierCandidate(row)) dehumidifierCandidates.push(normalizeDehumidifier(row));
         if (job.verticals.has("irrigation") && isIrrigationCandidate(row)) irrigationCandidates.push(normalizeIrrigation(row));
@@ -405,9 +520,10 @@ async function run(): Promise<void> {
       }
       metrics.successfulFeeds += 1;
       metrics.rows += rows;
-      console.log(`feed-${index + 1}: ${rows} rows.`);
+      console.log(`feed-${index + 1}: ${rows} rows${jobMerchants.size === 1 ? ` (merchant ${[...jobMerchants][0]})` : ""}.`);
     } catch (error) {
       metrics.failedFeeds += 1;
+      for (const merchantId of jobMerchants) failedMerchants.add(merchantId);
       console.error(`feed-${index + 1}: failed (${error instanceof Error ? error.message : "unknown error"}).`);
     }
   }
@@ -415,96 +531,46 @@ async function run(): Promise<void> {
   if (gardenHouseCandidates.length + dehumidifierCandidates.length + irrigationCandidates.length + robotMowerCandidates.length + securityCameraCandidates.length + flooringCandidates.length + projectCandidates.length === 0) throw new Error("No supported product candidates found; existing catalogs remain untouched");
 
   const generatedAt = new Date().toISOString();
-  const secretUrls = jobs.map((job) => job.url);
-  const files: Record<string, unknown> = {};
-  const manifest = await readJson<{ schemaVersion: 1; generatedAt: string; verticals: Record<string, { catalog: string; generatedAt: string }> }>("public/data/manifest.json");
+  const merchantRegistry = MerchantSwitchSchema.parse(await readJson("data/manual/merchants.json"));
+  const state = AbsenceStateSchema.parse(await readJson(ABSENCE_FILE));
+  const manifest = await readJson<CatalogManifest>("public/data/manifest.json");
+  const context: SyncContext = {
+    generatedAt,
+    today: generatedAt.slice(0, 10),
+    secretUrls: jobs.map((job) => job.url),
+    metrics,
+    state,
+    evidence: {
+      rowsByMerchant, failedMerchants, seenOfferKeys,
+      disabledMerchants: new Set(merchantRegistry.merchants.filter((merchant) => !merchant.enabled).flatMap((merchant) => [merchant.merchantId, String(merchant.awinAdvertiserId)])),
+    },
+  };
+  const overridesOf = async <TOverride>(vertical: Vertical, schema: z.ZodType<{ overrides: TOverride[] }>) => schema.parse(await readJson(`data/overrides/${vertical}.json`)).overrides;
 
-  if (gardenHouseCandidates.length) {
-    const previous = GardenHouseCatalogSchema.parse(await readJson("public/data/garden-house/catalog.json"));
-    const overrides = GardenOverrideFileSchema.parse(await readJson("data/overrides/garden-house.json")).overrides as ProductOverride[];
-    let catalog = assertCatalogSafe(quarantineSuspiciousCatalogOffers(assembleGardenHouseCatalog(gardenHouseCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(gardenHouseCandidates, catalog, generatedAt);
-    let report = buildReport(gardenHouseCandidates, metrics, catalog, review.products.length, generatedAt);
-    if (substantiveEqual(catalog, previous)) catalog = previous;
-    const oldReview = await readJson<unknown>("data/review/garden-house.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/garden-house/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/garden-house/catalog.json"] = catalog; files["data/review/garden-house.json"] = review; files["public/data/garden-house/feed-report.json"] = report;
-    manifest.verticals["garden-house"] = { catalog: "/data/garden-house/catalog.json", generatedAt: catalog.generatedAt };
-  }
-  if (dehumidifierCandidates.length) {
-    const previous = DehumidifierCatalogSchema.parse(await readJson("public/data/dehumidifier/catalog.json"));
-    const overrides = DehumidifierOverrideFileSchema.parse(await readJson("data/overrides/dehumidifier.json")).overrides as DehumidifierOverride[];
-    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleDehumidifierCatalog(dehumidifierCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(dehumidifierCandidates, catalog, generatedAt);
-    let report = buildReport(dehumidifierCandidates, metrics, catalog, review.products.length, generatedAt);
-    if (substantiveEqual(catalog, previous)) catalog = previous;
-    const oldReview = await readJson<unknown>("data/review/dehumidifier.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/dehumidifier/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/dehumidifier/catalog.json"] = catalog; files["data/review/dehumidifier.json"] = review; files["public/data/dehumidifier/feed-report.json"] = report;
-    manifest.verticals.dehumidifier = { catalog: "/data/dehumidifier/catalog.json", generatedAt: catalog.generatedAt };
-  }
-  if (irrigationCandidates.length) {
-    const previous = IrrigationCatalogSchema.parse(await readJson("public/data/irrigation/catalog.json"));
-    const overrides = IrrigationOverrideFileSchema.parse(await readJson("data/overrides/irrigation.json")).overrides as IrrigationOverride[];
-    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleIrrigationCatalog(irrigationCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(irrigationCandidates, catalog, generatedAt);
-    let report = buildReport(irrigationCandidates, metrics, catalog, review.products.length, generatedAt);
-    if (substantiveEqual(catalog, previous)) catalog = previous;
-    const oldReview = await readJson<unknown>("data/review/irrigation.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/irrigation/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/irrigation/catalog.json"] = catalog; files["data/review/irrigation.json"] = review; files["public/data/irrigation/feed-report.json"] = report;
-    manifest.verticals.irrigation = { catalog: "/data/irrigation/catalog.json", generatedAt: catalog.generatedAt };
-  }
-  if (robotMowerCandidates.length) {
-    const previous = RobotMowerCatalogSchema.parse(await readJson("public/data/robot-mower/catalog.json"));
-    const overrides = RobotMowerOverrideFileSchema.parse(await readJson("data/overrides/robot-mower.json")).overrides as RobotMowerOverride[];
-    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleRobotMowerCatalog(robotMowerCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(robotMowerCandidates, catalog, generatedAt);
-    let report = buildReport(robotMowerCandidates, metrics, catalog, review.products.length, generatedAt);
-    if (substantiveEqual(catalog, previous)) catalog = previous;
-    const oldReview = await readJson<unknown>("data/review/robot-mower.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/robot-mower/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/robot-mower/catalog.json"] = catalog; files["data/review/robot-mower.json"] = review; files["public/data/robot-mower/feed-report.json"] = report;
-    manifest.verticals["robot-mower"] = { catalog: "/data/robot-mower/catalog.json", generatedAt: catalog.generatedAt };
-  }
-  if (securityCameraCandidates.length) {
-    const previous = SecurityCameraCatalogSchema.parse(await readJson("public/data/security-camera/catalog.json"));
-    const overrides = SecurityCameraOverrideFileSchema.parse(await readJson("data/overrides/security-camera.json")).overrides as SecurityCameraOverride[];
-    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleSecurityCameraCatalog(securityCameraCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(securityCameraCandidates, catalog, generatedAt);
-    let report = buildReport(securityCameraCandidates, metrics, catalog, review.products.length, generatedAt);
-    if (substantiveEqual(catalog, previous)) catalog = previous;
-    const oldReview = await readJson<unknown>("data/review/security-camera.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/security-camera/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/security-camera/catalog.json"] = catalog; files["data/review/security-camera.json"] = review; files["public/data/security-camera/feed-report.json"] = report;
-    manifest.verticals["security-camera"] = { catalog: "/data/security-camera/catalog.json", generatedAt: catalog.generatedAt };
-  }
-  if (flooringCandidates.length) {
-    const previous = FlooringCatalogSchema.parse(await readJson("public/data/flooring/catalog.json"));
-    const overrides = FlooringOverrideFileSchema.parse(await readJson("data/overrides/flooring.json")).overrides as FlooringOverride[];
-    let catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleFlooringCatalog(flooringCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(flooringCandidates, catalog, generatedAt);
-    let report = buildReport(flooringCandidates, metrics, catalog, review.products.length, generatedAt);
-    if (substantiveEqual(catalog, previous)) catalog = previous;
-    const oldReview = await readJson<unknown>("data/review/flooring.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/flooring/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/flooring/catalog.json"] = catalog; files["data/review/flooring.json"] = review; files["public/data/flooring/feed-report.json"] = report;
-    manifest.verticals.flooring = { catalog: "/data/flooring/catalog.json", generatedAt: catalog.generatedAt };
-  }
-  if (projectCandidates.length) {
-    const previous = ProjectCatalogSchema.parse(await readJson("public/data/project-products/catalog.json"));
-    const overrides = ProjectOverrideFileSchema.parse(await readJson("data/overrides/project-products.json")).overrides as ProjectOverride[];
-    const catalog = assertCatalogPayloadSafe(quarantineSuspiciousCatalogOffers(assembleProjectCatalog(projectCandidates, overrides, generatedAt)), previous, secretUrls);
-    let review = buildReviewQueue(projectCandidates, catalog, generatedAt);
-    let report = buildReport(projectCandidates, metrics, catalog, review.products.length, generatedAt);
-    const oldReview = await readJson<unknown>("data/review/project-products.json"); if (substantiveEqual(review, oldReview)) review = oldReview as typeof review;
-    const oldReport = await readJson<unknown>("public/data/project-products/feed-report.json"); if (substantiveEqual(report, oldReport)) report = oldReport as typeof report;
-    files["public/data/project-products/catalog.json"] = catalog; files["data/review/project-products.json"] = review; files["public/data/project-products/feed-report.json"] = report;
-    manifest.verticals["project-products"] = { catalog: "/data/project-products/catalog.json", generatedAt: catalog.generatedAt };
+  // Each catalog is synced on its own: one that cannot be updated must not stop the others.
+  const outcomes = [
+    await syncVertical({ vertical: "garden-house", schema: GardenHouseCatalogSchema, candidates: gardenHouseCandidates, loadOverrides: () => overridesOf("garden-house", GardenOverrideFileSchema) as Promise<ProductOverride[]>, assemble: assembleGardenHouseCatalog, applyOverride: applyGardenOverride }, context),
+    await syncVertical({ vertical: "dehumidifier", schema: DehumidifierCatalogSchema, candidates: dehumidifierCandidates, loadOverrides: () => overridesOf("dehumidifier", DehumidifierOverrideFileSchema), assemble: assembleDehumidifierCatalog, applyOverride: applyDehumidifierOverride }, context),
+    await syncVertical({ vertical: "irrigation", schema: IrrigationCatalogSchema, candidates: irrigationCandidates, loadOverrides: () => overridesOf("irrigation", IrrigationOverrideFileSchema), assemble: assembleIrrigationCatalog, applyOverride: applyIrrigationOverride }, context),
+    await syncVertical({ vertical: "robot-mower", schema: RobotMowerCatalogSchema, candidates: robotMowerCandidates, loadOverrides: () => overridesOf("robot-mower", RobotMowerOverrideFileSchema), assemble: assembleRobotMowerCatalog, applyOverride: applyRobotMowerOverride }, context),
+    await syncVertical({ vertical: "security-camera", schema: SecurityCameraCatalogSchema, candidates: securityCameraCandidates, loadOverrides: () => overridesOf("security-camera", SecurityCameraOverrideFileSchema), assemble: assembleSecurityCameraCatalog, applyOverride: applySecurityCameraOverride }, context),
+    await syncVertical({ vertical: "flooring", schema: FlooringCatalogSchema, candidates: flooringCandidates, loadOverrides: () => overridesOf("flooring", FlooringOverrideFileSchema), assemble: assembleFlooringCatalog, applyOverride: applyFlooringOverride }, context),
+    await syncVertical({ vertical: "project-products", schema: ProjectCatalogSchema, candidates: projectCandidates, loadOverrides: () => overridesOf("project-products", ProjectOverrideFileSchema), assemble: assembleProjectCatalog, applyOverride: applyProjectOverride }, context),
+  ];
+
+  const files: Record<string, unknown> = {};
+  const absences: AbsenceState = { schemaVersion: 1, verticals: {} };
+  for (const outcome of outcomes) {
+    Object.assign(files, outcome.files);
+    if (outcome.catalogGeneratedAt) manifest.verticals[outcome.vertical] = { catalog: `/data/${outcome.vertical}/catalog.json`, generatedAt: outcome.catalogGeneratedAt };
+    const missing = outcome.absences ?? state.verticals[outcome.vertical] ?? {};
+    if (Object.keys(missing).length) absences.verticals[outcome.vertical] = missing;
   }
   manifest.generatedAt = generatedAt;
   files["public/data/manifest.json"] = manifest;
+  files[ABSENCE_FILE] = absences;
   await writeFilesAtomically(files);
+  await reportOutcomes(outcomes, metrics);
   console.log(`Sync complete: ${gardenHouseCandidates.length} garden-house, ${dehumidifierCandidates.length} dehumidifier, ${irrigationCandidates.length} irrigation, ${robotMowerCandidates.length} robot-mower, ${securityCameraCandidates.length} security-camera, ${flooringCandidates.length} flooring and ${projectCandidates.length} project candidates processed.`);
 }
 

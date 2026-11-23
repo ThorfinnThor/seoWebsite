@@ -156,3 +156,15 @@ Never add Awin keys, feed download URLs or API tokens to Vercel, `.env.example`,
 - [Join an advertiser programme](https://success.awin.com/articles/de/Knowledge/How-do-I-join-an-advertiser-programme)
 - [Access product data feeds](https://success.awin.com/articles/de/Knowledge/How-can-I-access-a-Product-Feed)
 - [Publisher tax details](https://success.awin.com/articles/de/Knowledge/Publisher-Tax-Details-FAQs)
+
+## When the daily sync reports a declining catalog
+
+Feeds rotate, so a catalog may lose products from one day to the next. Each catalog is synced on its own; a problem in one never blocks the others. If a catalog drops past the safeguard (more than 20% of its products or 40% of its offers), the run keeps the fresh data and carries the missing offers over with their old price date:
+
+| Reason in the run log | Meaning | What happens |
+|---|---|---|
+| `absent` | Feed readable, product no longer listed | Removed after 3 days (7 days if more than half of the catalog is gone) |
+| `feed-unavailable` | No rows from this merchant, or the feed broke off | Kept until the feed returns or the merchant is disabled in `data/manual/merchants.json` |
+| `rejected` | Merchant still lists it, our importer no longer publishes it | Kept, with the current price where the feed has one; fix the import rule or add an override |
+
+The job turns red after committing the other catalogs if a merchant is unavailable, the importer rejects products, more than half of a catalog is gone, or a catalog could not be written safely. An ordinary decline is only a warning. The counters are in `data/review/catalog-absences.json`.

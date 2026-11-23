@@ -23,8 +23,28 @@ function dimensionNumber(raw: string): number {
   return Number(normalized);
 }
 
-export function parseFlooringAttributes(text: string): Partial<FlooringProduct> {
-  const flooringType: FlooringProduct["flooringType"] = /parkett|parquet/i.test(text) ? "parquet-floating" : /vinyl|lvt|rigid/i.test(text) ? "vinyl-click" : "laminate";
+function typeFrom(text: string): FlooringProduct["flooringType"] | undefined {
+  if (/parkett|parquet/i.test(text)) return "parquet-floating";
+  if (/vinyl|\blvt\b|\bspc\b|rigid/i.test(text)) return "vinyl-click";
+  if (/laminat/i.test(text)) return "laminate";
+  return undefined;
+}
+
+/**
+ * The product name decides. Descriptions mention other floor types ("leichter
+ * als Laminat") and are only used if the name says nothing. There is no default:
+ * an unrecognised floor stays in review instead of being sold as laminate.
+ */
+export function parseFlooringType(name: string, description = ""): FlooringProduct["flooringType"] | undefined {
+  if (/kork[- ]?(?:boden|fertigparkett|parkett|diele|fliese)/i.test(name)) return "cork";
+  const named = typeFrom(name);
+  if (named) return named;
+  if (/design(?:boden|belag|fliese|diele)/i.test(name)) return "design";
+  return typeFrom(description);
+}
+
+export function parseFlooringAttributes(text: string, name = text): Partial<FlooringProduct> {
+  const flooringType = parseFlooringType(name, text);
   const glueIndex = text.search(/(?:klebe|adhesive)[- ]?vinyl|dryback|vollverkleb|zum kleben/i);
   const clickIndex = text.search(/klick|click|cpc|uniclic|automatic[- ]?click/i);
   const installation: FlooringProduct["installation"] = glueIndex >= 0 && (clickIndex < 0 || glueIndex < clickIndex) ? "glue" : clickIndex >= 0 ? "click" : "unknown";
@@ -37,7 +57,7 @@ export function parseFlooringAttributes(text: string): Partial<FlooringProduct> 
     ?? (dimensions?.[3] && dimensions[4]?.toLowerCase() === "mm" ? dimensionNumber(dimensions[3]) : undefined);
   const wearLayerMm = capture(text, /(?:nutzschicht|wear layer)[^\d]{0,12}(\d+(?:[.,]\d+)?)\s*mm/i);
   return {
-    flooringType, installation, packageCoverageM2, plankLengthMm, plankWidthMm, thicknessMm, wearLayerMm,
+    ...(flooringType ? { flooringType } : {}), installation, packageCoverageM2, plankLengthMm, plankWidthMm, thicknessMm, wearLayerMm,
     floorHeatingApproved: /fu(?:ß|ss)bodenheizung|fußbodenheizung|floor heating/i.test(text) || undefined,
     wetRoomApproved: /feuchtr(?:aum|äume|aeume)|nassr(?:aum|äume|aeume)|f(?:ü|ue)r\s+(?:bad|badezimmer)|wet\s*room|wasserfest|waterproof/i.test(text) || undefined,
   };
@@ -50,10 +70,11 @@ export function normalizeFlooring(row: RawFeedRow): FlooringCandidate {
   const merchantProductId = value(row, "merchant_product_id", "aw_product_id") ?? shortHash(name);
   const identity = productIdentity(row, merchantId, merchantProductId);
   const text = [name, value(row, "description"), value(row, "specifications"), value(row, "merchant_category"), value(row, "product_short_description")].filter(Boolean).join(" ");
-  const attributes = parseFlooringAttributes(text);
+  const attributes = parseFlooringAttributes(text, name);
   const sourceUpdatedAt = isoDate(value(row, "last_updated"));
   const candidateAttributes = { id: identity.id, name, brand: identity.brand, gtin: identity.gtin, mpn: identity.mpn, reviewed: false as const, dataQuality: "feed" as const, sourceUpdatedAt, ...attributes };
   const issues: string[] = [];
+  if (!attributes.flooringType) issues.push("unknown-flooring-type");
   if (!attributes.packageCoverageM2) issues.push("missing-package-coverage");
   if (!attributes.plankLengthMm || !attributes.plankWidthMm) issues.push("missing-plank-dimensions");
   if (attributes.installation === "unknown") issues.push("unknown-installation");

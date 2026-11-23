@@ -6,6 +6,16 @@ import { catalogDimensionIssues } from "./dimension-safeguards";
 
 const MAX_CATALOG_BYTES = 2 * 1024 * 1024;
 
+/** Describes a drop that is too large to be daily assortment noise, or undefined. */
+export function catalogRegression(catalog: StaticCatalog<ProductBase, OfferBase>, previous?: StaticCatalog<ProductBase, OfferBase>): string | undefined {
+  const reviewed = catalog.products.filter((product) => product.reviewed).length;
+  const previousReviewed = previous?.products.filter((product) => product.reviewed).length ?? 0;
+  if (previousReviewed >= 10 && reviewed < previousReviewed * 0.8) return `Reviewed products regressed from ${previousReviewed} to ${reviewed}`;
+  const previousOffers = previous?.offers.length ?? 0;
+  if (previousOffers >= 20 && catalog.offers.length < previousOffers * 0.6) return `Offers regressed from ${previousOffers} to ${catalog.offers.length}`;
+  return undefined;
+}
+
 export function assertCatalogSafe(next: unknown, previous?: GardenHouseCatalog, configuredSecretUrls: string[] = []): GardenHouseCatalog {
   const catalog = GardenHouseCatalogSchema.parse(next);
   return assertCatalogPayloadSafe(catalog, previous, configuredSecretUrls);
@@ -20,11 +30,8 @@ export function assertCatalogPayloadSafe<T extends StaticCatalog<ProductBase, Of
   if (/AWIN_FEED_URLS_JSON|(?:feed|password|api[_-]?key|token)=[^&"\s]+/i.test(serialized)) {
     throw new Error("Generated catalog contains secret-looking data");
   }
-  const reviewed = catalog.products.filter((product) => product.reviewed).length;
-  const previousReviewed = previous?.products.filter((product) => product.reviewed).length ?? 0;
-  if (previousReviewed >= 10 && reviewed < previousReviewed * 0.8) throw new Error(`Reviewed products regressed from ${previousReviewed} to ${reviewed}`);
-  const previousOffers = previous?.offers.length ?? 0;
-  if (previousOffers >= 20 && catalog.offers.length < previousOffers * 0.6) throw new Error(`Offers regressed from ${previousOffers} to ${catalog.offers.length}`);
+  const regression = catalogRegression(catalog, previous);
+  if (regression) throw new Error(regression);
   const priceIssues = catalogPriceIssues(catalog);
   if (priceIssues.length) throw new Error(`Catalog contains ${priceIssues.length} suspicious price offer(s): ${priceIssues[0].offerId} (${priceIssues[0].detail})`);
   const dimensionIssues = catalogDimensionIssues(catalog);

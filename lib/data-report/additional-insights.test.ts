@@ -1,16 +1,23 @@
 import { describe, expect, it } from "vitest";
+import flooringCatalog from "@/public/data/flooring/catalog.json";
+import gardenHouseCatalog from "@/public/data/garden-house/catalog.json";
+import securityCameraCatalog from "@/public/data/security-camera/catalog.json";
 import { flooringFormatReport, flooringThicknessReport, gardenHouseDimensionReport, gardenHouseRoofReport, securityCameraFeatureReport } from "./additional-insights";
+
+// The daily sync rewrites the catalogs, so compare with them instead of fixed counts.
+const reviewed = <T extends { reviewed: boolean }>(catalog: { products: T[] }) => catalog.products.filter((product) => product.reviewed);
+const reportedFlooring = reviewed(flooringCatalog).filter((product) => ["laminate", "vinyl-click", "parquet-floating"].includes(product.flooringType));
 
 describe("additional catalog data reports", () => {
   it("partitions all garden houses into exclusive dimension and shape groups", () => {
-    expect(gardenHouseDimensionReport.total).toBeGreaterThan(300);
+    expect(gardenHouseDimensionReport.total).toBe(reviewed(gardenHouseCatalog).length);
     expect(gardenHouseDimensionReport.shortSideBands.reduce((sum, band) => sum + band.count, 0)).toBe(gardenHouseDimensionReport.total);
     expect(gardenHouseDimensionReport.shapes.reduce((sum, shape) => sum + shape.count, 0)).toBe(gardenHouseDimensionReport.total);
     expect(gardenHouseDimensionReport.fitThresholds.map((item) => item.count)).toEqual([...gardenHouseDimensionReport.fitThresholds.map((item) => item.count)].sort((a, b) => a - b));
   });
 
   it("uses only flooring products with complete format and package data", () => {
-    expect(flooringFormatReport.total).toBeGreaterThan(90);
+    expect(flooringFormatReport.total).toBe(reportedFlooring.filter((product) => product.packageCoverageM2 && product.plankLengthMm && product.plankWidthMm).length);
     expect(flooringFormatReport.types.reduce((sum, type) => sum + type.count, 0)).toBe(flooringFormatReport.total);
     expect(flooringFormatReport.widthBands.reduce((sum, band) => sum + band.count, 0)).toBe(flooringFormatReport.total);
     for (const scenario of flooringFormatReport.scenarios) {
@@ -26,14 +33,14 @@ describe("additional catalog data reports", () => {
   });
 
   it("partitions flooring thickness without inventing total build height", () => {
-    expect(flooringThicknessReport.total).toBeGreaterThan(90);
+    expect(flooringThicknessReport.total).toBe(reportedFlooring.filter((product) => product.thicknessMm).length);
     expect(flooringThicknessReport.types.reduce((sum, type) => sum + type.count, 0)).toBe(flooringThicknessReport.total);
     expect(flooringThicknessReport.bands.reduce((sum, band) => sum + band.count, 0)).toBe(flooringThicknessReport.total);
     expect(flooringThicknessReport.thresholds.map((item) => item.count)).toEqual([...flooringThicknessReport.thresholds.map((item) => item.count)].sort((a, b) => a - b));
   });
 
   it("keeps camera feature profiles exclusive and the filter path monotonic", () => {
-    expect(securityCameraFeatureReport.total).toBeGreaterThan(15);
+    expect(securityCameraFeatureReport.total).toBe(reviewed(securityCameraCatalog).length);
     expect(securityCameraFeatureReport.featureProfiles.reduce((sum, profile) => sum + profile.count, 0)).toBe(securityCameraFeatureReport.total);
     expect(securityCameraFeatureReport.placements.reduce((sum, placement) => sum + placement.count, 0)).toBe(securityCameraFeatureReport.total);
     expect(securityCameraFeatureReport.filterPath.outdoor).toBeGreaterThanOrEqual(securityCameraFeatureReport.filterPath.outdoorWithLight);

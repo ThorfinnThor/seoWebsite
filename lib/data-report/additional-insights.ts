@@ -2,6 +2,7 @@ import flooringCatalogJson from "@/public/data/flooring/catalog.json";
 import gardenHouseCatalogJson from "@/public/data/garden-house/catalog.json";
 import securityCameraCatalogJson from "@/public/data/security-camera/catalog.json";
 import { bestAvailablePriceByProduct, countDistinct, formatReportDate, median, percent, rounded } from "./statistics";
+import { isReportedFlooring, REPORTED_FLOORING_TYPES } from "./flooring-types";
 import { FlooringCatalogSchema, type FlooringProduct } from "@/lib/flooring/types";
 import { GardenHouseCatalogSchema, type GardenHouseProduct } from "@/lib/garden-house/types";
 import { SecurityCameraCatalogSchema, type SecurityCameraProduct } from "@/lib/security-camera/types";
@@ -9,6 +10,8 @@ import { SecurityCameraCatalogSchema, type SecurityCameraProduct } from "@/lib/s
 const gardenHouseCatalog = GardenHouseCatalogSchema.parse(gardenHouseCatalogJson);
 const flooringCatalog = FlooringCatalogSchema.parse(flooringCatalogJson);
 const securityCameraCatalog = SecurityCameraCatalogSchema.parse(securityCameraCatalogJson);
+
+const reportedFlooring = flooringCatalog.products.filter(isReportedFlooring);
 
 const gardenHouses = gardenHouseCatalog.products.filter((product) => product.reviewed);
 const gardenHousePrices = bestAvailablePriceByProduct(gardenHouseCatalog);
@@ -128,7 +131,7 @@ function hasCompleteFlooringFormat(product: FlooringProduct): product is Complet
   return product.reviewed && product.packageCoverageM2 !== undefined && product.plankLengthMm !== undefined && product.plankWidthMm !== undefined;
 }
 
-const flooringFormats = flooringCatalog.products.filter(hasCompleteFlooringFormat);
+const flooringFormats = reportedFlooring.filter(hasCompleteFlooringFormat);
 
 function summarizeFlooringFormats(products: readonly CompleteFlooringFormat[]) {
   return {
@@ -147,11 +150,7 @@ export const flooringFormatReport = {
   total: flooringFormats.length,
   brands: countDistinct(flooringFormats.map((product) => product.brand)),
   summary: summarizeFlooringFormats(flooringFormats),
-  types: [
-    { key: "laminate", label: "Laminat" },
-    { key: "vinyl-click", label: "Klickvinyl" },
-    { key: "parquet-floating", label: "Fertigparkett" },
-  ].map(({ key, label }) => ({ key, label, ...summarizeFlooringFormats(flooringFormats.filter((product) => product.flooringType === key)) })),
+  types: REPORTED_FLOORING_TYPES.map(({ key, label }) => ({ key, label, ...summarizeFlooringFormats(flooringFormats.filter((product) => product.flooringType === key)) })),
   widthBands: [
     { label: "Bis 160 mm", matches: (product: CompleteFlooringFormat) => product.plankWidthMm <= 160 },
     { label: "Über 160 bis 220 mm", matches: (product: CompleteFlooringFormat) => product.plankWidthMm > 160 && product.plankWidthMm <= 220 },
@@ -182,7 +181,7 @@ function hasFlooringThickness(product: FlooringProduct): product is FlooringWith
   return product.reviewed && product.thicknessMm !== undefined;
 }
 
-const flooringWithThickness = flooringCatalog.products.filter(hasFlooringThickness);
+const flooringWithThickness = reportedFlooring.filter(hasFlooringThickness);
 
 function summarizeFlooringThickness(products: readonly FlooringWithThickness[]) {
   const thicknesses = products.map((product) => product.thicknessMm);
@@ -203,11 +202,7 @@ export const flooringThicknessReport = {
   total: flooringWithThickness.length,
   summary: summarizeFlooringThickness(flooringWithThickness),
   allClick: flooringWithThickness.filter((product) => product.installation === "click").length,
-  types: [
-    { key: "laminate", label: "Laminat" },
-    { key: "vinyl-click", label: "Klickvinyl" },
-    { key: "parquet-floating", label: "Fertigparkett" },
-  ].map(({ key, label }) => ({ key, label, ...summarizeFlooringThickness(flooringWithThickness.filter((product) => product.flooringType === key)) })),
+  types: REPORTED_FLOORING_TYPES.map(({ key, label }) => ({ key, label, ...summarizeFlooringThickness(flooringWithThickness.filter((product) => product.flooringType === key)) })),
   bands: [
     { label: "Bis 5 mm", matches: (product: FlooringWithThickness) => product.thicknessMm <= 5 },
     { label: "Über 5 bis 8 mm", matches: (product: FlooringWithThickness) => product.thicknessMm > 5 && product.thicknessMm <= 8 },

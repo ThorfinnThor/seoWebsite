@@ -40,7 +40,8 @@ jobs:
           node-version: 24
           cache: npm
       - run: npm ci
-      - run: npm run sync:products
+      - id: sync
+        run: npm run sync:products
       - name: Verify merchant and affiliate targets
         run: npm run verify:merchant-links -- --write
       - name: Verify catalogs and production export
@@ -62,3 +63,11 @@ jobs:
           git add public/data data/review
           git commit -m "chore(data): refresh affiliate catalogs"
           git push
+      # After the commit on purpose: the other catalogs are already updated.
+      - name: Report catalogs that need attention
+        if: steps.sync.outputs.critical_catalogs != ''
+        env:
+          CRITICAL_CATALOGS: ${{ steps.sync.outputs.critical_catalogs }}
+        run: |
+          echo "::error::Datenverlust prüfen: $CRITICAL_CATALOGS. Ursache je Katalog steht in der Zusammenfassung dieses Laufs. Die übrigen Kataloge wurden aktualisiert."
+          exit 1
