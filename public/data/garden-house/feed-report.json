@@ -1,35 +1,35 @@
 {
-  "candidateRows": 521,
-  "candidateToProductRate": 63.9,
+  "candidateRows": 768,
+  "candidateToProductRate": 52.9,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-18T07:24:48.576Z",
+  "generatedAt": "2026-11-24T09:05:19.008Z",
   "issues": {
-    "missing-material": 11,
-    "missing-or-ambiguous-dimensions": 181,
-    "suspicious-price": 9
+    "missing-material": 101,
+    "missing-or-ambiguous-dimensions": 351,
+    "suspicious-price": 17
   },
   "linkVerification": {
     "blocked": 37,
-    "verified": 296
+    "verified": 369
   },
   "merchants": {
-    "Globus Baumarkt DE": 296,
+    "Globus Baumarkt DE": 369,
     "InterGard Heim und Garten DE": 37
   },
-  "normalizedProducts": 333,
-  "offers": 333,
+  "normalizedProducts": 406,
+  "offers": 406,
   "priceStatsEur": {
     "max": 59488.1,
-    "median": 5482,
+    "median": 4349,
     "min": 229
   },
   "productsWithoutOffers": 0,
-  "publishedProducts": 333,
-  "quarantinedProducts": 9,
-  "reviewedProducts": 333,
-  "reviewQueue": 188,
-  "rows": 175104,
+  "publishedProducts": 406,
+  "quarantinedProducts": 17,
+  "reviewedProducts": 406,
+  "reviewQueue": 362,
+  "rows": 172589,
   "schemaVersion": 1,
-  "sourceFeeds": 10,
-  "successfulFeeds": 10
+  "sourceFeeds": 9,
+  "successfulFeeds": 9
 }

@@ -1,36 +1,35 @@
 {
-  "candidateRows": 422,
-  "candidateToProductRate": 99.8,
+  "candidateRows": 417,
+  "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-09-18T07:24:48.576Z",
+  "generatedAt": "2026-11-24T09:05:19.008Z",
   "issues": {
-    "missing-capacity": 364,
-    "suspicious-price": 133,
-    "unconfirmed-drainage": 377
+    "missing-capacity": 363,
+    "suspicious-price": 129,
+    "unconfirmed-drainage": 378
   },
   "linkVerification": {
-    "verified": 43
+    "verified": 39
   },
   "merchants": {
     "Globus Baumarkt DE": 12,
     "Meaco GmbH DE": 21,
-    "tink DE": 4,
     "Trotec DACH": 6
   },
-  "normalizedProducts": 421,
-  "offers": 43,
+  "normalizedProducts": 417,
+  "offers": 39,
   "priceStatsEur": {
     "max": 529.99,
     "median": 209.99,
     "min": 34.99
   },
   "productsWithoutOffers": 0,
-  "publishedProducts": 42,
-  "quarantinedProducts": 133,
-  "reviewedProducts": 42,
-  "reviewQueue": 379,
-  "rows": 175104,
+  "publishedProducts": 39,
+  "quarantinedProducts": 129,
+  "reviewedProducts": 39,
+  "reviewQueue": 378,
+  "rows": 172589,
   "schemaVersion": 1,
-  "sourceFeeds": 10,
-  "successfulFeeds": 10
+  "sourceFeeds": 9,
+  "successfulFeeds": 9
 }

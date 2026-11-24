@@ -1,6 +1,36 @@
 {
-  "generatedAt": "2026-09-18T07:24:48.576Z",
+  "generatedAt": "2026-11-24T09:05:19.008Z",
   "products": [
+    {
+      "brand": "ANTHBOT-DE",
+      "candidateAttributes": {
+        "brand": "ANTHBOT-DE",
+        "dataQuality": "feed",
+        "id": "mpn:anthbot-de:210010318",
+        "mpn": "210010318",
+        "name": "Garage M - Standardkauf",
+        "navigation": "lidar",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:04:56.205Z"
+      },
+      "id": "mpn:anthbot-de:210010318",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "suspicious-price"
+      ],
+      "merchantProductUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fgarage%3Fvariant%3D67890676695353",
+      "merchants": [
+        "ANTHBOT DE"
+      ],
+      "minBasePriceEur": 169,
+      "mpn": "210010318",
+      "name": "Garage M - Standardkauf",
+      "offerCount": 1,
+      "priority": 9027,
+      "riskTier": "critical"
+    },
     {
       "brand": "ANTHBOT-DE",
       "candidateAttributes": {
@@ -11,7 +41,7 @@
         "name": "4G Service - 1 Jahr 4G-Service",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.390Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.203Z"
       },
       "id": "mpn:anthbot-de:103020003",
       "issues": [
@@ -33,20 +63,21 @@
       "riskTier": "critical"
     },
     {
-      "brand": "eufy",
+      "brand": "Duramax",
       "candidateAttributes": {
-        "brand": "eufy",
+        "brand": "Duramax",
         "dataQuality": "feed",
-        "gtin": "0194644231200",
-        "id": "gtin:0194644231200",
-        "name": "eufy Ersatzklingenbox - für Mähroboter E15 und E18 - Grau",
+        "gtin": "0638801536512",
+        "id": "gtin:0638801536512",
+        "mpn": "30625",
+        "name": "Duramax Kaminholzregal mit Aufbewahrungsschrank",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.854Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.611Z"
       },
-      "gtin": "0194644231200",
-      "id": "gtin:0194644231200",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/e/u/eufy_ersatzklingen-set_titelbild_1.jpg",
+      "gtin": "0638801536512",
+      "id": "gtin:0638801536512",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/c0/dd/71/1783424716/0638801536512_90191561_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
@@ -54,9 +85,10 @@
         "suspicious-price",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-ersatzklingenbox-fuer-maehroboter-e15-und-e18?opt_92=3",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/duramax-kaminholzregal-mit-aufbewahrungsschrank-0692650749/",
       "merchants": [],
-      "name": "eufy Ersatzklingenbox - für Mähroboter E15 und E18 - Grau",
+      "mpn": "30625",
+      "name": "Duramax Kaminholzregal mit Aufbewahrungsschrank",
       "offerCount": 0,
       "priority": 9000,
       "riskTier": "critical"
@@ -72,7 +104,7 @@
         "name": "Bosch Ersatzmesser für Rasenmäher UniversalRotak 36V 38 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.802Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.542Z"
       },
       "gtin": "3165140923187",
       "id": "gtin:3165140923187",
@@ -103,7 +135,7 @@
         "name": "Bosch Ersatzmesser für Rasenmäher AdvancedRotak 36V 42 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.802Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.542Z"
       },
       "gtin": "3165140923194",
       "id": "gtin:3165140923194",
@@ -134,7 +166,7 @@
         "name": "Kunststoff Rad 150 x 30 mm Tragkr. 25 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.070Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.673Z"
       },
       "gtin": "4002350507846",
       "id": "gtin:4002350507846",
@@ -165,7 +197,7 @@
         "name": "Kunststoff Rad 175 x 34 mm Tragkr. 35 kg rot",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.070Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.673Z"
       },
       "gtin": "4002350562791",
       "id": "gtin:4002350562791",
@@ -195,7 +227,7 @@
         "name": "Kunststoff Rad 175 x 34 mm Tragkr. 35 kg schwarz",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.066Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.669Z"
       },
       "gtin": "4002350562807",
       "id": "gtin:4002350562807",
@@ -225,7 +257,7 @@
         "name": "Kunststoff Rad 200 x 42 mm Tragkr. 60 kg rot",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.070Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.673Z"
       },
       "gtin": "4002350562814",
       "id": "gtin:4002350562814",
@@ -255,7 +287,7 @@
         "name": "Kunststoff Rad 200 x 40 mm Tragkr. 40 kg rot",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.070Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.673Z"
       },
       "gtin": "4002350562821",
       "id": "gtin:4002350562821",
@@ -285,7 +317,7 @@
         "name": "Alko Lüfterwalze für Elektro Vertikutierer Combi Care 36.8 E Comfort",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.233Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.600Z"
       },
       "gtin": "4003718058604",
       "id": "gtin:4003718058604",
@@ -317,7 +349,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.832Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.414Z"
       },
       "gtin": "4003718061819",
       "id": "gtin:4003718061819",
@@ -348,7 +380,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.832Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.414Z"
       },
       "gtin": "4003718061826",
       "id": "gtin:4003718061826",
@@ -378,7 +410,7 @@
         "name": "Alko Doppelladegerät Energy Flex C 200Li",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.964Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.895Z"
       },
       "gtin": "4003718063967",
       "id": "gtin:4003718063967",
@@ -409,7 +441,7 @@
         "name": "AL-KO Ladegerät C40.6 Li für 18 V und 18/36 V Akkus",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.580Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.664Z"
       },
       "gtin": "4003718066456",
       "id": "gtin:4003718066456",
@@ -439,7 +471,7 @@
         "name": "AL-KO Ladegerät C150.6 Li für 18 V und 18/36 V Li-Ion Akkus",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.664Z"
       },
       "gtin": "4003718066463",
       "id": "gtin:4003718066463",
@@ -469,7 +501,7 @@
         "name": "AL-KO Doppel-Ladegerät C300.6 Li für 18 V und 18/36 V Li-Ion Akkus",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.664Z"
       },
       "gtin": "4003718066470",
       "id": "gtin:4003718066470",
@@ -499,7 +531,7 @@
         "name": "AL-KO Mährobotergarage für Robolinho Vision Modelle",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.665Z"
       },
       "gtin": "4003718067675",
       "id": "gtin:4003718067675",
@@ -529,7 +561,7 @@
         "name": "AL-KO Rasentraktor-Mulchkeil 86 cm für Rasentraktor Comfort und Easy",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.597Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.681Z"
       },
       "gtin": "4003718067729",
       "id": "gtin:4003718067729",
@@ -560,7 +592,7 @@
         "name": "AL-KO Rasentraktor-Deflektor für Heckauswurf-Rasentraktor",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.597Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.681Z"
       },
       "gtin": "4003718067736",
       "id": "gtin:4003718067736",
@@ -591,7 +623,7 @@
         "name": "AL-KO Rasentraktor-Anhängerkupplung für AL-KO Traktoren",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.597Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.681Z"
       },
       "gtin": "4003718067743",
       "id": "gtin:4003718067743",
@@ -622,7 +654,7 @@
         "name": "AL-KO Mulchkit 103 cm, für Rasentraktor Comfort 18-103.2 HD",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.837Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.416Z"
       },
       "gtin": "4003718353440",
       "id": "gtin:4003718353440",
@@ -653,7 +685,7 @@
         "name": "Al-Ko Mähroboter-Garage Gen III für alle Robolinho-Modelle",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.112Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.778Z"
       },
       "gtin": "4003718356267",
       "id": "gtin:4003718356267",
@@ -684,7 +716,7 @@
         "name": "Neudorff Rasendünger Spezial 5 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.800Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.695Z"
       },
       "gtin": "4005240021095",
       "id": "gtin:4005240021095",
@@ -715,7 +747,7 @@
         "name": "APA Kraftstofffilter Kunststoff Ø 6 mm - 8 mm weiß",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.872Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.606Z"
       },
       "gtin": "4006132313465",
       "id": "gtin:4006132313465",
@@ -746,7 +778,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GE-CM 33 Li+36/34",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.348Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.036Z"
       },
       "gtin": "4006825610611",
       "id": "gtin:4006825610611",
@@ -777,7 +809,7 @@
         "name": "Einhell Akku Rasenmäher GE-CM 18/30 Li-solo 30 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.690Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.848Z"
       },
       "gtin": "4006825631869",
       "id": "gtin:4006825631869",
@@ -808,7 +840,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GE-CM 18/30 Li",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.349Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.036Z"
       },
       "gtin": "4006825633092",
       "id": "gtin:4006825633092",
@@ -839,7 +871,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GE-CM 36/37+38",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.348Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.035Z"
       },
       "gtin": "4006825635843",
       "id": "gtin:4006825635843",
@@ -870,7 +902,7 @@
         "name": "Einhell Ersatzklingen für Mähroboter Freelexo - 12 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.339Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.024Z"
       },
       "gtin": "4006825648775",
       "id": "gtin:4006825648775",
@@ -901,7 +933,7 @@
         "name": "Einhell Verbindungklemmen für Mähroboter 4 Stück",
         "navigation": "wire",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.986Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.190Z"
       },
       "gtin": "4006825648799",
       "id": "gtin:4006825648799",
@@ -932,7 +964,7 @@
         "navigation": "wire",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.988Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.192Z"
       },
       "gtin": "4006825648805",
       "id": "gtin:4006825648805",
@@ -961,7 +993,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher Rasarro 36/42",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.349Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.036Z"
       },
       "gtin": "4006825651386",
       "id": "gtin:4006825651386",
@@ -992,7 +1024,7 @@
         "name": "Einhell Magnetband 20 m für Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.987Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.192Z"
       },
       "gtin": "4006825670929",
       "id": "gtin:4006825670929",
@@ -1023,7 +1055,7 @@
         "name": "Einhell Ersatzmesser für Akku-Rasenmäher GP-CM 36/47 S BL",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.348Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.036Z"
       },
       "gtin": "4006825672497",
       "id": "gtin:4006825672497",
@@ -1051,10 +1083,10 @@
         "gtin": "4006885495807",
         "id": "gtin:4006885495807",
         "mpn": "0760407961",
-        "name": "Wolfcraft Kapselgehörschütz Compact rot/schwarz 26 dB 1 Paar",
+        "name": "Wolfcraft Kapselgehörschütz Kompakt rot/schwarz 26 dB 1 Paar",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.240Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.270Z"
       },
       "gtin": "4006885495807",
       "id": "gtin:4006885495807",
@@ -1066,10 +1098,10 @@
         "suspicious-price",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/wolfcraft-kapselgehoerschuetz-compact-rot-schwarz-26-db-1-paar-0760407961/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/wolfcraft-kapselgehoerschuetz-kompakt-rot-schwarz-26-db-1-paar-0760407961/",
       "merchants": [],
       "mpn": "0760407961",
-      "name": "Wolfcraft Kapselgehörschütz Compact rot/schwarz 26 dB 1 Paar",
+      "name": "Wolfcraft Kapselgehörschütz Kompakt rot/schwarz 26 dB 1 Paar",
       "offerCount": 0,
       "priority": 9000,
       "riskTier": "critical"
@@ -1085,7 +1117,7 @@
         "name": "Wolfcraft Gehörschutzstöpsel mit Bügel blau/orange 24 dB 1 Paar",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.239Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.267Z"
       },
       "gtin": "4006885496309",
       "id": "gtin:4006885496309",
@@ -1116,7 +1148,7 @@
         "name": "Safe-Box Caravan IP44, grün, 36,5 x 9 x 9 cm (H x B x T)",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.119Z",
+        "sourceUpdatedAt": "2026-11-24T09:05:03.786Z",
         "waterProtection": "IP44"
       },
       "gtin": "4008153308802",
@@ -1148,7 +1180,7 @@
         "name": "Steckerbox Safe-Box IP44, rot",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:31.363Z",
+        "sourceUpdatedAt": "2026-11-24T09:05:01.452Z",
         "waterProtection": "IP44"
       },
       "gtin": "4008153440892",
@@ -1180,7 +1212,7 @@
         "name": "Steckerbox Safe-Box groß IP44 grün",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:31.665Z",
+        "sourceUpdatedAt": "2026-11-24T09:05:01.857Z",
         "waterProtection": "IP44"
       },
       "gtin": "4008153441011",
@@ -1213,7 +1245,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.929Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.102Z"
       },
       "gtin": "4008398146139",
       "id": "gtin:4008398146139",
@@ -1244,7 +1276,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 130,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.306Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.327Z"
       },
       "gtin": "4008398160258",
       "id": "gtin:4008398160258",
@@ -1274,7 +1306,7 @@
         "name": "Wolf Garten Rasenrechen Multi-Star UH-M 60 58 cm Arbeitsbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.107Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.425Z"
       },
       "gtin": "4008423878011",
       "id": "gtin:4008423878011",
@@ -1305,7 +1337,7 @@
         "name": "Caramba Kontaktspray 250ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:29.137Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:58.421Z"
       },
       "gtin": "4009076009029",
       "id": "gtin:4009076009029",
@@ -1336,7 +1368,7 @@
         "name": "Caramba Starthilfespray 300ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.434Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.795Z"
       },
       "gtin": "4009076102133",
       "id": "gtin:4009076102133",
@@ -1367,7 +1399,7 @@
         "name": "Primaster Akku Rasentrimmer mit Trimmercart PATF 20 V ohne Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.790Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.280Z"
       },
       "gtin": "4010951112260",
       "id": "gtin:4010951112260",
@@ -1398,7 +1430,7 @@
         "name": "Ikra Elektro Rasentrimmer IGT 300 DA 25 cm Schnittkreis",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.954Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.890Z"
       },
       "gtin": "4010951112932",
       "id": "gtin:4010951112932",
@@ -1429,7 +1461,7 @@
         "name": "Primaster Akku Rasentrimmer PMAT 2025-1 20 V ohne Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.245Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.505Z"
       },
       "gtin": "4010951152013",
       "id": "gtin:4010951152013",
@@ -1461,7 +1493,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.740Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.908Z"
       },
       "gtin": "4010951770224",
       "id": "gtin:4010951770224",
@@ -1491,7 +1523,7 @@
         "name": "Primaster Ersatzmesser 21 cm für Einhandmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.616Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.440Z"
       },
       "gtin": "4010951772334",
       "id": "gtin:4010951772334",
@@ -1522,7 +1554,7 @@
         "name": "Ikra Ersatzmesser 43 cm für Rasenmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.385Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.136Z"
       },
       "gtin": "4010951773102",
       "id": "gtin:4010951773102",
@@ -1553,7 +1585,7 @@
         "name": "Primaster Ersatzmesser 43 cm für Elektro-Rasenmäher PERM 2043",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.552Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.330Z"
       },
       "gtin": "4010951773232",
       "id": "gtin:4010951773232",
@@ -1584,7 +1616,7 @@
         "name": "Ikra Ersatzmesser 32 cm für Elektro-Rasenmäher IERM 1232",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.553Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.331Z"
       },
       "gtin": "4010951773256",
       "id": "gtin:4010951773256",
@@ -1615,7 +1647,7 @@
         "name": "Güde Schärfstation GUS 650 65 W mit Bohrerschärfgerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:28.931Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:58.139Z"
       },
       "gtin": "4015671941022",
       "id": "gtin:4015671941022",
@@ -1646,7 +1678,7 @@
         "name": "SprayTEC Starthilfe Spray 400ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:31.066Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:01.045Z"
       },
       "gtin": "4015962094031",
       "id": "gtin:4015962094031",
@@ -1677,7 +1709,7 @@
         "name": "Cartec Rasenmäherbatterie 30Ah/300A +rechts",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.406Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.753Z"
       },
       "gtin": "4017568723704",
       "id": "gtin:4017568723704",
@@ -1708,7 +1740,7 @@
         "name": "Cartec Rasenmäherbatterie 30Ah/300A +links",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.406Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.753Z"
       },
       "gtin": "4017568723711",
       "id": "gtin:4017568723711",
@@ -1739,7 +1771,7 @@
         "name": "Ballistol Startwunder-Spray 200ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:31.655Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:01.848Z"
       },
       "gtin": "4017777255003",
       "id": "gtin:4017777255003",
@@ -1770,7 +1802,7 @@
         "name": "Xervex Startspray Motor Z30 200 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.712Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.832Z"
       },
       "gtin": "4023055989300",
       "id": "gtin:4023055989300",
@@ -1801,7 +1833,7 @@
         "name": "Kann Rasenkante Antik 25,7 x 10 x 4 cm braun",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:28.908Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:58.112Z"
       },
       "gtin": "4024991555901",
       "id": "gtin:4024991555901",
@@ -1832,7 +1864,7 @@
         "name": "Kann Mähkante Nativa 35 x 20 x 4 cm kalksteinfarben",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.967Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.920Z"
       },
       "gtin": "4024991921065",
       "id": "gtin:4024991921065",
@@ -1862,7 +1894,7 @@
         "name": "Kann Mähkante Nativa 35 x 20 x 4 cm grau-nuanciert",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.967Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.920Z"
       },
       "gtin": "4024991921089",
       "id": "gtin:4024991921089",
@@ -1892,7 +1924,7 @@
         "name": "Scheppach Motorenöl SAE 30W API CF/CF-2/SF 1 Liter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.866Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.395Z"
       },
       "gtin": "4046664115656",
       "id": "gtin:4046664115656",
@@ -1923,7 +1955,7 @@
         "name": "Scheppach Mäh und Mulchmesser 61 cm für Aufsitzmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.122Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.744Z"
       },
       "gtin": "4046664225478",
       "id": "gtin:4046664225478",
@@ -1954,7 +1986,7 @@
         "name": "Xervex Ölwechsel-Set mit Pumpe 3 tlg.",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.617Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.062Z"
       },
       "gtin": "4050444176874",
       "id": "gtin:4050444176874",
@@ -1985,7 +2017,7 @@
         "name": "Ratioparts Ersatzmesser und Schraube für Gardena und Greenworks Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.438Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.511Z"
       },
       "gtin": "4050444188587",
       "id": "gtin:4050444188587",
@@ -2016,7 +2048,7 @@
         "name": "Ratioparts Ersatzmesser und Schraube für Moworx und Worx Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.437Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.511Z"
       },
       "gtin": "4050444188600",
       "id": "gtin:4050444188600",
@@ -2047,7 +2079,7 @@
         "name": "Ratioparts Ersatzmesser und Schraube für Bosch Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.437Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.511Z"
       },
       "gtin": "4050444188617",
       "id": "gtin:4050444188617",
@@ -2078,7 +2110,7 @@
         "name": "ratioparts Mähroboter Leitungsverbinder 3M Scotchlok 3 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.909Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.882Z"
       },
       "gtin": "4050444203921",
       "id": "gtin:4050444203921",
@@ -2109,7 +2141,7 @@
         "name": "ratioparts Mähroboter Abzweigverbinder 3M Scotchlok 3 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.910Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.882Z"
       },
       "gtin": "4050444203945",
       "id": "gtin:4050444203945",
@@ -2140,7 +2172,7 @@
         "name": "ratioparts roborepkit Mähroboter Reparaturset für Begrenzungsleitung 5 m",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.909Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.882Z"
       },
       "gtin": "4050444207639",
       "id": "gtin:4050444207639",
@@ -2171,7 +2203,7 @@
         "name": "ratioparts roboline Mähroboter Begrenzungskabel 100 m grün",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.909Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.881Z"
       },
       "gtin": "4050444244351",
       "id": "gtin:4050444244351",
@@ -2202,7 +2234,7 @@
         "name": "Ratioparts roboconnect Mähroboter Kabelverbinder eXtreme Premium black 2 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.910Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.882Z"
       },
       "gtin": "4050444280618",
       "id": "gtin:4050444280618",
@@ -2230,11 +2262,11 @@
         "gtin": "4062700682319",
         "id": "gtin:4062700682319",
         "mpn": "0688400423",
-        "name": "Substral Start Rasendünger 4 kg",
+        "name": "Substral Rasen-Starterdünger für Rasenneuanlage 4 kg für ca. 200 m²",
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.009Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.224Z"
       },
       "gtin": "4062700682319",
       "id": "gtin:4062700682319",
@@ -2245,10 +2277,10 @@
         "suspicious-price",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/substral-start-rasenduenger-4-kg-0688400423/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/substral-rasen-starterduenger-fuer-rasenneuanlage-4-kg-fuer-ca-200-m2-0688400423/",
       "merchants": [],
       "mpn": "0688400423",
-      "name": "Substral Start Rasendünger 4 kg",
+      "name": "Substral Rasen-Starterdünger für Rasenneuanlage 4 kg für ca. 200 m²",
       "offerCount": 0,
       "priority": 9000,
       "riskTier": "critical"
@@ -2261,11 +2293,11 @@
         "gtin": "4062700682326",
         "id": "gtin:4062700682326",
         "mpn": "0688400422",
-        "name": "Substral Start Rasendünger 2 kg",
+        "name": "Substral Rasen-Starterdünger für Rasenneuanlage 2 kg für ca. 100 m²",
         "navigation": "unknown",
         "ratedAreaM2": 100,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.009Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.224Z"
       },
       "gtin": "4062700682326",
       "id": "gtin:4062700682326",
@@ -2276,10 +2308,10 @@
         "suspicious-price",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/substral-start-rasenduenger-2-kg-0688400422/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/substral-rasen-starterduenger-fuer-rasenneuanlage-2-kg-fuer-ca-100-m2-0688400422/",
       "merchants": [],
       "mpn": "0688400422",
-      "name": "Substral Start Rasendünger 2 kg",
+      "name": "Substral Rasen-Starterdünger für Rasenneuanlage 2 kg für ca. 100 m²",
       "offerCount": 0,
       "priority": 9000,
       "riskTier": "critical"
@@ -2296,7 +2328,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.849Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.372Z"
       },
       "gtin": "4062700872109",
       "id": "gtin:4062700872109",
@@ -2327,7 +2359,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 133,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:30.314Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:00.044Z"
       },
       "gtin": "4062700887479",
       "id": "gtin:4062700887479",
@@ -2357,7 +2389,7 @@
         "name": "Substral Naturen 6 in 1 Komplett-Rasendünger f. 266 m² 20 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:30.336Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:00.078Z"
       },
       "gtin": "4062700887486",
       "id": "gtin:4062700887486",
@@ -2388,7 +2420,7 @@
         "name": "Substral Naturen Bio Herbst Rasendünger 10 kg",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.379Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.417Z"
       },
       "gtin": "4062700888759",
       "id": "gtin:4062700888759",
@@ -2420,7 +2452,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 50,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.177Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.529Z"
       },
       "gtin": "4062700899991",
       "id": "gtin:4062700899991",
@@ -2444,37 +2476,6 @@
       "candidateAttributes": {
         "brand": "Gardena",
         "dataQuality": "feed",
-        "gtin": "4066407024724",
-        "id": "gtin:4066407024724",
-        "mpn": "0687070093",
-        "name": "Gardena Starter-Kit 1 x PBA 18V/45 2,5 A+ AL 18V-20",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.792Z"
-      },
-      "gtin": "4066407024724",
-      "id": "gtin:4066407024724",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/51/f9/f9/1742797803/4066407024724_90135121_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "suspicious-price",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/gardena-starter-kit-1-x-pba-18v-45-2-5-a-al-18v-20-0687070093/",
-      "merchants": [],
-      "mpn": "0687070093",
-      "name": "Gardena Starter-Kit 1 x PBA 18V/45 2,5 A+ AL 18V-20",
-      "offerCount": 0,
-      "priority": 9000,
-      "riskTier": "critical"
-    },
-    {
-      "brand": "Gardena",
-      "candidateAttributes": {
-        "brand": "Gardena",
-        "dataQuality": "feed",
         "gtin": "4066407028333",
         "id": "gtin:4066407028333",
         "mpn": "0687051414",
@@ -2482,7 +2483,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.010Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.947Z"
       },
       "gtin": "4066407028333",
       "id": "gtin:4066407028333",
@@ -2502,6 +2503,68 @@
       "riskTier": "critical"
     },
     {
+      "brand": "EcoStar",
+      "candidateAttributes": {
+        "brand": "EcoStar",
+        "dataQuality": "feed",
+        "gtin": "4067807058494",
+        "id": "gtin:4067807058494",
+        "mpn": "0692652688",
+        "name": "EcoStar Bodenschwellenrampe innen & außen für 1-flg. Tür",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:07.499Z"
+      },
+      "gtin": "4067807058494",
+      "id": "gtin:4067807058494",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/2f/06/ca/1747052615/4067807058494_90142943_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "suspicious-price",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/ecostar-bodenschwellenrampe-innen-aussen-fuer-1-flg-tuer-0692652688/",
+      "merchants": [],
+      "mpn": "0692652688",
+      "name": "EcoStar Bodenschwellenrampe innen & außen für 1-flg. Tür",
+      "offerCount": 0,
+      "priority": 9000,
+      "riskTier": "critical"
+    },
+    {
+      "brand": "EcoStar",
+      "candidateAttributes": {
+        "brand": "EcoStar",
+        "dataQuality": "feed",
+        "gtin": "4067807058500",
+        "id": "gtin:4067807058500",
+        "mpn": "0692652663",
+        "name": "EcoStar Bodenschwellenrampe innen & außen für 2-flg. Tür",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:07.499Z"
+      },
+      "gtin": "4067807058500",
+      "id": "gtin:4067807058500",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/be/86/35/1747052637/4067807058500_90142948_1920x980.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "suspicious-price",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/ecostar-bodenschwellenrampe-innen-aussen-fuer-2-flg-tuer-0692652663/",
+      "merchants": [],
+      "mpn": "0692652663",
+      "name": "EcoStar Bodenschwellenrampe innen & außen für 2-flg. Tür",
+      "offerCount": 0,
+      "priority": 9000,
+      "riskTier": "critical"
+    },
+    {
       "brand": "Gardena",
       "candidateAttributes": {
         "brand": "Gardena",
@@ -2512,7 +2575,7 @@
         "name": "Gardena Ersatzmesser 37 cm für Akku-Rasenmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.795Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.686Z"
       },
       "gtin": "4078500035156",
       "id": "gtin:4078500035156",
@@ -2543,7 +2606,7 @@
         "name": "Liqui Moly 2-Takt Motoröl 1:50 mischbar 100 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:29.157Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:58.450Z"
       },
       "gtin": "4100420010293",
       "id": "gtin:4100420010293",
@@ -2574,7 +2637,7 @@
         "name": "Liqui Moly 2-Takt Motoröl 250 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:28.345Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:57.297Z"
       },
       "gtin": "4100420010514",
       "id": "gtin:4100420010514",
@@ -2605,7 +2668,7 @@
         "name": "Liqui Moly 2-Takt Motoröl (Selbstmisch-Gebinde) 1 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:28.308Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:57.337Z"
       },
       "gtin": "4100420010521",
       "id": "gtin:4100420010521",
@@ -2636,7 +2699,7 @@
         "name": "Liqui Moly 2-Takt-Motoröl 150 5 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:28.675Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:57.799Z"
       },
       "gtin": "4100420011894",
       "id": "gtin:4100420011894",
@@ -2667,7 +2730,7 @@
         "name": "Liqui Moly Garten-/Wintergeräteöl 5W-30 1 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:29.840Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:59.411Z"
       },
       "gtin": "4100420012792",
       "id": "gtin:4100420012792",
@@ -2698,7 +2761,7 @@
         "name": "Liqui Moly Benzin Stabilisator 250 ml",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:28.310Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:57.346Z"
       },
       "gtin": "4100420051074",
       "id": "gtin:4100420051074",
@@ -2729,7 +2792,7 @@
         "name": "Litheli Akku SE 20 V 2,0 Ah Li-Ion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.851Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.377Z"
       },
       "gtin": "4262443060362",
       "id": "gtin:4262443060362",
@@ -2760,7 +2823,7 @@
         "name": "Primaster Akku Rasentrimmer mit Trimmercart PATF 20 V mit Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.185Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.815Z"
       },
       "gtin": "4333692862745",
       "id": "gtin:4333692862745",
@@ -2791,7 +2854,7 @@
         "name": "Worx Reinigungsset für Worx Landroid Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.519Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.617Z"
       },
       "gtin": "6924328327059",
       "id": "gtin:6924328327059",
@@ -2822,7 +2885,7 @@
         "name": "Worx Mähzonenerkennung RFID für Worx Mähroboter Vision",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.526Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.631Z"
       },
       "gtin": "6925387194422",
       "id": "gtin:6925387194422",
@@ -2846,28 +2909,27 @@
       "candidateAttributes": {
         "brand": "Worx",
         "dataQuality": "feed",
-        "gtin": "6941504408982",
-        "id": "gtin:6941504408982",
-        "mpn": "0687060346",
-        "name": "Worx Licht für Vision Cloud 2WD M650 und M800",
+        "gtin": "6941504411500",
+        "id": "gtin:6941504411500",
+        "mpn": "0687060345",
+        "name": "Worx Mährobotermodul Cut to Zero für Vision Cloud 2WD S/M",
         "navigation": "camera",
-        "obstacleDetection": true,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.226Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.228Z"
       },
-      "gtin": "6941504408982",
-      "id": "gtin:6941504408982",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/52/79/87/1767770109/6941504408982_90179609_1920x980.jpg",
+      "gtin": "6941504411500",
+      "id": "gtin:6941504411500",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/d4/39/b8/1767769208/6941504411500_90179604_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
         "missing-rated-area",
         "suspicious-price"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-licht-fuer-vision-cloud-2wd-m650-und-m800-0687060346/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-maehrobotermodul-cut-to-zero-fuer-vision-cloud-2wd-s-m-0687060345/",
       "merchants": [],
-      "mpn": "0687060346",
-      "name": "Worx Licht für Vision Cloud 2WD M650 und M800",
+      "mpn": "0687060345",
+      "name": "Worx Mährobotermodul Cut to Zero für Vision Cloud 2WD S/M",
       "offerCount": 0,
       "priority": 9000,
       "riskTier": "critical"
@@ -2883,7 +2945,7 @@
         "name": "Worx Ersatzfadenspule",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.526Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.631Z"
       },
       "gtin": "6947372510925",
       "id": "gtin:6947372510925",
@@ -2914,7 +2976,7 @@
         "name": "Suntek Ersatzmesser & Schrauben für Mähroboter - 12 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.319Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.456Z"
       },
       "gtin": "6976114900335",
       "id": "gtin:6976114900335",
@@ -2945,7 +3007,7 @@
         "name": "Suntek Mähroboter-Garage SAC1043 Kunststoff/Metall grau",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.287Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.307Z"
       },
       "gtin": "6976114901165",
       "id": "gtin:6976114901165",
@@ -2976,7 +3038,7 @@
         "name": "Robomow Erdnägel für Begrenzungskabel 50 Stück",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.125Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.790Z"
       },
       "gtin": "7290014674400",
       "id": "gtin:7290014674400",
@@ -3007,7 +3069,7 @@
         "name": "Stiga Ersatzmesser für Mähroboter der A-Serie und G-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.859Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.392Z"
       },
       "gtin": "7313324006720",
       "id": "gtin:7313324006720",
@@ -3038,7 +3100,7 @@
         "name": "Stiga Ersatzmesser 46 cm für Rasenmäher",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.801Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.696Z"
       },
       "gtin": "7313329115823",
       "id": "gtin:7313329115823",
@@ -3069,7 +3131,7 @@
         "name": "Alpina Anhängerkupplung für 84er und 98er Rasentraktoren",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.463Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.849Z"
       },
       "gtin": "8008984508446",
       "id": "gtin:8008984508446",
@@ -3094,44 +3156,13 @@
       "candidateAttributes": {
         "brand": "Stiga",
         "dataQuality": "feed",
-        "gtin": "8008984843929",
-        "id": "gtin:8008984843929",
-        "mpn": "0687070068",
-        "name": "Stiga Ersatzakku E 24 20 V / 4 Ah",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.415Z"
-      },
-      "gtin": "8008984843929",
-      "id": "gtin:8008984843929",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/7d/4c/f2/1765271731/8008984843929_0_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "suspicious-price",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/7c2cf1a82a494a31a99501f30db752b6",
-      "merchants": [],
-      "mpn": "0687070068",
-      "name": "Stiga Ersatzakku E 24 20 V / 4 Ah",
-      "offerCount": 0,
-      "priority": 9000,
-      "riskTier": "critical"
-    },
-    {
-      "brand": "Stiga",
-      "candidateAttributes": {
-        "brand": "Stiga",
-        "dataQuality": "feed",
         "gtin": "8008984844216",
         "id": "gtin:8008984844216",
         "mpn": "0687070070",
         "name": "Stiga Ersatzakku E 420 48 V / 2 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.416Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.179Z"
       },
       "gtin": "8008984844216",
       "id": "gtin:8008984844216",
@@ -3162,7 +3193,7 @@
         "name": "Stiga Schnellladegerät EC 430 F 48 V",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.395Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.148Z"
       },
       "gtin": "8008984844261",
       "id": "gtin:8008984844261",
@@ -3193,7 +3224,7 @@
         "name": "Reinigungswerkzeug Scraper 360",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.704Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.556Z"
       },
       "gtin": "8055162200043",
       "id": "gtin:8055162200043",
@@ -3224,7 +3255,7 @@
         "name": "SEGWAY Navimow Antennen-Verlängerungs-Kit für H- und I-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.187Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.169Z"
       },
       "gtin": "8720254405223",
       "id": "gtin:8720254405223",
@@ -3255,7 +3286,7 @@
         "name": "SEGWAY Mähroboter Antennen-Verlängerungskabel Navimow",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.187Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.170Z"
       },
       "gtin": "8720254406183",
       "id": "gtin:8720254406183",
@@ -3286,7 +3317,7 @@
         "name": "Segway Mähroboter Off-Road Räder für Navimow i1-Serie",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.187Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.170Z"
       },
       "gtin": "8721008412139",
       "id": "gtin:8721008412139",
@@ -3307,6 +3338,37 @@
       "riskTier": "critical"
     },
     {
+      "brand": "Navimow",
+      "candidateAttributes": {
+        "brand": "Navimow",
+        "dataQuality": "feed",
+        "gtin": "8721008412597",
+        "id": "gtin:8721008412597",
+        "mpn": "0687060339",
+        "name": "Segway Ersatzmesser-Set Navimow Assembly Plus - 12 Stück",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:09.170Z"
+      },
+      "gtin": "8721008412597",
+      "id": "gtin:8721008412597",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/c6/4b/a3/1771662642/8721008412597_90235144_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "suspicious-price",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-ersatzmesser-set-navimow-assembly-plus-12-stueck-0687060339/",
+      "merchants": [],
+      "mpn": "0687060339",
+      "name": "Segway Ersatzmesser-Set Navimow Assembly Plus - 12 Stück",
+      "offerCount": 0,
+      "priority": 9000,
+      "riskTier": "critical"
+    },
+    {
       "brand": "ANTHBOT-DE",
       "candidateAttributes": {
         "brand": "ANTHBOT-DE",
@@ -3316,7 +3378,7 @@
         "name": "Rasenmäher-Oberabdeckung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.389Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.202Z"
       },
       "id": "mpn:anthbot-de:303010221",
       "issues": [
@@ -3344,7 +3406,7 @@
         "name": "5-Klingenscheibe",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.376Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.188Z"
       },
       "id": "mpn:anthbot:210010113",
       "issues": [
@@ -3369,10 +3431,10 @@
         "dataQuality": "feed",
         "id": "mpn:anthbot:210010141",
         "mpn": "210010141",
-        "name": "15-teiliges Klingen-Kit",
+        "name": "15-teiliges Klingen-Kit - Standardkauf",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.380Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.191Z"
       },
       "id": "mpn:anthbot:210010141",
       "issues": [
@@ -3382,10 +3444,10 @@
         "suspicious-price",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fklinge%3Fvariant%3D50280681013561",
+      "merchantProductUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fklinge%3Fvariant%3D67890653659449",
       "merchants": [],
       "mpn": "210010141",
-      "name": "15-teiliges Klingen-Kit",
+      "name": "15-teiliges Klingen-Kit - Standardkauf",
       "offerCount": 0,
       "priority": 9000,
       "riskTier": "critical"
@@ -3400,7 +3462,7 @@
         "name": "Batterie für Genie/ M Serie - 2500 mAh(Genie 600/600E/M5/M5 LiDAR)",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.379Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.190Z"
       },
       "id": "mpn:anthbot:210010250",
       "issues": [
@@ -3418,36 +3480,92 @@
       "riskTier": "critical"
     },
     {
-      "brand": "Stiga",
+      "brand": "ANTHBOT",
       "candidateAttributes": {
-        "brand": "Stiga",
+        "brand": "ANTHBOT",
         "dataQuality": "feed",
-        "gtin": "8008984852600",
-        "id": "gtin:8008984852600",
-        "mpn": "0687051289",
-        "name": "Stiga Akku Rasentraktor Estate 584e, 48 V, 84 cm Schnittbreite",
+        "id": "mpn:anthbot:304020278",
+        "mpn": "304020278",
+        "name": "Grass Collector Blades",
         "navigation": "unknown",
-        "ratedAreaM2": 4000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.797Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.206Z"
       },
-      "gtin": "8008984852600",
-      "id": "gtin:8008984852600",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/7b/42/52/1765274960/8008984852600_3669237_1280x1280.jpg",
+      "id": "mpn:anthbot:304020278",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
+        "missing-rated-area",
+        "suspicious-price",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasentraktor-estate-584e-48-v-84-cm-schnittbreite-0687051289/",
+      "merchantProductUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fgrass-collector-blades%3Fvariant%3D67968510984505",
+      "merchants": [],
+      "mpn": "304020278",
+      "name": "Grass Collector Blades",
+      "offerCount": 0,
+      "priority": 9000,
+      "riskTier": "critical"
+    },
+    {
+      "brand": "ANTHBOT",
+      "candidateAttributes": {
+        "brand": "ANTHBOT",
+        "dataQuality": "feed",
+        "id": "mpn:anthbot:304020279",
+        "mpn": "304020279",
+        "name": "Mulching Blades - Standardkauf",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:04:56.206Z"
+      },
+      "id": "mpn:anthbot:304020279",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "suspicious-price",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fmulching-blades%3Fvariant%3D67968752582969",
+      "merchants": [],
+      "mpn": "304020279",
+      "name": "Mulching Blades - Standardkauf",
+      "offerCount": 0,
+      "priority": 9000,
+      "riskTier": "critical"
+    },
+    {
+      "brand": "Scheppach",
+      "candidateAttributes": {
+        "brand": "Scheppach",
+        "dataQuality": "feed",
+        "gtin": "4046664317227",
+        "id": "gtin:4046664317227",
+        "mpn": "0687900326",
+        "name": "Scheppach Kompakttraktor MT25 Allrad 25 PS Diesel 560 kg Hubkraft Straßenzulassung",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:10.394Z"
+      },
+      "gtin": "4046664317227",
+      "id": "gtin:4046664317227",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/e1/3c/62/1786977956/4046664317227_90291017_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/scheppach-kompakttraktor-mt25-allrad-25-ps-diesel-560-kg-hubkraft-strassenzulassung-0687900326/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
-      "minBasePriceEur": 4399,
-      "mpn": "0687051289",
-      "name": "Stiga Akku Rasentraktor Estate 584e, 48 V, 84 cm Schnittbreite",
+      "minBasePriceEur": 7999,
+      "mpn": "0687900326",
+      "name": "Scheppach Kompakttraktor MT25 Allrad 25 PS Diesel 560 kg Hubkraft Straßenzulassung",
       "offerCount": 1,
-      "priority": 550,
+      "priority": 910,
       "riskTier": "normal"
     },
     {
@@ -3461,7 +3579,7 @@
         "name": "Stiga Benzin Rasentraktor Estate 598, 7,9 kW, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.798Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.693Z"
       },
       "gtin": "8008984852341",
       "id": "gtin:8008984852341",
@@ -3495,7 +3613,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.799Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.693Z"
       },
       "gtin": "8008984852617",
       "id": "gtin:8008984852617",
@@ -3521,72 +3639,6 @@
       "candidateAttributes": {
         "brand": "Alpina GGP",
         "dataQuality": "feed",
-        "gtin": "8008984869752",
-        "id": "gtin:8008984869752",
-        "mpn": "0687051374",
-        "name": "Alpina Rasentraktor AT6 98 HWA 98 cm Schnittbreite Zweizylinder Motor inkl. Mulchfunktion",
-        "navigation": "unknown",
-        "ratedAreaM2": 6500,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.560Z"
-      },
-      "gtin": "8008984869752",
-      "id": "gtin:8008984869752",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/78/f7/62/1734425123/8008984869752_90114376_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/alpina-rasentraktor-at6-98-hwa-98-cm-schnittbreite-zweizylinder-motor-inkl-mulchfunktion-0687051374/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 3999,
-      "mpn": "0687051374",
-      "name": "Alpina Rasentraktor AT6 98 HWA 98 cm Schnittbreite Zweizylinder Motor inkl. Mulchfunktion",
-      "offerCount": 1,
-      "priority": 510,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Stiga",
-      "candidateAttributes": {
-        "brand": "Stiga",
-        "dataQuality": "feed",
-        "gtin": "8008984852594",
-        "id": "gtin:8008984852594",
-        "mpn": "0687051305",
-        "name": "Stiga Akku Rasentraktor Tornado 398e, 48 V, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.794Z"
-      },
-      "gtin": "8008984852594",
-      "id": "gtin:8008984852594",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/90/ec/e9/1678236505/08008984852594_3669365_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasentraktor-tornado-398e-48-v-98-cm-schnittbreite-inkl-mulchkit-anhaengerkupplung-0687051305/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 3895,
-      "mpn": "0687051305",
-      "name": "Stiga Akku Rasentraktor Tornado 398e, 48 V, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
-      "offerCount": 1,
-      "priority": 500,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Alpina GGP",
-      "candidateAttributes": {
-        "brand": "Alpina GGP",
-        "dataQuality": "feed",
         "gtin": "8008984851467",
         "id": "gtin:8008984851467",
         "mpn": "0687051373",
@@ -3594,7 +3646,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 5000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.560Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.979Z"
       },
       "gtin": "8008984851467",
       "id": "gtin:8008984851467",
@@ -3626,7 +3678,7 @@
         "name": "Stiga Akku-Rasentraktor Swift 372e inkl. 4x5 Ah Akku (48 Volt)",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.396Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.433Z"
       },
       "gtin": "8008984873339",
       "id": "gtin:8008984873339",
@@ -3649,39 +3701,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Stiga",
-      "candidateAttributes": {
-        "brand": "Stiga",
-        "dataQuality": "feed",
-        "gtin": "8008984852587",
-        "id": "gtin:8008984852587",
-        "mpn": "0687051286",
-        "name": "Stiga Akku Rasentraktor Estate 384e, 48 V, 84 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
-        "navigation": "unknown",
-        "ratedAreaM2": 3000,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.801Z"
-      },
-      "gtin": "8008984852587",
-      "id": "gtin:8008984852587",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/2f/ba/15/1769757410/8008984852587_90226044_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasentraktor-estate-384e-48-v-84-cm-schnittbreite-inkl-mulchkit-anhaengerkupplung-0687051286/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 3199,
-      "mpn": "0687051286",
-      "name": "Stiga Akku Rasentraktor Estate 384e, 48 V, 84 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
-      "offerCount": 1,
-      "priority": 430,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Güde",
       "candidateAttributes": {
         "brand": "Güde",
@@ -3692,7 +3711,7 @@
         "name": "Güde Aufsitzrasenmäher Zero Turn GZT 1070",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.771Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.258Z"
       },
       "gtin": "4015671448309",
       "id": "gtin:4015671448309",
@@ -3726,7 +3745,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 6000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.817Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.998Z"
       },
       "gtin": "4003718356892",
       "id": "gtin:4003718356892",
@@ -3759,7 +3778,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 5000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.592Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.675Z"
       },
       "gtin": "4046664289562",
       "id": "gtin:4046664289562",
@@ -3792,7 +3811,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.406Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.162Z"
       },
       "gtin": "8008984851450",
       "id": "gtin:8008984851450",
@@ -3825,7 +3844,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 6000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.798Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.693Z"
       },
       "gtin": "8008984852471",
       "id": "gtin:8008984852471",
@@ -3847,39 +3866,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Palmako",
-      "candidateAttributes": {
-        "brand": "Palmako",
-        "dataQuality": "feed",
-        "gtin": "4743142032466",
-        "id": "gtin:4743142032466",
-        "maxSlopePercent": 8.4,
-        "mpn": "0784104900",
-        "name": "Palmako Gartenhaus Lila 2 390 x 276 cm naturbelassen",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.631Z"
-      },
-      "gtin": "4743142032466",
-      "id": "gtin:4743142032466",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/6b/d1/c5/1736854397/4743142032466_90123399_1920x980.jpg",
-      "issues": [
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/palmako-gartenhaus-lila-2-390-x-276-cm-naturbelassen-0784104900/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 2499,
-      "mpn": "0784104900",
-      "name": "Palmako Gartenhaus Lila 2 390 x 276 cm naturbelassen",
-      "offerCount": 1,
-      "priority": 360,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Stiga",
       "candidateAttributes": {
         "brand": "Stiga",
@@ -3890,7 +3876,7 @@
         "name": "Stiga Benzin Rasentraktor Estate 384 6,8 kW, 84 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.414Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.177Z"
       },
       "gtin": "8008984852303",
       "id": "gtin:8008984852303",
@@ -3924,7 +3910,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.145Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.822Z"
       },
       "gtin": "4003718356540",
       "id": "gtin:4003718356540",
@@ -3956,7 +3942,7 @@
         "name": "Alpina Rasentraktor AT3 98 HA 7,1 kW, 98 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.403Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.157Z"
       },
       "gtin": "8008984851559",
       "id": "gtin:8008984851559",
@@ -3989,7 +3975,7 @@
         "name": "Alpina Benzin Rasentraktor AT3 108 HA, 7,5 kW, 65 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.802Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.696Z"
       },
       "gtin": "8008984860667",
       "id": "gtin:8008984860667",
@@ -4023,7 +4009,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.582Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.665Z"
       },
       "gtin": "4003718067118",
       "id": "gtin:4003718067118",
@@ -4055,7 +4041,7 @@
         "name": "Güde Benzin-Rasentraktor GAR 960 T 8,2 kW 96 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.859Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.769Z"
       },
       "gtin": "4015671576040",
       "id": "gtin:4015671576040",
@@ -4088,7 +4074,7 @@
         "name": "Alpina Rasentraktor AT4 84 A 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.401Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.156Z"
       },
       "gtin": "8008984851337",
       "id": "gtin:8008984851337",
@@ -4111,39 +4097,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Palmako",
-      "candidateAttributes": {
-        "brand": "Palmako",
-        "dataQuality": "feed",
-        "gtin": "4743142032411",
-        "id": "gtin:4743142032411",
-        "maxSlopePercent": 8.4,
-        "mpn": "0784104885",
-        "name": "Palmako Gartenhaus Lila 1 306 x 276 cm naturbelassen",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.631Z"
-      },
-      "gtin": "4743142032411",
-      "id": "gtin:4743142032411",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/67/e5/c0/1736854409/4743142032411_90123396_1920x980.jpg",
-      "issues": [
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/palmako-gartenhaus-lila-1-306-x-276-cm-naturbelassen-0784104885/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 2239,
-      "mpn": "0784104885",
-      "name": "Palmako Gartenhaus Lila 1 306 x 276 cm naturbelassen",
-      "offerCount": 1,
-      "priority": 334,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -4154,7 +4107,7 @@
         "name": "AL-KO Benzin-Rasentraktor Comfort 14-92.6 HDS-A 8,8 kW 92 cm Schnittbreite Seitenauswurf",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.665Z"
       },
       "gtin": "4003718067125",
       "id": "gtin:4003718067125",
@@ -4184,10 +4137,10 @@
         "gtin": "8008984851344",
         "id": "gtin:8008984851344",
         "mpn": "0687051236",
-        "name": "Alpina Rasentraktor AT4 84 HA 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit",
+        "name": "Alpina Rasentraktor AT4 84 HA 6,3 kW, 84 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.392Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.145Z"
       },
       "gtin": "8008984851344",
       "id": "gtin:8008984851344",
@@ -4198,13 +4151,13 @@
         "missing-rated-area",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/alpina-rasentraktor-at4-84-ha-5-8-kw-84-cm-schnittbreite-inkl-mulchkit-0687051236/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/alpina-rasentraktor-at4-84-ha-6-3-kw-84-cm-schnittbreite-inkl-mulchkit-0687051236/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 2194,
       "mpn": "0687051236",
-      "name": "Alpina Rasentraktor AT4 84 HA 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit",
+      "name": "Alpina Rasentraktor AT4 84 HA 6,3 kW, 84 cm Schnittbreite, inkl. Mulchkit",
       "offerCount": 1,
       "priority": 329,
       "riskTier": "normal"
@@ -4221,7 +4174,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.112Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.778Z"
       },
       "gtin": "4003718356533",
       "id": "gtin:4003718356533",
@@ -4253,7 +4206,7 @@
         "name": "Stiga Rasentraktor Estate 384 M 5,8 kW, 84 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.525Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.311Z"
       },
       "gtin": "8008984852198",
       "id": "gtin:8008984852198",
@@ -4276,39 +4229,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Al-Ko",
-      "candidateAttributes": {
-        "brand": "Al-Ko",
-        "dataQuality": "feed",
-        "gtin": "4003718067095",
-        "id": "gtin:4003718067095",
-        "mpn": "0687051427",
-        "name": "AL-KO Benzin-Rasentraktor Easy 13-86.6 M-A 7,2 kW 86 cm Schnittbreite Heckauswurf",
-        "navigation": "unknown",
-        "ratedAreaM2": 3500,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
-      },
-      "gtin": "4003718067095",
-      "id": "gtin:4003718067095",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a5/0f/d1/1772618410/4003718067095_90227325_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/-al-ko-benzin-rasentraktor-easy-13-86-6-m-a-7-2-kw-86-cm-schnittbreite-heckauswurf-0687051427/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 1999.89,
-      "mpn": "0687051427",
-      "name": "AL-KO Benzin-Rasentraktor Easy 13-86.6 M-A 7,2 kW 86 cm Schnittbreite Heckauswurf",
-      "offerCount": 1,
-      "priority": 310,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Güde",
       "candidateAttributes": {
         "brand": "Güde",
@@ -4320,7 +4240,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.771Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.258Z"
       },
       "gtin": "4015671510891",
       "id": "gtin:4015671510891",
@@ -4353,7 +4273,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 5000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.541Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.655Z"
       },
       "gtin": "4015671999085",
       "id": "gtin:4015671999085",
@@ -4386,7 +4306,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 4500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.590Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.014Z"
       },
       "gtin": "8008984830691",
       "id": "gtin:8008984830691",
@@ -4418,7 +4338,7 @@
         "name": "Stiga Rasentraktor TORNADO 398 7,5 kW, 98 cm Schnittbreite, inkl. Mulchkit & Anhängerkupplung",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.412Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.175Z"
       },
       "gtin": "8008984852327",
       "id": "gtin:8008984852327",
@@ -4451,7 +4371,7 @@
         "name": "Canopia Gerätehaus Rubicon Alu grau 603 x 227 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.800Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.296Z"
       },
       "gtin": "7290108613872",
       "id": "gtin:7290108613872",
@@ -4466,7 +4386,7 @@
       "merchants": [
         "Globus Baumarkt DE"
       ],
-      "minBasePriceEur": 1947,
+      "minBasePriceEur": 1946,
       "mpn": "0692652469",
       "name": "Canopia Gerätehaus Rubicon Alu grau 603 x 227 cm",
       "offerCount": 1,
@@ -4484,7 +4404,7 @@
         "name": "AL-KO Benzin-Rasentraktor Easy 13-92.6 CS-A 7,2 kW 92 cm Schnittbreite Seitenauswurf",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.665Z"
       },
       "gtin": "4003718067101",
       "id": "gtin:4003718067101",
@@ -4517,7 +4437,7 @@
         "name": "Alpina Rasentraktor AT2 66QA",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.407Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.163Z"
       },
       "gtin": "8008984851313",
       "id": "gtin:8008984851313",
@@ -4551,7 +4471,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 900,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.566Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.999Z"
       },
       "gtin": "8008984866157",
       "id": "gtin:8008984866157",
@@ -4583,7 +4503,7 @@
         "name": "Canopia Gerätehaus Rubicon Alu grau 528 x 227 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.800Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.296Z"
       },
       "gtin": "7290108613865",
       "id": "gtin:7290108613865",
@@ -4618,7 +4538,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 3000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.771Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.258Z"
       },
       "gtin": "4015671430960",
       "id": "gtin:4015671430960",
@@ -4649,7 +4569,7 @@
         "name": "Alpina Rasentraktor AT3 98 A 6,5 kW, 98 cm Schnittbreite, inkl. Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.415Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.179Z"
       },
       "gtin": "8008984851177",
       "id": "gtin:8008984851177",
@@ -4683,7 +4603,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.395Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.148Z"
       },
       "gtin": "8008984852174",
       "id": "gtin:8008984852174",
@@ -4705,6 +4625,72 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Canopia",
+      "candidateAttributes": {
+        "brand": "Canopia",
+        "dataQuality": "feed",
+        "gtin": "7290108614756",
+        "id": "gtin:7290108614756",
+        "mpn": "0784105097",
+        "name": "Canopia Gerätehaus Rubicon 8x13 mit Solar LED Kit grau 227 x 377 cm",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:10.720Z",
+        "waterProtection": "IP65"
+      },
+      "gtin": "7290108614756",
+      "id": "gtin:7290108614756",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/c6/dd/06/1793266236/7290108614756_90313053_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/canopia-geraetehaus-rubicon-8x13-mit-solar-led-kit-grau-227-x-377-cm-0784105097/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 1499,
+      "mpn": "0784105097",
+      "name": "Canopia Gerätehaus Rubicon 8x13 mit Solar LED Kit grau 227 x 377 cm",
+      "offerCount": 1,
+      "priority": 260,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Woodster",
+      "candidateAttributes": {
+        "brand": "Woodster",
+        "dataQuality": "feed",
+        "gtin": "4046664259466",
+        "id": "gtin:4046664259466",
+        "mpn": "0687051375",
+        "name": "Woodster Benzin-Aufsitzrasenmäher BRLM610-230 4,4 kW 61 cm Schnittbreite",
+        "navigation": "rtk",
+        "ratedAreaM2": 2600,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:07.172Z"
+      },
+      "gtin": "4046664259466",
+      "id": "gtin:4046664259466",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/67/55/9c/1742209209/4046664259466_90134848_1920x980.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/woodster-benzin-aufsitzrasenmaeher-brlm610-230-4-4-kw-61-cm-schnittbreite-0687051375/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 1399,
+      "mpn": "0687051375",
+      "name": "Woodster Benzin-Aufsitzrasenmäher BRLM610-230 4,4 kW 61 cm Schnittbreite",
+      "offerCount": 1,
+      "priority": 250,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Stiga",
       "candidateAttributes": {
         "brand": "Stiga",
@@ -4716,16 +4702,16 @@
         "navigation": "rtk",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.403Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.440Z"
       },
       "gtin": "8008984872080",
       "id": "gtin:8008984872080",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/06/d8/cd/1773069422/8008984872080_90244105_1920x980.jpg",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/c7/9b/a9/1770455799/8008984872080_90228849_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/bded1321a26d487982ec2b3246853ecb",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-a-10v-kamera-rtk-0687060373/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -4734,36 +4720,6 @@
       "name": "Stiga Mähroboter A 10v Kamera & RTK",
       "offerCount": 1,
       "priority": 250,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "dataQuality": "feed",
-        "gtin": "194644290672",
-        "id": "gtin:194644290672",
-        "name": "eufy Set - mit Mähroboter E18, gratis Garage, 4 SoloCam S220 Außenkameras + Permanent Outdoor Light 15m",
-        "navigation": "camera",
-        "ratedAreaM2": 1200,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.845Z"
-      },
-      "gtin": "194644290672",
-      "id": "gtin:194644290672",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel4_32.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-maehroboter-e18-gratis-garage-solocam-s220-4er-set-permanent-outdoor-light-15m",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 1249,
-      "name": "eufy Set - mit Mähroboter E18, gratis Garage, 4 SoloCam S220 Außenkameras + Permanent Outdoor Light 15m",
-      "offerCount": 2,
-      "priority": 245,
       "riskTier": "normal"
     },
     {
@@ -4778,7 +4734,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 700,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.811Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.988Z"
       },
       "gtin": "8008984865846",
       "id": "gtin:8008984865846",
@@ -4800,33 +4756,35 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Woodster",
+      "brand": "Canopia",
       "candidateAttributes": {
-        "brand": "Woodster",
+        "brand": "Canopia",
         "dataQuality": "feed",
-        "gtin": "4046664259466",
-        "id": "gtin:4046664259466",
-        "mpn": "0687051375",
-        "name": "Woodster Benzin-Aufsitzrasenmäher BRLM610-230 4,4 kW 61 cm Schnittbreite",
-        "navigation": "rtk",
-        "ratedAreaM2": 2600,
+        "gtin": "7290108614749",
+        "id": "gtin:7290108614749",
+        "mpn": "0784105096",
+        "name": "Canopia Gerätehaus Rubicon 8x10 mit Solar LED Kit grau 237,1 x 302,7 cm",
+        "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.710Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.720Z",
+        "waterProtection": "IP65"
       },
-      "gtin": "4046664259466",
-      "id": "gtin:4046664259466",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/67/55/9c/1742209209/4046664259466_90134848_1920x980.jpg",
+      "gtin": "7290108614749",
+      "id": "gtin:7290108614749",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fe/60/44/1793266345/7290108614749_90312590_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
-        "missing-passage-width"
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/woodster-benzin-aufsitzrasenmaeher-brlm610-230-4-4-kw-61-cm-schnittbreite-0687051375/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/canopia-geraetehaus-rubicon-8x10-mit-solar-led-kit-grau-237-1-x-302-7-cm-0784105096/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 1199,
-      "mpn": "0687051375",
-      "name": "Woodster Benzin-Aufsitzrasenmäher BRLM610-230 4,4 kW 61 cm Schnittbreite",
+      "mpn": "0784105096",
+      "name": "Canopia Gerätehaus Rubicon 8x10 mit Solar LED Kit grau 237,1 x 302,7 cm",
       "offerCount": 1,
       "priority": 230,
       "riskTier": "normal"
@@ -4838,18 +4796,18 @@
         "dataQuality": "feed",
         "gtin": "8008984872073",
         "id": "gtin:8008984872073",
+        "maxSlopePercent": 45,
         "mpn": "0687060372",
         "name": "Stiga Mähroboter A 8v Kamera & RTK",
         "navigation": "rtk",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.402Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.440Z"
       },
       "gtin": "8008984872073",
       "id": "gtin:8008984872073",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ed/61/a6/1773069508/8008984872073_90244104_1920x980.jpg",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/99/64/88/1770454821/8008984872073_90228832_1280x1280.jpg",
       "issues": [
-        "missing-or-ambiguous-slope",
         "missing-passage-width"
       ],
       "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-maehroboter-a-8v-kamera-rtk-0687060372/",
@@ -4864,67 +4822,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Husqvarna",
-      "candidateAttributes": {
-        "brand": "Husqvarna",
-        "dataQuality": "feed",
-        "gtin": "7333377775954",
-        "id": "gtin:7333377775954",
-        "name": "Husqvarna Automower 308V (2026) bis 800 m² + gratis Garage",
-        "navigation": "unknown",
-        "ratedAreaM2": 800,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.917Z"
-      },
-      "gtin": "7333377775954",
-      "id": "gtin:7333377775954",
-      "imageUrl": "https://www.tink.de/cdn/406753/media/catalog/product/t/i/titel1_3_171.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/husqvarna-automower-308v-2026-kabelloser-maehroboter-fuer-bis-zu-800-m-garage",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 1159.95,
-      "name": "Husqvarna Automower 308V (2026) bis 800 m² + gratis Garage",
-      "offerCount": 1,
-      "priority": 226,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "dataQuality": "feed",
-        "gtin": "0194644311179",
-        "id": "gtin:0194644311179",
-        "name": "eufy Set - mit Mähroboter E15 (kabellos bis 800 m²) + gratis Garage + gratis Ersatzklingenbox",
-        "navigation": "camera",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.916Z"
-      },
-      "gtin": "0194644311179",
-      "id": "gtin:0194644311179",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titel1_3_107_-_e15_mit_klinge_1.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-set-mit-maehroboter-e15-fuer-bis-zu-800-m-garage-ersatzklingenbox",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 949,
-      "name": "eufy Set - mit Mähroboter E15 (kabellos bis 800 m²) + gratis Garage + gratis Ersatzklingenbox",
-      "offerCount": 2,
-      "priority": 215,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Stiga",
       "candidateAttributes": {
         "brand": "Stiga",
@@ -4936,7 +4833,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 450,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.566Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.999Z"
       },
       "gtin": "8008984868014",
       "id": "gtin:8008984868014",
@@ -4958,40 +4855,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Navimow",
-      "candidateAttributes": {
-        "brand": "Navimow",
-        "dataQuality": "feed",
-        "gtin": "4333692994392",
-        "id": "gtin:4333692994392",
-        "maxCutHeightCm": 7,
-        "minCutHeightCm": 2,
-        "mpn": "0687060387",
-        "name": "Segway Mähroboter Navimow i210E Lidar 21,6 V 22 cm Schnittbreite 1000 m² inkl. Garage",
-        "navigation": "lidar",
-        "ratedAreaM2": 1000,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.604Z"
-      },
-      "gtin": "4333692994392",
-      "id": "gtin:4333692994392",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0a/65/3d/1772609419/4333692994392_90241710_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i210e-lidar-21-6-v-22-cm-schnittbreite-1000-m2-inkl-garage-0687060387/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 999,
-      "mpn": "0687060387",
-      "name": "Segway Mähroboter Navimow i210E Lidar 21,6 V 22 cm Schnittbreite 1000 m² inkl. Garage",
-      "offerCount": 1,
-      "priority": 210,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -5003,7 +4866,7 @@
         "name": "AL-KO Benzin-Balkenmäher BM 875 IV 2,7 kW 87 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.598Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.681Z"
       },
       "gtin": "4003718065831",
       "id": "gtin:4003718065831",
@@ -5037,7 +4900,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.226Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.227Z"
       },
       "gtin": "6941504400375",
       "id": "gtin:6941504400375",
@@ -5057,65 +4920,67 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Navimow",
+      "brand": "Hercutec",
       "candidateAttributes": {
-        "brand": "Navimow",
+        "brand": "Hercutec",
         "dataQuality": "feed",
-        "gtin": "8721264220356",
-        "id": "gtin:8721264220356",
-        "mpn": "0687060341",
-        "name": "Segway Mähroboter Navimow i208 AWD 18cm/800m² mit APP",
-        "navigation": "wire",
-        "ratedAreaM2": 800,
+        "gtin": "4260430020047",
+        "id": "gtin:4260430020047",
+        "mpn": "20-002-SF60-HE",
+        "name": "Hercutec 2 Takt Gemisch 200 L",
+        "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.350Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.510Z"
       },
-      "gtin": "8721264220356",
-      "id": "gtin:8721264220356",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/4d/11/1c/1779782404/8721264220356_90235194_1280x1280.jpg",
+      "gtin": "4260430020047",
+      "id": "gtin:4260430020047",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/99/d8/77/1790595971/4260430020047_90303979_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
-        "missing-passage-width"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i208-awd-18cm-800m2-mit-app-0687060341/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 998,
-      "mpn": "0687060341",
-      "name": "Segway Mähroboter Navimow i208 AWD 18cm/800m² mit APP",
-      "offerCount": 1,
-      "priority": 210,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Ecovacs",
-      "candidateAttributes": {
-        "brand": "Ecovacs",
-        "dataQuality": "feed",
-        "gtin": "6970135038169",
-        "id": "gtin:6970135038169",
-        "maxSlopePercent": 45,
-        "mpn": "0687060354",
-        "name": "Ecovacs Mähroboter GOAT O1200 LiDAR Pro - 22 cm Schnittbreite 1200 m² inkl. Ladestation",
-        "navigation": "lidar",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.328Z"
-      },
-      "gtin": "6970135038169",
-      "id": "gtin:6970135038169",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/9d/d9/03/1774442792/6970135038169_90249729_1280x1280.jpg",
-      "issues": [
         "missing-passage-width",
-        "missing-rated-area"
+        "missing-rated-area",
+        "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/ecovacs-maehroboter-goat-o1200-lidar-pro-22-cm-schnittbreite-1200-m2-inkl-ladestation-0687060354/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/hercutec-2-takt-gemisch-200-l-0687051204/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 899,
-      "mpn": "0687060354",
-      "name": "Ecovacs Mähroboter GOAT O1200 LiDAR Pro - 22 cm Schnittbreite 1200 m² inkl. Ladestation",
+      "mpn": "20-002-SF60-HE",
+      "name": "Hercutec 2 Takt Gemisch 200 L",
+      "offerCount": 1,
+      "priority": 200,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Hercutec",
+      "candidateAttributes": {
+        "brand": "Hercutec",
+        "dataQuality": "feed",
+        "gtin": "4260430020092",
+        "id": "gtin:4260430020092",
+        "mpn": "20-002-SF60-HE",
+        "name": "Hercutec 4 Takt Sonderkraftstoff 200 L",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:05.510Z"
+      },
+      "gtin": "4260430020092",
+      "id": "gtin:4260430020092",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/e1/03/32/1790595996/4260430020092_90303981_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/hercutec-4-takt-sonderkraftstoff-200-l-0687051202/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 899,
+      "mpn": "20-002-SF60-HE",
+      "name": "Hercutec 4 Takt Sonderkraftstoff 200 L",
       "offerCount": 1,
       "priority": 200,
       "riskTier": "normal"
@@ -5131,7 +4996,7 @@
         "name": "Canopia Gerätehaus Rubicon Alu grau 304 x 185 cm",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.801Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.296Z"
       },
       "gtin": "7290108611885",
       "id": "gtin:7290108611885",
@@ -5146,7 +5011,7 @@
       "merchants": [
         "Globus Baumarkt DE"
       ],
-      "minBasePriceEur": 897,
+      "minBasePriceEur": 896,
       "mpn": "0692652462",
       "name": "Canopia Gerätehaus Rubicon Alu grau 304 x 185 cm",
       "offerCount": 1,
@@ -5166,7 +5031,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 650,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.226Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.227Z"
       },
       "gtin": "6941504407046",
       "id": "gtin:6941504407046",
@@ -5197,7 +5062,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.408Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.165Z"
       },
       "gtin": "8008984852907",
       "id": "gtin:8008984852907",
@@ -5207,7 +5072,7 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/ac16a7267ab64d568b97069feac9ec3d",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasenmaeher-collector-548e-s-48-v-46-cm-schnittbreite-0687051248/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -5229,7 +5094,7 @@
         "name": "Einhell Mähroboter Freelexo Cam Plus 600",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.724Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.191Z"
       },
       "gtin": "4006825678413",
       "id": "gtin:4006825678413",
@@ -5258,11 +5123,11 @@
         "gtin": "4046664215684",
         "id": "gtin:4046664215684",
         "mpn": "0687051383",
-        "name": "Scheppach Balkenmäher BMS196-8 4,2 kW 88 cm Schnittbreite",
+        "name": "Scheppach Balkenmäher BMS196-88 4,2 kW 88 cm Schnittbreite",
         "navigation": "unknown",
         "ratedAreaM2": 3000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.350Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.383Z"
       },
       "gtin": "4046664215684",
       "id": "gtin:4046664215684",
@@ -5272,113 +5137,13 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/scheppach-balkenmaeher-bms196-8-4-2-kw-88-cm-schnittbreite-0687051383/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/scheppach-balkenmaeher-bms196-88-4-2-kw-88-cm-schnittbreite-0687051383/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 799,
       "mpn": "0687051383",
-      "name": "Scheppach Balkenmäher BMS196-8 4,2 kW 88 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 190,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Hercutec",
-      "candidateAttributes": {
-        "brand": "Hercutec",
-        "dataQuality": "feed",
-        "gtin": "4260430020047",
-        "id": "gtin:4260430020047",
-        "mpn": "20-002-SF60-HE",
-        "name": "Hercutec 2 Takt Gemisch 200 L",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.437Z"
-      },
-      "gtin": "4260430020047",
-      "id": "gtin:4260430020047",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0a/30/74/1789393515/4260430020047_90300622_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/hercutec-2-takt-gemisch-200-l-0687051204/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 799,
-      "mpn": "20-002-SF60-HE",
-      "name": "Hercutec 2 Takt Gemisch 200 L",
-      "offerCount": 1,
-      "priority": 190,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Hercutec",
-      "candidateAttributes": {
-        "brand": "Hercutec",
-        "dataQuality": "feed",
-        "gtin": "4260430020092",
-        "id": "gtin:4260430020092",
-        "mpn": "20-002-SF60-HE",
-        "name": "Hercutec 4 Takt Sonderkraftstoff 200 L",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.437Z"
-      },
-      "gtin": "4260430020092",
-      "id": "gtin:4260430020092",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/5f/50/33/1695815115/4260430020092_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/hercutec-4-takt-sonderkraftstoff-200-l-0687051202/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 799,
-      "mpn": "20-002-SF60-HE",
-      "name": "Hercutec 4 Takt Sonderkraftstoff 200 L",
-      "offerCount": 1,
-      "priority": 190,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Navimow",
-      "candidateAttributes": {
-        "brand": "Navimow",
-        "dataQuality": "feed",
-        "gtin": "4333692994354",
-        "id": "gtin:4333692994354",
-        "maxCutHeightCm": 6,
-        "minCutHeightCm": 2,
-        "mpn": "0687060386",
-        "name": "Segway Mähroboter Navimow i206E AWD 21,6 V 18 cm Schnittbreite 600 m² inkl. Garage",
-        "navigation": "rtk",
-        "ratedAreaM2": 600,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.604Z"
-      },
-      "gtin": "4333692994354",
-      "id": "gtin:4333692994354",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/25/00/0b/1772609413/4333692994354_90241709_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i206e-awd-21-6-v-18-cm-schnittbreite-600-m2-inkl-garage-0687060386/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 799,
-      "mpn": "0687060386",
-      "name": "Segway Mähroboter Navimow i206E AWD 21,6 V 18 cm Schnittbreite 600 m² inkl. Garage",
+      "name": "Scheppach Balkenmäher BMS196-88 4,2 kW 88 cm Schnittbreite",
       "offerCount": 1,
       "priority": 190,
       "riskTier": "normal"
@@ -5394,7 +5159,7 @@
         "name": "STIGA Benzin-Balkenmäher SILEX 87 G",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.397Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.433Z"
       },
       "gtin": "8008984813960",
       "id": "gtin:8008984813960",
@@ -5427,7 +5192,7 @@
         "name": "Alko Mähroboter Robolinho 550 W 20 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.963Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.895Z"
       },
       "gtin": "4003718356694",
       "id": "gtin:4003718356694",
@@ -5454,33 +5219,63 @@
       "candidateAttributes": {
         "brand": "Navimow",
         "dataQuality": "feed",
-        "gtin": "4333692994231",
-        "id": "gtin:4333692994231",
+        "gtin": "4333692994354",
+        "id": "gtin:4333692994354",
         "maxCutHeightCm": 6,
         "minCutHeightCm": 2,
-        "mpn": "0687060385",
-        "name": "Segway Mähroboter Navimow i105E 22,6 V 18 cm Schnittbreite 500 m² inkl. Garage",
-        "navigation": "camera",
-        "ratedAreaM2": 500,
+        "mpn": "0687060386",
+        "name": "Segway Mähroboter Navimow i206E AWD 21,6 V 18 cm Schnittbreite 600 m² inkl. Garage",
+        "navigation": "rtk",
+        "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.604Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.689Z"
       },
-      "gtin": "4333692994231",
-      "id": "gtin:4333692994231",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fe/62/db/1772609411/4333692994231_90241708_1280x1280.jpg",
+      "gtin": "4333692994354",
+      "id": "gtin:4333692994354",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/25/00/0b/1772609413/4333692994354_90241709_1920x980.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i105e-22-6-v-18-cm-schnittbreite-500-m2-inkl-garage-0687060385/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i206e-awd-21-6-v-18-cm-schnittbreite-600-m2-inkl-garage-0687060386/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 729,
-      "mpn": "0687060385",
-      "name": "Segway Mähroboter Navimow i105E 22,6 V 18 cm Schnittbreite 500 m² inkl. Garage",
+      "mpn": "0687060386",
+      "name": "Segway Mähroboter Navimow i206E AWD 21,6 V 18 cm Schnittbreite 600 m² inkl. Garage",
       "offerCount": 1,
       "priority": 183,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Roborock",
+      "candidateAttributes": {
+        "brand": "Roborock",
+        "dataQuality": "feed",
+        "gtin": "6978830020915",
+        "id": "gtin:6978830020915",
+        "name": "Roborock RockNeo Q208 LiDAR - kabelloser Mähroboter, bis 800 m² - Grau",
+        "navigation": "lidar",
+        "ratedAreaM2": 800,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:04:56.620Z"
+      },
+      "gtin": "6978830020915",
+      "id": "gtin:6978830020915",
+      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/t/i/titel_14_27.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/roborock-rockneo-q208-lidar-kabelloser-m-hroboter-bis-800-m?opt_92=3",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 699,
+      "name": "Roborock RockNeo Q208 LiDAR - kabelloser Mähroboter, bis 800 m² - Grau",
+      "offerCount": 1,
+      "priority": 180,
       "riskTier": "normal"
     },
     {
@@ -5495,7 +5290,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.561Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.987Z"
       },
       "gtin": "8008984868281",
       "id": "gtin:8008984868281",
@@ -5527,7 +5322,7 @@
         "name": "Alko Mähroboter Robolinho 350 W 20 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.961Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.894Z"
       },
       "gtin": "4003718356687",
       "id": "gtin:4003718356687",
@@ -5561,7 +5356,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.962Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.895Z"
       },
       "gtin": "4003718356663",
       "id": "gtin:4003718356663",
@@ -5594,7 +5389,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.522Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.303Z"
       },
       "gtin": "8008984852167",
       "id": "gtin:8008984852167",
@@ -5616,6 +5411,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Navimow",
+      "candidateAttributes": {
+        "brand": "Navimow",
+        "dataQuality": "feed",
+        "gtin": "4333692994231",
+        "id": "gtin:4333692994231",
+        "maxCutHeightCm": 6,
+        "minCutHeightCm": 2,
+        "mpn": "0687060385",
+        "name": "Segway Mähroboter Navimow i105E 22,6 V 18 cm Schnittbreite 500 m² inkl. Garage",
+        "navigation": "camera",
+        "ratedAreaM2": 500,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:09.689Z"
+      },
+      "gtin": "4333692994231",
+      "id": "gtin:4333692994231",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fe/62/db/1772609411/4333692994231_90241708_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-navimow-i105e-22-6-v-18-cm-schnittbreite-500-m2-inkl-garage-0687060385/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 649,
+      "mpn": "0687060385",
+      "name": "Segway Mähroboter Navimow i105E 22,6 V 18 cm Schnittbreite 500 m² inkl. Garage",
+      "offerCount": 1,
+      "priority": 175,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Zipper",
       "candidateAttributes": {
         "brand": "Zipper",
@@ -5626,7 +5455,7 @@
         "name": "Zipper Frontbalkenmäher ZI-BM870ECO 2,7 kW 87 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.732Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.752Z"
       },
       "gtin": "9120039239088",
       "id": "gtin:9120039239088",
@@ -5660,7 +5489,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 700,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.690Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.849Z"
       },
       "gtin": "4006825671650",
       "id": "gtin:4006825671650",
@@ -5682,6 +5511,39 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Scheppach",
+      "candidateAttributes": {
+        "brand": "Scheppach",
+        "dataQuality": "feed",
+        "gtin": "4046664154051",
+        "id": "gtin:4046664154051",
+        "maxSlopePercent": 35,
+        "mpn": "5913003901",
+        "name": "Scheppach Mähroboter RoboCut XL600 20 V/2,5 Ah 18 cm Schnittbreite",
+        "navigation": "unknown",
+        "ratedAreaM2": 600,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:04.437Z"
+      },
+      "gtin": "4046664154051",
+      "id": "gtin:4046664154051",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/d7/55/c2/1761041820/4046664154051_0_1920x980.jpg",
+      "issues": [
+        "missing-passage-width",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/scheppach-maehroboter-robocut-xl600-20-v-2-5-ah-18-cm-schnittbreite-0687060185/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 599,
+      "mpn": "5913003901",
+      "name": "Scheppach Mähroboter RoboCut XL600 20 V/2,5 Ah 18 cm Schnittbreite",
+      "offerCount": 1,
+      "priority": 170,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Suntek",
       "candidateAttributes": {
         "brand": "Suntek",
@@ -5695,7 +5557,7 @@
         "navigation": "camera",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.315Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.338Z"
       },
       "gtin": "6976114901042",
       "id": "gtin:6976114901042",
@@ -5728,7 +5590,7 @@
         "navigation": "rtk",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.226Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.227Z"
       },
       "gtin": "6941504405356",
       "id": "gtin:6941504405356",
@@ -5758,7 +5620,7 @@
         "name": "Stiga Benzin Rasenmäher Combi 553 SE, 2,6 kW, 51 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.797Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.692Z"
       },
       "gtin": "8008984860582",
       "id": "gtin:8008984860582",
@@ -5785,13 +5647,46 @@
       "candidateAttributes": {
         "brand": "Primaster",
         "dataQuality": "feed",
+        "gtin": "4010951772716",
+        "id": "gtin:4010951772716",
+        "mpn": "0687051363",
+        "name": "Primaster Akku Rasenmäher PARM 4051VS 40 V 51 cm Schnittbreite inkl. Akku und Ladegerät",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:08.189Z"
+      },
+      "gtin": "4010951772716",
+      "id": "gtin:4010951772716",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/00/87/8f/1755850514/4010951772716_90129093_1920x980.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/primaster-akku-rasenmaeher-parm-4051vs-40-v-51-cm-schnittbreite-inkl-akku-und-ladegeraet-0687051363/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 569,
+      "mpn": "0687051363",
+      "name": "Primaster Akku Rasenmäher PARM 4051VS 40 V 51 cm Schnittbreite inkl. Akku und Ladegerät",
+      "offerCount": 1,
+      "priority": 167,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Primaster",
+      "candidateAttributes": {
+        "brand": "Primaster",
+        "dataQuality": "feed",
         "gtin": "4010951771733",
         "id": "gtin:4010951771733",
         "mpn": "77010601",
         "name": "Primaster Akku-Rasenmäher PMARM 4051 VS 40 V 51 cm Schnittbreite inkl. Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.447Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.882Z"
       },
       "gtin": "4010951771733",
       "id": "gtin:4010951771733",
@@ -5814,39 +5709,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Primaster",
-      "candidateAttributes": {
-        "brand": "Primaster",
-        "dataQuality": "feed",
-        "gtin": "4010951772716",
-        "id": "gtin:4010951772716",
-        "mpn": "0687051363",
-        "name": "Primaster Akku Rasenmäher PARM 4051VS 40 V 51 cm Schnittbreite inkl. Akku und Ladegerät",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.463Z"
-      },
-      "gtin": "4010951772716",
-      "id": "gtin:4010951772716",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/00/87/8f/1755850514/4010951772716_90129093_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/primaster-akku-rasenmaeher-parm-4051vs-40-v-51-cm-schnittbreite-inkl-akku-und-ladegeraet-0687051363/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 549,
-      "mpn": "0687051363",
-      "name": "Primaster Akku Rasenmäher PARM 4051VS 40 V 51 cm Schnittbreite inkl. Akku und Ladegerät",
-      "offerCount": 1,
-      "priority": 165,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -5857,7 +5719,7 @@
         "name": "AL-KO Akku-Rasenmäher 46.2 Li SP Comfort 36 Volt 4 Ah mit Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.112Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.778Z"
       },
       "gtin": "4003718356229",
       "id": "gtin:4003718356229",
@@ -5890,7 +5752,7 @@
         "name": "Stiga Benzin Rasenmäher Combi 548 SE, 2,2 kW, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.797Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.692Z"
       },
       "gtin": "8008984860568",
       "id": "gtin:8008984860568",
@@ -5924,7 +5786,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.455Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.508Z"
       },
       "gtin": "8008984852150",
       "id": "gtin:8008984852150",
@@ -5950,39 +5812,6 @@
       "candidateAttributes": {
         "brand": "Stiga",
         "dataQuality": "feed",
-        "gtin": "8008984852020",
-        "id": "gtin:8008984852020",
-        "mpn": "0687051448",
-        "name": "Stiga Benzin-Rasenmäher Combi 753 S 2,6 kW 51 cm Schnittbreite",
-        "navigation": "unknown",
-        "ratedAreaM2": 1800,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.455Z"
-      },
-      "gtin": "8008984852020",
-      "id": "gtin:8008984852020",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/6b/f8/a3/1771418783/8008984852020_90228733_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-benzin-rasenmaeher-combi-753-s-2-6-kw-51-cm-schnittbreite-0687051448/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 509,
-      "mpn": "0687051448",
-      "name": "Stiga Benzin-Rasenmäher Combi 753 S 2,6 kW 51 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 161,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Stiga",
-      "candidateAttributes": {
-        "brand": "Stiga",
-        "dataQuality": "feed",
         "gtin": "8008984842090",
         "id": "gtin:8008984842090",
         "mpn": "2L0431008/ST1",
@@ -5990,7 +5819,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.524Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.310Z"
       },
       "gtin": "8008984842090",
       "id": "gtin:8008984842090",
@@ -6000,7 +5829,7 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/f0c7b378a88d483c98e165e825d77f4f",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasenmaeher-collector-543-ae-48-v-41-cm-schnittbreite-0687051213/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -6022,7 +5851,7 @@
         "name": "Globel Metallgerätehaus Dream 86 245 x 185 cm anthrazit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.476Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:08.207Z"
       },
       "gtin": "9340976002174",
       "id": "gtin:9340976002174",
@@ -6055,7 +5884,7 @@
         "name": "Stiga Benzin Rasenmäher Combi 553 S, 2,6 kW, 51 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.801Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.696Z"
       },
       "gtin": "8008984860575",
       "id": "gtin:8008984860575",
@@ -6089,7 +5918,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.524Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.310Z"
       },
       "gtin": "8008984842106",
       "id": "gtin:8008984842106",
@@ -6099,46 +5928,13 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/70649b1d25b54bb6aa2c3eda39cbb5d6",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasenmaeher-collector-548-ae-48-v-46-cm-schnittbreite-0687051222/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 478.99,
       "mpn": "2L0485808/ST1",
       "name": "Stiga Akku-Rasenmäher Collector 548 AE 48 V, 46 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 158,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "KANN",
-      "candidateAttributes": {
-        "brand": "KANN",
-        "dataQuality": "feed",
-        "gtin": "4399901023741",
-        "id": "gtin:4399901023741",
-        "mpn": "0788103107",
-        "name": "Kann Rasenkante Mini 24 x 10 x 4,5 cm anthrazit 560 St. Palettenabnahme",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.852Z"
-      },
-      "gtin": "4399901023741",
-      "id": "gtin:4399901023741",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/8a/8b/36/1680681711/4399901023741_90029806_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/kann-rasenkante-mini-24-x-10-x-4-5-cm-anthrazit-560-st-palettenabnahme-0788103107/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 476,
-      "mpn": "0788103107",
-      "name": "Kann Rasenkante Mini 24 x 10 x 4,5 cm anthrazit 560 St. Palettenabnahme",
       "offerCount": 1,
       "priority": 158,
       "riskTier": "normal"
@@ -6155,7 +5951,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.583Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.666Z"
       },
       "gtin": "4003718066951",
       "id": "gtin:4003718066951",
@@ -6184,11 +5980,11 @@
         "gtin": "8008984851993",
         "id": "gtin:8008984851993",
         "mpn": "0687051459",
-        "name": "Stiga Benzin-Rasenmäher Combi 748 S 2,2 kW 46 cm Schnittbreite",
+        "name": "Stiga Benzin-Rasenmäher Combi 748 S 1,9 kW 46 cm Schnittbreite",
         "navigation": "unknown",
         "ratedAreaM2": 1200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.455Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.508Z"
       },
       "gtin": "8008984851993",
       "id": "gtin:8008984851993",
@@ -6198,13 +5994,13 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-benzin-rasenmaeher-combi-748-s-2-2-kw-46-cm-schnittbreite-0687051459/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-benzin-rasenmaeher-combi-748-s-1-9-kw-46-cm-schnittbreite-0687051459/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 459,
       "mpn": "0687051459",
-      "name": "Stiga Benzin-Rasenmäher Combi 748 S 2,2 kW 46 cm Schnittbreite",
+      "name": "Stiga Benzin-Rasenmäher Combi 748 S 1,9 kW 46 cm Schnittbreite",
       "offerCount": 1,
       "priority": 156,
       "riskTier": "normal"
@@ -6221,7 +6017,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 800,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.583Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.667Z"
       },
       "gtin": "4003718066944",
       "id": "gtin:4003718066944",
@@ -6243,35 +6039,34 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Suntek",
+      "brand": "Primaster",
       "candidateAttributes": {
-        "brand": "Suntek",
+        "brand": "Primaster",
         "dataQuality": "feed",
-        "gtin": "6976114900755",
-        "id": "gtin:6976114900755",
-        "maxCutHeightCm": 6,
-        "maxSlopePercent": 35,
-        "minCutHeightCm": 3,
-        "mpn": "0687060366",
-        "name": "Suntek Mähroboter SRM2060 - 20 cm Schnittbreite 600 m² 18 V",
-        "navigation": "camera",
-        "ratedAreaM2": 600,
+        "gtin": "4010951772686",
+        "id": "gtin:4010951772686",
+        "mpn": "0687051364",
+        "name": "Primaster Akku-Rasenmäher PARM 4046VS 40V 46 cm Schnittbreite",
+        "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.327Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.243Z"
       },
-      "gtin": "6976114900755",
-      "id": "gtin:6976114900755",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ac/42/c1/1770390912/6976114900755_90223444_1920x980.jpg",
+      "gtin": "4010951772686",
+      "id": "gtin:4010951772686",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/2d/af/22/1741159808/4010951772686_90129090_1280x1280.jpg",
       "issues": [
-        "missing-passage-width"
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/suntek-maehroboter-srm2060-20-cm-schnittbreite-600-m2-18-v-0687060366/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/primaster-akku-rasenmaeher-parm-4046vs-40v-46-cm-schnittbreite-0687051364/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 449,
-      "mpn": "0687060366",
-      "name": "Suntek Mähroboter SRM2060 - 20 cm Schnittbreite 600 m² 18 V",
+      "mpn": "0687051364",
+      "name": "Primaster Akku-Rasenmäher PARM 4046VS 40V 46 cm Schnittbreite",
       "offerCount": 1,
       "priority": 155,
       "riskTier": "normal"
@@ -6287,7 +6082,7 @@
         "name": "Gardena Akku Rasenmäher PowerMax Duo 46/36V, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.963Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.526Z"
       },
       "gtin": "4066407504981",
       "id": "gtin:4066407504981",
@@ -6320,7 +6115,7 @@
         "name": "AL-KO Akku-Rasenmäher 42.2 Li Comfort 36 Volt 4 Ah inkl. Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.145Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.822Z"
       },
       "gtin": "4003718356212",
       "id": "gtin:4003718356212",
@@ -6353,7 +6148,7 @@
         "name": "Primaster Akku-Rasenmäher PMARM 4046S 40 V 46 cm Schnittbreite inkl. Akku & Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:30.658Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:00.498Z"
       },
       "gtin": "4010951771481",
       "id": "gtin:4010951771481",
@@ -6376,39 +6171,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Primaster",
-      "candidateAttributes": {
-        "brand": "Primaster",
-        "dataQuality": "feed",
-        "gtin": "4010951772686",
-        "id": "gtin:4010951772686",
-        "mpn": "0687051364",
-        "name": "Primaster Akku-Rasenmäher PARM 4046VS 40V 46 cm Schnittbreite",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.764Z"
-      },
-      "gtin": "4010951772686",
-      "id": "gtin:4010951772686",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/2d/af/22/1741159808/4010951772686_90129090_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/primaster-akku-rasenmaeher-parm-4046vs-40v-46-cm-schnittbreite-0687051364/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 429,
-      "mpn": "0687051364",
-      "name": "Primaster Akku-Rasenmäher PARM 4046VS 40V 46 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 153,
-      "riskTier": "normal"
-    },
-    {
       "brand": "KANN",
       "candidateAttributes": {
         "brand": "KANN",
@@ -6419,7 +6181,7 @@
         "name": "Kann Rasenkante Mini 24 x 10 x 4,5 cm grau 560 St. Palettenabnahme",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.850Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.761Z"
       },
       "gtin": "4399901023727",
       "id": "gtin:4399901023727",
@@ -6452,7 +6214,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 51 SHQ 2,75 kW, 51 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.415Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.178Z"
       },
       "gtin": "8008984841420",
       "id": "gtin:8008984841420",
@@ -6485,7 +6247,7 @@
         "name": "Stiga Benzin Rasemäher Combi 53 S 51 cm Schnittbreite inkl. Zubehör",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.812Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.989Z"
       },
       "gtin": "8008984864023",
       "id": "gtin:8008984864023",
@@ -6519,7 +6281,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 2200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.728Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.201Z"
       },
       "gtin": "4046664259435",
       "id": "gtin:4046664259435",
@@ -6541,40 +6303,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Suntek",
-      "candidateAttributes": {
-        "brand": "Suntek",
-        "dataQuality": "feed",
-        "gtin": "6976114901011",
-        "id": "gtin:6976114901011",
-        "maxCutHeightCm": 6,
-        "maxSlopePercent": 35,
-        "minCutHeightCm": 3,
-        "mpn": "0687060361",
-        "name": "Suntek Mähroboter SRM2030 - 20 cm Schnittbreite 300 m² 18 V",
-        "navigation": "camera",
-        "ratedAreaM2": 300,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.286Z"
-      },
-      "gtin": "6976114901011",
-      "id": "gtin:6976114901011",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/da/09/fa/1787143751/6976114901011_90181880_1280x1280.jpg",
-      "issues": [
-        "missing-passage-width"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/suntek-maehroboter-srm2030-20-cm-schnittbreite-300-m2-18-v-0687060361/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 399,
-      "mpn": "0687060361",
-      "name": "Suntek Mähroboter SRM2030 - 20 cm Schnittbreite 300 m² 18 V",
-      "offerCount": 1,
-      "priority": 150,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Stiga",
       "candidateAttributes": {
         "brand": "Stiga",
@@ -6585,7 +6313,7 @@
         "name": "Stiga Benzin-Rasenmäher Collector 48 S 1,9 kW 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.656Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.495Z"
       },
       "gtin": "8008984813908",
       "id": "gtin:8008984813908",
@@ -6617,8 +6345,9 @@
         "mpn": "0687051323",
         "name": "Einhell Akku Rasenmäher GE-CM 36/550 42 cm Schnittbreite",
         "navigation": "unknown",
+        "ratedAreaM2": 550,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.687Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.840Z"
       },
       "gtin": "4006825675504",
       "id": "gtin:4006825675504",
@@ -6626,7 +6355,6 @@
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
-        "missing-rated-area",
         "unknown-navigation"
       ],
       "merchantProductUrl": "https://www.globus-baumarkt.de/p/einhell-akku-rasenmaeher-ge-cm-36-550-42-cm-schnittbreite-0687051323/",
@@ -6652,7 +6380,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.560Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.986Z"
       },
       "gtin": "8008984866942",
       "id": "gtin:8008984866942",
@@ -6685,7 +6413,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1100,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:30.642Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:00.483Z"
       },
       "gtin": "4003718355864",
       "id": "gtin:4003718355864",
@@ -6707,39 +6435,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Stiga",
-      "candidateAttributes": {
-        "brand": "Stiga",
-        "dataQuality": "feed",
-        "gtin": "8008984868250",
-        "id": "gtin:8008984868250",
-        "mpn": "0687051367",
-        "name": "Stiga Akku-Rasenmäher Collector 48 AE 46 cm Schnittbreite inkl. 4 Ah Akku u. Ladegerät",
-        "navigation": "unknown",
-        "ratedAreaM2": 400,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.560Z"
-      },
-      "gtin": "8008984868250",
-      "id": "gtin:8008984868250",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/99/33/37/1734427044/8008984868250_90114355_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasenmaeher-collector-48-ae-46-cm-schnittbreite-inkl-4-ah-akku-u-ladegeraet-0687051367/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 379,
-      "mpn": "0687051367",
-      "name": "Stiga Akku-Rasenmäher Collector 48 AE 46 cm Schnittbreite inkl. 4 Ah Akku u. Ladegerät",
-      "offerCount": 1,
-      "priority": 148,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Bosch Professional",
       "candidateAttributes": {
         "brand": "Bosch Professional",
@@ -6750,7 +6445,7 @@
         "name": "Bosch Professional Akku-Rasenmäher GRA 18V2-46 Solo",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.554Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.974Z"
       },
       "gtin": "4059952654812",
       "id": "gtin:4059952654812",
@@ -6783,7 +6478,7 @@
         "name": "Yard Force Benzin-Rasenmäher GM H46 laufruhiger Honda-Motor",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.455Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.889Z"
       },
       "gtin": "4333692958264",
       "id": "gtin:4333692958264",
@@ -6806,34 +6501,35 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Alpina GGP",
+      "brand": "Suntek",
       "candidateAttributes": {
-        "brand": "Alpina GGP",
+        "brand": "Suntek",
         "dataQuality": "feed",
-        "gtin": "8008984841406",
-        "id": "gtin:8008984841406",
-        "mpn": "0687051219",
-        "name": "Alpina Benzin Rasenmäher AL4 46 SH 2,75 kW, 46 cm Schnittbreite",
-        "navigation": "unknown",
+        "gtin": "6976114900755",
+        "id": "gtin:6976114900755",
+        "maxCutHeightCm": 6,
+        "maxSlopePercent": 35,
+        "minCutHeightCm": 3,
+        "mpn": "0687060366",
+        "name": "Suntek Mähroboter SRM2060 - 20 cm Schnittbreite 600 m² 18 V",
+        "navigation": "camera",
+        "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.402Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.350Z"
       },
-      "gtin": "8008984841406",
-      "id": "gtin:8008984841406",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/cf/9c/7b/1765272880/8008984841406_0_1280x1280.jpg",
+      "gtin": "6976114900755",
+      "id": "gtin:6976114900755",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ac/42/c1/1770390912/6976114900755_90223444_1920x980.jpg",
       "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
+        "missing-passage-width"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/alpina-benzin-rasenmaeher-al4-46-sh-2-75-kw-46-cm-schnittbreite-0687051219/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/suntek-maehroboter-srm2060-20-cm-schnittbreite-600-m2-18-v-0687060366/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 359,
-      "mpn": "0687051219",
-      "name": "Alpina Benzin Rasenmäher AL4 46 SH 2,75 kW, 46 cm Schnittbreite",
+      "mpn": "0687060366",
+      "name": "Suntek Mähroboter SRM2060 - 20 cm Schnittbreite 600 m² 18 V",
       "offerCount": 1,
       "priority": 146,
       "riskTier": "normal"
@@ -6850,7 +6546,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.100Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.712Z"
       },
       "gtin": "4262443061499",
       "id": "gtin:4262443061499",
@@ -6883,7 +6579,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.726Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.192Z"
       },
       "gtin": "4046664259398",
       "id": "gtin:4046664259398",
@@ -6905,36 +6601,37 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Einhell",
+      "brand": "Suntek",
       "candidateAttributes": {
-        "brand": "Einhell",
+        "brand": "Suntek",
         "dataQuality": "feed",
-        "gtin": "4006825668605",
-        "id": "gtin:4006825668605",
-        "mpn": "0687051327",
-        "name": "Einhell Akku Rasenmäher RASARRO 36/34 34 cm Schnittbreite",
-        "navigation": "unknown",
+        "gtin": "6976114901011",
+        "id": "gtin:6976114901011",
+        "maxCutHeightCm": 6,
+        "maxSlopePercent": 35,
+        "minCutHeightCm": 3,
+        "mpn": "0687060361",
+        "name": "Suntek Mähroboter SRM2030 - 20 cm Schnittbreite 300 m² 18 V",
+        "navigation": "camera",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.685Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.305Z"
       },
-      "gtin": "4006825668605",
-      "id": "gtin:4006825668605",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fc/84/0a/1766749659/4006825668605_4424923_1280x1280.jpg",
+      "gtin": "6976114901011",
+      "id": "gtin:6976114901011",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/da/09/fa/1787143751/6976114901011_90181880_1280x1280.jpg",
       "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
+        "missing-passage-width"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/einhell-akku-rasenmaeher-rasarro-36-34-34-cm-schnittbreite-0687051327/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/suntek-maehroboter-srm2030-20-cm-schnittbreite-300-m2-18-v-0687060361/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
-      "minBasePriceEur": 339.89,
-      "mpn": "0687051327",
-      "name": "Einhell Akku Rasenmäher RASARRO 36/34 34 cm Schnittbreite",
+      "minBasePriceEur": 349,
+      "mpn": "0687060361",
+      "name": "Suntek Mähroboter SRM2030 - 20 cm Schnittbreite 300 m² 18 V",
       "offerCount": 1,
-      "priority": 144,
+      "priority": 145,
       "riskTier": "normal"
     },
     {
@@ -6947,8 +6644,9 @@
         "mpn": "4514435",
         "name": "Einhell Akku Rasenmäher GE-CM 36/400 36 cm Schnittbreite",
         "navigation": "unknown",
+        "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.686Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.839Z"
       },
       "gtin": "4006825675528",
       "id": "gtin:4006825675528",
@@ -6956,7 +6654,6 @@
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
-        "missing-rated-area",
         "unknown-navigation"
       ],
       "merchantProductUrl": "https://www.globus-baumarkt.de/p/einhell-akku-rasenmaeher-ge-cm-36-400-36-cm-schnittbreite-0687051322/",
@@ -6980,7 +6677,7 @@
         "name": "Batterie für Genie/ M Serie - 10000mAh(5000mAh*2) für Genie 3000",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.379Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.191Z"
       },
       "id": "mpn:anthbot:210010103",
       "issues": [
@@ -7011,7 +6708,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 650,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.583Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.667Z"
       },
       "gtin": "4003718066937",
       "id": "gtin:4003718066937",
@@ -7033,39 +6730,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Bosch",
-      "candidateAttributes": {
-        "brand": "Bosch",
-        "dataQuality": "feed",
-        "gtin": "4059952634401",
-        "id": "gtin:4059952634401",
-        "mpn": "0687051385",
-        "name": "Bosch Akku-Rasenmäher-Set EasyMower 18 V inkl. Akku-Rasentrimmer EasyGrassCut 18 V + Akku & Ladegerät",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:36.780Z"
-      },
-      "gtin": "4059952634401",
-      "id": "gtin:4059952634401",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/9c/4d/a8/1759994109/4059952634401_90167450_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/bosch-akku-rasenmaeher-set-easymower-18-v-inkl-akku-rasentrimmer-easygrasscut-18-v-akku-ladegeraet-0687051385/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 299.99,
-      "mpn": "0687051385",
-      "name": "Bosch Akku-Rasenmäher-Set EasyMower 18 V inkl. Akku-Rasentrimmer EasyGrassCut 18 V + Akku & Ladegerät",
-      "offerCount": 1,
-      "priority": 140,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -7076,7 +6740,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 5.16 SP-D 2,6 kW 51 cm Schnittbreite Radantrieb & 4 in 1 Funktion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.582Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.665Z"
       },
       "gtin": "4003718067088",
       "id": "gtin:4003718067088",
@@ -7110,7 +6774,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.832Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.013Z"
       },
       "gtin": "4015671667052",
       "id": "gtin:4015671667052",
@@ -7143,7 +6807,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.728Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.201Z"
       },
       "gtin": "4046664259381",
       "id": "gtin:4046664259381",
@@ -7176,7 +6840,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.728Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.202Z"
       },
       "gtin": "4046664259411",
       "id": "gtin:4046664259411",
@@ -7209,7 +6873,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.832Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.414Z"
       },
       "gtin": "4003718061628",
       "id": "gtin:4003718061628",
@@ -7241,7 +6905,7 @@
         "name": "Stiga Benzin Rasemäher Combi 48 S 46 cm Schnittbreite inkl. Zubehör",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.812Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.989Z"
       },
       "gtin": "8008984864436",
       "id": "gtin:8008984864436",
@@ -7275,7 +6939,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 350,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.401Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.155Z"
       },
       "gtin": "8008984852105",
       "id": "gtin:8008984852105",
@@ -7307,7 +6971,7 @@
         "name": "Alko Akku Energy-Flex B 800 Li 36 Volt",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.964Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.895Z"
       },
       "gtin": "4003718063950",
       "id": "gtin:4003718063950",
@@ -7334,17 +6998,50 @@
       "candidateAttributes": {
         "brand": "Hercutec",
         "dataQuality": "feed",
+        "gtin": "4260430020030",
+        "id": "gtin:4260430020030",
+        "mpn": "20-002-SF60-HE",
+        "name": "Hercutec 2 Takt Gemisch 60 L",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:05.510Z"
+      },
+      "gtin": "4260430020030",
+      "id": "gtin:4260430020030",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/31/4e/97/1790595963/4260430020030_90303982_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/hercutec-2-takt-gemisch-60-l-0687051203/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 279,
+      "mpn": "20-002-SF60-HE",
+      "name": "Hercutec 2 Takt Gemisch 60 L",
+      "offerCount": 1,
+      "priority": 138,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Hercutec",
+      "candidateAttributes": {
+        "brand": "Hercutec",
+        "dataQuality": "feed",
         "gtin": "4260430020085",
         "id": "gtin:4260430020085",
         "mpn": "20-002-SF60-HE",
         "name": "Hercutec 4 Takt Sonderkraftstoff 60 L",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.436Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.510Z"
       },
       "gtin": "4260430020085",
       "id": "gtin:4260430020085",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a2/43/d1/1695815108/4260430020085_1920x980.jpg",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/c6/3c/4b/1790595986/4260430020085_90303976_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
@@ -7373,7 +7070,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 46 SA 1,9 kW, 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.400Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.155Z"
       },
       "gtin": "8008984851191",
       "id": "gtin:8008984851191",
@@ -7407,7 +7104,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.582Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.666Z"
       },
       "gtin": "4003718066920",
       "id": "gtin:4003718066920",
@@ -7439,7 +7136,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.66 SP-D 2,4 kW 46 cm Schnittbreite Radantrieb & 4 in 1 Funktion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.582Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.665Z"
       },
       "gtin": "4003718067071",
       "id": "gtin:4003718067071",
@@ -7472,7 +7169,7 @@
         "name": "Stiga Akku Rasenmäher COMBI 336e 48 V, 34 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.404Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.161Z"
       },
       "gtin": "8008984852112",
       "id": "gtin:8008984852112",
@@ -7505,7 +7202,7 @@
         "name": "Einhell Akku Rasenmäher GE-CM 36/300 34 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.686Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.840Z"
       },
       "gtin": "4006825675535",
       "id": "gtin:4006825675535",
@@ -7538,7 +7235,7 @@
         "name": "Primaster Akku-Rasenmäher PMARM 4043 40 V inkl. Akku 4,0 Ah & Mulchkit",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.447Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.883Z"
       },
       "gtin": "4010951771757",
       "id": "gtin:4010951771757",
@@ -7572,7 +7269,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 1000,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.726Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.192Z"
       },
       "gtin": "4046664259374",
       "id": "gtin:4046664259374",
@@ -7594,72 +7291,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Hercutec",
-      "candidateAttributes": {
-        "brand": "Hercutec",
-        "dataQuality": "feed",
-        "gtin": "4260430020030",
-        "id": "gtin:4260430020030",
-        "mpn": "20-002-SF60-HE",
-        "name": "Hercutec 2 Takt Gemisch 60 L",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.437Z"
-      },
-      "gtin": "4260430020030",
-      "id": "gtin:4260430020030",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/37/24/55/1789393508/4260430020030_90300621_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/hercutec-2-takt-gemisch-60-l-0687051203/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 249,
-      "mpn": "20-002-SF60-HE",
-      "name": "Hercutec 2 Takt Gemisch 60 L",
-      "offerCount": 1,
-      "priority": 135,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Alpina GGP",
-      "candidateAttributes": {
-        "brand": "Alpina GGP",
-        "dataQuality": "feed",
-        "gtin": "8008984851184",
-        "id": "gtin:8008984851184",
-        "mpn": "0687051234",
-        "name": "Alpina Benzin Rasenmäher AL4 46 1,9 kW, 46 cm Schnittbreite",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.393Z"
-      },
-      "gtin": "8008984851184",
-      "id": "gtin:8008984851184",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/ec/8b/c6/1765177337/8008984851184_90176058_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/alpina-benzin-rasenmaeher-al4-46-1-9-kw-46-cm-schnittbreite-0687051234/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 248.99,
-      "mpn": "0687051234",
-      "name": "Alpina Benzin Rasenmäher AL4 46 1,9 kW, 46 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 135,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -7670,7 +7301,7 @@
         "name": "AL-KO Rasentraktor-Anhänger Combi Trailer CT 400 für Traktoren",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.597Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.680Z"
       },
       "gtin": "4003718061895",
       "id": "gtin:4003718061895",
@@ -7704,7 +7335,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:30.721Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:00.587Z"
       },
       "gtin": "4010951771634",
       "id": "gtin:4010951771634",
@@ -7737,7 +7368,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 350,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.561Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.987Z"
       },
       "gtin": "8008984864818",
       "id": "gtin:8008984864818",
@@ -7768,7 +7399,7 @@
         "name": "ANTHBOT Garage",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.372Z",
+        "sourceUpdatedAt": "2026-11-24T09:04:56.185Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210020004",
@@ -7801,7 +7432,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.387Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.139Z"
       },
       "gtin": "8008984852099",
       "id": "gtin:8008984852099",
@@ -7811,7 +7442,7 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/9d5a3be22abd4e3b99ebfb75f06f2909",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-rasenmaeher-collector-136e-20-v-34-cm-schnittbreite-0687051220/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -7834,7 +7465,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.584Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.667Z"
       },
       "gtin": "4003718066913",
       "id": "gtin:4003718066913",
@@ -7866,7 +7497,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.66 P-D 1,9 kW 46 cm Schnittbreite 4 in 1 Funktion",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.581Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.664Z"
       },
       "gtin": "4003718067064",
       "id": "gtin:4003718067064",
@@ -7889,39 +7520,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Duramax",
-      "candidateAttributes": {
-        "brand": "Duramax",
-        "dataQuality": "feed",
-        "gtin": "0638801536512",
-        "id": "gtin:0638801536512",
-        "mpn": "30625",
-        "name": "Duramax Kaminholzregal mit Aufbewahrungsschrank",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.251Z"
-      },
-      "gtin": "0638801536512",
-      "id": "gtin:0638801536512",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/c0/dd/71/1783424716/0638801536512_90191561_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/duramax-kaminholzregal-mit-aufbewahrungsschrank-0692650749/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 229,
-      "mpn": "30625",
-      "name": "Duramax Kaminholzregal mit Aufbewahrungsschrank",
-      "offerCount": 1,
-      "priority": 133,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Litheli",
       "candidateAttributes": {
         "brand": "Litheli",
@@ -7932,7 +7530,7 @@
         "name": "Litheli Akku-Rasenmäher U20 2 x 20V 37 cm Schnittbreite inkl. 2 Akkus",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.119Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.087Z"
       },
       "gtin": "4262443061413",
       "id": "gtin:4262443061413",
@@ -7965,7 +7563,7 @@
         "name": "Worx Akku-Rasenmäher WP733E 20 V 33 WG733E Schnittbreite inkl. 4 Ah Akku und Ladegerät",
         "navigation": "rtk",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.844Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.368Z"
       },
       "gtin": "6943475820282",
       "id": "gtin:6943475820282",
@@ -7997,7 +7595,7 @@
         "name": "AL-KO Auffahrrampe gebogen 2 m 2er-Set",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.597Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.680Z"
       },
       "gtin": "4003718062038",
       "id": "gtin:4003718062038",
@@ -8030,7 +7628,7 @@
         "name": "AL-KO Benzin-Rasenmäher Easy 4.26 P-D 1,9 kW 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.583Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.666Z"
       },
       "gtin": "4003718067057",
       "id": "gtin:4003718067057",
@@ -8064,7 +7662,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 600,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.740Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.907Z"
       },
       "gtin": "4010951772440",
       "id": "gtin:4010951772440",
@@ -8096,7 +7694,7 @@
         "name": "AL-KO Benzin-Motorsense BC 400 B 1,25 kW, 41 / 25 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.831Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.413Z"
       },
       "gtin": "4003718060683",
       "id": "gtin:4003718060683",
@@ -8123,30 +7721,30 @@
       "candidateAttributes": {
         "brand": "Worx",
         "dataQuality": "feed",
-        "gtin": "6925387170617",
-        "id": "gtin:6925387170617",
-        "mpn": "WA0860",
-        "name": "Worx Zusatzmodul ACS Anti-Kollisionssystem",
+        "gtin": "4333692975131",
+        "id": "gtin:4333692975131",
+        "mpn": "0687060277",
+        "name": "Worx Mähroboter Landroid S250, 20 V, inkl. Garage",
         "navigation": "unknown",
+        "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.519Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.278Z"
       },
-      "gtin": "6925387170617",
-      "id": "gtin:6925387170617",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/6f/2a/b8/1698312813/6925387170617_1280x1280.jpg",
+      "gtin": "4333692975131",
+      "id": "gtin:4333692975131",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/e6/4c/37/1742219107/4333692975131_90134579_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
-        "missing-rated-area",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-zusatzmodul-acs-anti-kollisionssystem-0687060183/",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-maehroboter-landroid-s250-20-v-inkl-garage-0687060277/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 199,
-      "mpn": "WA0860",
-      "name": "Worx Zusatzmodul ACS Anti-Kollisionssystem",
+      "mpn": "0687060277",
+      "name": "Worx Mähroboter Landroid S250, 20 V, inkl. Garage",
       "offerCount": 1,
       "priority": 130,
       "riskTier": "normal"
@@ -8162,7 +7760,7 @@
         "name": "Alpina Benzin Rasenmäher AL4 41 A, 1,9 kW, 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.795Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.686Z"
       },
       "gtin": "8008984860032",
       "id": "gtin:8008984860032",
@@ -8185,39 +7783,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Stiga",
-      "candidateAttributes": {
-        "brand": "Stiga",
-        "dataQuality": "feed",
-        "gtin": "8008984866782",
-        "id": "gtin:8008984866782",
-        "mpn": "0687070087",
-        "name": "Stiga Akku E 450 48 V 5 Ah",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.561Z"
-      },
-      "gtin": "8008984866782",
-      "id": "gtin:8008984866782",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/f6/af/96/1734510625/8008984866782_90114322_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/stiga-akku-e-450-48-v-5-ah-0687070087/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 199,
-      "mpn": "0687070087",
-      "name": "Stiga Akku E 450 48 V 5 Ah",
-      "offerCount": 1,
-      "priority": 130,
-      "riskTier": "normal"
-    },
-    {
       "brand": "ANTHBOT",
       "candidateAttributes": {
         "brand": "ANTHBOT",
@@ -8227,7 +7792,7 @@
         "name": "Ladestation Set für Genie-Serie - DE Standard / Genie 3000",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.381Z",
+        "sourceUpdatedAt": "2026-11-24T09:04:56.192Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210010149",
@@ -8253,46 +7818,13 @@
       "candidateAttributes": {
         "brand": "Al-Ko",
         "dataQuality": "feed",
-        "gtin": "4003718045147",
-        "id": "gtin:4003718045147",
-        "mpn": "112932",
-        "name": "AL-KO Elektro-Schneefräse SnowLine 46 E 2.000 Watt, 46 cm Räumbreite",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.828Z"
-      },
-      "gtin": "4003718045147",
-      "id": "gtin:4003718045147",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0e/e2/e7/1769538641/4003718045147_3515990_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/al-ko-elektro-schneefraese-snowline-46-e-2-000-watt-46-cm-raeumbreite-0687700072/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 193.99,
-      "mpn": "112932",
-      "name": "AL-KO Elektro-Schneefräse SnowLine 46 E 2.000 Watt, 46 cm Räumbreite",
-      "offerCount": 1,
-      "priority": 129,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Al-Ko",
-      "candidateAttributes": {
-        "brand": "Al-Ko",
-        "dataQuality": "feed",
         "gtin": "4003718067040",
         "id": "gtin:4003718067040",
         "mpn": "0687051436",
         "name": "AL-KO Benzin-Rasenmäher Easy 4.16 P-D 1,2 kW 41 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.583Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.666Z"
       },
       "gtin": "4003718067040",
       "id": "gtin:4003718067040",
@@ -8326,7 +7858,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.788Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.676Z"
       },
       "gtin": "4078500061957",
       "id": "gtin:4078500061957",
@@ -8359,7 +7891,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.560Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.986Z"
       },
       "gtin": "8008984864801",
       "id": "gtin:8008984864801",
@@ -8369,7 +7901,7 @@
         "missing-passage-width",
         "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/detail/733c5ac4288a4e0aab205867318a4c8b",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/alpina-akku-rasenmaeher-al-3420-li-34-cm-schnittbreite-inkl-2-x-2-ah-akku-0687051371/",
       "merchants": [
         "Globus Baumarkt DE"
       ],
@@ -8391,7 +7923,7 @@
         "name": "Gardena Mähroboter-Garage für SILENO pro/max/free",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.772Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.258Z"
       },
       "gtin": "4066407004979",
       "id": "gtin:4066407004979",
@@ -8418,13 +7950,78 @@
       "candidateAttributes": {
         "brand": "Al-Ko",
         "dataQuality": "feed",
+        "gtin": "4003718045147",
+        "id": "gtin:4003718045147",
+        "mpn": "112932",
+        "name": "AL-KO Elektro-Schneefräse SnowLine 46 E 2.000 Watt, 46 cm Räumbreite",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:03.410Z"
+      },
+      "gtin": "4003718045147",
+      "id": "gtin:4003718045147",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0e/e2/e7/1769538641/4003718045147_3515990_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/al-ko-elektro-schneefraese-snowline-46-e-2-000-watt-46-cm-raeumbreite-0687700072/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 185,
+      "mpn": "112932",
+      "name": "AL-KO Elektro-Schneefräse SnowLine 46 E 2.000 Watt, 46 cm Räumbreite",
+      "offerCount": 1,
+      "priority": 129,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Worx",
+      "candidateAttributes": {
+        "brand": "Worx",
+        "dataQuality": "feed",
+        "gtin": "6941504409149",
+        "id": "gtin:6941504409149",
+        "mpn": "0687060344",
+        "name": "Worx Mähroboter-Garage Vision Cloud",
+        "navigation": "camera",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:09.227Z"
+      },
+      "gtin": "6941504409149",
+      "id": "gtin:6941504409149",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/81/13/12/1772443807/6941504409149_90179570_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-maehroboter-garage-vision-cloud-0687060344/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 185,
+      "mpn": "0687060344",
+      "name": "Worx Mähroboter-Garage Vision Cloud",
+      "offerCount": 1,
+      "priority": 129,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Al-Ko",
+      "candidateAttributes": {
+        "brand": "Al-Ko",
+        "dataQuality": "feed",
         "gtin": "4003718060669",
         "id": "gtin:4003718060669",
         "mpn": "113758",
         "name": "AL-KO Benzin-Motorsense BC 330 B 0,9 kW, 41 /25 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.831Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.413Z"
       },
       "gtin": "4003718060669",
       "id": "gtin:4003718060669",
@@ -8456,7 +8053,7 @@
         "name": "Ladestation Set für Genie-Serie - DE Standard / Genie 1000",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.380Z",
+        "sourceUpdatedAt": "2026-11-24T09:04:56.192Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210010148",
@@ -8487,7 +8084,7 @@
         "name": "Batterie für Genie/ M Serie - 5000mAh für Genie 1000",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.379Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.190Z"
       },
       "id": "mpn:anthbot:210010251",
       "issues": [
@@ -8511,17 +8108,50 @@
       "candidateAttributes": {
         "brand": "Gardena",
         "dataQuality": "feed",
+        "gtin": "4066407003842",
+        "id": "gtin:4066407003842",
+        "mpn": "19035-20",
+        "name": "Gardena Smart Irrigation Control Steuerung",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:04.694Z"
+      },
+      "gtin": "4066407003842",
+      "id": "gtin:4066407003842",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/68/97/e6/1694789242/4066407003842_90040194_1920x980.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/gardena-smart-irrigation-control-steuerung-0687800014/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 178.99,
+      "mpn": "19035-20",
+      "name": "Gardena Smart Irrigation Control Steuerung",
+      "offerCount": 1,
+      "priority": 128,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Gardena",
+      "candidateAttributes": {
+        "brand": "Gardena",
+        "dataQuality": "feed",
         "gtin": "4066407504998",
         "id": "gtin:4066407504998",
         "mpn": "0687051467",
         "name": "Gardena Akku Rasenmäher PowerMax Duo 46/36V 2,5 Ah 46 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.241Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.271Z"
       },
       "gtin": "4066407504998",
       "id": "gtin:4066407504998",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/0c/61/b5/1781876713/4066407504998_90278667_1280x1280.jpg",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/f3/db/17/1792142196/4066407504998_90278667_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
@@ -8540,72 +8170,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Al-Ko",
-      "candidateAttributes": {
-        "brand": "Al-Ko",
-        "dataQuality": "feed",
-        "gtin": "4003718061932",
-        "id": "gtin:4003718061932",
-        "mpn": "0687051429",
-        "name": "AL-KO Rasentraktor-Streuer 60 - Volumen 56 l",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.597Z"
-      },
-      "gtin": "4003718061932",
-      "id": "gtin:4003718061932",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/9c/dc/68/1772616608/4003718061932_90236848_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/al-ko-rasentraktor-streuer-60-volumen-56-l-0687051429/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 174.89,
-      "mpn": "0687051429",
-      "name": "AL-KO Rasentraktor-Streuer 60 - Volumen 56 l",
-      "offerCount": 1,
-      "priority": 127,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Gardena",
-      "candidateAttributes": {
-        "brand": "Gardena",
-        "dataQuality": "feed",
-        "gtin": "4066407003842",
-        "id": "gtin:4066407003842",
-        "mpn": "19035-20",
-        "name": "Gardena Smart Irrigation Control Steuerung",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.799Z"
-      },
-      "gtin": "4066407003842",
-      "id": "gtin:4066407003842",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/68/97/e6/1694789242/4066407003842_90040194_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/gardena-smart-irrigation-control-steuerung-0687800014/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 173.99,
-      "mpn": "19035-20",
-      "name": "Gardena Smart Irrigation Control Steuerung",
-      "offerCount": 1,
-      "priority": 127,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Worx",
       "candidateAttributes": {
         "brand": "Worx",
@@ -8616,7 +8180,7 @@
         "name": "Worx Scheinwerfer für Mähroboter Landroid Vision",
         "navigation": "camera",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.520Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.618Z"
       },
       "gtin": "6925387186137",
       "id": "gtin:6925387186137",
@@ -8648,7 +8212,7 @@
         "name": "Stiga Ersatzakku E 440 48 V / 4 Ah",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.391Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.144Z"
       },
       "gtin": "8008984844223",
       "id": "gtin:8008984844223",
@@ -8681,7 +8245,7 @@
         "name": "ikra Benzin Freischneider IBF 38 1,0 kW 25,5 / 42 cm Schnittkreis",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.259Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.323Z"
       },
       "gtin": "4010951732253",
       "id": "gtin:4010951732253",
@@ -8704,30 +8268,34 @@
       "riskTier": "normal"
     },
     {
-      "brand": "ANTHBOT-DE",
+      "brand": "Primaster",
       "candidateAttributes": {
-        "brand": "ANTHBOT-DE",
+        "brand": "Primaster",
         "dataQuality": "feed",
-        "id": "mpn:anthbot-de:210010318",
-        "mpn": "210010318",
-        "name": "Garage M",
-        "navigation": "lidar",
+        "gtin": "4010951772662",
+        "id": "gtin:4010951772662",
+        "mpn": "0687051389",
+        "name": "Primaster Elektro-Rasenmäher PERM 2043 43 cm Schnittbreite 2000 W",
+        "navigation": "unknown",
+        "ratedAreaM2": 400,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.393Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:07.221Z"
       },
-      "id": "mpn:anthbot-de:210010318",
+      "gtin": "4010951772662",
+      "id": "gtin:4010951772662",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a9/92/8d/1740732311/4010951772662_90129598_1280x1280.jpg",
       "issues": [
         "missing-or-ambiguous-slope",
         "missing-passage-width",
-        "missing-rated-area"
+        "unknown-navigation"
       ],
-      "merchantProductUrl": "https://www.awin1.com/cread.php?awinmid=125144&awinaffid=3037577&ued=https%3A%2F%2Fde.anthbot.com%2Fproducts%2Fgarage%3Fvariant%3D52055442653497",
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/primaster-elektro-rasenmaeher-perm-2043-43-cm-schnittbreite-2000-w-0687051389/",
       "merchants": [
-        "ANTHBOT DE"
+        "Globus Baumarkt DE"
       ],
       "minBasePriceEur": 169,
-      "mpn": "210010318",
-      "name": "Garage M",
+      "mpn": "0687051389",
+      "name": "Primaster Elektro-Rasenmäher PERM 2043 43 cm Schnittbreite 2000 W",
       "offerCount": 1,
       "priority": 127,
       "riskTier": "normal"
@@ -8742,7 +8310,7 @@
         "name": "Ladestation Set für Genie-Serie - DE Standard / Genie 600",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.380Z",
+        "sourceUpdatedAt": "2026-11-24T09:04:56.191Z",
         "waterProtection": "IPX6"
       },
       "id": "mpn:anthbot:210010147",
@@ -8764,72 +8332,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Gardena",
-      "candidateAttributes": {
-        "brand": "Gardena",
-        "dataQuality": "feed",
-        "gtin": "4078500062039",
-        "id": "gtin:4078500062039",
-        "mpn": "14637-20",
-        "name": "Gardena Elektro Rasenmäher PowerMax 1800/37 G2 37 cm Schnittbreite",
-        "navigation": "unknown",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.955Z"
-      },
-      "gtin": "4078500062039",
-      "id": "gtin:4078500062039",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/1e/c4/c9/1694765875/4078500062039_90036553_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/gardena-elektro-rasenmaeher-powermax-1800-37-g2-37-cm-schnittbreite-0687051313/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 161.89,
-      "mpn": "14637-20",
-      "name": "Gardena Elektro Rasenmäher PowerMax 1800/37 G2 37 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 126,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Primaster",
-      "candidateAttributes": {
-        "brand": "Primaster",
-        "dataQuality": "feed",
-        "gtin": "4010951772662",
-        "id": "gtin:4010951772662",
-        "mpn": "0687051389",
-        "name": "Primaster Elektro-Rasenmäher PERM 2043 43 cm Schnittbreite 2000 W",
-        "navigation": "unknown",
-        "ratedAreaM2": 400,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.741Z"
-      },
-      "gtin": "4010951772662",
-      "id": "gtin:4010951772662",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/a9/92/8d/1740732311/4010951772662_90129598_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/primaster-elektro-rasenmaeher-perm-2043-43-cm-schnittbreite-2000-w-0687051389/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 159,
-      "mpn": "0687051389",
-      "name": "Primaster Elektro-Rasenmäher PERM 2043 43 cm Schnittbreite 2000 W",
-      "offerCount": 1,
-      "priority": 126,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Alpina GGP",
       "candidateAttributes": {
         "brand": "Alpina GGP",
@@ -8841,7 +8343,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.561Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.987Z"
       },
       "gtin": "8008984864795",
       "id": "gtin:8008984864795",
@@ -8873,7 +8375,7 @@
         "name": "AL-KO Benzin-Motorsense BC 223 B 0,7 kW, 41 / 25 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.830Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.410Z"
       },
       "gtin": "4003718059533",
       "id": "gtin:4003718059533",
@@ -8906,7 +8408,7 @@
         "name": "Litheli Akku-Rasenmäher U20 20V, 33cm Schnittbreite, inkl. Akku 4.0Ah und USB-C Ladekabel",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:35.480Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.877Z"
       },
       "gtin": "4262443060034",
       "id": "gtin:4262443060034",
@@ -8933,39 +8435,6 @@
       "candidateAttributes": {
         "brand": "Al-Ko",
         "dataQuality": "feed",
-        "gtin": "4003718061574",
-        "id": "gtin:4003718061574",
-        "mpn": "113852",
-        "name": "AL-KO Elektro-Rasenmäher 38.2 E Comfort 1.600 Watt, 38 cm Schnittbreite",
-        "navigation": "unknown",
-        "ratedAreaM2": 500,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.832Z"
-      },
-      "gtin": "4003718061574",
-      "id": "gtin:4003718061574",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/fe/60/aa/1769517944/4003718061574_3515995_1920x980.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "unknown-navigation"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/al-ko-elektro-rasenmaeher-38-2-e-comfort-1-600-watt-38-cm-schnittbreite-0687051184/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 149.89,
-      "mpn": "113852",
-      "name": "AL-KO Elektro-Rasenmäher 38.2 E Comfort 1.600 Watt, 38 cm Schnittbreite",
-      "offerCount": 1,
-      "priority": 125,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Al-Ko",
-      "candidateAttributes": {
-        "brand": "Al-Ko",
-        "dataQuality": "feed",
         "gtin": "4003718066500",
         "id": "gtin:4003718066500",
         "mpn": "0687051425",
@@ -8973,7 +8442,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 300,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.583Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.666Z"
       },
       "gtin": "4003718066500",
       "id": "gtin:4003718066500",
@@ -9005,7 +8474,7 @@
         "name": "Einhell Mähroboter Garage mit klappbarem Deckel",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.987Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:06.191Z"
       },
       "gtin": "4006825654417",
       "id": "gtin:4006825654417",
@@ -9039,7 +8508,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.740Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.907Z"
       },
       "gtin": "4010951772457",
       "id": "gtin:4010951772457",
@@ -9071,7 +8540,7 @@
         "name": "Worx Diebstahlsicherung Find My Landroid für Mähroboter",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.305Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:10.396Z"
       },
       "gtin": "6941504411531",
       "id": "gtin:6941504411531",
@@ -9094,6 +8563,39 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Navimow",
+      "candidateAttributes": {
+        "brand": "Navimow",
+        "dataQuality": "feed",
+        "gtin": "8721008412009",
+        "id": "gtin:8721008412009",
+        "mpn": "0687060334",
+        "name": "Segway Mähroboter-Garage S für Navimow i1- und i2 AWD Serie",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:09.170Z"
+      },
+      "gtin": "8721008412009",
+      "id": "gtin:8721008412009",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/64/41/27/1772443809/8721008412009_90235139_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/segway-maehroboter-garage-s-fuer-navimow-i1-und-i2-awd-serie-0687060334/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 149,
+      "mpn": "0687060334",
+      "name": "Segway Mähroboter-Garage S für Navimow i1- und i2 AWD Serie",
+      "offerCount": 1,
+      "priority": 125,
+      "riskTier": "normal"
+    },
+    {
       "brand": "ANTHBOT-DE",
       "candidateAttributes": {
         "brand": "ANTHBOT-DE",
@@ -9103,7 +8605,7 @@
         "name": "Garage für Mähroboter",
         "navigation": "lidar",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:27.388Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.202Z"
       },
       "id": "mpn:anthbot-de:210010101",
       "issues": [
@@ -9134,7 +8636,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 500,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.831Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.414Z"
       },
       "gtin": "4003718061550",
       "id": "gtin:4003718061550",
@@ -9167,7 +8669,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.689Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.848Z"
       },
       "gtin": "4006825646856",
       "id": "gtin:4006825646856",
@@ -9200,7 +8702,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 150,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.388Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.139Z"
       },
       "gtin": "8008984852082",
       "id": "gtin:8008984852082",
@@ -9232,7 +8734,7 @@
         "name": "Gardena Akku Einhandmäher HandyMower 22/18V P4A solo ohne Akku und Ladegerät",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.495Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:02.945Z"
       },
       "gtin": "4078500054164",
       "id": "gtin:4078500054164",
@@ -9255,6 +8757,39 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Worx",
+      "candidateAttributes": {
+        "brand": "Worx",
+        "dataQuality": "feed",
+        "gtin": "6925387170617",
+        "id": "gtin:6925387170617",
+        "mpn": "WA0860",
+        "name": "Worx Zusatzmodul ACS Anti-Kollisionssystem",
+        "navigation": "unknown",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T09:05:05.617Z"
+      },
+      "gtin": "6925387170617",
+      "id": "gtin:6925387170617",
+      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/6f/2a/b8/1698312813/6925387170617_1280x1280.jpg",
+      "issues": [
+        "missing-or-ambiguous-slope",
+        "missing-passage-width",
+        "missing-rated-area",
+        "unknown-navigation"
+      ],
+      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-zusatzmodul-acs-anti-kollisionssystem-0687060183/",
+      "merchants": [
+        "Globus Baumarkt DE"
+      ],
+      "minBasePriceEur": 139,
+      "mpn": "WA0860",
+      "name": "Worx Zusatzmodul ACS Anti-Kollisionssystem",
+      "offerCount": 1,
+      "priority": 124,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Al-Ko",
       "candidateAttributes": {
         "brand": "Al-Ko",
@@ -9266,7 +8801,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.832Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.414Z"
       },
       "gtin": "4003718061567",
       "id": "gtin:4003718061567",
@@ -9298,7 +8833,7 @@
         "name": "Litheli Akku-Rasenmäher Mono 20 V 33 cm Schnittbreite ohne Akku",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.269Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.278Z"
       },
       "gtin": "4262443060386",
       "id": "gtin:4262443060386",
@@ -9331,7 +8866,7 @@
         "name": "Gardena Mähroboter-Garage für Sileno city, Sileno minimo und Sileno life",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:33.794Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:04.685Z"
       },
       "gtin": "4078500046107",
       "id": "gtin:4078500046107",
@@ -9365,7 +8900,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 200,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.267Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:09.276Z"
       },
       "gtin": "4262443060270",
       "id": "gtin:4262443060270",
@@ -9387,38 +8922,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Worx",
-      "candidateAttributes": {
-        "brand": "Worx",
-        "dataQuality": "feed",
-        "gtin": "6941504409149",
-        "id": "gtin:6941504409149",
-        "mpn": "0687060344",
-        "name": "Worx Garage Vision Cloud",
-        "navigation": "camera",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:37.226Z"
-      },
-      "gtin": "6941504409149",
-      "id": "gtin:6941504409149",
-      "imageUrl": "https://www.globus-baumarkt.de/thumbnail/81/13/12/1772443807/6941504409149_90179570_1280x1280.jpg",
-      "issues": [
-        "missing-or-ambiguous-slope",
-        "missing-passage-width",
-        "missing-rated-area"
-      ],
-      "merchantProductUrl": "https://www.globus-baumarkt.de/p/worx-garage-vision-cloud-0687060344/",
-      "merchants": [
-        "Globus Baumarkt DE"
-      ],
-      "minBasePriceEur": 125,
-      "mpn": "0687060344",
-      "name": "Worx Garage Vision Cloud",
-      "offerCount": 1,
-      "priority": 123,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Einhell",
       "candidateAttributes": {
         "brand": "Einhell",
@@ -9429,7 +8932,7 @@
         "name": "Einhell Akku Spindelmäher GE-HM 18/38 Li-solo 38 cm Schnittbreite",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:34.690Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:05.849Z"
       },
       "gtin": "4006825641639",
       "id": "gtin:4006825641639",
@@ -9463,7 +8966,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.831Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.413Z"
       },
       "gtin": "4003718061543",
       "id": "gtin:4003718061543",
@@ -9495,7 +8998,7 @@
         "name": "Ikra Benzin-Freischneider IBF 25-1 / 43 cm Schnittkreis",
         "navigation": "unknown",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:30.286Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:59.997Z"
       },
       "gtin": "4010951731881",
       "id": "gtin:4010951731881",
@@ -9529,7 +9032,7 @@
         "navigation": "unknown",
         "ratedAreaM2": 250,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:32.833Z"
+        "sourceUpdatedAt": "2026-11-24T09:05:03.415Z"
       },
       "gtin": "4003718061833",
       "id": "gtin:4003718061833",

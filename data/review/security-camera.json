@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-18T07:24:48.576Z",
+  "generatedAt": "2026-11-24T09:05:19.008Z",
   "products": [
     {
       "brand": "eufy",
@@ -7,610 +7,32 @@
         "brand": "eufy",
         "cameraCount": 1,
         "dataQuality": "feed",
-        "gtin": "194644290672",
-        "id": "gtin:194644290672",
+        "gtin": "194644111984",
+        "id": "gtin:194644111984",
         "integratedLight": false,
-        "name": "eufy Set - mit Mähroboter E18, gratis Garage, 4 SoloCam S220 Außenkameras + Permanent Outdoor Light 15m",
+        "name": "eufy Starter Set - mit HomeBase 3 + 2 eufyCam E50 Außenkamera",
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.846Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.620Z"
       },
-      "gtin": "194644290672",
-      "id": "gtin:194644290672",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel4_32.jpg",
+      "gtin": "194644111984",
+      "id": "gtin:194644111984",
+      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/t/i/titel2er_2.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
         "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-maehroboter-e18-gratis-garage-solocam-s220-4er-set-permanent-outdoor-light-15m",
+      "merchantProductUrl": "https://www.tink.de/p/eufy-starter-set-mit-homebase-3-2-eufycam-e50-aussenkamera",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 1581.95,
-      "name": "eufy Set - mit Mähroboter E18, gratis Garage, 4 SoloCam S220 Außenkameras + Permanent Outdoor Light 15m",
+      "minBasePriceEur": 479.95,
+      "name": "eufy Starter Set - mit HomeBase 3 + 2 eufyCam E50 Außenkamera",
       "offerCount": 1,
-      "priority": 268,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "0194644311179",
-        "id": "gtin:0194644311179",
-        "integratedLight": false,
-        "name": "eufy Set - mit Mähroboter E15 (kabellos, bis 800 m²) + Garage + SoloCam S340",
-        "panTilt": false,
-        "placement": "outdoor",
-        "power": "battery",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.918Z"
-      },
-      "gtin": "0194644311179",
-      "id": "gtin:0194644311179",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/e/1/e15_kamera.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-set-mit-maehroboter-e15-bis-zu-800-m-garage-solocam-s340",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 999,
-      "name": "eufy Set - mit Mähroboter E15 (kabellos, bis 800 m²) + Garage + SoloCam S340",
-      "offerCount": 1,
-      "priority": 210,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "194644319335",
-        "id": "gtin:194644319335",
-        "integratedLight": false,
-        "name": "eufy Set - mit Mähroboter C15 Standard (Kabellos, bis 500 m²) + Garage + gratis SoloCam S340",
-        "panTilt": false,
-        "placement": "outdoor",
-        "power": "battery",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.924Z"
-      },
-      "gtin": "194644319335",
-      "id": "gtin:194644319335",
-      "imageUrl": "https://www.tink.de/cdn/996358/media/catalog/product/t/i/titel_5_43.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-set-mit-maehroboter-c15-standard-kabellos-bis-500-m-garage-solocam-s340",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 749,
-      "name": "eufy Set - mit Mähroboter C15 Standard (Kabellos, bis 500 m²) + Garage + gratis SoloCam S340",
-      "offerCount": 2,
-      "priority": 195,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Gopro",
-      "candidateAttributes": {
-        "brand": "Gopro",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "810116385331",
-        "id": "gtin:810116385331",
-        "integratedLight": false,
-        "name": "GoPro MISSION 1 PRO Grip Edition - 8K-Actionkamera - Schwarz",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
-      },
-      "gtin": "810116385331",
-      "id": "gtin:810116385331",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/g/r/gropro_mission_grip_titel_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/gopro-mission-1-pro-grip-edition-8k-actionkamera?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 779.99,
-      "name": "GoPro MISSION 1 PRO Grip Edition - 8K-Actionkamera - Schwarz",
-      "offerCount": 1,
-      "priority": 188,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Gopro",
-      "candidateAttributes": {
-        "brand": "Gopro",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "810116385157",
-        "id": "gtin:810116385157",
-        "integratedLight": false,
-        "name": "GoPro MISSION 1 PRO - 8K-Actionkamera - Schwarz",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
-      },
-      "gtin": "810116385157",
-      "id": "gtin:810116385157",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/f/r/frontal_pro.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/gopro-mission-1-pro-8k-actionkamera?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 699.99,
-      "name": "GoPro MISSION 1 PRO - 8K-Actionkamera - Schwarz",
-      "offerCount": 1,
-      "priority": 180,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Gopro",
-      "candidateAttributes": {
-        "brand": "Gopro",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "810116385188",
-        "id": "gtin:810116385188",
-        "integratedLight": false,
-        "name": "GoPro MISSION 1 - 8K-Actionkamera - Schwarz",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
-      },
-      "gtin": "810116385188",
-      "id": "gtin:810116385188",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titelbild_61_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/gopro-mission-1-8k-actionkamera?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 599.99,
-      "name": "GoPro MISSION 1 - 8K-Actionkamera - Schwarz",
-      "offerCount": 1,
-      "priority": 170,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 4,
-        "connection": "poe",
-        "dataQuality": "feed",
-        "gtin": "6975253983322",
-        "id": "gtin:6975253983322",
-        "integratedLight": false,
-        "name": "Reolink NVS8-8MB4 - 4K PoE 4-Kameras + NVR - Weiß",
-        "panTilt": false,
-        "power": "poe",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.844Z"
-      },
-      "gtin": "6975253983322",
-      "id": "gtin:6975253983322",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/s/e/set-titelbild.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-nvs8-8mb4-4k-poe-4-kameras-nvr?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 499,
-      "name": "Reolink NVS8-8MB4 - 4K PoE 4-Kameras + NVR - Weiß",
-      "offerCount": 1,
-      "priority": 160,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Abus",
-      "candidateAttributes": {
-        "brand": "Abus",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "4003318981456",
-        "id": "gtin:4003318981456",
-        "integratedLight": false,
-        "name": "ABUS Akku Kamera Pro mit Basisstation - 2er Set",
-        "panTilt": false,
-        "power": "battery",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.773Z"
-      },
-      "gtin": "4003318981456",
-      "id": "gtin:4003318981456",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/a/b/abus_akku_kamera_pro_mit_basisstation_-_2er-set.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/abus-akku-kamera-pro-mit-basisstation-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 290.95,
-      "name": "ABUS Akku Kamera Pro mit Basisstation - 2er Set",
-      "offerCount": 3,
-      "priority": 159,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Homematic IP",
-      "candidateAttributes": {
-        "brand": "Homematic IP",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4047976629428",
-        "id": "gtin:4047976629428",
-        "integratedLight": false,
-        "name": "Homematic IP Innenkamera – plus - 4MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "indoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.922Z"
-      },
-      "gtin": "4047976629428",
-      "id": "gtin:4047976629428",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/i/n/innenkamera_vorne_hp1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-innenkamera-plus-4mp-wlan-mit-schwenk-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 119.95,
-      "name": "Homematic IP Innenkamera – plus - 4MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
-      "offerCount": 4,
-      "priority": 152,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 1,
-        "connection": "cellular",
-        "dataQuality": "feed",
-        "gtin": "6937479641769",
-        "id": "gtin:6937479641769",
-        "integratedLight": false,
-        "name": "Imou AOV Dual Kit 5+5MP - 10MP Dual-Lens WLAN & 4G Außenkamera mit Solarpanel & Always-On-Video - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "power": "solar",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.856Z"
-      },
-      "gtin": "6937479641769",
-      "id": "gtin:6937479641769",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/i/m/imou_aov_dual_kit_5_5mp_-_10mp_dual-lens_wlan_4g_au_enkamera_mit_solarpanel_always-on-video_6.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-aov-dual-kit-5-5mp-10mp-dual-lens-wlan-4g-aussenkamera-mit-solarpanel-always-on-video?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 149.9,
-      "name": "Imou AOV Dual Kit 5+5MP - 10MP Dual-Lens WLAN & 4G Außenkamera mit Solarpanel & Always-On-Video - Weiß",
-      "offerCount": 3,
-      "priority": 145,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Philips Hue",
-      "candidateAttributes": {
-        "brand": "Philips Hue",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "8720169192317",
-        "id": "gtin:8720169192317",
-        "integratedLight": false,
-        "name": "Philips Hue Secure Kamera Bundle - 1x kabelgebundene Kamera + 2x Kontaktsensor + 2x Philips Hue White & Color Ambiance E27 + Bridge - Weiß",
-        "panTilt": false,
-        "power": "mains",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.842Z"
-      },
-      "gtin": "8720169192317",
-      "id": "gtin:8720169192317",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/p/h/ph_skb_006_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/philips-hue-secure-kamera-bundle-1x-kabelgebundene-kamera-plus-2x-kontaktsensor-plus-2x-philips-hue-white-color-ambiance-e27-plus-bridge?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 349.99,
-      "name": "Philips Hue Secure Kamera Bundle - 1x kabelgebundene Kamera + 2x Kontaktsensor + 2x Philips Hue White & Color Ambiance E27 + Bridge - Weiß",
-      "offerCount": 1,
-      "priority": 145,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Homematic IP",
-      "candidateAttributes": {
-        "brand": "Homematic IP",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4047976629473",
-        "id": "gtin:4047976629473",
-        "integratedLight": false,
-        "name": "Homematic IP Außenlichtkamera - 4MP, WLAN mit Schwenkfunktion - Weiß",
-        "panTilt": true,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.922Z"
-      },
-      "gtin": "4047976629473",
-      "id": "gtin:4047976629473",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titel2_2_3.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-aussenlichtkamera-4mp-wlan-mit-schwenkfunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 229.95,
-      "name": "Homematic IP Außenlichtkamera - 4MP, WLAN mit Schwenkfunktion - Weiß",
-      "offerCount": 2,
-      "priority": 143,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Abus",
-      "candidateAttributes": {
-        "brand": "Abus",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4003318981449",
-        "id": "gtin:4003318981449",
-        "integratedLight": false,
-        "name": "ABUS WLAN Licht Außen-Kamera - 2er-Set",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.768Z"
-      },
-      "gtin": "4003318981449",
-      "id": "gtin:4003318981449",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/a/b/abus_wlan_licht_2er.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/abus-wlan-licht-aussenkamera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 330.95,
-      "name": "ABUS WLAN Licht Außen-Kamera - 2er-Set",
-      "offerCount": 1,
-      "priority": 143,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Ring",
-      "candidateAttributes": {
-        "brand": "Ring",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "840414660984",
-        "id": "gtin:840414660984",
-        "integratedLight": false,
-        "name": "Ring Outdoor Cam Pro Plugin - 4K-Außenkamera mit Netzstecker - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "power": "mains",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.916Z"
-      },
-      "gtin": "840414660984",
-      "id": "gtin:840414660984",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/3/6/360084_titel_1_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-outdoor-cam-pro-plugin-4k-aussenkamera-mit-netzstecker?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 200,
-      "name": "Ring Outdoor Cam Pro Plugin - 4K-Außenkamera mit Netzstecker - Weiß",
-      "offerCount": 2,
-      "priority": 140,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "0194644336172",
-        "id": "gtin:0194644336172",
-        "integratedLight": false,
-        "name": "eufyCam C36 2+1 Kit - mit HomeBase Mini + 2 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.934Z"
-      },
-      "gtin": "0194644336172",
-      "id": "gtin:0194644336172",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/2/_/2_1_kit_titelbild_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-c36-2-1-kit-mit-homebase-mini-2-2k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 299.99,
-      "name": "eufyCam C36 2+1 Kit - mit HomeBase Mini + 2 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-      "offerCount": 1,
-      "priority": 140,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Aqara",
-      "candidateAttributes": {
-        "brand": "Aqara",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6975833358113",
-        "id": "gtin:6975833358113",
-        "integratedLight": false,
-        "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.844Z"
-      },
-      "gtin": "6975833358113",
-      "id": "gtin:6975833358113",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/a/q/aqara_hubg5pro_2_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/aqara-camera-hub-g5-pro-32-gb-wifi-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 294.95,
-      "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
-      "offerCount": 1,
-      "priority": 139,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "aosu",
-      "candidateAttributes": {
-        "brand": "aosu",
-        "cameraCount": 4,
-        "dataQuality": "feed",
-        "gtin": "06977118370407",
-        "id": "gtin:06977118370407",
-        "integratedLight": false,
-        "name": "aosu SolarCam System P1 SE-4 Cameras - Weiß",
-        "panTilt": false,
-        "power": "solar",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.855Z"
-      },
-      "gtin": "06977118370407",
-      "id": "gtin:06977118370407",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/a/o/aosu_solarcam_system_p1_se-4_cameras_titelbild.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/aosu-solarcam-system-p1-se-4-cameras?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 279.95,
-      "name": "aosu SolarCam System P1 SE-4 Cameras - Weiß",
-      "offerCount": 1,
-      "priority": 138,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Homematic IP",
-      "candidateAttributes": {
-        "brand": "Homematic IP",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4047976629497",
-        "id": "gtin:4047976629497",
-        "integratedLight": false,
-        "name": "Homematic IP Akku-Außenkamera - 3MP, WLAN - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "power": "battery",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.921Z"
-      },
-      "gtin": "4047976629497",
-      "id": "gtin:4047976629497",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/v/o/vorne_hp1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-akku-aussenkamera-3mp-wlan?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 165.95,
-      "name": "Homematic IP Akku-Außenkamera - 3MP, WLAN - Weiß",
-      "offerCount": 2,
-      "priority": 137,
+      "priority": 158,
       "riskTier": "normal"
     },
     {
@@ -626,11 +48,11 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.853Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.616Z"
       },
       "gtin": "4062321396084",
       "id": "gtin:4062321396084",
-      "imageUrl": "https://www.tink.de/cdn/996358/media/catalog/product/e/y/eyesii_anth_1.jpg",
+      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/e/y/eyesii_anth_1.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
@@ -641,350 +63,112 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 267.95,
+      "minBasePriceEur": 259.95,
       "name": "Bosch Smart Home Eyes Außenkamera II - Anthrazit",
       "offerCount": 1,
-      "priority": 137,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Homematic IP",
-      "candidateAttributes": {
-        "brand": "Homematic IP",
-        "cameraCount": 4,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4047976629411",
-        "id": "gtin:4047976629411",
-        "integratedLight": false,
-        "name": "Homematic IP Innenkamera - basic - 3MP, WLAN - 4er-Set",
-        "panTilt": false,
-        "placement": "indoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.922Z"
-      },
-      "gtin": "4047976629411",
-      "id": "gtin:4047976629411",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/i/n/innenkamerabasic_vorne4er-set.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-innenkamera-basic-4er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 158.95,
-      "name": "Homematic IP Innenkamera - basic - 3MP, WLAN - 4er-Set",
-      "offerCount": 2,
       "priority": 136,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Abus",
-      "candidateAttributes": {
-        "brand": "Abus",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "4003318981463",
-        "id": "gtin:4003318981463",
-        "integratedLight": false,
-        "name": "ABUS Akku Kamera Pro 2er-Set",
-        "panTilt": false,
-        "power": "battery",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.774Z"
-      },
-      "gtin": "4003318981463",
-      "id": "gtin:4003318981463",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/3/3/330072-2er.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/abus-akku-kamera-pro-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 261.95,
-      "name": "ABUS Akku Kamera Pro 2er-Set",
-      "offerCount": 1,
-      "priority": 136,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Yale",
-      "candidateAttributes": {
-        "brand": "Yale",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "5052847126103",
-        "id": "gtin:5052847126103",
-        "integratedLight": false,
-        "name": "Yale Smart Outdoor Camera - 2er-Set",
-        "panTilt": false,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.774Z"
-      },
-      "gtin": "5052847126103",
-      "id": "gtin:5052847126103",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/y/a/yale_smart_outdoor_camera_-_2er-set_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/yale-smart-outdoor-kamera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 141.95,
-      "name": "Yale Smart Outdoor Camera - 2er-Set",
-      "offerCount": 2,
-      "priority": 134,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6975253982172",
-        "id": "gtin:6975253982172",
-        "integratedLight": false,
-        "name": "Reolink Duo Series W730 - WLAN Außenkamera mit Dual-Objektiv - 2er-Set",
-        "panTilt": false,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.841Z"
-      },
-      "gtin": "6975253982172",
-      "id": "gtin:6975253982172",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/w/7/w730_006_12er-set.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-duo-series-w730-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 239.95,
-      "name": "Reolink Duo Series W730 - WLAN Außenkamera mit Dual-Objektiv - 2er-Set",
-      "offerCount": 1,
-      "priority": 134,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Homematic IP",
-      "candidateAttributes": {
-        "brand": "Homematic IP",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4047976629480",
-        "id": "gtin:4047976629480",
-        "integratedLight": false,
-        "name": "Homematic IP Außenlichtkamera - 4MP, WLAN mit Schwenkfunktion - Anthrazit",
-        "panTilt": true,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.922Z"
-      },
-      "gtin": "4047976629480",
-      "id": "gtin:4047976629480",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titel1_4_94.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-aussenlichtkamera-4mp-wlan-mit-schwenkfunktion?opt_92=203",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 229.95,
-      "name": "Homematic IP Außenlichtkamera - 4MP, WLAN mit Schwenkfunktion - Anthrazit",
-      "offerCount": 1,
-      "priority": 133,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "omajin",
-      "candidateAttributes": {
-        "brand": "omajin",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "3700730532006",
-        "id": "gtin:3700730532006",
-        "integratedLight": false,
-        "name": "omajin Wireless Security Camera - 2er-Set",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.839Z"
-      },
-      "gtin": "3700730532006",
-      "id": "gtin:3700730532006",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/o/m/omajin_wireless_security_camera_-_kabellose_berwachungskamera_-_2er_set_neu.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/omajin-wireless-security-camera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 207.95,
-      "name": "omajin Wireless Security Camera - 2er-Set",
-      "offerCount": 1,
-      "priority": 131,
       "riskTier": "normal"
     },
     {
       "brand": "eufy",
       "candidateAttributes": {
         "brand": "eufy",
-        "cameraCount": 2,
+        "cameraCount": 1,
         "dataQuality": "feed",
-        "gtin": "194644107277",
-        "id": "gtin:194644107277",
+        "gtin": "0194644239213",
+        "id": "gtin:0194644239213",
         "integratedLight": false,
-        "name": "eufyCam 3 - Zusatzkamera 2er-Set",
+        "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - Weiß",
         "panTilt": false,
         "placement": "outdoor",
+        "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.765Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.615Z"
       },
-      "gtin": "194644107277",
-      "id": "gtin:194644107277",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel1_3_102.jpg",
+      "gtin": "0194644239213",
+      "id": "gtin:0194644239213",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titelbild_34_6.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
+        "missing-power-source"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-3-zusatzkamera-2er-set",
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-s4-4k-sicherheitskamera-mit-3-linsen?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 192.95,
-      "name": "eufyCam 3 - Zusatzkamera 2er-Set",
+      "minBasePriceEur": 259,
+      "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - Weiß",
       "offerCount": 1,
-      "priority": 129,
+      "priority": 136,
       "riskTier": "normal"
     },
     {
-      "brand": "eve",
+      "brand": "eufy",
       "candidateAttributes": {
-        "brand": "eve",
-        "cameraCount": 2,
+        "brand": "eufy",
+        "cameraCount": 1,
         "dataQuality": "feed",
-        "gtin": "4260195392427",
-        "id": "gtin:4260195392427",
+        "gtin": "194644239213",
+        "id": "gtin:194644239213",
         "integratedLight": false,
-        "name": "Eve Cam (2nd Gen) - Innenkamera - 2er-Set",
+        "name": "eufy Set - mit eufyCam S4 Außenkamera + gratis Indoor Cam C220",
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.770Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.620Z"
       },
-      "gtin": "4260195392427",
-      "id": "gtin:4260195392427",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/e/v/eve_cam_2.jpg",
+      "gtin": "194644239213",
+      "id": "gtin:194644239213",
+      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/t/i/titel1_7_5.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
         "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/eve-cam-2er-set",
+      "merchantProductUrl": "https://www.tink.de/p/eufy-set-mit-eufycam-s4-aussenkamera-indoor-cam-c220",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 192.95,
-      "name": "Eve Cam (2nd Gen) - Innenkamera - 2er-Set",
+      "minBasePriceEur": 259,
+      "name": "eufy Set - mit eufyCam S4 Außenkamera + gratis Indoor Cam C220",
       "offerCount": 1,
-      "priority": 129,
+      "priority": 136,
       "riskTier": "normal"
     },
     {
       "brand": "TP-Link",
       "candidateAttributes": {
         "brand": "TP-Link",
-        "cameraCount": 1,
+        "cameraCount": 2,
         "dataQuality": "feed",
-        "gtin": "4897098685426",
-        "id": "gtin:4897098685426",
+        "gtin": "8885020629200",
+        "id": "gtin:8885020629200",
         "integratedLight": false,
-        "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
-        "panTilt": false,
+        "name": "TP-Link Tapo C530WS - Schwenk-Neige-Außenkamera - 2er-Set",
+        "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.769Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.612Z"
       },
-      "gtin": "4897098685426",
-      "id": "gtin:4897098685426",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/9/3/930067_titelbild_1.jpg",
+      "gtin": "8885020629200",
+      "id": "gtin:8885020629200",
+      "imageUrl": "https://www.tink.de/cdn/360118/media/catalog/product/j/k/jkdcvbha_1.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
         "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c325wb?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c530ws-2er-set",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 79.9,
-      "name": "TP-Link Tapo C325WB - Outdoor Kamera weiß",
+      "minBasePriceEur": 114.95,
+      "name": "TP-Link Tapo C530WS - Schwenk-Neige-Außenkamera - 2er-Set",
       "offerCount": 2,
-      "priority": 128,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "aosu",
-      "candidateAttributes": {
-        "brand": "aosu",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "06977118370414",
-        "id": "gtin:06977118370414",
-        "integratedLight": false,
-        "name": "aosu SolarCam System P1 SE-2 Cameras - Weiß",
-        "panTilt": false,
-        "power": "solar",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.855Z"
-      },
-      "gtin": "06977118370414",
-      "id": "gtin:06977118370414",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/a/o/aosu_solarcam_system_p1_se-2_cameras_titelbild_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/aosu-solarcam-system-p1-se-2-cameras?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 179.95,
-      "name": "aosu SolarCam System P1 SE-2 Cameras - Weiß",
-      "offerCount": 1,
-      "priority": 128,
+      "priority": 131,
       "riskTier": "normal"
     },
     {
@@ -993,748 +177,100 @@
         "brand": "Ring",
         "cameraCount": 1,
         "dataQuality": "feed",
-        "gtin": "840414621992",
-        "id": "gtin:840414621992",
+        "gtin": "840414644557",
+        "id": "gtin:840414644557",
         "integratedLight": true,
-        "name": "Ring Floodlight Cam (2. Gen.) - 2K-Außenkamera mit Flutlicht - Schwarz",
+        "name": "Ring Floodlight Cam Pro (2. Gen.) - 4k-Außenkamera mit Flutlicht - Schwarz",
         "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.925Z"
-      },
-      "gtin": "840414621992",
-      "id": "gtin:840414621992",
-      "imageUrl": "https://www.tink.de/cdn/406753/media/catalog/product/2/_/2_slate_osprey_wired_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-floodlight-cam-2-gen-2k-aussenkamera-mit-flutlicht?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 179.3,
-      "name": "Ring Floodlight Cam (2. Gen.) - 2K-Außenkamera mit Flutlicht - Schwarz",
-      "offerCount": 1,
-      "priority": 128,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Ring",
-      "candidateAttributes": {
-        "brand": "Ring",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "840414661301",
-        "id": "gtin:840414661301",
-        "integratedLight": true,
-        "name": "Ring Floodlight Cam (2. Gen.) - 2K-Außenkamera mit Flutlicht - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.925Z"
-      },
-      "gtin": "840414661301",
-      "id": "gtin:840414661301",
-      "imageUrl": "https://www.tink.de/cdn/406753/media/catalog/product/1/_/1_slate_osprey_wired.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-floodlight-cam-2-gen-2k-aussenkamera-mit-flutlicht?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 179.3,
-      "name": "Ring Floodlight Cam (2. Gen.) - 2K-Außenkamera mit Flutlicht - Weiß",
-      "offerCount": 1,
-      "priority": 128,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6978285033768",
-        "id": "gtin:6978285033768",
-        "integratedLight": false,
-        "name": "Reolink Argus PT Ultra - 4K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.618Z"
       },
-      "gtin": "6978285033768",
-      "id": "gtin:6978285033768",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/1/-/1-argus_pt_ultra_with_solar_panel2_1.jpg",
+      "gtin": "840414644557",
+      "id": "gtin:840414644557",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/3/6/360083_titel_schwarz.jpg",
       "issues": [
         "incomplete-product-data",
+        "missing-connection",
         "missing-power-source"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-argus-pt-ultra-4k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/ring-floodlight-cam-pro-2-gen-4k-aussenkamera-mit-flutlicht?opt_92=5",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 169.99,
-      "name": "Reolink Argus PT Ultra - 4K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
+      "minBasePriceEur": 155.95,
+      "name": "Ring Floodlight Cam Pro (2. Gen.) - 4k-Außenkamera mit Flutlicht - Schwarz",
       "offerCount": 1,
-      "priority": 127,
+      "priority": 126,
       "riskTier": "normal"
     },
     {
       "brand": "Abus",
       "candidateAttributes": {
         "brand": "Abus",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4003318912368",
-        "id": "gtin:4003318912368",
-        "integratedLight": false,
-        "name": "ABUS WLAN Privacy Innenkamera 2er-Set",
-        "panTilt": false,
-        "placement": "indoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.695Z"
-      },
-      "gtin": "4003318912368",
-      "id": "gtin:4003318912368",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/i/n/innenkamera_2er.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/abus-wlan-privacy-innenkamera-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 167.95,
-      "name": "ABUS WLAN Privacy Innenkamera 2er-Set",
-      "offerCount": 1,
-      "priority": 127,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Homematic IP",
-      "candidateAttributes": {
-        "brand": "Homematic IP",
         "cameraCount": 1,
         "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "4047976629435",
-        "id": "gtin:4047976629435",
+        "gtin": "4003318116162",
+        "id": "gtin:4003318116162",
         "integratedLight": false,
-        "name": "Homematic IP Außenkamera - 5MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.922Z"
-      },
-      "gtin": "4047976629435",
-      "id": "gtin:4047976629435",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titel2_2_6.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-aussenkamera-5mp-wlan-mit-schwenk-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 166.95,
-      "name": "Homematic IP Außenkamera - 5MP, WLAN mit Schwenk-/Neigefunktion - Weiß",
-      "offerCount": 1,
-      "priority": 127,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6976930224264",
-        "id": "gtin:6976930224264",
-        "integratedLight": false,
-        "name": "Reolink Duo Series W730 - WLAN Außenkamera mit Dual-Objektiv - Weiß",
+        "name": "Abus WLAN Licht Außenkamera - Weiß",
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.839Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.619Z"
       },
-      "gtin": "6976930224264",
-      "id": "gtin:6976930224264",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/w/7/w730_006_1.jpg",
+      "gtin": "4003318116162",
+      "id": "gtin:4003318116162",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/k/a/kamera1_1.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-duo-series-w730-wlan-aussenkamera-mit-dual-objektiv?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/abus-wlan-licht-aussenkamera?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 148.99,
-      "name": "Reolink Duo Series W730 - WLAN Außenkamera mit Dual-Objektiv - Weiß",
+      "minBasePriceEur": 150.95,
+      "name": "Abus WLAN Licht Außenkamera - Weiß",
       "offerCount": 1,
       "priority": 125,
       "riskTier": "normal"
     },
     {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "4895252503647",
-        "id": "gtin:4895252503647",
-        "integratedLight": false,
-        "name": "TP-Link Tapo C212 - WLAN-Sicherheitskamera mit Schwenk- und Neigefunktion - Weiß",
-        "panTilt": true,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.773Z"
-      },
-      "gtin": "4895252503647",
-      "id": "gtin:4895252503647",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/c/2/c212_1_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c212-sicherheits-wlan-kamera-mit-schwenk-und-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 35.8,
-      "name": "TP-Link Tapo C212 - WLAN-Sicherheitskamera mit Schwenk- und Neigefunktion - Weiß",
-      "offerCount": 2,
-      "priority": 124,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Yale",
-      "candidateAttributes": {
-        "brand": "Yale",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "5052847178355",
-        "id": "gtin:5052847178355",
-        "integratedLight": false,
-        "name": "Yale Smart Outdoor Camera - 1080p-WLAN-Außenkamera - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "hd",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
-      },
-      "gtin": "5052847178355",
-      "id": "gtin:5052847178355",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/y/a/yale_kamera_au_en_frontal_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/yale-smart-outdoor-camera-1080p-full-hd-wlan-aussenkamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 139.99,
-      "name": "Yale Smart Outdoor Camera - 1080p-WLAN-Außenkamera - Weiß",
-      "offerCount": 1,
-      "priority": 124,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "6976391032576",
-        "id": "gtin:6976391032576",
-        "integratedLight": false,
-        "name": "Imou PF1 4L - Futterautomat mit 360°-Kamera - Weiß",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.919Z"
-      },
-      "gtin": "6976391032576",
-      "id": "gtin:6976391032576",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/tink_template_v3.1_1__2.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-pf1-4l-futterautomat-mit-360-kamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 106.08,
-      "name": "Imou PF1 4L - Futterautomat mit 360°-Kamera - Weiß",
-      "offerCount": 1,
-      "priority": 121,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "194644107420",
-        "id": "gtin:194644107420",
-        "integratedLight": false,
-        "name": "eufyCam 3 Zusatzkamera - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.765Z"
-      },
-      "gtin": "194644107420",
-      "id": "gtin:194644107420",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel1_3_103.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-cam-3?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 105.95,
-      "name": "eufyCam 3 Zusatzkamera - Weiß",
-      "offerCount": 1,
-      "priority": 121,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "0194644321703",
-        "id": "gtin:0194644321703",
-        "integratedLight": false,
-        "name": "eufyCam C36 - 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "outdoor",
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
-      },
-      "gtin": "0194644321703",
-      "id": "gtin:0194644321703",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titelbild_60_3.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-c36-2k-wlan-aussenkamera-mit-schwenk-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 99.99,
-      "name": "eufyCam C36 - 2K-WLAN-Außenkamera mit Schwenk-/Neigefunktion - Weiß",
-      "offerCount": 1,
-      "priority": 120,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6978285034789",
-        "id": "gtin:6978285034789",
-        "integratedLight": true,
-        "name": "Reolink Floodlight Series F310B - 4MP WLAN-Flutlichtaußenkamera - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.927Z"
-      },
-      "gtin": "6978285034789",
-      "id": "gtin:6978285034789",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titel_5_57.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-floodlight-series-f310b-4mp-wlan-flutlichtaussen-kamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 84,
-      "name": "Reolink Floodlight Series F310B - 4MP WLAN-Flutlichtaußenkamera - Weiß",
-      "offerCount": 1,
-      "priority": 118,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6976930229962",
-        "id": "gtin:6976930229962",
-        "integratedLight": false,
-        "name": "Reolink Lumus Series E450 - 4K WLAN-Außenkamera - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.927Z"
-      },
-      "gtin": "6976930229962",
-      "id": "gtin:6976930229962",
-      "imageUrl": "https://www.tink.de/cdn/84104/media/catalog/product/t/i/titelbild_53_15.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-lumus-series-e450-4k-wlan-aussenkamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 79,
-      "name": "Reolink Lumus Series E450 - 4K WLAN-Außenkamera - Weiß",
-      "offerCount": 1,
-      "priority": 118,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6971927238286",
-        "id": "gtin:6971927238286",
-        "integratedLight": false,
-        "name": "Imou Bulb Cam - 2K WLAN-Kamera mit Schwenk-/Neigefunktion für E27-Lampenfassungen - 2er-Set",
-        "panTilt": true,
-        "resolution": "2k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.918Z"
-      },
-      "gtin": "6971927238286",
-      "id": "gtin:6971927238286",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel1_4_50.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-bulb-cam-2k-wlan-kamera-mit-schwenk-neigefunktion-fuer-e27-lampenfassungen-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 67.95,
-      "name": "Imou Bulb Cam - 2K WLAN-Kamera mit Schwenk-/Neigefunktion für E27-Lampenfassungen - 2er-Set",
-      "offerCount": 1,
-      "priority": 117,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Yale",
-      "candidateAttributes": {
-        "brand": "Yale",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "5052847178331",
-        "id": "gtin:5052847178331",
-        "integratedLight": false,
-        "name": "Yale Smart Indoor Camera - 1080p-WLAN-Innenkamera - Weiß",
-        "panTilt": false,
-        "placement": "indoor",
-        "resolution": "hd",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.933Z"
-      },
-      "gtin": "5052847178331",
-      "id": "gtin:5052847178331",
-      "imageUrl": "https://www.tink.de/cdn/12084/media/catalog/product/t/i/titelbild_yale_kamera_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/yale-smart-indoor-camera-1080p-wlan-innenkamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 64.99,
-      "name": "Yale Smart Indoor Camera - 1080p-WLAN-Innenkamera - Weiß",
-      "offerCount": 1,
-      "priority": 116,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Reolink",
-      "candidateAttributes": {
-        "brand": "Reolink",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6975253982196",
-        "id": "gtin:6975253982196",
-        "integratedLight": false,
-        "name": "Reolink W320 - 5MP WLAN-Außenkamera - Weiß",
-        "panTilt": false,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.929Z"
-      },
-      "gtin": "6975253982196",
-      "id": "gtin:6975253982196",
-      "imageUrl": "https://www.tink.de/cdn/310909/media/catalog/product/1/-/1-w320_1_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/reolink-w320-5mp-wlan-aussenkamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 61.99,
-      "name": "Reolink W320 - 5MP WLAN-Außenkamera - Weiß",
-      "offerCount": 1,
-      "priority": 116,
-      "riskTier": "normal"
-    },
-    {
       "brand": "Ring",
       "candidateAttributes": {
         "brand": "Ring",
-        "cameraCount": 1,
+        "cameraCount": 4,
         "dataQuality": "feed",
-        "gtin": "840268936976",
-        "id": "gtin:840268936976",
+        "gtin": "842861107470",
+        "id": "gtin:842861107470",
         "integratedLight": false,
-        "name": "Ring Pan-Tilt Indoor Camera - Schwenk-Neige-Kamera - Schwarz",
-        "panTilt": true,
-        "placement": "indoor",
+        "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+        "panTilt": false,
+        "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.838Z"
+        "sourceUpdatedAt": "2026-11-24T09:04:56.605Z"
       },
-      "gtin": "840268936976",
-      "id": "gtin:840268936976",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/3/6/360072_titelbild_2.jpg",
+      "gtin": "842861107470",
+      "id": "gtin:842861107470",
+      "imageUrl": "https://www.tink.de/cdn/393781/media/catalog/product/r/i/ring-stick-up-cam-battery-4er-set.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-pan-tilt-indoor-camera-schwenk-neige-kamera?opt_92=5",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 60,
-      "name": "Ring Pan-Tilt Indoor Camera - Schwenk-Neige-Kamera - Schwarz",
-      "offerCount": 1,
-      "priority": 116,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Ring",
-      "candidateAttributes": {
-        "brand": "Ring",
-        "cameraCount": 1,
-        "dataQuality": "feed",
-        "gtin": "840268952372",
-        "id": "gtin:840268952372",
-        "integratedLight": false,
-        "name": "Ring Pan-Tilt Indoor Camera - Schwenk-Neige-Kamera - Weiß",
-        "panTilt": true,
-        "placement": "indoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.838Z"
-      },
-      "gtin": "840268952372",
-      "id": "gtin:840268952372",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/3/6/360072_titelbild_3.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-pan-tilt-indoor-camera-schwenk-neige-kamera?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 60,
-      "name": "Ring Pan-Tilt Indoor Camera - Schwenk-Neige-Kamera - Weiß",
-      "offerCount": 1,
-      "priority": 116,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6937479642957",
-        "id": "gtin:6937479642957",
-        "integratedLight": false,
-        "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
-        "panTilt": false,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.920Z"
-      },
-      "gtin": "6937479642957",
-      "id": "gtin:6937479642957",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/tink_template_v3.1_2__2_1.jpg",
-      "issues": [
-        "incomplete-product-data",
         "missing-placement",
-        "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-vd1-5mp-wlan-tuerspion-kamera-mit-4-3-zoll-farbdisplay?opt_92=5",
+      "merchantProductUrl": "https://www.tink.de/p/ring-stick-up-cam-battery-4er-set-ueberwachungskamera-fuer-innen-aussenbereich-gen-3",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 59.99,
-      "name": "Imou VD1 - 5MP WLAN-Türspion-Kamera mit 4,3-Zoll Farbdisplay - Schwarz",
+      "minBasePriceEur": 129.95,
+      "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
       "offerCount": 1,
-      "priority": 116,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6937479645354",
-        "id": "gtin:6937479645354",
-        "integratedLight": false,
-        "name": "Imou A1 Pro 4K Webcam - 4K-WLAN-Innenkamera mit 360°-Blickwinkel - Weiß",
-        "panTilt": false,
-        "placement": "indoor",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.920Z"
-      },
-      "gtin": "6937479645354",
-      "id": "gtin:6937479645354",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titel_4_54.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-a1-pro-4k-webcam-4k-wlan-innenkamera-mit-360-blickwinkel?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 49.99,
-      "name": "Imou A1 Pro 4K Webcam - 4K-WLAN-Innenkamera mit 360°-Blickwinkel - Weiß",
-      "offerCount": 1,
-      "priority": 115,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "IMOU",
-      "candidateAttributes": {
-        "brand": "IMOU",
-        "cameraCount": 1,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6937479640380",
-        "id": "gtin:6937479640380",
-        "integratedLight": false,
-        "name": "Imou Ranger Dual Pro 6MP - Dual-Lens WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
-        "panTilt": true,
-        "placement": "indoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.856Z"
-      },
-      "gtin": "6937479640380",
-      "id": "gtin:6937479640380",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/2/4/2490035_04_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/imou-ranger-dual-pro-6mp-dual-lens-wlan-innenkamera-mit-schwenk-neigefunktion?opt_92=30",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 49.9,
-      "name": "Imou Ranger Dual Pro 6MP - Dual-Lens WLAN-Innenkamera mit Schwenk-/Neigefunktion - Weiß",
-      "offerCount": 1,
-      "priority": 115,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 2,
-        "connection": "wifi",
-        "dataQuality": "feed",
-        "gtin": "6935364088095",
-        "id": "gtin:6935364088095",
-        "integratedLight": false,
-        "mpn": "6935364088095x2",
-        "name": "TP-Link Tapo C200 Sicherheits-WLAN-Kamera mit Schwenk- und Neigefunktion 2er-Set",
-        "panTilt": true,
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-09-18T07:24:38.692Z"
-      },
-      "gtin": "6935364088095",
-      "id": "gtin:6935364088095",
-      "imageUrl": "https://www.tink.de/cdn/967213/media/catalog/product/t/i/titel3_12.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-placement",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c200-sicherheits-wlan-kamera-mit-schwenk-und-neigefunktion-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 47.8,
-      "mpn": "6935364088095x2",
-      "name": "TP-Link Tapo C200 Sicherheits-WLAN-Kamera mit Schwenk- und Neigefunktion 2er-Set",
-      "offerCount": 1,
-      "priority": 115,
+      "priority": 123,
       "riskTier": "normal"
     }
   ],
