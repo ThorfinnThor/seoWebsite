@@ -17,6 +17,27 @@ export function dataReportDatasetId(path: string) {
   return `${absoluteUrl(path)}#dataset`;
 }
 
+/**
+ * Entry of a report in the data catalog. Google reads every Dataset node on its
+ * own and rejects it without a description of 50 to 5,000 characters, even if
+ * the report page describes the same dataset in full.
+ */
+export function createCatalogDataset(report: { path: string; title: string; description: string; updatedAt: string }) {
+  const siteRoot = absoluteUrl("/");
+  return {
+    "@type": "Dataset",
+    "@id": dataReportDatasetId(report.path),
+    name: report.title,
+    description: report.description,
+    url: absoluteUrl(report.path),
+    dateModified: report.updatedAt,
+    inLanguage: "de-DE",
+    isAccessibleForFree: true,
+    creator: { "@type": "Organization", "@id": `${siteRoot}#organization`, name: "PassendPlanen", url: siteRoot },
+    usageInfo: absoluteUrl("/nutzungshinweise/"),
+  };
+}
+
 export function createDataReportStructuredData({
   path,
   title,

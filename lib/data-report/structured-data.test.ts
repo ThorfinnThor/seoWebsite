@@ -1,5 +1,6 @@
 import { describe, expect, it } from "vitest";
-import { createDataReportStructuredData, dataReportDatasetId } from "@/lib/data-report/structured-data";
+import { DATA_REPORTS } from "@/lib/data-report/registry";
+import { createCatalogDataset, createDataReportStructuredData, dataReportDatasetId } from "@/lib/data-report/structured-data";
 
 describe("data report structured data", () => {
   it("connects an article to a stable, catalogued dataset", () => {
@@ -38,5 +39,18 @@ describe("data report structured data", () => {
       { "@type": "PropertyValue", name: "Fläche" },
       { "@type": "PropertyValue", name: "Preis" },
     ]);
+  });
+});
+
+describe("data catalog datasets", () => {
+  it("describes every dataset within the limits Google accepts", () => {
+    for (const report of DATA_REPORTS) {
+      const dataset = createCatalogDataset(report);
+      expect(dataset["@id"], report.slug).toBe(dataReportDatasetId(report.path));
+      expect(dataset.name.length, report.slug).toBeGreaterThan(0);
+      expect(dataset.description.length, report.slug).toBeGreaterThanOrEqual(50);
+      expect(dataset.description.length, report.slug).toBeLessThanOrEqual(5000);
+      expect(dataset.creator.name, report.slug).toBe("PassendPlanen");
+    }
   });
 });
