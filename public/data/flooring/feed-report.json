@@ -1,14 +1,14 @@
 {
-  "candidateRows": 1937,
+  "candidateRows": 1939,
   "candidateToProductRate": 71.5,
   "failedFeeds": 0,
-  "generatedAt": "2026-11-24T09:05:19.008Z",
+  "generatedAt": "2026-11-24T13:40:43.787Z",
   "issues": {
     "incomplete-product-data": 553,
-    "missing-package-coverage": 1681,
-    "missing-plank-dimensions": 872,
+    "missing-package-coverage": 1682,
+    "missing-plank-dimensions": 873,
     "unknown-flooring-type": 428,
-    "unknown-installation": 1602
+    "unknown-installation": 1604
   },
   "linkVerification": {
     "blocked": 43,
@@ -18,7 +18,7 @@
     "Globus Baumarkt DE": 39,
     "Woodstore24 DE/AT": 43
   },
-  "normalizedProducts": 1384,
+  "normalizedProducts": 1386,
   "offers": 82,
   "priceStatsEur": {
     "max": 286.57,
@@ -29,8 +29,8 @@
   "publishedProducts": 82,
   "quarantinedProducts": 0,
   "reviewedProducts": 82,
-  "reviewQueue": 1852,
-  "rows": 172589,
+  "reviewQueue": 1854,
+  "rows": 172615,
   "schemaVersion": 1,
   "sourceFeeds": 9,
   "successfulFeeds": 9

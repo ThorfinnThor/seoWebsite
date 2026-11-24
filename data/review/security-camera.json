@@ -1,6 +1,40 @@
 {
-  "generatedAt": "2026-11-24T09:05:19.008Z",
+  "generatedAt": "2026-11-24T13:40:43.787Z",
   "products": [
+    {
+      "brand": "eufy",
+      "candidateAttributes": {
+        "brand": "eufy",
+        "cameraCount": 2,
+        "dataQuality": "feed",
+        "gtin": "0194644239213",
+        "id": "gtin:0194644239213",
+        "integratedLight": false,
+        "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - 2er-Set",
+        "panTilt": false,
+        "placement": "outdoor",
+        "resolution": "4k",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T13:40:15.658Z"
+      },
+      "gtin": "0194644239213",
+      "id": "gtin:0194644239213",
+      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/e/u/eufy_s4_2.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-power-source"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-s4-4k-sicherheitskamera-mit-3-linsen-2er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 489.95,
+      "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - 2er-Set",
+      "offerCount": 1,
+      "priority": 159,
+      "riskTier": "normal"
+    },
     {
       "brand": "eufy",
       "candidateAttributes": {
@@ -14,11 +48,11 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.620Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.665Z"
       },
       "gtin": "194644111984",
       "id": "gtin:194644111984",
-      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/t/i/titel2er_2.jpg",
+      "imageUrl": "https://www.tink.de/cdn/735576/media/catalog/product/t/i/titel2er_2.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
@@ -36,69 +70,103 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Bosch Smart Home",
+      "brand": "Homematic IP",
       "candidateAttributes": {
-        "brand": "Bosch Smart Home",
-        "cameraCount": 1,
+        "brand": "Homematic IP",
+        "cameraCount": 2,
+        "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "4062321396084",
-        "id": "gtin:4062321396084",
+        "gtin": "4047976629497",
+        "id": "gtin:4047976629497",
         "integratedLight": false,
-        "name": "Bosch Smart Home Eyes Außenkamera II - Anthrazit",
+        "name": "Homematic IP Akku-Außenkamera - 3MP, WLAN - 2er-Set",
         "panTilt": false,
         "placement": "outdoor",
+        "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.616Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.664Z"
       },
-      "gtin": "4062321396084",
-      "id": "gtin:4062321396084",
-      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/e/y/eyesii_anth_1.jpg",
+      "gtin": "4047976629497",
+      "id": "gtin:4047976629497",
+      "imageUrl": "https://www.tink.de/cdn/360118/media/catalog/product/t/i/titel_5_18.jpg",
       "issues": [
         "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source",
         "missing-resolution"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/bosch-smart-home-eyes-aussenkamera-ii?opt_92=203",
+      "merchantProductUrl": "https://www.tink.de/p/homematic-ip-akku-aussenkamera-2er-set",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 259.95,
-      "name": "Bosch Smart Home Eyes Außenkamera II - Anthrazit",
+      "minBasePriceEur": 319.95,
+      "name": "Homematic IP Akku-Außenkamera - 3MP, WLAN - 2er-Set",
       "offerCount": 1,
-      "priority": 136,
+      "priority": 142,
       "riskTier": "normal"
     },
     {
       "brand": "eufy",
       "candidateAttributes": {
         "brand": "eufy",
-        "cameraCount": 1,
+        "cameraCount": 2,
         "dataQuality": "feed",
-        "gtin": "0194644239213",
-        "id": "gtin:0194644239213",
+        "gtin": "0194644293888",
+        "id": "gtin:0194644293888",
         "integratedLight": false,
-        "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - Weiß",
+        "name": "eufyCam S3 Pro 4k Solar-Zusatzkamera - 2er-Set",
         "panTilt": false,
         "placement": "outdoor",
+        "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.615Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.646Z"
       },
-      "gtin": "0194644239213",
-      "id": "gtin:0194644239213",
-      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titelbild_34_6.jpg",
+      "gtin": "0194644293888",
+      "id": "gtin:0194644293888",
+      "imageUrl": "https://www.tink.de/cdn/735576/media/catalog/product/t/i/titel2_92.jpg",
       "issues": [
         "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
+        "missing-connection"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-s4-4k-sicherheitskamera-mit-3-linsen?opt_92=30",
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-s3-pro-4k-solar-zusatzkamera-2er-set",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 259,
-      "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - Weiß",
+      "minBasePriceEur": 299.95,
+      "name": "eufyCam S3 Pro 4k Solar-Zusatzkamera - 2er-Set",
+      "offerCount": 1,
+      "priority": 140,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Aqara",
+      "candidateAttributes": {
+        "brand": "Aqara",
+        "cameraCount": 2,
+        "connection": "wifi",
+        "dataQuality": "feed",
+        "gtin": "6975833358113",
+        "id": "gtin:6975833358113",
+        "integratedLight": false,
+        "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
+        "panTilt": false,
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T13:40:15.650Z"
+      },
+      "gtin": "6975833358113",
+      "id": "gtin:6975833358113",
+      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/a/q/aqara_hubg5pro_2_1.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-placement",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/aqara-camera-hub-g5-pro-32-gb-wifi-2er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 259.95,
+      "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
       "offerCount": 1,
       "priority": 136,
       "riskTier": "normal"
@@ -116,11 +184,11 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.620Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.768Z"
       },
       "gtin": "194644239213",
       "id": "gtin:194644239213",
-      "imageUrl": "https://www.tink.de/cdn/727943/media/catalog/product/t/i/titel1_7_5.jpg",
+      "imageUrl": "https://www.tink.de/cdn/735576/media/catalog/product/t/i/titel1_7_5.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
@@ -150,7 +218,7 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.612Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.653Z"
       },
       "gtin": "8885020629200",
       "id": "gtin:8885020629200",
@@ -172,6 +240,74 @@
       "riskTier": "normal"
     },
     {
+      "brand": "eufy",
+      "candidateAttributes": {
+        "brand": "eufy",
+        "cameraCount": 2,
+        "dataQuality": "feed",
+        "gtin": "194644107277",
+        "id": "gtin:194644107277",
+        "integratedLight": false,
+        "name": "eufyCam 3 - Zusatzkamera 2er-Set",
+        "panTilt": false,
+        "placement": "outdoor",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T13:40:15.523Z"
+      },
+      "gtin": "194644107277",
+      "id": "gtin:194644107277",
+      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/t/i/titel1_3_102.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-3-zusatzkamera-2er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 184.95,
+      "name": "eufyCam 3 - Zusatzkamera 2er-Set",
+      "offerCount": 1,
+      "priority": 128,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Ring",
+      "candidateAttributes": {
+        "brand": "Ring",
+        "cameraCount": 4,
+        "dataQuality": "feed",
+        "gtin": "842861107470",
+        "id": "gtin:842861107470",
+        "integratedLight": false,
+        "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+        "panTilt": false,
+        "power": "battery",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-24T13:40:15.516Z"
+      },
+      "gtin": "842861107470",
+      "id": "gtin:842861107470",
+      "imageUrl": "https://www.tink.de/cdn/393781/media/catalog/product/r/i/ring-stick-up-cam-battery-4er-set.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-placement",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/ring-stick-up-cam-battery-4er-set-ueberwachungskamera-fuer-innen-aussenbereich-gen-3",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 65.95,
+      "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+      "offerCount": 2,
+      "priority": 127,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Ring",
       "candidateAttributes": {
         "brand": "Ring",
@@ -185,7 +321,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.618Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.660Z"
       },
       "gtin": "840414644557",
       "id": "gtin:840414644557",
@@ -219,7 +355,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.619Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.663Z"
       },
       "gtin": "4003318116162",
       "id": "gtin:4003318116162",
@@ -240,37 +376,37 @@
       "riskTier": "normal"
     },
     {
-      "brand": "Ring",
+      "brand": "Abus",
       "candidateAttributes": {
-        "brand": "Ring",
-        "cameraCount": 4,
+        "brand": "Abus",
+        "cameraCount": 1,
+        "connection": "wifi",
         "dataQuality": "feed",
-        "gtin": "842861107470",
-        "id": "gtin:842861107470",
+        "gtin": "4003318419157",
+        "id": "gtin:4003318419157",
         "integratedLight": false,
-        "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+        "name": "ABUS SmartLook - 4K-WLAN-Außenkamera - Schwarz",
         "panTilt": false,
-        "power": "battery",
+        "placement": "outdoor",
+        "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T09:04:56.605Z"
+        "sourceUpdatedAt": "2026-11-24T13:40:15.649Z"
       },
-      "gtin": "842861107470",
-      "id": "gtin:842861107470",
-      "imageUrl": "https://www.tink.de/cdn/393781/media/catalog/product/r/i/ring-stick-up-cam-battery-4er-set.jpg",
+      "gtin": "4003318419157",
+      "id": "gtin:4003318419157",
+      "imageUrl": "https://www.tink.de/cdn/981094/media/catalog/product/s/m/smartlook_titelbild_s.jpg",
       "issues": [
         "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
+        "missing-power-source"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-stick-up-cam-battery-4er-set-ueberwachungskamera-fuer-innen-aussenbereich-gen-3",
+      "merchantProductUrl": "https://www.tink.de/p/abus-smartlook-4k-wlan-aussenkamera?opt_92=5",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 129.95,
-      "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+      "minBasePriceEur": 107.95,
+      "name": "ABUS SmartLook - 4K-WLAN-Außenkamera - Schwarz",
       "offerCount": 1,
-      "priority": 123,
+      "priority": 121,
       "riskTier": "normal"
     }
   ],
