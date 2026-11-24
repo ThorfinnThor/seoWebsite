@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Breadcrumbs } from "@/components/seo/Breadcrumbs";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { DATA_REPORTS } from "@/lib/data-report/registry";
-import { dataReportDatasetId } from "@/lib/data-report/structured-data";
+import { createCatalogDataset } from "@/lib/data-report/structured-data";
 import { createPageMetadata } from "@/lib/metadata";
 import { absoluteUrl } from "@/lib/site";
 import { RatgeberSectionNav } from "@/components/seo/RatgeberSectionNav";
@@ -39,7 +39,7 @@ export default function Page() {
         description: "Katalog eigener Auswertungen validierter Händlerdaten mit dokumentierten Stichproben und Datenlücken.",
         url: absoluteUrl(PATH),
         creator: { "@id": `${absoluteUrl("/")}#organization` },
-        dataset: DATA_REPORTS.map((report) => ({ "@type": "Dataset", "@id": dataReportDatasetId(report.path), name: report.title, url: absoluteUrl(report.path) })),
+        dataset: DATA_REPORTS.map(createCatalogDataset),
       },
     ]} />
     <section className="page-hero data-directory-hero">
