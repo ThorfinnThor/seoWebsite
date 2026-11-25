@@ -1,72 +1,38 @@
 {
-  "generatedAt": "2026-11-24T13:40:43.787Z",
+  "generatedAt": "2026-11-25T12:51:34.217Z",
   "products": [
-    {
-      "brand": "eufy",
-      "candidateAttributes": {
-        "brand": "eufy",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "0194644239213",
-        "id": "gtin:0194644239213",
-        "integratedLight": false,
-        "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - 2er-Set",
-        "panTilt": false,
-        "placement": "outdoor",
-        "resolution": "4k",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.658Z"
-      },
-      "gtin": "0194644239213",
-      "id": "gtin:0194644239213",
-      "imageUrl": "https://www.tink.de/cdn/861606/media/catalog/product/e/u/eufy_s4_2.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/eufycam-s4-4k-sicherheitskamera-mit-3-linsen-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 489.95,
-      "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - 2er-Set",
-      "offerCount": 1,
-      "priority": 159,
-      "riskTier": "normal"
-    },
     {
       "brand": "eufy",
       "candidateAttributes": {
         "brand": "eufy",
         "cameraCount": 1,
         "dataQuality": "feed",
-        "gtin": "194644111984",
-        "id": "gtin:194644111984",
+        "gtin": "0194644239213",
+        "id": "gtin:0194644239213",
         "integratedLight": false,
-        "name": "eufy Starter Set - mit HomeBase 3 + 2 eufyCam E50 Außenkamera",
+        "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - Weiß",
         "panTilt": false,
         "placement": "outdoor",
+        "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.665Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.598Z"
       },
-      "gtin": "194644111984",
-      "id": "gtin:194644111984",
-      "imageUrl": "https://www.tink.de/cdn/735576/media/catalog/product/t/i/titel2er_2.jpg",
+      "gtin": "0194644239213",
+      "id": "gtin:0194644239213",
+      "imageUrl": "https://www.tink.de/cdn/503862/media/catalog/product/t/i/titelbild_34_6.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
+        "missing-power-source"
       ],
-      "merchantProductUrl": "https://www.tink.de/p/eufy-starter-set-mit-homebase-3-2-eufycam-e50-aussenkamera",
+      "merchantProductUrl": "https://www.tink.de/p/eufycam-s4-4k-sicherheitskamera-mit-3-linsen?opt_92=30",
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 479.95,
-      "name": "eufy Starter Set - mit HomeBase 3 + 2 eufyCam E50 Außenkamera",
-      "offerCount": 1,
-      "priority": 158,
+      "minBasePriceEur": 259,
+      "name": "eufyCam S4 - 4K-Sicherheitskamera mit 3 Linsen - Weiß",
+      "offerCount": 2,
+      "priority": 146,
       "riskTier": "normal"
     },
     {
@@ -84,7 +50,7 @@
         "placement": "outdoor",
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.664Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.604Z"
       },
       "gtin": "4047976629497",
       "id": "gtin:4047976629497",
@@ -118,11 +84,11 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.646Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.587Z"
       },
       "gtin": "0194644293888",
       "id": "gtin:0194644293888",
-      "imageUrl": "https://www.tink.de/cdn/735576/media/catalog/product/t/i/titel2_92.jpg",
+      "imageUrl": "https://www.tink.de/cdn/519684/media/catalog/product/t/i/titel2_92.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection"
@@ -150,7 +116,7 @@
         "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.650Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.590Z"
       },
       "gtin": "6975833358113",
       "id": "gtin:6975833358113",
@@ -184,11 +150,11 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.768Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.605Z"
       },
       "gtin": "194644239213",
       "id": "gtin:194644239213",
-      "imageUrl": "https://www.tink.de/cdn/735576/media/catalog/product/t/i/titel1_7_5.jpg",
+      "imageUrl": "https://www.tink.de/cdn/519684/media/catalog/product/t/i/titel1_7_5.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
@@ -206,6 +172,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "eufy",
+      "candidateAttributes": {
+        "brand": "eufy",
+        "cameraCount": 1,
+        "dataQuality": "feed",
+        "gtin": "194644111984",
+        "id": "gtin:194644111984",
+        "integratedLight": false,
+        "name": "eufy Starter Set - mit HomeBase 3 + eufyCam C36 Außenkamera",
+        "panTilt": false,
+        "placement": "outdoor",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-25T12:51:13.605Z"
+      },
+      "gtin": "194644111984",
+      "id": "gtin:194644111984",
+      "imageUrl": "https://www.tink.de/cdn/603151/media/catalog/product/t/i/titel1_6_5.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/eufy-starter-set-mit-homebase-3-eufycam-c36",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 149.95,
+      "name": "eufy Starter Set - mit HomeBase 3 + eufyCam C36 Außenkamera",
+      "offerCount": 2,
+      "priority": 135,
+      "riskTier": "normal"
+    },
+    {
       "brand": "TP-Link",
       "candidateAttributes": {
         "brand": "TP-Link",
@@ -218,7 +218,7 @@
         "panTilt": true,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.653Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.591Z"
       },
       "gtin": "8885020629200",
       "id": "gtin:8885020629200",
@@ -252,7 +252,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.523Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.582Z"
       },
       "gtin": "194644107277",
       "id": "gtin:194644107277",
@@ -286,7 +286,7 @@
         "panTilt": false,
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.516Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.578Z"
       },
       "gtin": "842861107470",
       "id": "gtin:842861107470",
@@ -321,7 +321,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.660Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.600Z"
       },
       "gtin": "840414644557",
       "id": "gtin:840414644557",
@@ -355,7 +355,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.663Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.603Z"
       },
       "gtin": "4003318116162",
       "id": "gtin:4003318116162",
@@ -390,7 +390,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-24T13:40:15.649Z"
+        "sourceUpdatedAt": "2026-11-25T12:51:13.589Z"
       },
       "gtin": "4003318419157",
       "id": "gtin:4003318419157",
