@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-25T12:51:34.217Z",
+  "generatedAt": "2026-11-26T12:29:16.035Z",
   "products": [
     {
       "brand": "eufy",
@@ -15,7 +15,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.598Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.477Z"
       },
       "gtin": "0194644239213",
       "id": "gtin:0194644239213",
@@ -50,7 +50,7 @@
         "placement": "outdoor",
         "power": "battery",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.604Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.481Z"
       },
       "gtin": "4047976629497",
       "id": "gtin:4047976629497",
@@ -63,10 +63,10 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 319.95,
+      "minBasePriceEur": 329.95,
       "name": "Homematic IP Akku-Außenkamera - 3MP, WLAN - 2er-Set",
       "offerCount": 1,
-      "priority": 142,
+      "priority": 143,
       "riskTier": "normal"
     },
     {
@@ -84,11 +84,11 @@
         "power": "solar",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.587Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.471Z"
       },
       "gtin": "0194644293888",
       "id": "gtin:0194644293888",
-      "imageUrl": "https://www.tink.de/cdn/519684/media/catalog/product/t/i/titel2_92.jpg",
+      "imageUrl": "https://www.tink.de/cdn/535735/media/catalog/product/t/i/titel2_92.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection"
@@ -97,10 +97,10 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 299.95,
+      "minBasePriceEur": 289.95,
       "name": "eufyCam S3 Pro 4k Solar-Zusatzkamera - 2er-Set",
       "offerCount": 1,
-      "priority": 140,
+      "priority": 139,
       "riskTier": "normal"
     },
     {
@@ -116,7 +116,7 @@
         "name": "Aqara Camera Hub G5 Pro - Wifi (32 GB) - 2er-Set",
         "panTilt": false,
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.590Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.474Z"
       },
       "gtin": "6975833358113",
       "id": "gtin:6975833358113",
@@ -150,11 +150,11 @@
         "panTilt": false,
         "placement": "indoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.605Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.483Z"
       },
       "gtin": "194644239213",
       "id": "gtin:194644239213",
-      "imageUrl": "https://www.tink.de/cdn/519684/media/catalog/product/t/i/titel1_7_5.jpg",
+      "imageUrl": "https://www.tink.de/cdn/535735/media/catalog/product/t/i/titel1_7_5.jpg",
       "issues": [
         "incomplete-product-data",
         "missing-connection",
@@ -184,7 +184,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.605Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.482Z"
       },
       "gtin": "194644111984",
       "id": "gtin:194644111984",
@@ -206,40 +206,6 @@
       "riskTier": "normal"
     },
     {
-      "brand": "TP-Link",
-      "candidateAttributes": {
-        "brand": "TP-Link",
-        "cameraCount": 2,
-        "dataQuality": "feed",
-        "gtin": "8885020629200",
-        "id": "gtin:8885020629200",
-        "integratedLight": false,
-        "name": "TP-Link Tapo C530WS - Schwenk-Neige-Außenkamera - 2er-Set",
-        "panTilt": true,
-        "placement": "outdoor",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.591Z"
-      },
-      "gtin": "8885020629200",
-      "id": "gtin:8885020629200",
-      "imageUrl": "https://www.tink.de/cdn/360118/media/catalog/product/j/k/jkdcvbha_1.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-power-source",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c530ws-2er-set",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 114.95,
-      "name": "TP-Link Tapo C530WS - Schwenk-Neige-Außenkamera - 2er-Set",
-      "offerCount": 2,
-      "priority": 131,
-      "riskTier": "normal"
-    },
-    {
       "brand": "eufy",
       "candidateAttributes": {
         "brand": "eufy",
@@ -252,7 +218,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.582Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.465Z"
       },
       "gtin": "194644107277",
       "id": "gtin:194644107277",
@@ -277,40 +243,6 @@
       "brand": "Ring",
       "candidateAttributes": {
         "brand": "Ring",
-        "cameraCount": 4,
-        "dataQuality": "feed",
-        "gtin": "842861107470",
-        "id": "gtin:842861107470",
-        "integratedLight": false,
-        "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
-        "panTilt": false,
-        "power": "battery",
-        "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.578Z"
-      },
-      "gtin": "842861107470",
-      "id": "gtin:842861107470",
-      "imageUrl": "https://www.tink.de/cdn/393781/media/catalog/product/r/i/ring-stick-up-cam-battery-4er-set.jpg",
-      "issues": [
-        "incomplete-product-data",
-        "missing-connection",
-        "missing-placement",
-        "missing-resolution"
-      ],
-      "merchantProductUrl": "https://www.tink.de/p/ring-stick-up-cam-battery-4er-set-ueberwachungskamera-fuer-innen-aussenbereich-gen-3",
-      "merchants": [
-        "tink DE"
-      ],
-      "minBasePriceEur": 65.95,
-      "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
-      "offerCount": 2,
-      "priority": 127,
-      "riskTier": "normal"
-    },
-    {
-      "brand": "Ring",
-      "candidateAttributes": {
-        "brand": "Ring",
         "cameraCount": 1,
         "dataQuality": "feed",
         "gtin": "840414644557",
@@ -321,7 +253,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.600Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.479Z"
       },
       "gtin": "840414644557",
       "id": "gtin:840414644557",
@@ -335,10 +267,78 @@
       "merchants": [
         "tink DE"
       ],
-      "minBasePriceEur": 155.95,
+      "minBasePriceEur": 169.95,
       "name": "Ring Floodlight Cam Pro (2. Gen.) - 4k-Außenkamera mit Flutlicht - Schwarz",
       "offerCount": 1,
-      "priority": 126,
+      "priority": 127,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "TP-Link",
+      "candidateAttributes": {
+        "brand": "TP-Link",
+        "cameraCount": 3,
+        "dataQuality": "feed",
+        "gtin": "8885020629200",
+        "id": "gtin:8885020629200",
+        "integratedLight": false,
+        "name": "TP-Link Tapo C530WS - Schwenk-Neige-Außenkamera - 3er-Set",
+        "panTilt": true,
+        "placement": "outdoor",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-26T12:28:46.479Z"
+      },
+      "gtin": "8885020629200",
+      "id": "gtin:8885020629200",
+      "imageUrl": "https://www.tink.de/cdn/360118/media/catalog/product/t/i/titel3_9.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-power-source",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/tp-link-tapo-c530ws-schwenk-neige-aussenkamera-3er-set",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 169.95,
+      "name": "TP-Link Tapo C530WS - Schwenk-Neige-Außenkamera - 3er-Set",
+      "offerCount": 1,
+      "priority": 127,
+      "riskTier": "normal"
+    },
+    {
+      "brand": "Aqara",
+      "candidateAttributes": {
+        "brand": "Aqara",
+        "cameraCount": 1,
+        "connection": "poe",
+        "dataQuality": "feed",
+        "gtin": "6975833354986",
+        "id": "gtin:6975833354986",
+        "integratedLight": false,
+        "name": "Aqara Camera Hub G5 Pro - PoE - Grau",
+        "panTilt": false,
+        "power": "poe",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-26T12:28:46.474Z"
+      },
+      "gtin": "6975833354986",
+      "id": "gtin:6975833354986",
+      "imageUrl": "https://www.tink.de/cdn/660900/media/catalog/product/a/q/aqara_hub_g5_pro_title.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-placement",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/aqara-camera-hub-g5-pro-power-over-ethernet?opt_92=3",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 151.95,
+      "name": "Aqara Camera Hub G5 Pro - PoE - Grau",
+      "offerCount": 1,
+      "priority": 125,
       "riskTier": "normal"
     },
     {
@@ -355,7 +355,7 @@
         "panTilt": false,
         "placement": "outdoor",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.603Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.480Z"
       },
       "gtin": "4003318116162",
       "id": "gtin:4003318116162",
@@ -376,6 +376,40 @@
       "riskTier": "normal"
     },
     {
+      "brand": "Ring",
+      "candidateAttributes": {
+        "brand": "Ring",
+        "cameraCount": 4,
+        "dataQuality": "feed",
+        "gtin": "842861107470",
+        "id": "gtin:842861107470",
+        "integratedLight": false,
+        "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+        "panTilt": false,
+        "power": "battery",
+        "reviewed": false,
+        "sourceUpdatedAt": "2026-11-26T12:28:46.462Z"
+      },
+      "gtin": "842861107470",
+      "id": "gtin:842861107470",
+      "imageUrl": "https://www.tink.de/cdn/393781/media/catalog/product/r/i/ring-stick-up-cam-battery-4er-set.jpg",
+      "issues": [
+        "incomplete-product-data",
+        "missing-connection",
+        "missing-placement",
+        "missing-resolution"
+      ],
+      "merchantProductUrl": "https://www.tink.de/p/ring-stick-up-cam-battery-4er-set-ueberwachungskamera-fuer-innen-aussenbereich-gen-3",
+      "merchants": [
+        "tink DE"
+      ],
+      "minBasePriceEur": 134.95,
+      "name": "Ring Stick Up Cam Battery 4er-Set - Überwachungskamera für den Innen- und Außenbereich Gen. 3",
+      "offerCount": 1,
+      "priority": 123,
+      "riskTier": "normal"
+    },
+    {
       "brand": "Abus",
       "candidateAttributes": {
         "brand": "Abus",
@@ -390,7 +424,7 @@
         "placement": "outdoor",
         "resolution": "4k",
         "reviewed": false,
-        "sourceUpdatedAt": "2026-11-25T12:51:13.589Z"
+        "sourceUpdatedAt": "2026-11-26T12:28:46.473Z"
       },
       "gtin": "4003318419157",
       "id": "gtin:4003318419157",
