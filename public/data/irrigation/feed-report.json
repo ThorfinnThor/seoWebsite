@@ -1,32 +1,32 @@
 {
-  "candidateRows": 568,
-  "candidateToProductRate": 55.3,
+  "candidateRows": 569,
+  "candidateToProductRate": 55.4,
   "failedFeeds": 0,
-  "generatedAt": "2026-11-26T12:29:16.035Z",
+  "generatedAt": "2026-11-27T12:14:14.794Z",
   "issues": {
     "incomplete-product-data": 254,
     "missing-product-kind": 254,
     "unconfirmed-system-compatibility": 468
   },
   "linkVerification": {
-    "verified": 82
+    "verified": 83
   },
   "merchants": {
-    "Globus Baumarkt DE": 82
+    "Globus Baumarkt DE": 83
   },
-  "normalizedProducts": 314,
-  "offers": 82,
+  "normalizedProducts": 315,
+  "offers": 83,
   "priceStatsEur": {
     "max": 278,
-    "median": 14.940000000000001,
+    "median": 14.99,
     "min": 2.49
   },
   "productsWithoutOffers": 0,
-  "publishedProducts": 82,
+  "publishedProducts": 83,
   "quarantinedProducts": 0,
-  "reviewedProducts": 82,
+  "reviewedProducts": 83,
   "reviewQueue": 486,
-  "rows": 172328,
+  "rows": 172254,
   "schemaVersion": 1,
   "sourceFeeds": 9,
   "successfulFeeds": 9
