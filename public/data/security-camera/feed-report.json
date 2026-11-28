@@ -1,34 +1,34 @@
 {
-  "candidateRows": 20,
-  "candidateToProductRate": 10,
+  "candidateRows": 25,
+  "candidateToProductRate": 12,
   "failedFeeds": 0,
-  "generatedAt": "2026-11-27T12:14:14.794Z",
+  "generatedAt": "2026-11-28T11:42:37.739Z",
   "issues": {
-    "incomplete-product-data": 18,
-    "missing-connection": 12,
-    "missing-placement": 2,
-    "missing-power-source": 14,
-    "missing-resolution": 11
+    "incomplete-product-data": 22,
+    "missing-connection": 16,
+    "missing-placement": 5,
+    "missing-power-source": 16,
+    "missing-resolution": 15
   },
   "linkVerification": {
-    "verified": 29
+    "verified": 30
   },
   "merchants": {
-    "tink DE": 29
+    "tink DE": 30
   },
-  "normalizedProducts": 2,
-  "offers": 29,
+  "normalizedProducts": 3,
+  "offers": 30,
   "priceStatsEur": {
     "max": 530.95,
-    "median": 165.9,
+    "median": 162.5,
     "min": 62.9
   },
   "productsWithoutOffers": 1,
-  "publishedProducts": 25,
+  "publishedProducts": 26,
   "quarantinedProducts": 0,
-  "reviewedProducts": 25,
-  "reviewQueue": 11,
-  "rows": 172254,
+  "reviewedProducts": 26,
+  "reviewQueue": 12,
+  "rows": 172140,
   "schemaVersion": 1,
   "sourceFeeds": 9,
   "successfulFeeds": 9

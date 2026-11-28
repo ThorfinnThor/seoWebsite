@@ -2,125 +2,125 @@
   "schemaVersion": 1,
   "verticals": {
     "security-camera": {
+      "offer:13686:14159": {
+        "days": 1,
+        "lastSeenMissing": "2026-11-28",
+        "since": "2026-11-28"
+      },
       "offer:13686:15972": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:18052": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:18666": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:20663": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:20884": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:21741": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:22007": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:22014": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:22428": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:22675": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:24343": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:24458": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:24617": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:24620": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:24625": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:24626": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:25587": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:25588": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:26080": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:26081": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:26089": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:26240": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
       },
       "offer:13686:26241": {
-        "days": 4,
-        "lastSeenMissing": "2026-11-27",
+        "days": 5,
+        "lastSeenMissing": "2026-11-28",
         "since": "2026-11-24"
-      },
-      "offer:13686:27139": {
-        "days": 2,
-        "lastSeenMissing": "2026-11-27",
-        "since": "2026-11-26"
       }
     }
   }

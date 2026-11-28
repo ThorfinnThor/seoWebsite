@@ -1,12 +1,12 @@
 {
-  "candidateRows": 419,
+  "candidateRows": 420,
   "candidateToProductRate": 100,
   "failedFeeds": 0,
-  "generatedAt": "2026-11-27T12:14:14.794Z",
+  "generatedAt": "2026-11-28T11:42:37.739Z",
   "issues": {
-    "missing-capacity": 364,
-    "suspicious-price": 128,
-    "unconfirmed-drainage": 379
+    "missing-capacity": 365,
+    "suspicious-price": 129,
+    "unconfirmed-drainage": 380
   },
   "linkVerification": {
     "verified": 40
@@ -16,7 +16,7 @@
     "Meaco GmbH DE": 21,
     "Trotec DACH": 6
   },
-  "normalizedProducts": 419,
+  "normalizedProducts": 420,
   "offers": 40,
   "priceStatsEur": {
     "max": 529.99,
@@ -25,10 +25,10 @@
   },
   "productsWithoutOffers": 0,
   "publishedProducts": 40,
-  "quarantinedProducts": 128,
+  "quarantinedProducts": 129,
   "reviewedProducts": 40,
-  "reviewQueue": 379,
-  "rows": 172254,
+  "reviewQueue": 380,
+  "rows": 172140,
   "schemaVersion": 1,
   "sourceFeeds": 9,
   "successfulFeeds": 9
